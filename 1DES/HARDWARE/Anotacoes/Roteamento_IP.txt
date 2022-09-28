@@ -1,0 +1,60 @@
+Roteamento ip 
+	Mascara Identifica a rede
+	ip Identifica o nó
+	nó = pc, impressora
+
+IPs Reservados p/subrede classe
+
+A 10.0.0. até  10.255.255.255	/8
+	255.0.0.0
+
+B 172.16.0.1 até 172.16.255.255	/16
+	255.255.0.0
+
+C 192.168.0.1 até 192.168.0.255	/24
+	255.255.255.0
+
+mstsc - conectar com outro computador na mesma rede.
+
+Se a lan cair é necessário reiniciar o roteador. A internet por outro lado tem de ligar para a fornecedora.
+
+Classe A é para varios computadores (+-6 milhoes) Tamanho= 256 elevado a 3;
+Class B Suporta 65536 mil = tamanho= 256 elevado a 2
+Classe C  suporta tamanho = 256
+
+Por que as mascaras sao 255? 
+Numero maximo de suporte.
+
+o primeiro chama gatwaye o ultimo chama "brodcast"(?)
+
+A mascara geralmente soma os 1;
+
+
+Max /30
+
+256/2
+128 - rede 1
+128 - rede 2
+decimal 128
+binario 10000000
+
+loopback - 127.0.0.1
+dhsp - fornece o ip.
+
+Os cabos pares trançados também conhecidos como patch cord utilizan conectores RJ45 macho.
+Podemos utilizar cabos de energia para conectar computadores a uma rede LAN devido a sua tenção e corrente alternada.
+O serviço de DNS serve para distribuir endereços IPs para os computadores de uma rede deve ser configurado com um "range" escopo de IPs reservados, classe A, B ou C.
+ IPv4192.168.0.25/24. -- 255.255.255.0
+
+
+ IP 192.168.0.36 Mascara:255.255.255.0, qual das alternativas abaixo apresenta o Gateway Padrão e o BroadCast deste segmento de rede?
+Gateway Padrão: 192.168.0.1 - BroadCast: 192.168.0.255
+
+
+Em uma subrede com máscara 255.255.255.224, tirando o Gateway e o Broadcast qual o máximo de equipamentos conseguimos conectar?
+
+30 equipamentos
+
+
+Em uma subrede com máscara 255.255.255.224, tirando o Gateway e o Broadcast qual o máximo de equipamentos conseguimos conectar?
+O Serviço DHCP não está respondendo

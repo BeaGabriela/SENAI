@@ -1,0 +1,19 @@
+cd desktop - entrar no pc local;
+
+cd -   acessa
+cd.. - sai
+dir - tbm serve para listar
+echo - escreve
+move - movimenta
+copy - copia
+cls - limpa a tela 
+
+md - cria uma pasta.
+dir>text.txt - cria um arquivo de texto.
+rd - Exclui a pasta vazia
+del - exclui arquivos
+exit - sair
+
+.bat - lote
+.vbs - window script
+.sh(vh?)- unix script

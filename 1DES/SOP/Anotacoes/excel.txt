@@ -1,0 +1,10 @@
+Normalização -- + Formal
+Padronizção == Normalização(+ Formal)
+tabulação ==== Tira uma informação == Escolhe uma informação e escolhe o caminho que deseja ir.
+muito dados == informação == Conhecimento == inteligencia
+
+
+	Funções:
+
+=aleatoriosentre -- Números aleatórios
+=hoje() -- data do dia

@@ -1,0 +1,19 @@
+Par trançado - lan;
+internet - gigaethernet;
+Coaxial - Bom quanto a inteferencia eletromagnetica,  isolamento. grande distanciÂs;
+O melhor de todos é a fibra óptica.
+switch serve para evitar que tenha muito trabahlo caso a rede eletrica tenha um pico de energia. Sendo  assim, você pode apenas trocar o switch.
+
+patchcorn  chega até a 100 metros. 
+
+Se tiver continuanidade passa imformações.
+
+DNS - é para nomes aleatórios.
+
+O computador mais proximo que tem internet - Proxy == gateway.
+
+Começa com 10- A, Começa com 172.16-B, Começa 192.168-C
+
+Mascara A = 255.0.0.0
+Mascara B = 255.255.0.0
+Mascara C = 255.255.255.0

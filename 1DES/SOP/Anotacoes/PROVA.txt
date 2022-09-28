@@ -1,0 +1,141 @@
+Defina Classe em POO:
+Representação de entidades do mundo real na forma virtual composta por variáveis, parâmetros e funções
+Representação de entidades do mundo real na forma virtual composta por título, atributos e métodos X
+Representação de entidades do mundo real na forma virtual composta por título, parâmetros e funções
+Representação de entidades do mundo real na forma virtual composta por título, métodos e funções
+Representação de entidades do mundo real na forma virtual composta por variáveis, métodos e funções
+
+Marque a afirmação correta sobre Classes em POO:
+Em uma classe os atributos representam as características de um objeto como "cor, tipo, id, nome, idade" e os métodos representam as ações como "andar, obter total, configurar idade". X
+Em uma classe os métodos representam as características de um objeto como "cor, tipo, id, nome, idade" e as funções representam as ações como "andar, obter total, configurar idade".
+Em uma classe as funções representam as características de um objeto como "cor, tipo, id, nome, idade" e os atributos representam as ações como "andar, obter total, configurar idade".
+Em uma classe os métodos representam as características de um objeto como "cor, tipo, id, nome, idade" e os atributos representam as ações como "andar, obter total, configurar idade".
+Em uma classe os atributos representam as características de um objeto como "cor, tipo, id, nome, idade" e os parâmetros representam as ações como "andar, obter total, configurar idade".
+
+Sobre métodos de uma Classe em POO, são como funções que possuem ou não retorno e recebem ou não parâmetros. Desta forma sobre o método a seguir "public int obterIdade()" podemos afirmar que:
+possui um parâmetro do tipo inteiro e não retorna nada
+retorna um dado do tipo inteiro e recebe um parâmetro do tipo inteiro
+não retorna nehum dado void e não recebe nenhum parâmetro
+recebe um parâmetro do tipo inteiro e retorna um dado do tipo inteiro
+retorna um dado do tipo inteiro e não recebe nenhum parâmetro X
+
+Ainda sobre o método a seguir "public void escreveExtenso(int numero)" podemos afirmar que:
+retorna um dado do tipo inteiro e recebe um parâmetro do tipo inteiro
+não retorna nehum dado void e não recebe nenhum parâmetro
+possui um parâmetro do tipo inteiro e não retorna nada  X
+recebe um parâmetro do tipo inteiro e retorna um dado do tipo inteiro
+retorna um dado do tipo inteiro e não recebe nenhum parâmetro
+
+Ainda sobre o método a seguir "public String escreveExtenso(int numero)" podemos afirmar que:
+retorna um dado do tipo inteiro e recebe um parâmetro do tipo inteiro
+não retorna nehum dado void e não recebe nenhum parâmetro
+possui um parâmetro do tipo inteiro e não retorna nada
+retorna um dado do tipo String e recebe um parâmetro do tipo inteiro X
+recebe um parâmetro do tipo inteiro e retorna um dado do tipo inteiro
+
+Quais as corretas definições de Classe, instância e objeto?
+O Objeto é o esqueleto de um objeto, a instância é quando declaramos um objeto mas não há nada atribuído ainda, já a classe (new) é o resultado final do objeto que realmente podemos utilizar.
+A Classe é o esqueleto de um objeto, a instância é quando declaramos um objeto mas não há nada atribuído ainda, já o objeto (new) é o resultado final da classe que realmente podemos utilizar.
+O Objeto é o esqueleto de um objeto, a classe é quando declaramos um objeto mas não há nada atribuído ainda, já a instância (new) é o resultado final do objeto que realmente podemos utilizar.
+A Classe é o esqueleto de um objeto, o objeto é quando declaramos um objeto mas não há nada atribuído ainda, já a instância (new) é o resultado final da classe que realmente podemos utilizar. X
+A Instância é o esqueleto de um objeto, o objeto é quando declaramos um objeto mas não há nada atribuído ainda, já a classe (new) é o resultado final da classe que realmente podemos utilizar.
+
+A programação Orientada a objetos é baseada em diversos conceitos. Um desses conceitos é o uso de um mesmo nome para identificar diferentes implementações dos métodos. Qual é o nome deste conceito?
+Classe
+Herança
+Interface
+Polimorfismo X
+Encapsulamento
+
+Em POO entende-se por Polimorfismo a sobrecarga de métodos ou a sobrescrita de métodos. Qual das afirmações a seguir melhor descreve estes conceitos?
+Sobrecarga é quando utilizamos vários métodos com o mesmo nome, porém com parâmetros diferentes já a sobrescrita refere-se a métodos herdados da classe pai reescritos com retornos ou comportamentos diferentes. X
+Sobrescrita é quando utilizamos vários métodos com o mesmo nome, porém com parâmetros diferentes já a sobrecarga refere-se a métodos herdados da classe pai reescritos com retornos ou comportamentos diferentes.
+Sobrecarga é quando utilizamos vários atributos com o mesmo nome, porém com parâmetros diferentes já a sobrescrita refere-se a atributos herdados da classe pai reescritos com retornos ou comportamentos diferentes.
+Sobrescrita é quando utilizamos vários atributos com o mesmo nome, porém com parâmetros diferentes já a sobrecarga refere-se a atributos herdados da classe pai reescritos com retornos ou comportamentos diferentes.
+Sobrescrita é quando utilizamos vários métodos com o mesmo nome, porém com atributos diferentes já a sobrecarga refere-se a atributos herdados da classe pai reescritos com retornos ou comportamentos diferentes.
+
+Uma equipe está desenvolvendo um novo software e o responsável pela elaboração do diagrama de classes criou a associação conforme a imagem a seguir: ?
+Qual o tipo de associação está presente nesse diagrama?
+Associação binária.
+Associação Agregação.
+Associação ternária ou N-ária.
+Associação Composição.
+Associação generalização, especificação (Herança).
+
+Um programador desenvolvendo um software ao interpretar o diagrama de classes, se deparou com qual tipo de associação representado neste diagrama?
+Associação Binária.
+Associação Agregação.
+Associação Composição.
+Associação Unária ou reflexiva.
+Associação generalização ou especificação (Herança).
+
+Qual tipo de associação é representada neste diagrama?
+Associação Binária.
+Associação Agregação.
+Associação Composição.
+Associação Unária ou reflexiva.
+Associação generalização ou especificação (Herança).
+
+Em seu trabalho um técnico em desenvolvimento de sistemas pode utilizar o conceito de Programação Orientada a Objetos (POO) e a linguagem de programação orientada a objetos para codificar sistemas.
+Neste tipo de linguagem de programação:
+classe Pai, classe Base ou Superclasse é a classe que foi herdada de outra classe.
+entre a Classe Filha e a Sub-Classe, apenas a Classe Filha herda da Classe Pai. X
+polimorfismo e Abstração são os únicos princípios do POO.
+as instâncias são características e ações de um objeto.
+métodos definem as características dos objetos.
+
+Sobre POO é possível afirmar que:
+classe Pai, classe Base ou Superclasse é a classe que herda ou estende outra classe.
+entre a Classe Filha e a Sub-Classe, apenas a Classe Filha herda da Classe Pai.
+Polimorfismo e Abstração são os únicos princípios do POO.
+As instâncias são características e ações de um objeto.
+Atributos definem as características dos objetos. X
+
+Continuando no assunto de POO é correto afirmar que:
+classe Pai, classe Base ou Superclasse é a classe que herda ou estende outra classe.
+entre a Classe Filha e a Sub-Classe, apenas a Classe Filha herda da Classe Pai.
+As instâncias são características e ações de um objeto.
+Métodos definem as ações dos objetos. X
+Encapsulamento é o ato de proteger os métodos deixando seu acesso somente via atributos.
+
+Em POO o conceito de Encapsulamento consistem em:
+Apenas definir os atributos como privados
+Proteger os métodos através do modificador privado e definir seu acesso através dos atributos públicos Gets e Sets
+Proteger os atributos através do modificador privado e definir seu acesso através dos metodos públicos Gets e Sets X
+Definir os métodos de acesso como privados
+Definir os atributos como publicos
+
+O que é uma classe Abstrata?
+Uma classe que deve ser instânciada e possui atributos e métodos que serão herdados por uma classe filha.
+Uma classe que possui conceitos abstratos de encapsulamento atributos e métodos.
+Uma classe que não pode ser instânciada e possui atributos e métodos que apenas serão herdados por uma classe filha. x
+Uma classe que herda atributos e métodos da superclasse e é instanciada como objeto filho.
+Uma classe que é implementada por outras classes e pode ser instânciada também.
+
+O que é o padrão de projeto MVC?
+É um padrão de projeto pertencente ao GOF que segmenta o projeto em camadas (Modelo, Visão e Comando)
+É um padrão de projeto não pertencente GOF que segmenta o projeto em camadas (Modelo, Visão e Comando)
+É um padrão de projeto pertencente ao GOF que segmenta o projeto em camadas (Modelo, Visão e Controle)x
+É um padrão de projeto não pertencente GOF que segmenta o projeto em camadas (Modelo, Visão e Controle)
+É um padrão de projeto não pertencente GOF que segmenta o projeto em camadas (Módulo, Visão e Comando)
+
+No padrão de projetos MVC, qual a camada responsável pelo CRUD?
+A camanda responsável pelo CRUD é a "View" pois apresenta um menú de opções ou botões "Adicionar", "Excluir" e "Alterar" e mostra os dados da lista "Read" ao usuário. x
+Todas as camadas implemantam processos CRUD, porém a "Model" organiza os dados, a "Controler" processa as listas na memória e a "View" recebe comandos e mostra os dados para o usuário.
+A camanda responsável pelo CRUD é a "Controller" pois apresenta um menú de opções ou botões "Adicionar", "Excluir" e "Alterar" e mostra os dados da lista "Read" ao usuário.
+A camanda responsável pelo CRUD é a "Model" pois apresenta um menú de opções ou botões "Adicionar", "Excluir" e "Alterar" e mostra os dados da lista "Read" ao usuário.
+A camanda responsável pelo CRUD é a "DAO" pois apresenta métodos que abrem um arquivo para leitura e salvam os dados em um arquivo de texto.
+
+Para que serve o DAO?
+É um objeto de acesso a dados que serve para manipular apenas arquivos.
+É um objeto de acesso a dados que serve para manipular apenas dados modelados.
+É um objeto MVC de acesso a dados que serve para manipular apenas arquivos.
+É um objeto de acesso a dados que serve para manipular a conexão externa do programa com arquivos de banco de dados. x
+É um objeto MVC de acesso a dados que serve para manipular apenas gerenciador de banco de dados.
+
+Assinale a alternativa correta sobre interfaces.
+Uma classe pode implementar diversas interfaces, porém só pode extender uma Superclasse.
+Uma classe pode extender diversas classes abstratas, porém só pode implementar uma Interface.
+Uma classe pode extender diversas classes abstratas e pode implementar diversas Interfaces.
+Uma classe pode extender diversas Superclasses e pode implementar diversas Interfaces.
+Uma classe pode extender diversas Superclasses, porém só pode implementar uma Interface.

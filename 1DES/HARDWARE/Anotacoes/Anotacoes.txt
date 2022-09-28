@@ -1,0 +1,24 @@
+Quanto mais seguro o programa, maior o programa.
+
+byte = 8 bits;
+
+TAA - Tabela de locação de arquivos 
+MBR- 
+DMA - Dinamic memory acess
+memoria (HA, sid, dvd, flash)
+
+Cada KB é igual a dois setores. KB= 1000; Cada setor é igual a 512.
+1 caracter = 1 byte.
+
+O tamanho do disco tende a ser maior devido a,quando ele é quebrado, ele tende a pegra um pedaço do outro agrupamento. Nem que seja apenas uma epquena parte.
+
+Cada KB =  A dois agrupamentos.
+
+
+Mesmo apagando do HD tem como recuperar.
+
+HD - Lê, salva e deleta.
+
+A criptografia luta contra o tamanho. 
+
+

@@ -1,0 +1,39 @@
+Qualquer linguagem de programação ou sistema operacional é considerada um software básica.
+E os apliativos são os programas que usamos ao dia a dia.
+
+x = 3
+
+x: Endereço
+= : Controle
+3: Dado
+
+cd \ você vai estra até a raiz;
+cd .. - sai um nivel
+
+VMWARE \
+	 >Produção/ Servidores
+HyoerV /
+
+VirtualBox } dev/PC/Desktop/ Hardware vem bloqueado para vizualização.
+
+Cloud;
+
+PARTIÇÃO PRIMARIA - PR ( ACEITA UMA LETRA) E NÃO DEIXA SER SUBDIVIDIDA.
+
+PARTIÇÃO EXTENDIDA - EXT (POSSO SUBDIVIDR EM VARIAS PARTES)
+
+C:PR
+	= LOGICA
+D:EXT
+
+raid - ele parea dois hd, copia tudo de um no outro. Backup, para servidor.
+0 - parea os dois
+1 - grave por partes
+
+quick - imediato, rapido. 
+
+fast - duração maior.
+
+gerenciador de dominos permiete acessar pelo seu login por qualquer computador do dominio.
+
+componentes básicos do computador, conversões e tabela.

@@ -1,0 +1,100 @@
+Tamanho:
+ lan: Cabo par trançado CAT6 para opequenas distancias. Até 256 computadores é lan;
+ wan: Fibra óptica para médias e grandes distancias. Partiu pra internet é wan. 
+
+conexão:
+Guiada: Cabo - fibra optica, par trançado, coaxial;
+Não guiada - Wireless-- Wi-fi, bluetooth, NFC(Aproximação e cartões);
+
+Topologia - é o desenho fisico da rede. -- Estrela, Anel e barra.
+A mais usada é estrela;
+
+Roteador possui muitas funções.
+Multifuncionais.
+Roteador, ponte, switch/hub, repetidor -- Tudo isso em um aparelho só.
+
+
+Rede de redes não permite que a internet caia.
+
+Ethernet 10mb;
+Fat 100mb
+giga Bit 1000mb é o padrão de placade rede mais rapido.
+
+Par trançado suporta até gigabit.
+
+66536 portas um computador.
+
+Se o pacote colidi com outro ele 
+
+TCP- Garante que a mensagem chegue. Envia a mensagem em um tempo aleatório de segundos. Mas seguro.
+UDP - Não garante que a mensagem chegue, mas envia, mas rapido. Discord.
+
+DNS- Servico de nome dinamico. 
+
+DNS mais conhecido como 8.8.8 da google;
+
+os cabos de pares trançados cat5e alcançam até 1000Mbits.
+
+Endereco de nome, ip e mac...(numero aleatorio hexadecimal)
+Hub só vai por ip;
+
+infravermelho é muito sensivel a interferência.
+ondas de rádio atravessa planeta de tão potente. 
+
+ponto - ponto - Um para um.
+ponto a multiponto - Um para varios
+multiponto a multiponto - Varios para varios.
+
+Analogico - Ondas. Reais. Microfone e radio.
+Digital - Ondas quadradas. Ligação entre computadores.
+
+
+camada 4 - aplicação: chrome, email. Usuarios utilizam; HTTP, FTP, ISMTP, POP3
+camada 3- transporte: udp- discord, tcp - todo o resto.
+camada 2- internet: enderecos e IP, dns. ARP.
+camada 1- rede: ethernet, gigaethenert, a conexão.RJ45, KEYSTAONE.
+
+conector decabo ethenet - rj45é o masi usado.
+token - auxiliar(algo que auxilia) - Só Transmite quem tem o token, não tem colisão. Ethernet ettm colisão.
+SMMP - email
+DNS -tabela de enome
+SMTP- email
+FTP- DOWNload
+
+
+Endereçamento de IP v4 - 32 bits - 4 bilhões. - Solução: roteamento
+
+proxy mascara seu ip e usa e outro país.
+192.22.0.0 -é um numero ip.
+Cada um não pode passar de  255. Por exemplo se o numero for 124.456.12.3 Não é um numero ip por que o segundo posuio 400, ou seja, passosu de 255. E não pode numero negativo.
+
+ 
+
+IP v6 - 128 bits - 340 bilhões.
+
+Mascara é o endereco da rede. sem mascara não dá para rotear. Conecta em algo, é uma subrede. Escrita em binaria.
+
+wireless = wi-fi
+dibra óptica = wan
+par-trançado = lan
+dns= www.google.com
+01-00-5e-00-00-fb = mac
+
+ftp é o serviço que utilizamos para atransferenc de arquivos via internet.
+dns é o serviço que utilizamos para a resolução dos nomes ips;
+a porta masi utilizada pelo serviço de ftp é o 21.
+
+
+
+Verdadeiras:
+cmd>arp-a mostra s endereços fisicos dos dispositivos. 
+cmd>ping faz teste de conexaão com lan e wan.
+cmd>hostname = mosntra o nome do dominio do computador.
+cmd>tracert mostra a rota dos pacotes até o destino.
+cmd>ipconfig /all mostra o enedreço fisico do compuador e o ip.
+
+
+
+
+
+

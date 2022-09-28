@@ -1,0 +1,11 @@
+A classe é como o esqueleto de um objeto?
+
+O que seria exatamente instância?
+
+O encapsulamento protege os atributos através do privade, e pode-se acessar eles apenas pelo metodos públicos Gets e Sets?
+
+O que exatamente é uma classe abstrata?
+
+O que significa GOF?
+
+O que é uma interface em java?
