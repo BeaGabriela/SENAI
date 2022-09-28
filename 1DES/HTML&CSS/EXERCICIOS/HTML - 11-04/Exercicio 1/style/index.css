@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background-color: rgb(235, 239, 240);
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 6vh 0vh 8vh 80vh;
+    grid-template-columns: 30vw 70vw;
+    grid-template-areas:
+        "h h h"
+        "d n n"
+        "d n n"
+        "d n n";
+
+}
+header{
+    height:100%;
+    grid-area:h;
+    background-color: rgb(75, 75, 75);
+}
+.div{
+    height: 27%;
+    grid-area: d;
+    background-color: rgb(255, 255, 255);
+    margin-top: 11%;
+    margin-left: 5%;
+}
+nav{
+    height:100%;
+    grid-area: n;
+}
+menu{
+    height:100%;
+    grid-area:m
+}
+.img{
+    display: flex;
+}
+
+.img1{
+    margin-left:60%;
+    margin-top: -5px;
+}
+.pe{
+   padding-top: 10px;
+}
+.img1 liv{
+    margin-left:20px;
+}
+.img img{
+    margin-top: 10px;
+    margin-left: 1px;
+}
+
+
+#sair{
+    color:rgb(148, 148, 148);
+    font-size:16px;
+}
+.palavras{
+    margin-top: 20px;
+    margin-left: 16px;
+    color: rgb(168, 168, 168);
+}
+.ola{
+    color: rgb(172, 172, 172);
+}
+#nav{
+    margin-top: 40px;
+    margin-left:6%;
+}
+.dash{
+    font-size: 20px;
+    margin-left:30%;
+}
+.periodo{
+    margin-top:2%;
+    list-style: none;
+    margin-left:2%;
+   
+
+}
+.periodo input{
+    margin-left:2%;
+    border-color: rgb(220, 250, 241);
+    
+}
+.divi{
+  
+    grid-area: d;
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 5%;
+    list-style: none;
+}
+
+.div12{
+    height: 45%;
+    grid-area: d;
+    background-color: white;
+    margin-top: 55%;
+    margin-left: 5%;
+}
+
+
+

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../IMG/fundo.jpg");
+    background-size: cover;
+    display: grid;
+    margin-top: 10%;
+    justify-content: center;
+    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-columns: 10vw 10vw 10vw;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "h h1 h2"
+      "n n1 n2"
+      "f f1 f2"
+}
+
+.hh{
+    margin-left: 40px;
+}
+    .hw{
+        margin-left: 20px;
+    }
+    
+.n1{
+    height:100%;
+    grid-area: n1;
+    border: 1px solid black;
+    background-color: rgba(243, 70, 70, 0.418);
+    border-radius: 20%;
+   
+   
+}
+.n2{
+    height:100%;
+    grid-area: n2;
+    border:solid 1px black;
+    border-right: none;
+    
+}
+.h1{
+    height:100%;
+    grid-area: h1;
+    border:solid 1px black;
+    border-top: none;
+}
+.h2{
+    height:100%;
+    grid-area: h2;
+    border:solid 1px black;
+    border-top: none;
+    border-right: none;
+}
+.f1{
+    height:100%;
+    grid-area: f1;
+    border: 1px solid black;
+    border-bottom: none;
+}
+.f2{
+    height:100%;
+    grid-area: f2;
+    border: 1px solid black;
+    border-bottom: none;
+    border-right: none;
+    background-color: rgba(243, 70, 70, 0.418);
+    border-radius: 20%;
+    
+   
+}
+
+
+.h{
+    height:100%;
+    grid-area: h;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    background-color: rgba(243, 70, 70, 0.418);
+    border-radius: 20%;
+}
+
+
+
+
+ img{
+   margin-top:25%;
+   margin-left:20%;
+}
+
+
+
+
+nav{
+    height:100%;
+    grid-area: n;
+    border:solid 1px black;
+    border-left:none;
+}
+
+footer{
+    height:100%;
+    grid-area:f;
+    border:solid 1px black;
+    border-bottom: none;
+    border-left:none;
+}

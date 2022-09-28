@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+   
+.quadrados{
+    display: grid;
+    grid-template-rows:15vh;
+    grid-template-columns: 8vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+    grid-template-areas:
+    "a b c d e f g h";
+    margin-left:30px;
+    margin-top: 20px;
+} 
+.pr{
+    grid-area: pr;
+    height:100%;
+}
+.cima{
+    display: grid;
+    grid-template-rows: 10vh;
+    grid-template-columns: 30vw 30vw 30vw 0vw;
+    grid-template-areas: "pr v p";
+    background-color: white;
+    color: black;
+}
+.barra{
+    background-color:rgb(207, 33, 33);
+    height: 100vh;
+    width:1vw;
+    
+   
+}
+.menu{
+    list-style: none;
+    font-size: 15px;
+    margin-top:10px;
+    margin-left:10px;
+}
+.ajuda{
+    list-style: none;
+    font-size: 15px;
+}
+
+.menu p{
+    font-size: 18px;
+    background-color: rgb(61, 61, 61);
+    margin-top: -10px
+}
+.menu li{
+    margin-top:20px;
+}
+.principal{
+    background-color:rgb(66, 66, 66);
+    height:100vh;
+    color: rgb(150, 148, 148);
+    display:flex;
+    flex-direction:row;
+}
+.menu, 
+.ajuda,
+ img{
+    margin-top:20px;
+    margin:10px;
+}
+main img{
+    align-items: center;
+}
+.ajuda li{
+    margin-top:5px;
+}
+.valor {
+    display: flex;
+     grid-area: v; 
+     height:100%; 
+     align-items: center;
+}
+.valor li{
+    margin: 10px;
+    list-style: none;
+
+}
+.valor img{
+    margin: 10px;
+    align-items: center;
+
+}
+
+
+
+.textoabaixo{
+    display: flex;
+    margin-left: -390px;
+    margin-top: 70px;
+    align-items: center;
+    
+    }
+    .p{
+        display: flex;
+        align-items: center;
+        
+        margin-left:80px;
+        grid-area:p;
+         height:100%;
+    }
+
+    .a{
+        grid-area:a ;
+        background-color:purple;
+    
+       
+    }
+    .b{
+        grid-area: b;
+        background-color:rgb(25, 21, 233);
+        margin-left:40px;
+    }
+    .c{
+        grid-area: c;
+        background-color:rgb(175, 13, 13);
+        margin-left:40px;
+    }
+   .d{
+        grid-area: d;
+        background-color:rgb(167, 137, 3);
+        margin-left:40px;
+    }
+    .e{
+        grid-area:e ;
+        background-color:rgb(216, 44, 216);
+        margin-left:40px;
+    }
+    .f{
+        grid-area:f;
+        background-color:rgb(46, 87, 42);
+        margin-left:40px;
+    }
+    .g{
+        grid-area:g;
+        background-color:rgb(245, 55, 55);
+        margin-left:40px;
+    }
+    .h{
+        grid-area:h;
+        background-color:rgb(65, 114, 36);
+        margin-left:40px;
+    }
+    .selects{
+        margin-top: 50px;
+        display: grid;
+        grid-template-rows: 10vh 20vh 10vh 10vh 10vh;
+        grid-template-columns: 40vw 40vw;
+        grid-template-areas: " r s "
+                             "ri i";
+                            
+
+    }
+    .restante {
+        grid-area: r;
+        height: 40%;
+        width: 90%;
+        margin-left:20px;
+    }
+    .suas{
+        grid-area:s;
+        height: 40%;
+        width: 90%;
+    }
+#circulo{
+    height:150px;
+    width:150px;
+    border-radius: 150px;
+    background-color:green;
+   
+    
+}
+.clima{
+    grid-area: ri
+   
+}

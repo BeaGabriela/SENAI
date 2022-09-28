@@ -1,0 +1,19 @@
+try{
+}catch(exception e){
+
+{catch(Filenot ...){
+} finzly{
+}
+
+
+
+
+
+
+File reader -- Abri um arquivo para leitura.
+
+Buffered reader -- Ponte entre o arquivo e os dados.
+
+File writer -- Escreve um arquivo.
+
+Buffered reader -- Lê um arquivo;

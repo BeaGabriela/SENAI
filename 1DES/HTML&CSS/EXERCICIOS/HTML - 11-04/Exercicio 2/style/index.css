@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(212, 203, 203);
+    background-size: cover;
+    display: flex;
+    /* display: grid;
+    grid-template-rows: 6vh 10vh 30vh 50vh;
+    grid-template-columns:15vw 1vw 40vw 40vw;
+    grid-template-areas:
+        "m b h h"
+        "m b n n"
+        "m b n n"
+        "a b n n"; */
+
+}
+.barra{
+    grid-area: b;
+    background-color:rgb(207, 33, 33);
+    height: 100vh;
+    width:1vw;
+    
+   
+}
+.menu{
+    grid-area: m;
+    list-style: none;
+    font-size: 15px;
+    margin-top:10px;
+    margin-left:10px;
+}
+.ajuda{
+    grid-area: a;
+    list-style: none;
+    font-size: 15px;
+    margin-top: 50px;
+}
+.menu p{
+    font-size: 18px;
+    background-color: rgb(61, 61, 61);
+    margin-top: -10px
+}
+.menu li{
+    margin-top:20px;
+}
+.principal{
+    background-color:rgb(66, 66, 66);
+    height:100vh;
+    color: rgb(150, 148, 148);
+    display:flex;
+    flex-direction:row;
+}
+img{
+    margin-top:20px;
+    margin:10px;
+}
+.ajuda li{
+    margin-top:5px;
+}

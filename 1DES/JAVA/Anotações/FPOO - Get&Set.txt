@@ -1,0 +1,5 @@
+Get - Controle -- 
+Set - Controle -- 
+
+private -- SÓ a classe pode acessar.
+public -- Qualquer classe pode acessar ele.

@@ -1,0 +1,104 @@
+.quadrados{
+display: grid;
+grid-template-rows:15vh;
+grid-template-columns: 20vw 20vw 20vw 20vw;
+grid-template-areas:
+"a b c d";
+margin-left:30px;
+margin-top: 20px;
+} 
+.a{
+    grid-area: a;
+    background-color: cornflowerblue;
+    list-style: none;
+}
+.b{
+    grid-area: b;
+    background-color: rgb(233, 138, 74);
+    list-style: none;
+}
+.c{
+    grid-area: c;
+    background-color: rgb(43, 228, 19);
+    list-style: none;
+}
+.d{
+    grid-area: d;
+    background-color: rgb(255, 62, 4);
+    list-style: none;
+}
+
+.pr{
+    grid-area:pr;
+    height:100%;
+}
+.valor {
+        display: flex;
+         grid-area: v; 
+         height:100%; 
+         align-items: center;
+    
+}
+.image{
+    display: flex;
+    align-items: center;
+    
+    margin-left:80px;
+    grid-area:i;
+     height:100%;
+
+}
+.n {
+    grid-area:n;
+}
+.ci{
+grid-area:ci;
+}
+.cim{
+    grid-area:cim;
+}
+.cima{
+        display: grid;
+        grid-template-rows:10vh;
+        grid-template-columns: 30vw 30vw 30vw 0vw;
+        grid-template-areas:"pr v i"
+       
+    }
+
+.ges{
+    margin-left: 10px;
+    padding: 12px
+
+  
+}
+.menu li{
+    list-style: none;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.menu input{
+    margin-top: 10px;
+    padding: 12px;
+    width: 18vw;
+    margin-left: 10px;
+    background-color:rgba(127, 127, 235, 0.411);
+    color: white;
+   
+}
+.ret{
+    height: 100vh;
+    width: 20vw;
+    background-color:blue;
+    color: white;
+}
+select{
+    display:block;
+    margin-top: 30px;
+    padding: 12px;
+    width: 18vw;
+    margin-left: 10px;
+    color: white;
+    background-color:blue;
+    
+}

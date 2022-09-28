@@ -1,0 +1,7 @@
+Path - caminho 
+versao
+dependencia
+
+herança -- herda propriedade de outra classe (extendes).
+Generelizacao - todos eles tem todas os paramentos;
+Especialização - é quando uma classe tem tal parametro;

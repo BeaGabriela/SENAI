@@ -1,0 +1,11 @@
+assincrono - 
+sincrono - 
+
+A promisse fica aguardando uma resposta.
+
+create constraint -- Cria um nome para a chave estrangeira, como criamos em JS, criando uma variavel e atribuindo a ela umm valor. Diferente do foreign key que adiciona e faz referencias.
+
+String json --> é necessario aspas;
+atributo json não é necessario aspas;
+
+module.exports --> 

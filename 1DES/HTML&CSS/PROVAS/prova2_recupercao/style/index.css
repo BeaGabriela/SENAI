@@ -1,0 +1,73 @@
+body{
+   margin: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(204, 226, 226);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ header{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+.header img{
+    height: 50vh;
+    width: 50vw;
+
+}
+.quadradomaior{
+    align-items: center;
+    height: 40vh;
+    width: 25vw;
+    background-color: rgb(238, 237, 235);
+    position: absolute;
+    margin: 0 -12vw;
+}
+.bolinhas{
+    width: 3vw;
+    height: 5.5vh;
+    border-radius:  100%;
+    border: 1px solid  #44babc;
+    background-color: white;
+    list-style: none;
+    margin: 1px 0.8vw 0 0;
+
+    
+}
+.bolinhas li{
+    margin: 18px 0 0 24px;
+}
+.linha{
+    border: 1px solid rgba(0, 0, 0, 0.534);
+    width: 14vw;
+    position: relative;
+    margin: 8vh 5.5vw;
+}
+.linha1{
+    display: flex;
+    flex-direction: row;
+    margin: -7.5vh 0 0 5vw;
+    
+}
+.linha2{
+    display: flex;
+    flex-direction: row;
+    margin:1vh 5vw 0vh ;
+}
+.linha3{
+    display: flex;
+    flex-direction: row;
+    margin:1vh 5vw;
+}
+.linha4{
+    display: flex;
+    flex-direction: row;
+    margin: 0vh 5vw;
+}
+.bolinhas:hover{
+    background-color:  #35797d ;
+    color: #fff;
+    cursor:pointer;
+}

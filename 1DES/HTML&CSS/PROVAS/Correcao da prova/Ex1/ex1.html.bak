@@ -1,0 +1,52 @@
+<html>
+		<head>
+		<meta chraset ="utf-8"/>
+		<title> Area do aluno</title>
+		<style type="text/css">
+			body {color: white;
+			}
+		</style>
+		</head>
+		<body style="background-image: url('../IMG1/im.jpg'); background-repeat: no-repeat;  background-size: cover">
+		
+		<form>
+			Nome do aluno:
+		<input type="text" value="Exemplo: nome"/>
+	      <p>
+		 </p>
+		
+			Senha:
+		<input type="password" value="senha"/>
+		<p>
+		 </p>
+		
+			Email:
+		<input type="email"/>
+		<p>
+		 </p>
+		 
+		 
+			Sala:
+		<input type="text" value="Exemplo 3ªF/>
+		<p>
+		 </p>
+
+		   
+		<input type="submit"/> <input type="reset"/>
+		<p>
+		 </p>
+		 
+		
+		Não tem conta?
+		 <input type="submit" value = "Criar uma conta"/>
+		 <p>
+		 </p>
+		 
+		 <input type= "submit" value = "Esqueceu a senha?"/>
+		<p>
+		 </p>
+		
+		
+		</br>
+		</body>
+</html>

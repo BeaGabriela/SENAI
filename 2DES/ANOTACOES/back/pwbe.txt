@@ -1,0 +1,75 @@
+Servidor
+	IIS- ASP
+	APACHE - PHP
+	APACHE TAN CAT - JSP
+	V8 - NODE
+    \ html, css, javascript \
+
+
+Nuvem privada
+Nuvem publica  	Todas elas tem VPN
+Nuvem 
+
+ip = 127.0.0.1
+localhost = DVS
+
+http - local
+
+URL -->  http://www.pudim.com.br (Coisas ocultas, endereço de dominio(www.pudim), protocolo(http://). Quando não tem nada no final, é a porta 80. Requisição()
+
+Tudo na internet é REQ(Requisicao)-frontend e RES(resposta)- backend
+
+Get --  Resposta
+post - Enviar dados para aguardar
+put - Alterar 
+delete - Apagar
+
+resfull;
+
+npm --> yarn e npm
+
+
+1 - IInstalar o node
+2- Criar uma pasta
+3 - Abrir no VSCODE
+Abrir o treminal
+b. npm init
+c. Instalar a primeiras depêndencias(express --> Ela quem responde o mais rapido o https)
+
+
+Servidor do nodeJs --> V8
+Servidor do php --> Appache
+Servidor do java - appache tom cast
+
+
+09-09{
+put - alterar.
+delete - deletar.
+get - mandar
+post - 'cadastrar'
+set - puxar
+
+' '.classlist.remove('modal') -- Ele remove o modal que está como display none, e visibility hidden, ou seja, ele estava 'invisiviel' assim, quando for removido a estrutura programa por 'detrás' do modal ficará visivel.
+
+window.location.reload() - Atualizar a página quando determinada ação ocorrer.
+
+Content-type -- É a forma como você manda as informações como um json. 
+
+Float(6, 2) -- São seis casas, sendo 2 depois da virgula, e quatro antes da virgula.
+
+routes.js- Responsavel por interligar o 'controle' com o back. Literalmente como mua rota, encaminha um arquivo para o outro.
+
+module.exports = '' -Exporta alguma coisa.
+
+
+
+
+
+
+
+
+
+}
+
+
+Akita yiroko

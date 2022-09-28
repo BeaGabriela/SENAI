@@ -1,0 +1,362 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+    body{
+        background-image:linear-gradient(rgb(133, 236, 124), rgb(203, 241, 203) , white );
+        margin: 0;
+        width: 100%;
+        font-family: "Gideon Roman";
+
+    }
+ a{
+       
+        display:flex;
+         justify-content:center; 
+        align-items:left;
+        text-decoration: none;
+        height: 49%;
+        background-image:linear-gradient(rgb(228, 98, 98) , rgb(245, 160, 174));
+        padding: 9px 8px;
+        border-radius: 20px;
+      
+    }
+
+.search-box{ 
+        position:absolute;
+        left: 400px;
+        list-style: none;
+        transform:translate(-70%, -5%); 
+        background:radial-gradient(rgb(255, 186, 197) , white);
+        height: 19px; 
+        text-decoration: white;
+        padding: 10px 110px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin:3% 16%;
+        
+      
+
+
+}
+    .search-txt{
+        border:0;
+        background:none;
+        outline:0;
+        padding-right:50px;
+        font-size:16px;
+       }   
+  
+
+    .search.btn{
+        width: 20px;
+        height: 20px;
+         border-radius: 0%; 
+        }
+
+    ul{
+        height: 10px; 
+        width:10px 10px;
+        margin: left 30px;
+        margin: right 20px;
+
+    }
+    .entrar{
+        height: 40px; 
+         font-size:10px;
+         text-align: left;
+         display: flex;
+         color:aliceblue;
+    }
+    
+    header{
+        display:flex;
+        flex-direction: row;
+        height: 10%;
+        background-image:linear-gradient( rgb(4, 107, 4) , rgb(46, 202, 46) , rgb(114, 230, 114) ) ;
+       border-radius: 20px;
+        background-repeat: repeat;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 2px 20px;
+        font-size: 20px;
+        width:96%;
+        
+        
+    }
+ 
+     header liv{
+         display:flex;
+        flex-direction: row;
+        height: 10%;
+        justify-content: space-between;
+         align-items: center; 
+        padding: 0px 20px;
+        font-size: 2em;
+       
+
+
+     }
+
+     .lupa{
+        height: 20px;
+        padding: -1px 0px;
+        border-radius: 10px;
+        margin-top: -15%;
+        background-image:linear-gradient(rgb(223, 193, 192) ,rgb(232, 241, 232));
+        
+    } 
+
+    .content1{
+        display: flex;
+        flex-grow: row;
+        margin: 5% auto;
+        justify-content: space-around;
+        text-align: center;
+        line-height:normal;
+        height:5%
+        
+    }
+    nav{
+        display: flex;
+        justify-content: space-around; 
+        text-align: center;
+        height:0%;
+        align-items:center;
+        color: rgb(2, 2, 2);
+        margin:1% 3%;
+        background: url("../IMG/meio.png");
+        border-radius: 20px;
+        padding: 5px 3px;
+        font-size: 20px;;
+        
+
+        
+    }
+
+    .lista {
+    display:flex;
+    margin: 137px 67px;
+    justify-content: space-around;
+    background-image:radial-gradient(rgb(114, 230, 114) , rgb(46, 202, 46) ,rgb(4, 107, 4) ) ;
+    /* margin-right: 55% ; */
+    text-align: center;
+    flex-direction: column;
+    height:20%;
+    padding: 31px 90px 25px 10px;
+    float: left;                 
+    min-height: 300px;           
+    width: 40%;            
+    border: 5px solid rgb(0, 0, 0);  
+     list-style: none;
+     font-size: 20px ;
+     
+     
+  
+    }
+        .Marca{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background: url("../IMG/capa.jpg");
+            height: 50px;
+            font-size: 60px;
+            padding: 20px 0px;
+            border-radius: 20px;
+            width: 99%;
+         
+           
+        }
+    
+
+    .content{
+        width: 0px 50px;
+        display: flex;
+        flex-grow: column;
+        margin: 3% 20px;
+        padding: 10px;
+        justify-content: space-between;
+        text-align: center;
+        background: url("../IMG/fundo.jpg");
+        background-repeat: repeat;
+        border-radius:20px;
+        
+    }
+    .image:hover{                        
+        height: 200px; 
+        transition: 2s;
+        background-color: white;
+        width: 200px;
+        margin: 50px 10px;
+        box-shadow: 0px 10px 10px rgba(rgb(236, 25, 25)rgb(236, 68, 68), rgb(230, 127, 127), 0.753);
+         display: flex;  
+        justify-content: space-between;
+       align-items: center; 
+    }
+        
+       button{
+        background-image:radial-gradient(rgb(228, 152, 152), rgb(235, 68, 96) , rgb(240, 40, 40));
+        margin-right: 20%;
+        border-radius:10%;
+       }
+       
+       nav liv{
+           display: flex;
+           margin: 0px 30px;
+           padding: 0px 10px;
+          
+            
+       }
+
+         .li{
+             display: flex;
+             width:7%;
+             background: url("../IMG/fundo.jpg");
+             background-repeat: repeat;
+         }
+    
+         .coluna1{
+            height: 100%; 
+            margin:0px 40px;
+            width: 10% 12%; 
+            align-items:center;
+            padding:0px 0px;
+         }
+
+            .coluna2{
+                margin:0px 40px;
+                /* width: 80% 20%;  */
+                align-items:center;
+                /* padding:0px 50px; */
+            }
+            .coluna2{
+                margin:0px 40px;
+                /* width: 80% 20%;  */
+                align-items:center;
+                /* padding:0px 50px; */
+            }
+         
+    .filtro{ 
+       
+    
+        flex-wrap: wrap;    
+         display:flex;
+    
+      
+    }
+       
+    
+    .filtro liv{
+        margin:12px;
+        height: 17px;
+         display:flex;
+        justify-content: space-between;
+        align-items:left; 
+        padding: 0px 30px;
+        
+
+    }
+    
+   
+    p{
+        height:auto;
+        color: white;
+        font-size: 20px;
+        padding: 0px 4px;
+    }
+
+    footer{
+        
+        background-image:linear-gradient( rgb(114, 230, 114)   , rgb(46, 202, 46) , rgb(4, 107, 4)) ;;
+        background-repeat:repeat;
+        height: 160px;
+        margin:-35px 20px;
+        width: 98%;
+        background-color: black;
+        border-radius: 20px;
+       
+        
+    }
+   
+
+  
+        .rodape1{
+            margin:18px 50px;
+            width: 10% 10%; 
+            align-items:center;
+            padding:20px 60px;
+            font-size: 20px;
+           
+        }
+
+    .rodape2{
+      
+        margin: -40px 9px;
+        width: 0% 10%; 
+        align-items:center;
+        padding:42px 100px;
+        font-size: 20px;
+        margin-bottom: 10px;
+       
+       
+    }
+
+    footer ul{
+        display: flex;
+        flex-wrap: wrap ;
+        margin: 1% 40px;
+        justify-content: space-around;
+        text-align: center;
+        list-style: none;
+        
+    }
+
+    .fim{
+        text-align: center;
+        background-image:linear-gradient(rgb(4, 80, 4) , rgb(1, 66, 7) , rgb(1, 41, 8));
+        height: 40px;
+        font-size: 30px;
+        padding: -10px 10px;
+        margin-top: -20px;
+        border-radius:10px;
+        color: rgb(255, 255, 255);
+    }
+
+    footer a{
+        background-image:linear-gradient(rgb(185, 19, 19) , rgb(236, 132, 132));
+    
+    }   
+
+    div a{
+        color: rgb(7, 7, 7);
+        
+    }
+
+        .escolhido{
+            background:radial-gradient(rgb(255, 186, 197) , white);
+            border-radius: 10px;
+            padding: 5px  0px;
+           margin: -1px 10px;
+           height: auto;
+
+        }
+
+       ul li {
+        padding: 15px 28px;
+        margin: 5px 10px;
+        width: 2px;
+       }
+        .letra{
+
+       background:radial-gradient(rgb(255, 186, 197) , white);
+            border-radius: 10px;
+            padding: 4px  28px;
+           margin: 8px 5px;
+           height: auto;
+           color: black;
+  }
+
+      
+    
+       

@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+
+header{
+    display: grid;
+    grid-template-rows:100vh;
+    grid-template-columns: 23vw 87vw ;
+    grid-template-areas: "me mai";
+    background-color: rgb(214, 214, 214);
+                        
+}      
+main{
+    grid-area: mai;
+    display: grid;
+    grid-template-rows: 8vh 25vh 63vh 8vh;
+    grid-template-columns: 20vw 35vw 20vw;
+    grid-template-areas:
+        "pr va image"
+        "q q q"
+        "cliente g t";
+}
+.valor liv{
+    grid-area: va;
+    margin: 10px;
+  
+}
+
+.cli{
+    grid-area: cliente;
+    display: grid;
+    grid-template-rows: 4vh 7vh 8vh 9vh;
+    grid-template-columns: 8vw 5vw 2vw;
+    grid-template-areas:
+        "cli to v1"
+        "c1 t1 v1 "
+        "c2 t2 v2"
+        "c3 t3 v3 ";
+    list-style: none;
+    margin: 10px 10px;
+    background-color: rgb(222, 238, 233);
+}
+.c1{
+    grid-area:c1;
+}
+.c2{
+    grid-area: c2;
+}
+.c3{
+    grid-area: c3;
+}
+.cliente{
+    grid-area: cli;
+    font-weight: bolder;
+    
+}
+.grafico img{
+    height: 60vh;
+    width: 33vw;
+    grid-area: g;
+}
+.tex{
+    grid-area: t;
+    background-color:rgb(247, 239, 239);
+    
+}
+.tex p{
+    margin: 10px 10px;
+}
+.tex img{
+    height: 20vh;
+    width:10vw;
+    align-items:center
+}
+
+.total{
+    grid-area: to;
+}
+.t1{
+    grid-area: t1;
+}
+.t2{
+    grid-area:t2;
+}
+.t3{
+    grid-area:t3;
+}
+.v1{
+    grid-area: v1;
+}
+.v2{
+    grid-area: v2;
+}
+.v3{
+    grid-area: v3;
+}
+.image{
+    grid-area: image;
+}
+
+ .menu img{
+    margin: 0px 10px;
+} 
+      
+.menu selects{
+     margin:10px;
+
+      }
+.menu li{
+    margin:50px 10px;    
+    list-style: none;
+}
+.menu input{
+    margin: 20px 10px;
+    border: none;
+    outline: none;
+    background-color:rgba(255, 255, 255, 0.493);
+    padding: 10px 50px;
+}
+.ges{
+    margin: 20px 10px;
+}
+.menu{
+    grid-area: me;
+    background-color:blue;
+}
+.pr{
+    grid-area: pr;
+}
+.quadrados{
+    display: grid;
+    grid-template-rows: 20vh;
+    grid-template-columns: 18vw 18vw 18vw 18vw;
+    grid-template-areas: "a b c d";
+    grid-area: q;
+    margin-left: 10px;
+
+}
+
+.a{
+    grid-area: a;
+    background-color:blue;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.b{
+    grid-area: b;
+    background-color:rgb(255, 102, 0);
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.c{
+    grid-area: c;
+    background-color: green;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.d{
+    grid-area: d;
+    background-color: red;
+      margin-right: 10px;
+      border-radius: 20px;
+}

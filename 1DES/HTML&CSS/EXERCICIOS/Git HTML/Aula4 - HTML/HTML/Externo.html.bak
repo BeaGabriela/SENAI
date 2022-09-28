@@ -1,0 +1,13 @@
+<html>
+	<head>
+	<meta charset="utf-8"/>
+		<title> CSS Externo </title>
+		<link rel="stylesheet" href="style/CSS Externo.css"/>
+		
+	</head>
+	<body>
+	<label>Velaris</label>
+	<label class="class"> Onde o coração descansa,</label>
+	<label id="id"> e a alma clama</label>
+	</body>
+</html>

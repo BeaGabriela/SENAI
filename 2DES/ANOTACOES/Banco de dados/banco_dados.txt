@@ -1,0 +1,12 @@
+O indice sempre estará organizado em ordem crescente.
+Não pode ser repetido.
+O indice deixa a consulta algo mais rapido.
+
+
+Se for buscar por nomes, ele irá trazer todos os resultados que 'batem' com a pesquisa. E pelo nome, a chance disso repetir, é grande.
+limit 1 - Mostra apenas o último.
+
+Stored procedure:
+
+Procurar mais sobre escopo (sgbd).
+

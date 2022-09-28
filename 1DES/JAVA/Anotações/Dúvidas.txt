@@ -1,0 +1,42 @@
+A classe é como o esqueleto de um objeto?
+Sim. Uma classe pode virar um objeto, já um objeto não pode virar uma classe.
+
+O que é POO?
+Programação orientada a objeto.m Ela foi inventada para tentar aproximar o mundo digital
+do mundo real.
+
+O que seria exatamente instância?
+É quando você utiliza a classe em alguma outra classe, chamando ela em outra, 
+como: "private Usuario usuarios=new Usuario();"
+
+O encapsulamento protege os atributos através do privade, e pode-se acessar eles apenas pelo metodos públicos Gets e Sets?
+Sim. O encapsulamento serve para proteger o código, o deixando mais seguro e "limpo".
+
+O que exatamente é uma classe abstrata?
+Uma classe que não se pode instanciar, ou seja, não é possivel chamar ela em ourto classe. Uma classe abstrata pode apenas herdar,não instânciar.
+
+
+O que é uma interface em java?
+É a tela de comunicação com o usuário, onde o usuário tem acesso ao código. é como uma 
+classe, exceto que pode ter apenas métodos abstratos(método declarado sem corpo)
+
+Herdar: é quando umna classe herda as mesmas caracteristicas da classe mãe.
+Atributos são caracteristicas de  algo.
+Metodos são as ações.
+Estado é a forma que está no momento.
+
+Crud - Create, read, update e delete. Ou seja, criar, ler, alterar e apagar. Se localiza no pacote visão. 
+E serve para utilizar em base de dados, fornecidas aos utilizadores do sistema.
+
+MVC - Model, vision e controller. é um padrão de sistema. Onde se divide classes em três pacotes distintos.
+
+DAO - objeto de acesso a dados, serve para simplificar e desacoplar as interações de java.
+
+extends - é algo que não é 100% obrigatório.
+include - Obrigatório. 
+
+Pode colocar apenas uma superclasse, e diversas interfaces.
+
+No encapsulaento, os atributos são privados, 
+e podem ser acessados atráves de metódos Get e Setters.
+

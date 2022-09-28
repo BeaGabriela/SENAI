@@ -1,0 +1,148 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<a name="topo">
+	<title> Livros & Músicas</title>
+</head>
+<body bgcolor="DeepSkyBlue"><fontface="Times new roman></font>
+	<h3 id=menu>Livros & Músicas</h3>
+	<h4 id=menu>Músicas que representam Livros (na minha perpectiva)</h4>
+	<ul>
+		<li>Birds - Imagine Dragons  <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/R.3711c4f3c6a777cc398a6e07c1debcd6?rik=HehHb1mxtYlG8w&pid=ImgRaw&r=0"/></a></li>
+		<br>
+		<li>Couting Stars - Onerepublic <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/OIP.AWsZzbmSmf9FTAq0Hm633wHaEK?pid=ImgDet&rs=1"/></a></li>
+		<br>
+		<li>Galway Girl - Ed Sheeran <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/OIP.boxCl2icoBwUJkwEXeK2fQHaHa?pid=ImgDet&rs=1"/></a></li>
+		<br>
+		<li>Boulevard of Broken Dreams - Green Day <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/R.436ba814c0ec59df672a2fb439f6d874?rik=QSTF5t9%2b1ChXcQ&pid=ImgRaw&r=0"/></a></li>
+		<br>
+		<li>Unstoppable - Sia <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/R.b835f87ee7f4c0a1d2988c0089e329d0?rik=cgICleltSsaVWQ&pid=ImgRaw&r=0"/></a></li>
+		<br>
+		<li>DiE4u - Bring me the horizon <a href=../HTML3/Site3.html><img width=30px src="https://th.bing.com/th/id/OIP.YALxR_o-qkLaBHAvin310QHaDy?pid=ImgDet&rs=1"/></a></li>
+		<br>
+		<li>Popular Monster - Falling In Reverse <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/R.c4a49b3620d73a5883aa69b24cdb9529?rik=ZBW6%2bcmASmtJXA&pid=ImgRaw&r=0"/></a></li>
+		<br>
+		<li>Like a Stone - Audioslave <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/R.9f697e151ce833cc3f5c769d92477650?rik=IrbfGnRQWNkNtw&pid=ImgRaw&r=0"/></a></li>
+		<br>
+		<li>R.I.P 2 My Youth - The Neighbourhood <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/R.9681054d3c7619675dab13d506d44492?rik=Rv3cMy2h3%2fWecg&pid=ImgRaw&r=0"/></a></li>
+		<br>
+		<li>Sappy - Nirvana <a href=../HTML3/Site3.html><img width=20px src="https://th.bing.com/th/id/OIP.d2XMgbsHVQX6On52mL6ZdgHaJV?pid=ImgDet&rs=1"/></a></li>
+		<br>
+		<li>Is This Love - Whitesnake <a href=../HTML3/Site3.html><img width=30px src="https://th.bing.com/th/id/R.5525b421920f017f1a9a5dea4f239481?rik=A30JMKwIk3y1nQ&riu=http%3a%2f%2fwhitesnake.com%2fwp-content%2fuploads%2f2016%2f07%2fwhitesnake-small2.png&ehk=qWWR9MCx6NdIWmDktHK8zOqJ%2bjfUEVAn9Bis2B9wIk4%3d&risl=&pid=ImgRaw&r=0"/></a></li>
+		<br>
+	</ul>
+	<hr/>
+	<p>
+		<h4 id=Imagine Dragons> "Birds - Imagine Dragons" <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+			Composta por uma melodia suave e toque leves. Entretanto carregada de sentimentalismo, como por exemplo a forma como ela é cantada. A letra gira em torno de aceitação, tanto no sentido de aceitar a si mesmo, como aceitar que nada é para sempre, inclusive os momentos ruins. 
+			<p>
+			</p>
+			"Birds fly in different directions"
+			
+		
+	</p>
+	</p>
+	<p>
+		<h4 id=Onerepublic>"Couting Stars - Onerepublic" <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+			Sabe aquele tipo de música marcante? Pois bem, digamos apenas que Couting Stars fez muito sucesso ao redor do mundo. Com melodias agitadas e marcantes, couting stars fala sobre...romance? é, coloquemos nesse contexto. Com algumas frases crativas, ele sugere ao ouvinte que, ao invés de contar dinheiro, conte estrelas.
+		    <p>
+			</p>
+			"No more coutin' dollars, we'll be coutin' stars".
+		</p>
+	</p>
+	<p>
+		<h4 id=Ed Sheeran>Galway Girl - Ed Sheeran <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+			Lembra daqueles desenhinhos antigos com as flautas escocesas? Então, pegue aquela melodia que da voltade de cantar e junte com um pop, e você terá uma das melhores junções animadas(particularmente falando). Com as batidas divertidas, a música trás uma pequena história do autor. De como em um dia "aleatório" ele conheceu uma garota que tocava violino em um bar, e assim o romance surgiu.
+			<p>
+			</p>
+			"Said, "Baby, I just wanna dance
+			 "With my pretty little Galway girl".
+		</p>
+	</p>
+	<p>
+		<h4 id=green day>Boulevard of Broken Dreams - Green Day <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+			AH, a boa e velha Bobd. Aquele tipo de música que você canta com o coração, mas ainda se sente "para baixo", é esse o efeito dessa música. Billie Joe pensou que seria uma boa ideia retratar o vazio que todo mundo sente em relação a não ter pessoas amigas do seu lado, e de fato, foi uma das músicas que mais estorou. 
+			<p>
+			</p>
+			"My shadow's only one that walks beside me
+			My shallow heart's the only thing that's beating...".
+		</p>
+	</p>
+	<p>
+		<h4 id=Sia>Unstoppable - Sia <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		Essa, particulamente falando, é uma música espetacular. Ela fala sobre o amor próprio, e sobre o fato de você reconhecer o quão incrivel é você. E no meu pensar, ela diz também que esta tudo bem usar uma armadura, por que você sabe que mesmo sem ela, você é incrivelmente forte.
+		<p>
+			</p>
+		"I'm unstoppable
+		 I'm a Porsche with no brakes
+		 I'm invincible"
+	</p>
+	</p>
+	<p>
+		<h4 id=BMTH>DiE4u - Bring me the horizon <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		Ainda tenho minhas dúvidas de que um ponto dessa música foi feito com relação a relacionamentos tóxicos. Por que, pensa comigo "Eu não quero morrer por você", acho que quando estamos em um ambiente tóxico, acabamos nos matando por causa disso, mesmo que internamente... E é essa uma das mensagens explicitas da música.
+		<p>
+		</p>
+		"This isn't love, this a car crack
+		  This isn't love, this a bloodblad..."
+		
+	</p>
+	<p>
+		<h4 id=Popular monster>Popular Monster - Falling In Reverse <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		 Aquele tipo de musica em que toda a sua agonia diante do mundo é colocada em palavras? Pois bem, é exatamente isso. Ronnie expressou de uma maneira bem... Ronnie, sua "indignania", em relação a fama.
+		 <p>
+		</p>
+		 "I don't know if it's a phase, i just wanna feel okay..."
+		</p>
+	  </p>
+	<p>
+		<h4 id=like a stone>Like a Stone - Audioslave <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		Não dá para ouvir essa música sem se apaixonar pela Chris Cornell. Sua entonação, sua dor ao cantar, são coisas que fascinam. A música retrata a espera de um "homem apaixonado" pela pessoa na qual ele tem tal sentimento.
+		<p>
+		</p>
+		"In your house, i long to be..."
+		</p>
+		</p>
+		<p>
+		<h4 id=R.I.P>R.I.P 2 My Youth - The Neighbourhood <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		 Acho que o nome da música já diz tudo. "Que minha juventude descanse em paz". Aquela fase que você passa da adolescencia e beira a fase adulta, nem sempre pela idade. Algumas vezes pela idade metal, e talvez espiritual.
+		 <p>
+		</p>
+		 "I was a naive and hopeful and lost
+		  now i'm a aware and driving my thoughts..."
+		 
+		</p>
+		<p>
+		<h4 id=sappy>Sappy - Nirvana <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		 Outra música que eu acho que retrata relacionamento tóxicos. Kurt cita diversas situações ruins que uma pessoas poderia passar ao longo da sua vida, e coloca no final da frase "E você achará que é feliz".
+			<p>
+			</p>
+			"And if you save myself 
+			you will make im happy..."
+			
+			
+		</p>
+		<p>
+		<h4 id=Is this love>Is This Love - Whitesnake  <a href=../HTML2/Site2.html><img width=20px src="https://th.bing.com/th/id/R.dc0ba90fad9fe7702974898a0aa28441?rik=Oam5Or2JJGp5RA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		 E para fechar com chave de ouro, uma boa e velha música romantica. No contexto, a música retrata a dúvida de um homem, que não sabe ao certo se está ou não apaixonado.
+		 <p>
+		</p>
+		 "Is this love tha't feeling...".
+			
+			
+		</p>
+	</p>
+	<h5>voltar ao topo<a href ="#topo"><img width=20px src= "https://th.bing.com/th/id/OIP.HNhfqCP0f0KRcGIWSABHEQHaEs?pid=ImgDet&rs=1" </a>
+</body>
+</html>

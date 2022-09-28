@@ -1,0 +1,25 @@
+dDepartamentos:
+	Serviço, vendas, produção, contabilidade, fiscal. -- 
+
+
+ERP - Criador toyota;
+
+SAP
+PROTEUX
+
+crm - relacionamento com o cliente.
+
+Legados.
+
+Dev - Desnvolvimento.
+
+8 byte = 8 bits.
+
+char e byte = 8 - diferenca = char entende ASCII, e aceita letras, byte não;
+
+int = 32;
+long = 64;
+float = 64;
+
+JMenuBar - Faz a barra acima que contêm as informações.
+

@@ -1,0 +1,30 @@
+.principal{
+    display:flex;
+    
+}
+.principali{
+    font-size:30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cor{
+    background-color: red;
+    width: 90%;
+    height: 800px;
+    
+}
+.cor1{
+    background-color: rgb(72, 255, 0);
+    width: 90%;
+    height: 800px;
+}
+.cor2{
+    background-color: rgb(25, 0, 255);
+    width: 90%;
+    height: 800px;
+}
+#pr{
+    position:absolute;
+    right:1%;
+   
+}
+

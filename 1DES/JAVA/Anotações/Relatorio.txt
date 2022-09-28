@@ -1,0 +1,8 @@
+Relatório de tarefas:
+
+Término da Prova Formativa de FPOO;
+Melhorar o funcionamento dos botões alterar, excluir, cadastrar e buscar.
+
+
+Começo do diagrama de classes do projeto de FPOO
+Faltando apenas adicionar algumas pequenas coisas, como alguns atributos adicionados depois.

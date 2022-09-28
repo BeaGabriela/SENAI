@@ -1,0 +1,19 @@
+GITHUB:
+metadata= dados sobre algo(programação);
+
+gitignore - ignora os arquivos "inuteis" para o github;
+
+Variaveis:
+constante não muda, só para sistema.
+comum usa no sistema.
+Variaveis de ambiente para usar no sistema operacional.
+
+modelo - total na linha é feito no modelo;
+controle - total geral é feito no controle;
+
+git log - todos os nomes dos commits, para ver os commits anteriores.
+
+git check out - checar ele;
+
+git debug MANUAL- Sysout("passou por aqui");
+git debug- 

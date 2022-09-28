@@ -1,0 +1,314 @@
+body{
+   
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    background-color: rgb(218, 218, 218);
+}
+
+header{
+    height: 15%;
+    width: 300px;
+    background-color: rgb(218, 218, 218);
+    border-bottom: 3px solid #615d5d;
+    
+
+    color: black;
+   
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.a{
+     display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.c{
+    margin: -5%;
+    align-items: center;
+   padding: 10%;
+}
+
+.rodape{
+    flex-direction: column;
+    grid-area: 1/3;
+    margin-left: -70%;
+    border: 2px rgb(2, 2, 2);
+    width: 30%;
+    margin-top: 7%;
+    justify-content: space-between;
+    
+    height: 90%;
+    background-color:white;
+    font-size: 20px;
+    border-bottom: 1px solid #000000;
+    
+    
+}
+.d{
+    grid-area: 3 /1 , 3 /3; 
+    margin: 20%;
+    border-bottom: 1px solid #000000;
+    width:80%;
+   
+    
+}
+
+
+p{
+     margin-top: 15%;
+   
+    align-items: center;
+    margin-left: 0%;
+    font-size: 60%;
+
+} 
+ .b{
+   
+    grid-area: 3 /1 , 3 /3; 
+    margin: 20%;
+    border-bottom: 1px solid #000000;
+} 
+
+
+.coluna{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+   
+    width: 170%;
+    grid-column-gap: 0px;
+    grid-row-gap: 23px;
+}
+
+.imagem1{
+     grid-area: 1 / 1; 
+     margin-top: 4%;
+
+}
+
+.imagem2{
+    grid-area: 2 / 1; 
+    margin-top: 4%;
+   
+}
+
+.imagem3{
+    grid-area: 3 / 1;
+    margin-top: 2%;
+
+   
+}
+
+
+.texto1{
+ 
+   
+    flex-direction: row;
+  
+    margin-left: 45%;
+    grid-area: 2/2;
+    height: 45%;
+    margin-top: -20% ;
+  
+}
+
+.texto2{ 
+    
+        flex-direction: row;
+        margin-left: 45%;
+        grid-area: 2/2;
+        height: 50%;
+        margin-top: -20%;
+}
+
+.texto3{
+    
+   
+    flex-direction: row;
+   
+    margin-left: 45%;
+    grid-area: 2/2;
+    height: 50%;
+    margin-top: -20%;
+}
+
+.espaco img{
+    width: 300px;
+    margin-left: 11%;
+}
+
+.espaço .rodape{
+margin-left: 12%;
+}
+
+.espaco .p{
+    flex-direction: column;
+    align-items: center;
+    margin-left: 47%;
+    grid-area: 1 / 2; 
+}
+.espaco .div{
+    flex-direction: column;
+    align-items: center;
+    margin-left: 47%;
+    grid-area: 1 / 2; 
+}
+
+.vermelho{
+    color: red;
+}
+
+.verde{
+    color: rgb(78, 219, 78);
+}
+
+.azul{
+    color: rgb(27, 139, 231);
+   
+}
+
+.logo{
+    margin-right: 18%;
+    margin-left: 12%;
+    width: 6%;
+    height: 9%;
+}
+
+.lupa{
+    padding: -2px 6px;
+    margin-left: 33%;
+    border-radius: 10px;
+    margin-top: 2%;
+    width: 12%;
+    height: 1%;
+  
+    border-radius: 10%;
+}
+#divBusca{
+    background-color: #9b9898;
+    border: solid 1px;
+    border-radius: 18px;
+    width: 300px;
+}
+  
+#txtBusca{
+    float:left;
+    height:30px;
+    width:100px;
+    border:none;
+   background-color: #9b9898;
+    color:black;
+    border-radius:15px;
+}
+
+@media(max-width:1200px){
+   header{
+       flex-direction: row;
+    }
+   
+}
+
+@media(max-width:800px){
+   .espaco{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+   }
+   
+   img{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 50% 50%;
+
+   }
+
+   header{
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+   }
+
+   .coluna {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+       
+       
+   }
+
+   .espaco {
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+   }
+
+  
+
+   .espaco img {
+       width: 300px;
+   }
+   .espaco h3 {
+        margin-top: 80px;
+       width: 300px;
+       font-size: 15pt;
+        margin-left: -120px;
+        text-align: column;
+   }
+   .espaco p {
+       margin-top: -10px;
+       font-size: 12pt;
+       margin-left: -120px;
+   }
+   .imagem1 {
+       margin-top: 40px;
+   }
+   .imagem2 {
+    margin-top: 90px;
+}
+
+.imagem3 {
+    margin-top: 120px;
+}
+   .texto1 {
+       margin-bottom: -190px;
+      
+   }
+   .texto2 {
+    margin-bottom: -200px;
+}
+
+   .rodape {
+       display: flex;
+       flex-direction: column;
+      margin-left: 25%;
+      width: 55%;
+   }
+   #divBusca{
+    width:80px;
+    height: 20px;
+   }
+   #txtBusca{
+    width:60px;
+    height: 15px;
+   }
+   
+.logo{
+    height: 40px;
+    width: 35px;
+    margin-bottom: -4px;
+}
+.lupa{
+    width: 34px;
+    height: 14px;
+    margin-left: 82px;
+    margin-top: -14px;
+}
+}

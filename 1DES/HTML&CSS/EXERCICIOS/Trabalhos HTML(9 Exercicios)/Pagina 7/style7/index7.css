@@ -1,0 +1,33 @@
+#pr{
+    position:absolute;
+    right:1%;
+    
+}
+
+.principal{
+    height: 130px;
+    width: 100%;
+    background-color: rgb(204, 75, 75);
+}
+
+.pri{
+    display:flex; 
+}
+.c{
+    height:466px;
+    background-color: rgb(231, 149, 149);
+    width:20%;
+}
+.c1{
+    height:466px;
+    background-color: rgb(126, 52, 52);
+    width:80%;
+}
+footer{
+    height: 130px;
+    width: 100%;
+    background-color: rgb(204, 75, 75);
+}
+.principali{
+    font-size:30px
+}

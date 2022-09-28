@@ -1,0 +1,58 @@
+FULLSTAP = Desktop, back, front, mobile, iot.
+
+banco de dados = registros = linhas de uma tabela.
+
+Campos de uma coluna:
+	-Registros;
+	-tuplas;
+	-objetos;
+	-linhas;
+
+linhas de uma coluna:
+	-dado;
+	-células;
+
+informacao = saida, tem uma acão.
+
+campo para escrever: campo field, rotul, label.
+
+a telinha: Tela, form, frame, Página.
+
+GUI - graphes, user, Interface.
+CRUD - create(criar), read(ler, listar), uptade(altererar), delete(apagar);
+
+jtextarea - campo de texto, para adicionar mais texto;
+
+jtextfield- texto;
+
+jcombox - caixinha
+
+
+é possivel fazer um rótulo para todos os argumentos em Java. Basta utilizar o rotulo e setar eles para todo
+
+Softskills:
+Progrador especialistas(peao)(redes, servidores, segurança de informações...): Mobile, frontrnd, DDA(banco de dados), ciencia de dados, backend.
+Generalistas(bispo, cavalos, torre): fullstake, analista de sistemas, gerente de projetos. (mais próximos com os clientes)
+como se comportar, como tratar seu cliente;
+
+Hardskills: 
+Parte técnica.
+Resolver o problema.
+
+
+base64 - Transforma imagem em texto;
+
+requisito - dev - teste - omologação.
+
+
+Caminho relativo- "./img/imagem.png"
+Caminho Absoluto-"C:\\Users\\desenvolvimento\\Desktop\\Programas-em-Java\\PETS\\img\\gatos.jpg"
+
+hashcode = Garante que ele seja unico.
+equals = Garante que ele encontre.
+
+id não é igual ao indice, id é chave, indie não. id é para usuario, indice é para o programa.
+
+quase nunca esta escrio visao, geralmente view.
+
+	

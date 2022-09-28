@@ -1,0 +1,64 @@
+Pastas --> Snake_case
+
+Node (Source, src) --> camelCase
+
+npm install nodemon
+
+npm instal - atualiza seu projeto
+
+npm install -g    --> Gerenciador de pacotes
+	    --global
+yarn --> Gerenciador de pacotes
+
+backend integrado = tudo junto.
+
+
+get -- http://localhost:3000/pedidos?- query
+
+
+
+{'} -- Json --Objeto (Tem metodos, atributos)
+
+Simulador de front end == Postman - Insomnia
+
+services.msi 
+mysql - A vantagem é estruturada e seguro. 
+dda- funcionario  que administra o banco de dados.
+
+127.0.0.1 - Local
+
+backend - estrelinhas por que manda para varias locais. E recebe de varios locais tambem.
+
+o console.log - manda apenas para o conosle. para testar.
+
+Template Strings/Template Literals -- ${``}
+
+
+
+
+--O diagrama conceitual é mais proxiimo do problema, e o mapa está mais próximo da solução do problema
+
+
+
+
+
+
+25-08:
+
+npm init
+npm intall express -- Instalar o express
+npm installcor cors 
+npm install mysql -- Interligar com o banco de dados
+npm install nodemon // npm install nodemon -g
+npm install - Ele instala as dependencias que estão no package.json
+node index.js
+npm - Gerenciador de pacotes
+inmsonia é um front-end, como um teste.
+
+
+Erro 404 - Quer dizer que não foi encontrado.
+
+put - alterar
+
+
+

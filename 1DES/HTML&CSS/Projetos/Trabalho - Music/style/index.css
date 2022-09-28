@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color:bLACK;
+}  
+.foter{
+    background-color: rgba(33, 33, 33);
+    width: 100%;
+    height:9vh;
+    margin-top: 1vh;
+    position: absolute;
+}
+.banda{
+    display:flex;
+    justify-content:center;
+    color: white;
+    font-size: 15px;
+    margin: 30px 0px 0px -90px;
+   justify-content: space-around;
+   text-decoration: none;
+}
+.banda liv{
+   margin: 0px 0px 5px 12px;
+}
+
+.linha{
+    border: 1px solid  rgba(255, 255, 255, 0.404);
+}
+.n{
+    display: flex;
+    justify-content:center;
+    color: white;
+}
+
+.foter a{
+    position: absolute;
+    color: white;
+    margin: 12px;
+}
+#img{
+    margin-top: 8vh;
+    margin-left: 5vw;
+}
+.co{
+   margin-left:6vw;
+   text-decoration: none;
+   color:rgb(187, 185, 185);
+
+}
+.col{
+    margin-left: 4vw;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+ 
+ }
+ .barrinha2{
+    width: 12%;
+    height: 0.1vw;
+    margin: -63vh 30px 40px 828px;
+    background-color: white;
+ }
+.col-3{
+    margin-top:-70vh;
+    display: flex;
+    padding-left: 59vw;
+    margin-bottom: 4px;
+}
+.icones{
+    display: flex;
+    justify-content: right;
+    margin: -45px 8px;
+}
+.m{
+    margin: 10vh 60px 0px -377px;
+}
+.i{
+    margin: 0 10px;
+}
+.navbar{
+    width: 100%;
+}
+.navbar-brand{
+    margin: 0px 0 0 0;
+
+}
+.cima{
+    color: rgba(255, 255, 255, 0.61);
+    margin-left:0;
+    padding-left:20px;
+    font-size:20px;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: -20%;
+    
+}
+.cima:hover{
+    color:white;
+    cursor:pointer;
+}
+
+
+
+.r{
+    margin: -36px 0 0 35vw;
+        align-items: center;
+     
+
+
+    }
+    .q{
+        margin: 6px 0 0 11px;
+    }
+    .p {
+        margin-left: 23px;
+        margin-right: -10px;
+        margin-top: -6px;
+    }
+
+    .qua{
+        background-color: rgba(255, 255, 255, 0.89);
+        color: rgb(0, 0, 0);
+        width: 13%;
+        padding: 9px 1px 2px 13px;
+        border-radius: 4px;
+        margin-left: 55vw;
+        margin-top: -4.2%;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .qua:hover{
+        background-color: white;
+        cursor:pointer;
+
+    }
+    .lado{
+        margin:2px 0px 2px 9px;
+    }
+
+    .lado:hover{
+        cursor:pointer;
+    }
+     .lado1{
+        margin: -26px 0px 3px 660px;
+    } 
+
+    .x{
+        position: absolute;
+        color: white;
+        margin: 12px;
+    }
+    .y{
+        position: absolute;
+        color: white;
+        margin: 12px 65px;
+    }
+    .z{
+        position: absolute;
+        color: white;
+        margin: 12px 125px;
+    }
+    .barrinha{
+    width: 100%;
+    height: 0.01vw;
+    background-color: white;
+    }
+
+   .casinha{
+    align-items: center;
+    margin: 10px;;
+   }
+   .tempo{
+      position: absolute;
+      padding: 10px 200px;
+   }
+   .reflection{
+    margin: 10px;
+    list-style: none;
+   }
+   .joia{
+    margin: -18px 10px 0px 20px;
+   }
+   .col-3:hover{
+    cursor: pointer;
+    color: white;
+   }

@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+}
+.item{
+    margin-top:10%;
+    display: flex;
+    padding: 2%;
+    
+}
+
+.item li{
+    justify-content: space-around;
+    margin: 1%;
+}
+.it{
+   display:flex;
+   padding:1%;
+   margin-top:6%;
+   
+   
+}
+.it p{
+    justify-content: space-around;
+    margin: 2%;
+
+}
+#pr{
+    position:absolute;
+    right:1%;
+    
+   
+}

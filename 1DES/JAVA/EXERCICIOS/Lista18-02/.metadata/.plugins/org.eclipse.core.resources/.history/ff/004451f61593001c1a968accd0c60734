@@ -1,0 +1,21 @@
+package classicos;
+
+import java.util.Scanner;
+
+public class Acumula {
+	public static Scanner acumula;
+	public static void main(String[] args) {
+		System.out.println("O algoritimo de acumulação");
+		System.out.println("simples, retornou = ");
+		System.out.println(simples(345));
+		
+
+	}
+		public static int simples(int interacoes) {
+			int x= 0;
+			for(int i = 0; i < interacoes; i++)
+			x+=i;
+			
+			return x;
+}
+}

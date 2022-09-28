@@ -1,0 +1,66 @@
+package classicos;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Acumula {
+	public static Random rand;
+	public static Scanner acumula;
+	public static void main(String[] args) {
+		System.out.println("Acumulador Simples: ");
+		System.out.println("      ");  
+		System.out.println("O algoritimo de acumulação: ");
+		System.out.print("Simples, retornou = ");
+		System.out.println(simples(345));
+		
+		System.out.println("-----------------------------");
+		
+		System.out.println("Acumulador Aleatorio:");
+		System.out.println("          ");
+		System.out.println("Total = " + aleatorio(345));
+		
+		System.out.println("-----------------------------");
+		System.out.println("Fatorial: ");
+		System.out.println("     ");
+		
+		System.out.println("Total fatorial: " + fatorial());
+		System.out.println("       ");
+		
+	} //Acumulação.
+		public static int simples(int interacoes) {
+			int x= 0;
+			for(int i = 0; i < interacoes; i++)
+			x+=i;
+			
+			return x;
+}
+		// Acumuação aleatória;
+		public static int aleatorio(int interacoes) {
+			rand = new Random();
+			int x= 0;
+			int r=0;
+			for(int i = 0; i < interacoes; i++) {
+				r = rand.nextInt(100);
+				System.out.println("Aleatório = " + r);
+				x+=r;
+				System.out.println("Acumulado = " + x);
+			}
+			
+			return x;
+}
+		public static int fatorial () {
+			acumula = new Scanner(System.in);
+			System.out.println("Digite um número para saber o fatorial: ");
+			int numero = acumula.nextInt();
+			int f = 1;
+			for (int i =1; i <= numero; i++) {
+				f *= i;
+				System.out.println("O fatorial de " + numero + " = " + f);
+				
+				
+			}
+			return f;
+				
+			}
+		}
+

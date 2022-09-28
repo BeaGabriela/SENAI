@@ -1,0 +1,10 @@
+charset=utf8 -- Reconhecer as caracteristicas do português brasileiro.
+
+No http://localhost:3000/...../.... pode ser localhost ou 127.0.0.1.
+split('t')[0] -- Localiza e edita um caractere.
+
+OBS: Aprender a fazer um modal.
+
+Qual a diferença entre null e undefined?
+null -  Não tem nada. Vazio.
+undefined - Ela existe, mas não foi definida.

@@ -1,0 +1,6 @@
+<div class="col-2 bg-primary"> - Define  a coluna usando boodstrep. 
+<div class="row">- dfine as linhas
+bootstrep se divide em 12 colunas;
+bg- background;
+col-12 : Quando quebrar a linha, diminuindo a resolução, a linh a vai quebrar de acordo com a definição. Se for 6, ele vai fiacr na metade da tela.
+

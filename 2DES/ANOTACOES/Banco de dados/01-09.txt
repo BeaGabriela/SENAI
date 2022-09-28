@@ -1,0 +1,25 @@
+Editar um projeto já existente:
+	Abrir um projeto Node.js em andamento?
+		1. Copiar a pasta do projeto.
+		2. Procurar a documentação.
+		3. Ajusta o BC -- Faz ele funcionar.
+		4. Inicie o ambiente (npm i, npm i nodmeon ou nodemon)
+		5. Testar { Via navegador
+			    Via Insomia
+		} Caso tenha a documentação do insonia presente nas documentações, importa ele.
+
+
+Export -- Exposta para pode usar em outros arquivos. 
+order by - Coloca em ordem alfabética, ou númerica do crescente;
+
+Estrutura de dados:
+	Fila -  Serve para simplificar uma lista. -- FIFO (First in, last out)
+	Pilha - Serve para simplificar uma lista. -- LIFO (Last in, first out)
+	lista - Em javascript tudo é lista.
+
+	push - Adiciona para todos os tipos de estruturas dados.
+	pop - Rretira da pilha.
+	shift - Retira da linha
+	slice() - Retira da lista
+
+	Iniciar tirando o primeiro

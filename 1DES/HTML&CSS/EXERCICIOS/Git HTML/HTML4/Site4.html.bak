@@ -1,0 +1,156 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<a name="topo">
+	<title>Livros</title>
+</head>
+<!-- Este exemplo utiliza imagens na pasta e link apontando para id -->
+<body bgcolor= Salmon>
+	<h3 id=menu>Livros para comprar - AMAZON. </h3>
+	<hr/>
+	<p>
+		<h4 id=Sr Daniels>Birds - Imagine Dragons \\ Livro: Sr. Daniels <a href="../HTML1/Site1.html"><img width=20px src="https://th.bing.com/th/id/OIP.Z5K7yCwc9i6sxeOe1xR3rAHaHa?pid=ImgDet&rs=1"/></a></h4>
+		
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		
+		 <h4><a href=https://www.amazon.com.br/Sr-Daniels-Brittainy-C-Cherry/dp/8501104507/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=sr+daniels&qid=1644084089&sr=8-1><center><img width=180px src="https://th.bing.com/th/id/OIP.Z5K7yCwc9i6sxeOe1xR3rAHaHa?pid=ImgDet&rs=1"><a/></h4>
+		<hr/>
+		</p>
+	</p>
+	
+	
+	<p>
+		<h4 id=Couting>Couting Stars - Onerepublic \\ Livro: Mentira Perfeita <a href="../HTML1/Site1.html"><img width=20px src="https://th.bing.com/th/id/OIP.d-SfWM5tW0ikr_NIAcObYwHaLE?pid=ImgDet&rs=1"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		 <h4><a href=https://www.amazon.com.br/Mentira-perfeita-Carina-Rissi/dp/8576864584/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=HC8XS6EONWW1&keywords=mentira+perfeita&qid=1644084173&sprefix=mentira+perfei%2Caps%2C403&sr=8-1><center><img width=180px src="https://th.bing.com/th/id/OIP.d-SfWM5tW0ikr_NIAcObYwHaLE?pid=ImgDet&rs=1"></a></h4>
+		 <hr/>
+		</p>
+	</p>
+	
+	
+	<p>
+		<h4 id=Ed sheeran>Galway Girl - Ed Sheeran \\ Livro: Amor & Gelato <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/R.38aebf3979d37ccf2b4484b2d06e1dfe?rik=9tGAHfRI%2f%2f8ctQ&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		<h4><a href=https://www.amazon.com.br/Amor-Gelato-Jenna-Evans-Welch/dp/8551002341/ref=sr_1_3?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=29IO99JU5HL9A&keywords=amor+e+gelato&qid=1644084213&sprefix=amor+e+gelat%2Caps%2C534&sr=8-3><center><img width=180px src="https://th.bing.com/th/id/R.38aebf3979d37ccf2b4484b2d06e1dfe?rik=9tGAHfRI%2f%2f8ctQ&pid=ImgRaw&r=0"><a/></h4>
+	</p>
+	</p>
+	<hr/>
+	<p>
+		<h4 id=Green day>Boulevard of Broken Dreams - Green Day \\ Livro: O príncipe cruel <a href=../HTML1/Site1.html><img width=20px src="https://record.com.br/wp-content/uploads/2019/07/15457-768x1138.jpeg"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+			
+			<h4><a href=https://www.amazon.com.br/pr%C3%ADncipe-cruel-Vol-Povo-Ar/dp/850111555X/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=o+princie+cruel&qid=1644084260&sr=8-1><center><img width=180px src="https://record.com.br/wp-content/uploads/2019/07/15457-768x1138.jpeg"/></a></h4>
+			<hr/>
+		</p>
+	</p>
+	
+	
+	<p>
+	
+		<h4 id=Sia>Unstoppable - Sia \\ Livro: Estilhaça-me <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/R.fb1f13344855fb73f295a97fccadec84?rik=crw9Z4tnNYQSTg&riu=http%3a%2f%2fleitorcabuloso.com.br%2fwp-content%2fuploads%2f2012%2f03%2fcapa-estilhaca-me.jpg&ehk=9j3JB1CgXKCt%2fR%2bsgr%2fHAAbPPWTfVXA5XSad8jY7w6c%3d&risl=&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		
+		<h4><a href=https://www.amazon.com.br/Estilha%C3%A7a-Me-Tahereh-Mafi/dp/8550303011/ref=sr_1_4?crid=DFI3325KUHL7&keywords=estilha%C3%A7a-me&qid=1644084341&sprefix=estilha%2Caps%2C404&sr=8-4><center><img width=180px src="https://th.bing.com/th/id/R.fb1f13344855fb73f295a97fccadec84?rik=crw9Z4tnNYQSTg&riu=http%3a%2f%2fleitorcabuloso.com.br%2fwp-content%2fuploads%2f2012%2f03%2fcapa-estilhaca-me.jpg&ehk=9j3JB1CgXKCt%2fR%2bsgr%2fHAAbPPWTfVXA5XSad8jY7w6c%3d&risl=&pid=ImgRaw&r=0"/></a></h4>
+		<hr/>
+		</p>
+	</p>
+	
+	
+	<p>
+		<h4 id=BMTH>DiE4u - Bring me the horizon \\ Livro: Cortes de espinhos e rosas <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/OIP.W8WAUVMFhPwVh8Tqilj9aQHaCv?pid=ImgDet&w=1345&h=499&rs=1"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		<h4><a href=https://www.amazon.com.br/Corte-espinhos-rosas-Vol-1/dp/8501105872/ref=sr_1_5?crid=3FO5HU9CRN4W5&keywords=cortes+de+espinhos+e+rosas&qid=1644084378&sprefix=cortes+de%2Caps%2C1523&sr=8-5><center><img width=180px src="https://th.bing.com/th/id/OIP.W8WAUVMFhPwVh8Tqilj9aQHaCv?pid=ImgDet&w=1345&h=499&rs=1"/></a></h4>
+		<hr/>
+		</p>
+	</p>
+	
+	
+	<p>
+		<h4 id=Falling>Popular Monster - Falling in Revese \\ Livro: The walking dead <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/R.d78ac466885feb5466a3651f32ae0c08?rik=VQJviJp5ikt8Bw&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		
+		<h4><a href=https://www.amazon.com.br/Walking-Dead-ascens%C3%A3o-Governador-Vol/dp/8501097152/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3EA46R9JUW1XV&keywords=the+walking+dead+livro+1&qid=1644084521&sprefix=the+walking+dead+livro%2Caps%2C682&sr=8-1><center><img width=180px src="https://th.bing.com/th/id/R.d78ac466885feb5466a3651f32ae0c08?rik=VQJviJp5ikt8Bw&pid=ImgRaw&r=0"/></a></h4>
+		<hr/>
+		</p>
+	</p>
+	
+	
+	<p>
+		<h4 id=Audioslave>Like a stone - Audioslave \\ Livro: Perdida <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/R.c1e240e011f091dcd2dc1d04848a36f7?rik=tgAiYUjtIwldXw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-n36lk67m-Og%2fUsnPkUxL0sI%2fAAAAAAAABzk%2fFJb19Bu-YLs%2fs1600%2fperdida.png&ehk=qiDq8ILrLuiIYIvQM9mYKSmzdMYrbjWOFQ%2bbgaUHsFU%3d&risl=&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		
+		<h4><a href=https://www.amazon.com.br/Perdida-amor-ultrapassa-barreiras-tempo/dp/8576862441/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=Q4G1WUCBVHRD&keywords=perdida&qid=1644084552&sprefix=perdid%2Caps%2C646&sr=8-4><center><img width=180px src="https://th.bing.com/th/id/R.c1e240e011f091dcd2dc1d04848a36f7?rik=tgAiYUjtIwldXw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-n36lk67m-Og%2fUsnPkUxL0sI%2fAAAAAAAABzk%2fFJb19Bu-YLs%2fs1600%2fperdida.png&ehk=qiDq8ILrLuiIYIvQM9mYKSmzdMYrbjWOFQ%2bbgaUHsFU%3d&risl=&pid=ImgRaw&r=0"/></a></h4>
+		<hr/>
+		</p>
+		<h4 id=R.I.P>R.I.P my youth - the Neighbourhood \\ Livro: True <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/OIP.mARANs5G6Oo08mpKo1dtXQHaK_?pid=ImgDet&rs=1"/></a></h4>
+		
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		
+		<h4><a href=https://www.amazon.com.br/True-Erin-McCarthy/dp/8576863332/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=13AEJ5XYAXZFN&keywords=true&qid=1644084587&sprefix=true%2Caps%2C423&sr=8-2><center><img width=180px src="https://th.bing.com/th/id/OIP.mARANs5G6Oo08mpKo1dtXQHaK_?pid=ImgDet&rs=1"/></a></h4>
+		<hr/>
+		</p>
+		
+		
+		<h4 id=Sappy>Sappy - Nirvana \\ Livro: Teto para dois <a href=../HTML1/Site1.html><img width=20px src="https://image.isu.pub/190927191602-d3ea197f106f5ed3c852ef3d08396ae3/jpg/page_1.jpg"/></a></h4>
+		
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		
+		<h4><a href=https://www.amazon.com.br/Teto-Para-Dois-Beth-Oleary/dp/8551005413/ref=sr_1_5?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=BFUYAB2A1BMH&keywords=teto+para+dois&qid=1644084652&sprefix=teto+p%2Caps%2C834&sr=8-5><center><img width=180px src="https://image.isu.pub/190927191602-d3ea197f106f5ed3c852ef3d08396ae3/jpg/page_1.jpg"/></a></h4>
+		<p>
+		</p>
+		
+		<h4 id=Is the love>Is the love - Whitesnake \\ Livro: Mr Romance <a href=../HTML1/Site1.html><img width=20px src="https://th.bing.com/th/id/R.d929258328c9a70c070e939d94bc3470?rik=WsEJ5%2fA%2bfpuQwA&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		<p>
+		</p>
+		Clique na imagem a baixo para ser direcionado para outra página, precisamente a Amazon com o respectivo livro:
+		<p>
+		</p>
+		<h4><a href=https://www.amazon.com.br/Mr-Romance-Leisa-Rayven/dp/8525064688/ref=sr_1_1?crid=XV9F5WF5EC0Q&keywords=mr+romance&qid=1644084688&sprefix=mr+%2Caps%2C737&sr=8-1><center><img width=180px src="https://th.bing.com/th/id/R.d929258328c9a70c070e939d94bc3470?rik=WsEJ5%2fA%2bfpuQwA&pid=ImgRaw&r=0"/></a></h4>
+	</p>
+	
+	
+	</p>
+	<h5>voltar ao topo<a href ="#topo"><img width=20px src= "https://th.bing.com/th/id/OIP.HNhfqCP0f0KRcGIWSABHEQHaEs?pid=ImgDet&rs=1" </a></h5>
+</body>
+</html>

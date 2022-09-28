@@ -1,0 +1,108 @@
+Normalização: é um processo a partir do quel se aplicam regras a todas as tabelas do banco de dados como objetivp de evitar falhas no projeto.
+
+Tipo de dados (Arquivos): 
+	Não estruturado (Não possui uma estrutura definida. Não possui uma norma especifica) -- .PDF(Arquivos impressos) e .html(Linguagem de marcação)
+	Semi estruturado(Possui normas flexiveis) -- .xml(Tipos de dados para trânsferência importação/exportação) e .json(Tipos de dados para trânsferência importação/exportação)
+	Estruturado (SGBD)(Possui normas rigidas) - .csv(Tipos de dados para trânsferência importação/exportação) e .sql(Linguagem)
+
+	Relacionais 
+	Não Relacionais
+
+	SQL{
+		DDL - Desenvolvimento (Create, Alter, Drop, Show)
+		DML - Manipulação (Insert, Update, Delete, Select)
+		DQL - Pequisa/Query (Select)
+		DCL - Controle de acesso(Garnt?)
+		DTL - Transação 
+	}	
+
+	
+	SGBD - Sistema gerenciador de dados.{
+		MOngoDB - Estruturado, NoSQL, Relacional
+		MariaDB - Estruturado, SQL, Relacional
+		Oracle - Estruturado, SQL, Relacional
+		SQL - Server- Estruturado, SQL, Relacional
+		Firebase - Estruturado, SQL e nao relacioaal
+	}
+
+		CUSTORM -- Cliente - Formal. Tem cadastro.
+		Client-- Frequês - Não tem conta. Não tem cadastro.
+
+
+ZIP code - CEP
+
+Quando o atributo é multi valorado ele vira uma tabela.
+
+Trabalhar com dados:{ (LGPD)
+	Engenheiro de dados (NÃO CRIA, SÓ TRABALHA COM O QUE EXISTE)
+	Cientista de dados (Cria LGPT)
+	Analista de dados 
+	Administrador de BCD (DBA)
+
+	}
+
+
+Banco de dados:
+
+	Registros
+	Tabelas
+	Arquivos
+	
+	Arquivo sequências -- Guardado em sequências.
+	Arquivo acesso direto -  Guardados e acessados de maneira direta.
+	
+	Banco de dados:
+		Bases de dados
+		Sistema Gerenciador
+		Linguagem de exploração.
+		Programas adicionais.
+		
+	IBM - Criou o PC.
+		Modelo hierárquico --|
+							  >	Permitiam aguardar os dados. Mas não facilitavam o relacionamento com o cliente.
+		Modelo em rede --|
+		Modelo relacional - Que permite o relacionamento.
+
+		
+  
+DDL define os dados, contem os comandos para a criação de usuarios..
+
+MER- Modelo Entidade Relacionamento. (Modelo pode ser desenhado ou escrito-->(cobrar, documentar))
+DER - Diagrama de Entidade Relacionamento. (Modelo desenhado)
+
+Entidade fraca - É qunado ela precisa de outra
+Entidade forte - A raiz
+
+A eclipse pontilhada é o resultado de algum cálculo.
+Duas eclipses significa que é multivalores. Varios valores.
+
+Como transformar 1-N:
+	Colocar uma tabela no meio...
+
+PK-Prime key 
+FK-Foreign key
+
+antes:
+dar start no appache e no mysql
+ctrl + '' (vscode)
+terminal:
+entrar no cmd
+cd \
+cd:
+cd xampp
+cd mysql
+cd bin
+cd mysql -u root
+
+O diagrama conceitual é mais próximo da solução do problema e do usuário.
+E o lógico está mais próximo do desenvolvimento.
+
+O tamanho do banco de dados varia de acordo com seu hd.
+
+Site case (1 faz o desenho logico a partir do conceitual)
+
+timestamp - Momento atual. Data e hora.
+Date - apenas as datas.
+
+
+

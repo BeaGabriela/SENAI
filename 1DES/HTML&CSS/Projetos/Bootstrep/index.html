@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-2 bg-primary">
+                <h1 class="text-success">Coluna 1</h1>
+            </div>
+            <div class="col-12 col-md-8 bg-secondary">
+                <label for="email" class="from-label">E-mail:</label>
+                <input type="text" class="form-control" placeholder="Informe o seu email:" />
+
+                <select class="form-select">
+                    <option value="">Valor 1</option>
+                    <option value="">Valor 2</option>
+                    <option value="">Valor 3</option>
+
+                </select>
+                <div class="form-check">
+                    <input type="checkbox" id="valor1" class="form-check-input">
+                    <label form="valor1" class="form-check-label">Valor 1</label>
+                </div>
+                <form class="needs-validation was-validated" novalidate>
+                    <div class="col-5">
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Informe o nome completo"
+                            required>
+                        <div class="invalid-feedback">
+                            Campo nome obrigatório!
+                        </div>
+                        <div class="valid-feedback">
+                            Parabéns!
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-info m-2">Cadastrar</button>
+                </form>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                Quais são os breakpoints do bookstrap?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Classe do Bootstrap</th>
+                                            <th>Largura em px</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>none</td>
+                                            <td>Menor que 576 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>sm</td>
+                                            <td>>=576</td>
+                                        </tr>
+                                        <tr>
+                                            <td>md</td>
+                                            <td>>=768</td>
+                                        </tr>
+                                        <tr>
+                                            <td>lg</td>
+                                            <td>>=992</td>
+                                        </tr>
+                                        <tr>
+                                            <td>xl</td>
+                                            <td>>=1200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>xxl</td>
+                                            <td>>=1400</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                Para que serve a propriedade data-bs-target?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p>Destino a ser alterado de acordo com ação do bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                Quais os links para importar o Bootstrap?
+                            </button>
+                        </h2>
+                        <div id="q3" class="according-collapse collapse">
+                            <div class="accordion-body">
+                                <p>
+                                <h6>Link do CSS</h6>
+                                <p>https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css</p>
+                                </p>
+                                <p>
+                                <h6>Link do JS</h6>
+                                <p>https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-info m-2 position-relative">
+                    Notificações
+                    <span
+                        class="badge text-bg-danger position-absolute top-0 start-100 translate-middle p-2 bg-danger">5</span>
+                </button>
+                <div id="animais" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#animais" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#animais" data-bs-slide-to="1" aria-current="true"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#animais" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#animais" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img class="d-block w-50"
+                                src="https://i.pinimg.com/736x/06/01/f6/0601f69cad95de61797297bec7c03546--hilarious-animals-adorable-animals.jpg" />
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                src="https://th.bing.com/th/id/OIP.ol-cOPnuB-2IQi4Xr8H6kwHaFs?pid=ImgDet&rs=1" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="d-block w-50"
+                                src="https://guiadosbichos.com/wp-content/uploads/2017/10/filhote-de-gato-46.jpg" />
+                        </div>
+                        <div class="carousel-item active ">
+                            <img class="d-block w-50"
+                                src="https://i0.wp.com/falandodepets.com/wp-content/uploads/2017/07/o7rka54j18nnWD9FRWm-o.jpg?fit=1070%2C803&ssl=1" />
+                        </div>
+                    </div>
+                    <button type="button" class="carousel-control-prev" data-bs-target="#animais" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Voltar</span>
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-target="#animais" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Voltar</span>
+                    </button>
+                </div>
+                <div class="card m-2" style="width: 18rem;">
+                    <img src="https://i.pinimg.com/originals/c7/eb/52/c7eb52d9f4d13851d7348f0b036af965.jpg" alt=""
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Carroça Executiva</h5>
+                        <p class="card-text">Único dono, banco de couro, ar condicionado, suspensão hidráulica, cavalo
+                            de brinde e rodas crômaticas.</p>
+                        <a href="" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#mteste">Mostrar Modal</button>
+                <div class="modal fade" id="mteste" tabindex="-1" aria-labelledby="mteste">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="mteste">Exemplo de modal</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> </button>
+                            </div>
+                                <div class="modal-body">
+                                    <p>Texto modelo modal</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="testebtn">Close</button>
+                    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <div id="teste" class="toast" aria-live="assertive" >
+                            <div class="toast-header">
+                                <strong class="me-auto">Notificações</strong>
+                                <small>11 min ago</small>
+                                <button type="button"class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hey, coisa. Você tem novas notificações!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class=" col-12  col-md-2 bg-danger">
+                Coluna 3
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+</body>
+
+</html>

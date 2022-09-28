@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Livros</title>
+</head>
+<!-- Este exemplo utiliza imagens na pasta e link apontando para id -->
+<body bgcolor= slate blue>
+	<h3 id=menu>Músicas e seus respectivos livros:</h3>
+	<hr/>
+	<p>
+		<h4 id=Sr Daniels>Birds - Imagine Dragons \\ Livro: Sr. Daniels <a href="file:///D:/Programas/html/Site1.html"><img width=20px src="https://th.bing.com/th/id/OIP.Z5K7yCwc9i6sxeOe1xR3rAHaHa?pid=ImgDet&rs=1"/></a><ahref=menu><src=Site1.html</a> </h4>
+		<p>
+		Depois de perder a irmã gêmea para a leucemia, Ashlyn Jennings vê sua vida mudar completamente. Além de ter de aprender a conviver sem parte de si mesma, ela precisa se adaptar a uma nova rotina. Enviada pela mãe para a casa do pai, com quem mal conviveu até então, ela viaja de trem para Edgewood, Wisconsin, carregando poucos pertences, muitas lembranças e uma caixa misteriosa deixada pela irmã.
+
+        Na estação de trem Ashlyn conhece o músico Daniel, um rapaz lindo e gentil, e a atração é imediata. Os dois compartilham não só o amor pela música e por William Shakespeare mas também a dor provocada por perdas irreparáveis. Ao sentir-se esperançosa quanto a sua nova vida, Ashlyn começa o ano letivo na escola onde o pai é diretor. E não consegue acreditar quando descobre, no primeiro dia de aula, que Daniel, o belo músico de olhos azuis com quem já está completamente envolvida, é o Sr. Daniels, seu professor de inglês.
+
+        Desorientados, eles precisam manter seu amor em segredo, e são forçados a se ver como dois desconhecidos na escola. E, como se isso já não fosse difícil o bastante, eles ainda precisam tentar de todas as formas superar os antigos problemas e sobreviver a novos e inesperados conflitos.
+		<br>
+		PS: Contêm romance e drama.
+		 <h4><a href=#menu><center><img width=180px src="https://th.bing.com/th/id/OIP.Z5K7yCwc9i6sxeOe1xR3rAHaHa?pid=ImgDet&rs=1"/></h4>
+		</p>
+	</p>
+	<p>
+		<h4 id=Couting>Couting Stars - Onerepublic \\ Mentira Perfeita <a href="file:///D:/Programas/html/Site1.html"><img width=20px src="https://th.bing.com/th/id/OIP.d-SfWM5tW0ikr_NIAcObYwHaLE?pid=ImgDet&rs=1"/></a></h4>
+		<p>
+		Júlia não tem tempo para distrações. Ela é brilhante e sempre se esforça para ser a melhor naquilo que faz; por essa razão, sua vida pessoal acabou ficando de lado. Algo que sempre preocupou sua tia Berenice. Gravemente doente, a mulher teme que Júlia acabe completamente sozinha quando ela se for. Júlia faria qualquer coisa — qualquer coisa mesmo! — por tia Berê e, em seu desespero para agradar a única mãe que já conheceu, inventa um noivo enquanto torce por um milagre... E então o milagre acontece: Berenice se recupera — e, assim que deixa o hospital, gasta todas as suas economias com o casamento dos sonhos para a sobrinha. Como Júlia pode contar a ela que mentiu, com a saúde da tia ainda tão frágil?
+		É quando Júlia conhece Marcus Cassani. Ele é irritantemente cínico, mulherengo e lindo de um jeito que a deixa desconfortável. Marcus também está enfrentando problemas, e um acordo entre eles parece ser a solução. Tudo o que Júlia sabe é que deveria se afastar de Marcus. Mas seu coração tem uma ideia muito diferente...
+		 PS: Contêm romance.
+		 <h4><a href=#menu><center><img width=180px src="https://th.bing.com/th/id/OIP.d-SfWM5tW0ikr_NIAcObYwHaLE?pid=ImgDet&rs=1"/></h4>
+		 
+		</p>
+	</p>
+	<p>
+		<h4 id=Ed sheeran>Galway Girl - Ed Sheeran \\ Amor & Gelato <a href=file:///D:/Programas/html/Site1.html><img width=20px src="https://th.bing.com/th/id/R.38aebf3979d37ccf2b4484b2d06e1dfe?rik=9tGAHfRI%2f%2f8ctQ&pid=ImgRaw&r=0"/></a></h4>
+		<p>
+		Amor & Gelato é um romance com gostinho de férias. Um dos últimos lançamentos da Intrínseca leva o leitor a conhecer Lina, uma adolescente que perdeu a mãe, se viu forçada a mudar para a Itália e começa a descobrir um pouco mais sobre o passado de sua mãe.
+        Lina vai entender que existe muito mais do que sua mãe havia lhe contado do tempo que viveu em Florença. Percorrendo o mesmo caminho de sua mãe, Lina vai descobrir a beleza da Itália, dos seus gelatos e dos encantadores jovens italianos. 
+		</p>
+	</p>	<h4><a href=#menu><center><img width=180px src="https://th.bing.com/th/id/R.38aebf3979d37ccf2b4484b2d06e1dfe?rik=9tGAHfRI%2f%2f8ctQ&pid=ImgRaw&r=0"/></h4>
+	<p>
+		<h4 id=Green day>Boulevard of Broken Dreams - Green Day \\O príncipe cruel <a href=#menu><img width=20px src="volta.png"/></a></h4>
+		<p>
+		
+		</p>
+	</p>
+	<p>
+		<h4 id=biologia>Unstoppable - Sia \\ Estilhaça-me <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		<p>
+		
+		</p>
+	</p>
+	<p>
+		<h4 id=BMTH>DiE4u - Bring me the horizon \\ Cortes de espinhos e rosas <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		<p>
+		
+		</p>
+	</p>
+	<p>
+		<h4 id=Falling>Popular Monster - Falling in Revese \\ The walking dead <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		<p>
+		
+		</p>
+	</p>
+	<p>
+		<h4 id=Audioslave>Like a stone - Audioslave \\ Perdida <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		<p>
+		
+		</p>
+		<h4 id=R.I.P>R.I.P my youth \\ True <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		<p>
+		
+		</p>
+		<h4 id=Sappy>Sappy - Nirvana \\ Teto para dois <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		
+		<p>
+		
+		</p>
+		<h4 id=Is the love>Is the love - Whitesnake \\ Mr Romance <a href=file:///D:/Programas/html/Site1.html><img width=20px src=""/></a></h4>
+		<p>
+		
+		</p>
+	</p>
+</body>
+</html>

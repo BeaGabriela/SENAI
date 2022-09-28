@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display:grid;
+    grid-template-rows: 10vh 30vh 10vh 50vh;
+    grid-template-columns: 20vw 2vw 40vw 40vw;
+    grid-template-areas: "pri b  main"
+                         "pr b  main " ;
+}
+.principal{
+    list-style: none;
+    margin: 10px;
+    grid-area: pri;
+   
+}
+.pr input{
+    width:20vw;
+    height: 20px;
+   outline: none;
+   border: none;
+   background-color:pink;
+   border-radius: 20px;
+   color: white;
+   margin: 10px -2px;
+
+
+
+}
+.pr img{
+    align-items: center;
+   
+}
+
+.principal li{
+    margin: 20px;
+}
+.menu p{
+    height: 10vh;
+    width:20vw;
+    background-color: rgb(85, 83, 83);
+}
+.retan{
+    height: 100vh;
+    width: 20vw;
+    background-color: grey;
+}
+.barra{
+    height: 80vh;
+    width:1vw;
+    background-color: rgb(184, 184, 66);
+    grid-area: b;
+
+    
+}
+.cima{
+    grid-area: c;
+
+}
+.valor img{
+    grid-area: img;
+    margin-top: 30px;
+}
+.volor{
+    grid-area: v;
+    
+}
+.p {
+    display: flex;
+    justify-content:space-around;
+}
+
+.brl {
+    display: flex;
+    grid-area:brl;
+    
+}
+.ne{
+    font-weight: bolder;
+    font-size: 15px;
+}
+.m{
+    font-size: 10px;
+   
+   
+}
+
+.textoabaixo{
+    grid-area: tx;
+    display:flex;
+    margin-left: 50px;
+    margin-top:-10px;
+    font-size:12px
+}
+.textoabaixo a{
+    margin-left: 20px;
+}
+main{
+   grid-area:main;
+   display: grid;
+   grid-template-rows: 10vh 10vh 30vh 25vh 25vh;
+   grid-template-columns: 50vw 50vw ;
+   grid-template-areas: "c v"
+                        "tx tx"
+                        "q  q"
+                        "se se ";
+   
+}
+.quadrados{
+    grid-area: q;
+    display: grid;
+    grid-template-rows: 20vh;
+    grid-template-columns: 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw;
+    grid-area: " a b c d e f g h";
+   
+}
+.a{
+    background-color: aquamarine;
+    margin: 0px 5px;
+}
+.b{
+    background-color: rgb(171, 103, 177);
+    margin: 0px 5px;
+    
+}
+.c{
+    background-color: rgb(185, 171, 41);
+    margin: 0px 5px;
+    
+}
+.d{
+    background-color: rgb(187, 93, 64);
+    margin: 0px 5px;
+    
+}
+.e{
+    background-color: rgb(123, 151, 57);
+    margin: 0px 5px;
+    
+}
+.f{
+    background-color: rgb(77, 8, 83);
+    margin: 0px 5px;
+    
+}
+.g{
+    background-color: rgb(75, 12, 22);
+    margin: 0px 5px;
+    
+}
+.h{
+    background-color: rgb(7, 23, 112) ;
+    margin: 0px 5px;
+    
+}
+.selects{
+    grid-area: se;
+   display: grid;
+   grid-template-rows: 10vh 40vh 10vh 40vh;
+   grid-template-columns: 25vw 25vw 25vw 25vw ;
+   grid-template-areas: " re re s s"
+                        "cl cl1  es es"
+                      
+}
+.restante{
+    grid-area: re;
+    height:5vh
+}
+.suas{
+    grid-area: s;
+    height:5vh
+}
+.esquerdo{
+    grid-area: es;
+}
+.esquerdo liv{
+    margin: 10px;
+    font-weight: bolder;
+}
+.esquerdo p{
+    margin: 10px;
+    font-weight: bolder;
+
+}
+.azul{
+    background: blue;
+    width: 20vw;
+}
+
+.esquerdo input{
+    color: blue;
+    width: 10vw;
+
+}
+.clima p{
+ grid-area: clp;
+ 
+
+}
+.texto{
+    margin-top: -100px;
+    margin-left: 12vw;
+}
+#nome{
+    align-items:center;
+   margin-left: 15vw;
+   margin-top: 10vh;
+}
+#nome1{
+    align-items:center;
+   margin-left: 10vw;
+   margin-top: 10vh;
+}
+
+.clima{
+    grid-area: cl;
+}
+.clima1{
+    grid-area:cl1;
+}
+
+  
+  
+.circulo{
+    background-color: blue;
+    border-radius: 80px;
+    height: 20vh;
+    width:10vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+}
+#circulo2{
+    background-color: rgb(0, 255, 55);
+    border-radius: 80px;
+    height: 20vh;
+    width:10vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+}

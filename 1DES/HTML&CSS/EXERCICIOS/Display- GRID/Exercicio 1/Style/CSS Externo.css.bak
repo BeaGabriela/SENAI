@@ -1,0 +1,17 @@
+body {
+	background-image: url('IMG/fundo1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+			
+	}
+	label {
+	 color: #FF69B4;
+	 font-size: 30px;
+	 
+	}
+	.class{ 
+		font-weight: bolder;
+		}
+			#id{
+				font-size: 40px;
+			}
