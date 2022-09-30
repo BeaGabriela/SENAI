@@ -21,13 +21,14 @@ export default function TelaLogin({navigation}){
 
     const img = require(' ../../../assets/logo.png')
     const funcao = ()=>{
+       let flag = false
         users.forEach(usuario => {
             if(value == usuario.email && value1 == usuario.senha){
+                flag = true
                navigation.navigate('Home', {'info': usuario.id})
-            }else{
-                console.log('Erro')
             }
         })
+        if(!flag) console.log('Erro')
     }
     
     return(

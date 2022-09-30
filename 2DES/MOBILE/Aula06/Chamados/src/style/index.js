@@ -21,5 +21,11 @@ export default StyleSheet.create({
    img:{
     height: '100px',
     width: '100px'
+   },
+   compromissos: {
+      fontFamily: 'Helvetica Neue',
+      fontSize: '16px',
+      color: 'black',
+
    }
 })
