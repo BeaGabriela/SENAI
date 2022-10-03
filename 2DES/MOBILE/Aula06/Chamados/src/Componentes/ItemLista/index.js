@@ -1,11 +1,11 @@
-import { TouchableOpacity, Text, TextInput, StyleSheet } from "react-native";
-
+import {Text, TextInput, View } from "react-native";
+import styles from '../../style/index.js';
 export default function TelaLoginn(props) {
-    const { value1, value2, onPress } = props;
+    const { value1, value2 } = props;
 
     return (
-        <View  style={styles.compromissos}>
-            <Text>{value1}</Text>
+        <View style={styles.compromissos}>
+            <Text style={styles.negrito}>{value1}</Text>
             <Text>{value2}</Text>
         </View>
     )

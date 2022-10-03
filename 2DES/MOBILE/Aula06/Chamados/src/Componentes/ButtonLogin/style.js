@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     button: {
         width: '80vw',
-        marginTop: '78vh',
+        marginTop: '40vh',
         marginLeft: '10vw',
         alignItems: 'center',
         borderRadius: '10px',

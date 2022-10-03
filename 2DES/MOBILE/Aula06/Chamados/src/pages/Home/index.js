@@ -1,8 +1,10 @@
-import { View, Text, ScrollView } from 'react-native'
-import styles from '../../style/index.js'
+import { View, Text, ScrollView, TextInput, Button } from 'react-native'
 import ItemLista from '../../Componentes/ItemLista/index.js'
+import styles from '../../style/index.js';
+import { useState } from 'react'
 
 export default function Home({ route }) {
+    const [value, setValue] = useState("");
     const { info } = route.params;
     const chamados = [
         {
@@ -40,32 +42,43 @@ export default function Home({ route }) {
             ]
         }
     ]
+
     return (
-        // chamados.map((item, i) => {
-        //     if (item.user_id == info) {
-        //         return (
-        //             <View>
-        //                 {
-        //                     item.chamados.map((chamado, indice) => {
-        //                         return (
-        //                             <View>
-        //                                 <Text>Titulo:{chamado.titulo}</Text>
-        //                                 <Text>Descrição:{chamado.descricao}</Text>
-        //                             </View>
-        //                         )
-        //                     })
-        //                 }
-        //             </View>
-        //         )
-        //     }
-        // })
-        chamados[info - 1].chamados.map((item, index) => {
-            return (
-                <View style={styles.compromissos} key={index}>
-                    <Text>Titulo:{item.titulo}</Text>
-                    <Text>Descrição:{item.descricao}</Text>
-                </View>
-            )
-        })
+        <ScrollView>
+            <TextInput placeholder="" style={styles.linha} value={value} onChangeText={(val) => { setValue(val) }} />
+            <ScrollView>
+                {
+                    chamados[info - 1].chamados.map((item, index) => {
+                        if (item.titulo.includes(value)) {
+                            return (
+                                <View>
+                                    <ItemLista value1={item.titulo} value2={item.descricao} key={index} />
+                                </View>
+                            )
+                        }
+                    })
+                }
+            </ScrollView>
+        </ScrollView>
     )
 }
+
+/*
+{/* // chamados.map((item, i) => { */
+/* //     if (item.user_id == info) { */
+//         return (
+//             <View>
+//                 {
+//                     item.chamados.map((chamado, indice) => {
+//                         return (
+//                             <View>
+//                                 <Text>Titulo:{chamado.titulo}</Text>
+//                                 <Text>Descrição:{chamado.descricao}</Text>
+//                             </View>
+//                         )
+//                     })
+//                 }
+//             </View>
+//         )
+//     }
+// }) */}

@@ -1,0 +1,11 @@
+npm init '' -- Criar a pasta e suas dependencias.
+
+Assincrona -> Demora um tempo para executar.
+
+Dentro do AsyncStorage.SetItem(nome, constante).
+
+await -> Comando para forçar o codigo a esperar o retorno.
+
+value={} -> É uma propriedade que não é necessario declara. Ela é uma propriedade implicita, ou seja, ela existe. 
+
+
