@@ -1,7 +1,0 @@
-requer -- Pedido ao backend
-res -- é uma resposta do back
-err - É um erro no banco 
-result -- Todo o  resultado
-
-
-

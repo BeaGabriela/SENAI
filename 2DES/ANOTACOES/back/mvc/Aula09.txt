@@ -1,0 +1,87 @@
+*Algumas variaveis de Backend e suas funções*:
+	requer -- Pedido ao backend
+	res -- é uma resposta do back
+	err - É um erro no banco 
+	result -- Todo o  resultado
+
+*Tipo de linguagens*: 
+	Pastas --> Snake_case
+	Node (Source, src) --> camelCase
+
+*Algumas das instalações necessarias*: 
+	- npm install nodemon
+	- npm instal -> atualiza seu projeto
+	- npm install -g    --> Gerenciador de pacotes
+	-   --global -> Global.
+	- yarn --> Gerenciador de pacotes
+	*/*/\*\*
+	- npm init
+	- npm intall express -- Instalar o express
+	- npm installcor cors 
+	- npm install mysql -- Interligar com o banco de dados
+	- npm install nodemon // npm install nodemon -g
+	- npm install - Ele instala as dependencias que estão no package.json
+	- node index.js
+	- npm - Gerenciador de pacotes
+
+*Banco de dados, interligado a backend*: 
+	Cors -> Barreira contra hackers. Necessita um cors forte, para evitar que alguem derrube um programa.
+	Express-> Responde a um comando.
+
+*Processamentos*: 
+	Processamento em Linha -> Banco de dados && Backend.
+	Processamento em Coluna(Totais) -> Controle.
+
+*Status*:
+	200 -> Ok. Funcionou.
+ 	201 -> Criado e funcionando.
+	204 -> Excluido.
+	404 -> Não encontrado.
+	406 -> Duplicado.
+	500 -> Erro genérico do servidor (Não sabemos o erro).
+	
+	
+*Query*:
+	get --> http://localhost:3000/pedidos?
+	put -->  http://localhost:3000/pedidos?
+	127.0.0.1 --> Local
+
+*Testes*: 
+	- insomia é um front-end, como um teste.
+	- Simulador de front end == Postman - Insomnia.
+
+*Backend*:
+	- {'} -- Json --Objeto (Tem metodos, atributos)
+	services.msi 
+	mysql - A vantagem é estruturada e seguro. 
+	dda- funcionario  que administra o banco de dados.
+	backend - estrelinhas por que manda para varias locais. E recebe de varios locais tambem.
+	O diagrama conceitual é mais proxiimo do problema, e o mapa está mais próximo da solução do problema.
+	backend integrado = tudo junto.
+
+*Console.log()*:
+	- Console.log --> manda apenas para o console. Para testar.
+
+*Template String*: 
+	- Template Strings/Template Literals -- ${``}
+
+*Porque a requisição deve ser feito no backend*:
+	Banco de dados grande pode ser feito no backend, para que o front fique um pouco mais leve. Entretanto, se for pequeno, pode-se fazer no frontend.
+
+*Padrões de Projetos: Design Patterns*:
+	GOF(Gang of four):
+		- Criação.
+		- Estrutura.
+		- Comportamento.
+
+*Padrões de Projetos Patters*:
+	- Singgeton -> Padrão simples em que um banco de dados seja único. Cada banco de dados em uma arquivo separado.
+
+*Constante*:
+	uri -> Quando é local. Minha API.
+	url -> Quando não é local. E sim de outro servidor.
+
+*Estudar um pouco mais*:
+	- WordPress
+	- React
+	- Spring

@@ -1,5 +1,0 @@
-Pastas --> Snake_case
-
-Node (Source, src) --> camelCase
-
-npm install nodemon
