@@ -1,6 +1,7 @@
 const uri = 'http://localhost:3000/patrimonio/itens/';
 const corpo = document.querySelector("#corpo");
 var itens = [];
+const modalEditar = document.querySelector('.criar')
 // uri é api local / url é api hospedada em outro local
 const carregar = () => {
     const options = { method: 'GET' };
@@ -27,10 +28,17 @@ const preencherTela = () => {
     });
 }
 
-function criar() {
-    document.querySelector('#criar').setAttribute('onclick', `criar(${e.ni})`);
+function abrirmodal() {
+    card.querySelector("#ni").value = '';
+    card.querySelector("#aquisicao").value = '';
+    card.querySelector("#denominacao").value = '';
+    card.querySelector("#valor").value = '';
+    modalEditar.classList.remove('model')
 }
 
+function fecharModa(){
+    modalEditar.classList.add('mode')
+}
 
 const create = () => {
     const options = {

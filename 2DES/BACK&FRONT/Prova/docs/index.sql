@@ -103,14 +103,12 @@ inner join Produtos p on p.Cod_Produto = i.Cod_Produto ;
 select * from View_Solicitacoes order by Num_Sol desc;
 
 --/Procedure
-drop procedure solicita_um_item;
+drop procedure if exists solicita_um_item;
 delimiter $ 
-create procedure solicita_um_item (n_sol int, depto int, func int, prod int, qtd int, total int )
+create procedure solicita_um_item (n_sol int, depto int, func int, prod int, qtd int, total float )
 begin
-set @nome = (select Nome_Depto from Departamentos where Cod_Depto = depto);
-insert into Departamentos value(depto, @nome);
 insert into Solicitacoes value(n_sol, curdate(), depto, func);
-insert into Itens_Solicitacao value (last_insert_id(), prod, qtd, total );
+insert into Itens_Solicitacao value (n_sol, prod, qtd, total );
 end $
 delimiter ;
 
@@ -127,7 +125,6 @@ inner join Funcionarios on Solicitacoes.Cod_Func = Funcionarios.Cod_Func;
 -- group by f.Cod_Func
 -- order by Total desc
 -- limit 1;
-
 
 select  Qtde*valor,Nome_Func from Itens_Solicitacao inner join 
 Solicitacoes on Itens_Solicitacao.Num_Sol = Solicitacoes.Num_Sol
