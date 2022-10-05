@@ -11,7 +11,8 @@ create table itens(
     constraint pk_item primary key (ni)    
 );
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/Javascript-2.0/BackEnd/Aula09/docs/bd/itens.csv'
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/Javascript-2.0/BackEnd/Aula09/docs/bd/itens.csv'
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/2DES/BACKEND/Aula09/docs/bd/itens.csv'
 INTO TABLE itens
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'

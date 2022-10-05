@@ -1,7 +1,8 @@
 const uri = 'http://localhost:3000/patrimonio/itens/';
 const corpo = document.querySelector("#corpo");
 var itens = [];
-const modalEditar = document.querySelector('.criar')
+const modalCriar = document.querySelector('.criar')
+const btnCadastrar = document.querySelector('#cadedit')
 // uri é api local / url é api hospedada em outro local
 const carregar = () => {
     const options = { method: 'GET' };
@@ -26,21 +27,58 @@ const preencherTela = () => {
         card.querySelector('#del').setAttribute('onclick', `del(${e.ni})`)
         corpo.appendChild(card);
     });
+  
+}
+
+function editarrr(){
+    itens.forEach(e => {
+    let card = document.querySelector(".card").cloneNode(true);
+    card.classList.remove('model');
+        modalCriar.classList.remove('model')
+        btnc.onclick = () =>{editar()}
+        document.querySelector("#ni").value = e.ni;
+        document.querySelector("#aquisicao").value = e.aquisicao
+        document.querySelector("#denominacao").value = e.denominacao;
+        document.querySelector("#valor").value = e.valor;
+        document.querySelector("#img").value = e.src;
+})
 }
 
 function abrirmodal() {
-    card.querySelector("#ni").value = '';
-    card.querySelector("#aquisicao").value = '';
-    card.querySelector("#denominacao").value = '';
-    card.querySelector("#valor").value = '';
-    modalEditar.classList.remove('model')
+    document.querySelector("#ni").value = '';
+    document.querySelector("#aquisicao").value = '';
+    document.querySelector("#denominacao").value = '';
+    document.querySelector("#valor").value = '';
+    document.querySelector("#img").value = '';
+    modalCriar.classList.remove('model')
 }
 
 function fecharModa(){
-    modalEditar.classList.add('mode')
+    modalCriar.classList.add('model')
 }
 
-const create = () => {
+const editar = () => {
+    let soli = {
+        'ni' : document.querySelector("#ni").value,
+        'aquisicao': document.querySelector("#aquisicao").value,
+        'denominacao': document.querySelector("#denominacao").value,
+        'valor':  document.querySelector("#valor").value,
+        'img': document.querySelector("#img").value
+    }
+    const options = {
+        method: 'PUT',
+        body : JSON.stringify(soli)
+    };
+    fetch(uri + ni, options)
+        .then(res => res.status)
+        .then(res => {
+            if (res == 200) window.location.reload(res)
+        })
+        .catch(err => console.error(err));
+}
+
+
+const create = (ni) => {
     const options = {
         method: 'POST'
     };

@@ -58,11 +58,6 @@ header button{
 #img{
     width: 150px;
 }
-
-.model{
-    display: none;  
-}
-
 .icone{
     width: 20px;
 }
@@ -87,7 +82,7 @@ header button{
     padding: 20px 40px;
     justify-content: space-evenly;
 }
-.mode {
+.model {
     display: none;
     visibility: hidden;
 }

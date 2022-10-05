@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="./style/itens.css">
     <title>CRUD de Itens de Patrimônio</title>
 </head>
+
 <body onLoad="carregar()">
     <header>
         <h1>Cadastro de patrimônios</h1>
-        <button onclick="abrirmodal()">Novo</button>
+        <button class='cadastrar' onclick="abrirmodal()">Novo</button>
 
     </header>
     <main id="corpo">
@@ -19,31 +21,35 @@
                 <p id="ni">NI:</p>
                 <p id="aquisicao">Aquisição</p>
                 <p id="denominacao">Denominação</p>
-                <p id="valor">Valor: R$ </p>
+                <p id="valor">Valor: </p>
+                
             </div>
             <img id="img" src="../docs/assets/default.png" alt="Ilustração">
             <div>
                 <button id="del">-</button>
+                <button id="editar" onclick="editarrr()">Editar</button>
             </div>
         </div>
 
-        <div class="modal criar mode">
+        <div class="modal criar model">
             <div class="modal-content">
-                <button  title='criar' onclick="fecharModal()"><img title="a" class='icone' src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png"></button>
+                <button title='criar' onclick="fecharModal()"></button>
                 <div class="modal-content-body">
                     <input type="text" id="ni" placeholder="ni">
                     <input type="text" id="aquisicao" placeholder="aquisicao">
                     <input type="text" id="denomincao" placeholder="denominacao">
                     <input type="number" id="valor" placeholder="valor">
-                </div>
+                    <input type="text" id="img" placeholder="img">
                 </div>
                 <div class="modal-content-footer">
-                    <button onclick="criar()" id="cadedit" class="btn confirm">Cadastrar</button>
-                    <button onclick='fecharModa()'class="btn cancel">Cancelar</button>
+                    <button onclick="create()" id="cadedit" class="btn confirm">Cadastrar</button>
+                    <button onclick='fecharModa()' class="btn cancel">Cancelar</button>
                 </div>
+            </div>
         </div>
     </main>
 
 </body>
 <script src="./javascript/itens.js"></script>
+
 </html>
