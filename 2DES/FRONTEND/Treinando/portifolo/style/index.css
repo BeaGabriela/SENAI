@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: green;
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0 ;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(45, 245, 19);
+    color: black;
+    width: 100%;
+    height: 8vh;
+    border: 1px solid black;
+}
+
+header p{
+    font-size: 16px;
+    font-family: arial;
+   margin: 12px;
+}
+
+.main{
+    margin: 20px;
+    font-size: 30px;
+}
+.main img{
+    border: 2px solid rgb(45, 245, 19);
+}
+
+#redes:hover{
+    cursor: pointer;
+}
+
+#cursos:hover{
+    cursor: pointer;
+}
+
+#estudos:hover{
+    cursor: pointer;
+}
+
+#projeto:hover{
+    cursor: pointer;
+}
+
+#me:hover{
+    cursor: pointer;
+}
+
+
+
+
+/* img{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+}
+/* .github{
+    background-color: rgb(173, 173, 224);
+    width: 12vw;
+    height: 10vh;
+} */
+/* .github img{
+    height: 5vh;
+    width: 5vw
+}
+.github p{
+    font-size: 10pt;
+}
+
+.github:hover{
+    cursor: pointer;
+} */
+
+/* .linkedin{
+    background-color: rgb(233, 141, 141);
+    width: 12vw;
+    height: 10vh;
+} */
+
+/* .linkedin img{
+    height: 6vh;
+    width: 4vw
+}
+.linkedin p{
+    font-size: 8pt;
+}
+.linkedin:hover{
+    cursor: pointer;
+}
+
+.quali{
+    display: flex;
+    justify-content: space-around;
+} */
+
+/* #q{
+    background: blue;
+    width: 5vw;
+    height: 3vh;
+    margin: 12px 0;
+   
+} */
+
+/* #s{
+    background: pink;
+    width: 5vw;
+    height: 3vh;
+    margin: 12px 0; 
+    
+}
+
+#s input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.qualidades{
+    display: flex;
+    justify-content: space-around;
+}
+
+#res{
+    text-align: center;
+}
+
+#ho{
+    text-align: center;
+}
+
+#btnzinho::after{
+    visibility: hidden;
+} */ */

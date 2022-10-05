@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativa</title>
+    <style>
+        body{
+            background-color:cyan;
+            font: normal 18pt arial;
+        }
+        #cabeçalho{
+            height: 20vh;
+            width: 100%;
+            background-color:aquamarine;
+            color: rgb(247, 81, 81);
+        }
+        #cabeçalho p{
+            font: normal 22pt arial;
+             text-align: center;
+             padding: 7vh;
+             margin-left: -20px;
+             
+             
+        }
+         .d1{
+            justify-content:space-around;
+            margin: 0 45vw 0 40vw;
+            display: flex;
+            font: normal 15pt arial;
+          
+         }
+         .d1 div{
+            height: 10vh;
+            width: 25vw;
+            background-color:darkslategrey;
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 5px 5px 10px black;
+            margin: 3px;
+         }
+
+         .d1 p{
+            text-align: center;
+            width: 6vw;
+         }
+
+         #res{
+            text-align: center;
+            margin-left: -50px;
+         }
+         
+
+        
+        
+            footer{
+                background-color:rgb(121, 245, 245);
+                height: 20vh;
+                width: 100%;
+                margin: 30px 0 0 0 ;
+            }
+
+            .d1 div:hover{
+                background-color: rgb(255, 150, 167); 
+                color: white;
+                box-shadow: 5px 5px 10px crimson;
+                cursor: pointer;
+            }
+
+        
+
+           
+        
+    </style>
+</head>
+<body>
+    <div id="cabeçalho">
+        <p>Bem vindo a Web calculadora</p>
+    </div>
+    <p id="res">Resultado</p>
+    <div class="d1">
+        <div><p id='n1' >1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+        <div><p>*</p></div>
+    </div>
+    <div class="d1">
+        <div><p>4</p></div>
+        <div><p>5</p></div>
+        <div><p>6</p></div>
+        <div><p>/</p></div>
+    </div>
+    <div class="d1">
+        <div><p>7</p></div>
+        <div><p>8</p></div>
+        <div><p>9</p></div>
+         <div><p>-</p></div>
+    </div>
+    <div class="d1">
+        <div><p>,</p></div>
+        <div><p>0</p></div>
+        <div><p>.</p></div>
+        <div><p>+</p></div>
+    </div>
+    
+    <footer></footer>
+
+    <script>
+         var numer1 = window.document.getElementById('n1')
+         numer1.addEventListener ('click', clicar)
+         var res = window.document.getElementById('res')
+
+        function clicar(){
+         res.innerHTML = `Você cliclou no numero 1
+            
+
+           
+
+            
+            
+        }
+    </script>
+</body>
+</html>

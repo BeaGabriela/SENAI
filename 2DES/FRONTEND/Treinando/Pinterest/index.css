@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+}
+
+.nome{
+    display: flex;
+    margin: 25px;
+}
+h3{
+    color: rgba(189, 4, 4, 0.842);
+    margin: 4px;
+}
+
+.sobre{
+    text-align: right;
+    margin: -35px 20vw;
+   
+}
+.sobre a{
+    margin: 0px 15px;
+}
+.btn{
+    text-align: right;
+    margin: 10px 83vw;
+}
+#entrar {
+  background-color: red;
+  width: 55px;
+  height: 25px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 30px;
+  color: white;
+  font: arial;
+}
+
+
+#criar{
+    background-color: rgba(128, 128, 128, 0.493);
+    width: 8vw;
+    height: 25px;
+    text-align: center;
+    margin: -33px 100px;
+    border-radius: 20px;
+    padding: 4px;
+    font: arial;
+    
+    
+}
+
+h1{
+    text-align: center;
+    margin: 18%;
+}

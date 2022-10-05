@@ -1,0 +1,29 @@
+body{
+    font: normal 18pt arial;
+    background-color: pink;
+    text-align: center;
+
+}
+
+img{
+    border-radius: 50%;
+    margin: 20px;
+    align-items: center;
+}
+
+section{
+    width: 50vw;
+    height: 40vh;
+    background: rgba(255, 255, 255, 0.281);
+    margin: 0 0px 0 25vw;
+    padding: 10px;
+   
+}
+
+p{
+    color: white;
+    font:normal 14pt arial;
+}
+
+
+

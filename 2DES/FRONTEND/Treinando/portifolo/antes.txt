@@ -1,0 +1,59 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Portifólio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo ao meu portifólio!</h1>
+        <h2>Beatriz Gabriela</h2>
+    </header>
+    <main>
+        <div>
+            <img id="foto" onmouseout="trocarOutraFoto()" onmouseover="trocarFoto()" src="./img/avatar.png" alt="Foto">
+        </div>
+        <div class="redes">
+            <div class="github" onclick="git()" ondblclick="gitnormal()">
+                <a href='https://github.com/BeaGabriela' id="git"><img src="./img/git.png" alt="git"> </a>
+            </div>
+            <div onclick='linkedin()' ondblclick="linkedinnormal()" class="linkedin">
+                <a href='https://br.linkedin.com/in/beatriz-gabriela-9639ab1b4id="Linkedin' id="linkedim"> <img
+                        src="./img/linkdin.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="qualidades">
+            <div id='sb'>
+                <button value="Mostrar" onclick="qualidades()" ondblclick="normal()"><img
+                        src="https://th.bing.com/th/id/R.cd02444046d555bbb6161f304203f213?rik=gCSJoJOb0sv9EQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_56736.png&ehk=%2fZWJPCfagxFGHsEC%2fpUyONEA9G%2fuEpL72oj3r3FhOBI%3d&risl=&pid=ImgRaw&r=0"
+                        style="width:50px; height: 50px;"></button>
+                <div id="res"></div>
+            </div>
+
+            <div id="q">
+                <button value="Mostrar" onclick="hobbys()" ondblclick="normal()"><img
+                        src="https://th.bing.com/th/id/R.68eda578d7e10bb89b5dbe0c3b61cc0d?rik=HWuFDMhKbbcy3w&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_202290.png&ehk=NpwXFHdzX9Qf18UncwkMSeeQQ6n7g95FNehtPGjSXoA%3d&risl=&pid=ImgRaw&r=0"
+                        style="width:50px; height: 50px;"></button>
+                <div id="ho"></div>
+            </div>
+
+        </div>
+        <div id="a">
+        <button onclick="estudos()"><img src='https://th.bing.com/th/id/R.27f3fc45534dea88fd9c92a5213582e3?rik=qxDCtTmX%2btGJ3Q&pid=ImgRaw&r=0' style="height: 50px; width:50px"></button>
+        <button id='m'></button>
+        <p id="textinho"></p>
+        <button id='e' ></button>
+        <p id="p1"></p>
+        </div>
+
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>-->

@@ -1,0 +1,12 @@
+var contador = 1;
+do{
+
+}while(contador<=6)
+  contador++;
+
+
+
+ // Testa primieor, executa depois.
+// while(contador <=  6){
+//     console.log(`Passo ${contador}`)
+// }

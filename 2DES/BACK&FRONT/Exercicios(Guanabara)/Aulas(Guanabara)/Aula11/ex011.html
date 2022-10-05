@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países e Nacionalidades</title>
+    <style>
+        body{
+            background-color: coral;
+            font: normal 12pt arial;
+            
+        }
+        h1{
+            text-align: center;
+            background-color: brown;
+            color: white;
+            height: 5vh;
+            font: normal 22pt arial;
+        }
+        #oi{
+            text-align: center;
+            font: normal 16pt arial;
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+
+        }
+
+        input{
+            border-radius: 10px;
+            border-color: crimson;
+        }
+
+        #botao:hover{
+            cursor:pointer;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <div id="oi">Oi, antes de continuar, me informe em qual país você nasceu, por favor: </div>
+    Qual seu país de origem? <input type="" name="txtn2" id="txtn2" >
+   <input id="botao" type="button" value="Verificar" onclick="nacao()">
+    <div id="res">Resultado</div>
+    
+    <script>
+        function nacao(){
+        var na = window.document.getElementById('txtn2');
+        var res= window.document.querySelector('div#res');
+        var n = (na.value);
+        res.innerHTML='O país que você nasceu foi ' + n;
+        if(n == 'Brasil' ){  
+            res.innerHTML+= '<p>Sua nacionalidade é <strong>Brasileira!</strong></p>'
+            res.innerHTML+= 'Olá!'
+        }if(n=='EUA'){
+            res.innerHTML+= '<p>Sua nacionalidade é <strong>Americana!</strong></p>'
+            res.innerHTML+='Hello!'
+        } if(n== 'Japão'){
+            res.innerHTML+= '<p>Sua nacionalidade é <strong>Japonesa!</strong></p>'
+            res.innerHTML+= "Konicha'wa!"
+        }if(n == 'Espanha'){
+            res.innerHTML+='<p>Sua nacionalidade é <strong>Espanhola!</strong></p>'
+            res.innerHTML+='Hola!'
+
+        }
+        }
+
+    </script>
+</body>
+</html>
