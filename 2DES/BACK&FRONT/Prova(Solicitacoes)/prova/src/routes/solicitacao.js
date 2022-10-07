@@ -11,7 +11,7 @@ router.get('/solicitacoes/Produtos', Solicita.listarProdutos)
 router.get('/solicitacoes/Departamentos', Solicita.listarDep)
 router.get('/solicitacoes/Solicitacoes/:Data_sol', Solicita.listarSoliciDATA)
 router.get('/solicitacoes/Prod_Dep/:Nome_produto', Solicita.listarProdNome)
-router.get('/solicitacoes/Solicitacoesf/:Cod_Func', Solicita.listarTotal)
+router.get('/solicitacoes/Solicitacoes/:Cod_Func', Solicita.listarTotal)
 router.delete('/solicitacoes/Departamentos/:Cod_Depto', Solicita.excluirDepartamentos)
 
 module.exports = router;

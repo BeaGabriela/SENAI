@@ -1,0 +1,1 @@
+constraint pk_itens_sol primary key(Num_Sol, cod_produto), --Significa que os dois são chaves primarias. Usando pk para definir isso.

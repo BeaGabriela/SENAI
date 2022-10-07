@@ -1,7 +1,6 @@
 drop database if exists solicitacoes;
 create database solicitacoes charset=utf8 collate utf8_general_ci;
 use solicitacoes;
--- SQL - DDL
 Create table Funcionarios(
 	Cod_Func numeric(4) not null,   
 	Nome_Func varchar(50) not null,
@@ -38,7 +37,7 @@ Create table Itens_Solicitacao(
 	Cod_Produto numeric(4) not null,
 	Qtde numeric(4) not null,
 	Valor numeric(12,2) not null,
-	constraint pk_itens_sol primary key(Num_Sol, cod_produto), --Significa que os dois são chaves primarias. Usando pk para definir isso.
+	constraint pk_itens_sol primary key(Num_Sol, cod_produto), 
 	constraint fk_itens_sol_1 foreign Key(Num_Sol) references Solicitacoes(Num_Sol),
 	constraint fk_itens_prod_1 Foreign Key(Cod_Produto) references Produtos(Cod_Produto)
 );
@@ -92,6 +91,11 @@ Select Year(curdate()) as ano;
 Select month(curdate()) as mes;
 show tables;
 
+create view Prod_Dep as 
+select p.Nome_produto, d.Nome_Depto as Departamentos
+from Produtos p inner join Departamentos d;
+
+select * from Prod_Dep;
 
 create view View_Solicitacoes as 
 select s.Num_Sol, s.Data_Sol, s.Cod_Depto, d.Nome_Depto, f.Cod_Func, f.Nome_Func, i.Cod_Produto, p.Nome_produto, i.Qtde, i.valor as Valor
@@ -101,6 +105,7 @@ inner join Itens_Solicitacao i on s.Num_Sol = i.Num_Sol
 inner join Produtos p on p.Cod_Produto = i.Cod_Produto ;
 
 select * from View_Solicitacoes order by Num_Sol desc;
+
 
 --/Procedure
 drop procedure if exists solicita_um_item;
