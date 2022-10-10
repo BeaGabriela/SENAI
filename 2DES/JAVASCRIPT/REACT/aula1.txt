@@ -1,0 +1,12 @@
+REACT:
+
+ 1.O que é REACT?
+	É uma biblioteca JS para a criação de interfaces;
+
+ 2.Onde é utilizado?
+	Para construir SPAs(SINGLE PAGE APPLICATION );
+	
+ *Baseada em componetes;
+ *Utiliza o JSX para redenrizar HTML;
+ * Aplica o Virtual DOM para realizar a alterações de DOM;
+ * Podemos adicionar a um projeto ou crir um projeto com ele;

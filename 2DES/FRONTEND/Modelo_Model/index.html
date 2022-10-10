@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <button class="cadastrar" onclick="abrirmodalCadastro()">Cadastrar<img class='icone' src=''
+                alt='icone'></button>
+        <table>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                </tr>
+            </thead>
+            <tbody id="lista">
+                <tr class="linhamodelo model">
+                    <td>q</td>
+                    <td>w</td>
+                    <td><button id="exclui">excluir<img class='icone' src='' alt="q"></button></td>
+                    <td><button id="edita">editar<img class="icone" src="" alt="e"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <div class="modal excluir model">
+        <div class="model-content">
+            <button onclick="fecharModalExcluir()"><img class='icone' src=""></button>
+            <div class="modal-content-body">
+                <p>Alerta de exclusão<br> Tem certeza que deseja remover?</p>
+            </div>
+            <div class="modal-content-footer">
+                <button onclick="excluir()" class="btn confirm">Confirmar</button>
+                <button onclick="fecharModalExcluir()"  class="btn cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal editar model">
+        <div class="model-content">
+            <button onclick="fecharModalEditar()"><img class='icone' src=""></button>
+            <div class="modal-content-body">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+            <div class="modal-content-footer">
+                <button onclick="cadastrar()" id="cadedit" class="btn confirm">Cadastrar</button>
+                <button onclick="fecharModalEditar()"  class="btn cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script  src='index.js'></script>
+
+</html>
