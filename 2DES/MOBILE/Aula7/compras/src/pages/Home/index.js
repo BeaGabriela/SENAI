@@ -1,4 +1,5 @@
-import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet, Button } from 'react-native';
+import ButtonCarrinho from '../../Components/ButtonCarrinho';
 
 export default function Home ({navigation}){
     const pizza = [
@@ -31,20 +32,31 @@ export default function Home ({navigation}){
     ]
 
     return (
-        <ScrollView >
+        <View>
             {
                 pizza.map((item, index) => {
                     return(
-                        <TouchableOpacity style={styles.container} key={index} onPress={() => {navigation.navigate('Pizzaria', {'info': item.Nome})}}>
+                        <ScrollView key={index}> 
+                        <TouchableOpacity style={styles.container} key={index} >
                             <Image style={styles.img} source={item.img}/>
-                            <Text style={styles.text}>{item.Nome}</Text>
+                            <View>
+                            <Text style={styles.text1}>{item.Nome}</Text>
                             <Text style={styles.text}>{item.Descricao}</Text>
-                            <Image style={styles.img_add} source={item.adicionar}/>
+                            </View>
+            
+                            <TouchableOpacity onPress={() => {navigation.navigate('Pizzaria', {'info': item.Nome})}}>
+                            <Image style={styles.img_add} source={item.adicionar} />
+                            </TouchableOpacity>
                         </TouchableOpacity>
+                        </ScrollView> 
+                       
+                        
                     )
                 })
             }
-        </ScrollView>
+            <ButtonCarrinho style={styles.button1} value='Carrinho'/>
+        </View>
+        
     )
 
 
@@ -63,14 +75,23 @@ const styles = StyleSheet.create({
       container : {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'Space-between',
         padding: '10px',
         alignItems: 'center',
       },
 
       text : {
-        fontSize: '12px'
-      }
+        fontSize: '12px',
+        width: '60vw',
+        margin: '10px'
+      },
+      text1: {
+        margin: '2px',
+        fontWeight: 'bold'
+      },
 
+      button1:{
+        backgroundColor: 'black',
+   
+      }
     });
     
