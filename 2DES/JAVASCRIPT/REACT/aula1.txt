@@ -10,3 +10,5 @@ REACT:
  *Utiliza o JSX para redenrizar HTML;
  * Aplica o Virtual DOM para realizar a alterações de DOM;
  * Podemos adicionar a um projeto ou crir um projeto com ele;
+ 
+ 

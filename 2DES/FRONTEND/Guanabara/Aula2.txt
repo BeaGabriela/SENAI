@@ -1,0 +1,43 @@
+Aula 02:
+	'Eu desenvolvo em HTML e CSS'
+	Extensões: Web Developer no Chrome para visualizar as paginas web sem determinada coisa.
+	
+*O que cada uma significa*:
+	*HTML ->  HyperText Markup Language(HiperTexto(Clica em uma area e ele vai  para outro texto), Markup(Marcação), Language(Linguagem)).
+	 Basicamnete HTML não pode ser considerada uma linguagem de programação, devido ao motivo dela ser uma linguagem de Marcação.
+	
+	*CSS -> Cascading Style Sheets(Folhas de estilo em cascadas(Por que uma vai modificando as caracteristicas padrões da outra)). 
+	
+
+	*Sobre HTML*:
+		-> A linguagem HTML é focada em conteúdo.
+		-> Pode ser texto, imagem, video, tabela, listas, etc...
+		
+	*Sobre CSS*:
+		-> Atrativos visuais são obrigações do CSS executar, ou melhor, estilizar.
+	
+	*Sobre Javaascript*:
+		-> É o que possibilita a intereção com um site.
+		
+	
+	HTML:{
+		!DOCTYPE -> Siginifica que é HTML5.
+		meta charset = UTF-8 -> Compativel com palavras com acentos.
+		meta name='viewport'... -> O site vai ocupar 100% da parte branca, e ele vai ser visualizado numa escala e 100%.
+		
+		<img src='' alt=''> src(Siginifica source de origem, ou seja, a local de origem de onde onde vai pegar a imagem. Alt(parâmetro) é um texto altenativo, se houver algum erro na imagem, ele irá mostrar o texto entre ''(valor).)	
+				
+	}
+	
+	CSS:{
+		h1(seletor){
+			font-family(Propriedade): arial(valor); --> Declaração. 
+		}
+	}
+	
+	*Como funcina HTML e CSS*:
+		A função do navegador é analizar linha a linha que foi digitado no html, e retornar o resultado visual.
+		
+	
+	
+	

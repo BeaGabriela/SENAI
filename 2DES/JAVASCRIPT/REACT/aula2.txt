@@ -1,0 +1,9 @@
+REACT: 
+	Instalar as dependências do react.
+
+		-> Abrir o terminal do visual studio code.
+		-> Encontrar a pasta que voce deseja baixar as dependências.
+		-> Digitar: 
+				* npx create-react-app Meu app // Lembrando que onde está escrito "Meu app" Você pode optar por qualquer nome que se sentir confortavel.
+		->E dar ENTER.
+		-> Agora é so esperar baixar as extensões no arquivo no qual você colocou o nome no 'Meu App'.
