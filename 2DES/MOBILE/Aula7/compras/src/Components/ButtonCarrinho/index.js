@@ -14,15 +14,17 @@ export default function ButtonCarrinho(props) {
 const styles = StyleSheet.create({
     button: {
     textAlign: 'center',
-    backgroundColor: 'grey',
+    backgroundColor: '#C0C0C0',
     borderRadius: '5px',
-    height:'30px',
+    height:'40px',
     width: '80vw',
-    margin: '30px' 
+    margin: '35px',
+    marginTop: '22vh'
     },
 
     text: {
-        color: 'white',
+        color: 'black',
+        paddingTop: '10px',
     }
 
 

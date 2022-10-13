@@ -1,5 +1,6 @@
 Normalização: é um processo a partir do quel se aplicam regras a todas as tabelas do banco de dados como objetivp de evitar falhas no projeto.
 
+*Qualquer SGBD - SQL -> Tambem é chamado de Transacional(DML(INSERT, UPDATE E DELETE são os que ativam um trigger. ))
 Tipo de dados (Arquivos): 
 	Não estruturado (Não possui uma estrutura definida. Não possui uma norma especifica) -- .PDF(Arquivos impressos) e .html(Linguagem de marcação)
 	Semi estruturado(Possui normas flexiveis) -- .xml(Tipos de dados para trânsferência importação/exportação) e .json(Tipos de dados para trânsferência importação/exportação)
@@ -105,4 +106,23 @@ timestamp - Momento atual. Data e hora.
 Date - apenas as datas.
 
 
+*Propriedades(ACID)*:
+	*UDP-> Não garante a integridade. Não garante o download completo. 
+	*TCP -> Garante integridade. Garente o download completo.
 
+	Atomicidade -> Uma transação completa. Ou é bem sucedida, ou falha completamente. Não se pode fazer pela metade.
+	Consistência -> Semelhante a atomicidade. Não pode ser feita pela metade. Basicamente, ele envia, mas sem a certeza que chegará inteiro.
+	Isolamento -> As transações simutanêas não podem interferir entre si. Com isso, o auto-increment é um problema, pode dar erro.
+	Durabilidade -> Depois que a transação for concluida, ficará registrado na banco de dados.
+	
+	
+	
+*Qual a diferença entre Função, Métodos e Procedimentos*:
+	Procedimento ->  não retorna um resultado.
+ 	Trigger ->  Retona atraves de um evento.
+	Função ->  Retorna um resultado.
+
+	
+*Função*:
+	concat() -> Concatena. 
+	format() -> Formata com casas decimais.

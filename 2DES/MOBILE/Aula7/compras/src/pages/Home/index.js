@@ -44,17 +44,16 @@ export default function Home ({navigation}){
                             <Text style={styles.text}>{item.Descricao}</Text>
                             </View>
             
-                            <TouchableOpacity onPress={() => {navigation.navigate('Pizzaria', {'info': item.Nome})}}>
+                            <TouchableOpacity>
                             <Image style={styles.img_add} source={item.adicionar} />
                             </TouchableOpacity>
                         </TouchableOpacity>
                         </ScrollView> 
                        
-                        
                     )
                 })
             }
-            <ButtonCarrinho style={styles.button1} value='Carrinho'/>
+           
         </View>
         
     )
