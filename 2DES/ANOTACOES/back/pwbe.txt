@@ -10,6 +10,13 @@ Nuvem privada
 Nuvem publica  	Todas elas tem VPN
 Nuvem 
 
+Numero de porta em um servidor onlinFe ->  de 1224 para cima.
+porta padrao -> 80;
+
+require(dotenv).config() ->Variaveis de ambiente
+const PORT = process.env.PORT || 3000 -> Variaveis de ambiente
+-> Vai rodar de acordo com a porta setado nas variaveis de ambiente, casa não tenha, vai rodar na porta colocada depois.
+
 ip = 127.0.0.1
 localhost = DVS
 
