@@ -14,7 +14,7 @@
         <div class="botoes">
             <button id="listar model" onclick="Listar()">Listar</button>
             <button id="cadastrar" onclick="cadastrar()">Cadastrar</button>
-            <button id="excluir">Excluir</button>
+            <button id="excluir" onclick='excluir()'>Excluir</button>
         </div>
     </header>
     <main>
@@ -26,6 +26,11 @@
             <div class="botoesCads model">
                 <button id="cadastrarPr">Cadastrar Produtos</button>
                 <button id="cadastrarSolici">Cadastrar Solicitações</button>
+            </div>
+
+            <div class="btnExcluir model" > 
+                <button id="excluirDEP">Excluir Departamentos</button>
+                <button id='excluiProd'>Excluir Produtos</button>
             </div>
 
             <table class="tabelinha model">
@@ -51,7 +56,7 @@
                 <p>Produto:<input type="text" placeholder="prod" id="prod"></p>
                 <p>Quantidade:<input type="text" placeholder="qtd" id="qtd"></p>
                 <p>Total:<input type="text" placeholder="total" id="total"></p>
-                <button id='cadastrarA' >Cadastrar</button>
+                <button id='cadastrarA'>Cadastrar</button>
             </div>
         </div>
     </main>

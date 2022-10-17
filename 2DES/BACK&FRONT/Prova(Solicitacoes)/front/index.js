@@ -4,6 +4,8 @@ var coisinhas = document.querySelector(".coisinhas")
 var ButtonCadastro = document.querySelector(".botoesCads");
 var campos = document.querySelector(".campos");
 
+var btnexcluir = document.querySelector('.btnExcluir')
+
 var tb = document.querySelector('tbody')
 var cod = document.querySelector('#cod')
 var nome = document.querySelector('#nome')
@@ -122,11 +124,11 @@ function cadastrar() {
 
         p.appendChild(InputVarNome)
         p1.appendChild(InputCod)
-         
-         campos.innerHTML = ''
-         campos.appendChild(p)
-         campos.appendChild(p1)
-         campos.appendChild(btnc)
+
+        campos.innerHTML = ''
+        campos.appendChild(p)
+        campos.appendChild(p1)
+        campos.appendChild(btnc)
 
         btnc.addEventListener('click', () => {
             let produ = {
@@ -154,8 +156,108 @@ function cadastrar() {
         })
 
     })
-        
 
+}
 
+function excluir() {
+    btnexcluir.classList.remove('model')
+    campos.classList.add('model')
+    var cadastra = document.querySelector('.cadastrar')
+    cadastra.classList.remove('model')
+
+    var eDep = document.querySelector('#excluirDEP')
+    eDep.addEventListener('click', () => {
+
+        campos.classList.remove('model')
+
+        var p3 = document.createElement('p')
+        p3.innerHTML = 'Cod_Depto:'
+
+        var inputExcluir = document.createElement('input')
+
+        var buttnoExcluir = document.createElement('button')
+        buttnoExcluir.innerHTML = 'Excluir'
+
+        p3.appendChild(inputExcluir)
+
+        campos.innerHTML = ''
+        campos.appendChild(p3)
+        campos.appendChild(buttnoExcluir)
+
+        buttnoExcluir.addEventListener('click', () => {
+            let data = {
+                'Cod_Depto': inputExcluir.innerHTML
+            }
+
+            if (confirm('Você confirma a exclusão do departamaneto ' + inputExcluir.value + '?')) {
+                fetch('http://localhost:5000/solicitacoes/Departamentos', {
+                    "method": 'DELETE',
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    'body': JSON.stringify(data)
+
+                })
+                    .then(res => { return res.json() })
+                    .then(resp => {
+                        if (resp.Cod_Depto !== undefined) {
+                            alert("Produto Excluido Com Sucesso !");
+                            window.location.reload();
+                        } else {
+                            alert("Falha ao excluir Produto");
+                        }
+                    })
+            }
+        })
+
+    })
+
+    var excluiProd = document.querySelector('#excluiProd')
+    excluiProd.addEventListener('click', () => {
+
+        campos.classList.remove('model')
+
+        var p3 = document.createElement('p')
+        p3.innerHTML = 'Cod_Produto:'
+
+        var inputExcluir = document.createElement('input')
+
+        var buttnoExcluir = document.createElement('button')
+        buttnoExcluir.innerHTML = 'Excluir'
+
+        p3.appendChild(inputExcluir)
+
+        campos.innerHTML = ''
+        campos.appendChild(p3)
+        campos.appendChild(buttnoExcluir)
+
+        buttnoExcluir.addEventListener('click', () => {
+
+            let data = {
+                'Cod_Produto': inputExcluir.value
+            }
+
+            if (confirm('Você confirma a exclusão do Produto ' + inputExcluir.value + '?')) {
+                fetch('http://localhost:5000/solicitacoes/produtos', {
+                    "method": 'DELETE',
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    'body': JSON.stringify(data)
+
+                })
+                    .then(res => { return res.json() })
+                    .then(resp => {
+                        if (resp.Cod_Produto !== undefined) {
+                            alert("Produto Excluido Com Sucesso !");
+                            window.location.reload();
+                        } else {
+                            alert("Falha ao excluir Produto");
+                        }
+                    })
+            }
+        })
+
+    })
 
 }

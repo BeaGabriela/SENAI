@@ -107,7 +107,7 @@ const excluirDepartamentos = (req, res) => {
     con.query(solicita.toDelete(req.params), (err, result) => {
         if (err == null)
             if (result.affectedRows > 0)
-                res.status(204).end();
+                res.status(204).json(req.body).end();
             else
                 res.status(404).end()
         else
@@ -119,7 +119,7 @@ const ExcluirProd = (req, res) => {
     con.query(solicita.deletePro(req.params), (err, result) => {
         if (err == null)
             if (result.affectedRows > 0)
-                res.status(204).end();
+                res.status(204).json(req.body).end();
             else
                 res.status(404).end()
         else
