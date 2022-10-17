@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Solicitacao</title>
+</head>
+
+<body>
+    <header>
+        <div class="botoes">
+            <button id="listar model" onclick="Listar()">Listar</button>
+            <button id="cadastrar" onclick="cadastrar()">Cadastrar</button>
+            <button id="excluir">Excluir</button>
+        </div>
+    </header>
+    <main>
+        <div class="coisinhas model">
+            <button id="listarDep">Listar Departamento</button>
+            <button id="listarProd">Listar Produtos</button>
+            </div>
+
+            <div class="botoesCads model">
+                <button id="cadastrarPr">Cadastrar Produtos</button>
+                <button id="cadastrarSolici">Cadastrar Solicitações</button>
+            </div>
+
+            <table class="tabelinha model">
+                <thead>
+                    <tr>
+                        <th id="cod">Cod_Depto</th>
+                        <th id="nome">Nome_Depto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="trzinho model">
+                        <td id="co_de"></td>
+                        <td id="nome_d"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cadastrar model">
+            <div class="campos model">
+                <p>N_Solicitação:<input type="text" placeholder="Num_Sol" id="n_sol"></p>
+                <p>Departamento: <input type="text" placeholder="Depto" id="depto"></p>
+                <p>Cod_Funcionario:<input type="text" placeholder="func" id="func"></p>
+                <p>Produto:<input type="text" placeholder="prod" id="prod"></p>
+                <p>Quantidade:<input type="text" placeholder="qtd" id="qtd"></p>
+                <p>Total:<input type="text" placeholder="total" id="total"></p>
+                <button id='cadastrarA' >Cadastrar</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>

@@ -40,6 +40,10 @@ const toDelete = (model) => {
     return `DELETE FROM Departamentos WHERE Cod_Depto = '${model.Cod_Depto}'`;
 }
 
+const deletePro = (model) => {
+    return `DELETE FROM Produtos WHERE Cod_Produto = '${model.Cod_Produto}'`;
+}
+
 module.exports = {
     toCreate,
     createProd,
@@ -50,5 +54,6 @@ module.exports = {
     readProdNome,
     readDepartamentos,
     totalSoli,
-    toDelete
+    toDelete,
+    deletePro
 }

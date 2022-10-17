@@ -13,5 +13,6 @@ router.get('/solicitacoes/Solicitacoes/:Data_sol', Solicita.listarSoliciDATA)
 router.get('/solicitacoes/Prod_Dep/:Nome_produto', Solicita.listarProdNome)
 router.get('/solicitacoes/Solicitacoesf/:Cod_Func', Solicita.listarTotal)
 router.delete('/solicitacoes/Departamentos/:Cod_Depto', Solicita.excluirDepartamentos)
+router.delete('/solicitacoes/Produtos/:Cod_Produto', Solicita.ExcluirProd)
 
 module.exports = router;

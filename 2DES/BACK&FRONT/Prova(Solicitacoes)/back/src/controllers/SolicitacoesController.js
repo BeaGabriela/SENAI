@@ -69,7 +69,7 @@ const listarTotal = (req, res) => {
 const cadastrarSolicitacao = (req, res) => {
     con.query(solicita.toCreate(req.body), (err, result) => {
         if (err == null)
-            res.status(201).end();
+            res.status(201).json(req.body).end();
         else
             if (err.sqlState == 23000)
                 res.status(406).json(err).end();
@@ -82,7 +82,7 @@ const cadastrarSolicitacao = (req, res) => {
 const cadastrarProdutos = (req, res) => {
     con.query(solicita.createProd(req.body), (err, result) => {
         if (err == null) {
-            res.status(201).end();
+            res.status(201).json(req.body).end();
         } else
             if (err.sqlState == 23000)
                 res.status(406).json(err).end();
@@ -115,6 +115,18 @@ const excluirDepartamentos = (req, res) => {
     })
 }
 
+const ExcluirProd = (req, res) => {
+    con.query(solicita.deletePro(req.params), (err, result) => {
+        if (err == null)
+            if (result.affectedRows > 0)
+                res.status(204).end();
+            else
+                res.status(404).end()
+        else
+            res.status(400).json(err).end()
+    })
+}
+
 module.exports = {
     listarSolicitacoes,
     listarProdutos,
@@ -125,5 +137,6 @@ module.exports = {
     cadastrarSolicitacao,
     cadastrarProdutos,
     cadastrarDepartament,
-    excluirDepartamentos
+    excluirDepartamentos,
+    ExcluirProd
 }

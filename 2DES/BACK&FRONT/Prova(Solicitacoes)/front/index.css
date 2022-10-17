@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+table{
+    border: 1px solid black;
+}
+tr, td, th {
+    border: 1px solid black;
+}
