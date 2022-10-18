@@ -185,12 +185,13 @@ function excluir() {
         campos.appendChild(buttnoExcluir)
 
         buttnoExcluir.addEventListener('click', () => {
+            
             let data = {
                 'Cod_Depto': inputExcluir.innerHTML
             }
 
             if (confirm('Você confirma a exclusão do departamaneto ' + inputExcluir.value + '?')) {
-                fetch('http://localhost:5000/solicitacoes/Departamentos', {
+                fetch('http://localhost:5000/solicitacoes/Departamentos/' , {
                     "method": 'DELETE',
                     "headers": {
                         "Content-Type": "application/json"
@@ -238,7 +239,7 @@ function excluir() {
             }
 
             if (confirm('Você confirma a exclusão do Produto ' + inputExcluir.value + '?')) {
-                fetch('http://localhost:5000/solicitacoes/produtos', {
+                fetch('http://localhost:5000/solicitacoes/Produtos', {
                     "method": 'DELETE',
                     "headers": {
                         "Content-Type": "application/json"

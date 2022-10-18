@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <div id="headerzinho">
+            <button>Home</button>
+            <button onclick="lendo()">Produtos</button>
+        </div>
+        <div id="usuario">
+            <p id="nickname">UserName</p>
+            <img alt="" src="../../docs/assets/user.png" />
+        </div>
+    </header>
+    <main>
+        <h2>Novidades</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <p>Leia mais...</p>
+    </main>
+    <div class="tabela model">
+        <button class="bc" onclick="cadastrarProduto()">Cadastrar</button>
+        <table>
+            <thead>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr class="corpinho model">
+                    <td><img alt="a" id="a"></td>
+                    <td id="b"></td>
+                    <td id="c"></td>
+                    <td id="d"></td>
+                    <td id="e"></td>
+                    <td id="f"></td>
+                    <td><button onclick="apagar()"><img src="../../docs/assets//x.png" height="20px"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cad model">
+        <div class="cadastrarA model">
+            <input type="text" id="Ini" placeholder="NI">
+            <input type="text" id="Iaqu" placeholder="Aquisição">
+            <input type="text" id="Ideno" placeholder="Denominação">
+            <input type="text" id="Ival" placeholder="Valor">
+            <input type="text" id="Iim" placeholder="enviar Imagem">
+            <div class="botoes">
+                <button id="cancel" onclick="FecharModal()">Cancelar</button>
+                <button id="confirm">Cadastrar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mensagem model ">
+        <div class="modelinho model">
+            <img alt='a' src='../../docs/assets/confirm.png' />
+            <p>Produto Cadastrado com Sucesso !</p>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
