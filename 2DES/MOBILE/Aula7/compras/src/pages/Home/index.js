@@ -2,6 +2,7 @@ import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet, Button } f
 import ButtonCarrinho from '../../Components/ButtonCarrinho';
 
 export default function Home ({navigation}){
+  
     const pizza = [
         { 
             'img' : 'https://cdn.e-konomista.pt/uploads/2020/03/pizza-bimby-.jpg',
@@ -43,22 +44,19 @@ export default function Home ({navigation}){
                             <Text style={styles.text1}>{item.Nome}</Text>
                             <Text style={styles.text}>{item.Descricao}</Text>
                             </View>
-            
                             <TouchableOpacity>
                             <Image style={styles.img_add} source={item.adicionar} />
                             </TouchableOpacity>
                         </TouchableOpacity>
                         </ScrollView> 
-                       
                     )
                 })
+               
             }
+              <ButtonCarrinho value='Carrinho' onPress={navigation.navigate('Pizzaria', {'info': item.Nome})} />
            
         </View>
-        
     )
-
-
 }
 
 const styles = StyleSheet.create({

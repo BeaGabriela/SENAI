@@ -51,8 +51,8 @@ h2 {
 }
 
 .model {
-    display: none;
-    visibility: hidden;
+     display: none; 
+     visibility: hidden; 
 }
 
 .tabela {
@@ -60,13 +60,13 @@ h2 {
 }
 
 .bc {
-    background-color: rgb(16, 100, 210);
-    color: yellow;
-    border: yellow 1px solid;
+    background: none;
+    color: #f8c304;
+    border: #f8c304 3px solid;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 7px;
     margin: 10px 0 0 10px;
-
+    cursor: pointer;
 }
 
 .cadastrarA {
@@ -216,4 +216,14 @@ td {
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+.corpinho  img {
+    width: 32px;
+    height: 32px;
+}
+
+#perfil{
+    border-radius: 30px;
+
 }

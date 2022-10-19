@@ -1,0 +1,8 @@
+*Qual a difrença entre um FRAMEWORK e UMA BIBLIOTECA?*{
+ 	Um framework é como de fosse uma estrutura, um esqueleto já pronto que auxilia na construção de algo.
+	Uma biblioteca, por outro lado é como se fosse uma pasta que contêm funções prontas para a utilização.
+}
+
+*FRAMEWORK*:{
+	É um esqueleto montado por programadores experientes.
+}

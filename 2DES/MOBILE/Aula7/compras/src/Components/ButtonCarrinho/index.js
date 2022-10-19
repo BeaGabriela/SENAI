@@ -1,7 +1,7 @@
 import {TouchableOpacity, Text, StyleSheet} from 'react-native'
 
 export default function ButtonCarrinho(props) {
-    const { value, onPress} = props
+    const {value, onPress} = props
 
     return(
         <TouchableOpacity style={styles.button} onPress={()=>{onPress()}}>

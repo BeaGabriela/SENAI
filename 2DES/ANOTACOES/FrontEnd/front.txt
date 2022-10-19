@@ -1,0 +1,43 @@
+*Qual a função do GAB em CSS? *{
+	Faz o espaçamento entre os itens. Mais prático do que a margin.
+}
+
+*Qual a função do OUTLINE?*{
+	Estiliza o contorno do input.
+}
+
+*Como mudar a cor do PLACEHOLDER*{
+	Usando ** ::placeholder{color: 'uma cor'} **
+}
+
+*Colocando uma cor opaca*{
+	Pode-se usar a propriedade **opacity:.'um valor'** para definir uma cor opaca. Fica mais facil do que usar ela manual. Talvez.[
+}
+
+*Autenticação através do metodo POST*{
+	É uma segurança a mais.
+}
+
+*Qual a função do FLOAT em css*{
+	Alinhar os itens em uma direção. **float: left**. Alinha todos os textos para a esquerda
+}
+
+*Qual a diferença entre usar as propriedades 'ul > li' e 'ul li'*{
+	A diferença do sinal é simples. Quando tem o sinal significa que é o filho direto, por exemplo, mesmo que tenha varios 'p' dentro de uma DIV, ele só vai ler os filhos, e ignorar os netos. 
+	Quando não tem o sinall '>' ele pega todos os elementos que sejam p, idependente se seja filho ou neto.
+}
+
+*Quando usar o display: none ou o visibility: hidden*{
+	o visibility esconde o conteúdo, mas ele ainda ocupa determinado espaço. O display, além de esconder o conteúdo, tambem 'esconde' o esspaço que ela esta ocupando.
+}
+
+*Qual a diferença entre 'BACKGROUND-COLLOR' && 'BACKGROUND'*{
+	Background-color é uma propriedade que define apenas a cor, somente a cor. 
+	Backgrounnd é uma propriedade que define diversos atributos.
+
+	OBS: É bem semelhante a margin. Usando a margin-bottom ou a margin-top. Ao invés disso, setamos todas as margins em um unico atributo, que seria na MARGIN.
+}
+
+*Qual a função do toggle*{
+	Se tem um modal ele retira, e se não tem ele adiciona.
+}

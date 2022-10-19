@@ -11,7 +11,6 @@ body {
     align-items: center;
     padding: 0px 0px 70px;
     gap: 10px;
-
     position: absolute;
     width: 720px;
     height: 1024px;
@@ -23,17 +22,19 @@ body {
 h1 {
     width: 398px;
     height: 144px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
     line-height: 72px;
-
     color: #FFFFFF;
     flex: none;
     order: 0;
     flex-grow: 0;
+}
+
+h3{
+    color: white;
 }
 
 .modal {
@@ -42,8 +43,8 @@ h1 {
     align-items: flex-start;
     padding: 60px 50px;
     gap: 50px;
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     background: #FFFFFF;
     border-radius: 10px;
     flex: none;
@@ -74,6 +75,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-size: 25px;
     padding: 0px;
     gap: 40px;
     width: 463px;
@@ -90,10 +92,17 @@ input {
     align-items: center;
     padding: 15px;
     gap: 10px;
+    border: none;
+    outline: none;
     width: 400px;
     height: 60px;
     border-bottom: 3px solid #04558A;
     flex: none;
     order: 1;
     flex-grow: 0;
+}
+
+::placeholder {
+    color: #04558A;
+    opacity: .5;
 }

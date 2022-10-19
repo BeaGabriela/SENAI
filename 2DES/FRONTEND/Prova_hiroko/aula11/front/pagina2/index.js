@@ -4,8 +4,20 @@ var cadA = document.querySelector('.cadastrarA')
 var me = document.querySelector('.mensagem')
 var mo = document.querySelector('.modelinho')
 
+const username = document.querySelector('#nickname')
+const imgs = document.querySelector('#perfil')
+
+var userInfo = JSON.parse(localStorage.getItem('create'))
+
+username.innerHTML = userInfo.username
+imgs.src = "../../docs/assets/" + userInfo.img
+
+
+
+
 function lendo() {
     document.querySelector('main').innerHTML = ''
+
     var tabela = document.querySelector('.tabela');
     tabela.classList.remove('model')
 
@@ -20,7 +32,8 @@ function lendo() {
                 corpo.querySelector('#a').src = '../../docs/assets/' + pat.img
                 corpo.querySelector('#b').innerHTML = pat._id;
                 corpo.querySelector('#c').innerHTML = pat.ni;
-                corpo.querySelector('#d').innerHTML = pat.aquisicao
+                let data = new Date(pat.aquisicao)
+                corpo.querySelector('#d').innerHTML = data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('')[0]
                 corpo.querySelector('#e').innerHTML = pat.denominacao;
                 corpo.querySelector('#f').innerHTML = pat.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                 document.querySelector('tbody').appendChild(corpo);
@@ -92,15 +105,11 @@ function apagar() {
         },
         "body": JSON.stringify(data)
     })
-        .then(res => res.status)
+        .then(res => { return res.json() })
         .then(resp => {
-            if (resp.status == 200) {
-                alert("Produto Excluido Com Sucesso!");
-                window.location.reload();
-            } else {
-                alert("Falha ao excluir Produto !");
-            }
+            resp.remove()
         })
 }
+
 
 
