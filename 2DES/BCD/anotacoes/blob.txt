@@ -1,0 +1,31 @@
+Banco de dados{
+	BD relacionais/ SQL
+	
+	SGBD -> MARIADB /MYSQL/ORACLE
+		* DDL -> create, show describe, alter, drop.
+		* DML -> insert, seelct, update, delete
+		* DTL -> Transações, commit, rollback.
+
+	   Programação:{
+		- Function
+		- Processure
+		- Trigger
+	}
+}
+
+	Tipo BLOB { 
+	    -> Não é um tipo de banco de dado. E sim, um tipo de dado.
+		* É meio chatinho para enviar e receber informações.
+		* As fotos geralmente fucam em códigos, por que são convertidos em códigos binários.
+		* Quando coloca na tabela assents, ele não é binário. Basicamnete, tudo o que não é binário, é considerado texto.
+
+		into dumpfile -> Adiciona no BLOB.
+	}
+	
+	
+	Multer-> É usado para processar o multi-form.
+	Single() -> Manda a foto para o banco de dado.
+	
+	
+	
+	
