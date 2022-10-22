@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body{
+    text-align: center;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+
+main{
+    display: inline-block;
+    margin-top: 2%;
+    padding: 15px;
+    position: relative;
+}
+
+.pokedex{
+    width: 100%;
+    max-width: 425px;
+}
+.pokemon_i{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-55%, 30%); /* Signifca a posição; Por exemplo, o '-173%' se refere ao x, ou seja a linha horizontal, e o '30%' ao y, a linha vertical.*/
+    height: 28%;
+
+}
+
+.dados_poke{
+    background-color:rgb(182, 176, 176);
+    height: 8vh;
+    width: 23vw;
+    border-radius: 5px;
+    
+    position: absolute;
+    font-weight: 600;
+    color: rgb(124, 114, 114);
+    top: 60.5%;
+    right: 6%;
+
+    font-size: clamp(10px, 5vw, 25px) /*clamp(valor minimo, valor padrao, valor maximo)*/
+
+}
+
+.nome_poke{
+    color: #3a444d;
+    text-transform: capitalize;
+}
+
+.form{
+position: absolute;
+width: 80%;
+top: 75%;
+left: 11.5%;
+}
+
+.input_pesquisa{
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(10px, 5vw, 1rem);
+    box-shadow: -3px, 4px 0 #888, -5px 7px 0 #333;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-50%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+.button{
+    width: 50%;
+    padding: 4%;
+    border: 2px solid black;
+    font-size: clamp(10px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0n #222 -1px 6px 0 #000;
+}
+
+.button:active{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}

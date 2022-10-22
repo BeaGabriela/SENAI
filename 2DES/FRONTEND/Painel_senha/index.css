@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: blueviolet;
+    width: 30px;
+}
+.caixinha1{
+    width: 8vw;
+    height: 17vh;
+    background-color: black;
+}
+
+.caixinha2{
+    width: 8vw;
+    height: 17vh;
+    background-color: rgb(175, 69, 69);
+}
+
+.caixinha3{
+    width: 8vw;
+    height: 17vh;
+    background-color: rgb(226, 88, 88);
+}
