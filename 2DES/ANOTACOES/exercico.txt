@@ -1,0 +1,11 @@
+fazer o banco de dados da pizaria
+pag 50.
+
+cadastrar pizzas - 10
+cadastrar clientes - 5
+
+
+
+clientes - emprestimo
+Gerar automaticamente as parcelas e seus respectivos valores, com data de validade a cada 30 dias.
+Prever a data de vencimento.

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.0",
+    "expo": "^46.0.10",
+    "react-dom": "18.0.0",
+    "react-native-web": "~0.18.7"
+  }
+}
