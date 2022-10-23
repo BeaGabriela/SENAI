@@ -1,0 +1,229 @@
+JavaScript --> Cliente.
+website--> (Cliente) composto por 'Jornalista'(Conteúdo) - HTML
+								  'Designer' (Aparência) - CSS
+								  'Programador'(Interações) - JS
+								 
+NODE é uma máquina que roda JavaScrit fora do navegador.
+ECMASCRIPT é a linguagem padronizada do JavaScript.
+JQuery - Conjunto de bibliotecas;
+NaN - Not a number (Não é um número);
+
+Identificadores podem começar com letras, $ e _
+	Não podem começar com números 
+	É possivel usar letras con numeros.
+	Pode usar acentos e simbolos.
+	Não pode onter espaços.
+	Não pode palvras reservadas, como 'function', 'alert', etc...
+	
+	
+
+Tipos primitivos: 
+boolean
+number -- infinity, nan
+String
+const -- Não se pode sobreescrever, é uma constante.
+Null
+underfined
+object(Array)
+function
+var - global, para todo o codigo.
+let - local, tipo for...
+
+
+forEach(funcão para ele executar)callback = chama de volta a funcao
+
+	  window.prompt retorna uma String, é necessário converter.
+      "+" Serve para soma quando for "NUMBER + NUMBER"
+      "+" Serve para concatenação quando for 'String + String'
+      Para conveter de String > Número pode se usar o Number.parseInt(n) ou parseInt(). Para um número com vírula, deve utilizar o parseFloat;
+      Ao utilizar a variavel number, ele faz a converção sozinho.
+      Converter de número > String usa-se o String() oou o n.toString();
+	  
+Formatação de String's:
+   var s = 'JavaScript';
+	'Eu estou apredendendo s' // Não faz interpolação
+	'Eu estou apredendendo ' + s // Usa concatenação
+    `Eu estou apredendendo $(s)` // Usa template String. O $() chama-se de placeholder, uma forma mais fácil de fazer a concatenação.
+	
+	Formatação de números: 
+		No node:
+			o nome da variavel + toFixed(Nº de casas que deseja);
+			Por exemplo:
+				var n1 = 1545.5 // Va aparecer apenas uma casa decimal.
+				n1.toFixed(2) vai ser igual a 1545.50 // Vai aparecer duas casas deciamais.
+				n1.toFixed(2).replace('.',',') // Além de aparecer duas casas deciamais, vai trocar de '.' para ','.
+				n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'}) // Baseado nas configurações entre parênteses, ele transforma o ´umero digitado em um salário. Exemplo: R$ 1.545,50.
+				Ou seja, eu quero localizar para o Brasil ('pt-BR') e currency: 'BRL' Que é dinheiro do Brasil. Pra coloca em dolárs necessita apenas trocar o 'currency:: USD"
+				
+Operadores:
+		1 São feitos os operadores aritméticos, depois os relacionais, depois os lógicos.
+		Se tiver todos os operadores lógicos juntos em uma mesma expressão, a ordem de execussão será: "Não", depois "E" e por fim "Ou".
+	Aritméticos: São operadores (+, -, *,/,%,**--> ("**" Significa potência. )); Operandos são aqueles que vão fazer os operadores fucionar. Sempre os primeiros quando tiver junto com um relacional.
+	
+	Atribuição: É usado o sinal de (=) para atribuir um valor para uma variável. Atribuição simples é quando se declara uma conta, e sua variavelserá o resultado da conta. Já a auto-atribuição é aquela que você atribui um resultado direto, chamando ela mesma, e atribuindo outro valor. Tipo var n = 3, n = n+4 (n será somado com 4, e passará a ser 7);
+		Incremento: Usando  x++ (Onde x recebe +1);
+		
+	Relacionais: São os operadores(>,<,>=,<=,==;!=) O resultado será sempre um valor booleano;
+		Operador de identidade (===) Ele testa se os dois valores são idênticos, idênticos no mesmo valor e no mesmo tipo. (!==) Desigual restrito, ele meio que pergunta se os tipos das variveis são diferentes;
+	Lógicos: São os operadores (!(Negação), &&(Conjução, 'e'), ||(Dijunções, 'ou')). Depois do ! coloca true/false.
+	
+	Ternários: São os operadores ( ? , :). Possui três partes. Exemplo: "média>=7.0 ? 'Aprovado' : "Reprovado";
+	
+	Procedência de operadores:
+		Exemplo:
+			5 + 3 /2 --> Primeiro é feita a divisão.
+			
+	
+	-->Ordem de precedência:<--
+		Ela analisa todos os parênteses, após analisa as potências, após a (multiplicação, divisão e porcetagem) Lembrando que os três anteriores possuem a mesma ordem de precedência. E por fim, a soma e a subtração. Quando se tem duas variaveis do memso nivel de precedência, começa a conta pela que vem primiero.
+		
+		
+		
+		
+		
+		DOM --> Document Object Model:
+			É um modelo de objetos para docuemntos. Basicamente é um cojunto de objetos dentro do seu navegador que vai dar acesso
+			aos componentes  internos do website.
+			
+			O DOM não funciona dentro do node.js. O dom está presente quando roda JavaScript no navegador.
+			
+			Árvore Dom é formada por:
+				- window:
+					location: Que diz a localização do seu site, qual a url.
+					document: DOcumento atual;
+					history: O histórico.
+				- html: // Mãe/Pai de head e body.
+					head: cabeçalho. //é filho de html
+						meta.
+						title.
+					body: corpo. //é filho de html
+						h1.
+						p.
+						div
+						
+		 Métodos de acesso: Selecionando
+			Por Marca --> Dentro de  document. O comando é getElementsByTagName()
+			Por ID --> getElementById()
+			Por Nome --> getElementsByName() -- Deve- se uar o [] no final como um vetor, para selecionar a tag escolhida.
+			Por Classe --> getElementsByClassName()
+			Por Seletor(CSS) --> querySelector() ou querySelectorAll()
+			
+			
+	Eventos DOM:
+	Eventos são tudo o que pode acontecer com uma determinada tag.
+		Mouse:
+			Mover até encostra dentro da div: mouseenter;
+			Continuar movendo o mouse dentro da div: mousemove;
+			Clicar e segurar: mousedown;
+			Após clicar e segurar e Soltar: moouseup;
+			Clique inteiro. Um clique e solta: click;
+			Mover o mouse para fora da Div: mouseout;
+			
+			
+	Função em JavaScript:
+		Conjunto de códigos , é um conjunto de linhas que só serãop executadas quando o evento ocorrer.
+	
+	Bloco em JavaScript:
+		Tem de nomear ele como uma function.
+		Delimitado entre os sinais de chave.
+		
+		
+		
+ Condições em JavaScript:
+	Sequências:
+		Exemplo:
+			var n = 3
+				n += 2
+					window.alert(n)
+					
+	Losango: Como um filtro, disponibiliza dois caminhos.
+		if(condição){
+			true
+			} else{
+				false
+				
+	Tipos de condição:
+	 Condição simples: Se a condiçãofot falsa, nada acontece.
+		if(condição){
+		}
+		//Se for true, uma coisa acontece,se for false, outra coisa acontece.
+		if(condição){
+			true
+			} else{
+				false
+
+	Condições aninhadas: Pega uma condição composta,e adiciona outras dentro dela.(if)
+	Condições Múltiplas: Tem a possibilidade de outros valores, valores fixos.(switch)
+		switch(expressão){
+			case 1:
+				break;
+			case 2:
+			break;
+			case 3:
+				break;
+			default: 
+			break; 
+		}
+		var agora = new Date() 
+		var hora = agora.getHours() -- Pega a hora atual do sistema.
+		
+		Repetições:
+			A função se repete enquanto essa condiçõa foir verdadeira. Se for Falsa, o laço acaba.
+				while(condiçaõ){ -- Primeiro testa, depois executa o bloco.
+				}
+				
+				do{-- Primiero executa , depois testa.
+				}while(condição)
+	
+				for(inicio, teste, incremento){ -- A inicializacao, após o teste, se for verdadeiro ele vai executar o comando dentro do bloco. E depois vai se repetir, incrementando.
+				
+				}
+					
+					
+					
+	Variaveis simples conseguem armazenar apenas um valor por vez.
+	Variaveis compostas devem ser capazes de armazenar varios valores em uma mesma estrutura.
+	
+	vaga auto = [ ,  , ];
+				
+		Um vetor é uma variavel com varios espaços. Composto de elementos que é um par que agrupa o espaço da memoria, o valor colocado dentro dele e o indice.
+		
+		let num = [ ,  , ]
+		num.push(7) -- Acrescenta mais um na última posicao do vetor.
+		Num.length() - Comprimento do vetor.
+		Num.sort() - Pega todos os valores e colocar em ordem crescente
+		
+		for (let(uma variavel) num  in (vetor)valores ){ // - For simplificado. 
+		
+		Funcões: Saõ ações executadas assim que são chamadas ou em decorrência de algum evento. 
+			: Podem receber parâmetros e retornar um resultado.
+			
+			Uma ordem - Chama chamada.
+			Entrada e com a informação- Cojunto de parâmetros
+			O que precisa - Ação
+			Entregar - Retorno.
+			
+				function ação(param) -- Parametro formal. {
+							-- Ação
+					return res
+					}
+					ação(5) - Chamada - ()- parametro real;
+			
+			
+			
+			**O array em javascript aceita valores de tipos diferentes dentro de um mesmo vetor.
+			
+		
+		Objetos: 
+			exemplo:
+				let amigo = {nome:'josé',sexo: 'm', peso:58.5, engordar(p){}  }
+				indice:				nome	sexo		peso	engordar()
+				
+				
+				
+				pexels- imagens gratuitas.
+					
+	.split(" ") -- Transforma em um vetor de acordo com o que esta dentro dos parentes.
+			
+			json - Uma estrutura de dados . -- {}			para acessar algo dentro dela, deve usar como o nome da variavel que contem tudo '.' a variavel. Exemplo: Aluno.notas.forEach (Acessa o vetor notas)
+			

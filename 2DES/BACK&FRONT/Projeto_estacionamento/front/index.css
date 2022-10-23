@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    background-color: rgb(230, 155, 64);
+    width: 100vw;
+    height: 50px;
+    text-align: center;
+}
+
+.banner > p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.botoes > input{
+  margin: 10px;
+}
+
+.botoes{
+    margin: 0px 10vw;
+}
+
+input{
+    width: 10vw;
+    border-radius: 10px;
+    height: 3vh;
+}
+
+
+
+.model{
+    display: none;
+}
+table{
+    align-items: center;
+}
+tr, td{
+    border: 1px solid black;
+}
+
+ a{
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+img{
+    margin: 30vh 45vw;
+}

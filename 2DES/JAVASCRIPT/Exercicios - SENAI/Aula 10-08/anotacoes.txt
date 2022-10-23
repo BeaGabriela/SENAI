@@ -1,0 +1,3 @@
+target -- quem recebeu a ação
+Site para gerar senha criptografada -- Dan's too
+'key' -- tecla do clique

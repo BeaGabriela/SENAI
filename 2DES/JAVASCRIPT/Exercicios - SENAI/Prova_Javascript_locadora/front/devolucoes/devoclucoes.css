@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: beige;
+    height: 50px;
+}
+
+table{
+    border: 1px solid black;
+}
+
+tr, td{
+    border: 1px solid black;
+}

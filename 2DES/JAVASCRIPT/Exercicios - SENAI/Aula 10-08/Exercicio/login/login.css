@@ -1,0 +1,30 @@
+
+body {
+    font: normal 12pt helvetica;
+}
+
+h2{
+   text-align: center;
+}
+main {
+    text-align: center;
+    margin: 15%;
+   
+}
+
+#btn{
+    width: 10%;
+    height: 30px;
+}
+
+input{
+    width: 18%;
+    height: 30px;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#btn:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    .modal{
+        display: none;
+        visibility: hidden;
+    }
+
+    th{
+        border: solid 1px black;
+    }
+
+    td{
+        border: 1px solid black;
+    }
+
+    #i1, #i2{
+        width: 16vw;
+       
+    }
+    #btn{
+        width: 18vw;
+        background-color: rgba(73, 73, 218, 0.61);
+        color: white;
+    }
+    main{
+        border: 1px solid black;
+        height: 60vh;
+        width: 20vw;
+        text-align: center;
+    }
+    </style>
+    <body onload="mostrar()">
+        <main>
+        <input type="text" id="i1" placeholder="Nome do Func.">
+        <input type="text" id="i2" placeholder="Cargo">
+        <input id='btn' type="button" value="Cadastrar" onclick="cadastrar()">
+
+        <table>
+            <thead>
+            <th>Nome funcionario</th>
+            <th>Cargo</th>
+            </thead>
+            <tbody id="a">
+                <tr class="col modal">
+                <td id="td1"></td>
+                <td id="td2"></td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+    </body>
+    <script src='index.js'></script>
+</html>

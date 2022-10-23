@@ -1,5 +1,3 @@
-npm init '' -- Criar a pasta e suas dependencias.
-
 Assincrona -> Demora um tempo para executar.
 
 Dentro do AsyncStorage.SetItem(nome, constante).
@@ -8,4 +6,28 @@ await -> Comando para forçar o codigo a esperar o retorno.
 
 value={} -> É uma propriedade que não é necessario declara. Ela é uma propriedade implicita, ou seja, ela existe. 
 
+Expo init "O nome que você deseja dar a pasta" - Cria uma pasta. (ATENÇÃO: Verifique o endereço da criação da pasta, e faça isso pelo Visual Studio Code)
+npm init '' -- Criar a pasta e suas dependencias.
 
+Criar uma pasta
+cd + 'nome_da_pasta'
+expo init + 'o nome' - Cria um novo projeto.
+cd + 'pasta'
+npm expo i -g -cli //Dependendo da versao o expo.
+npm i -g expo-cli
+expo start 
+
+ //A ',' funciona para: Pegar todos os caracteres do vetor, e adicona mais um valor.
+ console.log(...lista, {"nome": 'teste', "cargo": 'Programador'});
+   //... -> Desmembra um vetor. Separa em objetos distintos. Funciona em Javascript.
+    
+
+/useState --> é como um gatilho, toda vez que ele sofrer uma alteração, ele vai recarregar uma página.
+
+//nome - get, e o setNome é o set, sendo assim, ele que vai ser responsavel por modificar o nome
+
+stack.Navigator --> Mostra como irá nabegar nas telas.
+NavigattionContainer --> Mostra a navegação das telas. Base de nave
+
+Eval() -- Ele pega uma expressão em String e tenta resolver ela. Exemplo: "5"+"5" ==> Ele vai tentar rsolver.
+onChangeText -- Pega o valor do input, sme a necessidade de digitar o '.value'

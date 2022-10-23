@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.item-lista{
+    display: flex;
+    width: 70vw;
+    margin: 3rem;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#info{
+    width: 100%;
+    margin-left: 15px;
+}
+
+#img{
+    width: 7vw;
+    height: 12vh;
+    border-radius: 50%;
+    margin-top: 20px ;
+}
+
+#like{
+    width: 2vw;
+    height: 3vh;
+}
+#Avaliação{
+    width: 1vw;
+    height: 1.5vh;
+    margin-top: 5px ;
+    margin-right: 5px;
+}
+

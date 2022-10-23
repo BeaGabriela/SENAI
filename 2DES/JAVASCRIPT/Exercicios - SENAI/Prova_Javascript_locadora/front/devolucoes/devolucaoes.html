@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="devoclucoes.css">
+    <title>Clientes</title>
+</head>
+<body onload="carregar()">
+    <header>
+        <p onclick="clientes()">Clientes</p>
+        <p>Devoluções</p>
+    </header>
+    <div>
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>Nome do cliente</th>
+                <th>Telefone do cliente</th>
+                <th>Filme</th>
+                <th>Data de locação</th>
+                <th>Multa</th>
+            </thead>
+            <tbody>
+                <tr class="tabelinha">
+                    <td id="id"></td>
+                    <td id="Nome"></td>
+                    <td id="Telefone"></td>
+                    <td id="filmes"></td>
+                    <td id="Data"></td>
+                    <td id="multa"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./devoclucoes.js"></script>
+</html>

@@ -1,0 +1,60 @@
+Front end -->Js
+
+Back end --> Js
+
+Banco de dados --> SQL
+
+Mobile --> Js
+
+Tipo de banco de dados: Não estruturado(.txt, .docs, .pdf), Semi estruturados(Formato de tabela(.xlsx, .csv, .json), Estruturado(SQL(DDL, DML(Manipulacao). DCL -- Relacional) , Não SQL(Chave-valor, Tabelas -- Não Relacional)))
+
+Arquivo CSV - Semi estruturado, não SQL,não relacional.
+Arquivo Excel - Semi estrurado, não SQL, não relacional.
+Arquivo PowerBI - Estruturado, não SQL, relacioanal.
+FireBase - estruturado, não SQL, não relacional.
+MySQL - Estruturado, SQL, Relacional.
+Access - Estruturado, SQL, Relacional.
+Oracle - Estruturado, SQL, Relacioanal.
+SQL Server - Estruturado, SQL, Relacioanal.
+DB2 -  Estruturado, SQL, Relacional.
+
+MongoDB - Estruturado, Não SQL, Relacional.
+
+Dado(Bruto) evoluiu para a informação(dado que toma decisão), que evoluiu para o conhecimento(Ensino), e por fim para a inteliigência(Lucro sem intevenção humana). 
+
+Estrutura:
+Tabela ou entidade  -- Representa como retângulo.
+Relacionamentos entre tabela - Representado por um losango(Cardinalidade - Simples(Simples 1-N, N-1, 1-1, N-N) e Min-Max(0-N, 0-1,0-1,0-N,1-N,N-1,N-1,1-N) )
+
+Rótulos
+Campos
+Registros
+Tuplas
+Atributos
+	|
+	 >	= São semelhantes, representados por uma eclipse, ou uma bolinha. Aqui é onde ficam os dados. 
+
+MER
+DER -- Diagrama Entidade Relacionamento
+SGBD -- Sistema Gerenciador Banco Dados;
+
+Desenho universal do banco de dados é um cilindro, semelhante a um pote.
+
+
+
+
+Acessar o SGBD MariaDB
+
+1 - Xampp
+2- Start apache, mysql
+3 - admin(mysqr)
+3 - shell - 'mysql -u root'
+
+4-show databases;
+5- create database empresa
+6 - drop database 
+7 - use empresa
+8 -show tables
+9-create table clientes(Nome varchar(50), Nascimento date ,Cargo varchar(30), Departamento varchar (30));
+
+criar 

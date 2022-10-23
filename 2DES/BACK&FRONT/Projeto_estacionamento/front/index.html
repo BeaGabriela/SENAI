@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Estacionamento</title>
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <p>Estacionamento 'Pare'</p>
+        </div>
+        <div class="botoes">
+            <input type="button" value="Listar" onclick="listar()" ondblclick="limpar()">
+            <input type="button" value="Cadastrar" onclick="cadastrar()" ondblclick="limpar()">
+            <input type="button" value="Alterar">
+            </div>
+    </header>
+    <main>
+        <div class="limpar">
+            <img src='../R.png' height="200px" />
+        </div>
+        <div class="mamae model">
+            <div class="botos model">
+          <button id='ListarEntradas'>Listar Entradas</button>
+          <button id='ListarSaidas' >Listar Saidas</button>
+          <button id='ListarCarros'>Listar Carros</button>
+          </div>
+          <div class='botoesCadastro model'>
+            <button id="cadastrarEntrada"> Cadastrar entrada</button>
+            <button id ='cadastrarSaida'>Cadastrar Saida</button>
+          </div>
+          <div class="alterarBotoes model ">
+            <button id='alterarEntrada'>Alterar entrada</button>
+            <button id='alterarSaida'>Alterar saida</button>
+          </div>
+            <table class="tabela model">
+                <thead class="antigothead">
+                    <th>ID</th>
+                    <th>Vaga</th>
+                    <th>Placa</th>
+                    <th>Hora Entrada</th>
+                    <th>Data Entrada</th>
+                    <th>Tipo</th>
+                </thead>
+                <tbody>
+                    <tr class='geral model'>
+                        <td id="id"></td>
+                        <td id="vaga"></td>
+                        <td id="placa"></td>
+                        <td id="hora_entrada"></td>
+                        <td id="datas_entrada"></td>
+                        <td id="tipo"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+
+</body>
+<script src="./index.js"></script>
+
+</html>

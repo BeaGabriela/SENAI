@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <p>Nome:<input type="text" id="nome"></p>
+    <p>Email: <input type="email" id="email"></p>
+    <p>Senha: <input type="password"  id="senha"></p>
+    <p>Repetir a senha: <input type="password" id="RepetirSenha"></p>
+    <p>Telefone: <input type="number" id="telefone"></p>
+    <p>CEP: <input type="text" id="cep"  value="" onblur="carregar()"></p>
+    <p>Logradouro: <input type="text" id="logradouro" disabled></p>
+    <p>Complemento: <input type="text" id="complemento"></p>
+    <p>Bairro: <input type="text" id="bairro" disabled></p>
+    <p>Cidade: <input type="text" id="cidade" disabled></p>
+    <p>Estado: <input type="text" id="estado" disabled></p>
+    <input type="button" value="Cadastrar" onclick="cadatrar()">
+    <p id="aviso"></p>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: rgb(156, 156, 155);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30px;
+}
+
+table{
+    border: 1px solid black;
+}
+
+th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 1px;
+}
+.modal{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 103, 116, 0.13);
+    align-items: center;
+    justify-content: center;
+    margin: -10% 0%;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+.modal-content {
+    width:300px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 45px;
+    justify-content: space-evenly;
+}
+.modal-content > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+}
+
+.modal-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.modal-content-body {
+    margin-top: 20px;
+}
+
+.confirm {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #2fd659;
+}
+
+.confirm:hover{
+    background-color: rgba(96, 238, 14, 0.329);
+    cursor: pointer;
+    color: black;
+}
+
+.cancel {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa2828; 
+}
+
+.cancel:hover{
+    background-color: #f76e6e;
+    color: black;
+    cursor: pointer;
+}
+
+.cadastrar {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #5d7764;
+    margin-bottom: 20px;
+}
+
+.cadastrar:hover {
+    color:  #fff;
+    background-color: #659671;
+    cursor: pointer;
+}
+
+.cadastrar > img {
+    margin-left: 10px;
+}

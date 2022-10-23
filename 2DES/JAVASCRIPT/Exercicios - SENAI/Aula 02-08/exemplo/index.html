@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Dinâmica</title>
+</head>
+<body>
+    <!-- Nome, Fotinha, Avaliação e Like -->
+    <div class="lista">
+        <div class="item-lista">
+            <img src="./img/restaurante.png" id="img" alt="foto restaurante">
+            <div id="info">
+                <p>Xurumelas Bar</p>
+                <p><img src="./img/estrela1.png" id='Avaliação' alt="avaliacao" ondblclick="naovotar()" onclick="votar()">4.9</p>
+            </div>
+            <img src="./img/coracaopreto.png" ondblclick="voltar()" onclick="like()" alt='iconelike ' id='like'/>
+
+        </div>
+        <input type="button" value="Clique" onclick="criarElementos()">
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

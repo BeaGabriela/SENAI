@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Clientes</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <p>Clientes</p>
+        <p onclick="devo()">Devoluções</p>
+    </header>
+    
+    <button class='cadastrar' onclick='abrirModalCadastro()'>Novo cliente + </button>
+
+    <button onclick=''>Novo cliente + </button>
+
+    <div>
+        <table>
+            <thead>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+            </thead>
+            <tbody>
+                <tr class="tabelinha">
+                    <td id="codigo"></td>
+                    <td id="nome"></td>
+                    <td id="endereco"></td>
+                    <td id="telefone"></td>
+                    <td id='img'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="modal editar model">
+        <div class="modal-content">
+            <button onclick="fecharModalCadastro()"> <img class="icone"
+                    src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" height="17px"
+                    alt="Icone de Fechar"> </button>
+            <div class="modal-content-body">
+                <input type="text" id="nomeC" placeholder="nome">
+                <input type="text" id="enderecoC" placeholder="Endereço">
+                <input type="text" id="telefoneC" placeholder="telefone">
+            </div>
+            <div class="modal-content-footer">
+                <button onclick="cadastrar()" id="cadedit" class="btn confirm">Cadastrar</button>
+                <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+            </div>
+            <div>
+            </div>
+
+    <div id='modais'>
+        <div id="modal" style='display:none;'>
+            <button class="fechar" onclick="modais.setAtribute('style', 'display:none;')">X</button>
+            <input type="text" id="nome" placeholder="nome">
+            <input type="text" id="endereco" placeholder="Endereço">
+            <input type="text" id="telefone" placeholder="telefone">
+            <button onclick="cadastrar()">Cadastrar</button>
+
+        </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>

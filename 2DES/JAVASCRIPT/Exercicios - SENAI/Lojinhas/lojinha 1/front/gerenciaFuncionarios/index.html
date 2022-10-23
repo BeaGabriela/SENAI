@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Funcionários</title>
+</head>
+<body>
+   
+    <aside>
+        <nav>
+            <ul>
+                <li id="prod" onclick="gerenciadorProdutos()">Gerenciar Produtos</li>
+                <li>Gerenciar Funcionários</li>
+                <li>Efetuar Venda</li>
+                <li>Relatório de Vendas</li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+       <button class="cadastrar" onclick="abrirModalCadastro()">Cadastrar<img class="icone" src="https://freepikpsd.com/file/2019/10/cadastro-icon-png-Transparent-Images.png" alt="Ícone de Cadastrar"></button>
+       <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Matricula</th>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salario</th>
+                <th>CPF</th>
+            </tr>
+        </thead>
+        <tbody id="lista-func">
+            <tr class="linhamodelo model">
+                <td>aaa</td>
+                <td>aaa</td>
+                <td>aaa</td>
+                <td>aaa</td>
+                <td>aaa</td>
+                <td>aaa</td>
+                <td><button id="exclui"><img  class="icone" src="https://cdn-icons-png.flaticon.com/512/1799/1799391.png"></button></td>
+                <td><button id="edita"><img  class="icone" src="https://cdn-icons-png.flaticon.com/512/84/84380.png"></button></td>
+            </tr>
+        </tbody>
+       </table>
+    </main>
+    <div class="modal excluir model">
+        <div class="modal-content">
+            <button onclick="fecharModalExcluir()"><img class="icone" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png"></button>
+            <div clas="modal-content-body">
+                <p>Alerta de Exclusão<br>Tem certeza que deseja remover o funcionario de matricula: <span id="matri"><span></p>    
+            </div>
+            <div class="modal-content-footer">
+                <button onclick="excluirFunc()" class="btn confirm">Confirmar</button>
+                <button onclick="fecharModalExcluir()" class="btn cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal editar model">
+        <div class="modal-content">
+            <button onclick='fecharModalEditar()'><img class="icone" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png"></button>
+            <div class="modal-content-body">
+                <input type="text" id="matricula" placeholder="matricula">
+                <input type="text" id="nome" placeholder="nome">
+                <input type="text" id="cargo" placeholder="cargo">
+                <input type="number" id="salario" placeholder="salario">
+                <input type="text" id="cpf" placeholder="cpf">
+            </div>
+            <div class="modal-content-footer">
+                <button onclick="cadastrarFunc()" id="cadedit" class="btn confirm">Cadastrar</button>
+                <button onclick='fecharModalEditar()'class="btn cancel">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

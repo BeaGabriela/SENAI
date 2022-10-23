@@ -1,0 +1,19 @@
+body{
+    font: normal 18pt arial;
+    background-color:rgba(255, 20, 145, 0.089);
+    
+
+}
+table{
+    margin: 20px 40px 0 0;
+}
+th {
+    border: solid 1px black;
+}
+td {
+    border: solid 1px black;
+}
+/* #res{
+    border: solid 1px black;
+    width: 15vw;
+} */

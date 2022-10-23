@@ -1,0 +1,7 @@
+Estacionamento
+ Gerenciar clientes(Nome, placa do carro, hora, data)
+ vagas disponiveis atualmente.(id ou cod)
+ registrar entradas (historico)
+ lista registros passados. (relatório)
+ 
+ 

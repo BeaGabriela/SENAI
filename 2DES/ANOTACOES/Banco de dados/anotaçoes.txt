@@ -1,0 +1,15 @@
+DML -- insert into values (____)
+update 'tabela' set onde where chave =?
+delete from 'tabela' where 
+
+DQL --
+	SELECT * FROM 			create view  nome as 
+
+where 
+order by
+group by 
+
+funções
+sun
+avg 
+miv

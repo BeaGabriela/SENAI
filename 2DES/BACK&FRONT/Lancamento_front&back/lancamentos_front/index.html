@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Lançamentos</title>
+</head>
+
+<body onload="ll()">
+    <button class='cadastrar' onclick='abrirModalCadastro()'>Novo Lançamento +</button>
+    <p id="titulo">Livro Caixa</p>
+    <p id="filtro">Filtro: <input id='d' onblur="datas()" type='text' placeholder="Data"></p>
+    <div class="modal editar model"> 
+        <div class="modal-content">
+            <button onclick="fecharModalCadastro()"> <img class="icone" src="https://cdn.icon-icons.com/icons2/1674/PNG/512/close_111152.png" height="17px" alt="Icone de Fechar"> </button>
+            <div class="modal-content-body"> 
+        <input type="text" id="descricaoo" placeholder="Descrição">
+        <input type="text" id="valorr" placeholder="Valor">
+       <select name='tipo' id='tipoo' placeholder="Tipo">
+        <option value="D">Débito</option>
+        <option value="C">Crédito</option>
+       </select>
+     </div> 
+    <div class="modal-content-footer">
+        <button onclick="cadastrar()" id="cadedit" class="btn confirm">Cadastrar</button>
+        <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+    </div>
+</div>
+</div>
+</div> 
+
+ 
+    <div id="main">
+        <div class="t1">
+            <table>
+                <thead>
+                    <a id="q"></a>
+                    <tr>
+                        <th>n_Lancamentos</th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo">
+                    <a id="debito"></a>
+                    <tr class='coluninhas '>
+                        <td id="numero"></td>
+                        <td id="data"></td>
+                        <td id="descricao"></td>
+                        <td id="valor"></td>
+                        <td id="tipo"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="t2">
+            <table>
+                <thead>
+                    <a id="q"></a>
+                    <tr>
+                        <th>n_Lancamentos</th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="corpinho">
+                    <a id="credito"></a>
+                    <tr class='coluninhas1 '>
+                        <td id="nu"></td>
+                        <td id="da"></td>
+                        <td id="des"></td>
+                        <td id="val"></td>
+                        <td id="ti"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<h3 id='saldo'>Saldo</h3>
+
+   
+    
+    
+
+</body>
+
+<script src="index.js"></script>
+
+</html>

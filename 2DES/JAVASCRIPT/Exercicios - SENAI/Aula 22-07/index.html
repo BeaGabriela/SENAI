@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão da arvore DOM (Monitorar eventos)</title>
+</head>
+<style>
+    body {
+        font: normal 11pt arial;
+        background-color: rgba(236, 122, 217, 0.212);
+       
+        
+    }
+
+    input {
+        border-radius: 30px;
+    }
+    
+</style>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salario</th>
+            </tr>
+            <tr>
+                <th><input type="text" id="nome" placeholder="Filtro"/> </th>
+                <th><input type="text" id="cargo" placeholder="Filtro"/></th>
+                <th><input type="text" id="salario" placeholder="Filtro"/></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João da Silva</td>
+                <td>Motorista</td>
+                <td>R$ 2.500</td>
+            </tr>
+            <tr>
+                <td>Márcio Garcia</td>
+                <td>Auxiliar de Manutenção</td>
+                <td>R$ 3.500</td>
+            </tr>
+            <tr>
+                <td>Elizabeth Vieria</td>
+                <td>Recepcionista</td>
+                <td>R$ 2.800</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script src="index.js"></script>
+
+</html>

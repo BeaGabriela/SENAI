@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#titulo{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border: groove 1px black;
+    margin: 20px;
+}
+
+#filtro{
+    text-align: center;
+    font-size: 20px;
+}
+
+table{
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    text-align: center;
+    /* margin: 15vh 40vw; */
+}
+
+td, th{
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-collapse: collapse;
+
+}
+
+p{
+   text-align: center;
+   font-weight: bold;
+   margin: 30px;
+   font-family: 50px;
+}
+.icone:hover{
+    background-color: rgba(128, 128, 128, 0.562);
+    cursor: pointer;
+}
+
+.modal{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(116, 103, 116, 0.13);
+    align-items: center;
+    justify-content: center;
+    margin: -10% 0%;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+.modal-content {
+    width:300px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 45px;
+    justify-content: space-evenly;
+}
+.modal-content > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+}
+
+.modal-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.modal-content-body {
+    margin-top: 20px;
+}
+
+.confirm {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #2fd659;
+}
+
+.confirm:hover{
+    background-color: rgba(96, 238, 14, 0.329);
+    cursor: pointer;
+    color: black;
+}
+
+.cancel {
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa2828; 
+}
+
+.cancel:hover{
+    background-color: #f76e6e;
+    color: black;
+    cursor: pointer;
+}
+
+.cadastrar {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #5d7764;
+    margin-bottom: 20px;
+}
+
+.cadastrar:hover {
+    color:  #fff;
+    background-color: #659671;
+    cursor: pointer;
+}
+
+.cadastrar > img {
+    margin-left: 10px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin: 10px 25vw;
+    overflow-y: scroll;
+    max-height: 80vh;
+  
+
+}
+.t1{
+    width: 50vw;
+    margin: 10px;
+    
+}
+.t2{
+    width: 50vw;
+    margin: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(221, 221, 221, 0.575);
+}
+
+#saldo{
+    text-align: center;
+}
+
+#d{
+    width: 10vw;
+    border-radius: 10px;
+}

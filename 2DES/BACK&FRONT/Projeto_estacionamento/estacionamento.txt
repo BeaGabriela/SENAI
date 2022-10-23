@@ -1,0 +1,5 @@
+ Contextualização: Atualmente fomos designados para construir uma plataforma de estacionamento para um cliente. Algo que diferenciasse dos outros.
+ Sendo assim, pensamos em um projeto simples, e que facilitasse a vida de nosso cliente. Os requisitos de nosso projeto são: 
+ 
+	Requisitos:
+	cod 	requisito 	descricao 	criticidade

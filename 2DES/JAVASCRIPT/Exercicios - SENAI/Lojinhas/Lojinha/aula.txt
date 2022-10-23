@@ -1,0 +1,6 @@
+Default == null. 
+<link rel="stylesheet" href="style.css">
+
+'./' -- Opção. Pode se colocar apenas o nome do arquivo caso estejam na mesma pasta.
+
+O classList.remove('model') - Serve para remover o modelo que foi setado no css como display 'hidden', ou seja, invisivel. Quando removido, o ele mostra o que foi 'anulado' anteriioremnte pelo hidden. O que está dentro da tag. 

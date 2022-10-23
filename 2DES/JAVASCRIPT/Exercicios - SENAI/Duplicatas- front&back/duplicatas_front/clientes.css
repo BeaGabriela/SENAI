@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table{
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    border: 1px solid black;
+   text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.24);
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+}
+
+.form-modal {
+    width: 50%;
+    height: 50%;
+    background-color: #FFF;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 120px;
+}
+
+.form-modal > input , button{
+    margin: 15px 0;
+}

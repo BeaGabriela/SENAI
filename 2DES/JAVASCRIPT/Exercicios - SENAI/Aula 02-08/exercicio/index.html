@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style/index.css"> -->
+    <title>Tabela</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-shadow: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            text-align: center;
+            background-color: rgba(100, 148, 237, 0.705);
+
+        }
+
+        .container {
+            display: flex;
+            margin: 10px 15%;
+            justify-content: space-around;
+
+        }
+
+        input {
+            border-radius: 5px;
+            padding: 4px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 4% 43%;
+        }
+
+        th,
+        td {
+            padding: 10px 20px;
+            border: 1px solid black;
+
+        }
+        h1{
+            margin: 60px 0 15vh 0;
+        }
+
+        #btn:hover {
+            background-color: rgba(201, 213, 252, 0.438);
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de Funcionários da empresa ShiqueShique</h1>
+    <div class="container">
+        <p>Nome<input type="text" placeholder="Exemplo: Marcus" id="nome"></p>
+        <p>Cargo <input type="text" placeholder="Exemplo: Gestor" id="cargo"></p>
+        <p>Salário <input type="text" placeholder="Exemplo: R$ 1.500,00" id="salario"></p>
+        <input id='btn' type="button" value="Cadastrar" onclick="cadastrar()">
+    </div>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+
+
+    </table>
+
+    <div id="tabela"></div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
