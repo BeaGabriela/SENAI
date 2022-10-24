@@ -29,7 +29,7 @@ function carregar() {
                 nome.innerHTML = '<strong>Nome:</strong> ' + c.nome
                 nascimento.innerHTML += '<strong>Nascimento:</strong> ' + data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split(" ")[0]
                 telefone.innerHTML = '<strong>Telefone:</strong> ' + c.telefone
-                img.setAttribute('src', c.avatar == 'null' ? '../docs/assets/default.png' : `data:image/png;base64,${c.avatar}`);
+                img.setAttribute('src', c.avatar == 'null' ? '../docs/assets/default.png' : `data:image/png;base64,${c.avatar}`); //Operação ternário.
 
                 div.appendChild(login)
                 div.appendChild(nome)

@@ -10,3 +10,8 @@ Quando se mexe com mais de duas tabelas, é por que usa o mysql transação.
 
 Visual studio code:
 ctrl+shift_p -- Alterar as letras.
+
+*Banco BLOB*:{
+Problema em guardar imagem no banco de dados: 
+	Sobrepor uma imagem.
+}
