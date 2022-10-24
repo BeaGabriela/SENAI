@@ -1,21 +1,91 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-.model{
+header {
+    width: 100vw;
+    height: 6vh;
+    background-color: grey;
+    color: black;
+    display: flex;
+    justify-content: end;
+    padding: 8px;
+    gap: 22%;
+}
+
+h1 {
+    margin: 0px 4vw;
+    font-size: 30pt;
+}
+
+.btn {
+    width: 10vw;
+    margin: 0 5vw;
+    background-color: orange;
+    border: 1px solid orangered;
+    color: white;
+
+}
+
+.model {
     display: hidden;
     visibility: hidden;
 }
 
-.main{
+body>#divizinha {
+    margin: 10px 25vw;
+}
+
+#divizinha {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 50vw;
+    height: 30vh;
+    margin: 10px;
+    gap: 20px;
+}
+
+#avatar {
+    width: 12vw;
+    height: 15vh;
+    margin: 0 0 0 10vw;
+}
+
+#x {
+    width: 2vw;
+    height: 2vh;
+    margin: 20vh 0 0 10vw;
+
+}
+
+.modal {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    width: 20vw;
-    margin: 10px;
+    padding: 274px 440px;
+    gap: 10px;
 
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
 
+    background: rgba(52, 7, 99, 0.8);
+}
+
+.cadastro {
+    position: absolute;
+    background-color: aliceblue;
+    width: 30vw;
+    height: 30vh;
+    padding: 60px 190px;
+    gap: 10px;
+    
 }

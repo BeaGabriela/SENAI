@@ -12,9 +12,22 @@
 <body onload="carregar()">
     <header>
         <h1>Usuarios</h1>
-        <button>Novo</button>
+        <button class="btn" onclick="abrirModal()">Novo</button>
     </header>
-    
+
+    <div class="modal model  ">
+        <div class="cadastro model ">
+            <p>Login:<input type="text" id="login" /></p>
+            <p>Nome:<input type="text" id="nome" /></p>
+            <p>Nascimento<input type="text" id="nas" /></p>
+            <p>Telefone<input type="text" id="tel" /></p>
+            <input type="file" name="avatar" id="fileCreate" onchange="toBase64create()"
+                accept="image/jpeg, image/png" />
+            <button id="cadastra">Cadastrar</button>
+            <button onclick="FecharModalCadastro()">Cancelar</button>
+        </div>
+    </div>
+
 </body>
 <script src="./index.js"></script>
 
