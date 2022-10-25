@@ -64,11 +64,11 @@ function abrirModal() {
 
     btnC.addEventListener('click', () => {
         const usuarios = {
-            'login': login.value,
-            'nome': nome.value,
-            'nascimento': nas.value,
-            'telefone': tel.value,
-            'avatar': avatarBase64
+            login: login.value,
+            nome: nome.value,
+            nascimento: nas.value,
+            telefone: tel.value,
+            avatar: img.value
         }
         const options = {
             method: 'POST',
@@ -81,7 +81,7 @@ function abrirModal() {
                 if (resp == 201)
                     window.location.reload();
                 else
-                    alert("Erro ao enviar dados para o servidor, erro: "+resp)
+                    alert("Erro ao enviar dados para o servidor, erro: "+ resp)
             })
             .catch(err => console.error(err));
     });
