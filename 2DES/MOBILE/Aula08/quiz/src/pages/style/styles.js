@@ -10,5 +10,14 @@ export default StyleSheet.create({
 
     respostas: {
         margin: '10px',
+    },
+
+    textinho: {
+        fontSize: '20pt',
+        textAlign: 'center',
+        marginTop: '10px',
+        backgroundColor: 'lightblue',
+        width: '70vw',
+        marginLeft: '50px'
     }
 })

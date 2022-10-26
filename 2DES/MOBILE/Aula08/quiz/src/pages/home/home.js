@@ -8,7 +8,7 @@ export default function Home({navigation }){
   return(
     <View>
         <Image style={{width: '90vw', height: '40vh'}} source={Icon}/>
-        <Text>Venha fazer o Quiz!</Text>
+        <Text style={{ }}>Venha fazer o Quiz!</Text>
       <ButtonNext value='Começar o Quiz' onPress={() =>{ navigation.navigate("Primeira") }}/>
     </View>
   );

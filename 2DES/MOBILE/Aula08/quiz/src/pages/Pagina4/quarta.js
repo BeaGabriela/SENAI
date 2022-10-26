@@ -12,8 +12,9 @@ export default function Quarta({navigation }){
 
   const salvar = async () => {
     try {
-      await AsyncStorage.setItem('pergunta4', checked);
-      console.log(checked)
+      let resps = await AsyncStorage.getItem('resps');
+      
+      await AsyncStorage.setItem('resps', resps + ";" + checked);
     } catch (err) {
       console.log(err)
     }
@@ -38,8 +39,7 @@ export default function Quarta({navigation }){
         onPress={() => setChecked('second')}
       />
       </View>
-      <ButtonSalvar value="salvar" onPress={() => { salvar() }}/>
-      <ButtonNext value="Next" onPress={() =>{ navigation.navigate("Quinta", {"info":checked}) }}/>
+      <ButtonNext value="Next" onPress={() =>{ salvar(); navigation.navigate("Quinta") }}/>
     </View>
   );
 };

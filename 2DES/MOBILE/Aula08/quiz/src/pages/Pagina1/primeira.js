@@ -13,8 +13,7 @@ export default function Primeira({ navigation }) {
 
   const salvar = async () => {
     try {
-      await AsyncStorage.setItem('pergunta1', [checked].toString());
-      console.log(checked)
+      await AsyncStorage.setItem('resps', checked);
     } catch (err) {
       console.log(err)
     }
@@ -39,8 +38,10 @@ return (
         onPress={() => setChecked('second')}
       />
     </View>
-    <ButtonSalvar value="salvar" onPress={() => { salvar() }}/>
-    <ButtonNext value="Next" onPress={() => { navigation.navigate("Second", { "info": salvar() }) }} />
+    <ButtonNext value="Next" onPress={() => {
+      salvar(); 
+      navigation.navigate("Second"); 
+    }} />
   </View>
 );
 }

@@ -8,39 +8,39 @@ import ButtonSalvar from '../../Componentes/ButtonComponents/ButtonSalvar'
 import ButtonNext from '../../Componentes/ButtonComponents/ButtonNext'
 import styles from '../style/styles'
 
-export default function Quinta({navigation }){
+export default function Quinta({ navigation }) {
   const [checked, setChecked] = React.useState('first');
 
   const salvar = async () => {
     try {
-      await AsyncStorage.setItem('pergunta5', checked);
-      console.log(checked)
+      let resps = await AsyncStorage.getItem('resps');
+
+      await AsyncStorage.setItem('resps', resps + ";" + checked);
     } catch (err) {
       console.log(err)
     }
   }
 
-  return(
+  return (
     <View>
       <Text style={styles.text}>Já leu hoje?</Text>
       <View>
         <Text>Sim</Text>
-      <RadioButton
-        value="first"
-        status={ checked === 'first' ? 'checked' : 'unchecked' }
-        onPress={() => setChecked('first')}
-      />
+        <RadioButton
+          value="first"
+          status={checked === 'first' ? 'checked' : 'unchecked'}
+          onPress={() => setChecked('first')}
+        />
       </View>
       <View>
         <Text>Não</Text>
-       <RadioButton
-        value="second"
-        status={ checked === 'second' ? 'checked' : 'unchecked' }
-        onPress={() => setChecked('second')}
-      />
+        <RadioButton
+          value="second"
+          status={checked === 'second' ? 'checked' : 'unchecked'}
+          onPress={() => setChecked('second')}
+        />
       </View>
-      <ButtonSalvar value="salvar" onPress={() => { salvar() }}/>
-      <ButtonNext value="Next" onPress={() =>{ navigation.navigate("resposta") }}/>
+      <ButtonNext value="Next" onPress={() => { salvar(); navigation.navigate("resposta") }} />
     </View>
   );
 };
