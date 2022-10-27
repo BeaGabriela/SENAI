@@ -8,36 +8,29 @@ import styles from '../style/styles'
 import { TextInput } from 'react-native-paper';
 
 export default function resposta({ routes }) {
-  const [lida, setLida] = React.useState("");
+  const [lida, setLida] = React.useState([]);
   var vetor = ['first', 'second', 'first', 'second', 'first'] //Precisa percorrer o vetor para comparar.
-  var posicao = ['1', '2', '3', '4', '5']
 
   const ler = async () => {
-    //Arrumar essa parte do index e da comparaçção
     try {
       let resps = await AsyncStorage.getItem("resps");
-      let res = resps.split(";");
-      res.map((r, index) =>{
-        if(r[index]== vetor[index])
-        console.log('w')
-        return(
-        
-          <View>
-            
-          </View>
-        )
-      })
-
+      setLida(resps.split(';'))
     } catch (err) {
       console.log(err)
     }
   }
 
+  if (lida.length === 0) ler()
+
   return (
     <View>
-      <Text>{lida}</Text>
-      <ButtonSalvar value="Ler" onPress={() => { ler() }} />
-      <ButtonNext value="Next" onPress={() => { navigation.navigate("Home") }} />
-    </View>
-  );
+      {
+        lida.map((r, index) => {
+          return (
+            <Text key={index}>Questão {index + 1} : {(r === vetor[index]) ? "Acertou" : 'Errou'}</Text>
+          )
+        })
+      }
+       </View>
+  )
 };

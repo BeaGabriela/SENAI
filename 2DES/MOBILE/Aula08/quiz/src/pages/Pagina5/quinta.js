@@ -9,13 +9,15 @@ import ButtonNext from '../../Componentes/ButtonComponents/ButtonNext'
 import styles from '../style/styles'
 
 export default function Quinta({ navigation }) {
-  const [checked, setChecked] = React.useState('first');
+  const [checked, setChecked] = React.useState('');
 
   const salvar = async () => {
     try {
       let resps = await AsyncStorage.getItem('resps');
 
       await AsyncStorage.setItem('resps', resps + ";" + checked);
+
+      navigation.navigate("resposta")
     } catch (err) {
       console.log(err)
     }
@@ -23,9 +25,9 @@ export default function Quinta({ navigation }) {
 
   return (
     <View>
-      <Text style={styles.text}>Já leu hoje?</Text>
+      <Text style={styles.text}>O que é um léxico?</Text>
       <View>
-        <Text>Sim</Text>
+        <Text>Dicionário</Text>
         <RadioButton
           value="first"
           status={checked === 'first' ? 'checked' : 'unchecked'}
@@ -33,14 +35,14 @@ export default function Quinta({ navigation }) {
         />
       </View>
       <View>
-        <Text>Não</Text>
+        <Text>Mapa</Text>
         <RadioButton
           value="second"
           status={checked === 'second' ? 'checked' : 'unchecked'}
           onPress={() => setChecked('second')}
         />
       </View>
-      <ButtonNext value="Next" onPress={() => { salvar(); navigation.navigate("resposta") }} />
+      <ButtonNext value="Next" onPress={() => { salvar();  }} />
     </View>
   );
 };

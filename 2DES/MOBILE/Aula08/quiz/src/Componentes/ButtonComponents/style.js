@@ -6,9 +6,11 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: '15px',
-        backgroundColor: 'black',
+        backgroundColor: '#EB53EA',
         marginTop: '40px',
-        marginLeft: '40px'
+        marginLeft: '40px',
+        border: '1px solid red',
+        borderRadius: '20px'
     },
 
     buttons: {

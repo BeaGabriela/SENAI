@@ -1,5 +1,6 @@
 import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet, Button } from 'react-native';
 import ButtonCarrinho from '../../Components/ButtonCarrinho';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Home ({navigation}){
   
@@ -32,6 +33,16 @@ export default function Home ({navigation}){
         }
     ]
 
+      var carrinho = new Array();
+
+      const salvar = async () => {
+        try {
+          await AsyncStorage.setItem('carrinho', JSON.stringify(carrinho));
+        } catch (err) {
+          console.log(err)
+        }
+      }
+
     return (
         <View>
             {
@@ -53,7 +64,7 @@ export default function Home ({navigation}){
                 })
                
             }
-              <ButtonCarrinho value='Carrinho' onPress={navigation.navigate('Pizzaria', {'info': item.Nome})} />
+              <ButtonCarrinho value='Carrinho' onPress={navigation.navigate('Pizzaria')} />
            
         </View>
     )

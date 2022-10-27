@@ -27,23 +27,24 @@ export default function Descricao({ route }) {
             "observacoes": "Levar os exames.",
         },
     ]
-
-    const funcao = () => {
-        console.log('a')
-    }
-
-
     return (
-        data.map((item, i) => {
-            if(item.id_compromisso == info ){
-            return(
-            <View>
-                <Text>{item.descricao}</Text>
-                <Text>{item.observacoes}</Text>
-                <ButtonCadastrar value='Finalizar Compromisso' onPress={funcao} />
-            </View>
-            )
+        <View>
+            {
+                data.map((item, indice) => {
+                    if (item.id_compromisso === info) {
+                        return (
+                            <View key={indice}>
+                                <Text>{item.id}</Text>
+                                <Text>{item.descricao}</Text>
+                                <Text>Observações:</Text>
+                                <Text>{item.observacoes}</Text>
+                                <ButtonCadastrar value='Finalizar Compromisso'  />
+                            </View>
+                        )
+                    }
+                })
             }
-        })
+
+        </View >
     )
 }

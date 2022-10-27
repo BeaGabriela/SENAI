@@ -8,7 +8,7 @@ import ButtonSalvar from '../../Componentes/ButtonComponents/ButtonSalvar'
 import ButtonNext from '../../Componentes/ButtonComponents/ButtonNext'
 import styles from '../style/styles'
 export default function Quarta({navigation }){
-  const [checked, setChecked] = React.useState('first');
+  const [checked, setChecked] = React.useState('');
 
   const salvar = async () => {
     try {
@@ -22,9 +22,9 @@ export default function Quarta({navigation }){
 
   return(
     <View>
-      <Text style={styles.text}>Vai chover hoje?</Text>
+      <Text style={styles.text}>Quais dos dois animais sofre metamorfose?</Text>
       <View>
-        <Text>Sim</Text>
+        <Text>Cobra</Text>
       <RadioButton
         value="first"
         status={ checked === 'first' ? 'checked' : 'unchecked' }
@@ -32,7 +32,7 @@ export default function Quarta({navigation }){
       />
       </View>
       <View>
-        <Text>Não</Text>
+        <Text>Borboleta</Text>
        <RadioButton
         value="second"
         status={ checked === 'second' ? 'checked' : 'unchecked' }

@@ -9,7 +9,7 @@ import ButtonNext from '../../Componentes/ButtonComponents/ButtonNext'
 import styles from '../style/styles'
 
 export default function terceira({ navigation }) {
-  const [checked, setChecked] = React.useState('first');
+  const [checked, setChecked] = React.useState('');
 
   const salvar = async () => {
     try {
@@ -22,9 +22,9 @@ export default function terceira({ navigation }) {
 
   return (
     <View>
-      <Text style={styles.text}>O que fazer hoje?</Text>
+      <Text style={styles.text}>Qual o significado da sigla LOL em ingles?</Text>
       <View>
-        <Text>Estudar</Text>
+        <Text>Rindo em voz alta</Text>
         <RadioButton
           value="first"
           status={checked === 'first' ? 'checked' : 'unchecked'}
@@ -32,7 +32,7 @@ export default function terceira({ navigation }) {
         />
       </View>
       <View>
-        <Text>Dormir</Text>
+        <Text>league of legends</Text>
         <RadioButton
           value="second"
           status={checked === 'second' ? 'checked' : 'unchecked'}

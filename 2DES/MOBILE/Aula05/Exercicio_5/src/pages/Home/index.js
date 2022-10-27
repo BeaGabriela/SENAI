@@ -2,7 +2,7 @@ import { ScrollView, View, Text, Touchable, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 
 import TelaCompromisso from '../../components/TelaCompromisso/index.js'
-
+import styles from './style'
 
 
 export default function Home({ navigation }) {
@@ -33,11 +33,19 @@ export default function Home({ navigation }) {
         },
     ]
     return (
-        <ScrollView>
+        <ScrollView style={styles.vision}>
             {
                 data.map((item, index) => {
                     return (
-                        <TelaCompromisso value1={item.nome} value2={item.horario} key={index} onPress={() => { navigation.navigate('Descricao', { 'info': item.id }) }} />
+                        <TouchableOpacity style={styles.vie} key={index}  onPress={() => { navigation.navigate('Descricao', { 'info': item.id }) }}  >
+                            <Image source={require('../../../assets/' + item.tipo + '.png')} style={styles.img}/>
+                            <View style={styles.geral}>
+                                <Text style={styles.text}>{item.nome}</Text>
+                                <Text style={styles.textinho}>{item.horario}</Text>
+                                <Text style={{border: '1px solid green', width:'100vw', marginTop:'40px', marginRight: '90px'}}></Text>
+                            </View>
+                        </TouchableOpacity>
+                       
 
                     )
                 })

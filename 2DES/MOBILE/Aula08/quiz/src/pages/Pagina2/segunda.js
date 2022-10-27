@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -8,7 +8,8 @@ import ButtonSalvar from '../../Componentes/ButtonComponents/ButtonSalvar'
 import styles from '../style/styles'
 
 export default function Second({ navigation }) {
-  const [checked, setChecked] = React.useState('first');
+  const [checked, setChecked] = React.useState('');
+  const [validar, setValidar] = React.useState('');
 
   const salvar = async () => {
     try {
@@ -20,6 +21,15 @@ export default function Second({ navigation }) {
       console.log(err)
     }
   }
+
+  // const acertou = ()=>{
+  //   console.log(checked ==='second')
+  //   if(checked === 'second'){
+  //     setValidar('Parabés! Você acertou!')
+  //   }else{
+  //     setValidar('Sinto muito. Não é essa a resposta.')
+  //   }
+  // }
 
   return (
     <View>
@@ -40,6 +50,8 @@ export default function Second({ navigation }) {
           onPress={() => setChecked('second')}
         />
       </View>
+      {/* <Text style={styles.text}>{validar}</Text>
+      <TouchableOpacity style={styles.validar} onPress={acertou} >Validar</TouchableOpacity> */}
       <ButtonNext value="Next" onPress={() => { salvar(); navigation.navigate("Terceira") }} />
     </View>
   );

@@ -17,17 +17,24 @@ npm expo i -g -cli //Dependendo da versao o expo.
 npm i -g expo-cli
 expo start 
 
- //A ',' funciona para: Pegar todos os caracteres do vetor, e adicona mais um valor.
+A ',' funciona para: Pegar todos os caracteres do vetor, e adicona mais um valor.
  console.log(...lista, {"nome": 'teste', "cargo": 'Programador'});
-   //... -> Desmembra um vetor. Separa em objetos distintos. Funciona em Javascript.
+
+ ... -> Desmembra um vetor. Separa em objetos distintos. Funciona em Javascript.
     
+useState --> é como um gatilho, toda vez que ele sofrer uma alteração, ele vai recarregar uma página.
 
-/useState --> é como um gatilho, toda vez que ele sofrer uma alteração, ele vai recarregar uma página.
-
-//nome - get, e o setNome é o set, sendo assim, ele que vai ser responsavel por modificar o nome
+nome - get, e o setNome é o set, sendo assim, ele que vai ser responsavel por modificar o nome
 
 stack.Navigator --> Mostra como irá nabegar nas telas.
+
 NavigattionContainer --> Mostra a navegação das telas. Base de nave
 
 Eval() -- Ele pega uma expressão em String e tenta resolver ela. Exemplo: "5"+"5" ==> Ele vai tentar rsolver.
-onChangeText -- Pega o valor do input, sme a necessidade de digitar o '.value'
+
+onChangeText -- Pega o valor do input, sem a necessidade de digitar o '.value'
+
+.splice(posicao,itens) => Remove um item de um vetor.
+.shift() -> Remove a posição 0
+
+
