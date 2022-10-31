@@ -118,3 +118,37 @@ main {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
 }
+
+.modal{
+display: none;
+visibility: hidden;
+}
+
+.model{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(84, 84, 230, 0.534);
+    position: relative;
+
+    position: absolute;
+    font-weight: 600;
+    color: rgb(99, 151, 228);
+    top: 0%;
+    right: 0%;
+}
+
+.modelo{
+    width: 50vw;
+    height: 50vh;
+    background-color: rgba(0, 255, 255, 0.548);
+
+    position: absolute;
+    font-weight: 600;
+    color: rgb(124, 114, 114);
+    top: 20%;
+    right: 25%;
+}
+
+.fecharModal{
+    margin-Left: 48vw;
+}

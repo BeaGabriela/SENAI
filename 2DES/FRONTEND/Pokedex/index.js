@@ -2,6 +2,8 @@ const nomePoke = document.querySelector('.nome_poke')
 const numero_poke = document.querySelector('.numero_poke')
 const imgpo = document.querySelector('.pokemon_i')
 
+const img = document.querySelector('.pokemon_imagem')
+
 const input = document.querySelector('.input_pesquisa')
 
 const form = document.querySelector('.form')
@@ -10,6 +12,13 @@ const btPre = document.querySelector('.btn-prev')
 const btNext = document.querySelector('.btn-next')
 
 const descrever = document.querySelector('#descrever')
+
+var habilidades = document.querySelector('.descricao')
+
+var modelo = document.querySelector('.model')
+var modelo1 = document.querySelector('.modelo')
+
+var fechar = document.querySelector('.fecharModal')
 
 let pokemon = 1
 
@@ -25,7 +34,7 @@ const direcionandoPokemon = async (pokemon) => {
 
     nomePoke.innerHTML = 'Carregando...'
     numero_poke.innerHTML = ''
-    
+
     const data = await fetchPokemon(pokemon)
     console.log(data)
     if (data) {
@@ -35,17 +44,7 @@ const direcionandoPokemon = async (pokemon) => {
         imgpo.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         input.value = ''
         pokemon = data.id
-        descrever.innerHTML = data.moves.map(i => {
-            if(i < 7){
-                return i.move.name
-            }else{
-                console.log(a)
-            }
-            
-          
-        })
-        console.log(descrever)
-        
+
     } else {
         nomePoke.innerHTML = 'Não encontrado :c'
         numero_poke.innerHTML = ''
@@ -53,11 +52,25 @@ const direcionandoPokemon = async (pokemon) => {
     }
 }
 
+habilidades.addEventListener('click', () => {
+    modelo.classList.remove('modal')
+    modelo1.classList.remove('modal')
+
+
+})
+
+fechar.addEventListener('click', () => {
+    modelo.classList.add('modal')
+    modelo1.classList.add('modal')
+
+})
+
+
 form.addEventListener('submit', (event) => {
     event.preventDefault()
 
     direcionandoPokemon(input.value.toLowerCase())
-  
+
 
 })
 
@@ -76,3 +89,5 @@ btNext.addEventListener('click', () => {
 })
 
 direcionandoPokemon(1)
+
+
