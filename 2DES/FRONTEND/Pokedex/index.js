@@ -9,6 +9,8 @@ const form = document.querySelector('.form')
 const btPre = document.querySelector('.btn-prev')
 const btNext = document.querySelector('.btn-next')
 
+const descrever = document.querySelector('#descrever')
+
 let pokemon = 1
 
 const fetchPokemon = async (pokemon) => {
@@ -25,6 +27,7 @@ const direcionandoPokemon = async (pokemon) => {
     numero_poke.innerHTML = ''
     
     const data = await fetchPokemon(pokemon)
+    console.log(data)
     if (data) {
         imgpo.style.display = 'block'
         nomePoke.innerHTML = data.name
@@ -32,6 +35,16 @@ const direcionandoPokemon = async (pokemon) => {
         imgpo.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         input.value = ''
         pokemon = data.id
+        descrever.innerHTML = data.moves.map(i => {
+            if(i < 7){
+                return i.move.name
+            }else{
+                console.log(a)
+            }
+            
+          
+        })
+        console.log(descrever)
         
     } else {
         nomePoke.innerHTML = 'Não encontrado :c'
