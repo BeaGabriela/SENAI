@@ -1,0 +1,23 @@
+Design Patters é um padrão de projeto antigo.
+Factory -> Model(Usado para modelar.)
+Dvidido em três categorias:
+	Criação => 'Fabricar Objetos'(Factory Method)
+	Estrutura =>
+	Comportamento => 
+
+*Falando sobre objetos*: 
+	JavaScript, Phyton, PHP permitem criar objetos apenas abrindo {}. E temos um objeto. 
+	Em Java, C++, C# necessita fazer uma CLASSE > INSTÂNCIA > OBJETO (Usando o new).
+	Se eu definir uma variavel como constante, e definir como um objeto usando {}. Eu consigo modificar ela, e atribuir a ela caracteristicas. IMPRESSIONANTE, né?!
+	
+	**Construtor** : Serve para setar os valores do produto. Em JavaScript 'não faz muito sentido' ter classe. Pois pode usar o objeto direto.
+
+	** OBS ** => Uma classe abstrata não pode ser instanciada, apenas herdada.
+	
+	*Singleton* -> Conexão entre o banco de dados e o backend. É uma lista tipo 'static' que não precisa ser instanciada.
+	
+
+	
+
+undefined ->  Ao meu entedimneto, significa que tal variavel não teve um valor atribuido.
+null -> Siginifica que o valor está vazio.

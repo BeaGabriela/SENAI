@@ -3,6 +3,9 @@ const numero_poke = document.querySelector('.numero_poke')
 const imgpo = document.querySelector('.pokemon_i')
 
 const img = document.querySelector('.pokemon_imagem')
+var nomeP = document.querySelector('.nome')
+var numeroP = document.querySelector('.numero')
+
 
 const input = document.querySelector('.input_pesquisa')
 
@@ -45,6 +48,21 @@ const direcionandoPokemon = async (pokemon) => {
         input.value = ''
         pokemon = data.id
 
+        habilidades.addEventListener('click', () => {
+            modelo.classList.remove('modal')
+            modelo1.classList.remove('modal')
+            img.style.display = 'block'
+            img.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
+            nomeP.innerHTML = data.name
+            numeroP.innerHTML = data.id
+
+            descrever.innerHTML = data.moves.map(i => {
+                i.move.name
+                return i.move.name
+            })
+        
+        })
+
     } else {
         nomePoke.innerHTML = 'Não encontrado :c'
         numero_poke.innerHTML = ''
@@ -52,12 +70,7 @@ const direcionandoPokemon = async (pokemon) => {
     }
 }
 
-habilidades.addEventListener('click', () => {
-    modelo.classList.remove('modal')
-    modelo1.classList.remove('modal')
 
-
-})
 
 fechar.addEventListener('click', () => {
     modelo.classList.add('modal')
