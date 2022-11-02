@@ -7,6 +7,7 @@ var nomeP = document.querySelector('.nome')
 var numeroP = document.querySelector('.numero')
 
 
+
 const input = document.querySelector('.input_pesquisa')
 
 const form = document.querySelector('.form')
@@ -23,7 +24,7 @@ var modelo1 = document.querySelector('.modelo')
 
 var fechar = document.querySelector('.fecharModal')
 
-let pokemon = 1
+let pokemonn = 1
 
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -44,17 +45,20 @@ const direcionandoPokemon = async (pokemon) => {
         imgpo.style.display = 'block'
         nomePoke.innerHTML = data.name
         numero_poke.innerHTML = data.id
+        pokemonn = data.id
         imgpo.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         input.value = ''
-        pokemon = data.id
+        
 
         habilidades.addEventListener('click', () => {
             modelo.classList.remove('modal')
             modelo1.classList.remove('modal')
             img.style.display = 'block'
+            
             img.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
             nomeP.innerHTML = data.name
             numeroP.innerHTML = data.id
+            
 
             descrever.innerHTML = data.moves.map(i => {
                 i.move.name
@@ -88,16 +92,16 @@ form.addEventListener('submit', (event) => {
 })
 
 btPre.addEventListener('click', () => {
-    if (pokemon > 1) {
-        pokemon -= 1
-        direcionandoPokemon(pokemon)
+    if (pokemonn > 1) {
+        pokemonn -= 1
+        direcionandoPokemon(pokemonn)
     }
 
 })
 
 btNext.addEventListener('click', () => {
-    pokemon += 1
-    direcionandoPokemon(pokemon)
+    pokemonn += 1
+    direcionandoPokemon(pokemonn)
 
 })
 

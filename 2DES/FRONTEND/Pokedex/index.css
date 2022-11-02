@@ -127,7 +127,7 @@ visibility: hidden;
 .model{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(84, 84, 230, 0.534);
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
     position: relative;
 
     position: absolute;
@@ -138,17 +138,39 @@ visibility: hidden;
 }
 
 .modelo{
-    width: 50vw;
-    height: 50vh;
-    background-color: rgba(0, 255, 255, 0.548);
+    width: 60vw;
+    height: 70vh;
+    background: linear-gradient(to bottom, red, white);
 
     position: absolute;
     font-weight: 600;
     color: rgb(124, 114, 114);
-    top: 20%;
-    right: 25%;
+    top: 15%;
+    right: 21%;
+}
+
+.pokemon_imagem{
+    display: block;
+    margin: -5vh 0vw 0vh 26vw;
+    
+}
+
+#descrever{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
 
 .fecharModal{
-    margin-Left: 48vw;
+    margin-Left: 58vw;
 }
+
+h2{
+    color:rgb(196, 11, 11);
+}
+
+.nome, 
+.numero{
+    color: black;
+}
+
