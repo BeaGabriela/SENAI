@@ -54,15 +54,14 @@ main {
 .descricao{
     width: 12.1vw;
     height: 11.5vh;
-    background-color: green;
+    background-color:  #6ab7f5;
 
     position: absolute;
     font-weight: 600;
-    color: rgb(124, 114, 114);
+    color: rgb(185, 60, 60);
     top: 79.7%;
     right: 24%;
 }
-
 #descrever{
     color: black;
 }
@@ -85,7 +84,7 @@ main {
     outline: none;
     border: 2px solid black;
     border-radius: 9px;
-    background-color: rgb(62, 255, 62);
+    background-color: #6ab7f5;
     font-weight: 600;
     color: #000000;
     font-size: clamp(10px, 5vw, 1rem);
@@ -140,7 +139,7 @@ visibility: hidden;
 .modelo{
     width: 60vw;
     height: 70vh;
-    background: linear-gradient(to bottom, red, white);
+    background: linear-gradient(to bottom, red, rgb(68, 68, 68), white);
 
     position: absolute;
     font-weight: 600;
