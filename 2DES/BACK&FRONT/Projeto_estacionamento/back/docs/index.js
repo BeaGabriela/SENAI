@@ -67,5 +67,5 @@ app.get('/projeto_estacionamento/View_vizua', (req,res) => {
 
 
 app.listen(5000, () => {
-    console.log('Respondendo na porta 50000')
+    console.log('Respondendo na porta 5000')
 })

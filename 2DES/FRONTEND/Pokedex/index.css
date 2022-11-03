@@ -35,7 +35,6 @@ main {
 }
 
 .dados_poke {
-    background-color: rgb(182, 176, 176);
     height: 5vh;
     width: 16vw;
     border-radius: 5px;
@@ -46,15 +45,15 @@ main {
     top: 62.5%;
     right: 20%;
 
-    font-size: clamp(10px, 5vw, 25px)
+    font-size: clamp(8px, 2vw, 20px)
         /*clamp(valor minimo, valor padrao, valor maximo)*/
 
 }
 
-.descricao{
+.descricao {
     width: 12.1vw;
     height: 11.5vh;
-    background-color:  #6ab7f5;
+    background-color: #ffffff;
 
     position: absolute;
     font-weight: 600;
@@ -62,12 +61,13 @@ main {
     top: 79.7%;
     right: 24%;
 }
-#descrever{
+
+#descrever {
     color: black;
 }
 
 .nome_poke {
-    color: #3a444d;
+    color: #000000;
     text-transform: capitalize;
 }
 
@@ -84,7 +84,7 @@ main {
     outline: none;
     border: 2px solid black;
     border-radius: 9px;
-    background-color: #6ab7f5;
+    background-color: #e4f0fa;
     font-weight: 600;
     color: #000000;
     font-size: clamp(10px, 5vw, 1rem);
@@ -118,12 +118,12 @@ main {
     font-size: 0.9rem;
 }
 
-.modal{
-display: none;
-visibility: hidden;
+.modal {
+    display: none;
+    visibility: hidden;
 }
 
-.model{
+.model {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, #6ab7f5, #fff);
@@ -136,10 +136,10 @@ visibility: hidden;
     right: 0%;
 }
 
-.modelo{
+.modelo {
     width: 60vw;
     height: 70vh;
-    background: linear-gradient(to bottom, red, rgb(68, 68, 68), white);
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
 
     position: absolute;
     font-weight: 600;
@@ -148,28 +148,71 @@ visibility: hidden;
     right: 21%;
 }
 
-.pokemon_imagem{
+.pokemon_imagem {
     display: block;
     margin: -5vh 0vw 0vh 26vw;
-    
+
 }
 
-#descrever{
+#descrever {
     display: flex;
     flex-direction: row;
     text-align: center;
 }
 
-.fecharModal{
+.fecharModal {
     margin-Left: 58vw;
 }
 
-h2{
-    color:rgb(196, 11, 11);
+h2 {
+    color: rgb(0, 0, 0);
 }
 
-.nome, 
-.numero{
+.nome,
+.numero {
     color: black;
 }
 
+.pokebola {
+    width: 12.1vw;
+    height: 11.5vh;
+
+    font-weight: 600;
+    color: rgb(185, 60, 60);
+    top: 70.7%;
+    right: 24%;
+
+}
+
+@media (max-width: 2000px) {
+    .input_pesquisa {
+        width: 17.5vw;
+    }
+
+    .descricao {
+        width: 9.1vw;
+        height: 8vh;
+        top: 79.5%;
+        right: 23%;
+    }
+
+    .descricao>.dados_poke {
+        height: 5vh;
+        width: 16vw;
+        top: 59.5%;
+        left: -38%;
+    }
+
+    .pokebola {
+        width: 9.1vw;
+        height: 7vh;
+        top: 75.5%;
+        right: 23%;
+    }
+
+    .modelo{
+      padding-top: 40px;
+      
+      
+    }
+}

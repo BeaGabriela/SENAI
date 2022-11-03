@@ -16,8 +16,15 @@ Dvidido em três categorias:
 	
 	*Singleton* -> Conexão entre o banco de dados e o backend. É uma lista tipo 'static' que não precisa ser instanciada.
 	
-
+	******MVC não é a mesma coisa que um design patters. *****
+	
 	
 
 undefined ->  Ao meu entedimneto, significa que tal variavel não teve um valor atribuido.
 null -> Siginifica que o valor está vazio.
+
+prisma } nodeJS - > ORM para Javascript.
+sequelise } nodeJS -> ORM para Javascript.
+
+
+lista, tabela e matriz são tudo a mesma coisa.

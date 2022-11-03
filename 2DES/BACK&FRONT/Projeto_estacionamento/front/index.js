@@ -37,12 +37,14 @@ function listar() {
             })
     })
 
+
     var ListarSaidas = document.querySelector('#ListarSaidas')
     ListarSaidas.addEventListener('click', () => {
         fetch('http://localhost:5000/projeto_estacionamento/saida')
             .then(res => { return res.json() })
             .then(cadastros => {
                 cadastros.forEach(cad => {
+                    
                     document.querySelector('.antigothead').innerHTML = ''
                     var tabela = document.querySelector('.tabela')
                     tabela.classList.remove('model')
