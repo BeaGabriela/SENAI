@@ -40,4 +40,8 @@
 
 *Qual a função do toggle*{
 	Se tem um modal ele retira, e se não tem ele adiciona.
-}
+}  
+
+**O paralelepipedo branco é uma agregação**
+
+**O paralelepipedo preto é porque é necessário no programa.**

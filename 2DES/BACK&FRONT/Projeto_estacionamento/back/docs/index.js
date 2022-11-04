@@ -34,7 +34,7 @@ app.post('/projeto_estacionamento/entrada', (req,res) => {
 });
 
 app.post('/projeto_estacionamento/saida', (req,res) => {
-    let string = `INSERT INTO saida VALUES ('${req.body.id}', curtime(), '${req.body.datas_saida}' )`;
+    let string = `INSERT INTO saida VALUES ('${req.body.id}', '${req.body.datas_saida}',  curtime() )`;
     con.query(string,(err, result) => {
         if(err==null){
             res.status(201).json(req.body).end();

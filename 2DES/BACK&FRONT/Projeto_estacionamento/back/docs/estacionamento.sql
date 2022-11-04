@@ -32,7 +32,7 @@ insert into entrada values(default, 'A2', 'qwe234', curtime(), curdate(), 'C');
 insert into entrada values(default, 'M2', 'asd567', curtime(), curdate(), 'M');
 insert into entrada values(default, 'M0', 'MLO097', curtime(), curdate(), 'M');
 
-insert into saida values(1, curdate(),curtime() );
+insert into saida values(1, '2022-11-06',curtime());
 insert into saida values(2,'2022-09-15','17:10' );
 insert into saida values(3, '2022-08-10','12:10' );
 

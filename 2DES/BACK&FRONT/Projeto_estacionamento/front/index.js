@@ -3,6 +3,7 @@ var l = document.querySelector('.mamae')
 var b = document.querySelector('.botos')
 b.classList.add('model')
 
+var corpo = document.querySelector('tbody')
 var bC = document.querySelector('.botoesCadastro')
 bC.classList.add('model')
 
@@ -15,6 +16,7 @@ function listar() {
     document.querySelector('.limpar').innerHTML = ''
     var ListarEntradas = document.querySelector('#ListarEntradas')
     ListarEntradas.addEventListener('click', () => {
+        ListarEntradas.disabled= true;
         fetch('http://localhost:5000/projeto_estacionamento/entrada')
             .then(res => { return res.json() })
             .then(cadastros => {
@@ -29,7 +31,8 @@ function listar() {
                     geral.querySelector('#vaga').innerHTML = cad.vaga
                     geral.querySelector('#placa').innerHTML = cad.placa
                     geral.querySelector('#hora_entrada').innerHTML = cad.hora_entrada
-                    geral.querySelector('#datas_entrada').innerHTML = cad.datas_entrada
+                    var data = cad.datas_entrada
+                    geral.querySelector('#datas_entrada').innerHTML = data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     geral.querySelector('#tipo').innerHTML = cad.tipo
                     console.log('to aqui. Mas nao to indo')
                     tb.appendChild(geral)
@@ -37,25 +40,25 @@ function listar() {
             })
     })
 
+    var table = document.createElement('table')
+    var thead = document.createElement('thead')
+    var tr = document.createElement('tr')
+    var th1 = document.createElement('th')
+    var th2 = document.createElement('th')
+    var th3 = document.createElement('th')
 
     var ListarSaidas = document.querySelector('#ListarSaidas')
     ListarSaidas.addEventListener('click', () => {
+        ListarSaidas.disabled= true;
         fetch('http://localhost:5000/projeto_estacionamento/saida')
             .then(res => { return res.json() })
             .then(cadastros => {
                 cadastros.forEach(cad => {
                     
-                    document.querySelector('.antigothead').innerHTML = ''
+                     document.querySelector('.antigothead').innerHTML = ''
                     var tabela = document.querySelector('.tabela')
                     tabela.classList.remove('model')
-                    tabela.cloneNode()
-
-                    var table = document.createElement('table')
-                    var thead = document.createElement('thead')
-                    var tr = document.createElement('tr')
-                    var th1 = document.createElement('th')
-                    var th2 = document.createElement('th')
-                    var th3 = document.createElement('th')
+                    var nTabela = tabela.cloneNode()
 
                     th1.innerHTML = 'Id'
                     th2.innerHTML = 'Data Saida'
@@ -66,15 +69,16 @@ function listar() {
                     tr.appendChild(th3)
 
                     thead.appendChild(tr)
+                   
 
                     var tbody = document.createElement('tbody')
                     var tr1 = document.createElement('tr')
                     var td1 = document.createElement('td')
                     var td2 = document.createElement('td')
                     var td3 = document.createElement('td')
-
+                    var data1 = cad.datas_saida
                     td1.innerHTML = cad.id
-                    td2.innerHTML = cad.datas_saida
+                    td2.innerHTML = data1.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     td3.innerHTML = cad.hora_saida
 
                     tr1.appendChild(td1)
@@ -86,35 +90,40 @@ function listar() {
                     table.appendChild(thead)
                     table.appendChild(tbody)
 
-                    tabela.appendChild(table)
+                    nTabela.appendChild(table)
+
+                    document.querySelector('.divizinha').appendChild(nTabela)
 
                 })
             })
     })
 
+    var table = document.createElement('table')
+    var thead = document.createElement('thead')
+    var tr = document.createElement('tr')
+    var th1 = document.createElement('th')
+    var th2 = document.createElement('th')
+    var th3 = document.createElement('th')
+    var th4 = document.createElement('th')
+    var th5 = document.createElement('th')
+    var th6 = document.createElement('th')
+    var th7 = document.createElement('th')
+    var th8 = document.createElement('th')
+
+    
     var ListarCarros = document.querySelector('#ListarCarros')
     ListarCarros.addEventListener('click', () => {
+        ListarCarros.disabled= true;
         fetch('http://localhost:5000/projeto_estacionamento/View_vizua')
-            .then(res => { return res.json() })
+            .then(res => {return res.json() })
             .then(cadastros => {
                 cadastros.forEach(cad => {
-                    document.querySelector('.antigothead').innerHTML = ''
+                     document.querySelector('.antigothead').innerHTML = ''
                     var tabela = document.querySelector('.tabela')
                     tabela.classList.remove('model')
-                    tabela.cloneNode()
+                    var nTabela = tabela.cloneNode()
 
-                    var table = document.createElement('table')
-                    var thead = document.createElement('thead')
-                    var tr = document.createElement('tr')
-                    var th1 = document.createElement('th')
-                    var th2 = document.createElement('th')
-                    var th3 = document.createElement('th')
-                    var th4 = document.createElement('th')
-                    var th5 = document.createElement('th')
-                    var th6 = document.createElement('th')
-                    var th7 = document.createElement('th')
-                    var th8 = document.createElement('th')
-
+                   
                     th1.innerHTML = 'Id'
                     th2.innerHTML = 'Vaga'
                     th3.innerHTML = 'Placa'
@@ -150,11 +159,13 @@ function listar() {
                     td2.innerHTML = cad.vaga
                     td3.innerHTML = cad.placa
                     td4.innerHTML = cad.hora_entrada
-                    td5.innerHTML = cad.datas_entrada
-                    td6.innerHTML = cad.datas_saida
+                    var data1 = cad.datas_entrada
+                    td5.innerHTML = data1.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+                    var data2 =  cad.datas_saida
+                    td6.innerHTML = data2.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     td7.innerHTML = cad.hora_saida
-                    td8.innerHTML = cad.valor_total
-
+                    td8.innerHTML = cad.estacionar.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                
                     tr1.appendChild(td1)
                     tr1.appendChild(td2)
                     tr1.appendChild(td3)
@@ -169,7 +180,9 @@ function listar() {
                     table.appendChild(thead)
                     table.appendChild(tbody)
 
-                    tabela.appendChild(table)
+                    nTabela.appendChild(table)
+
+                    document.querySelector('.divizinha').appendChild(nTabela)
 
                 })
             })
@@ -180,7 +193,7 @@ function listar() {
 function cadastrar() {
     l.classList.remove('model')
     bC.classList.remove('model')
-    document.querySelector('.limpar').innerHTML = ''
+    // document.querySelector('.limpar').innerHTML = ''
     var cadastrarEntrada = document.querySelector('#cadastrarEntrada')
     cadastrarEntrada.addEventListener('click', () => {
         var nav = document.createElement('nav')

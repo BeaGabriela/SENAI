@@ -22,24 +22,34 @@
 .botoes{
     margin: 0px 10vw;
 }
-
+.botos{
+    margin: 2vh 10vw 5px 7vw; 
+    padding: 10px;;
+    
+}
 input{
     width: 10vw;
     border-radius: 10px;
     height: 3vh;
 }
 
-
-
 .model{
     display: none;
 }
 table{
     align-items: center;
-}
-tr, td{
     border: 1px solid black;
 }
+
+td, th{
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-collapse: collapse;
+
+}
+td {
+    padding: 20px;
+}
+
 
  a{
     padding: 10px;
