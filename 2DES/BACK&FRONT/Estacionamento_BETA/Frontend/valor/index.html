@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Estacionamento 'PARA'</title>
+</head>
+<body onload ='ListarValor()'>
+    <header>
+        <h1>Valores</h1>
+    </header>
+    <div class='botoes'>
+    <button><a href='../entrada/index.html'>Listar entrada</a></button>
+    <button id='btnValor'>Listar valor</button>
+    <button id="cadastrar"><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
+    <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
+    </div>
+<main>
+    <div>
+        <table class="tabela1 model">
+            <thead class="head1">
+                <th>ID</th>
+                <th>Tempo</th>
+                <th>valor</th>
+            </thead>
+            <tbody class='tabelaValor'>
+                <tr class='tabelinha model'>
+                    <td id="id"></td>
+                    <td id="tempo"></td>
+                    <td id="valor"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+<script src='./js/index.js'></script>
+</html>

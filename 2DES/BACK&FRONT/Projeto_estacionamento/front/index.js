@@ -8,7 +8,7 @@ var bC = document.querySelector('.botoesCadastro')
 bC.classList.add('model')
 
 var alte = document.querySelector('.alterarBotoes ')
-alte.classList.add('model')
+
 
 function listar() {
     l.classList.remove('model')
@@ -98,17 +98,17 @@ function listar() {
             })
     })
 
-    var table = document.createElement('table')
-    var thead = document.createElement('thead')
-    var tr = document.createElement('tr')
-    var th1 = document.createElement('th')
-    var th2 = document.createElement('th')
-    var th3 = document.createElement('th')
-    var th4 = document.createElement('th')
-    var th5 = document.createElement('th')
-    var th6 = document.createElement('th')
-    var th7 = document.createElement('th')
-    var th8 = document.createElement('th')
+    var table1 = document.createElement('table')
+    var thead1 = document.createElement('thead')
+    var tr1 = document.createElement('tr')
+    var th10 = document.createElement('th')
+    var th20 = document.createElement('th')
+    var th30 = document.createElement('th')
+    var th40 = document.createElement('th')
+    var th50 = document.createElement('th')
+    var th60 = document.createElement('th')
+    var th70 = document.createElement('th')
+    var th80 = document.createElement('th')
 
     
     var ListarCarros = document.querySelector('#ListarCarros')
@@ -124,28 +124,28 @@ function listar() {
                     var nTabela = tabela.cloneNode()
 
                    
-                    th1.innerHTML = 'Id'
-                    th2.innerHTML = 'Vaga'
-                    th3.innerHTML = 'Placa'
-                    th4.innerHTML = 'Hora_Entrada'
-                    th5.innerHTML = 'Datas_Entrada'
-                    th6.innerHTML = 'Datas_Saida'
-                    th7.innerHTML = 'Hora_Saida'
-                    th8.innerHTML = 'Valor'
+                    th10.innerHTML = 'Id'
+                    th20.innerHTML = 'Vaga'
+                    th30.innerHTML = 'Placa'
+                    th40.innerHTML = 'Hora_Entrada'
+                    th50.innerHTML = 'Datas_Entrada'
+                    th60.innerHTML = 'Datas_Saida'
+                    th70.innerHTML = 'Hora_Saida'
+                    th80.innerHTML = 'Valor'
 
-                    tr.appendChild(th1)
-                    tr.appendChild(th2)
-                    tr.appendChild(th3)
-                    tr.appendChild(th4)
-                    tr.appendChild(th5)
-                    tr.appendChild(th6)
-                    tr.appendChild(th7)
-                    tr.appendChild(th8)
+                    tr1.appendChild(th10)
+                    tr1.appendChild(th20)
+                    tr1.appendChild(th30)
+                    tr1.appendChild(th40)
+                    tr1.appendChild(th50)
+                    tr1.appendChild(th60)
+                    tr1.appendChild(th70)
+                    tr1.appendChild(th80)
 
-                    thead.appendChild(tr)
+                    thead1.appendChild(tr1)
 
                     var tbody = document.createElement('tbody')
-                    var tr1 = document.createElement('tr')
+                    var tr2 = document.createElement('tr')
                     var td1 = document.createElement('td')
                     var td2 = document.createElement('td')
                     var td3 = document.createElement('td')
@@ -166,21 +166,21 @@ function listar() {
                     td7.innerHTML = cad.hora_saida
                     td8.innerHTML = cad.estacionar.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                 
-                    tr1.appendChild(td1)
-                    tr1.appendChild(td2)
-                    tr1.appendChild(td3)
-                    tr1.appendChild(td4)
-                    tr1.appendChild(td5)
-                    tr1.appendChild(td6)
-                    tr1.appendChild(td7)
-                    tr1.appendChild(td8)
+                    tr2.appendChild(td1)
+                    tr2.appendChild(td2)
+                    tr2.appendChild(td3)
+                    tr2.appendChild(td4)
+                    tr2.appendChild(td5)
+                    tr2.appendChild(td6)
+                    tr2.appendChild(td7)
+                    tr2.appendChild(td8)
 
-                    tbody.appendChild(tr1)
+                    tbody.appendChild(tr2)
 
-                    table.appendChild(thead)
-                    table.appendChild(tbody)
+                    table1.appendChild(thead1)
+                    table1.appendChild(tbody)
 
-                    nTabela.appendChild(table)
+                    nTabela.appendChild(table1)
 
                     document.querySelector('.divizinha').appendChild(nTabela)
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Estacionamento 'PARA'</title>
+</head>
+<body onload='ListarEntrada()'>
+    <header>
+        <h1>Entradas</h1>
+    </header>
+    <div class='botoes'>
+    <button>Listar entrada</button>
+    <button id='btnValor'><a href='../valor/index.html'>Listar valor</a></button>
+    <button ><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
+    <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
+    </div>
+<main>
+    <div>
+        <table class="tabela model">
+            <thead class="antigothead">
+                <th>ID</th>
+                <th>Vaga</th>
+                <th>Placa</th>
+                <th>Hora Entrada</th>
+                <th>Data Entrada</th>
+                <th>Data Saida</th>
+                <th>Hora Saida</th>
+                <th>Tipo</th>
+            </thead>
+            <tbody class='tabelaEntrada'>
+                <tr class='geral model'>
+                    <td id="id"></td>
+                    <td id="vaga"></td>
+                    <td id="placa"></td>
+                    <td id="hora_entrada"></td>
+                    <td id="datas_entrada"></td>
+                    <td id="hora_saida"></td>
+                    <td id="datas_saida"></td>
+                    <td id="tipo"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+</main>
+</body>
+<script src='./js/index.js'></script>
+</html>
