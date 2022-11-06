@@ -3,18 +3,66 @@
     margin: 0;
     
 }
+body{
+    text-align: center;
+    background: linear-gradient( to bottom, rgb(210, 44, 44), rgb(238, 166, 31), white);
+}
+header{
+    background-color: orange;
+    height: 10vh;
+    text-align: center;  
+    color: white;
+    padding-top: 10px;  
+}
 
+.botoes{
+    background-color: rgb(179, 117, 4);
+    display: flex;
+    justify-content: space-evenly;
+}
 .model{
     display: none;
     visibility: hidden;
 }
 
+button{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: orange;
+    color:white;
+    cursor: pointer;
+}
+
+button a:hover{
+    background-color: orange;
+    color:white;
+    cursor: pointer;
+}
+
 td, th{
     border: 1px solid rgba(0, 0, 0, 0.144);
     border-collapse: collapse;
-
+    padding: 10px;
 }
+
 a{
     text-decoration: none;
     color: black;
+}
+
+main{
+    margin: 5% 42%;
+    
+}
+
+.bus{
+    display: flex;
+}
+
+.bus > input{
+    padding: 5px;
+
 }

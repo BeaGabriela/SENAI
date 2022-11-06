@@ -12,12 +12,16 @@
         <h1>Entradas</h1>
     </header>
     <div class='botoes'>
-    <button>Listar entrada</button>
-    <button id='btnValor'><a href='../valor/index.html'>Listar valor</a></button>
-    <button ><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
-    <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
+    <button><a>Listar entrada</a></button>
+    <button><a href='../valor/index.html'>Listar valor</a></button>
+    <button><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
+    <button><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
     </div>
 <main>
+    <div>
+        <input type='search' id="valor" placeholder="digite um id">
+        <button onclick="buscar()">Buscar</button>
+    </div>
     <div>
         <table class="tabela model">
             <thead class="antigothead">

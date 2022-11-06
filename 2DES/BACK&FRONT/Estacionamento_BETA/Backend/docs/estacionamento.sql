@@ -42,13 +42,17 @@ create trigger update_valor
 after insert on entrada
 for each row
 begin
-    update valor
-    set tempo = (select TimeDiff(hora_entrada, hora_saida) from entrada where id = new.id)
-    set valor_total = (select sum(tempo * 100) from valor)
-     where id= new.id;
+    insert  into  valor values
+    (3, (select sum((hora_saida-hora_entrada)*60) from entrada where id =3),'12')
     
 end //
 delimiter ;
+
+-- select hora_entrada, hora_saida,  TIMESTAMPDIFF(hour, hora_entrada, hora_saida) from entrada;
+-- SELECT id, Date_FORMAT(datas_entrada, '%d/%m/%Y') as data_entrada,  Date_FORMAT(datas_saida, '%d/%m/%Y')  as datas_saida, TIMESTAMPDIFF(HOUR, hora_entrada, hora_saida) as tempo from entrada;
+-- CAST(DATEADD(MINUTE, TIMESTAMPDIFF(MINUTE,hora_entrada, hora_saida)0) as time(0)) as jornada from entrada;
+
+-- select * timediff(hora_saida, hora_entrada) as horas from entrada;
 
 -- insert into entrada values(default, 'A0', 'abc123', curtime(), curdate(), 'C');
 -- insert into entrada values(default, 'A2', 'qwe234', curtime(), curdate(), 'C');

@@ -3,18 +3,78 @@
     margin: 0;
     
 }
+body{
+    text-align: center;
+    background-color: rgba(240, 177, 58, 0.668);
+}
+header{
+    background-color: orange;
+    height: 10vh;
+    text-align: center;  
+    color: white;
+    padding-top: 10px;  
+}
 
+.botoes{
+    background-color: rgb(179, 117, 4);
+    display: flex;
+    justify-content: space-evenly;
+}
 .model{
     display: none;
     visibility: hidden;
 }
 
+button{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: orange;
+    color:white;
+    cursor: pointer;
+}
+
+button a:hover{
+    background-color: orange;
+    color:white;
+    cursor: pointer;
+}
+
 td, th{
     border: 1px solid rgba(0, 0, 0, 0.144);
     border-collapse: collapse;
-
+    padding: 10px;
 }
+
 a{
     text-decoration: none;
     color: black;
+}
+
+main{
+    margin: 5% 32%; 
+}
+
+.form{
+    width: 35vw;
+    height: 35vh;
+    background-color:orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+input{
+    
+    width: 20vw;
+    padding: 8px;
+}
+
+.form> button{
+    width: 20vw;
+    
 }
