@@ -39,7 +39,7 @@ const cadastrarEntrada = (req, res) => {
 
 //Editando 
 const alterarEntrada = (req, res) => {
-    con.query(estacionamento.editandoEntrada(req.body), (err, result) => {
+    con.query(estacionamento.editarEntrada(req.body), (err, result) => {
         if (err == null) {
             if (result.affectedRows > 0) {
                 res.status(200).json(req.body).end();

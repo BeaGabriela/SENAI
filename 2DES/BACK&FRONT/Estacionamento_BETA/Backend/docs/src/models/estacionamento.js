@@ -3,7 +3,7 @@ const toCreateEntrada = (model, key) => {
 }
 
 const editarEntrada = (model, key) => {
-    return ` UPDATE entrada set datas_saida ='${model.datas_saida}'; UPDATE entrada set hora_saida= '${hora_saida}' where id=${model.id};`
+    return ` UPDATE entrada set datas_saida ='${model.datas_saida}', hora_saida= '${model.hora_saida}' where id=${model.id};`
 } //terminar aqui!!!!!
 
 // const createDepartamento = (model, key) => {

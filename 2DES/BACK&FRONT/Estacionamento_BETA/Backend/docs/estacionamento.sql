@@ -28,7 +28,7 @@ update entrada set datas_saida = curdate() where id=1;
 update entrada set hora_saida = '14:00' where id=1;
 
 insert into entrada values (default, 'A2', 'CDE345', '13:23:00', '2022-11-13', null, null, 'C');
-update entrada set datas_saida = '2022-11*06' where id=2;
+update entrada set datas_saida = '2022-11-06' where id=2;
 update entrada set hora_saida = '15:00' where id=2;
 
 
@@ -36,16 +36,19 @@ insert into valor values (1, 0.30, 30.00);
 insert into valor values (2, 0.20, 25.00);
 
 
--- drop trigger if exists update_valor;
--- delimiter //
--- create trigger update_valor
--- after insert on entrada
--- for each row
--- begin
--- update valor
--- set valor_total = (select valor_total = '12') from entrada where id = 1
--- end //
--- delimiter ;
+drop trigger if exists update_valor;
+delimiter //
+create trigger update_valor
+after insert on entrada
+for each row
+begin
+    update valor
+    set tempo = (select TimeDiff(hora_entrada, hora_saida) from entrada where id = new.id)
+    set valor_total = (select sum(tempo * 100) from valor)
+     where id= new.id;
+    
+end //
+delimiter ;
 
 -- insert into entrada values(default, 'A0', 'abc123', curtime(), curdate(), 'C');
 -- insert into entrada values(default, 'A2', 'qwe234', curtime(), curdate(), 'C');
