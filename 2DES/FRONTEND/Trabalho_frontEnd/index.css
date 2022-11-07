@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(0, 0%, 48%);
+    --button-color: hsl(176, 50%, 47%);
+    --button2-color: hsl(176, 72%, 28%);
+    --text-color: hsl(0, 0%, 0%);
+    --p-font: 1.1rem;
+    --p-color: white;
+}
+button {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+}
+header {
+    padding: 40px;
+    display: flex;
+
+}
+
+body {
+    background-color: rgb(249, 246, 246);
+    background-image:
+        url(../images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Commissioner';
+    font-size: 16px;
+}
+
+.atributos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 25vw 0 25vw;
+    color: var(--p-color);
+}
+
+
+.nome {
+    font-size: 30px;
+    color: var(--p-color);
+}
+
+#mastercraft {
+    display: flex;
+    padding: 20vh 0vw 0 45vw;
+}
+
+.PrimeiroModal {
+    height: 20vh;
+    width: 45vw;
+    background-color: var(--p-color);
+    margin: -3vh 1vw 0vh 26vw;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.PrimeiroModal>p,
+h1 {
+    padding: 8px;
+    color: var(--bg-color);
+}
+.buttons{
+   display: flex;
+   justify-content: space-around;
+}
+
+.buttons > button> img{
+    width: 35px;
+    height: 35px;
+    
+}
+
+.porcetagem{
+    display: flex;
+    justify-content: space-evenly;
+    height: 12vh;
+    width: 45vw;
+    background-color: var(--p-color);
+    margin: 2vh 1vw 0vh 26vw;
+    
+}
+.porcentagem >  .p1, .p2, .p3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    border-left: 1px solid var(--bg-color);
+    padding-left: 10px;
+}
+ .p1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+ }
+
+.Textnegrito{
+    font: var(--p-font);
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px;
+}
+
+nav{
+   height: 90%;
+   width: 45vw;
+   background-color: var(--p-color);
+   margin: 2vh 1vw 0vh 26vw;
+
+}
+
+.about{
+   padding: 20px 20px;
+   color: var(--bg-color);
+}
+.about > h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+ .about > p{
+    font-size: 14px;
+    margin-top: 10px;
+ }
+.display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 10px;
+}
+ .PrimeiroQuadrado{
+    height: 15vh;
+    width: 40vw;
+    margin: 10px 2.5vw;
+    border: 1px solid var(--bg-color);
+ }
+
+ .PrimeiroQuadrado>p{
+    font-size: 14px;
+    color: var(--text-color);
+    overflow-wrap: break-word;
+    padding-left: 21px;
+ }
+
+ .btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .btn > button{
+    padding: 8px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--button-color);
+    color: white;
+
+ }
+
+ a{
+    text-decoration: none;
+    color: var(--button2-color);
+ }
+
+ .Letranegrita{
+   font-weight: 600;
+   font-size: 20px;
+ }
+
+ .btn > .btnultimo{
+    background-color: var(--bg-color);
+    color: var(--p-color);
+    border-radius: 20px;
+ }
+
+
+
