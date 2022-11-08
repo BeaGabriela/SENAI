@@ -13,40 +13,31 @@
   <title>Frontend Mentor | Crowdfunding product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <p class="nome">crowdfund</p>
+
+  <img src="./images/logo.svg" alt="crowdfund">
     <div class="atributos">
       <p>About</p>
       <p>Discover</p>
       <p>Get Started</p>
     </div>
+   
   </header>
   <main>
     <img src="./images/logo-mastercraft.svg" alt='image mastercraft' id='mastercraft' />
-
     <div class="PrimeiroModal">
       <h2>Mastercraft Bamboo Monitor Riser</h2>
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="buttons">
-        <button> Back this project</button>
-        <button><img src="./images/icon-bookmark.svg">Bookmark</button>
+        <button id="btnEsquerdo"> Back this project</button>
+        <button id="marque"><img src="./images/icon-bookmark.svg">Bookmark</button>
       </div>
     </div>
 
-    <div>
+    <div class="PorcetagemOriginal">
       <div class="porcetagem">
         <div class="p1">
           <p class="Textnegrito"> $89,914 </p>
@@ -60,7 +51,8 @@
           <p class="Textnegrito"> 56 </p>
           <p>days left</p>
         </div>
-        <input type="range" name="" id="">
+      </div>
+      <progress id="progress" value="4" max="5"></progress>
       </div>
 
       <nav>
@@ -121,14 +113,18 @@
         </div>
       </nav>
 
-      <div class="modal model">
-        <div class="cadastrar model">
+
+    
+      <!-- <div class="modal model">
+        <div class="PrimeiroQuadrado model"> 
           <h3> Back this project</h3>
           <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
           <div>
-            <div>
+            <div class="DivRadioPrincipal">
+              <div class="divRadio">
               <input type="radio">
               <h4> Pledge with no reward</h4>
+            </div>
               <p>Choose to support us without a reward if you simply believe in our project. As a backer,
                 you will be signed up to receive product updates via email.</p>
             </div>
@@ -150,7 +146,7 @@
                 <input type="text" placeholder="$" value=" 25">
                 <button>Continue</button>
               </div>
-            </div>
+            </div> -->
 
 
 
@@ -242,5 +238,5 @@
 
 
 </body>
-
+<script src="./index.js"></script>
 </html>

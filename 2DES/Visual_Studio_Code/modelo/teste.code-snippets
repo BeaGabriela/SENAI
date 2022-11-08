@@ -1,0 +1,117 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Console Log": { //nome para ele
+		"scope": "javascript, typescript", //linguagem relacionada
+		"prefix": "log", //Nome para chamr elas
+		"body": [
+			"console.log('$1');" //conteudo que vai ser mostrado na tela.
+		],
+		"description": "Criação de um console log" //descricao que vai mostrar na tela.
+	},
+	"Arrow function ": {
+		"scope": "javascript, typescript",
+		"prefix": "arrow",
+		"body": [
+			"const $1 = ($2,$3) => {",
+			"\t$console.log(`${$2}`);",
+			"};",
+		],
+		"description": "Cria uma arrow function",
+	},
+	"Fetch": {
+		"scope": "javascript, typescript",
+		"prefix": "!fetch",
+		"body": [
+			"var options = {",
+			"\t'method':'$1',",
+			"\t'headers':{",
+			"\t\t'content-type':'application/json'",
+			"\t},",
+			"\t'body': JSON.stringify($2)",
+			"}",
+			"fetch($3, options)",
+			".then(resp => {return resp.json()})",
+			".then(data => {console.log(data);});"
+		],
+		"description": "Cria um fetch"
+	},
+
+	"Create NodeJS" : {
+		"scope": "javascript, typescript",
+		"prefix": "!crud",
+		"body": [
+			"const $0 = require('');",
+			"const $2 = require('')",
+			"const CREATE = (req, res) => {",
+				"\t$2.query($3(req.body), (err,result) =>{",
+					"\tif(err == null){",
+					"\t\t res.status(201).end();",
+					"\t }else{",
+					"\t if(err.sqlState == 23000)",
+					"\t\t res.status(406).json(err).end();",
+					"\t else ",
+					"\t\tres.status(500).json(err).end();",
+					"\t}",
+				"\t});",
+			"}",
+			"const GET = (req, res) => {",
+				"\t$2.query($5.$6(req.params), (err, result) => {",
+					"\t\t if(err == null)",
+						"\t\t\t if(result.lenght > 0)",
+						"\t\t\t\t res.json(result).end()",
+					"\t\t else",
+						"\t\t\t res.status(404).end()",
+					"\t else",
+						"\t\t res.status(500).end();",
+			"\t\t });",
+			"\t}",
+
+			"const UPDATE = (req, res) => {",
+				"\t $2.query($5.$7(req.body), (err, result) => {",
+					"\t\t if (err == null)",
+					"\t\t\t if (result.affectedRows > 0) ",
+					"\t\t\t\t  res.status(200).end(); ",
+					"\t\t\t else ",
+						"\t\t\t\tres.status(404).end();",
+					"\t\telse",
+					"\t\t\t  res.status(500).json(err).end();",
+				"\t\t });",
+			"\t }",
+
+			"const DELETE = (req, res) => {",
+				"\t $2.query($8.$9(req.params), (err, result) => {",
+					"\t\t  if (err == null) ",
+					"\t\t\t if (result.affectedRows > 0)",
+						"\t\t\t res.status(204).end(); ",
+					"\t\t else",
+					"\t\t\t  res.status(404).end(); ",
+					"\telse",
+						"\t\t res.status(400).json(err).end(); ",
+				"\t });",
+			"}",
+
+			"module.exports = { ",
+			"\t CREATE,",
+			"\t GET,",
+			"\t UPDATE,",
+			"\t DELETE,",
+			"\t};"
+		]
+	}
+}
+

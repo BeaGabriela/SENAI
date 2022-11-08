@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 :root {
     --bg-color: hsl(0, 0%, 48%);
     --button-color: hsl(176, 50%, 47%);
@@ -11,17 +20,11 @@
     --text-color: hsl(0, 0%, 0%);
     --p-font: 1.1rem;
     --p-color: white;
-}
-button {
-    padding: 8px;
-    border-radius: 20px;
-    border: none;
-}
-header {
-    padding: 40px;
-    display: flex;
+    --p-weight: 700;
+
 
 }
+
 
 body {
     background-color: rgb(249, 246, 246);
@@ -37,19 +40,35 @@ body {
     font-size: 16px;
 }
 
+header {
+    padding: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .atributos {
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    padding: 10px 25vw 0 25vw;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
     color: var(--p-color);
+    margin-left: 35vw;
+    font-weight: 400;
+
 }
 
-
-.nome {
-    font-size: 30px;
-    color: var(--p-color);
+button {
+    padding: 5px;
+    height: 4vh;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
 }
+
 
 #mastercraft {
     display: flex;
@@ -63,34 +82,80 @@ body {
     margin: -3vh 1vw 0vh 26vw;
     padding-top: 40px;
     text-align: center;
+    border-radius: 10px;
 }
 
-.PrimeiroModal>p,
-h1 {
+.PrimeiroModal>p {
     padding: 8px;
     color: var(--bg-color);
-}
-.buttons{
-   display: flex;
-   justify-content: space-around;
+    margin-bottom: 18px;
 }
 
-.buttons > button> img{
-    width: 35px;
-    height: 35px;
-    
-}
-
-.porcetagem{
+.buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+#btnEsquerdo {
+    background-color: var(--button-color);
+    color: white;
+}
+
+#marque {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    background-color: var(--p-color);
+    gap: 8px;
+}
+
+#marque>img {
+    width: 32px;
+    height: 32px;
+
+}
+
+.PorcetagemOriginal {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--p-color);
     height: 12vh;
     width: 45vw;
-    background-color: var(--p-color);
     margin: 2vh 1vw 0vh 26vw;
-    
 }
-.porcentagem >  .p1, .p2, .p3{
+
+.porcetagem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+#progress{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 90%;
+    margin-left: 35px;
+    
+
+}
+
+#progress::-webkit-progress-value {
+    border-radius: 20px;
+    background:var(--button-color);
+}
+
+
+#progress::-webkit-progress-bar{
+    background-color: #f3f3f3;
+    border-radius: 20px;
+}
+
+
+.porcentagem>.p1,
+.p2,
+.p3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,43 +163,47 @@ h1 {
     border-left: 1px solid var(--bg-color);
     padding-left: 10px;
 }
- .p1{
+
+.p1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
- }
+}
 
-.Textnegrito{
+.Textnegrito {
     font: var(--p-font);
     font-weight: 600;
     text-align: center;
     font-size: 20px;
 }
 
-nav{
-   height: 90%;
-   width: 45vw;
-   background-color: var(--p-color);
-   margin: 2vh 1vw 0vh 26vw;
+nav {
+    height: 90%;
+    width: 45vw;
+    background-color: var(--p-color);
+    margin: 2vh 1vw 0vh 26vw;
 
 }
 
-.about{
-   padding: 20px 20px;
-   color: var(--bg-color);
+.about {
+    padding: 20px 20px;
+    color: var(--bg-color);
 }
-.about > h4{
+
+.about>h4 {
     font-size: 16px;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 10px;
 }
- .about > p{
+
+.about>p {
     font-size: 14px;
     margin-top: 10px;
- }
-.display{
+}
+
+.display {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -142,26 +211,28 @@ nav{
     padding: 8px;
     margin: 10px;
 }
- .PrimeiroQuadrado{
+
+.PrimeiroQuadrado {
     height: 15vh;
     width: 40vw;
     margin: 10px 2.5vw;
     border: 1px solid var(--bg-color);
- }
+}
 
- .PrimeiroQuadrado>p{
+.PrimeiroQuadrado>p {
     font-size: 14px;
     color: var(--text-color);
     overflow-wrap: break-word;
     padding-left: 21px;
- }
+}
 
- .btn{
+.btn {
     display: flex;
     justify-content: space-around;
     align-items: center;
- }
- .btn > button{
+}
+
+.btn>button {
     padding: 8px;
     margin: 10px 10px;
     border-radius: 20px;
@@ -169,23 +240,64 @@ nav{
     background-color: var(--button-color);
     color: white;
 
- }
+}
 
- a{
+a {
     text-decoration: none;
     color: var(--button2-color);
- }
+}
 
- .Letranegrita{
-   font-weight: 600;
-   font-size: 20px;
- }
+.Letranegrita {
+    font-weight: 600;
+    font-size: 20px;
+}
 
- .btn > .btnultimo{
+.btn>.btnultimo {
     background-color: var(--bg-color);
     color: var(--p-color);
     border-radius: 20px;
- }
+}
 
 
 
+.divRadio {
+    display: flex;
+    flex-direction: row;
+}
+
+.DivRadioPrincipal {
+    border: 1px solid black;
+    height: 15vh;
+    width: 45%;
+    padding: 20px;
+
+}
+
+/* .modal {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(12, 135, 242);
+   
+    gap: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+} */
+
+
+/* 
+.cadastrar{
+    height:60vh;
+    width:40vw;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 15vh;
+    left: 30vw;
+} */
+
+/* .model{
+    display: none;
+    visibility: hidden;
+ } */
