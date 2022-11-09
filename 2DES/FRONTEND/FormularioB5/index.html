@@ -21,11 +21,11 @@
             <div class="col-12">
                 <div class="row-md-4">
                     <label for="validationNome" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="validationNome" value="Vera" required>
+                    <input type="text" class="form-control" id="validationNome" required>
                 </div>
                 <div class="row-md-4">
                     <label for="validationCPF" class="form-label">CPF:</label>
-                    <input type="number" class="form-control" id="validationCPF" >
+                    <input type="text" class="form-control" id="validationCPF" onblur='validar()' >
                 </div>
                 <div class="row-md-4">
                     <label for="validationDDD" class="form-label">DDD:</label>
@@ -64,16 +64,12 @@
                     <input type="text" class="form-control" id="validationEstado" >
                 </div>
                 <span class="d-flex flex-row justify-content-between mt-4">
-                    <!-- <div class="col-6">
-                    </div>
-                    <div class="col-6">
-                    </div> -->
-                        <input class="btn btn-primary" value="Salvar Cadastros" type="submit" id="saveCad" />
+                        <input id="saveCad" class="btn btn-primary" value="Salvar Cadastros" type="button"   />
                         <input class="btn btn-danger" value="Cancelar" type="submit" id="cancelCad" />
                 </span>
             </div>
         </div>
     </div>
 </body>
-
+<script src='./js/script.js'></script>
 </html>
