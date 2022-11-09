@@ -1,0 +1,51 @@
+/* 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 0.2em;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(12, 196, 241);
+
+}
+
+section {
+    width: 70%;
+    min-width: 380px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 40px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#titleForm{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#cancelCad,
+#saveCad {
+    margin: 20px 0 0;
+    border: none;
+    width: 100%;
+    min-width: 120px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 2px;
+} */
+
+.row {
+    width: 50%;
+    border-radius: 10px;
+}

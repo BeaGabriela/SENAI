@@ -1,0 +1,25 @@
+drop trigger if exists update_valor;
+delimiter //
+create trigger update_valor
+after update on entrada
+for each row
+begin
+	DECLARE tempo INTEGER;
+    SET tempo := (SELECT ROUND((TIME_TO_SEC(TIMEDIFF(NEW.hora_saida, (SELECT hora_entrada FROM entrada WHERE id = NEW.id)))/60), 0));
+	INSERT INTO valor VALUES (NEW.id, tempo, tempo*0.5);
+end //
+delimiter ;
+
+drop trigger if exists update_valor;
+delimiter //
+create trigger update_valor
+after update on entrada
+for each row
+begin
+	DECLARE tempo INTEGER;
+    SET tempo := NEW.id;
+	INSERT INTO valor VALUES (NEW.id, tempo, tempo*0.5);
+end //
+delimiter ;
+
+UPDATE entrada SET datas_saida = '2022-11-09', hora_saida = '08:34:45' WHERE id = 3

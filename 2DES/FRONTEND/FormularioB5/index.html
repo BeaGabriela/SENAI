@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Formulário</title>
+</head>
+<style>
+    body{
+        background-color: rgb(12, 196, 241);
+    }
+</style>
+<body>
+    <div class="container-fluid d-flex align-items-center justify-content-center">
+        <div class="row d-flex bg-white m-5 p-3">
+            <div class="col-12">
+                <div class="row-md-4">
+                    <label for="validationNome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="validationNome" value="Vera" required>
+                </div>
+                <div class="row-md-4">
+                    <label for="validationCPF" class="form-label">CPF:</label>
+                    <input type="number" class="form-control" id="validationCPF" >
+                </div>
+                <div class="row-md-4">
+                    <label for="validationDDD" class="form-label">DDD:</label>
+                    <input type="number" max="100" min="1" id="validationDDD" class="form-control w-auto" >
+                </div>
+                <div class="row-md-4">
+                    <label for="validationTelefone" class="form-label">Número de Telefone:</label>
+                    <input type="number" class="form-control" id="validationTelefone" >
+                </div>
+                <div class="row-md-6">
+                    <label for="validationTipo" class="form-label">Tipo:</label>
+                    <input type="text" class="form-control" id="validationTipo" >
+                </div>
+                <div class="row-md-6">
+                    <label for="validationLog" class="form-label">Logradouro:</label>
+                    <input type="text" class="form-control" id="validationLog">
+                </div>
+                <div class="row-md-6">
+                    <label for="validationBairro" class="form-label">Bairro:</label>
+                    <input type="text" class="form-control" id="validationBairro" >
+                </div>
+                <div class="row-md-4">
+                    <label for="validationNumeroCasa" class="form-label">N°:</label>
+                    <input type="number" class="form-control w-25" id="validationNumeroCasa" value="" >
+                </div>
+                <div class="row-md-4">
+                    <label for="validationCEP" class="form-label">CEP:</label>
+                    <input type="number" class="form-control" id="validationCEP" value="" >
+                </div>
+                <div class="row-md-6">
+                    <label for="validationCidade" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="validationCidade" >
+                </div>
+                <div class="row-md-3">
+                    <label for="validationEstado" class="form-label">Estado:</label>
+                    <input type="text" class="form-control" id="validationEstado" >
+                </div>
+                <span class="d-flex flex-row justify-content-between mt-4">
+                    <!-- <div class="col-6">
+                    </div>
+                    <div class="col-6">
+                    </div> -->
+                        <input class="btn btn-primary" value="Salvar Cadastros" type="submit" id="saveCad" />
+                        <input class="btn btn-danger" value="Cancelar" type="submit" id="cancelCad" />
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

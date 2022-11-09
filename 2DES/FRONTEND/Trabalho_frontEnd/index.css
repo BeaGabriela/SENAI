@@ -137,8 +137,6 @@ button {
     height: 20px;
     width: 90%;
     margin-left: 35px;
-    
-
 }
 
 #progress::-webkit-progress-value {
@@ -179,7 +177,7 @@ button {
 }
 
 nav {
-    height: 90%;
+    height: 55%;
     width: 45vw;
     background-color: var(--p-color);
     margin: 2vh 1vw 0vh 26vw;
@@ -191,16 +189,16 @@ nav {
     color: var(--bg-color);
 }
 
-.about>h4 {
+.about > h4 {
     font-size: 16px;
     font-weight: 700;
     color: var(--text-color);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .about>p {
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .display {
@@ -208,22 +206,22 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
+    padding: 20px;
     margin: 10px;
 }
 
 .PrimeiroQuadrado {
-    height: 15vh;
+    height: 18vh;
     width: 40vw;
     margin: 10px 2.5vw;
-    border: 1px solid var(--bg-color);
+    border: 1px solid #f3f3f3;
 }
 
 .PrimeiroQuadrado>p {
     font-size: 14px;
     color: var(--text-color);
     overflow-wrap: break-word;
-    padding-left: 21px;
+    padding-left: 23px;
 }
 
 .btn {
@@ -239,7 +237,6 @@ nav {
     border: none;
     background-color: var(--button-color);
     color: white;
-
 }
 
 a {
@@ -248,7 +245,7 @@ a {
 }
 
 .Letranegrita {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
 }
 

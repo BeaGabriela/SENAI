@@ -52,6 +52,19 @@ const alterarEntrada = (req, res) => {
 
     });
 }
+
+const buscarId = (req, res) => {
+    con.query(estacionamento.BuscarId(req.params), (err, result) => {
+        if (err == null)
+            if (result.length > 0)
+                res.json(result).end();
+            else
+                res.status(404).end();
+        else
+            res.status(500).end();
+    })
+}
+
 // //Cadastradno Departamentos
 // const cadastrarDepartament = (req, res) => {
 //     con.query(solicita.createDepartamento(req.body), (err, result) => {
@@ -93,5 +106,6 @@ module.exports = {
     listarentradas,
     listarvalores,
     cadastrarEntrada,
-    alterarEntrada
+    alterarEntrada,
+    buscarId
 }

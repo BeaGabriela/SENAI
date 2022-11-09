@@ -39,12 +39,11 @@ insert into valor values (2, 0.20, 25.00);
 drop trigger if exists update_valor;
 delimiter //
 create trigger update_valor
-after insert on entrada
+after update on entrada
 for each row
 begin
     insert  into  valor values
     (3, (select sum((hora_saida-hora_entrada)*60) from entrada where id =3),'12')
-    
 end //
 delimiter ;
 

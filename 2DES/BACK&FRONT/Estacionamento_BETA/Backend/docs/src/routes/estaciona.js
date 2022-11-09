@@ -12,6 +12,7 @@ const estaciona = require('../controllers/controle.js')
 // router.get('/solicitacoes/Solicitacoes/:Data_sol', Solicita.listarSoliciDATA)
 router.get('/estacionamento/entrada', estaciona.listarentradas)
 router.get('/estacionamento/valor', estaciona.listarvalores)
+router.get('/estacionamento/entrada/:id', estaciona.buscarId)
 // router.delete('/solicitacoes/Departamentos/:Cod_Depto', Solicita.excluirDepartamentos)
 // router.delete('/solicitacoes/Produtos/:Cod_Produto', Solicita.ExcluirProd)
 

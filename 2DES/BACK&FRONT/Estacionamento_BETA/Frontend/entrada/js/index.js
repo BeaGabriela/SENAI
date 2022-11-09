@@ -28,20 +28,24 @@ function ListarEntrada() {
         })
 }
 
-function buscar() {
+function buscar() { 
+    var valor = document.querySelector('#valor')
+    var v = valor.value
+
+    fetch('http://localhost:3000/estacionamento/entrada/')
+        .then(res => { return res.json() })
+        .then(esta => {
+            esta.forEach(e => {
+    
     var tabela = document.querySelector('.geral')
     var tbdyEntrada = document.querySelector('.tabelaEntrada')
     var tabelaGeral = document.querySelector('.tabela')
     var thead = document.querySelector('.antigothead')
     tbdyEntrada.innerHTML = ''
-    var valor = document.querySelector('#valor')
-    var v = valor.value
    
    
-    fetch('http://localhost:3000/estacionamento/entrada')
-        .then(res => { return res.json() })
-        .then(esta => {
-            esta.forEach(e => {
+   
+    
                if(v == e.id || v.includes(e.vaga)){
                     tabelaGeral.classList.remove('model')
                     tabela.classList.remove('model')

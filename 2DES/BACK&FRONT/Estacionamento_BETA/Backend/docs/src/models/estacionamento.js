@@ -4,11 +4,8 @@ const toCreateEntrada = (model, key) => {
 
 const editarEntrada = (model, key) => {
     return ` UPDATE entrada set datas_saida ='${model.datas_saida}', hora_saida= '${model.hora_saida}' where id=${model.id};`
-} //terminar aqui!!!!!
+} 
 
-// const createDepartamento = (model, key) => {
-//     return `INSERT INTO Departamentos VALUES ('${model.Cod_Depto}', '${model.Nome_Depto}')`
-// }
 
 const readAll = () => {
     return 'SELECT * FROM entrada'
@@ -30,9 +27,9 @@ const readvalores = () => {
 //     return `SELECT * FROM Solicitacoes WHERE Data_sol like '%${model.Data_sol}%'`;
 // }
 
-// const totalSoli = (model) => {
-//     return `SELECT COUNT(Num_Sol), Cod_Func FROM Solicitacoes where Cod_Func like '%${model.Cod_Func}%'  GROUP By Cod_Func`;
-// }
+const BuscarId = (model) => {
+    return `SELECT * from entrada where id='${model.id}'`;
+}
 
 // const toDelete = (model) => {
 //     return `DELETE FROM Departamentos WHERE Cod_Depto = '${model.Cod_Depto}'`;
@@ -46,5 +43,6 @@ module.exports = {
     readAll,
     readvalores,
     toCreateEntrada,
-    editarEntrada
+    editarEntrada,
+    BuscarId
 }

@@ -13,17 +13,23 @@
     <header>
         <h1>Home</h1>
     </header>
-    <div class='botoes'>
+    <!-- <div class='botoes'> -->
+    <!-- <button><a href="../Home/index.html">Home</a></button>
         <button><a href='../entrada/index.html'>Listar entrada</a></button>
         <button id='btnValor'>Listar valor</button>
         <button id="cadastrar"><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
-        <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
-        <button><a href="../Home/index.html">Home</a></button>
-    </div>
+        <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button> -->
+
+    <!-- </div> -->
     <main>
-        <h1>Bem vindo!</h1>
-        <button onclick="mais()">Clique aqui para informações adicoinais: </button>
-       
+        <div class="login">
+            <h1>Bem vindo!</h1>
+            <input type="text" id="inputNome" placeholder="Login">
+            <input type="text" id="inputSenha" placeholder="senha">
+            <input type="button" value="Login" id="btn">
+            <p id="incorreto"></p>
+        </div>
+
 
     </main>
 </body>

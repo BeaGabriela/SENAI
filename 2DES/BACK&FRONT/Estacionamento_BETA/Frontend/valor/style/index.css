@@ -5,7 +5,9 @@
 }
 body{
     text-align: center;
-    background: linear-gradient( to bottom, rgb(210, 44, 44), rgb(238, 166, 31), white);
+    background: linear-gradient( rgb(210, 44, 44), rgb(238, 166, 31), white);
+    background-repeat: no-repeat;
+    height: 100%;
 }
 header{
     background-color: orange;
