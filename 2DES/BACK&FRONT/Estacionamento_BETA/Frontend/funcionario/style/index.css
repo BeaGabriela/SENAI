@@ -35,13 +35,13 @@ button{
 }
 
 button:hover{
-    background-color: orange;
+    background-color: rgb(238, 83, 111);
     color:white;
     cursor: pointer;
 }
 
 button a:hover{
-    background-color: orange;
+    background-color: rgb(238, 83, 111);
     color:white;
     cursor: pointer;
 }

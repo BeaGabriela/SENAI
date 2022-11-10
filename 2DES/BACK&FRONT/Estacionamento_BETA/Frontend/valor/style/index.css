@@ -3,14 +3,15 @@
     margin: 0;
     
 }
+
 body{
     text-align: center;
-    background: linear-gradient( rgb(210, 44, 44), rgb(238, 166, 31), white);
+    background: linear-gradient( rgb(247, 113, 98),rgb(250, 120, 106), white);
     background-repeat: no-repeat;
     height: 100%;
 }
 header{
-    background-color: orange;
+    background-color :salmon;
     height: 10vh;
     text-align: center;  
     color: white;
@@ -18,9 +19,10 @@ header{
 }
 
 .botoes{
-    background-color: rgb(179, 117, 4);
+    background-color: rgb(246, 115, 85);
     display: flex;
     justify-content: space-evenly;
+    box-shadow: 1px 1px 1px 1px rgba(246, 110, 110, 0.411);
 }
 .model{
     display: none;
@@ -33,15 +35,21 @@ button{
 }
 
 button:hover{
-    background-color: orange;
+    background-color: rgb(238, 83, 111);
     color:white;
     cursor: pointer;
 }
 
 button a:hover{
-    background-color: orange;
+    background-color: rgb(238, 83, 111);
     color:white;
     cursor: pointer;
+}
+
+.tabela_principal{
+    display: flex;
+    justify-content: center;
+    margin: 20px 15px 0 0px;
 }
 
 td, th{
@@ -56,15 +64,12 @@ a{
 }
 
 main{
-    margin: 5% 42%;
+    margin: 5% 25%;
+    
     
 }
 
-.bus{
-    display: flex;
-}
-
-.bus > input{
-    padding: 5px;
-
+input{
+    padding: 8px;
+    border-radius: 10px;
 }
