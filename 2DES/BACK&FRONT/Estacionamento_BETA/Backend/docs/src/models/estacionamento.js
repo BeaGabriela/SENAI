@@ -15,34 +15,24 @@ const readvalores = () => {
     return 'SELECT * FROM valor'
 }
 
-// const readProdNome = (model) => {
-//     return `SELECT * FROM Prod_Dep WHERE Nome_produto like '%${model.Nome_produto}%'`;
-// }
+const readFunc = () => {
+    return 'SELECT * FROM funcionarios'
+}
 
-// const readDepartamentos = () => {
-//     return 'SELECT * FROM Departamentos'
-// }
-
-// const readSoliData = (model) => {
-//     return `SELECT * FROM Solicitacoes WHERE Data_sol like '%${model.Data_sol}%'`;
-// }
+const CreateFunc = (model, key) => {
+    return `insert into funcionarios values('${model.login}', '${model.password}', '${model.nome}' );`
+}
 
 const BuscarId = (model) => {
     return `SELECT * from entrada where id='${model.id}'`;
 }
-
-// const toDelete = (model) => {
-//     return `DELETE FROM Departamentos WHERE Cod_Depto = '${model.Cod_Depto}'`;
-// }
-
-// const deletePro = (model) => {
-//     return `DELETE FROM Produtos WHERE Cod_Produto = '${model.Cod_Produto}'`;
-// }
 
 module.exports = {
     readAll,
     readvalores,
     toCreateEntrada,
     editarEntrada,
-    BuscarId
+    BuscarId,
+    readFunc,
+    CreateFunc
 }

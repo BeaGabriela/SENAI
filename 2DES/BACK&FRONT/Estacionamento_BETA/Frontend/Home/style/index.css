@@ -5,7 +5,7 @@
 
  body {
      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-     background-color: rgb(200, 109, 12);
+     background-color: rgb(70, 70, 70);
      color: rgb(0, 0, 0);
  }
 
@@ -13,92 +13,67 @@
      text-align: center;
      margin: 30px 20px 0 0;
      font-size: 5rem;
-     
+     color: salmon;
+     box-shadow: 1px 1px 4px 1px rgb(1, 1, 1);
+
  }
 
  .login {
      display: flex;
      flex-direction: column;
      align-items: center;
-     width: 30vw;
-     height: 30vh;
+     justify-content: center;
+     width: 15vw;
+     height: 53vh;
      padding: 20px;
-     background-color: rgb(242, 138, 63);
+     background-color: #E6624D;
      gap: 20px;
-     box-shadow: 1px 4px 4px black;
+     box-shadow: 4px 4px 4px 4px black;
  }
 
  .login>input {
      padding: 10px;
-     width: 20vw;
+     width: 10vw;
  }
 
  main {
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      align-items: center;
-     margin: 10%;
+     justify-content: center;
+     margin: 5% 0px 0 30px;
+ }
+
+ .img {
+     width: 37%;
+     height: 50vh;
+     background-color: rgb(87, 86, 85);
+     padding: 7vh 7px 0px 55px;
+     box-shadow: 4px 4px 4px 4px rgb(247, 126, 126);
+
  }
 
  #btn {
-    margin: 10px;
-    background-color: rgb(246, 111, 0);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-weight: 600;
+     margin: 10px;
+     background-color: #E6624D;
+     color: white;
+     border: none;
+     padding: 10px;
+     font-weight: 600;
+     box-shadow: 1px 1px 1px 1px black;
+
  }
 
- /* body{
-    text-align: center;
-    background: linear-gradient( rgb(210, 44, 44), rgb(238, 166, 31), white);
-    background-repeat: no-repeat;
-    height: 100%;
-}
+ .coluna {
+     width: 6%;
+     height: 57.1vh;
+     background-color: rgb(255, 255, 255);
+     box-shadow: 4px 4px 4px 4px black;
+ }
 
-header{
-    background-color: orange;
-    height: 10vh;
-    text-align: center;  
-    color: white;
-    padding-top: 10px;  
-}
+ #btn:hover{
+    background-color: #f6624b;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
 
-.botoes{
-    background-color: rgb(179, 117, 4);
-    display: flex;
-    justify-content: space-evenly;
-}
-.model{
-    display: none;
-    visibility: hidden;
-}
-
-button{
-    padding: 10px;
-    border-radius: 10px;
-}
-
-button:hover{
-    background-color: orange;
-    color:white;
-    cursor: pointer;
-}
-
-button a:hover{
-    background-color: orange;
-    color:white;
-    cursor: pointer;
-}
-
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-main{
-    margin: 5% 42%;
-    
-} */
- */
+ }

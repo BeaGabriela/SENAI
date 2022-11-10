@@ -7,27 +7,26 @@
     <link rel="stylesheet" href="./style/index.css">
     <title>Estacionamento 'PARA'</title>
 </head>
-<body onload ='CadastrarSaida()'>
+<body onload="carregando()">
     <header>
-        <h1>Cadastrar Saida de veiculos</h1>
+        <h1>Cadastrar Funcionario</h1>
     </header>
     <div class='botoes'>
     <button><a href='../entrada/index.html'>Listar entrada</a></button>
-    <button><a href='..valor/index.html'>Listar valor</a></button>
-    <button><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
+    <button><a href="../valor/index.html">Listar valor</a></button>
+    <button><a href="../cadastrarEntrada/index.html"></a>Cadastrar uma entrada</button>
+    <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
     <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
     <button><a href="../funcionario/index.html">Listar funcionario</a></button>
-    <button>Cadastrar uma saida</button>
-    
     </div>
 <main>
-    <p>Por favor, nos informe os dados da saida:</p>
-<div class="form">
-    <input type="text" id="id" placeholder="Id">
-    <input type="text" placeholder="Datas_saida" id="datas_saida">
-    <input type="text" placeholder="Hora_saida" id="hora_saida">
+    <p>Para cadastro de Funcionario, por favor, digite as seguintes informações: </p>
+   <div class="form">
+    <input type="text" placeholder="Login" id="Login">
+    <input type="text" placeholder="password" id="password">
+    <input type="text" placeholder="nome" id="nome">
     <button id="cadastrar">Cadastrar</button>
-</div>
+   </div>
 </main>
 </body>
 <script src='./js/index.js'></script>

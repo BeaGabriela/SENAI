@@ -2,6 +2,12 @@ drop database if exists estacionamento;
 create database estacionamento charset=utf8 collate utf8_general_ci;
 use estacionamento;
 
+create table funcionarios (
+    login varchar(30) not null primary key,
+    password varchar(30) not null,
+    nome varchar(20) not null
+);
+
 create table entrada (
     id integer not null auto_increment  primary key,
     vaga varchar(5) not null,
@@ -31,6 +37,8 @@ insert into entrada values (default, 'A2', 'CDE345', '13:23:00', '2022-11-13', n
 update entrada set datas_saida = '2022-11-06' where id=2;
 update entrada set hora_saida = '15:00' where id=2;
 
+insert into funcionarios values ('user12','teste12', 'Marcos');
+insert into funcionarios values('u5er','testeteste','Caroline');
 
 insert into valor values (1, 0.30, 30.00);
 insert into valor values (2, 0.20, 25.00);
@@ -42,8 +50,9 @@ create trigger update_valor
 after update on entrada
 for each row
 begin
-    insert  into  valor values
-    (3, (select sum((hora_saida-hora_entrada)*60) from entrada where id =3),'12')
+	DECLARE tempo INTEGER;
+    SET tempo := (SELECT ROUND((TIME_TO_SEC(TIMEDIFF(NEW.hora_saida, (SELECT hora_entrada FROM entrada WHERE id = NEW.id)))/60), 0));
+	INSERT INTO valor VALUES (NEW.id, tempo, tempo*0.5);
 end //
 delimiter ;
 

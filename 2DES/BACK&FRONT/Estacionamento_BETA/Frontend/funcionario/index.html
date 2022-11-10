@@ -7,46 +7,35 @@
     <link rel="stylesheet" href="./style/index.css">
     <title>Estacionamento 'PARA'</title>
 </head>
-<body onload='ListarEntrada()'>
+<body onload='ListarFunc()'>
     <header>
-        <h1>Entradas</h1>
+        <h1>Funcionários</h1>
     </header>
     <div class='botoes'>
-    <button><a>Listar entrada</a></button>
+    <button><a>Funcionarios</a></button>
     <button><a href='../valor/index.html'>Listar valor</a></button>
     <button><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
     <button><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
     <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
-    <button><a href="../funcionario/index.html">Listar funcionario</a></button>
 
     </div>
 <main>
     <div>
-        <input type='search' id="valor" placeholder="digite um id">
+        <input type='search' id="valor" placeholder="digite um login">
         <button onclick="buscar()">Buscar</button>
     </div>
-    <div>
+    <div class="tabela_principal">
         <table class="tabela model">
             <thead class="antigothead">
-                <th>ID</th>
-                <th>Vaga</th>
-                <th>Placa</th>
-                <th>Hora Entrada</th>
-                <th>Data Entrada</th>
-                <th>Data Saida</th>
-                <th>Hora Saida</th>
-                <th>Tipo</th>
+                <th>Login</th>
+                <th>password</th>
+                <th>Nome</th>
             </thead>
             <tbody class='tabelaEntrada'>
                 <tr class='geral model'>
-                    <td id="id"></td>
-                    <td id="vaga"></td>
-                    <td id="placa"></td>
-                    <td id="hora_entrada"></td>
-                    <td id="datas_entrada"></td>
-                    <td id="datas_saida"></td>
-                    <td id="hora_saida"></td>
-                    <td id="tipo"></td>
+                    <td id="Login"></td>
+                    <td id="password"></td>
+                    <td id="nome"></td>
                 </tr>
             </tbody>
         </table>
