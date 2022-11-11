@@ -11,10 +11,11 @@
     <title>Formulário</title>
 </head>
 <style>
-    body{
+    body {
         background-color: rgb(12, 196, 241);
     }
 </style>
+
 <body>
     <div class="container-fluid d-flex align-items-center justify-content-center">
         <div class="row d-flex bg-white m-5 p-3">
@@ -25,19 +26,19 @@
                 </div>
                 <div class="row-md-4">
                     <label for="validationCPF" class="form-label">CPF:</label>
-                    <input type="text" class="form-control" id="validationCPF" onblur='validar()' >
+                    <input type="text" class="form-control" id="validationCPF" onblur='validar()'>
                 </div>
                 <div class="row-md-4">
                     <label for="validationDDD" class="form-label">DDD:</label>
-                    <input type="number" max="100" min="1" id="validationDDD" class="form-control w-auto" >
+                    <input type="number" max="100" min="1" id="validationDDD" class="form-control w-auto">
                 </div>
                 <div class="row-md-4">
                     <label for="validationTelefone" class="form-label">Número de Telefone:</label>
-                    <input type="number" class="form-control" id="validationTelefone" >
+                    <input type="number" class="form-control" id="validationTelefone">
                 </div>
                 <div class="row-md-6">
                     <label for="validationTipo" class="form-label">Tipo:</label>
-                    <input type="text" class="form-control" id="validationTipo" >
+                    <input type="text" class="form-control" id="validationTipo">
                 </div>
                 <div class="row-md-6">
                     <label for="validationLog" class="form-label">Logradouro:</label>
@@ -45,31 +46,32 @@
                 </div>
                 <div class="row-md-6">
                     <label for="validationBairro" class="form-label">Bairro:</label>
-                    <input type="text" class="form-control" id="validationBairro" >
+                    <input type="text" class="form-control" id="validationBairro">
                 </div>
                 <div class="row-md-4">
                     <label for="validationNumeroCasa" class="form-label">N°:</label>
-                    <input type="number" class="form-control w-25" id="validationNumeroCasa" value="" >
+                    <input type="number" class="form-control w-25" id="validationNumeroCasa" value="">
                 </div>
                 <div class="row-md-4">
                     <label for="validationCEP" class="form-label">CEP:</label>
-                    <input type="number" class="form-control" id="validationCEP" value="" >
+                    <input type="number" class="form-control" id="validationCEP" value="">
                 </div>
                 <div class="row-md-6">
                     <label for="validationCidade" class="form-label">Cidade:</label>
-                    <input type="text" class="form-control" id="validationCidade" >
+                    <input type="text" class="form-control" id="validationCidade">
                 </div>
                 <div class="row-md-3">
                     <label for="validationEstado" class="form-label">Estado:</label>
-                    <input type="text" class="form-control" id="validationEstado" >
+                    <input type="text" class="form-control" id="validationEstado">
                 </div>
                 <span class="d-flex flex-row justify-content-between mt-4">
-                        <input id="saveCad" class="btn btn-primary" value="Salvar Cadastros" type="button"   />
-                        <input class="btn btn-danger" value="Cancelar" type="submit" id="cancelCad" />
+                    <input id="saveCad" class="btn btn-primary" value="Salvar Cadastros" type="button" />
+                    <input class="btn btn-danger" value="Cancelar" type="submit" id="cancelCad" />
                 </span>
             </div>
         </div>
     </div>
 </body>
 <script src='./js/script.js'></script>
+
 </html>
