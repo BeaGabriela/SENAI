@@ -47,7 +47,7 @@ section {
 
 .row {
     width: 50%;
-    border-radius: 10px;
+    border-radius: 10px;;
 }
 
 @media (min-width: 634px) {
@@ -55,8 +55,9 @@ section {
         width: 20%;
     }
 
-    span > input {
-        display:flex;
-        
+    span>input {
+        display: flex;
+        flex-direction: column;
+
     }
 }
