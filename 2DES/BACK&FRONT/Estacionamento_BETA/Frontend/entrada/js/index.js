@@ -3,7 +3,7 @@ function ListarEntrada() {
     var tabela = document.querySelector('.geral')
     var tbdyEntrada = document.querySelector('.tabelaEntrada')
     var tabelaGeral = document.querySelector('.tabela')
-    fetch('http://localhost:3000/estacionamento/entrada')
+    fetch('http://localhost:3000/estacionamento/View_entradas')
         .then(res => { return res.json() })
         .then(esta => {
             esta.forEach(e => {
@@ -21,9 +21,30 @@ function ListarEntrada() {
                 var data1 = e.datas_saida
                 trTabela.querySelector('#datas_saida').innerHTML = data1.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                 trTabela.querySelector('#tipo').innerHTML = e.tipo
+                if(e.vaga == 0 || e.hora_saida == null || e.hora_saida == 'ABERTO'|| e.hora_saida == '00:00:00'){
+                    trTabela.querySelector('#vaga').style.color = 'red'
+                }else{
+                    trTabela.querySelector('#vaga').style.color = 'green'
+                }
 
                 tbdyEntrada.appendChild(trTabela)
                 tabelaGeral.appendChild(tbdyEntrada)
+
+                var c = document.querySelector('.cards').cloneNode(true)
+                if(e.vaga_ocupada == 0 || e.hora_saida == null || e.hora_saida == 'ABERTO'|| e.hora_saida == '00:00:00'){
+                    c.querySelector('#vagas').style.backgroundColor = 'red'
+                    c.querySelector('#con').innerHTML = e.vaga
+                    c.querySelector('#con').style.color= 'black'
+                   
+                }else{
+                    c.querySelector('#vagas').style.backgroundColor = 'green'
+                    c.querySelector('#con').innerHTML = e.vaga
+                    c.querySelector('#con').style.color = 'black'
+                }
+
+                
+
+                document.querySelector('.v').appendChild(c)
             })
         })
 }

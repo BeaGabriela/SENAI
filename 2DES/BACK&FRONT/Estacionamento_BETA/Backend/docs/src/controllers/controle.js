@@ -1,7 +1,7 @@
 const estacionamento = require('../models/estacionamento.js')
 const con = require('../models/estaciona.js')
 
-//Listar Solicitacoes
+
 const listarentradas = (req, res) => {
     con.query(estacionamento.readAll(req.body), (err, result) => {
         if (err == null)
@@ -11,7 +11,15 @@ const listarentradas = (req, res) => {
     });
 }
 
-//Listando Produtos
+const listarvagas = (req, res) => {
+    con.query(estacionamento.readVagas(req.body), (err, result) => {
+        if (err == null)
+            res.json(result).end();
+        else
+            res.status(500).end();
+    });
+}
+
 const listarvalores = (req, res) => {
     con.query(estacionamento.readvalores(req.body), (err, result) => {
         if (err == null) {
@@ -93,5 +101,6 @@ module.exports = {
     alterarEntrada,
     buscarId,
     listarFUNC,
-    cadastrarFunc
+    cadastrarFunc,
+    listarvagas
 }

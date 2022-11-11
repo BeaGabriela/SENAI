@@ -73,3 +73,16 @@ input{
     padding: 8px;
     border-radius: 10px;
 }
+
+#vagas{
+    height: 30px;
+    width: 30px;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}

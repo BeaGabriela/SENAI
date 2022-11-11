@@ -1,5 +1,5 @@
 const toCreateEntrada = (model, key) => {
-    return `insert into entrada values(default,'${model.vaga}', '${model.placa}', curtime(), curdate(), NULL, NULL, '${model.tipo}' );`
+    return `insert into entrada values(default,'${model.vaga}', '${model.placa}', curtime(), curdate(), 'Aberto', 'Aberto', '${model.tipo}' );`
 }
 
 const editarEntrada = (model, key) => {
@@ -9,6 +9,10 @@ const editarEntrada = (model, key) => {
 
 const readAll = () => {
     return 'SELECT * FROM entrada'
+}
+
+const readVagas = () => {
+    return 'SELECT * FROM View_entradas'
 }
 
 const readvalores = () => {
@@ -34,5 +38,6 @@ module.exports = {
     editarEntrada,
     BuscarId,
     readFunc,
-    CreateFunc
+    CreateFunc,
+    readVagas
 }
