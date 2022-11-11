@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/index.css">
+    <title>Salgados</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <button><a href="../Cadastro/cadastro.html">Cadastrar um novo</a></button>
+        <button onclick="Comentarios()">Comentários</button>
+        <button>Listar</button>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Foto</th>
+                </tr>
+            </thead>
+            <tbody class="Corpo_Tabela model">
+                <tr class="tabela model">
+                    <td id="id"></td>
+                    <td id="nome"></td>
+                    <td id="des"></td>
+                    <td><img id="foto" src="../img/" alt="x"></td>
+                    <td id="apagar"><img src="../img/lixeira.png" alt="apagar"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <div class="com model" >
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>id_user</th>
+                    <th>id_salgado</th>
+                    <th>nota</th>
+                    <th>avaliacao</th>
+                    <th>nome</th>
+                </tr>
+            </thead>
+            <tbody class="comentarios ">
+                <tr class="tela_comen model">
+                    <td id="id1"></td>
+                    <td id="id_user"></td>
+                    <td id="id_salga"></td>
+                    <td id="nota"></td>
+                    <td id="avali"></td>
+                    <td id="nome"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>

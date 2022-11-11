@@ -49,3 +49,14 @@ section {
     width: 50%;
     border-radius: 10px;
 }
+
+@media (min-width: 634px) {
+    .container {
+        width: 20%;
+    }
+
+    span > input {
+        display:flex;
+        
+    }
+}

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    font: normal 18pt arial black;
+    background: linear-gradient( rgb(255, 185, 185), rgb(242, 209, 215), white);
+    background-repeat: no-repeat;
+}
+
+header{
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(247, 157, 157);
+    text-align: center;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    gap: 15vw;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 185, 185);
+    height: 20vh;
+}
+
+input{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button{
+    height: 40px;
+    border: none;
+    width: 10vw;
+    border-radius: 10px;
+}
