@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,58 +8,75 @@
     <link rel="stylesheet" href="./style/index.css">
     <title>Estacionamento 'PARA'</title>
 </head>
+
 <body onload='ListarEntrada()'>
     <header>
         <h1>Entradas</h1>
+        <p id="user"></p>
     </header>
     <div class='botoes'>
-    <button><a>Listar entrada</a></button>
-    <button><a href='../valor/index.html'>Listar valor</a></button>
-    <button><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
-    <button><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
-    <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
-    <button><a href="../funcionario/index.html">Listar funcionario</a></button>
+        <button><a href="../Home/index.html">Sair</a></button>
+        <button><a href='../valor/index.html'>Listar valor</a></button>
+        <button><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
+        <button><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
+        <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
+        <button><a href="../funcionario/index.html">Listar funcionario</a></button>
 
     </div>
-<main>
-    <div>
-        <input type='search' id="valor" placeholder="digite um id">
-        <button onclick="buscar()">Buscar</button>
-    </div>
-    <div>
-        <table class="tabela model">
-            <thead class="antigothead">
-                <th>ID</th>
-                <th>Vaga</th>
-                <th>Placa</th>
-                <th>Hora Entrada</th>
-                <th>Data Entrada</th>
-                <th>Data Saida</th>
-                <th>Hora Saida</th>
-                <th>Tipo</th>
-            </thead>
-            <tbody class='tabelaEntrada'>
-                <tr class='geral model'>
-                    <td id="id"></td>
-                    <td id="vaga"></td>
-                    <td id="placa"></td>
-                    <td id="hora_entrada"></td>
-                    <td id="datas_entrada"></td>
-                    <td id="datas_saida"></td>
-                    <td id="hora_saida"></td>
-                    <td id="tipo"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class='v'>
-        <nav class='cards'>
-            <div id='vagas'>
-                <p id='con'></p>
+    <main>
+        <div class="procurar">
+            <input type='search' id="valor" placeholder="digite um id">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+        <nav>
+            <div class="todas_vagas">
+                <div class="v ">
+                    <h3>Vagas Ocupadas</h3>
+                    <hr>
+                    <div class="lugar model">
+                        <p id="local">a</p>
+                    </div>
+                </div>
+
+                <div class="v1 ">
+                    <h3>Vagas Desocupadas </h3>
+                    <hr>
+                    <div class="lugar_deso model">
+                        <p id="local_deso">k</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div>
+                <table class="tabela model">
+                    <thead class="antigothead">
+                        <th>ID</th>
+                        <th>Vaga</th>
+                        <th>Placa</th>
+                        <th>Hora Entrada</th>
+                        <th>Data Entrada</th>
+                        <th>Data Saida</th>
+                        <th>Hora Saida</th>
+                        <th>Tipo</th>
+                    </thead>
+                    <tbody class='tabelaEntrada'>
+                        <tr class='geral model'>
+                            <td id="id"></td>
+                            <td id="vaga"></td>
+                            <td id="placa"></td>
+                            <td id="hora_entrada"></td>
+                            <td id="datas_entrada"></td>
+                            <td id="datas_saida"></td>
+                            <td id="hora_saida"></td>
+                            <td id="tipo"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </nav>
-    </div>
-</main>
+
+    </main>
 </body>
 <script src='./js/index.js'></script>
+
 </html>

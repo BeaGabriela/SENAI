@@ -55,6 +55,9 @@ a{
 
 main{
     margin: 5% 32%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .form{
@@ -66,8 +69,9 @@ main{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding-top: 10px;
+    padding: 20px 8vw 10px 8vw;
     box-shadow: 1px 1px 1px black;
+    margin: 10px;
 }
 
 input{
@@ -80,3 +84,32 @@ input{
     width: 20vw;
     
 }
+
+.todas_vagas{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 8px 20vw 0px 0vw;
+    box-shadow: 1px 1px 1px black;  
+}
+
+.v1{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.lugar_deso{
+    width: 2.5vw;
+    height: 8vh;
+    margin: 20px 0px 0 35px;
+    box-shadow: 1px 1px 1px black;
+
+}
+
+
+#local_deso{
+    text-align: center;
+    padding: 15px 12px 0 8px;
+  
+   
+} 

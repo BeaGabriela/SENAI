@@ -14,16 +14,26 @@
         <h1>Cadastrar Entrada de veiculos</h1>
     </header>
     <div class='botoes'>
+        <button><a href="../Home/index.html">Sair</a></button>
         <button><a href='../entrada/index.html'>Listar entrada</a></button>
         <button><a href="../valor/index.html">Listar valor</a></button>
         <button><a href="../funcionario/index.html">Listar funcionario</a></button>
-        <button>Cadastrar uma entrada</button>
         <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
         <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
     </div>
     <main>
-        <p>Para cadastro de entrada, por favor, digite as seguintes informações: </p>
+        <div class="todas_vagas">
+            <div class="v1 ">
+                <h3>Vagas Desocupadas </h3>
+                <hr>
+                <div class="lugar_deso model">
+                    <p id="local_deso">k</p>
+                </div>
+            </div>
+        </div>
+       
         <div class="form">
+            <p>Para cadastro de entrada, por favor, digite as seguintes informações: </p>
             <input type="text" placeholder="Vaga" id="vaga">
             <input type="text" placeholder="Placa" id="placa">
             <input type="text" placeholder="Tipo" id="tipo">

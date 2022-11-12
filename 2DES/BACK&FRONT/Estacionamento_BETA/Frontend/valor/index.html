@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,43 @@
     <link rel="stylesheet" href="./style/index.css">
     <title>Estacionamento 'PARA'</title>
 </head>
-<body onload ='ListarValor()'>
+
+<body onload='ListarValor()'>
     <header>
         <h1>Valores</h1>
     </header>
     <div class='botoes'>
-    <button><a href='../entrada/index.html'>Listar entrada</a></button>
-    <button id='btnValor'>Listar valor</button>
-    <button><a href="../funcionario/index.html">Listar funcionario</a></button>
-    <button id="cadastrar"><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
-    <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
-    <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
-    
+        <button><a href="../Home/index.html">Sair</a></button>
+        <button><a href='../entrada/index.html'>Listar entrada</a></button>
+        <button><a href="../funcionario/index.html">Listar funcionario</a></button>
+        <button id="cadastrar"><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
+        <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
+        <button id="cadastrarS"><a href='../cadastrarSaida/index.html'> Cadastrar uma saida</a></button>
+
     </div>
-<main>
-    <div class="bus">
-    <input type="seach" id="valor" placeholder="id">
-    <button onclick="buscar()">Cadastrar</button>
-    </div>
-    <div>
-        <table class="tabela1 model">
-            <thead class="head1">
-                <th>ID</th>
-                <th>Tempo</th>
-                <th>valor</th>
-            </thead>
-            <tbody class='tabelaValor'>
-                <tr class='tabelinha model'>
-                    <td id="id"></td>
-                    <td id="tempo"></td>
-                    <td id="valor"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</main>
+    <main>
+        <div class="bus">
+            <input type="seach" id="valor" placeholder="id">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+        <div>
+            <table class="tabela1 model">
+                <thead class="head1">
+                    <th>Id</th>
+                    <th>Tempo</th>
+                    <th>Valor</th>
+                </thead>
+                <tbody class='tabelaValor'>
+                    <tr class='tabelinha model'>
+                        <td id="id"></td>
+                        <td id="tempo"></td>
+                        <td id="valor"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 </body>
 <script src='./js/index.js'></script>
+
 </html>

@@ -12,6 +12,7 @@ btn.addEventListener('click', () => {
             f.forEach(p => {
                 if (nome.value == p.login && senha.value == p.password) {
                     boolean = true
+                    localStorage.setItem('create', JSON.stringify({'nome': p.nome}))
                     window.location.href = '../entrada/index.html'
                 }
             })

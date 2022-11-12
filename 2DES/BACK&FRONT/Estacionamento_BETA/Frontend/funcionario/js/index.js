@@ -8,9 +8,10 @@ function ListarFunc() {
         .then(esta => {
             esta.forEach(e => {
                 tabelaGeral.classList.remove('model')
-                tabela.classList.remove('model')
-                
+
                 var trTabela = tabela.cloneNode(true)
+                trTabela.classList.remove('model')
+                
                 trTabela.querySelector('#Login').innerHTML = e.login
                 trTabela.querySelector('#password').innerHTML = '*****'
                 trTabela.querySelector('#nome').innerHTML = e.nome

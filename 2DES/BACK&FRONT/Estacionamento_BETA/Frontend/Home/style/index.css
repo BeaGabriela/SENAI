@@ -71,9 +71,33 @@
      box-shadow: 4px 4px 4px 4px black;
  }
 
- #btn:hover{
-    background-color: #f6624b;
+ #btn:hover {
+     background-color: #f6624b;
      color: rgb(0, 0, 0);
      cursor: pointer;
 
+ }
+
+ @media(min-width: 1250px) {
+     img {
+         width: 34vw;
+         height: 38vh;
+         margin-top: 25px;
+     }
+
+     .img {
+         width: 37%;
+         height: 55vh;
+         background-color: rgb(87, 86, 85);
+         padding: 7vh 7px 0px 55px;
+         box-shadow: 4px 4px 4px 4px rgb(247, 126, 126);
+
+     }
+
+     .coluna {
+         width: 0.5%;
+         height: 57.8vh;
+         background-color: rgb(255, 255, 255);
+         box-shadow: 4px 4px 4px 4px black;
+     }
  }

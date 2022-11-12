@@ -10,11 +10,12 @@ function ListarValor(){
     .then(valor => {
         valor.forEach(v => {
             tabelaGeral.classList.remove('model')
-            t1.classList.remove('model')
+           
             var val = t1.cloneNode(true)
+            val.classList.remove('model')
         val.querySelector('#id').innerHTML = v.id 
         val.querySelector('#tempo').innerHTML = v.tempo
-        val.querySelector('#valor').innerHTML = v.valor_total
+        val.querySelector('#valor').innerHTML = v.valor_total.toLocaleString('pt-BR', {style : 'currency', currency: 'BRL'})
        tbdyEntrada.appendChild(val)
        tabelaGeral.appendChild(tbdyEntrada)
         })
@@ -38,7 +39,7 @@ function buscar() {
             var val = t1.cloneNode(true)
         val.querySelector('#id').innerHTML = v.id 
         val.querySelector('#tempo').innerHTML = v.tempo
-        val.querySelector('#valor').innerHTML = v.valor_total
+        val.querySelector('#valor').innerHTML = v.valor_total.toLocaleString('pt-BR', {style : 'currency', currency: 'BRL'})
        tbdyEntrada.appendChild(val)
        tabelaGeral.appendChild(tbdyEntrada)
     }
