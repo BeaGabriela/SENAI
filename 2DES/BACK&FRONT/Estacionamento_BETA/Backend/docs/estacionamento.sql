@@ -88,9 +88,16 @@ insert into entrada values (default, 'A0', 'ABC1234', curtime(), curdate(), 'ABE
 update entrada set datas_saida = curdate() where id=1;
 update entrada set hora_saida = '14:00' where id=1;
 
-insert into entrada values (default, 'A2', 'CDE345', '13:23:00', '2022-11-13', 'ABERTO', 'ABERTO', 'C');
-update entrada set datas_saida = '2022-11-06' where id=2;
+insert into entrada values (default, 'A1', 'CDE345', '13:23:00', curdate(), 'ABERTO', 'ABERTO', 'C');
+update entrada set datas_saida = curdate() where id=2;
 update entrada set hora_saida = '15:00' where id=2;
+
+insert into entrada values (default, 'A2', 'ASD1234', '07:30', '2022-11-18', 'ABERTO', 'ABERTO', 'C');
+update entrada set datas_saida = '2022-11-18' where id=3;
+update entrada set hora_saida = '15:00' where id=3;
+
+insert into entrada values (default, 'A3', 'AOP1609', '07:50', '2022-11-18', 'ABERTO', 'ABERTO', 'C');
+
 
 insert into funcionarios values ('user12','teste12', 'Marcos');
 insert into funcionarios values('u5er','testeteste','Caroline');

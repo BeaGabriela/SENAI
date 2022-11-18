@@ -37,7 +37,7 @@ function ListarEntrada() {
                 var c = document.querySelector('.lugar').cloneNode(true)
                 c.classList.remove('model')
                 if (e.tipo == 'C' || e.tipo == 'c') {
-                    if (e.vaga_ocupada == 0 || e.hora_saida == null || e.hora_saida == 'ABERTO' || e.hora_saida == '00:00:00') {
+                    if (e.vaga_ocupada == 1 || e.hora_saida == null || e.hora_saida == 'ABERTO' || e.hora_saida == '00:00:00') {
                         c.style.backgroundColor = 'red'
                         c.querySelector('#local').innerHTML = e.vaga
                         c.querySelector('#local').style.color = 'black'
@@ -73,7 +73,7 @@ function ListarEntrada() {
                         document.querySelector('.v1').appendChild(c1)
                     }
                 }
-
+                
 
 
 

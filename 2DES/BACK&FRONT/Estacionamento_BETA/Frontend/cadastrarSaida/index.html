@@ -17,12 +17,25 @@
         <button><a href="../Home/index.html">Sair</a></button>
         <button><a href='../entrada/index.html'>Listar entrada</a></button>
         <button><a href='../valor/index.html'>Listar valor</a></button>
+        <button><a href='../funcionario/index.html'>Listar funcionários</a></button>
         <button><a href="../cadastrarEntrada/index.html">Cadastrar uma entrada</a></button>
         <button><a href='../cadastrarFunc/index.html'>Cadastrar um Funcionarios</a></button>
 
     </div>
+    <p>Por favor, nos informe os dados da saida:</p>
     <main>
-        <p>Por favor, nos informe os dados da saida:</p>
+        <table>
+            <thead>
+                <th>Id's</th>
+                <th>Placa</th>
+                <th>Vaga</th>
+            </thead>
+            <tbody class="tabelaID model">
+                    <td id="idP"></td>
+                    <td id="placa"></td>
+                    <td id="vaga"></td>
+            </tbody>
+        </table>
         <div class="form">
             <input type="text" id="id" placeholder="Id">
             <input type="text" placeholder="Datas_saida" id="datas_saida">

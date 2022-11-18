@@ -1,5 +1,4 @@
 function carregando() {
-
     fetch('http://localhost:3000/estacionamento/View_entradas')
         .then(res => { return res.json() })
         .then(esta => {
@@ -16,16 +15,15 @@ function carregando() {
                         document.querySelector('.v1').appendChild(c1)
                     }
                 } else {
-                    if (e.vaga_ocupada == 0 || e.hora_saida == null || e.hora_saida == 'ABERTO' || e.hora_saida == '00:00:00') {
-                        var c1 = document.querySelector('.lugar_deso').cloneNode(true)
-                        c1.classList.remove('model')
+                    var c1 = document.querySelector('.lugar_deso').cloneNode(true)
+                    c1.classList.remove('model')
 
-                        c1.style.backgroundColor = 'green'
-                        c1.querySelector('#local_deso').innerHTML = e.vaga
-                        c1.querySelector('#local_deso').style.color = 'black'
+                    c1.style.backgroundColor = 'green'
+                    c1.querySelector('#local_deso').innerHTML = e.vaga
+                    c1.querySelector('#local_deso').style.color = 'black'
 
-                        document.querySelector('.v1').appendChild(c1)
-                    }
+                    document.querySelector('.v1').appendChild(c1)
+
                 }
             })
         })
@@ -33,18 +31,12 @@ function carregando() {
 
 
 
-    // var iD  = document.querySelector('#id')
+ 
     var iV = document.querySelector('#vaga')
     var iP = document.querySelector('#placa')
-    // var iHE = document.querySelector('#hora_entrada')
-    // var iDE = document.querySelector('#data_entrada')
-    // var iHS = document.querySelector('#hora_saida')
-    // var iDS = document.querySelector('#datas_saida')
     var iT = document.querySelector('#tipo')
 
     var btnCadastrar = document.querySelector('#cadastrar')
-
-
 
     btnCadastrar.addEventListener('click', () => {
         let carro = {
@@ -52,8 +44,6 @@ function carregando() {
             'placa': iP.value,
             'tipo': iT.value
         };
-
-
 
         fetch('http://localhost:3000/estacionamento/entrada', {
             "method": 'POST',
@@ -72,9 +62,30 @@ function carregando() {
                     alert("Falha ao cadastrar Entrada de VEICULO");
                 }
             })
-
-
-
     })
 
 }
+
+function  Validar(){
+    var placa = document.querySelector('#placa')
+        if(validarPlaca(placa.value)) {
+            console.log = "Placa Válida";
+        }else {
+           alert("Placa Inválida")
+        }
+}
+    
+    function validarPlaca(placa) {
+        if (placa.length == 7) {
+            let modeloAntigo = /^[a-zA-Z]{3}[0-9]{4}$/;
+            let modeloNovo = /^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$/;
+            let modeloMoto = /^[a-zA-Z]{3}[0-9]{2}[a-zA-Z]{1}[0-9]{1}$/;
+    
+            if (modeloAntigo.test(placa) || modeloNovo.test(placa) || modeloMoto.test(placa)) return true;
+        }
+        return false;
+    }
+    
+
+
+
