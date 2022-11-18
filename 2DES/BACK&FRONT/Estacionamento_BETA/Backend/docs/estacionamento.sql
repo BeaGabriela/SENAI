@@ -75,8 +75,8 @@ end //
 delimiter ;
 
 
---View para mostrar os valores da entrada junto com om inidce das vagas. 
---Se for 1, ela esta ocupada, caso não ela esta desocupada.
+--View para mostrar os valores da entrada junto com om indice das vagas. 
+--Se for 1, ela esta ocupada, caso não, ela esta desocupada.
 drop view if exists View_entradas;
 create view View_entradas as
 select e.id, e.vaga, e.placa, e.hora_entrada, e.datas_entrada, e.hora_saida, e.datas_saida, e.tipo, v.vaga_ocupada as Vagas from

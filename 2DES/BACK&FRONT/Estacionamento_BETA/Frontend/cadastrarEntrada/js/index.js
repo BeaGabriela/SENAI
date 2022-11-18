@@ -4,17 +4,7 @@ function carregando() {
         .then(esta => {
             esta.forEach(e => {
                 if (e.tipo == 'C' || e.tipo == 'c') {
-                    if (e.vaga_ocupada == 1 || e.hora_saida == null || e.hora_saida == 'ABERTO' || e.hora_saida == '00:00:00') {
-                        var c1 = document.querySelector('.lugar_deso').cloneNode(true)
-                        c1.classList.remove('model')
-
-                        c1.style.backgroundColor = 'green'
-                        c1.querySelector('#local_deso').innerHTML = e.vaga
-                        c1.querySelector('#local_deso').style.color = 'black'
-
-                        document.querySelector('.v1').appendChild(c1)
-                    }
-                } else {
+                    if (e.vaga_ocupada == 0 || e.hora_saida != null || e.hora_saida != 'ABERTO' || e.hora_saida != '00:00:00') {
                     var c1 = document.querySelector('.lugar_deso').cloneNode(true)
                     c1.classList.remove('model')
 
@@ -23,13 +13,10 @@ function carregando() {
                     c1.querySelector('#local_deso').style.color = 'black'
 
                     document.querySelector('.v1').appendChild(c1)
-
+                    }
                 }
             })
         })
-
-
-
 
  
     var iV = document.querySelector('#vaga')

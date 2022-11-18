@@ -1,0 +1,4 @@
+A ideia principal era pensar em algo simples, tanto para o cliente, como para o funcionário.
+	Pensando nisso, aderimos uma ideia básica de cadastrar um entrada usando um um id especificado por veiculo, placa, horario de entrada e saida e o tipo de veiculo.
+	E na hora da saida, seria algo semelhante, pegando o id, através de uma tabela ao lado, que mostrar ao id, a vaga que o veiculo está ocupando e a placa do carro.
+	É possivel buscar através do id, tanto na table de entrada quanto na tabela de valores.
