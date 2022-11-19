@@ -62,9 +62,6 @@ main {
     right: 24%;
 }
 
-#descrever {
-    color: black;
-}
 
 .nome_poke {
     color: #000000;
@@ -126,43 +123,79 @@ main {
 .model {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #6ab7f5, #fff);
     position: relative;
-
     position: absolute;
     font-weight: 600;
-    color: rgb(99, 151, 228);
+    /* color: rgb(99, 151, 228); */
+    background: linear-gradient(35deg, rgba(128, 0, 128, 0.519), rgba(0, 0, 255, 0.388));
     top: 0%;
     right: 0%;
 }
 
 .modelo {
-    width: 60vw;
+    width: 55vw;
     height: 70vh;
-    background: linear-gradient(to bottom, #6ab7f5, #fff);
-
+    background-image: url(./assets/celular.gif);
+    background-repeat: no-repeat;
     position: absolute;
     font-weight: 600;
     color: rgb(124, 114, 114);
-    top: 15%;
-    right: 21%;
+    top: 23%;
+    right: 18%;
+}
+
+.paisagemFundo{
+    width: 20vw;
+    height: 31vh;
+    position: absolute;
+    top: 12vh;
+    left: 11vw;
+    right: 22px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+   
+   
+    
 }
 
 .pokemon_imagem {
-    display: block;
     margin: -5vh 0vw 0vh 26vw;
-
+    position: absolute;
+    top: 33vh;
+    left: -8vw;
 }
+
+.dados{
+    position: absolute;
+    right: 29vw;
+    top: 8vh;
+    font-size: 20px;
+    text-shadow: 1px 1px purple;
+}
+.habilidades{
+    font-size: 11px;
+    text-shadow: 0.5px 0.5px purple;
+    margin: -16px 0 20px 14vw;
+}
+
 
 #descrever {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-}
+    background: linear-gradient(45deg, purple, blue);
+    font-size: 10px;
+    color: black;
+    width: 6.5vw;
+    height: 31vh;
+    margin: -14px 0px 0vh 31.8vw;
+    border-radius: 15px;
+    overflow-y: scroll;
+    }
 
 .fecharModal {
-    margin-Left: 58vw;
+    margin-Left: 21.5vw;
+    margin-top: 12px;
+    margin-bottom: 0;
 }
+
 
 h2 {
     color: rgb(0, 0, 0);

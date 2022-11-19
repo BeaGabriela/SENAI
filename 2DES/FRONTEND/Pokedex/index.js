@@ -61,8 +61,8 @@ const direcionandoPokemon = async (pokemon) => {
             
 
             descrever.innerHTML = data.moves.map(i => {
-                i.move.name
-                return i.move.name
+                i.move.name 
+                return i.move.name + '<br>'
             })
         
         })
