@@ -5,6 +5,8 @@ const imgpo = document.querySelector('.pokemon_i')
 const img = document.querySelector('.pokemon_imagem')
 var nomeP = document.querySelector('.nome')
 var numeroP = document.querySelector('.numero')
+var altura = document.querySelector('.altura')
+var peso = document.querySelector('.peso')
 
 
 
@@ -17,7 +19,7 @@ const btNext = document.querySelector('.btn-next')
 
 const descrever = document.querySelector('#descrever')
 
-var habilidades = document.querySelector('.descricao')
+var habilidades = document.querySelector('.pokebola')
 
 var modelo = document.querySelector('.model')
 var modelo1 = document.querySelector('.modelo')
@@ -45,12 +47,17 @@ const direcionandoPokemon = async (pokemon) => {
         imgpo.style.display = 'block'
         nomePoke.innerHTML = data.name
         numero_poke.innerHTML = data.id
+        var a = data.height*0.10
+        altura.innerHTML = a.toFixed(1)
+        peso.innerHTML = data.weight
         pokemonn = data.id
         imgpo.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         input.value = ''
         
 
         habilidades.addEventListener('click', () => {
+            habilidades.setAttribute('src', './assets/pokebola2.gif')
+        
             modelo.classList.remove('modal')
             modelo1.classList.remove('modal')
             img.style.display = 'block'
@@ -79,6 +86,7 @@ const direcionandoPokemon = async (pokemon) => {
 fechar.addEventListener('click', () => {
     modelo.classList.add('modal')
     modelo1.classList.add('modal')
+     habilidades.setAttribute('src', './assets/pokebola.gif')
 
 })
 
