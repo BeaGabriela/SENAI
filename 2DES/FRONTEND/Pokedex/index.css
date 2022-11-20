@@ -19,9 +19,12 @@ main {
     position: relative;
 }
 
+
+
 .pokedex {
     width: 100%;
     max-width: 425px;
+    border-radius:20px;
 }
 
 .pokemon_i {
@@ -45,19 +48,26 @@ main {
 
 }
 
+.pokeball{
+    position: absolute;
+    height: 9vh;
+    width: 4vw;
+    border-radius: 50%;
+    margin: 14px 11px;
+}
 h4 {
-    margin: 15px 0;
+    margin: 7px 0;
     font-size: 13px;
 }
 
 .descricao {
     width: 12.1vw;
     height: 11.5vh;
-    background-color: #ffffff;
+    background: linear-gradient(45deg, purple, blue);
 
     position: absolute;
     font-weight: 600;
-    color: rgb(185, 60, 60);
+    color: rgb(255, 255, 255);
     top: 79.7%;
     right: 24%;
 }
