@@ -1,0 +1,18 @@
+Entrega dia 14/12
+
+fórum;
+Tema: escolha;
+Cadastro de usuario.
+Abrir uma dúvida, com resposta, com sub-resposta.
+Categorias -> Organização por categorias e sub-categorias.
+Favoritos -> algoritmo de acordo com as prefêrencias;
+Mobile.
+Filtro -> Por categoria e por data.
+Opcional, denúncia.
+
+
+
+
+
+
+

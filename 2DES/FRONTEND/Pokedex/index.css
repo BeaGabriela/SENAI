@@ -24,7 +24,7 @@ main {
 .pokedex {
     width: 100%;
     max-width: 425px;
-    border-radius:20px;
+    border-radius: 20px;
 }
 
 .pokemon_i {
@@ -48,13 +48,14 @@ main {
 
 }
 
-.pokeball{
+.pokeball {
     position: absolute;
     height: 9vh;
     width: 4vw;
     border-radius: 50%;
     margin: 14px 11px;
 }
+
 h4 {
     margin: 7px 0;
     font-size: 13px;
@@ -194,13 +195,14 @@ h4 {
     font-size: 11px;
     text-shadow: 0.5px 0.5px purple;
     margin: -16px 0 20px 14vw;
+   
 }
 
 
 #descrever {
     background: linear-gradient(45deg, purple, blue);
     font-size: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     width: 6.5vw;
     height: 31vh;
     margin: -14px 0px 0vh 31.8vw;
@@ -262,11 +264,103 @@ h2 {
         left: -38%;
     }
 
-  
+
 
     .modelo {
         padding-top: 40px;
 
+
+    }
+}
+
+@media(max-width: 2500px) {
+
+    .gifPrincipal {
+        height: 31.5vh;
+        width: 17vw;
+        margin: 10.8vh 0vw 0px 3px;
+    }
+
+    .descricao {
+        width: 9vw;
+        height: 8vh;
+        top: 79.9%;
+        right: 22.8%;
+
+    }
+
+    .descricao>.dados_poke {
+        height: 5vh;
+        width: 12vw;
+        top: 59.5%;
+
+    }
+
+    .pokeball {
+        height: 6vh;
+        width: 3vw;
+        margin: 14px 11px;
+    }
+
+    .paisagemFundo {
+        width: 13vw;
+        height: 22vh;
+        top: 8vh;
+        left: 8vw;
+        right: 22px;
+    }
+
+    .pokemon_imagem {
+        margin: -13vh 0vw 0vh 22vw;
+        top: 33vh;
+        left: -8vw;
+    }
+
+    #descrever {
+        width: 6.5vw;
+        height: 22vh;
+        margin: -18px 0px 0vh 21.5vw;
+        border-radius: 15px;
+        overflow-y: scroll;
+    }
+
+    .dados {
+        right: 37vw;
+        top: 5.2vh;
+        font-size: 18px;
+    }
+
+    .habilidades {
+        font-size: 12px;
+        margin: -18px 0 20px -6vw;
+    }
+
+    .fecharModal {
+        margin-Left: 0.5vw;
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+
+    .modelo {
+        width: 55vw;
+        height: 70vh;
+        top: 29%;
+        right: 13%;
+    }
+
+    h4 {
+        margin: -13px 0;
+        font-size: 13px;
+    }
+
+    main {
+        margin-top: 8%;
+        padding: 12px;
+    }
+
+    .input_pesquisa {
+        width: 326px;
+        margin: 0 2px;
 
     }
 }
