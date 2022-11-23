@@ -7,19 +7,21 @@ export default function App() {
   const [posts, setPosts] = useState() //O useState não pode começar vazio. Por ser leitor de vetor, tem de ter um vetor.
   const [numero, setNumero] = useState('') 
 
+
   useEffect(() => { //Não pode esquecer de colocar o vetor para evitar um loop infinito.
-    fetch('https://pokeapi.co/api/v2/pokemon/40')
+    fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
       .then(res => { return res.json() })
       .then(pokemon => {
-        // console.log(pokemon)
+       console.log(numero)
         setPosts(pokemon)
       })
   })
 
   return (
-    //Criar um textInput para receber um valor, e setar esse valor no fecth. Assim, ele prociura de acordo com o parametro.
+    //Criar um textInput para receber um valor, e setar esse valor no fetch. Assim, ele procura de acordo com o parametro.
     <View style={styles.container}>
-     
+     <TextInput onChangeText={(v) => {setNumero(v)}}></TextInput>
+  
       {
         (posts !== undefined) ?
           <View>
