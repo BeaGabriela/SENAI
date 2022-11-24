@@ -1,49 +1,49 @@
 import { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, TextInput, View, Image, TouchableOpacity } from 'react-native';
 
 
 export default function App() {
   const [posts, setPosts] = useState() //O useState não pode começar vazio. Por ser leitor de vetor, tem de ter um vetor.
-  const [numero, setNumero] = useState('') 
+  const [numero, setNumero] = useState(null)
 
 
-  useEffect(() => { //Não pode esquecer de colocar o vetor para evitar um loop infinito.
-    fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
-      .then(res => { return res.json() })
-      .then(pokemon => {
-       console.log(numero)
-        setPosts(pokemon)
-      })
-  })
+  const procurar = (numero) => {
+    //useEffect(() => { //Não pode esquecer de colocar o vetor para evitar um loop infinito.
+      fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
+        .then(res => { return res.json() })
+        .then(pokemon => {
+          setPosts(pokemon)
+        })
+    //}, [])
+  }
 
   return (
     //Criar um textInput para receber um valor, e setar esse valor no fetch. Assim, ele procura de acordo com o parametro.
     <View style={styles.container}>
-     <TextInput onChangeText={(v) => {setNumero(v)}}></TextInput>
-  
       {
         (posts !== undefined) ?
           <View>
             <Text>{posts.name}</Text>
-            <Image style={styles.img} source={{ uri: posts.sprites.front_default}} />
+            {<Image style={styles.img} source={{ uri: posts.sprites.front_default }} />}
           </View>
           :
           <View>
             <Text>Carregando...</Text>
           </View>
       }
-      {/* {
-        posts.results.map((post, index) => {
-          return(
-            <View key={index}>
-              <Text>{post.name}</Text>
-              <Image style={styles.img} source={{uri:post.url}} />
-
-            </View>
-          )
-        })
-      } */}
+      <Text>Digite um número para procurar um Pokemon:</Text>
+      <TextInput style={styles.input} onChangeText={(v) => { setNumero(v) }}></TextInput>
+      <TouchableOpacity style={styles.btn} onPress={() => {
+        // fetch(`https://pokeapi.co/api/v2/pokemon/${numero}`)
+        //   .then(res => { return res.json() })
+        //   .then(pokemon => {
+        //     setPosts(pokemon)
+        //   })
+        procurar(numero);
+      }}>
+        <Text style={styles.txt}>Procurar</Text>
+      </TouchableOpacity>
     </View>
   )
 }
@@ -55,10 +55,37 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+    gap: '10px',
+    backgroundColor: '#85EBE5'
   },
-  img: {
-    width: '50px',
-    height: '50px'
 
+  img: {
+    width: '80px',
+    height: '85px'
+  },
+
+  input: {
+    borderRadius: '5px',
+    border: '1px solid black'
+  },
+
+  btn: {
+    borderRadius: '8px',
+    backgroundColor: '#ffffff',
+    width: '19vw',
+    height: '4vh',
+  },
+
+  txt: {
+    textAlign: 'center',
+    paddingTop: '8px',
+    color: '#00CED1'
   }
+
+
+
+
+
+
+
 });
