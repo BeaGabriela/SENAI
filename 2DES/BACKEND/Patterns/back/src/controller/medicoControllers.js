@@ -70,6 +70,18 @@ const excluirTra = (req, res) => {
     });
 }
 
+const alterarTrat = (req, res) => {
+    let venda = fabrica(req.body);
+    con.query(venda.updateTratamentos, (err, result) => {
+        if (err == null) {
+            res.status(200).json(result).end();
+        } else {
+            res.status(400).json(err).end();
+        }
+    });
+}
+
+
 
 
 module.exports = {
@@ -78,5 +90,6 @@ module.exports = {
     listarConsultas,
     listarTratamentos,
     cadastrarTra,
-    excluirTra
+    excluirTra,
+    alterarTrat
 }

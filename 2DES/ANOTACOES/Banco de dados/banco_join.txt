@@ -1,0 +1,32 @@
+SELECT * FROM usuario 
+INNER JOIN favoritos
+ON usuario.id = favoritos.id_user
+
+1
+2
+3
+4 *
+5
+6
+7 *
+8
+
+
+SELECT * FROM publicacoes
+LEFT JOIN user ON user.id_user = publicacoes.id_user
+LEFT JOIN favoritos ON user.id_user = favoritos.id_user;
+
+
+SELECT * FROM publicacoes;
+
+
+ SELECT p.*, (SELECT id_user FROM favoritos WHERE id_user = p.id_user) FROM publicacoes p LEFT JOIN favoritos f ON p.id_publi = f.id_publi;
+
+
+SELECT p.*, favs.id_user FROM publicacoes p LEFT JOIN (SELECT * FROM favoritos WHERE id_user = 1) AS favs ON p.id_publi = favs.id_publi;
+
+
+
+
+
+SELECT * FROM user INNER JOIN favoritos ON user.id_user = favoritos.id_user
