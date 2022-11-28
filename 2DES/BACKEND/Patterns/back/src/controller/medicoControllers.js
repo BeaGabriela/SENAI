@@ -1,28 +1,8 @@
-const model = require('../models/Consulta')
-
+const medication = require('../models/Consulta')
 const con = require('../dao/connection')
 
-function fabrica(obj) {
-    if (obj == undefined)
-        return new model.Consulta()
-}
-
-const prototype = (req,res) => {
-    let medication = fabrica()
-    con.query(medication.readConsultas(), (err,results) => {
-        if (err  == null) {
-            if(results.length == 0){
-                res.json( 'ok' ).end();
-            }else 
-                res.json({ status: "Online", registros: results.length }).end();
-            } else {
-                res.status(500).json({ err: err }).end();
-            }
-    })
-}
 
 const listarConsultas = (req, res) => {
-    let medication = fabrica();
     con.query(medication.readConsultas(), (err, result) => {
         if (err == null) {
             res.json(result).end();
@@ -30,25 +10,32 @@ const listarConsultas = (req, res) => {
     });
 }
 
-const listarTratamentos = (req, res) => {
-    let medication = fabrica();
-    con.query(medication.readTratamentos(), (err, result) => {
-        if (err == null) {
-            res.json(result).end();
-        }
-    });
-}
 const listarProfissionais = (req, res) => {
-    let medication = fabrica();
     con.query(medication.readProfissionais(), (err, result) => {
         if (err == null) {
             res.json(result).end();
         }
     });
 }
+const listarTratamentoaId = (req, res) => {
+    con.query(medication.readTratamentosId(req.params), (err, result) => {
+        if (err == null) {
+            res.json(result).end();
+        }
+    });
+}
+
+
+const listarTratamentos = (req, res) => {
+    con.query(medication.readTratamentos(), (err, result) => {
+        if (err == null) {
+            res.json(result).end();
+        }
+    });
+}
+
 const cadastrarTra = (req, res) => {
-    let venda = fabrica(req.body);
-    con.query(venda.createTratamentos, (err, result) => {
+    con.query(medication.createTratamentos(req.body), (err, result) => {
         if (err == null) {
             res.status(201).json(result).end();
         } else {
@@ -58,8 +45,7 @@ const cadastrarTra = (req, res) => {
 }
 
 const excluirTra = (req, res) => {
-    let venda = fabrica();
-    con.query(venda.deleteTratamento(req.params.id_tratamento), (err, result) => {
+    con.query(medication.deleteTratamento(req.body), (err, result) => {
         if (err == null)
             if (result.affectedRows > 0)
                 res.status(200).end();
@@ -71,8 +57,7 @@ const excluirTra = (req, res) => {
 }
 
 const alterarTrat = (req, res) => {
-    let venda = fabrica(req.body);
-    con.query(venda.updateTratamentos, (err, result) => {
+    con.query(medication.updateTratamentos(req.body), (err, result) => {
         if (err == null) {
             res.status(200).json(result).end();
         } else {
@@ -85,8 +70,8 @@ const alterarTrat = (req, res) => {
 
 
 module.exports = {
-    prototype,
     listarProfissionais,
+    listarTratamentoaId,
     listarConsultas,
     listarTratamentos,
     cadastrarTra,

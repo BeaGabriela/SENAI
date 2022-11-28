@@ -1,34 +1,43 @@
-class Consulta {
-
-    readProfissionais() {
+   const  readProfissionais = () =>  {
         return 'Select * from profissionais';
-    }
-    readConsultas() {
+    };
+
+    const readConsultas = () =>  {
         return 'Select * from consultas';
     }
 
-    deleteTratamento (id_tratamento) {
-        return `DELETE from tratamentos WHERE id_tratamento = ${id_tratamento}`;
-    }
-
-    createConsultas(model){
+    const createConsultas= (model) =>{
         return `INSERT INTO consultas VALUES (default, '${model.paciente}', '${model.data}', '${model.horario}', '${model.id_profissionais}' ) where id_profissionais = '${model.id_profissionais}'`;
     }
 
-    createTratamentos(model){
-        return `INSERT INTO tratamentos VALUES (default, '${model.id_consulta}', '${model.tratamento}', ${model.valor} ) where id_consulta = '${model.id_consulta}'`;
+    const createTratamentos =(model)=>{
+        return `INSERT INTO tratamentos VALUES (default, ${model.id_consulta}, '${model.tratamento}', ${model.valor} )`;
     }
 
-    updateTratamentos(model){
-        return `UPDATE tratamentos SET tratamento='${model.tratamento}', valor='${model.valor}' WHERE id_tratamento = '${model.id_tratamento}'`;
+    const readTratamentos = () =>  {
+        return 'SELECT * FROM tratamentos;'
     }
 
-    readTratamentos() {
-        return 'Select * from tratamentos';
+    const updateTratamentos = (model) => {
+        return `UPDATE tratamentos SET id_consulta = ${model.id_consulta}, tratamento ='${model.tratamento}', valor=${model.valor} WHERE id_tratamento = ${model.id_tratamento}`;
     }
-}
+    const deleteTratamento = (model) => {
+        return `DELETE from tratamentos WHERE id_tratamento = ${model.id_tratamento}`;
+    }
+
+    const readTratamentosId = (model) =>  {
+        return `SELECT * FROM View_Tabelas where id_profissionais = ${model.id_profissioanais}`;
+    }
 
 
 module.exports = {
-    Consulta
+    readProfissionais,
+    readConsultas,
+    createConsultas,
+    createTratamentos,
+    readTratamentos,
+    updateTratamentos,
+    deleteTratamento,
+    readTratamentosId
+
 }

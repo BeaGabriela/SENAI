@@ -46,8 +46,9 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
+drop view View_tabelas;
 create view View_tabelas as
-select p.id_profissionais, p.nome, p.especialidade, c.id_consulta, c.paciente, c.data, c.horario, t.id_tratamento, t.valor from profissionais p
+select p.id_profissionais, p.nome, p.especialidade, c.id_consulta, c.paciente, c.data, c.horario, t.id_tratamento, t.tratamento, t.valor from profissionais p
 inner join consultas c on  p.id_profissionais = c.id_profissionais
 inner join tratamentos t on t.id_consulta = c.id_consulta;
 

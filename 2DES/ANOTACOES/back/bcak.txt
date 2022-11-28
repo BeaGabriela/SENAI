@@ -9,3 +9,7 @@ String json --> é necessario aspas;
 atributo json não é necessario aspas;
 
 module.exports --> 
+
+Losango preto significa que uma tabela não existe sem a outra. Obrigatorio. É necessario ter uma tabela.
+
+Losango branco ele é idependente.
