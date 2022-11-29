@@ -1,4 +1,5 @@
 const Tratamento = require('../models/Tratamento')
+const Composite = require('../models/Composite')
 const con = require('../dao/connection')
 
 const readAll = (req, res ) => {
@@ -10,12 +11,15 @@ const readAll = (req, res ) => {
 }
 
 const readId = (req, res ) => {
-    con.query(Tratamento.readId(req.params), (err, result) => {
-        if(err != null) {
-            res.json(result).end()
+    con.query(Tratamento.readId(req.params.id), (err, result) => {
+        if(err == null) {
+            res.json(Composite.profissional(result)).end()
+        }else{
+            res.json(err).end()
         }
     })
 }
+
 
 const create = () => {
     con.query(Tratamento.toCreate(req.body), (err, result) => {

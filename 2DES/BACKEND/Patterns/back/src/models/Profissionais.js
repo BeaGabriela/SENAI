@@ -1,4 +1,4 @@
-class Profisionais {
+class Profissionais {
 
     consultas = []
 
@@ -11,10 +11,15 @@ class Profisionais {
                 this.consultas.push(e)
             })
     }
-
-    static read (id){
-        return `select * from Vw_Tabelas WHERE id_profissionais = ${id}`
-    
+    static  readProfissionais = () =>  {
+        return 'Select * from profissionais';
+    };
+    static Profisionais = (model) => {
+        return `SELECT * from  View_Tabelas WHERE id_profissionais LIKE '%${model.id_profissionais}%'`;
     }
-   
+    
+}
+
+module.exports = {
+    Profissionais
 }

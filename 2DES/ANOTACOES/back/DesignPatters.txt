@@ -2,8 +2,9 @@ Design Patters é um padrão de projeto antigo.
 Factory -> Model(Usado para modelar.)
 Dvidido em três categorias:
 	Criação => 'Fabricar Objetos'(Factory Method)
-	Estrutura =>
-	Comportamento => 
+	Estrutura => 'adapter, composite-> Uma coisa composta por outra.'
+'facade -> Fazer validações'.
+	Comportamento => iterar -> Repetir. Observ-> 
 
 *Falando sobre objetos*: 
 	JavaScript, Phyton, PHP permitem criar objetos apenas abrindo {}. E temos um objeto. 
@@ -28,3 +29,12 @@ sequelise } nodeJS -> ORM para Javascript.
 
 
 lista, tabela e matriz são tudo a mesma coisa.
+
+
+Factory funciona como uma função que fabrica objetos. 
+Prototype - Um protótipo de algo.
+Singleton -> Usa apenas uma vez.
+
+MVC não é um patterns GOF. Mas é um Patterns.
+MVC usa variados paterns dentro dele.
+GOF é um livro. A gangue dos 4.
