@@ -5,11 +5,11 @@ const Tratamento = require('./Tratamento')
 const profissional = (lista) => {
     let consultas = []
     let i = 0;
-    let consulta_id = lista[i].id_consulta
+    let id_consulta = lista[i].id_consulta
     consultas.push(new Consulta(lista[i]))
     lista.forEach(e => { //Percorrendo lista
-        if(consulta_id != e.id_consulta){ //Eliminando consultas duplicadas
-            consulta_id = e.id_consulta
+        if(id_consulta != e.id_consulta){ //Eliminando consultas duplicadas
+            id_consulta = e.id_consulta
             consultas.push(new Consulta(e))
             i++
             consultas[i].addTratamento(new Tratamento(e))
@@ -23,4 +23,4 @@ const profissional = (lista) => {
     return new Profissional(prof);
 }
 
-module.exports = profissional;
+module.exports = {profissional};
