@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #2e2e2e; */
+}
+
+body,
+header,
+main {
+    background-color: #2e2e2e;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    justify-content: space-around;
+    display: grid;
+    justify-content: center;
+}
+
+dialog {
+    padding: 20px;
+    display: grid;
+    border-radius: 10px;
+    visibility: hidden;
+    border: none;
+    background-color: #2e2e2e;
+    justify-content: center;    
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0 0 0 /.3);
+    height: 50%;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 15%;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .5);
+}
+
+#itens {
+    display: grid;
+    margin-bottom: 30px;
+}
+
+#coisa {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.coisa {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#cancelar {
+    color: red;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #2e2e2e;
+    border: 2px solid red;
+}
+
+#cadastrar {
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #2e2e2e;
+}
+
+input {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100%;
+}
+
+#some {
+    height: 15px;
+}
+
+#coisinhas {
+    display: grid;
+    padding: 10px;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+
+#nome {
+    color: white;
+    padding: 10px;
+}
+
+#excluir {
+    color: red;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#coisa {
+    display: flex;
+    justify-content: space-around;
+}
+
+#add {
+    border: 1px solid yellow;
+    color: yellow;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #2e2e2e;
+    cursor: pointer;
+}
+
+#img {
+    height: 50px;
+}
+
+.corpo {
+    display: flex;
+}
+
+.imagem {
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    background-size: 100% auto;
+    border-radius: 20px;
+}
+
+.modelo {
+    visibility: hidden;
+    display: none;
+}
+
+#model{
+    visibility: hidden;
+    display: none;
+
+}

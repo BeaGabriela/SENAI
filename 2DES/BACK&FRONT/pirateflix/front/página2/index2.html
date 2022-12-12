@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Piraflix</title>
+</head>
+
+<body onLoad="carregar()">
+    <header>
+        <img id="img" src="../../back/docs/assets/logo.png" />
+        <div id="coisa">
+            <button id="add" onclick="abrirModal()">Adicionar Filme</button>
+        </div>
+    </header>
+    <main id="tudinho">
+        <div class="corpo modelo">
+            <img class="imagem"/>
+            <div id="coisinhas">
+                <p id="nome"></p>
+                <p id="excluir" onclick="excluirFilme()">Excluir</p>
+            </div>
+        </div>
+        <dialog>
+            <div id="itens">
+                <input type="text"  id = 'titulo' placeholder="Titulo">
+                <input type="text"  id = 'lanca'placeholder="Ano de Lançamento">
+                <input type="text"  id = 'cate'placeholder="Categoria">
+                <input type="text"  id = 'car'placeholder="Cartaz">
+            </div>
+            <div class="coisa">
+                <button id="cancelar" onclick="fecharModal()">Cancelar</button>
+                <button id="cadastrar">Cadastrar</button>
+            </div>
+        </dialog>
+    </main>
+</body>
+<script src="index2.js"></script>
+
+</html>
