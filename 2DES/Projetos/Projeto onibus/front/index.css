@@ -1,0 +1,104 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(121, 122, 122);
+    width: 40vw;
+    height: 100vh;
+    margin-left: 9vw;
+    display: flex;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+main>nav {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+.segundaColuna{
+    display: flex;
+    margin-right: 60vw;
+    height: 100vh;
+}
+
+.onibus,
+.onibus1,
+.onibus2,
+.onibus3 {
+    background-color: aqua;
+    height: 16.8vh;
+    width: 6vw;
+    padding: 20px;
+}
+
+
+.encosto,
+.encosto1,
+.encosto2,
+.encosto3 {
+    background-color: black;
+    height: 3vh;
+    width: 4vw;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+
+#assento,
+#assento1,
+#assento2,
+#assento3 {
+    background-color: blue;
+    width: 3.2vw;
+    height: 2vw;
+    margin: -3.9vh 8px;
+    position: absolute;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    padding: 6px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.bracoD,
+.bracoD1,
+.bracoD2,
+.bracoD3 {
+    background-color: rgb(0, 0, 0);
+    width: 0.5vw;
+    height: 2vw;
+    margin: 1px 3.5vw;
+    position: absolute;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+
+.bracoE,
+.bracoE1,
+.bracoE2,
+.bracoE3 {
+    background-color: rgb(0, 0, 0);
+    width: 0.5vw;
+    height: 2vw;
+    top: 53.5vh;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
