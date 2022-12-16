@@ -1,0 +1,17 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: brown;
+    height: 100vh;
+    padding: 20vh 20vw;
+}
+
+.imgOnibus {
+    width: 50vw;
+    margin: -20px;
+    padding-top: 40px;
+}

@@ -5,7 +5,7 @@
 }
 
 nav {
-    background-color: rgb(121, 122, 122);
+    background-color: rgb(100, 107, 107);
     width: 40vw;
     height: 100vh;
     margin-left: 9vw;
@@ -39,7 +39,7 @@ main>nav {
 .onibus1,
 .onibus2,
 .onibus3 {
-    background-color: aqua;
+    background-color: rgb(167, 175, 175);
     height: 16.8vh;
     width: 6vw;
     padding: 20px;
@@ -50,7 +50,7 @@ main>nav {
 .encosto1,
 .encosto2,
 .encosto3 {
-    background-color: black;
+    background-color: rgb(255, 46, 46);
     height: 3vh;
     width: 4vw;
     border-top-right-radius: 20px;
@@ -62,7 +62,7 @@ main>nav {
 #assento1,
 #assento2,
 #assento3 {
-    background-color: blue;
+    background-color: rgb(240, 107, 107);
     width: 3.2vw;
     height: 2vw;
     margin: -3.9vh 8px;
@@ -73,6 +73,12 @@ main>nav {
     padding: 6px;
     color: white;
     font-weight: bold;
+}
+
+#btnCick{
+    border: none;
+    background-color: rgb(240, 107, 107);
+
 }
 
 
