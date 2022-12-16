@@ -15,3 +15,60 @@ main {
     margin: -20px;
     padding-top: 40px;
 }
+
+.porta {
+    position: absolute;
+    width: 3.8vw;
+    height: 33vh;
+    background-color: yellow;
+    top: 55.5vh;
+    left: 49.3vw;
+    border-radius: 10px 50px 14px 11px;
+    animation-name: portinha;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index:0;   
+}
+
+
+.porta1 {
+    position: absolute;
+    width: 3.8vw;
+    height: 33vh;
+    background-color: yellow;
+    top: 55.5vh;
+    left: 49.3vw;
+    border-radius: 10px 50px 14px 11px;
+    animation-name: portinha1;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index:0;   
+}
+@keyframes portinha{
+    100%{
+        opacity: 1;
+        right: 20px;
+        background-color:black;
+    }
+}
+
+@keyframes portinha1{
+    100%{
+        opacity: 1;
+        left: 46vw;
+
+    }
+}
+
+
+/* .esconder{
+    position: absolute;
+    width: 4vw;
+    height: 18vh;
+    background-color: yellow;
+    top: 70vh;
+    left: 49vw;
+
+} */
