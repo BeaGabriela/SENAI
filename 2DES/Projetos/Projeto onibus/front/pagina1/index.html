@@ -9,15 +9,26 @@
 </head>
 <body onload="carregar()">
     <main>
+        <nav>
         <div>
+            <p>Clique aqui para escolher um assento.</p>
             <img class='imgOnibus' src="../../assets/onibus.png" alt="onibus"/>
-           <!-- <div class="esconder"></div> -->
            <div class="porta" onclick="abrirPorta()"></div>
            <div class='porta1'></div>
         </div>
-        
-
         </div>
+        <div class="dados">
+            <p>Preencha os campos abaixo para realizar a compra.</p>
+            <input type="text" placeholder="nome"  id="nome" >
+            <input type="text" placeholder="dataNascimento"  id="dataNascimento" >
+            <input type="text" placeholder="cpf"  id="cpf" >
+            <input type="text" placeholder="dataViagem"  id="dataViagem" >
+            <input type="text" placeholder="horarioViagem"  id="horarioViagem" >
+            <input type="text" placeholder="ValorTotal"  id="ValorTotal" disabled>
+            <input type="text" placeholder="AssentoEscolhido"  id="AssentoEscolhido" disabled>
+            
+        </div>
+    </nav>
     </main>
 </body>
 <script src='./index.js'></script>
