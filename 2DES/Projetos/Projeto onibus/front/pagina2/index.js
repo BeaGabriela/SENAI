@@ -47,24 +47,43 @@ function carregar () {
             document.querySelector('.aside4').appendChild(oni)
         })
     });
+
 }
 
 var assento = document.querySelector('#assento')
 var assentoPedido = document.querySelector('.assentoPedido')
+var assentoP = ''
 function buscarA(numero){
    console.log(numero)
    assentoPedido.innerHTML = `A${numero}`
+   assentoP = `A${numero}`
+   console.log(assentoP)
 }
 
 function buscarB(numero){
-    console.log(numero)
     assentoPedido.innerHTML = `B${numero}`
+    assentoP = `B${numero}`
+   console.log(assentoP)
+   localStorage.setItem('assento', assentoP)
  }
 
  function buscarC(numero){
     assentoPedido.innerHTML = `C${numero}`
+    assentoP = `C${numero}`
+   console.log(assentoP)
+   localStorage.setItem('assento', assentoP)
  }
 
  function buscarD(numero){
     assentoPedido.innerHTML = `D${numero}`
+    assentoP = `D${numero}`
+   console.log(assentoP)
+   localStorage.setItem('assento', assentoP)
  }
+
+
+ var back = document.querySelector('.back')
+ back.addEventListener('click', () => {
+    localStorage.setItem('assento', assentoP)
+     window.history.back()
+ })
