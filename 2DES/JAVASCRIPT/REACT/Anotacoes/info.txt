@@ -1,0 +1,8 @@
+Anotações importantes sobre REACT: 
+	Primeiro passo: Usar  >npx create-react-app my-app
+	Segundo pass : Entrar na pasta
+	Terceiro passo: npm start
+	
+	npm install -> Intalar novamente as dependencias.
+	
+	React é de certa forma semelhante com mobile.

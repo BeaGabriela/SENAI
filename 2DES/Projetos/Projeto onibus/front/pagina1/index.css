@@ -5,7 +5,7 @@
 }
 
 main {
-    background-color: brown;
+    background-color: #152d73;
     height: 100vh;
     padding: 20vh 20vw;
 }
@@ -71,14 +71,14 @@ nav{
     width: 30vw;
     height: 61vh;
     padding-top: 30px;
-    background-color: #4169e1;
+    background-color: #60a5fa;
     position: absolute;
     left: 55vw;
     top: 26vh;
     gap: 6px;
     border-radius: 10px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
 
 }
 
@@ -87,7 +87,28 @@ nav{
     height: 8vh;
     border-radius: 10px;
     margin-left:60px;
-    background-color: #0983fd;
-    color: #ffffff;
+    background-color: #d4d4d8;
+    color: #000000;
+}
+
+p{
+    color: white;
+    
+}
+input::placeholder{
+    color:rgb(0, 0, 0);
+}
+
+#btnCompra{
+    border-radius: 15px;
+    width: 10vw;
+    height: 10vh;
+    margin: 20px 10vw;
+    background-color:#d4d4d8;
+     
+}
+
+#btnCompra:hover{
+    cursor:pointer;
 
 }

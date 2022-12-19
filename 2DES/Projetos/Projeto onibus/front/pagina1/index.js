@@ -21,7 +21,7 @@ function carregar() {
             'dataViagem': dataViagem.value,
             'horarioViagem': horarioViagem.value,
             'valorTotal': valorTotal.value,
-            'AssentoEscolhido': assentoEscolhido
+            'assento': assentoEscolhido
         }
 
         console.log(compraFeita)
@@ -33,9 +33,9 @@ function carregar() {
             },
             "body": JSON.stringify(compraFeita)
         })
-            .then(resp => { return resp.json() })
+            .then(resp => resp.status )
             .then(data => {
-                if (data.nome !== undefined) {
+                if (data == 201) {
                     alert('ok')
                     window.location.reload()
                 } else {
