@@ -10,6 +10,8 @@ function carregar() {
     var horarioViagem = document.querySelector('#horarioViagem')
     var valorTotal = document.querySelector('#ValorTotal')
     var AssentoEscolhido = document.querySelector('#AssentoEscolhido')
+    var abrirModal = document.querySelector('.modalSucesso')
+    var fecharModal = document.querySelector('#fecharModal')
 
     AssentoEscolhido.value = assentoEscolhido
 
@@ -33,11 +35,11 @@ function carregar() {
             },
             "body": JSON.stringify(compraFeita)
         })
-            .then(resp => resp.status )
+            .then(resp => resp.status)
             .then(data => {
                 if (data == 201) {
-                    alert('ok')
-                    window.location.reload()
+                    abrirModal.classList.remove('modal')
+
                 } else {
                     alert('erro')
                 }
@@ -45,10 +47,14 @@ function carregar() {
 
     })
 
+    fecharModal.addEventListener('click', () => {
+        abrirModal.classList.add('modal')
+        window.location.reload()
+    })
+
 
 }
 function abrirPorta() {
-    // var porta = document.querySelector('.porta')
     window.location.href = '../pagina2/index.html'
 }
 

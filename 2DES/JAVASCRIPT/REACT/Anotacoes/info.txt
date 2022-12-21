@@ -3,6 +3,12 @@ Anotações importantes sobre REACT:
 	Segundo pass : Entrar na pasta
 	Terceiro passo: npm start
 	
-	npm install -> Intalar novamente as dependencias.
+	*npm init* -> Intalar novamente as dependencias.
 	
-	React é de certa forma semelhante com mobile.
+	**React é de certa forma semelhante com mobile**.
+	
+	O JSX é como um HTML, porém dentro do código Javascript.
+	
+		Não é possível ter vários elementos pais. Apenas um. 
+		
+		Não pode ser apenas class, necessita ser className.

@@ -96,7 +96,7 @@ p{
     
 }
 input::placeholder{
-    color:rgb(0, 0, 0);
+    color:rgb(102, 102, 102);
 }
 
 #btnCompra{
@@ -111,4 +111,37 @@ input::placeholder{
 #btnCompra:hover{
     cursor:pointer;
 
+}
+
+.modalSucesso{
+    height: 60vh;
+    width: 45vw;
+    background-color: #94bef3;
+    position: absolute;
+    top:25vh;
+    left: 30vw;
+    border-radius: 10px;
+
+}
+
+#quadradinho{
+    height: 20vh;
+    width: 20vw;
+    background-color: #d4d4d8;
+    position: absolute;
+    top: 20vh;
+    left: 14vw;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+#fecharModal{
+    margin-left: 38vw;
+    margin-top: 1vh;
+}
+
+.modal{
+    display: none;
+    visibility: hidden;
 }
