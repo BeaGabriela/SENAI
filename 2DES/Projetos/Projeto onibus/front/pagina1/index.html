@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./assento.css">
     <title>Onibus</title>
 </head>
 <body onload="carregar()">
-    <main>
+    <main >
         <nav>
         <div>
             <p>Clique aqui para escolher um assento.</p>
@@ -38,8 +39,52 @@
             <p>Compra finalizada com sucesso!</p>
             <p>Aproveite a viagem!</p>
         </div>
-
     </div>
+
+    
+    <main class='assento modal'>
+        <p class="fecharModalca" onclick="fecharModal()">Sair</p>
+        <nav class="AssentoModal">
+            <aside class="aside1">
+                <div class="onibus model">
+                    <div class="encosto"></div>
+                    <div class="bracoD"></div>
+                    <div class="bracoE"></div>
+                    <div id="assento"></div>
+                </div>
+            </aside>
+            <aside class="aside2">
+                <div class="onibus1 model">
+                    <div class="encosto1"></div>
+                    <div class="bracoD1"></div>
+                    <div class="bracoE1"></div>
+                    <div id="assento1"></div>
+                </div>
+            </aside>
+        </nav>
+
+        <div class="segundaColuna">
+            <aside class="aside3">
+                <div class="onibus2 model">
+                    <div class="encosto2"></div>
+                    <div class="bracoD2"></div>
+                    <div class="bracoE2"></div>
+                    <div id="assento2"></div>
+                </div>
+            </aside>
+            <aside class="aside4">
+                <div class="onibus3 model">
+                    <div class="encosto3"></div>
+                    <div class="bracoD3"></div>
+                    <div class="bracoE3"></div>
+                    <div id="assento3"></div>
+                </div>
+            </aside>
+            </nav>
+
+            <div class="assentoPedido"></div>
+    </main>
 </body>
 <script src='./index.js'></script>
+<script src='./assento.js'></script>
 </html>

@@ -1,4 +1,5 @@
 import './App.css'; 
+import HelloWorld from './components/HelloWorld'
 
 function App() {
 
@@ -18,6 +19,7 @@ const utl = 'https://via.placeholder.com/150'
       <p>Olá, {NewNAME}</p>
       <p>soma:  {sum(1,6)}</p>
       <img src={utl} alt='MinhaImagem' />
+      <HelloWorld/>
       
     </div>
   );

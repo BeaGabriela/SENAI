@@ -12,3 +12,10 @@ Anotações importantes sobre REACT:
 		Não é possível ter vários elementos pais. Apenas um. 
 		
 		Não pode ser apenas class, necessita ser className.
+	
+	**COMPONENTS**
+		Os componentes renderizam JSX, assim como App.js(Que é um componente)
+		
+		
+		
+	

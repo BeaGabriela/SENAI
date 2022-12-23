@@ -54,7 +54,4 @@ function carregar() {
 
 
 }
-function abrirPorta() {
-    window.location.href = '../pagina2/index.html'
-}
 
