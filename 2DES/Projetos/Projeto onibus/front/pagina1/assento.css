@@ -6,8 +6,8 @@
 
 .AssentoModal {
     background-color: rgb(52, 82, 248);
-    width: 20vw;
-    height: 90vh;
+    width: 17vw;
+    height: 88vh;
     margin-left: 9vw;
     display: flex;
    
@@ -17,9 +17,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-     position: absolute;
+    position: absolute;
     top: 0;
-  
+    padding: 10vh 26vw;
+    background-color:rgba(9, 0, 88, 0.459);
+    
 }
 .assento>nav {
     display: flex;
@@ -34,8 +36,9 @@
 
 .segundaColuna{
     display: flex;
-    margin-right: 60vw;
-    height: 90vh;
+    margin-right: 10vw;
+    height: 88vh;
+    
 }
 
 .onibus,
@@ -46,6 +49,7 @@
     height: 14.8vh;
     width: 6vw;
     padding: 20px;
+    border-radius: 10px;
 }
 
 
@@ -66,22 +70,23 @@
 #assento2,
 #assento3 {
     background-color: rgb(9, 0, 88);
-    width: 3.2vw;
-    height: 2vw;
-    margin: -3.9vh 8px;
+    width: 3.1vw;
+    height: 2.2vw;
+    margin: -4vh 6.8px;
     position: absolute;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     text-align: center;
-    padding: 6px;
+    padding: 5px;
     color: white;
     font-weight: bold;
+    cursor:pointer;
 }
 
 #btnCick{
     border: none;
-    background-color: rgb(240, 107, 107);
-
+    background-color: rgb(9, 0, 88);
+    color: white;
 }
 
 
@@ -113,6 +118,10 @@
 
 .fecharModalca{
     position: absolute;
-    margin-left: 30vw;
+    margin-left: 81vw;
     top: 2vh;
+}
+
+.fecharModalca:hover{
+    cursor:pointer;
 }

@@ -15,6 +15,15 @@ Anotações importantes sobre REACT:
 	
 	**COMPONENTS**
 		Os componentes renderizam JSX, assim como App.js(Que é um componente)
+		Reutilizaveis.
+		Semelhante ao mobile. 
+		
+		
+	**PROPS**
+		Props são valores passados para componentes. Podendo ser dinâmico, ou seja, mudando de execução por causa do valor da porp. 
+		O valor é passado como um atributo na chamada do componente. Os props servem apenas para leitura.
+		
+		
 		
 		
 		
