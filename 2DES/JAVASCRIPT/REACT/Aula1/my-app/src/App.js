@@ -2,7 +2,8 @@ import './App.css';
 // import HelloWorld from './components/HelloWorld'
 import SayMyName from './components/SayMyName'
 import Pessoa from './components/Pessoa'
-import Frase from './componets/frase'
+import Frase from './components/frase'
+import List from './components/List'
 
 function App() {
   const nome = 'MARIA'
@@ -15,6 +16,7 @@ function App() {
       <SayMyName nome='Carlos'/>
       <SayMyName nome={nome} />
       <Pessoa nome='Rodrigo' idade='20' profissao='programador'/>
+      <List/>
     </div>
   );
 }

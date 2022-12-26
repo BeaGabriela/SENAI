@@ -19,6 +19,7 @@ Anotações importantes sobre REACT:
 		Semelhante ao mobile. 
 		
 		
+		
 	**PROPS**
 		Props são valores passados para componentes. Podendo ser dinâmico, ou seja, mudando de execução por causa do valor da porp. 
 		O valor é passado como um atributo na chamada do componente. Os props servem apenas para leitura.
@@ -28,6 +29,12 @@ Anotações importantes sobre REACT:
 			Utilizamos o CSS modules.
 			Crie um arquivo como: Componente.module.css
 			E chamar esse CSS no componentes;
+			
+		**Fragmentos**
+			Os reacts fragments permite a criação de um componente sem elemento pai.
+			- Descomplica os nós do DOM
+			Sintaxe <> e </>m sem nome.
+			
 			
 			
 		
