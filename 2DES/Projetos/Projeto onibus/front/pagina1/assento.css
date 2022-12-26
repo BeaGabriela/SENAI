@@ -120,8 +120,18 @@
     position: absolute;
     margin-left: 81vw;
     top: 2vh;
+    height: 8vh;
 }
 
 .fecharModalca:hover{
     cursor:pointer;
+}
+
+.assentoPedido{
+    height: 6vh;
+    width: 4vw;
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
 }

@@ -124,6 +124,27 @@ input::placeholder{
 
 }
 
+#imagemConfirmado{
+    height: 10vh;
+    animation-name: seta;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index:0;   
+}
+
+@keyframes seta{
+   to{
+        opacity: 1;
+        right: 30px;
+    }
+
+    from{
+        background: #5c5ce0;
+        margin-left: 50px;
+    }
+}
+
 #quadradinho{
     height: 20vh;
     width: 20vw;
@@ -136,9 +157,18 @@ input::placeholder{
     text-align: center;
 }
 
+#quadradinho > p {
+    color: black;
+}
+
 #fecharModal{
-    margin-left: 38vw;
+    margin-left: 40vw;
     margin-top: 1vh;
+    height: 5vh;
+}
+
+#fecharModal:hover{
+    cursor:pointer;
 }
 
 .modal{

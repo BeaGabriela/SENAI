@@ -12,7 +12,7 @@
     <main >
         <nav>
         <div>
-            <p>Clique aqui para escolher um assento.</p>
+            <p>Primeiro escolha um assento, antes de preencher seus dados.</p>
             <img class='imgOnibus' src="../../assets/onibus.png" alt="onibus"/>
            <div class="porta" onclick="abrirPorta()"></div>
            <div class='porta1'></div>
@@ -25,17 +25,17 @@
             <input type="text" placeholder="CPF"  id="cpf" >
             <input type="text" placeholder="Data da viagem"  id="dataViagem" >
             <input type="text" placeholder="HOrario da viagem"  id="horarioViagem" >
-            <input type="text" placeholder="Valor Ttotal"  id="ValorTotal">
+            <input type="text" placeholder="Valor Ttotal"  id="ValorTotal" >
             <input type="text" placeholder="Assento"  id="AssentoEscolhido" disabled>
             <button id="btnCompra">Finalizar compra</button>
         </div>
     </nav>
     </main>
 
-    <div class="modalSucesso modal">
-        <img src="" alt="fechar" id="fecharModal">
+    <div class="modalSucesso modal ">
+        <img src="../../assets/fechar.png" alt="fechar" id="fecharModal">
         <div id="quadradinho">
-            <img src="" alt="Imagem de sucesso"/>
+            <img src="../../assets/confirmado.png" alt="Imagem de sucesso" id="imagemConfirmado"/>
             <p>Compra finalizada com sucesso!</p>
             <p>Aproveite a viagem!</p>
         </div>
@@ -43,7 +43,7 @@
 
     
     <main class='assento modal'>
-        <p class="fecharModalca" onclick="fecharModal()">Sair</p>
+        <img src='../../assets/fechar.png' alt="sair" class="fecharModalca"  onclick="fecharModal()"/>
         <nav class="AssentoModal">
             <aside class="aside1">
                 <div class="onibus model">

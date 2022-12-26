@@ -10,7 +10,6 @@ var assentoP = ''
 var assentoa = document.querySelector('.assento')
 
 function abrirPorta() {
-    
     assentoa.classList.remove('modal')
 
     fetch('http://localhost:3000/onibus/ladoDireito')
@@ -78,6 +77,7 @@ function buscarB(numero) {
     assentoPedido.innerHTML = `B${numero}`
     assentoP = `B${numero}`
     console.log(assentoP)
+    localStorage.setItem('assento', assentoP)
     localStorage.setItem('assento', assentoP)
 }
 

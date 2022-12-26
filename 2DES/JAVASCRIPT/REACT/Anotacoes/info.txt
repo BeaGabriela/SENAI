@@ -23,6 +23,14 @@ Anotações importantes sobre REACT:
 		Props são valores passados para componentes. Podendo ser dinâmico, ou seja, mudando de execução por causa do valor da porp. 
 		O valor é passado como um atributo na chamada do componente. Os props servem apenas para leitura.
 		
+		**CSS em React**
+			É possivel estilizar a nível componentes.
+			Utilizamos o CSS modules.
+			Crie um arquivo como: Componente.module.css
+			E chamar esse CSS no componentes;
+			
+			
+		
 		
 		
 		
