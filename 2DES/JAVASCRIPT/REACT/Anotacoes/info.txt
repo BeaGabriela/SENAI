@@ -30,12 +30,19 @@ Anotações importantes sobre REACT:
 			Crie um arquivo como: Componente.module.css
 			E chamar esse CSS no componentes;
 			
-		**Fragmentos**
+	**Fragmentos**
 			Os reacts fragments permite a criação de um componente sem elemento pai.
 			- Descomplica os nós do DOM
 			Sintaxe <> e </>m sem nome.
 			
 			
+	**Avançando em PROPS**
+		Podemos definir tipos para props, com uma validação.
+		
+		Definimos um objeto chamada propTypes no próprio componente.
+		Pode-se definir um valor padrão, nesse caso utilizamos o objeto deafultProps.
+		
+		PropTypes = Validação.
 			
 		
 		
