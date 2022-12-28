@@ -44,7 +44,9 @@ Anotações importantes sobre REACT:
 		
 		PropTypes = Validação.
 			
-		
+	**Eventos**
+		Semelhantes ao do DOM.
+		Um método é atriubuido ao envento. E deve-se ser criado no componente.
 		
 		
 		

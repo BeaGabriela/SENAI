@@ -3,6 +3,7 @@ const router = express.Router()
 
 const usuarios = require('../controllers/user.controller.js')
 
-router.get('/listarUser', usuarios.listandoUsers)
+router.get('/Listar', usuarios.listandoUsers)
+router.post('/login', usuarios.login)
 
 module.exports = router;

@@ -7,7 +7,7 @@ const user = require('./src/routes/user.routes.js')
 
 const app = express()
     .use(express.json())
-    .use(cors)
+    .use(cors())
     .use(user)
 
 app.listen(PORT, () => {
