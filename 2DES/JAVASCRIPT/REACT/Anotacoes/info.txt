@@ -48,6 +48,8 @@ Anotações importantes sobre REACT:
 		Semelhantes ao do DOM.
 		Um método é atriubuido ao envento. E deve-se ser criado no componente.
 		
+	**UseState**
+		Bem semellhante a do Mobile.
 		
 		
 		

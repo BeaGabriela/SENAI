@@ -1,41 +1,55 @@
 const ligacao = require('../models/users.model.js')
 const con = require('../dao/cafeteria.dao.js')
 const jwt = require('jsonwebtoken')
+require('dotenv').config()
 
-const listandoUsers = (req,res) =>{
+const listandoUsers = (req, res) => {
     con.query(ligacao.lendoUsuarios(), (err, result) => {
-        if(err == null){
+        if (err == null) {
             res.json(result).end()
-        }else{
+        } else {
             res.status(505).end()
         }
     })
 }
 
-const login = (req,res) => {
-    con.query(ligacao.login(req.body), (err, user) => {
-        if(err == null){
+const login = (req, res) => {
+    const user = req.body
+    con.query(ligacao.login(user), (err, result) => {
+        if (err == null) {
             console.log(process.env.KEY)
-            console.log('e')
-            jwt.sign({...user[0]}, process.env.KEY, {expiresIn: '1m'}, (error, token) => {
-                if(error == null){
-                    user['token'] = token
-                    res.status(200).json(user).end()
-                }else{
-                    console.log(error)
-                    res.status(404).json(error).end()
+            if (user.email == result[0].email && user.senha == result[0].senha) {
+                let returno = {
+                    "id_user": result[0].id_user,
+                    "email": result[0].email,
+                    "role": result[0].role,
                 }
-            })
+                jwt.sign(returno, process.env.KEY, (error, token) => {
+                    if (error == null) {
+                        returno["token"] = token
+                        console.log(token)
+                        res.status(200).json(returno).end()
+                    } else {
+                        console.log(error)
+                        res.status(404).json(error).end()
+                    }
+                })
 
-        }else{
-            res.status(404).json(err).end()
+
+            } else {
+                res.status(404).json(err).end()
+            }
         }
     })
+
 }
+
+
 
 
 
 module.exports = {
     listandoUsers,
     login
+
 }

@@ -4,7 +4,7 @@ use cafeteria;
 
 create table classificacao(
     id_classificacao integer not null auto_increment primary key,
-    classe varchar(20) not null
+    role varchar(20) not null
 );
 
 create table usuarios(
@@ -25,6 +25,6 @@ insert into usuarios values (default, 'carlos', 'carlos@gmail.com', 'carli', 2);
 
 drop view if exists vw_classe;
 create view vw_classe as
-select u.nome, u.email, u.senha, u.id_classificacao, c.classe as Classe
+select u.nome, u.email, u.senha, u.id_classificacao, c.role as role
 from usuarios u inner join  classificacao c 
 on c.id_classificacao = u.id_classificacao;
