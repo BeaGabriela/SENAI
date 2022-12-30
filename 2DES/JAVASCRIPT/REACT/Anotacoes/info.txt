@@ -52,5 +52,9 @@ Anotações importantes sobre REACT:
 		Bem semellhante a do Mobile.
 		
 		
-		
+	**Métodos por props**
+		Os métodos podem ser passados pr props.
+		OU seja, o componente filho pode atuvar o método do seu ancestral.
+		Acessadno o método por evento.
+		props.meuEvento
 	
