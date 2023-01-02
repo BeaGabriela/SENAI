@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+   background-color: #f4e4d5;
+    height: 100%;
+    width: 100%;
+
+}
+
 header{
     background-color: #8b4513;
     height: 30vh;
@@ -11,20 +18,38 @@ header{
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     text-align: center;
-    color:#d2691e;
+    color:#faeade;
+    padding-top: 2vh;
+}
+
+header > img{
+    height: 20vh;
+    margin-top: 1vh;
+    border-radius: 30%;
+    margin-left: 10px;
+
+
 }
 
 nav{
     display: flex;
+    width: 40vw;
+    height: 52vh;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    margin-left: 30vw;
+    box-shadow: 0px 2px 2px 2px #8b4513;
+    border-radius: 20px;
+    margin-top: 5vh;
 }
+    
 
 nav > h2{
-   margin: 4vh 30vw 4vh 0 ;
-   font-weight: bold;
-   color:#8b4513;
+    margin: 0vh 30vw 1vh 0;
+    font-weight: bold;
+    color: #8b4513;
 }
 
 label{
@@ -39,6 +64,8 @@ input{
     background-color: #d2691e;
     border-radius: 20px;
     border: none;
+    color: #ffffff;
+    outline: 0;
 }
 
 button{
@@ -50,12 +77,14 @@ button{
     margin: 4vh 0 0 0 ;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 p{
-    margin: 8vh 0vw 0 40vw;
+    margin: 4vh 0vw 0 40vw;
 }
 
 p> label{
     font-size: 15pt;
+    cursor: pointer;
 }

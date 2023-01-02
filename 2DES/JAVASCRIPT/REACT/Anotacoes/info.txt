@@ -58,3 +58,13 @@ Anotações importantes sobre REACT:
 		Acessadno o método por evento.
 		props.meuEvento
 	
+	
+	**If**
+		Essa ação é chamada redenrização condicional.
+		Envolvemos {}
+		É possivel usar state para criar condições;
+		
+	**Redenrização de lista**
+		Necessita um Array.
+		Após, utilizamos um map.
+		É possivel unir opreadores condiocnais com rederinzação de listas.
