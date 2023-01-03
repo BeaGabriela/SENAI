@@ -68,3 +68,10 @@ Anotações importantes sobre REACT:
 		Necessita um Array.
 		Após, utilizamos um map.
 		É possivel unir opreadores condiocnais com rederinzação de listas.
+		
+	**State lift**
+		É uma técnica utilizada para compartilhar o state;
+		Os componentes dependem do mesmo estado.
+		Então precisamos elvar o nivel a um componente pai.
+		Centralizamos o componente´pai e defimimos quem usa e quem define(setState).
+		

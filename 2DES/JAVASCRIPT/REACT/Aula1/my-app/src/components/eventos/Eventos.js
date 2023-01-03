@@ -1,4 +1,4 @@
-import Button from './eventos/Button.js'
+import Button from './Button.js'
 function Evento({numero}) {
 
     function meuEvento(){

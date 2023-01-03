@@ -8,12 +8,18 @@ body {
     background-color: #8b4513;
 }
 
+header{
+    height: 30vh;
+    background-image: url('../assets/fundo2.jpg');
+    border-radius: 20px;
+}
+
 nav {
     display: flex;
     justify-content: space-evenly;
-    background-color: #d2691e;
     align-items: center;
     padding-top: 20px;
+   
 }
 
 .slogan {
@@ -23,7 +29,9 @@ nav {
 
 .procurar > img{
     position: absolute;
-    left: 11.5vw;
+    left: 64.5vw;
+    height: 6vh;
+    top: 14vh;
 }
 
 .procurar> input{
@@ -35,7 +43,72 @@ nav {
     background-color:#512303;
     box-shadow: 2px 2px 2px 2px #522f16;
     color: #fff;
-    margin: 2vh 33vw;
+    margin: 4vh 33vw;
     
     
 }
+
+main{
+    width: 100vw;
+    height: 69vh;
+    background-color: #3f1b01;
+    border-radius: 20px;
+}
+
+.rotulos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-weight: 700;
+    font-size: 14pt;
+}
+.alinhandoOsQuadrados{
+    margin: 8vh 8vw;
+}
+.quadradoEscolha{
+    height: 30vh;
+    width: 10vw;
+    background-color: rgb(136, 49, 6);
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#valor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+
+.quadradoEscolha>img{
+    margin: 10px;
+}
+
+.alinhandoDivPopular{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vw;
+    background-color:rgb(136, 49, 6);
+    border-radius: 20px;
+    width: 20vw;
+    height: 15vh;
+}
+
+.AmostraPopular{
+    display:flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 30px;
+  
+}
+
+#mais{
+    position: relative;
+    top: 8.5vh;
+   right: 20px;
+}
+
+
