@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+// import { useState } from 'react'
 import './App.css';
-import SeuNome from './components/stateLift/seuNome';
-import Saudacao from './components/stateLift/saudacao';
+// import SeuNome from './components/stateLift/seuNome';
+// import Saudacao from './components/stateLift/saudacao';
 // import Evento from './components/Eventos'
 // import Form from './components/Form'
 // import OutraLista from './components/lista/lista';
@@ -14,36 +15,49 @@ import Saudacao from './components/stateLift/saudacao';
 
 
 function App() {
-const [nome, setNome] = useState('')
+  // const [nome, setNome] = useState('')
   // const meusItems = [
   //   'react', 'veu', 'angular'
   // ]
 
   // const nome = 'MARIA'
   return (
-    <div className="App">
-      <h1>State Lift</h1>
+    <Router>
+      <ul>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/empresa'>Empresa</Link>
+        </li>
+        <li>
+          <Link to='/contato'>Contato</Link>
+        </li>
+      </ul>
+    </Router>
+    // <div className="App">
+      {/* <h1>State Lift</h1>
       <SeuNome setNome={setNome} />
       <Saudacao nome={nome}/>
       <Saudacao nome={nome}/>
-      <Saudacao nome={nome}/>
-     
-     
-      {/* <OutraLista itens={[]}/>
+      <Saudacao nome={nome}/> */}
+
+
+  {/* <OutraLista itens={[]}/>
       <OutraLista itens={meusItems}/> */}
-      {/* <Condicional /> */}
-      {/* <Evento numero='1' /> */}
-      {/* <Evento numero='2' /> */}
-      {/* <Form /> */}
-      {/* <h1>Testando o CSS</h1>
+  {/* <Condicional /> */ }
+  {/* <Evento numero='1' /> */ }
+  {/* <Evento numero='2' /> */ }
+  {/* <Form /> */ }
+  {/* <h1>Testando o CSS</h1>
       <Frase/>
       {/* <HelloWorld/> */}
-      {/* <SayMyName nome='Matheus'/>
+  {/* <SayMyName nome='Matheus'/>
       <SayMyName nome='Carlos'/>
       <SayMyName nome={nome} />
       <Pessoa nome='Rodrigo' idade='20' profissao='programador'/>
       <List/> */}
-    </div>
+    // </div>
   );
 }
 

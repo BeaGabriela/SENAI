@@ -75,3 +75,10 @@ Anotações importantes sobre REACT:
 		Então precisamos elvar o nivel a um componente pai.
 		Centralizamos o componente´pai e defimimos quem usa e quem define(setState).
 		
+	**REACT Router**
+		Mudança de url da aplicação.
+		Troca uma view, pel aoutra.
+		Precisa instalar o pacote.
+		E algumas mudanças em App;
+		<Link> == Tag a
+		

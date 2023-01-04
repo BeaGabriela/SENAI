@@ -10,8 +10,9 @@ body {
 
 header{
     height: 30vh;
-    background-image: url('../assets/fundo2.jpg');
+    background-image: url('../assets/fundoHeader.jpg');
     border-radius: 20px;
+    color: #ffff;
 }
 
 nav {
@@ -30,8 +31,8 @@ nav {
 .procurar > img{
     position: absolute;
     left: 64.5vw;
-    height: 6vh;
-    top: 14vh;
+    height: 5vh;
+    top: 15vh;
 }
 
 .procurar> input{
@@ -43,9 +44,11 @@ nav {
     background-color:#512303;
     box-shadow: 2px 2px 2px 2px #522f16;
     color: #fff;
-    margin: 4vh 33vw;
-    
-    
+    margin: 4vh 33vw;    
+}
+
+.procurar>input::placeholder{
+    color: #ffff;
 }
 
 main{
@@ -109,6 +112,12 @@ main{
     position: relative;
     top: 8.5vh;
    right: 20px;
+   height: 4vh;
+}
+
+h2{
+    color: #ffff;
+    margin-left: 10px;
 }
 
 

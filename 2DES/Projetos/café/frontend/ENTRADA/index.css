@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #8b4513;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fumaca{
+    height: 41vh;
+    width: 23vw;
+    margin: 0px 21vw 0 20vw;
+}
+
+#xicara{
+    height: 48vh;
+    border-radius: 20px;
+    width: 27vw;
+    margin: 34vh 20vw 22px 20vw;
+}
