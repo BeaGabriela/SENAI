@@ -82,3 +82,7 @@ Anotações importantes sobre REACT:
 		E algumas mudanças em App;
 		<Link> == Tag a
 		
+		
+	**React Icons**
+		Permite adicionar icons ao projeto com uma sintaxe parecida a de componentes.
+		

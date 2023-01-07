@@ -29,7 +29,7 @@ function App() {
   return (
     <Router>
       <Navbar/>
-      <Switch>
+      {/* <Switch>
         <Route exact path="/">
           <Home />
         </Route>
@@ -39,7 +39,7 @@ function App() {
         <Route path='/contato'>
           <Contato />
         </Route>
-      </Switch>
+      </Switch> */}
       <Footer/>
     </Router>
     //   // <div className="App">

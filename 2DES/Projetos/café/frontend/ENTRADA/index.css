@@ -26,5 +26,15 @@ body{
     height: 48vh;
     border-radius: 20px;
     width: 27vw;
-    margin: 20vh 20vw 22px 20vw;
+    margin: 5vh 20vw 0px 20vw
+}
+
+#site {
+    height: 10vh;
+    margin: 10vh 0 8vh 0px;
+    }
+
+#entrar{
+    height: 12vh;
+    margin: 10vh 0 8vh 5vw;
 }
