@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= 'stylesheet' href='./style/index.css'/>
+    <link rel='stylesheet' href='./style/index.css' />
     <title>Login</title>
 </head>
-<body>
+
+<body onload="carregar()">
     <header>
-       <h1>Coffee & Vanilla</h1>
-       <img src="../assets/cafe.gif" alt='cafe'/>
+        <h1>Coffee & Vanilla</h1>
+        <img src="../assets/cafe.gif" alt='cafe' />
     </header>
-    
+
     <main>
         <nav>
-        <h2>Login</h2>
-        <label htmlFor='email'>Email:</label>
-        <input type="text"  id="email">
-        <label htmlFor='senha'>Senha:</label>
-        <input type="text"  id="senha">
-        <button onclick='validarLogin()'>Entrar</button>
+            <h2>Login</h2>
+            <label htmlFor='email'>Email:</label>
+            <input type="email" id="email">
+            <label htmlFor='senha'>Senha:</label>
+            <input type="password" id="senha">
+            <button onClick='validarLogin()'>Entrar</button>
+            <p id="informacoesLogin"></p>
         </nav>
-        <p>Não tem cadastro?<label> Vamos criar um!</label></p>
+        <p>Não tem cadastro?<label id="criarNovoCadastro"> Vamos criar um!</label></p>
+
+
+
+        <nav class="Paginas modal">
+            <div class="pagina1 modal">
+                <li>Fazer cadastro é rapido e fácil, não se preocupe.</li>
+                <li>Primeiro me diga seu nome de usuário, por favor: </li>
+                <input type='text' />
+                <button>Próximo</button>
+            </div>
+
+            <div>
+                <li>Legal, já definimos um nome, agora precisamos de um email válido, e de uma senha:</li>
+                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Senha" />
+                <button>Próximo</button>
+            </div>
+
+            <div>
+                <li>Incrível, agora confira seus dados, por favor, e confirme sua senha para continuar:</li>
+                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Senha" />
+                <input type="text" placeholder="Confirme a Senha" />
+                <button>Confirmar</button>
+            </div>
+
+            <div>
+                <li>Parabens! Agora você faz parte da comunidade Coffee & Vanilla.</li>
+                <li>Antes de continuar, por favor, confirme seu email, e faça login.</li>
+            </div>
+        </nav>
     </main>
-    
+
 </body>
-<script src='index.js'></script>
+<script src='./login.js'></script>
+
 </html>

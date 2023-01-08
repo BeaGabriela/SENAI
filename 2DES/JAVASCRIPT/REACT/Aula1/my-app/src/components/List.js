@@ -8,7 +8,7 @@ function List(){
                 <Item marca='Sei la' lancamento = {10}/>
                 <Item marca='nobel' lancamento = {5}/>
                 <Item marca='ahhhhhhhh' lancamento = {56}/> 
-                <Item /> 
+                <Item  /> 
 
             </ul>
         </div>

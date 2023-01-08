@@ -88,3 +88,11 @@ p> label{
     font-size: 15pt;
     cursor: pointer;
 }
+#informacoesLogin{
+    margin: 10px;
+}
+
+.modal{
+    display: none;
+    visibility: hidden;
+}
