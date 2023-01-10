@@ -32,29 +32,31 @@
         <nav class="Paginas modal">
             <div class="pagina1 modal">
                 <li>Fazer cadastro é rapido e fácil, não se preocupe.</li>
-                <li>Primeiro me diga seu nome de usuário, por favor: </li>
-                <input type='text' />
-                <button>Próximo</button>
+                <li id="arrumadno">Primeiro me diga seu nome de usuário, por favor: </li>
+                <input type='text' placeholder="Usario" id="usuario" />
+                <button id="irPraPag2">Próximo</button>
+               
             </div>
 
-            <div>
+            <div class="pagina2 modal">
                 <li>Legal, já definimos um nome, agora precisamos de um email válido, e de uma senha:</li>
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Senha" />
-                <button>Próximo</button>
+                <input type="text" placeholder="Email" id="inputEmailNovo" />
+                <input type="text" placeholder="Senha" id="inputSenhaNovo" />
+                <button id="irPraPag3">Próximo</button>
             </div>
 
-            <div>
+            <div class="pagina3 modal">
                 <li>Incrível, agora confira seus dados, por favor, e confirme sua senha para continuar:</li>
-                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Email"  />
                 <input type="text" placeholder="Senha" />
-                <input type="text" placeholder="Confirme a Senha" />
-                <button>Confirmar</button>
+                <input type="text" placeholder="Confirme a Senha" id="confirmarSenha"/>
+                <button  id="irPraPag4">Confirmar</button>
             </div>
 
-            <div>
+            <div  class="pagina4 modal">
                 <li>Parabens! Agora você faz parte da comunidade Coffee & Vanilla.</li>
                 <li>Antes de continuar, por favor, confirme seu email, e faça login.</li>
+                <button  id="finalizar">Confirmar</button>
             </div>
         </nav>
     </main>

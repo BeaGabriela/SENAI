@@ -1,28 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-   background-color: #f4e4d5;
+body {
+    background-color: #f4e4d5;
     height: 100%;
     width: 100%;
 
 }
 
-header{
+header {
     background-color: #8b4513;
     height: 30vh;
     width: 100%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     text-align: center;
-    color:#faeade;
+    color: #faeade;
     padding-top: 2vh;
 }
 
-header > img{
+header>img {
     height: 20vh;
     margin-top: 1vh;
     border-radius: 30%;
@@ -31,7 +31,7 @@ header > img{
 
 }
 
-nav{
+nav {
     display: flex;
     width: 40vw;
     height: 52vh;
@@ -44,23 +44,23 @@ nav{
     border-radius: 20px;
     margin-top: 5vh;
 }
-    
 
-nav > h2{
+
+nav>h2 {
     margin: 0vh 30vw 1vh 0;
     font-weight: bold;
     color: #8b4513;
 }
 
-label{
-    margin: 2vh 22vw 0 0 ;
+label {
+    margin: 2vh 22vw 0 0;
     font-weight: bold;
-    color:#8b4513;
+    color: #8b4513;
 }
 
-input{
+input {
     width: 25vw;
-    height:5vh;
+    height: 5vh;
     background-color: #d2691e;
     border-radius: 20px;
     border: none;
@@ -68,31 +68,71 @@ input{
     outline: 0;
 }
 
-button{
+button {
     width: 25vw;
-    height:5vh;
+    height: 5vh;
     background-color: #8b4513;
     border-radius: 20px;
     color: white;
-    margin: 4vh 0 0 0 ;
+    margin: 4vh 0 0 0;
     font-weight: bold;
     border: none;
     cursor: pointer;
 }
 
-p{
+p {
     margin: 4vh 0vw 0 40vw;
 }
 
-p> label{
+p>label {
     font-size: 15pt;
     cursor: pointer;
 }
-#informacoesLogin{
+
+#informacoesLogin {
     margin: 10px;
 }
 
-.modal{
+.Paginas {
+    position: absolute;
+    top: -33px;
+    left: -31vw;
+    background-color: #8b4513b4;
+    width: 101vw;
+    height: 100vh;
+}
+
+.pagina1, 
+.pagina2, 
+.pagina3, 
+.pagina4 {
+
+    background-color: #ffffff;
+    list-style: none;
+    box-shadow: 2px 2px 2px 2px #8b4513;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#arrumadno{
+   margin: 6vh 0 5vh 0vh;
+    
+}
+
+.pagina1, 
+.pagina2,
+.pagina3,
+.pagina4> li{
+    color:  #8b4513;
+    margin: 4vh 1vw;
+    font-weight: 600;
+}
+
+
+
+.modal {
     display: none;
     visibility: hidden;
 }
