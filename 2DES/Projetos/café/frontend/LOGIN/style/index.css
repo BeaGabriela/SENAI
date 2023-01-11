@@ -117,19 +117,22 @@ p>label {
 }
 
 #arrumadno{
-   margin: 6vh 0 5vh 0vh;
+   margin: 4.2vh 0 5vh 0vh;
     
 }
 
 .pagina1, 
 .pagina2,
 .pagina3,
-.pagina4> li{
+.pagina4 > li{
     color:  #8b4513;
-    margin: 4vh 1vw;
+    margin: 4vh 1vw 1vh 1vw;
     font-weight: 600;
 }
 
+.inputPags{
+    margin: 10px;
+}
 
 
 .modal {

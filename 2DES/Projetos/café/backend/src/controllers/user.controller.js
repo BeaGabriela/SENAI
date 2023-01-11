@@ -44,12 +44,23 @@ const login = (req, res) => {
 
 }
 
+const cadastrarUser = (req, res) => {
+    con.query(ligacao.cadastrarUsuario(req.body), (err, result) => {
+        if (err == null) {
+            res.status(201).end()
+        } else {
+            res.status(505).end()
+        }
+    })
+}
+
 
 
 
 
 module.exports = {
     listandoUsers,
-    login
+    login,
+    cadastrarUser
 
 }

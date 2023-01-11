@@ -45,6 +45,10 @@ function carregar() {
     var InputUsuario = document.querySelector('#usuario')
     var InputEmailNovo = document.querySelector('#inputEmailNovo')
     var InputSenhaNovo = document.querySelector('#inputSenhaNovo')
+
+    // var mostrarUser = document.querySelector('#mostrarUser')
+    var mostrarEmail = document.querySelector('#mostrarEmail')
+    var mostrarSenha = document.querySelector('#mostrarSenha')
     var InputConfirmarSenha = document.querySelector('#confirmarSenha')
 
     var NomeUsario
@@ -52,37 +56,79 @@ function carregar() {
     var senha
     var ConfirmarSenha
 
-        criarNovoCadastro.addEventListener('click', () => {
-            pags.classList.remove('modal')
-            pag1.classList.remove('modal')
 
-            btnPag1.addEventListener('click', () => {
-                pag1.classList.add('modal')
-                pag2.classList.remove('modal')
-            })
-            btnPag2.addEventListener('click', () => {
-                pag1.classList.add('modal')
-                pag2.classList.add('modal')
-                pag3.classList.remove('modal')
-            })
-            btnPag3.addEventListener('click', () => {
-                pag1.classList.add('modal')
-                pag2.classList.add('modal')
-                pag3.classList.add('modal')
-                pag4.classList.remove('modal')
-            })
-            finalizar.addEventListener('click', () => {
-                NomeUsario = InputUsuario.value
-                email = InputEmailNovo.value
-                senha = InputSenhaNovo.value
-                ConfirmarSenha = InputConfirmarSenha.value
-                console.log(NomeUsario)
-                console.log(email)
-                console.log(senha)
-                console.log(ConfirmarSenha)
-                // window.location.reload()
+    // mostrarUser.value = NomeUsario
 
-            })
+
+
+
+
+
+    criarNovoCadastro.addEventListener('click', () => {
+        pags.classList.remove('modal')
+        pag1.classList.remove('modal')
+
+        btnPag1.addEventListener('click', () => {
+            pag1.classList.add('modal')
+            pag2.classList.remove('modal')
+        })
+        btnPag2.addEventListener('click', () => {
+            pag1.classList.add('modal')
+            pag2.classList.add('modal')
+            pag3.classList.remove('modal')
+            email = InputEmailNovo.value
+            senha = InputSenhaNovo.value
+            ConfirmarSenha = InputConfirmarSenha.value
+
+            mostrarEmail.value = email
+            mostrarSenha.value = senha
+
+            console.log(mostrarEmail.value)
+            console.log(mostrarSenha.value)
 
         })
+        btnPag3.addEventListener('click', () => {
+            pag1.classList.add('modal')
+            pag2.classList.add('modal')
+            pag3.classList.add('modal')
+            pag4.classList.remove('modal')
+        })
+
+        finalizar.addEventListener('click', () => {
+            NomeUsario = InputUsuario.value
+            email = InputEmailNovo.value
+            senha = InputSenhaNovo.value
+            ConfirmarSenha = InputConfirmarSenha.value
+
+            if (senha == ConfirmarSenha) {
+                let cadastrando = {
+                    'nome': NomeUsario,
+                    'email': email,
+                    'senha': senha
+                }
+
+                fetch('http://localhost:3000/cadastrarUser', {
+                    'method': 'POST',
+                    'headers': {
+                        'Content-Type': 'application/json'
+                    },
+                    'body': JSON.stringify(cadastrando)
+                })
+                    .then(res => res.status )
+                    .then(resp => {
+                        if (resp == 201) {
+             window.location.reload()
+                        } else {
+                            alert('erro')
+                        }
+                    })
+
+            }
+
+            
+           
+
+        })
+
+    })
 }
