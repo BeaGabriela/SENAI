@@ -60,10 +60,6 @@ function carregar() {
     // mostrarUser.value = NomeUsario
 
 
-
-
-
-
     criarNovoCadastro.addEventListener('click', () => {
         pags.classList.remove('modal')
         pag1.classList.remove('modal')
@@ -117,7 +113,7 @@ function carregar() {
                     .then(res => res.status )
                     .then(resp => {
                         if (resp == 201) {
-             window.location.reload()
+                      window.location.reload()
                         } else {
                             alert('erro')
                         }

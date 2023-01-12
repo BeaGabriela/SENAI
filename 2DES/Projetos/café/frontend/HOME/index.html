@@ -10,7 +10,7 @@
     <title>Café</title>
 </head>
 
-<body>
+<body onload="carregar()">      
     <header>
         <nav>
             <div class="slogan">
@@ -32,11 +32,11 @@
             <p>Comida</p>
         </div>
         <div class="alinhandoOsQuadrados">
-            <div class="quadradoEscolha">
-                <img src="../assets/logoMars.jpg" height="70vh" />
-                <p>Cappucino</p>
+            <div class="quadradoEscolha model">
+                <img id='cappucino'  height="70vh" />
+                <p id='nomeComida'>Cappucino</p>
                 <div id='valor'>
-                    <p>$ <label>10.99</label></p>
+                    <p>$ <label id="valorComida">10.99</label></p>
                     <img src="../assets/+.png" height="20vh"/>
                 </div>
             </div>
@@ -55,6 +55,6 @@
 
     </main>
 </body>
-<!-- <script src="./index.js"></script> -->
+<script src="./index.js"></script>
 
 </html>
