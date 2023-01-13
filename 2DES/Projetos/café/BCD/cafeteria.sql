@@ -33,7 +33,7 @@ INSERT INTO topico VALUES (default,'Café'), (default, 'Chá'), (default, 'Choco
 create table comidas(
     id_comida integer not null auto_increment primary key,
     id_topico integer not null,
-    img varchar(300),
+    img mediumblob,
     nome_comida varchar(40) not null,
     descricao varchar(100) not null,
     valor float(6,2) not null,
@@ -41,7 +41,7 @@ create table comidas(
     foreign key(id_topico) references topico(id_topico)
 );
 
-INSERT INTO comidas VALUES (default,1,(to_base64(LOAD_FILE('../frontend/assets/cafe.png'))), 'cappucino', 'cafe, leite...', 10.00);
+INSERT INTO comidas VALUES (default, 1 , to_base64(LOAD_FILE('C:/Users/Beatriz/Desktop/SENAI/2DES/Projetos/café/frontend/assets/cha.jpg')), 'cappucino', 'cafe, leite...', 10.00);
 
 create table popular(
     id_popular integer not null auto_increment primary key,
