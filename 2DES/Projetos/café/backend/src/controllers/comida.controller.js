@@ -12,7 +12,7 @@ const cadastrarComidas = async (req,res)=>{
         con.query(string, (err, result)=>{
             if(err==null){
                 res.json(result)
-                /res.redirect('C:/Users/Beatriz/Desktop/SENAI/2DES/Projetos/café/frontend/HOME/index.html')
+                // res.redirect('http://127.0.0.1:5500/frontend/HOME/index.html')
             }else{
                 res.status(500).json(err).end()
             }
@@ -26,7 +26,18 @@ const listarComidas = (req, res) => {
     let string = comidas.readAll()
     con.query(string, (err, result) => {
         if(err == null){
-            res.json(comidas.toAscii(result)).end()
+            res.json(result).end()
+        }else{
+			res.status(400).end()
+            }
+    })
+}
+
+const listarPopular = (req, res) => {
+    let string = comidas.readPopular()
+    con.query(string, (err, result) => {
+        if(err == null){
+            res.json(result).end()
         }else{
 			res.status(400).end()
             }
@@ -36,5 +47,6 @@ const listarComidas = (req, res) => {
 
 module.exports= {
     listarComidas,
-    cadastrarComidas
+    cadastrarComidas,
+    listarPopular
 }

@@ -9,7 +9,10 @@ const cadastrarComida = (model, file) => {
 }
 
 const readAll = () => {
-     return 'SELECT * FROM comidas;'
+     return 'SELECT * FROM vw_comida;'
+}
+const readPopular = () => {
+     return 'SELECT * FROM vw_popular;'
 }
 
 const toAscii = (dados) => {
@@ -21,6 +24,7 @@ const toAscii = (dados) => {
 
 module.exports = {
     readAll,
+    readPopular,
     toAscii,
     cadastrarComida
 }

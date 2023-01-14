@@ -68,6 +68,8 @@ main{
 }
 .alinhandoOsQuadrados{
     margin: 8vh 8vw;
+    display: flex;
+    gap: 15px;
 }
 .quadradoEscolha{
     height: 30vh;
@@ -120,4 +122,8 @@ h2{
     margin-left: 10px;
 }
 
+.model{
+    display: none;
+    visibility: hidden;
+}
 

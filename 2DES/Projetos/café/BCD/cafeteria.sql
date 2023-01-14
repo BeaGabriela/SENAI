@@ -28,12 +28,12 @@ CREATE TABLE topico(
     topico varchar(30) not null
 );
 
-INSERT INTO topico VALUES (default,'Café'), (default, 'Chá'), (default, 'Chocolate'), (default, 'Comidas');
+INSERT INTO topico VALUES (default,'Cafe'), (default, 'Cha'), (default, 'Chocolate'), (default, 'Comidas');
 
 create table comidas(
     id_comida integer not null auto_increment primary key,
     id_topico integer not null,
-    img mediumblob,
+    img varchar(40) not null,
     nome_comida varchar(40) not null,
     descricao varchar(100) not null,
     valor float(6,2) not null,
@@ -41,7 +41,11 @@ create table comidas(
     foreign key(id_topico) references topico(id_topico)
 );
 
-INSERT INTO comidas VALUES (default, 1 , to_base64(LOAD_FILE('C:/Users/Beatriz/Desktop/SENAI/2DES/Projetos/café/frontend/assets/cha.jpg')), 'cappucino', 'cafe, leite...', 10.00);
+INSERT INTO comidas VALUES (default, 1 ,'cappucinno.png', 'Cappucino', 'cafe, leite...', 10.00);
+INSERT INTO comidas VALUES (default, 1 ,'expressoEspecial.png', 'Expresso Especial', 'cafe...', 8.00);
+INSERT INTO comidas VALUES (default, 1 ,'latte.png', 'Latte', 'cafe, leite...', 9.00);
+INSERT INTO comidas VALUES (default, 2 ,'cha.jpg', 'Chá', 'Aguá, ervas', 6.00);
+INSERT INTO comidas VALUES (default, 4 ,'suco.png', 'Suco', 'Agua, fruta...', 5.00);
 
 create table popular(
     id_popular integer not null auto_increment primary key,
@@ -58,3 +62,21 @@ create view vw_classe as
 select u.nome, u.email, u.senha, u.id_classificacao, c.role as role
 from usuarios u inner join  classificacao c 
 on c.id_classificacao = u.id_classificacao;
+
+drop view if exists vw_comida;
+create view vw_comida as
+select c.id_comida, c.id_topico, c.img, c.nome_comida, c.descricao, c.valor, t.topico as topico
+from comidas c inner join  topico t 
+on c.id_topico = t.id_topico;
+
+drop view if exists vw_popular;
+create view vw_popular as
+select c.id_comida, c.id_topico, c.img, c.nome_comida, c.descricao, c.valor, t.topico, p.id_popular as popular
+from comidas c inner join  topico t 
+on c.id_topico = t.id_topico
+inner join popular p 
+on p.id_comidas = c.id_comida;
+
+
+
+
