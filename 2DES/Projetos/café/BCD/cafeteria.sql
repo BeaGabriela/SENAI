@@ -45,7 +45,8 @@ INSERT INTO comidas VALUES (default, 1 ,'cappucinno.png', 'Cappucino', 'cafe, le
 INSERT INTO comidas VALUES (default, 1 ,'expressoEspecial.png', 'Expresso Especial', 'cafe...', 8.00);
 INSERT INTO comidas VALUES (default, 1 ,'latte.png', 'Latte', 'cafe, leite...', 9.00);
 INSERT INTO comidas VALUES (default, 2 ,'cha.jpg', 'Chá', 'Aguá, ervas', 6.00);
-INSERT INTO comidas VALUES (default, 4 ,'suco.png', 'Suco', 'Agua, fruta...', 5.00);
+INSERT INTO comidas VALUES (default, 4 ,'cha.jpg', 'Suco', 'Agua, fruta...', 5.00);
+INSERT INTO comidas VALUES (default, 3 ,'cappucinno.png', 'chococinno', 'chocolate em po, leite...', 11.00);
 
 create table popular(
     id_popular integer not null auto_increment primary key,
@@ -55,6 +56,8 @@ create table popular(
 );
 
 INSERT INTO popular VALUE(default, 1);
+INSERT INTO popular VALUE(default, 3);
+INSERT INTO popular VALUE(default, 4);
 
 
 drop view if exists vw_classe;

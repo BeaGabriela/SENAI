@@ -6,6 +6,7 @@
 
 body {
     background-color: #8b4513;
+    overflow-y:scroll;
 }
 
 header{
@@ -53,25 +54,36 @@ nav {
 
 main{
     width: 100vw;
-    height: 69vh;
+    height: 100%;
     background-color: #3f1b01;
     border-radius: 20px;
+   
 }
 
-.rotulos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+#rotulo{
     color: white;
     font-weight: 700;
     font-size: 14pt;
+    padding: 3vh 1vw 0vh 5vw;
 }
-.alinhandoOsQuadrados{
-    margin: 8vh 8vw;
+.alinhandoOsQuadrados,
+.Alinhandochas,
+.alinhandoChoco,
+.alinhandoComida{
+    margin: 2vh 0vw 6vh 7vw;
     display: flex;
     gap: 15px;
 }
-.quadradoEscolha{
+.alinharP{
+    margin: 2vh 0vw 6vh 0vw;
+    display: flex;
+    gap: 15px;
+}
+
+.quadradoEscolha,
+.quadradoCha,
+.quadradoChocolate,
+.quadradoomidaGeral{
     height: 30vh;
     width: 10vw;
     background-color: rgb(136, 49, 6);
@@ -88,18 +100,21 @@ main{
     margin: 10px;
 }
 
-.quadradoEscolha>img{
+.quadradoEscolha,
+.quadradoCha,
+.quadradoChocolate,
+.quadradoomidaGeral >img{
     margin: 10px;
 }
 
 .alinhandoDivPopular{
     display: flex;
     flex-direction: row;
-    margin-left: 10vw;
-    background-color:rgb(136, 49, 6);
+    margin-left: 8vw;
+    background-color: rgb(136, 49, 6);
     border-radius: 20px;
-    width: 20vw;
-    height: 15vh;
+    width: 21vw;
+    height: 17vh;
 }
 
 .AmostraPopular{
@@ -112,14 +127,17 @@ main{
 
 #mais{
     position: relative;
-    top: 8.5vh;
-   right: 20px;
-   height: 4vh;
+    top: -4.5vh;
+    right: -7vw;
+    height: 5vh;
+    width: 3vw
 }
 
 h2{
     color: #ffff;
     margin-left: 10px;
+    font-weight: 700;
+    padding: 3vh 1vw 0vh 5vw;
 }
 
 .model{
@@ -127,3 +145,20 @@ h2{
     visibility: hidden;
 }
 
+#imgPopular{
+    height: 15vh;
+    width: 8vw;
+    padding: 10px;
+}
+
+#nomePopular{
+    padding: 5px;
+}
+
+#valorPopular{
+    padding-top: 10px;
+}
+
+#descricaoPopular{
+    padding: 4px;
+}
