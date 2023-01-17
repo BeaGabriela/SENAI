@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color:#8b4513;
+    height:30vh;
+    width: 100vw;
+}
+.cabecalho{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.mostrarImagem{
+    width: 20vw;
+    height: 20vh;
+    border-radius:50%;
+    background-color:#d2691e;
+}
+#imagemP{
+    margin: 15vh 20vw;
+    position: absolute;
+    
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,73 @@
     <link rel="stylesheet" href="index.css">
     <title>Escolha</title>
 </head>
+
 <body>
-    
-  
+    <header>
+        <div class="cabecalho">
+            <img alt="hamburguer" />
+            <div class="mostrarImagem">
+            <img src='../assets/suco.jpg' id="imagemP" alt="suco" />
+            </div>
+            <img src='' alt="avatar" />
+        </div>
+        <div>
+            <p>Coffee</p>
+            <h2>Cappucinoo</h2>
+            <p>É hora do café!</p>
+        </div>
+        <p>cappucino is a tradicional drink...</p>
+    </header>
+    <main>
+        <div>
+            <p>Tamanho</p>
+            <input type="range" list='tickmarks' />
+            <datalist id="tickmarks">
+                <option value='0' label="P">
+                <option value='50' label="M">
+                <option value='100' label="G">
+            </datalist>
+            <input type='text' />
+        </div>
+        <div>
+            <p>Temperatura</p>
+            <button>Quente</button>
+            <button>Frio</button>
+        </div>
+        <div>
+            <p>Acuçar</p>
+            <input type="range" list='tickmarks2' />
+            <datalist id="tickmarks2">
+                <option value='0' label="0">
+                <option value='10' label="10%">
+                <option value='20' label="20%">
+                <option value='30' label="30%">
+                <option value='40' label="40%">
+                <option value='50' label="50%">
+                <option value='60' label="60%">
+                <option value='70' label="70%">
+            </datalist>
+            <input type="text" />
+        </div>
+        <div>
+            <p>Leite</p>
+            <button>Leite comum</button>
+            <button>Leite de aveia</button>
+            <button>Leite de soja</button>
+            <button>Leite de amendoa</button>
+        </div>
+        <div>
+            <input type="text" />
+            <input type="text" />
+        </div>
+        
+    </main>
+
+
+
+
+
+
 </body>
 <script src="./index.js"></script>
 

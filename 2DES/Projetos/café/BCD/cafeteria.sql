@@ -60,6 +60,16 @@ INSERT INTO popular VALUE(default, 3);
 INSERT INTO popular VALUE(default, 4);
 
 
+create table medidas(
+id_comida integer not null, 
+temperatura varchar(10) not null,
+tamanho varchar(10) not null, 
+acucar varchar(80) not null,
+leite varchar(20)not null,
+
+foreign key(id_comida) REFERENCES comidas(id_comida)
+
+);
 drop view if exists vw_classe;
 create view vw_classe as
 select u.nome, u.email, u.senha, u.id_classificacao, c.role as role
