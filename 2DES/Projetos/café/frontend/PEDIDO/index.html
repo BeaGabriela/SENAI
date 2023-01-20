@@ -19,17 +19,17 @@
             </div>
             <img src='' alt="avatar" />
         </div>
-        <div>
+        <div class='escrito'>
             <p>Coffee</p>
             <h2>Cappucinoo</h2>
             <p>É hora do café!</p>
         </div>
-        <p>cappucino is a tradicional drink...</p>
+        <p id="detalhes"''>cappucino is a tradicional drink...</p>
     </header>
     <main>
-        <div>
-            <p>Tamanho</p>
-            <input type="range" list='tickmarks' />
+        <h3>Tamanho</h3>
+        <div class='definindoSize'>
+            <input id="medidor" type="range" list='tickmarks' />
             <datalist id="tickmarks">
                 <option value='0' label="P">
                 <option value='50' label="M">
@@ -37,14 +37,15 @@
             </datalist>
             <input type='text' />
         </div>
-        <div>
-            <p>Temperatura</p>
+        
+        <h3>Temperatura</h3>
+        <div class="temperatura">
             <button>Quente</button>
             <button>Frio</button>
         </div>
-        <div>
-            <p>Acuçar</p>
-            <input type="range" list='tickmarks2' />
+        <h3>Acuçar</h3>
+        <div class='acucar'>
+            <input id="medidorAcucar" type="range" list='tickmarks2' />
             <datalist id="tickmarks2">
                 <option value='0' label="0">
                 <option value='10' label="10%">
