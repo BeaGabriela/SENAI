@@ -23,9 +23,10 @@ header{
     margin-top: 5vh;
 }
 #imagemP{
-    margin: 15vh 20vw;
+    margin: 0vh 21.5vw;
     position: absolute;
     left: 25vw;
+    height: 20vh
 }
 
 .escrito{
@@ -44,6 +45,7 @@ header{
     border-radius: 20px;
     color: white;
     margin: 16vh 4vw 1vh 4vw;
+    text-align: center;
 }
 
 #detalhes{
@@ -92,7 +94,6 @@ button{
 #medidor, #medidorAcucar{
     width: 20vw;
     color: #fff;
-
 }
 
 main > h3{
@@ -112,4 +113,35 @@ main > h3{
     gap: 40px;
     align-items: center;
     margin: 2vh 6vw;
+}
+
+.leite{
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        margin: 2vh 1vw;
+        text-align: center;
+}
+
+.leite > button {
+    padding: 1vh 8vw 3vh 1vw;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.infos{
+    display: flex;
+    gap: 20vw;
+    align-items: center;
+    margin: 14vh 2vw;
+    text-align: center;
+}
+
+.infos> input{
+    padding: 5vh 0vw 2vh 8vw;
+    text-align: center;
+}
+
+.infos>input::placeholder{
+    color:#fff;
 }

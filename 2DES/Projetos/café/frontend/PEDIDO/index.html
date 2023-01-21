@@ -10,21 +10,21 @@
     <title>Escolha</title>
 </head>
 
-<body>
+<body onload="carregar()">
     <header>
         <div class="cabecalho">
             <img alt="hamburguer" />
             <div class="mostrarImagem">
-            <img src='../assets/suco.jpg' id="imagemP" alt="suco" />
+            <img id="imagemP" alt="suco" />
             </div>
             <img src='' alt="avatar" />
         </div>
         <div class='escrito'>
             <p>Coffee</p>
-            <h2>Cappucinoo</h2>
+            <h2 id='nomeComida'></h2>
             <p>É hora do café!</p>
         </div>
-        <p id="detalhes"''>cappucino is a tradicional drink...</p>
+        <p id="detalhes">cappucino is a tradicional drink...</p>
     </header>
     <main>
         <h3>Tamanho</h3>
@@ -35,7 +35,7 @@
                 <option value='50' label="M">
                 <option value='100' label="G">
             </datalist>
-            <input type='text' />
+            <input type='text' id='valorT' />
         </div>
         
         <h3>Temperatura</h3>
@@ -58,16 +58,16 @@
             </datalist>
             <input type="text" />
         </div>
-        <div>
-            <p>Leite</p>
+        <h3>Leite</h3>
+        <div class='leite'>
             <button>Leite comum</button>
             <button>Leite de aveia</button>
             <button>Leite de soja</button>
             <button>Leite de amendoa</button>
         </div>
-        <div>
-            <input type="text" />
-            <input type="text" />
+        <div class="infos">
+            <input type="text" placeholder='$ 20.00' />
+            <input type="text" placeholder='Comprar Agora' />
         </div>
         
     </main>
