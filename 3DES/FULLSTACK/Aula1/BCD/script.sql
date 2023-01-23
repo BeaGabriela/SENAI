@@ -10,7 +10,9 @@ CREATE TABLE entregadores(
   veiculo VARCHAR(25) NOT NULL
 );
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
+
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -31,7 +33,8 @@ CREATE TABLE pedidos(
     FOREIGN KEY (id_entregador) REFERENCES entregadores(id_entregador)
 );
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
+-- LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
