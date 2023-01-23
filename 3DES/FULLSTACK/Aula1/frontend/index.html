@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <header>Gestão de entregas <label>La Alameda</label></header>
+</body>
+<main>
+    <nav>
+        <label htmlFor="inputCliente">Cliente</label>
+        <input type="email" id="inputCliente">
+        <label htmlFor="inputEndereco">Endereço</label>
+        <input type="text" id="inputEndereco">
+        <label htmlFor="inputProduto">Produto</label>
+        <input type="text" id="inputProduto">
+        <div>
+            <label htmlFor="hora_preparo">Hora:</label>
+            <input type="time" name="hora" id="hora_preparo" disabled>
+            <label htmlFor="data_pre">Dia:</label>
+            <input type="date" name="data" id="data_pre" disabled>
+        </div>
+    </nav>
+    <nav>
+        <div>
+            <h2>Em execução</h2>
+            <div>
+                <p id="id"></p>
+                <p id="endereco"></p>
+                <p id="produto"></p>
+                <p id="horario"></p>
+                <p id="data"></p>
+            </div>
+            <button>Enviar Entrega</button>
+        </div>
+        <div>
+            <h2>A caminho</h2>
+            <div>
+                <p id="id"></p>
+                <p id="endereco"></p>
+                <p id="produto"></p>
+                <p id="horario"></p>
+                <p id="data"></p>
+                <p id="entrega"></p>
+            </div>
+            <button>Pedido Entregue</button>
+        </div>
+    </nav>
+</main>
+
+</html>

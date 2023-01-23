@@ -12,7 +12,18 @@ const readAll = (req, res) => {
     })
 }
 
+const createNew = (req, res) => {
+    let string = entregadores.createNew()
+    con.query(string, (err, result) => {
+        if (err == null) {
+            res.status(201).json(result).end()
+        } else {
+            res.status(400).end()
+        }
+    })
+}
 
 module.exports = {
-    readAll
+    readAll,
+    createNew
 }

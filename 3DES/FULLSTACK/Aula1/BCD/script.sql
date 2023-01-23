@@ -26,8 +26,8 @@ CREATE TABLE pedidos(
     produto VARCHAR(25) NOT NULL,
     data DATE NOT NULL,
     hora_pedido TIME NOT NULL,
-    hora_entrega TIME NOT NULL,
-    hora_fim TIME NOT NULL,
+    hora_entrega TIME,
+    hora_fim TIME,
     id_entregador INTEGER NOT NULL,
 
     FOREIGN KEY (id_entregador) REFERENCES entregadores(id_entregador)
@@ -41,3 +41,9 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
+
+DROP IF EXISTS vw_entregadores;
+CREATE View vw_entregadores AS
+SELECT p.id_pedido,p.cliente,p.endereco,p.produto,p.data,p.hora_pedido,p.hora_entrega,p.hora_fim,e.nome  
+FROM pedidos p INNER JOIN entregadores e 
+ON p.id_entregador = e.id_entregador;
