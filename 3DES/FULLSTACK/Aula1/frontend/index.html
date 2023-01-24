@@ -8,50 +8,68 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Login</title>
 </head>
-
-<body>
+<body onload="carregar()">
     <header>Gestão de entregas <label>La Alameda</label></header>
-</body>
+
 <main>
-    <nav>
-        <label htmlFor="inputCliente">Cliente</label>
-        <input type="email" id="inputCliente">
-        <label htmlFor="inputEndereco">Endereço</label>
-        <input type="text" id="inputEndereco">
-        <label htmlFor="inputProduto">Produto</label>
-        <input type="text" id="inputProduto">
-        <div>
+    <nav class="infosGerais">
+        <div class="infoClientes">
+            <div>
+                <label htmlFor="inputCliente">Cliente</label>
+                <input type="email" id="inputCliente">
+            </div>
+            <div>
+                <label htmlFor="inputEndereco">Endereço</label>
+                <input type="text" id="inputEndereco">
+            </div>
+            <div>
+                <label htmlFor="inputProduto">Produto</label>
+                <input type="text" id="inputProduto">
+            </div>
+            <div>
+                <label htmlFor="inpuEntregador">Entregador</label>
+                <input type="text" id="inpuEntregador">
+            </div>
+            <button id="gerarPedido">Gerar Pedido</button>
+        </div>
+        <div class="horas">
+            <h3>Informações adicionais:</h3>
             <label htmlFor="hora_preparo">Hora:</label>
             <input type="time" name="hora" id="hora_preparo" disabled>
             <label htmlFor="data_pre">Dia:</label>
-            <input type="date" name="data" id="data_pre" disabled>
+            <input type="text" name="data" id="data_pre" disabled>
         </div>
     </nav>
-    <nav>
-        <div>
+    <nav class="pedidos">
+        <div class="infosExecucao">
             <h2>Em execução</h2>
-            <div>
-                <p id="id"></p>
-                <p id="endereco"></p>
-                <p id="produto"></p>
-                <p id="horario"></p>
-                <p id="data"></p>
+            <div class="infoClienteAdd model">
+                <p id="id">1</p>
+                <p id="cliente">ana</p>
+                <p id="endereco">rua</p>
+                <p id="produto">pizza</p>
+                <p id="horario">15</p>
+                <p id="data">2002</p>
+                
             </div>
-            <button>Enviar Entrega</button>
         </div>
-        <div>
+
+        
+        <div class="infosCaminho">
             <h2>A caminho</h2>
-            <div>
-                <p id="id"></p>
-                <p id="endereco"></p>
-                <p id="produto"></p>
-                <p id="horario"></p>
-                <p id="data"></p>
-                <p id="entrega"></p>
+            <div class="infosAcaminho model">
+                <p id="id">1</p>
+                <p id="cliente">ana</p>
+                <p id="endereco">campinas</p>
+                <p id="produto">rosquinha</p>
+                <p id="horario">15</p>
+                <p id="data">2023</p>
+                <p id="entrega">pendente</p>
             </div>
-            <button>Pedido Entregue</button>
+         
         </div>
     </nav>
 </main>
-
+</body>
+<script src="./script/gestao.js"></script>
 </html>

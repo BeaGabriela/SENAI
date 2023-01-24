@@ -4,3 +4,88 @@
     box-sizing: border-box;
 }
 
+header{
+    height: 6vh;
+    width: 100vw;
+    background-color: #66ccff;
+    text-align: center;
+    padding-top: 2vh;
+    font-weight: 600 ;
+    color: aliceblue;
+    font-size: 16pt;
+}
+input{
+    width: 25vw;
+    height: 3vh;
+}
+.infosGerais{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    background-color: #80d5ff;
+    overflow-y: scroll;
+}
+
+.infoClientes{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.horas{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+    gap: 4px;
+    align-items: center;
+}
+
+.horas > input{
+    width: 5vw;
+}
+
+button{
+    width: 10vw;
+    border-radius: 20px;
+    background-color: #27b4fa;
+    color: #fff;
+    border-color: #fff;
+    margin-left: 8vw;
+    height: 4vh;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.pedidos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.infoClienteAdd,
+.infosAcaminho{
+    border: 1px solid black;
+    height: 20vh;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.infosCaminho,
+.infosExecucao{
+    margin: 20px;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+

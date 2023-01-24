@@ -27,7 +27,7 @@ const updateHora_e = (req, res) => {
     let string = pedido.updateHora_Entrega(req.body)
     con.query(string, (err, result) => {
         if (err == null) {
-            res.status(201).json(result).end()
+            res.status(200).json(result).end()
         } else {
             res.status(400).end()
         }
@@ -38,7 +38,7 @@ const updateHora_fim = (req, res) => {
     let string = pedido.updateHora_fim(req.body)
     con.query(string, (err, result) => {
         if (err == null) {
-            res.status(201).json(result).end()
+            res.status(200).json(result).end()
         } else {
             res.status(400).end()
         }
