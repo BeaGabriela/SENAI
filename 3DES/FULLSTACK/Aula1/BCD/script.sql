@@ -41,6 +41,22 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
+SELECT * FROM pedidos;
+
+DROP IF EXISTS vw_pedidoExecucao;
+CREATE View vw_pedidoExecucao AS
+SELECT p.id_pedido,p.cliente,p.endereco,p.produto,p.data,p.hora_pedido,p.hora_entrega,p.hora_fim,e.nome 
+FROM pedidos p INNER JOIN entregadores e 
+ON p.id_entregador = e.id_entregador
+WHERE p.hora_entrega IS NULL; 
+
+DROP IF EXISTS vw_entregadorEntrega;
+CREATE View vw_entregadorEntrega AS
+SELECT e.nome, e.email, e.senha, e.veiculo, p.hora_fim 
+FROM entregadores e INNER JOIN pedidos p
+ON e.id_entregador = p.id_entregador
+WHERE p.hora_fim IS NULL; 
+
 
 DROP IF EXISTS vw_entregadores;
 CREATE View vw_entregadores AS
