@@ -34,7 +34,7 @@ export default function Login({ navigation }) {
                                 flag = true
                                async () =>{
                                 await AsyncStorage.setItem('data', post.id_entregador);
-                                console.log(data)
+                               
                                }
                                 navigation.navigate('Home')
                             }
