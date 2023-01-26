@@ -17,6 +17,9 @@ header{
 input{
     width: 25vw;
     height: 3vh;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 1px 1px black;
 }
 .infosGerais{
     display: flex;
@@ -62,14 +65,14 @@ button{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border: 1px solid black;
+   border: 1px solid #fff;
     height: 100%;
 }
 
 .infoClienteAdd,
 .infosAcaminho{
-    border: 1px solid black;
-    height: 20vh;
+    box-shadow: 2px 2px 2px #66ccff;
+    height: 28vh;
     padding: 10px;
     border-radius: 20px;
     margin: 20px;
@@ -85,9 +88,9 @@ button{
     visibility: hidden;
 }
 
-.infoClienteAdd>p{
-    display: flex;
-    flex-direction: row;
+.infoClienteAdd,
+.infosAcaminho > p{
+   margin: 2px 0;
 }
 
 

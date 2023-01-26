@@ -8,84 +8,72 @@
     <link rel="stylesheet" href="./style/style.css">
     <title>Login</title>
 </head>
+
 <body onload="carregar()">
     <header>Gestão de entregas <label>La Alameda</label></header>
 
-<main>
-    <nav class="infosGerais">
-        <div class="infoClientes">
-            <div>
-                <label htmlFor="inputCliente">Cliente</label>
-                <input type="email" id="inputCliente">
-            </div>
-            <div>
-                <label htmlFor="inputEndereco">Endereço</label>
-                <input type="text" id="inputEndereco">
-            </div>
-            <div>
-                <label htmlFor="inputProduto">Produto</label>
-                <input type="text" id="inputProduto">
-            </div>
-            <div class='entregador'>
-                <label htmlFor="inpuEntregador">Entregador</label>
-                <select id="inpuEntregador">
-                   
-                </select>
-                <!-- <input type="text" id="inpuEntregador"> -->
-            </div>
-            <button id="gerarPedido">Gerar Pedido</button>
-        </div>
-        <div class="horas">
-            <h3>Informações adicionais:</h3>
-            <label htmlFor="hora_preparo">Hora:</label>
-            <input type="time" name="hora" id="hora_preparo" disabled>
-            <label htmlFor="data_pre">Dia:</label>
-            <input type="text" name="data" id="data_pre" disabled>
-        </div>
-    </nav>
-    <nav class="pedidos">
-        <div class="infosExecucao">
-            <h2>Em execução</h2>
-            <div class="infoClienteAdd model">
-                <div class="rotulo">
-                    <label htmlFor="id">Id:</label>
-                    <label htmlFor="cliente">Cliente:</label>
-                    <label htmlFor="endereco">Endereço:</label>
-                    <label htmlFor="produto">Produto:</label>
-                     <label htmlFor="horario">Horário do Pedido:</label>
+    <main>
+        <nav class="infosGerais">
+            <div class="infoClientes">
+                <div>
+                    <label htmlFor="inputCliente">Cliente</label>
+                    <input type="email" id="inputCliente">
                 </div>
-                
-                <p id="id">1</p>
-               
-                <p id="cliente">ana</p>
-                
-                <p id="endereco">rua</p>
-                
-                <p id="produto">pizza</p>
-               
-                <p id="horario">15</p>
-                
-                
-                
-            </div>
-        </div>
+                <div>
+                    <label htmlFor="inputEndereco">Endereço</label>
+                    <input type="text" id="inputEndereco">
+                </div>
+                <div>
+                    <label htmlFor="inputProduto">Produto</label>
+                    <input type="text" id="inputProduto">
+                </div>
+                <div class='entregador'>
+                    <label htmlFor="inpuEntregador">Entregador</label>
+                    <select id="inpuEntregador">
 
-        
-        <div class="infosCaminho">
-            <h2>A caminho</h2>
-            <div class="infosAcaminho model">
-                <p id="id">1</p>
-                <p id="cliente">ana</p>
-                <p id="endereco">campinas</p>
-                <p id="produto">rosquinha</p>
-                <p id="horario">15</p>
-                <p id="data">2023</p>
-                <p id="entrega">pendente</p>
+                    </select>
+                    <!-- <input type="text" id="inpuEntregador"> -->
+                </div>
+                <button id="gerarPedido">Gerar Pedido</button>
             </div>
-         
-        </div>
-    </nav>
-</main>
+            <div class="horas">
+                <h3>Informações adicionais:</h3>
+                <label htmlFor="hora_preparo">Hora:</label>
+                <input type="time" name="hora" id="hora_preparo" disabled>
+                <label htmlFor="data_pre">Dia:</label>
+                <input type="text" name="data" id="data_pre" disabled>
+            </div>
+        </nav>
+        <nav class="pedidos">
+            <div class="infosExecucao">
+                <h2>Em execução</h2>
+                <div class="infoClienteAdd model">
+                    <p forhtml="id">Id: <label id="id"> 1</label></p>
+                    <p forhtml="cliente">Cliente: <label id="cliente"> ana</label></p>
+                    <p forhtml="endereco">Endereço: <label id="endereco"> rua</label></p>
+                    <p forhtml="produto">Produto: <label id="produto"> pizza</label></p>
+                    <p forhtml="data">Data: <label id="data"> 2023</label></p>
+                    <p fothtml="horario">Horario: <label id="horario"> 15</label></p>
+                </div>
+            </div>
+
+
+            <div class="infosCaminho">
+                <h2>A caminho</h2>
+                <div class="infosAcaminho model">
+                    <p>Id: <label id="id">1</label></p>
+                    <p forhtml='cliente'>Cliente: <label id="cliente">ana</label></p>
+                    <p forhtml='endereco'>Endereço: <label id="endereco">campinas</label></p>
+                    <p forhtml='produto'>Produto: <label id="produto">rosquinha</label></p>
+                    <p forhtml='horario'>Horario: <label id="horario">15</label></p>
+                    <p forhtml='data'>Data: <label id="data">2023</label></p>
+                    <!-- <p forhtml='entrega'>Entrega: <label id="entrega">pendente</label></p> -->
+                </div>
+
+            </div>
+        </nav>
+    </main>
 </body>
 <script src="./script/gestao.js"></script>
+
 </html>
