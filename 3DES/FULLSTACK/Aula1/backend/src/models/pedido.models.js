@@ -2,6 +2,15 @@ const readAll = () => {
     return 'SELECT * FROM pedidos;'
 }
 
+const readCozinha = () => {
+    return 'SELECT * FROM vw_pedidoExecucao;'
+}
+
+
+const readEntregador = (model) => {
+    return `SELECT * FROM vw_pedidoExecucao WHERE nome = '${model.nome}';`
+}
+
 const createNew =  (model) => {
     return `INSERT INTO pedidos VALUES(default,'${model.cliente}','${model.endereco}', '${model.produto}', curdate(), curtime(), null, null, ${model.id_entregador})`
 }
@@ -19,5 +28,7 @@ module.exports = {
    readAll,
    createNew,
    updateHora_Entrega,
-   updateHora_fim
+   updateHora_fim,
+   readEntregador,
+   readCozinha
 }

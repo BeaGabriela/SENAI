@@ -11,6 +11,27 @@ const readAll = (req, res) => {
         }
     })
 }
+const readCozinha = (req, res) => {
+    let string = pedido.readCozinha()
+    con.query(string, (err, result) => {
+        if (err == null) {
+            res.json(result).end()
+        } else {
+            res.status(400).end()
+        }
+    })
+}
+
+const readPedidoEntregador = (req, res) => {
+    let string = pedido.readEntregador(req.params)
+    con.query(string, (err, result) => {
+        if (err == null) {
+            res.json(result).end()
+        } else {
+            res.status(400).end()
+        }
+    })
+}
 
 const createNew = (req, res) => {
     let string = pedido.createNew(req.body)
@@ -51,5 +72,7 @@ module.exports = {
     readAll,
     createNew,
     updateHora_e,
-    updateHora_fim
+    updateHora_fim,
+    readPedidoEntregador,
+    readCozinha
 }

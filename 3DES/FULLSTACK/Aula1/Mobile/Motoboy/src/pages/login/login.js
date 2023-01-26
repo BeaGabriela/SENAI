@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import {  TextInput } from 'react-native-paper';
-import {AsyncStorage} from 'react-native';
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from '../../style/style'
 import ButtonConectar from '../../components/Button/button';
@@ -19,7 +20,13 @@ export default function Login({ navigation }) {
           .then(data => {
             setPosts(data)
           })
-      }, [])
+      }, []);
+
+    
+      const salvar = async (data) =>{
+        await AsyncStorage.setItem('data', data);
+       
+       }
 
     return (
         <View style={{ backgroundColor: '#505050', height: '100%' }}>
@@ -28,14 +35,11 @@ export default function Login({ navigation }) {
                     <TextInput style={styles.input} placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
                     <TextInput style={styles.input} secureTextEntry={true} placeholder='Informe sua senha' value={value2} onChangeText={(val2) => { setValue2(val2) }} />
                     <ButtonConectar value='Conectar' onPress={() => {
-                        posts.map((post, index) => {
+                        posts.map(async(post, index) => {
                             if (value1 == post.email && value2 == post.senha) {
                                 console.log(post)
                                 flag = true
-                               async () =>{
-                                await AsyncStorage.setItem('data', post.id_entregador);
-                               
-                               }
+                                salvar(post.id_entregador)
                                 navigation.navigate('Home')
                             }
                         })

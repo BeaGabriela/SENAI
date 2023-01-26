@@ -5,7 +5,17 @@ const readAll = (req, res) => {
     let string = entregadores.readAll()
     con.query(string, (err, result) => {
         if (err == null) {
-            res.json(result).end()
+            res.status(200).json(result).end()
+        } else {
+            res.status(400).end()
+        }
+    })
+}
+const raedEntregador = (req, res) => {
+    let string = entregadores.readEntregador(req.body)
+    con.query(string, (err, result) => {
+        if (err == null) {
+            res.status(200).json(result).end()
         } else {
             res.status(400).end()
         }
@@ -25,5 +35,6 @@ const createNew = (req, res) => {
 
 module.exports = {
     readAll,
-    createNew
+    createNew,
+    raedEntregador
 }
