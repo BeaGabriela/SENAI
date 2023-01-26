@@ -85,7 +85,10 @@ button{
     visibility: hidden;
 }
 
-
+.infoClienteAdd>p{
+    display: flex;
+    flex-direction: row;
+}
 
 
 

@@ -26,7 +26,8 @@ export default function Home() {
         <View>
             {
                 entregadores.map((item, index) => {
-                    data
+                    var datas = item.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+                    
                     return (
                         <View style={styles.viewPrincioal}>
                             <View>
@@ -40,7 +41,7 @@ export default function Home() {
                                     <Text>Endereço: {item.endereco}</Text>
                                     <Text>Horario: {item.hora_pedido}</Text>
                                     <Text>Produto: {item.produto}</Text>
-                                    <Text>Data: {item.data}</Text>
+                                    <Text>Data: {datas}</Text>
                                     <Text>Entrega: {item.hora_entrega}</Text>
                                 </View>
                                 <TouchableOpacity>Pedido Entregue</TouchableOpacity>

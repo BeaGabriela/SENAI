@@ -25,7 +25,7 @@ function carregar() {
                     listarExecucoes.querySelector('#endereco').innerHTML = r.endereco
                     listarExecucoes.querySelector('#produto').innerHTML = r.produto
                     listarExecucoes.querySelector('#horario').innerHTML = r.hora_pedido
-                    listarExecucoes.querySelector('#data').innerHTML = r.data
+                    listarExecucoes.querySelector('#data').innerHTML = r.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarExecucoes.innerHTML += `<button onclick="sairEntrega(${r.id_pedido})">Enviar Entrega</button>`
 
 
@@ -41,11 +41,23 @@ function carregar() {
                     listarEntregas.querySelector('#endereco').innerHTML = r.endereco
                     listarEntregas.querySelector('#produto').innerHTML = r.produto
                     listarEntregas.querySelector('#horario').innerHTML = r.hora_pedido
-                    listarEntregas.querySelector('#data').innerHTML = r.data
+                    listarEntregas.querySelector('#data').innerHTML = r.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarEntregas.innerHTML += ` <button onclick='PedidoEntregue(${r.id_pedido})'>Pedido Entregue</button>`
 
                     document.querySelector('.infosCaminho').appendChild(listarEntregas)
                 }
+
+            })
+        })
+
+        fetch('http://localhost:3000/entregadores')
+        .then(response => { return response.json() })
+        .then(response => {
+            response.forEach(r => {
+                inpuEntregador.cloneNode(true)
+                inpuEntregador.innerHTML += ` <option value="${r.id_entregador}">${r.nome}</option>`
+
+                document.querySelector('.entregador').appendChild(inpuEntregador)
 
             })
         })

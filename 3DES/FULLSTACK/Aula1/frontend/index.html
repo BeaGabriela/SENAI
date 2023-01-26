@@ -26,9 +26,12 @@
                 <label htmlFor="inputProduto">Produto</label>
                 <input type="text" id="inputProduto">
             </div>
-            <div>
+            <div class='entregador'>
                 <label htmlFor="inpuEntregador">Entregador</label>
-                <input type="text" id="inpuEntregador">
+                <select id="inpuEntregador">
+                   
+                </select>
+                <!-- <input type="text" id="inpuEntregador"> -->
             </div>
             <button id="gerarPedido">Gerar Pedido</button>
         </div>
@@ -44,13 +47,25 @@
         <div class="infosExecucao">
             <h2>Em execução</h2>
             <div class="infoClienteAdd model">
-                <label htmlFor="id">Id:</label>
+                <div class="rotulo">
+                    <label htmlFor="id">Id:</label>
+                    <label htmlFor="cliente">Cliente:</label>
+                    <label htmlFor="endereco">Endereço:</label>
+                    <label htmlFor="produto">Produto:</label>
+                     <label htmlFor="horario">Horário do Pedido:</label>
+                </div>
+                
                 <p id="id">1</p>
+               
                 <p id="cliente">ana</p>
+                
                 <p id="endereco">rua</p>
+                
                 <p id="produto">pizza</p>
+               
                 <p id="horario">15</p>
-                <p id="data">2002</p>
+                
+                
                 
             </div>
         </div>
