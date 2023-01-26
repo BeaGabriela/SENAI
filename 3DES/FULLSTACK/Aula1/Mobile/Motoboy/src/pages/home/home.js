@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { View, Text, Button, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 import styles from '../../style/style'
@@ -8,14 +8,19 @@ import styles from '../../style/style'
 export default function Home() {
     const [entregadores, setEntregadores] = useState([])
 
-    useEffect( async () => {  //Não pode esquecer de colocar o vetor para evitar um loop infinito.
+    useEffect( () => {  //Não pode esquecer de colocar o vetor para evitar um loop infinito.
+        listarPedidos()
+    }, [])
+
+    const listarPedidos = async () => {
         let id = await AsyncStorage.getItem("data");
         fetch('http://localhost:3000/pedido/' + id)
             .then(res => { return res.json()})
             .then(data => {
+                console.log(data)
                 setEntregadores(data)
             })
-    }, [])
+    }
 
     return (
         <View>
