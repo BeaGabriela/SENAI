@@ -7,20 +7,20 @@ const create = async (req, res) => {
 
     info.nascimento = new Date(req.body.nascimento)
 
-    const funcionario = await prisma.funcionario.create({
+    const funcionario = await prisma.tarefasPrisma.create({
         data: info
     })
     res.status(201).json(funcionario).end()
 }
 
 const read = async (req, res) => {
-    const funcionarios = await prisma.funcionario.findMany()
+    const funcionarios = await prisma.tarefasPrisma.findMany()
 
     res.status(200).json(funcionarios).end()
 }
 
 const readFunc = async (req, res) => {
-    const funcionarios = await prisma.funcionario.findUnique({
+    const funcionarios = await prisma.tarefasPrisma.findUnique({
         where: {
             id: Number(req.params.id)
         }
@@ -30,7 +30,7 @@ const readFunc = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    const funcionarios = await prisma.funcionario.update({
+    const funcionarios = await prisma.tarefasPrisma.update({
         where: {
             id: Number(req.params.id)
         },
@@ -42,7 +42,7 @@ const update = async (req, res) => {
 }
 
 const remove = async(req, res) => {
-    const funcionario = await prisma.funcionario.delete({
+    const funcionario = await prisma.tarefasPrisma.delete({
         where:{
             id: Number(req.params.id)
         }
