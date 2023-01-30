@@ -9,7 +9,7 @@ const cadastrarComida = (model, file) => {
 }
 
 const readAll = () => {
-     return 'SELECT * FROM vw_comida;'
+     return 'SELECT * FROM vw_info;'
 }
 const readPopular = () => {
      return 'SELECT * FROM vw_popular;'

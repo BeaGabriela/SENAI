@@ -59,17 +59,44 @@ INSERT INTO popular VALUE(default, 1);
 INSERT INTO popular VALUE(default, 3);
 INSERT INTO popular VALUE(default, 4);
 
+CREATE TABLE adocar(
+    id_adocar integer not null primary key auto_increment,
+    adocar varchar(20)
+);
 
-create table medidas(
+INSERT INTO adocar VALUES (DEFAULT, 'Açucar'), (DEFAULT, 'Mel'), (DEFAULT, 'Adoçante'),(DEFAULT, 'Sem');
+
+CREATE TABLE medidas(
+    id_medida integer not null primary key auto_increment,
+    medida varchar(20)
+);
+
+INSERT INTO medidas VALUES(DEFAULT, 'Pequeno'), (DEFAULT, 'Médio'), (DEFAULT, 'Grande');
+
+
+CREATE TABLE leite(
+    id_leite integer not null primary key auto_increment,
+    leite varchar(20)
+);
+
+INSERT INTO leite VALUES(DEFAULT, 'leite comum'), (DEFAULT, 'Leite de Amendôas'),(DEFAULT, 'Leite de soja'),(DEFAULT, 'Leite de aveia');
+
+
+create table proporcoes(
 id_comida integer not null, 
 temperatura varchar(10) not null,
-tamanho varchar(10) not null, 
-acucar varchar(80) not null,
-leite varchar(20)not null,
+tamanho integer not null, 
+leite integer not null,
+adocar integer not null,
 
-foreign key(id_comida) REFERENCES comidas(id_comida)
-
+foreign key(id_comida) REFERENCES comidas(id_comida),
+foreign key(adocar) REFERENCES adocar(id_adocar),
+foreign key(tamanho) REFERENCES medidas(id_medida),
+foreign key(leite) REFERENCES leite(id_leite)
 );
+
+INSERT INTO proporcoes VALUES(3, 'Quente', 2, 1, 1,2 );
+
 drop view if exists vw_classe;
 create view vw_classe as
 select u.nome, u.email, u.senha, u.id_classificacao, c.role as role
@@ -89,6 +116,21 @@ from comidas c inner join  topico t
 on c.id_topico = t.id_topico
 inner join popular p 
 on p.id_comidas = c.id_comida;
+
+
+drop view if exists vw_infos;
+create view vw_infos as
+select c.id_comida, c.id_topico, c.img, c.nome_comida, c.descricao, c.valor, t.topico, p.temperatura, p.tamanho, p.adocar as id_adocar, p.leite,a.adocar, m.medida, l.leite as tipo
+from comidas c inner join  topico t 
+on c.id_topico = t.id_topico
+inner join proporcoes p
+on p.id_comida = c.id_comida
+inner join adocar a 
+on a.id_adocar = p.adocar
+inner join leite l 
+on p.leite = l.id_leite
+inner join medidas m
+on m.id_medida = p.tamanho;
 
 
 
