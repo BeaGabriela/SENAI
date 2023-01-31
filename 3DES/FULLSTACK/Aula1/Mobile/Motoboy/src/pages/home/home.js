@@ -23,7 +23,7 @@ export default function Home() {
     }
 
     return (
-        <View>
+        <View style={styles.view_Principal}>
             {
                 entregadores.map((item, index) => {
                     var datas = item.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]

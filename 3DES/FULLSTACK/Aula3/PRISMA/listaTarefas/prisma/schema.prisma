@@ -10,12 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model statuss {
+  id_status  Int @id @default(autoincrement())
+  status String
+  s tarefasPrisma[]
+}
+
 model tarefasPrisma{
   id Int @id @default(autoincrement())
   descricao String
   horaTarefa DateTime
   horaFinalizada DateTime @default(now())
-  status String
+
+   estado statuss @relation(fields: [status], references: [id_status])
+   status Int
 }
 
 

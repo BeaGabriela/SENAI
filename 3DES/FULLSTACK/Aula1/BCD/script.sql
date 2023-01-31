@@ -11,8 +11,8 @@ CREATE TABLE entregadores(
 );
 
 
-LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
--- LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
+-- LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -33,8 +33,8 @@ CREATE TABLE pedidos(
     FOREIGN KEY (id_entregador) REFERENCES entregadores(id_entregador)
 );
 
-LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
--- LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
+-- LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/FULLSTACK/Aula1/dados/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -45,7 +45,7 @@ SELECT * FROM pedidos;
 
 DROP IF EXISTS vw_pedidoExecucao;
 CREATE View vw_pedidoExecucao AS
-SELECT p.id_pedido,p.cliente,p.endereco,p.produto,p.data,p.hora_pedido,p.hora_entrega,p.hora_fim,e.nome 
+SELECT p.id_pedido,p.cliente,p.endereco,p.produto,p.data,p.hora_pedido,p.hora_entrega,p.hora_fim,e.nome, e.id_entregador
 FROM pedidos p INNER JOIN entregadores e 
 ON p.id_entregador = e.id_entregador
 WHERE p.hora_entrega IS NULL; 

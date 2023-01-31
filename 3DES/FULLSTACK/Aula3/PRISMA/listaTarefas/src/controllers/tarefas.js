@@ -5,7 +5,7 @@ const prisma = new PrismaClient() //Classe
 const create = async (req, res) => {
     const info = req.body
 
-    info.nascimento = new Date(req.body.nascimento)
+    info.horaTarefa = new Date(req.body.horaTarefa)
 
     const funcionario = await prisma.tarefasPrisma.create({
         data: info

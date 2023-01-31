@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-const tarefa = require('../controllers/funcionario')
+const tarefa = require('../controllers/tarefas')
+
 
 router.get('/tarefas', tarefa.read)
 router.get('/tarefas/:id', tarefa.readFunc)

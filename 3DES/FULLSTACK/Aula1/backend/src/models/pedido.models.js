@@ -8,7 +8,7 @@ const readCozinha = () => {
 
 
 const readEntregador = (model) => {
-    return `SELECT * FROM vw_pedidoExecucao WHERE nome = '${model.nome}';`
+    return `SELECT * FROM vw_pedidoExecucao WHERE id_entregador = ${model.id_entregador};`
 }
 
 const createNew =  (model) => {
