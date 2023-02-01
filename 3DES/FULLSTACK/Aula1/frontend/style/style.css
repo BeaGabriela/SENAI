@@ -1,27 +1,29 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-header{
+header {
     height: 6vh;
     width: 100vw;
     background-color: #66ccff;
     text-align: center;
     padding-top: 2vh;
-    font-weight: 600 ;
+    font-weight: 600;
     color: aliceblue;
     font-size: 16pt;
 }
-input{
+
+input {
     width: 25vw;
     height: 3vh;
     border-radius: 20px;
     border: none;
     box-shadow: 1px 1px black;
 }
-.infosGerais{
+
+.infosGerais {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -30,14 +32,14 @@ input{
     overflow-y: scroll;
 }
 
-.infoClientes{
+.infoClientes {
     margin: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.horas{
+.horas {
     display: flex;
     flex-direction: column;
     margin-left: 2vw;
@@ -45,11 +47,13 @@ input{
     align-items: center;
 }
 
-.horas > input{
-    width: 5vw;
+.horas>input {
+    width: 5.5vw;
+    text-align: center;
+    padding: 2px;
 }
 
-button{
+button {
     width: 10vw;
     border-radius: 20px;
     background-color: #27b4fa;
@@ -61,16 +65,17 @@ button{
     margin-top: 10px;
 }
 
-.pedidos{
+.pedidos {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
-   border: 1px solid #fff;
+    border: 1px solid #fff;
     height: 100%;
 }
 
 .infoClienteAdd,
-.infosAcaminho{
+.infosAcaminho {
     box-shadow: 2px 2px 2px #66ccff;
     height: 28vh;
     padding: 10px;
@@ -79,12 +84,12 @@ button{
 }
 
 .infosCaminho,
-.infosExecucao{
+.infosExecucao {
     margin: 20px;
 }
 
 .infosCaminho,
-.infosExecucao > h2{
+.infosExecucao>h2 {
     margin: 20px;
 }
 
@@ -99,6 +104,3 @@ button{
   flex-direction: column;
   gap: 10px;
 } */
-
-
-

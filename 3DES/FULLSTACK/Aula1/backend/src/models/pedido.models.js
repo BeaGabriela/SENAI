@@ -1,5 +1,5 @@
 const readAll = () => {
-    return 'SELECT * FROM pedidos;'
+    return 'SELECT * FROM vw_pedidoExecucaoEntrega;'
 }
 
 const readCozinha = () => {

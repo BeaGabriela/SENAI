@@ -29,8 +29,8 @@ export default function Home() {
                     var datas = item.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     
                     return (
-                        <View style={styles.viewPrincioal}>
-                            <View>
+                        <View style={styles.view_geral}>
+                            <View style={styles.view_coznha}>
                                 <Text>A caminho!</Text>
                                 <Text>Entregador: {item.id_entregador}</Text>
                             </View>

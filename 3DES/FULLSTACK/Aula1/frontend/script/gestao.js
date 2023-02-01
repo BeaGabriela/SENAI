@@ -31,6 +31,8 @@ function carregar() {
 
                     document.querySelector('.infosExecucao').appendChild(listarExecucoes)
 
+
+
                 }
                  if (r.hora_fim == null && r.hora_entrega != null) {
                     var listarEntregas = document.querySelector('.infosAcaminho').cloneNode(true)
@@ -42,6 +44,8 @@ function carregar() {
                     listarEntregas.querySelector('#produto').innerHTML = r.produto
                     listarEntregas.querySelector('#horario').innerHTML = r.hora_pedido
                     listarEntregas.querySelector('#data').innerHTML = r.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+                    listarEntregas.querySelector('#entregador').innerHTML = r.id_entregador
+
                     listarEntregas.innerHTML += ` <button onclick='PedidoEntregue(${r.id_pedido})'>Pedido Entregue</button>`
 
                     document.querySelector('.infosCaminho').appendChild(listarEntregas)
@@ -55,7 +59,7 @@ function carregar() {
         .then(response => {
             response.forEach(r => {
                 inpuEntregador.cloneNode(true)
-                inpuEntregador.innerHTML += ` <option value="${r.id_entregador}">${r.nome}</option>`
+                inpuEntregador.innerHTML += ` <option value="${r.id_entregador}">${r.id_entregador} - ${r.nome}</option>`
 
                 document.querySelector('.entregador').appendChild(inpuEntregador)
 
