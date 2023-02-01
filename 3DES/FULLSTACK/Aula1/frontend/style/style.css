@@ -93,12 +93,12 @@ button{
     visibility: hidden;
 }
 
-.infoClienteAdd,
+/* .infoClienteAdd,
 .infosAcaminho > p{
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+} */
 
 
 
