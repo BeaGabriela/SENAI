@@ -1,0 +1,67 @@
+**Por que não se pode colocar o CPF como primary key?**
+	R: Não é aconselhavél, devido a . 
+	
+	
+**No prima, diferente do banco de dados, para chmar uma chave de oytra tabela, é necessário ter**:
+	'usuario Usuario @relation(fields: [usuario_id], references:[id]}
+	Onde usuario é uma variavel definida.
+	Usuario é a tabela que estou 'chamando'
+	@relation relação
+	fields campo da tabela que vai estar vinculado com a variavel da outra tabela.
+	usuario_id a variavel que você vai vincular com a outra tabela.
+	references referência 
+	id é a variavel que você está chamando da outra tabela.
+	
+	
+**Por que utilizar um vetor?**:	
+	Exemplo: publi publicacoes[]
+	É necessário justamente para armazenar mais de uma publicacao.
+	
+**É realmente necessário colocar async?**:
+	Sim.Por ser uma função que utiliza o await, é necessário colocar o async. 
+	É uma comunicação que acontece em tempo real, ou seja, a comunicação leva um certo tempo. E é necessário carregar algo.
+	
+**Como filtrar informações que você deseja mostrar na busca**:	
+	let user = await prisma.usuario.FinfMany({
+			select : {
+			email: true,
+			nome: true
+		}
+	})
+
+**Semelhante ao banco, como utiliza o SELECT**:
+	Como o mysql, ao colocar * estamos definido que queremos todos os campos das tabelas. 
+	Ao colocar select, como o de cima, estamos definindo quais campos desejamos pegar.
+	
+	
+**Semelhante ao banco, como utiliza o where**:
+	Deve-se utilizar o findMany()
+	where : {
+		AND: [
+			{email: req.body.email},
+			{senha: req.body.senha} --> Está entre chaves, justamente por cada um ser um JSON. Por que se não eçle vai entender que se esta configurando aquele campo.
+		]
+	}
+	
+**Como fazer um inner join no prisma**:
+
+	findUnique(
+		where : {
+			id: Number(req.params.id)
+		},
+		select: {
+			nome: true,
+			email: true,
+			publicacao: {
+				select:{
+					titulo: true,
+					conteudo: true
+				}
+			}
+		}
+	})
+	
+**Diferença entre FindMany e FindUnique**:
+	FindMany é quando ele mostra todos os registros;
+	FindUnique é quando, se baseando em uma chave, ele mostra os dados apenas daquele usuário.
+	

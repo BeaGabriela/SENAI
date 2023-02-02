@@ -3,7 +3,7 @@ const readAll = () => {
 }
 
 const readEntregador = (model) => {
-    return `SELECT * FROM entregadores WHERE email =${model.email} AND senha= ${model.senha} ;`
+    return `SELECT * FROM entregadores WHERE email ='${model.email}' AND senha= '${model.senha}' ;`
 }
 
 

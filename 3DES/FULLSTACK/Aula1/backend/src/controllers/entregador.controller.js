@@ -12,12 +12,12 @@ const readAll = (req, res) => {
     })
 }
 const raedEntregador = (req, res) => {
-    let string = entregadores.readEntregador(req.params)
+    let string = entregadores.readEntregador(req.body)
     con.query(string, (err, result) => {
         if (err == null) {
             res.status(200).json(result).end()
         } else {
-            res.status(400).end()
+            res.status(400).json(err).end()
         }
     })
 }
