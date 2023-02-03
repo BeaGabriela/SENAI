@@ -19,9 +19,3 @@ CREATE TABLE `tarefasPrisma` (
 
 -- AddForeignKey
 ALTER TABLE `tarefasPrisma` ADD CONSTRAINT `tarefasPrisma_status_fkey` FOREIGN KEY (`status`) REFERENCES `statuss`(`id_status`) ON DELETE RESTRICT ON UPDATE CASCADE;
-
-DROP VIEW IF EXISTS `Tarefas_status`;
-CREATE view `Tarefas_status` 
-SELECT t.id, t.descricao, t.horaTarefa, t.horaFinalizada, t.status, s.status
-FROM  tarefasPrisma t INNER JOIN statuss s
-ON t.status = s.id_status;

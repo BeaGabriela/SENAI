@@ -10,26 +10,48 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Setor{
-  id_setor Int  @id @default(autoincrement())
-  nome String
+model Setor {
+  id_setor Int        @id @default(autoincrement())
+  nome     String
   comissao Int
   produtos Produtos[]
   vendedor Vendedor[]
 }
 
-model Produtos{
-    id_produto Int  @id @default(autoincrement())
-    nomeProduto String
-    valorProduto Float 
-    setores Int
-    setor Setor  @relation(fields: [setores], references: [id_setor])
+model Produtos {
+  id_produto   Int        @id @default(autoincrement())
+  nomeProduto  String
+  valorProduto Float
+  setores      Int
+  detalhes     Detalhes[]
+
+  setor Setor @relation(fields: [setores], references: [id_setor])
 }
 
-model Vendedor{
-  id_vendedor Int  @id @default(autoincrement())
+model Vendedor {
+  id_vendedor  Int        @id @default(autoincrement())
   nomeVendedor String
-  salario Float 
-  setorCuida Int
+  salario      Float
+  setorCuida   Int
+  vendas       Vendas[]
+
   setores Setor @relation(fields: [setorCuida], references: [id_setor])
+}
+
+model Vendas {
+  id            Int      @id @default(autoincrement())
+  data         DateTime @default(now())
+  id_vendedores Int
+  detalhes Detalhes[]
+  vendedores Vendedor @relation(fields: [id_vendedores], references: [id_vendedor])
+}
+
+model Detalhes {
+  id Int @id @default(autoincrement())
+  id_produto Int 
+  id_venda   Int
+  quantidade Int
+
+  produtos   Produtos @relation(fields: [id_produto], references: [id_produto])
+  vendas Vendas @relation(fields: [id_venda], references: [id])
 }
