@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./index.css">
     <title>CasaRey</title>
 </head>
-<body>
+<body onload='carregar()'>
     <header>
         <h2>Setores</h2>
         <div>
@@ -17,11 +17,21 @@
         </div>
     </header>
     <main>
+        <div>
         <h3>Para cadastrar um Setor, por favor insira as informações necessárias:</h3>
         <nav>
             <label>Nome do Setor: <input type="text" name="nome" id="nomeProduto"></label>
             <label>Valor da comissão: <input type="text" name="nome" id="valorProduto"></label>
+            <button id='cadastrar'>Cadastrar</button>
         </nav>
+        </div>
+        <div>
+            <h3>Setores já cadastrados:</h3>
+            <nav>
+                <p id="nomeSetor">admonstracao</p>
+                <p id="comissao">20</p>
+            </nav>
+        </div>
     </main>
 </body>
 <script src="./index.js"></script>
