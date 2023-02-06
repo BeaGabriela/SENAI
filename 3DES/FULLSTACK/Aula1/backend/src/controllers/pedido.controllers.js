@@ -5,7 +5,7 @@ const readAll = (req, res) => {
     let string = pedido.readAll()
     con.query(string, (err, result) => {
         if (err == null) {
-            res.json(result).end()
+            res.status(200).json(result).end()
         } else {
             res.status(400).end()
         }

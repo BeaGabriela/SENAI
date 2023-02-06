@@ -22,6 +22,17 @@ const raedEntregador = (req, res) => {
     })
 }
 
+const raedEntregadorId = (req, res) => {
+    let string = entregadores.readEntregadorId(req.params)
+    con.query(string, (err, result) => {
+        if (err == null) {
+            res.status(200).json(result).end()
+        } else {
+            res.status(400).json(err).end()
+        }
+    })
+}
+
 const createNew = (req, res) => {
     let string = entregadores.createNew()
     con.query(string, (err, result) => {
@@ -36,5 +47,6 @@ const createNew = (req, res) => {
 module.exports = {
     readAll,
     createNew,
-    raedEntregador
+    raedEntregador,
+    raedEntregadorId
 }

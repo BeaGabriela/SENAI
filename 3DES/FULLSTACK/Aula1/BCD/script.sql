@@ -64,8 +64,9 @@ ON e.id_entregador = p.id_entregador
 WHERE p.hora_fim IS NULL; 
 
 
-DROP IF EXISTS vw_entregadores;
+DROP VIEW IF EXISTS vw_entregadores;
 CREATE View vw_entregadores AS
-SELECT p.id_pedido,p.cliente,p.endereco,p.produto,p.data,p.hora_pedido,p.hora_entrega,p.hora_fim,e.nome  
+SELECT p.id_pedido, p.id_entregador,p.cliente,p.endereco,p.produto,p.data,p.hora_pedido,p.hora_entrega,p.hora_fim,e.nome  
 FROM pedidos p INNER JOIN entregadores e 
-ON p.id_entregador = e.id_entregador;
+ON p.id_entregador = e.id_entregador
+WHERE p.hora_fim IS NULL; 
