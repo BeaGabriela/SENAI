@@ -81,10 +81,16 @@ CREATE TABLE leite(
 
 INSERT INTO leite VALUES(DEFAULT, 'leite comum'), (DEFAULT, 'Leite de Amendôas'),(DEFAULT, 'Leite de soja'),(DEFAULT, 'Leite de aveia');
 
+CREATE TABLE temperatura(
+    id integer not null primary key auto_increment,
+    temperatura varchar(20)
+);
+
+INSERT INTO temperatura VALUES(DEFAULT, 'Quente'), (DEFAULT, 'Frio'),(DEFAULT, 'Morno');
 
 create table proporcoes(
 id_comida integer not null, 
-temperatura varchar(10) not null,
+temperatura integer not null,
 tamanho integer not null, 
 leite integer not null,
 adocar integer not null,
@@ -92,10 +98,11 @@ adocar integer not null,
 foreign key(id_comida) REFERENCES comidas(id_comida),
 foreign key(adocar) REFERENCES adocar(id_adocar),
 foreign key(tamanho) REFERENCES medidas(id_medida),
+foreign key(temperatura) REFERENCES temperatura(id),
 foreign key(leite) REFERENCES leite(id_leite)
 );
 
-INSERT INTO proporcoes VALUES(3, 'Quente', 2, 1, 1,2 );
+INSERT INTO proporcoes VALUES(3, 1, 2, 1, 1,2 );
 
 drop view if exists vw_classe;
 create view vw_classe as

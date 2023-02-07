@@ -145,3 +145,8 @@ main > h3{
 .infos>input::placeholder{
     color:#fff;
 }
+
+#model{
+    display: none;
+    visibility: hidden;
+}
