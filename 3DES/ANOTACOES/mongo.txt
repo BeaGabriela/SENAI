@@ -1,0 +1,12 @@
+NOSQL -> Não relacional -> MongoDB é baseado en documentos, como: XML, JSON. -> SEMI ESTRUTURADOS.
+	
+	Banco de dados não estruturados ->  BUCKET
+	
+	
+	**Usando o MONGODB**
+		# Novo projeto: 
+			npm init
+			npm i express cors mongoose
+		
+		
+		
