@@ -146,7 +146,24 @@ main > h3{
     color:#fff;
 }
 
-#model{
+.model{
     display: none;
     visibility: hidden;
+}
+
+select{
+    border-radius:  20px;
+    background-color: #d2691e;
+    color: #fff;
+    font-size: 14pt;
+    font-family: 'Times New Roman', Times, serif;
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+select > option {
+    background-color: #ed863c;
+    border-radius: 20px;
+    
 }
