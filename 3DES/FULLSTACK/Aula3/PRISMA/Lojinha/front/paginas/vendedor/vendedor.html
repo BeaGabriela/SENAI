@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>CasaRey</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <h2>Vendedor</h2>
+        <div>
+            <a href="../setor/setor.html"><button title="a">Cadastrar Setor</button></a>
+            <button onclick="cadastrarVenda()" title="a">Cadastrar Vendas</button>
+        </div>
+    </header>
+    <main>
+        <h3>Para cadastrar um Vendedor, por favor insira as informações necessárias:</h3>
+        <nav>
+            <label>Nome do vendedor: <input type="text" name="nome" id="nomeProduto"></label>
+            <label>Valor do salario: <input type="text" name="nome" id="valorProduto"></label>
+            <div id="setorNew">
+                <label>Setor: </label>
+                <select title="setor" class="setores model"></select>
+            </div>
+            <button title="btn" id="buttonCadastrar">Cadastrar</button>
+        </nav>
+        <nav class="listando">
+            <h2>Vendedores já cadastrados</h2>
+            <div class="listar model">
+                <label>Nome:</label>
+                <p id="nome"></p>
+                <label>Valor:</label>
+                <p id="valor"></p>
+                <label>Setor:</label>
+                <p id="setor"></p>
+            </div>
+        </nav>
+        <nav class="listandoVendas">
+            <div class="listarVendas model">
+                <label>Data compra:</label>
+                <p id="data"></p>
+                <label>Vendedor:</label>
+                <p id="id_vendedor"></p>
+                <div class="detalhes">
+                    <div id="detalhe" class="model">
+                        <label>Produto:</label>
+                        <p id="id_produto"></p>
+                        <label>Venda: </label>
+                        <p id="venda"></p>
+                        <label>Quantidade:</label>
+                        <p id="qtd2"></p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </main>
+
+    <div class="abrirModal model">
+        <div class="modal ">
+            <h1 onclick="fecharModal()">x</h1>
+            <h2>Insira as informações: </h2>
+            <div id="divModal">
+                <label>Quantidade:</label><input type="number" id="qtd">
+                <div id="getVendedor">
+                    <label>Vendedor</label>
+                    <select class="vendedor model"></select>
+                </div>
+                <div id="getProduto">
+                    <label>Produto:</label><select class="produto model" ></select>
+                </div>
+            </div>
+            <div class="botoesCadastrar">
+                <button id="cadastrarVenda">Cadastrar</button>
+                <button id="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

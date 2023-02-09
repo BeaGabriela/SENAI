@@ -54,19 +54,50 @@ h3{
 nav > button {
     width: 8vw;
     height: 5vh;
-    margin-left: 6.5vw;
+    margin-left: 3.5vw;
     margin-top: 2vh;
 }
 
 nav{
-    height: 28vh;
-    width: 20vw;
+    height: 15vh;
+    width: 15vw;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
     background-color: cornflowerblue;
     border-radius: 20px;
     margin-left: 10vw;
     margin-top: 10vh;
+    text-align: center;
+   
 }
 
+.cadastrandoNew{
+    height: 28vh;
+    width: 17vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    text-align: center;
+    padding: 2vh;
+}
+
+.cadastrarNewSetor,
+.cadastrado{
+    margin-left: 10vw;
+}
+
+label{
+    font-size: 15pt;
+    font-weight: 600;
+
+}
+
+.model{
+    display: none;
+    visibility: hidden;
+}

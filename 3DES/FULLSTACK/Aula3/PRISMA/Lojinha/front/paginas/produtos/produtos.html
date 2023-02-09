@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +8,12 @@
     <title>CasaRey</title>
 </head>
 
-<body>
+<body onload="carregar()">
     <header>
         <h2>Produtos</h2>
         <div>
-            <a href="../paginas/setor.html"><button title="a">Cadastrar Setor</button></a>
-            <a href="../paginas/vendas.html"><button title="a">Cadastrar Vendedor</button></a>
+            <a href="../setor/setor.html"><button title="a">Cadastrar Setor</button></a>
+            <a href="../vendedor/vendedor.html"><button title="a">Cadastrar Vendedor</button></a>
         </div>
     </header>
     <main>
@@ -22,11 +21,14 @@
         <nav>
             <label>Nome do produto: <input type="text" name="nome" id="nomeProduto"></label>
             <label>Valor do produto: <input type="text" name="nome" id="valorProduto"></label>
-            <label>Setor: </label>
-            <select name="setor" id="setores">
-            </select>
+            <div id="setorNew">
+                <label>Setor: </label>
+                <select title="setor" class="setores model"></select>
+            </div>
+            <button title="btn" id="buttonCadastrar">Cadastrar</button>
         </nav>
     </main>
 </body>
 <script src="./index.js"></script>
+
 </html>

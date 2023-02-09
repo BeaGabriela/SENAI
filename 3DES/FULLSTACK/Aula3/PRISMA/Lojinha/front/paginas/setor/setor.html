@@ -12,24 +12,24 @@
     <header>
         <h2>Setores</h2>
         <div>
-            <a href="../paginas/produtos.html"><button title="a">Cadastrar Produtos</button></a>
-            <a href="../paginas/vendas.html"><button title="a">Cadastrar Vendedor</button></a>
+            <a href="../produtos/produtos.html"><button title="a">Cadastrar Produtos</button></a>
+            <a href="../vendedor/vendedor.html"><button title="a">Cadastrar Vendedor</button></a>
         </div>
     </header>
     <main>
-        <div>
+        <div class="cadastrarNewSetor">
         <h3>Para cadastrar um Setor, por favor insira as informações necessárias:</h3>
-        <nav>
+        <nav class="cadastrandoNew">
             <label>Nome do Setor: <input type="text" name="nome" id="nomeProduto"></label>
             <label>Valor da comissão: <input type="text" name="nome" id="valorProduto"></label>
             <button id='cadastrar'>Cadastrar</button>
         </nav>
         </div>
-        <div>
+        <div class="cadastrado">
             <h3>Setores já cadastrados:</h3>
-            <nav>
-                <p id="nomeSetor">admonstracao</p>
-                <p id="comissao">20</p>
+            <nav class="jaCadastrados model">
+                <label>Setor:</label><p id="nomeSetor"></p>
+               <label>Comissão:</label><p id="comissao"></p>
             </nav>
         </div>
     </main>

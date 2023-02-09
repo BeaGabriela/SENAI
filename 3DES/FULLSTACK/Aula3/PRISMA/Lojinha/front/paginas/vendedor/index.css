@@ -4,9 +4,171 @@
     box-sizing: border-box;
 }
 
+h2, label{
+    color:#fff;
+    padding-top: 2vh;
+}
+
+input{
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    width: 20vw;
+}
+
 header{
     height: 15vh;
     width: 100vw;
-    background-color: beige;
+    background-color: rgb(53, 69, 239);
     text-align: center;
+}
+
+main{
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    background-color: #0011ffb0;
+    padding: 15px;
+}
+
+h3{
+    padding-top: 6vh;
+    margin-left: 35vw;
+    color: white;
+}
+
+nav > button, #setorNew > select, select {
+    width: 8vw;
+    height: 5vh;
+    margin-left: 7vw;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+header > div > a >  button, header > div > button, .botoesCadastrar > button{
+    width: 8vw;
+    height: 5vh;
+    margin-left: 1vw;
+    margin-top: 2vh;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+nav{
+    height: 35vh;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    margin-left: -60vw;
+    margin-top: 10vh;
+    text-align: center;
+    padding: 3vh;
+}
+
+.listandoVendas{
+    height: auto;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    margin-left: 8vw;
+    margin-top: 10vh;
+    text-align: center;
+    padding: 3vh;
+}
+
+.listando{
+    height: auto;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 20px;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    text-align: center;
+    padding: 3vh;
+}
+
+.listar{
+    background-color: cornflowerblue;
+    box-shadow: 2px 2px 2px #fff;
+    height: 18vh;
+    width: 15vw;
+    border-radius: 20px;
+    gap: 2px;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    text-align: center;
+    padding: 3vh;
+}
+
+.listarVendas{
+    background-color: cornflowerblue;
+    box-shadow: 2px 2px 2px #fff;
+    height: auto;
+    width: 15vw;
+    border-radius: 20px;
+    gap: 2px;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    text-align: center;
+    padding: 3vh;
+}
+
+
+label{
+    font-size: 15pt;
+    font-weight: 600;
+
+}
+
+.model{
+    display: none;
+    visibility: hidden;
+}
+
+.abrirModal{
+    height: 100vh;
+    width: 100vw;
+    background-color:  rgba(100, 148, 237, 0.754);
+    position: absolute;
+    top: 0;
+}
+
+h1{
+    padding-left: 19vw;
+    cursor: pointer;
+}
+
+.modal{
+    background-color: cornflowerblue;
+    position: absolute;
+    height: 60vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3vw;
+    top: 20vh;
+    left: 40vw;
+    box-shadow: 2px 2px 2px 2px #fff;
+    border-radius: 20px;
+    
+}
+
+#divModal{
+    background-color: cornflowerblue;
+    height: 35vh;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
 }
