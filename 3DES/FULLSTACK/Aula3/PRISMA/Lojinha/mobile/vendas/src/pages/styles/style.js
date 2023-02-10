@@ -9,6 +9,12 @@ export default StyleSheet.create({
 
     },
 
+    viewGeralVendas: {
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: "#6495ed",
+    },
+
     header: {
         backgroundColor: "rgb(53, 69, 239)",
         height: "6vh",
@@ -26,14 +32,25 @@ export default StyleSheet.create({
     },
 
     nav: {
-        height: "25vh",
+        height: "28vh",
         width: "80vw",
         marginLeft: "10vw",
         backgroundColor: "#6495ed",
         borderRadius: "20px",
         textAlign: "center",
         boxShadow: "2px 2px 2px #fff",
-        marginTop: "10vh"
+        marginTop: "8vh"
+    },
+
+    navVendas:{
+        height: "8%",
+        width: "80vw",
+        marginLeft: "10vw",
+        backgroundColor: "#6495ed",
+        borderRadius: "20px",
+        textAlign: "center",
+        boxShadow: "2px 2px 2px #fff",
+        marginTop: "8vh"
     },
 
     titulo: {
@@ -71,6 +88,9 @@ export default StyleSheet.create({
         marginTop: "1.5vh",
         fontSize: "16pt",
         fontWeight: '600'
+    },
+    text: {
+        paddingTop: "5px"
     }
 
 
