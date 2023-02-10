@@ -24,7 +24,6 @@ header{
 
 main{
     text-align: center;
-    height: 100vh;
     width: 100vw;
     display: flex;
     background-color: #0011ffb0;
@@ -64,8 +63,8 @@ nav{
     gap: 2px;
     background-color: cornflowerblue;
     border-radius: 20px;
-    margin-left: -25vw;
-    margin-top: 10vh;
+    margin-left: -42vw;
+    margin-top: 12vh;
     text-align: center;
    
 }
@@ -80,4 +79,27 @@ label{
 .model{
     display: none;
     visibility: hidden;
+}
+
+.produtosListar{
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    margin-left: 10vw;
+    margin-top: 12vh;
+    text-align: center;
+}
+
+.cloneProd{
+    background-color: cornflowerblue;
+    height: 18vh;
+    width: 20vw;
+    padding: 10px;
+    margin: 19px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #fff;
 }

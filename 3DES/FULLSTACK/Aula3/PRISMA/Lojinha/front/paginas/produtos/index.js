@@ -3,6 +3,8 @@ function carregar() {
     var inputValor = document.querySelector('#valorProduto')
     var setor = document.querySelector('.setores')
     var btn = document.querySelector('#buttonCadastrar')
+    
+    var listarProds = document.querySelector('.produtosListar')
 
 
     fetch('http://localhost:3000/setor')
@@ -34,13 +36,26 @@ function carregar() {
             .then(response => response.status)
             .then(resp => {
                 if (resp === 201) {
-                     window.location.reload()
+                    window.location.reload()
                 }
             })
-            
-
-
     })
+
+
+    fetch('http://localhost:3000/produtos')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(p => {
+                var CloneProd = document.querySelector('.cloneProd').cloneNode(true)
+                CloneProd.classList.remove('model')
+                CloneProd.querySelector('#nomeProd').innerHTML = p.nomeProduto
+                CloneProd.querySelector('#valorP').innerHTML = p.valorProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                CloneProd.querySelector('#setor').innerHTML = p.setores
+
+                listarProds.appendChild(CloneProd)
+                
+            })
+        })
 
 
 

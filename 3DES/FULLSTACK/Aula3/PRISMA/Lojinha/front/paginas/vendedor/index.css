@@ -63,7 +63,7 @@ nav{
     display: flex;
     flex-direction: column;
     gap: 2px;
-    background-color: cornflowerblue;
+    background-color: #6495ed;
     border-radius: 20px;
     margin-left: -60vw;
     margin-top: 10vh;

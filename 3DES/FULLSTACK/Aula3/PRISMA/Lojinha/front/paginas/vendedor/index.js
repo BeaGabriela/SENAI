@@ -1,4 +1,3 @@
-
 var inputNome = document.querySelector('#nomeProduto')
 var inputValor = document.querySelector('#valorProduto')
 var setor = document.querySelector('.setores')
@@ -51,14 +50,13 @@ function carregar() {
                 let lista = listarVendas.querySelector('.detalhes')
                 let item = listarVendas.querySelector('#detalhe')
                 listarVendas.classList.remove('model')
-                listarVendas.querySelector('#data').innerHTML = p.data
+                listarVendas.querySelector('#data').innerHTML = p.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                 listarVendas.querySelector('#id_vendedor').innerHTML = p.id_vendedores
 
                 p.detalhes.forEach(detalhes => {
                     let clone = item.cloneNode(true)
                     clone.classList.remove('model')
 
-                    //console.log(detalhes.id_produto)
                     clone.querySelector('#id_produto').innerHTML = detalhes.id_produto
                     clone.querySelector('#venda').innerHTML = detalhes.id_venda
                     clone.querySelector('#qtd2').innerHTML = detalhes.quantidade
@@ -138,7 +136,7 @@ function cadastrarVenda() {
         .then(response => response.status)
         .then(resp => {
             if (resp === 201) {
-                //window.location.reload()
+                window.location.reload()
             }
         })
     })
