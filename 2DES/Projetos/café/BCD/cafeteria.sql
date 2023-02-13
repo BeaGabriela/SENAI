@@ -61,25 +61,28 @@ INSERT INTO popular VALUE(default, 4);
 
 CREATE TABLE adocar(
     id_adocar integer not null primary key auto_increment,
-    adocar varchar(20)
+    adocar varchar(20) not null,
+    adicionar float(5,2)
 );
 
-INSERT INTO adocar VALUES (DEFAULT, 'Açucar'), (DEFAULT, 'Mel'), (DEFAULT, 'Adoçante'),(DEFAULT, 'Sem');
+INSERT INTO adocar VALUES (DEFAULT, 'Açucar', 0), (DEFAULT, 'Mel', 2.50), (DEFAULT, 'Adoçante', 0),(DEFAULT, 'Sem', 0);
 
 CREATE TABLE medidas(
     id_medida integer not null primary key auto_increment,
-    medida varchar(20)
+    medida varchar(20),
+    adicional float(5,2) not null
 );
 
-INSERT INTO medidas VALUES(DEFAULT, 'Pequeno'), (DEFAULT, 'Médio'), (DEFAULT, 'Grande');
+INSERT INTO medidas VALUES(DEFAULT, 'Pequeno', 0), (DEFAULT, 'Médio', 2.50), (DEFAULT, 'Grande', 5.00);
 
 
 CREATE TABLE leite(
     id_leite integer not null primary key auto_increment,
-    leite varchar(20)
+    leite varchar(20),
+    adicional float(5,2) not null
 );
 
-INSERT INTO leite VALUES(DEFAULT, 'leite comum'), (DEFAULT, 'Leite de Amendôas'),(DEFAULT, 'Leite de soja'),(DEFAULT, 'Leite de aveia');
+INSERT INTO leite VALUES(DEFAULT, 'leite comum', 0), (DEFAULT, 'Leite de Amendôas', 6.50),(DEFAULT, 'Leite de soja', 3.00),(DEFAULT, 'Leite de aveia', 3.50);
 
 CREATE TABLE temperatura(
     id integer not null primary key auto_increment,
@@ -102,7 +105,7 @@ foreign key(temperatura) REFERENCES temperatura(id),
 foreign key(leite) REFERENCES leite(id_leite)
 );
 
-INSERT INTO proporcoes VALUES(3, 1, 2, 1, 1,2 );
+INSERT INTO proporcoes VALUES(3, 1, 2, 1, 1 );
 
 drop view if exists vw_classe;
 create view vw_classe as

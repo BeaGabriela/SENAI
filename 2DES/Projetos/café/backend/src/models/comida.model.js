@@ -9,10 +9,13 @@ const cadastrarComida = (model, file) => {
 }
 
 const cadastrarProporcao = (model) => {
-    return `INSERT INTO proporcoes VALUES(default, ${model.temperatura},${model.tamanho},${model.leite}, ${model.adocar}')`
+    return `INSERT INTO proporcoes VALUES(${model.id_comida}, ${model.temperatura},${model.tamanho},${model.leite}, ${model.adocar})`
 }
 
 
+const readProp = () => {
+    return 'SELECT * FROM proporcoes;'
+}
 const readAll = () => {
     return 'SELECT * FROM vw_info;'
 }
@@ -20,6 +23,10 @@ const readAll = () => {
 
 const readPopular = () => {
     return 'SELECT * FROM vw_popular;'
+}
+
+const read = () => {
+    return 'SELECT * FROM comidas;'
 }
 
 const toAscii = (dados) => {
@@ -34,6 +41,8 @@ module.exports = {
     readPopular,
     toAscii,
     cadastrarComida,
-    cadastrarProporcao
+    cadastrarProporcao,
+    read,
+    readProp
 
 }

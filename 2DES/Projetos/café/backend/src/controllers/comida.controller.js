@@ -12,7 +12,7 @@ const cadastrarComidas = async (req,res)=>{
         con.query(string, (err, result)=>{
             if(err==null){
                 res.json(result)
-                // res.redirect('http://127.0.0.1:5500/frontend/HOME/index.html')
+                
             }else{
                 res.status(500).json(err).end()
             }
@@ -22,8 +22,42 @@ const cadastrarComidas = async (req,res)=>{
     })
 }
 
+
+const cadastrarProporcao = async (req,res)=>{
+        let string = comidas.cadastrarProporcao(req.body)
+        con.query(string, (err, result)=>{
+            if(err==null){
+                res.json(result).status(201).end()
+            }else{
+                res.status(500).json(err).end()
+            }
+        })
+    }
+
 const listarComidas = (req, res) => {
     let string = comidas.readAll()
+    con.query(string, (err, result) => {
+        if(err == null){
+            res.json(result).end()
+        }else{
+			res.status(400).end()
+            }
+    })
+}
+
+const readComidas = (req, res) => {
+    let string = comidas.read()
+    con.query(string, (err, result) => {
+        if(err == null){
+            res.json(result).end()
+        }else{
+			res.status(400).end()
+            }
+    })
+}
+
+const readPro = (req, res) => {
+    let string = comidas.readProp()
     con.query(string, (err, result) => {
         if(err == null){
             res.json(result).end()
@@ -48,5 +82,8 @@ const listarPopular = (req, res) => {
 module.exports= {
     listarComidas,
     cadastrarComidas,
-    listarPopular
+    listarPopular,
+    readComidas,
+    cadastrarProporcao,
+    readPro
 }

@@ -2,7 +2,7 @@ var alinhandoQuadrado = document.querySelector('.alinhandoOsQuadrados')
 
 
 function carregar() {
-    fetch('http://localhost:3000/comida')
+    fetch('http://localhost:3000/comidas')
         .then(res => { return res.json() })
         .then(u => {
             u.forEach(comida => {
@@ -38,7 +38,7 @@ function carregar() {
 
         })
 
-    fetch('http://localhost:3000/comida')
+    fetch('http://localhost:3000/comidas')
         .then(res => { return res.json() })
         .then(u => {
             console.log(u)
@@ -58,7 +58,7 @@ function carregar() {
             })
         })
 
-    fetch('http://localhost:3000/comida')
+    fetch('http://localhost:3000/comidas')
         .then(res => { return res.json() })
         .then(u => {
             u.forEach(comida => {
@@ -70,7 +70,7 @@ function carregar() {
                     choco.querySelector('#chocolate').src = '../assets/' + comida.img
                     choco.querySelector('#nomechocolate').innerHTML = comida.nome_comida
                     choco.querySelector('#valorChoco').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                    choco.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id_comida})'>Visualiozar</div>`
+                    choco.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id_comida})'>Visualizar</div>`
 
                     document.querySelector('.alinhandoChoco').appendChild(choco)
                 }
@@ -78,7 +78,7 @@ function carregar() {
         })
 
 
-        fetch('http://localhost:3000/comida')
+        fetch('http://localhost:3000/comidas')
         .then(res => { return res.json() })
         .then(u => {
             u.forEach(comida => {

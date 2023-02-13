@@ -13,7 +13,7 @@
 <body onload="carregar()">
     <header>
         <div class="cabecalho">
-            <img alt="hamburguer" />
+            <img alt="hamburguer" id="menu" src="../assets/menu.png" />
             <div class="mostrarImagem">
             <img id="imagemP" alt="suco" />
             </div>
@@ -30,7 +30,7 @@
         <h3>Tamanho</h3>
         <div class='definindoSize'>
             <select class="tamanhos model"></select>
-            <img alt="imagem"/>
+            <!-- <img alt="imagem"/> -->
         </div>
         
         <h3>Temperatura</h3>
@@ -46,8 +46,8 @@
             <select class="leites model"></select>
         </div>
         <div class="infos">
-            <input type="text" placeholder='$ 20.00' />
-            <input type="text" placeholder='Comprar Agora' />
+            <!-- <input type="text" id='valor' disabled /> -->
+            <button id="btnCompra">Compre Agora</button>
         </div>
     </main>
 

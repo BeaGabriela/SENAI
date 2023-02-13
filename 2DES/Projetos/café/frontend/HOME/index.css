@@ -32,8 +32,8 @@ nav {
 .procurar > img{
     position: absolute;
     left: 64.5vw;
-    height: 5vh;
-    top: 15vh;
+    height: 4vh;
+    top: 12.5vh;
 }
 
 .procurar> input{
