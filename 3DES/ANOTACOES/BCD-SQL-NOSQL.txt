@@ -1,0 +1,4 @@
+sql -> BD : Linhas-> registros, colunas-> registros.
+no sql -> collection (Cojunto de documentos.)
+
+Prisma ele facilita a ligação do banco de dados com o backend.

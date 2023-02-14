@@ -1,0 +1,14 @@
+Requisitos Funcionais: 
+	Descrição: 
+		Cadastrar Setores.
+		Cadastrar Produtos.
+		Cadastrar Vendedores.
+		Cadastrar Vendas.
+
+		Listar Setores.
+		Listar Produtos.
+		Listar Vendedores.
+		Listar Vendas.
+
+
+Integração: Utilizando o insomnia.

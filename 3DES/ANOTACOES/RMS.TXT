@@ -1,2 +1,21 @@
-Requisitos e Modelagem de Softaware:
-	
+O objetivo geral de um teste é garantir a qualidade.
+O objetivo especifico do teste é: Procurar defeitos, checar o desempenho, validar requisitos.
+
+Ensaio é como se fosse um teste em laboratório.
+
+**QUAL A DIFERENÇA ENTRE FALHAS E DEFEITOS?**
+	Falha é algo que para todo o programa, e impede ele de funcionar.
+	Defeito é quando o programa roda, mas com minimos defeitos. Onde ele funciona, mas com alguns problemas.
+
+
+TS -> 
+	O objetivo de um teste é validar um requisito.
+
+     **Tipos de teste: **
+		Unitário -> (Teste de mesa) Tem por objetivo validar partes menores do software de maneira isolada, analizando o resultado obtido. 
+		Integração -> Validação de funcionamento das unidades são verificadas possiveis falhas durante a sua integração.
+		Sistema -> Encontrar impossiveis inconsistências relacionadas aos requisitos e rregras de negócio. Validar quw as funcionalidaes do sistema estão respondendo de maneira correta.
+		Aceitação -> Verificar se o software está pronto e pode ser utilizado pelos usuários.
+		
+		
+
