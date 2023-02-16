@@ -1,0 +1,12 @@
+Paleta de cores a ser utilizada, se meu cliente aceitar:
+	https://colorhunt.co/palette/f5f5f5b9e93757d131406661
+ou 
+	https://colorhunt.co/palette/fcf9f9f1f864bceb3c7cbd1e
+
+
+
+Banco de dados
+	tabela de niveis de usuario, contento id, niveis.
+	tabela de usuario id, nome, email, senha, funcao, nivel
+	
+	
