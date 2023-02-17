@@ -1,0 +1,101 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model nivel {
+  id       Int       @id @default(autoincrement())
+  nivel    String
+  usuarios Usuario[]
+}
+
+model Usuario {
+  id     Int    @id @default(autoincrement())
+  nome   String
+  email  String
+  senha  String
+  funcao String
+  nivel  Int
+
+  niveis nivel @relation(fields: [nivel], references: [id])
+}
+
+model Motorista {
+  id        Int         @id @default(autoincrement())
+  nome      String
+  frotas    Frotas[]
+  operacoes Operacoes[]
+}
+
+model Tipo_Veiculos {
+  id   Int    @id @default(autoincrement())
+  tipo String
+
+  veiculos Veiculos[]
+}
+
+model Veiculos {
+  id          Int           @id @default(autoincrement())
+  placa       String
+  tipo        Int
+  frotas      Frotas[]
+  manutencoes Manutencao[]
+  operacoes   Operacoes[]
+  tipos       Tipo_Veiculos @relation(fields: [tipo], references: [id])
+}
+
+model Frotas {
+  id           Int @id @default(autoincrement())
+  id_Motorista Int
+  id_veiculo   Int
+
+  motoristas Motorista @relation(fields: [id_Motorista], references: [id])
+  veiculos   Veiculos  @relation(fields: [id_veiculo], references: [id])
+}
+
+model Operacoes {
+  id           Int      @id @default(autoincrement())
+  veiculo      Int
+  motorista    Int
+  data_saida   DateTime @default(now())
+  descricao    String
+  data_retorno DateTime
+
+  relatorio Relatorio_Operacao[]
+
+  tipos      Veiculos  @relation(fields: [veiculo], references: [id])
+  motoristas Motorista @relation(fields: [motorista], references: [id])
+}
+
+model Manutencao {
+  id          Int                    @id @default(autoincrement())
+  veiculo     Int
+  data_inicio DateTime               @default(now())
+  valor       Float
+  descricao   String
+  data_fim    DateTime
+  manutencao  Relatorio_Manutencao[]
+
+  veiculos Veiculos @relation(fields: [veiculo], references: [id])
+}
+
+model Relatorio_Manutencao {
+  id         Int @id @default(autoincrement())
+  manutencao Int
+
+  manutencoes Manutencao @relation(fields: [manutencao], references: [id])
+}
+
+model Relatorio_Operacao {
+  id       Int @id @default(autoincrement())
+  operacao Int
+
+  operacoes Operacoes @relation(fields: [operacao], references: [id])
+}
