@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const tipVeiculos = require('../controllers/tipoVeiculos');
+const tipVeiculos = require('../controllers/tipVeiculo');
 
 router.post('/tipVeiculos', tipVeiculos.create);
 router.get('/tipVeiculos', tipVeiculos.read);

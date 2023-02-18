@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='./style/index.css' />
+    <title>Login</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <h1>AgroTech</h1>
+        <img src="" alt='cafe' />
+    </header>
+
+    <main>
+        <nav>
+            <h2>Login</h2>
+            <label htmlFor='email'>Email:</label>
+            <input type="email" id="email">
+            <label htmlFor='senha'>Senha:</label>
+            <input type="password" id="senha">
+            <button onClick='validarLogin()'>Entrar</button>
+            <p id="informacoesLogin"></p>
+        </nav>
+        <p>Não tem cadastro?<label id="criarNovoCadastro"> Vamos criar um!</label></p>
+
+
+
+        <!-- <nav class="Paginas modal">
+            <div class="pagina1 modal">
+                <li>Fazer cadastro é rapido e fácil, não se preocupe.</li>
+                <li id="arrumadno">Primeiro me diga seu nome de usuário, por favor: </li>
+                <input type='text' placeholder="Usuario" id="usuario" />
+                <button id="irPraPag2">Próximo</button>
+               
+            </div>
+
+            <div class="pagina2 modal">
+                <li  id="arrumadno">Legal, já definimos um nome, agora precisamos de um email válido, e de uma senha:</li>
+                <input class="inputPags" type="text" placeholder="Email" id="inputEmailNovo" />
+                <input type="text" placeholder="Senha" id="inputSenhaNovo" />
+                <button id="irPraPag3">Próximo</button>
+            </div>
+
+            <div class="pagina3 modal">
+                <li  id="arrumadno">Incrível, agora confira seus dados, por favor, e confirme sua senha para continuar:</li>
+                <input  type="text" placeholder="Email" id='mostrarEmail'value='' />
+                <input class='inputPags' type="password" placeholder="Senha" id="mostrarSenha" value=""/>
+                <input type="text" placeholder="Confirme a Senha" id="confirmarSenha" />
+                <button  id="irPraPag4">Confirmar</button>
+            </div>
+
+            <div  class="pagina4 modal">
+                <li>Parabens! Agora você faz parte da comunidade Coffee & Vanilla.</li>
+                <li  id="arrumadno">Antes de continuar, por favor, confirme seu email, e faça login.</li>
+                <button  id="finalizar">Confirmar</button>
+            </div>
+        </nav> -->
+    </main>
+
+</body>
+<script src='./login.js'></script>
+
+</html>

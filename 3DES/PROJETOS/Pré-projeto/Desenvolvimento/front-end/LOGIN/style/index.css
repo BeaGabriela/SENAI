@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    height: 100%;
+    width: 100%;
+
+}
+
+header {
+    background-color: #57d131;
+    height: 30vh;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    text-align: center;
+    color: #f5f5f5;
+    padding-top: 2vh;
+}
+
+header>img {
+    height: 20vh;
+    margin-top: 1vh;
+    border-radius: 30%;
+    margin-left: 10px;
+
+
+}
+
+nav {
+    display: flex;
+    width: 40vw;
+    height: 52vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 30vw;
+    box-shadow: 0px 2px 2px 2px #57d131;
+    border-radius: 20px;
+    margin-top: 5vh;
+}
+
+
+nav>h2 {
+    margin: 0vh 30vw 1vh 0;
+    font-weight: bold;
+    color: #57d131;
+}
+
+label {
+    margin: 2vh 22vw 0 0;
+    font-weight: bold;
+    color: #57d131;
+}
+
+input {
+    width: 25vw;
+    height: 5vh;
+    background-color: #b9e937;
+    border-radius: 20px;
+    border: none;
+    color: #f5f5f5;
+    outline: 0;
+}
+
+button {
+    width: 25vw;
+    height: 5vh;
+    background-color: #57d131;
+    border-radius: 20px;
+    color: #f5f5f5;
+    margin: 4vh 0 0 0;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+p {
+    margin: 4vh 0vw 0 40vw;
+}
+
+p>label {
+    font-size: 15pt;
+    cursor: pointer;
+}
+
+#informacoesLogin {
+    margin: 10px;
+}
+
+.Paginas {
+    position: absolute;
+    top: -33px;
+    left: -31vw;
+    background-color: #57d131;
+    width: 101vw;
+    height: 100vh;
+}
+
+.pagina1, 
+.pagina2, 
+.pagina3, 
+.pagina4 {
+
+    background-color: #f5f5f5;
+    list-style: none;
+    box-shadow: 2px 2px 2px 2px #8b4513;
+    width: 50vw;
+    height: 40vh;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#arrumadno{
+   margin: 4.2vh 0 5vh 0vh;
+    
+}
+
+.pagina1, 
+.pagina2,
+.pagina3,
+.pagina4 > li{
+    color:  #57d131;
+    margin: 4vh 1vw 1vh 1vw;
+    font-weight: 600;
+}
+
+.inputPags{
+    margin: 10px;
+}
+
+
+.modal {
+    display: none;
+    visibility: hidden;
+}
