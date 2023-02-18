@@ -3,31 +3,31 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    let motorista= await prisma.Motorista.create({
+    let Operacoes= await prisma.Operacoes.create({
         data: req.body
     });
 
-    res.status(201).json(motorista).end();
+    res.status(201).json(Operacoes).end();
 }
 
 const read = async (req, res) => {
-    let motorista = await prisma.Motorista.findMany();
+    let Operacoes = await prisma.Operacoes.findMany();
 
-    res.status(200).json(motorista).end();
+    res.status(200).json(Operacoes).end();
 }
 
 const readOne = async (req, res) => {
-    let motorista = await prisma.Motorista.findUnique({
+    let Operacoes = await prisma.Operacoes.findUnique({
         where: {
             id: Number(req.params.id)
         }
     });
 
-    res.status(200).json(motorista).end();
+    res.status(200).json(Operacoes).end();
 }
 
 const update = async (req, res) => {
-    const motorista = await prisma.Motorista.update({
+    const Operacoes = await prisma.Operacoes.update({
         where: {
             id: Number(req.params.id)
         },
@@ -35,16 +35,16 @@ const update = async (req, res) => {
         data: req.body
     })
 
-    res.status(200).json(motorista).end()
+    res.status(200).json(Operacoes).end()
 }
 
 const remove = async(req, res) => {
-    const motorista = await prisma.Motorista.delete({
+    const Operacoes = await prisma.Operacoes.delete({
         where:{
             id: Number(req.params.id)
         }
     })
-    res.status(200).json(motorista).end() //SEND não é necessario exatamente um banco de dados. 
+    res.status(200).json(Operacoes).end() //SEND não é necessario exatamente um banco de dados. 
 }
 
 
