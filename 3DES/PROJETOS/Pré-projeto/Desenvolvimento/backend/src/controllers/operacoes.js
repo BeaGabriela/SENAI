@@ -3,15 +3,31 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    let Operacoes= await prisma.Operacoes.create({
-        data: req.body
-    });
+    const info = req.body
 
-    res.status(201).json(Operacoes).end();
+    info.data_retorno = new Date(req.body.data_retorno)
+
+    let operacao = await prisma.Operacoes.create({
+        data: info
+    })
+
+
+
+    res.status(201).json(operacao).end();
 }
 
 const read = async (req, res) => {
-    let Operacoes = await prisma.Operacoes.findMany();
+    let Operacoes = await prisma.Operacoes.findMany({
+        select:{
+            id:true,
+            veiculo:true,    
+            motorista:true,
+            data_saida: true,
+            descricao:true,
+            data_retorno :true,
+            relatorios:true
+        }
+    });
 
     res.status(200).json(Operacoes).end();
 }
@@ -38,9 +54,9 @@ const update = async (req, res) => {
     res.status(200).json(Operacoes).end()
 }
 
-const remove = async(req, res) => {
+const remove = async (req, res) => {
     const Operacoes = await prisma.Operacoes.delete({
-        where:{
+        where: {
             id: Number(req.params.id)
         }
     })
@@ -51,9 +67,9 @@ const remove = async(req, res) => {
 
 module.exports = {
     create,
-     read,
-     readOne,
-     update,
-     remove
+    read,
+    readOne,
+    update,
+    remove
 
 }

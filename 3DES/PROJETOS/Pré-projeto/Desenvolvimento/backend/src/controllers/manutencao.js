@@ -3,15 +3,29 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
+    const info = req.body
+
+    info.data_fim = new Date(req.body.data_fim)
     let Manutencao= await prisma.Manutencao.create({
-        data: req.body
+        data: info
     });
 
     res.status(201).json(Manutencao).end();
 }
 
 const read = async (req, res) => {
-    let Manutencao = await prisma.Manutencao.findMany();
+    let Manutencao = await prisma.Manutencao.findMany({
+        select:{
+            id:true,
+            veiculo:true,    
+            data_inicio: true,
+            valor: true,
+            descricao:true,
+            data_fim :true,
+            manutencao:true
+
+        }
+    });
 
     res.status(200).json(Manutencao).end();
 }

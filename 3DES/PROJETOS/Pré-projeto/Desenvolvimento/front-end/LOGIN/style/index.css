@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #57d131;
+    background-color: #6096b4;
     height: 30vh;
     width: 100%;
     border-bottom-left-radius: 50%;
@@ -40,7 +40,7 @@ nav {
     justify-content: center;
     gap: 10px;
     margin-left: 30vw;
-    box-shadow: 0px 2px 2px 2px #57d131;
+    box-shadow: 0px 2px 2px 2px #6096b4;
     border-radius: 20px;
     margin-top: 5vh;
 }
@@ -49,19 +49,19 @@ nav {
 nav>h2 {
     margin: 0vh 30vw 1vh 0;
     font-weight: bold;
-    color: #57d131;
+    color: #6096b4;
 }
 
 label {
     margin: 2vh 22vw 0 0;
     font-weight: bold;
-    color: #57d131;
+    color: #6096b4;
 }
 
 input {
     width: 25vw;
     height: 5vh;
-    background-color: #b9e937;
+    background-color: #93bfcf;
     border-radius: 20px;
     border: none;
     color: #f5f5f5;
@@ -71,7 +71,7 @@ input {
 button {
     width: 25vw;
     height: 5vh;
-    background-color: #57d131;
+    background-color: #6096b4;
     border-radius: 20px;
     color: #f5f5f5;
     margin: 4vh 0 0 0;
@@ -97,7 +97,7 @@ p>label {
     position: absolute;
     top: -33px;
     left: -31vw;
-    background-color: #57d131;
+    background-color: #6096b4;
     width: 101vw;
     height: 100vh;
 }
@@ -109,7 +109,7 @@ p>label {
 
     background-color: #f5f5f5;
     list-style: none;
-    box-shadow: 2px 2px 2px 2px #8b4513;
+    box-shadow: 2px 2px 2px 2px #bdcdd6;
     width: 50vw;
     height: 40vh;
     border-radius: 20px;
@@ -125,7 +125,7 @@ p>label {
 .pagina2,
 .pagina3,
 .pagina4 > li{
-    color:  #57d131;
+    color: #6096b4;
     margin: 4vh 1vw 1vh 1vw;
     font-weight: 600;
 }

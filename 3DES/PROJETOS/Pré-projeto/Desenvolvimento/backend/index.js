@@ -29,3 +29,6 @@ app.use(Roperacoes)
 
 
 app.listen(3000, () => { console.log("Funcionando na porta 3000"); })
+
+
+//DATABASE_URL="mysql://root:@localhost:3306/AgroTech"

@@ -67,11 +67,11 @@ model Operacoes {
   data_saida   DateTime @default(now())
   descricao    String
   data_retorno DateTime
-
-  relatorio Relatorio_Operacao[]
+  relatorios Relatorio_Operacao[]
 
   tipos      Veiculos  @relation(fields: [veiculo], references: [id])
   motoristas Motorista @relation(fields: [motorista], references: [id])
+  
 }
 
 model Manutencao {
@@ -93,9 +93,9 @@ model Relatorio_Manutencao {
   manutencoes Manutencao @relation(fields: [manutencao], references: [id])
 }
 
+
 model Relatorio_Operacao {
   id       Int @id @default(autoincrement())
-  operacao Int
-
-  operacoes Operacoes @relation(fields: [operacao], references: [id])
+  operacoes Int
+  operacao Operacoes @relation(fields: [operacoes], references: [id])
 }

@@ -1,4 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
+const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const prisma = new PrismaClient();
 
@@ -56,10 +58,19 @@ const login = async (req, res) => {
             ]
         }
     })
-    if (usuario.length > 0)
+    if (usuario.length > 0){
         res.status(202).json(usuario).end();
-    else
+        jwt.sign(data, process.env.KEY, { expiresIn: '1m' },function(err, token) {
+            if(err == null) {
+                data["token"] = token;
+                res.status(200).json(data).end();
+            }else {
+                res.status(404).json(err).end();
+            }
+        })
+    }else{
         res.status(404).end();
+    }
 }
 
 

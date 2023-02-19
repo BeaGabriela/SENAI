@@ -6,12 +6,17 @@ const create = async (req, res) => {
     let Relatorio_Operacao= await prisma.Relatorio_Operacao.create({
         data: req.body
     });
-
+    
     res.status(201).json(Relatorio_Operacao).end();
 }
 
 const read = async (req, res) => {
-    let Relatorio_Operacao = await prisma.Relatorio_Operacao.findMany();
+    let Relatorio_Operacao = await prisma.Relatorio_Operacao.findMany({
+        select:{
+            id: true,
+            operacao: true
+        }
+    });
 
     res.status(200).json(Relatorio_Operacao).end();
 }

@@ -87,7 +87,7 @@ CREATE TABLE `Relatorio_Manutencao` (
 -- CreateTable
 CREATE TABLE `Relatorio_Operacao` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `operacao` INTEGER NOT NULL,
+    `operacoes` INTEGER NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -117,4 +117,4 @@ ALTER TABLE `Manutencao` ADD CONSTRAINT `Manutencao_veiculo_fkey` FOREIGN KEY (`
 ALTER TABLE `Relatorio_Manutencao` ADD CONSTRAINT `Relatorio_Manutencao_manutencao_fkey` FOREIGN KEY (`manutencao`) REFERENCES `Manutencao`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `Relatorio_Operacao` ADD CONSTRAINT `Relatorio_Operacao_operacao_fkey` FOREIGN KEY (`operacao`) REFERENCES `Operacoes`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Relatorio_Operacao` ADD CONSTRAINT `Relatorio_Operacao_operacoes_fkey` FOREIGN KEY (`operacoes`) REFERENCES `Operacoes`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

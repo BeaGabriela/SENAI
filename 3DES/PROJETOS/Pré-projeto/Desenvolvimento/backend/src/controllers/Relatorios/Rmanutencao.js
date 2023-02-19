@@ -11,7 +11,12 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    let Relatorio_Manutencao = await prisma.Relatorio_Manutencao.findMany();
+    let Relatorio_Manutencao = await prisma.Relatorio_Manutencao.findMany({
+        select:{
+            id: true,
+            manutencao: true
+        }
+    });
 
     res.status(200).json(Relatorio_Manutencao).end();
 }
