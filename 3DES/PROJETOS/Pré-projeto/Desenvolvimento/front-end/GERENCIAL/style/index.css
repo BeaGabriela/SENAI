@@ -108,3 +108,12 @@ main{
     padding-left: 60px;
     gap: 10px;
 }
+
+.cadastrarMotorista,
+.alterarMotorista,
+.deletarMotorista{
+    height: 10vh;
+    width: 10vw;
+    margin-top: 22vh;
+    margin-left: -12.5vw;
+}

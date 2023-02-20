@@ -9,7 +9,7 @@
     <title>Gerencial</title>
 </head>
 
-<body>
+<body onload="carregar()">
     <header></header>
     <main>
         <nav class="nav1">
@@ -18,14 +18,24 @@
                 <div id="headerMotoristas">
                     <p>Motoristas</p>
                     <div id="funcoesMotoristas">
-                        <p>I</p>
-                        <p>U</p>
-                        <p>D</p>
+                        <p id="newMoorista">I</p>
+                        <p id="AlterarMotorista">U</p>
+                        <p id="DeletarMotorista">D</p>
                     </div>
-                    <div class="cadastrar model">
+                    <div class="cadastrarMotorista model">
                         <input placeholder="nome">
                         <input placeholder="nome">
-
+                        <button>Cadastrar</button>
+                    </div>
+                    <div class="alterarMotorista model">
+                        <input>
+                        <input>
+                        <button>Alterar</button>
+                    </div>
+                    <div class="deletarMotorista model">
+                        <input>
+                        <input>
+                        <button>Deletar</button>
                     </div>
                 </div>
 
@@ -43,6 +53,6 @@
     </main>
 
 </body>
-<script src=''></script>
+<script src='index.js'></script>
 
 </html>
