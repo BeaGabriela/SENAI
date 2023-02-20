@@ -17,9 +17,9 @@ const read = async (req, res) => {
             operacao: true
         }
     });
-
     res.status(200).json(Relatorio_Operacao).end();
 }
+
 
 const readOne = async (req, res) => {
     let Relatorio_Operacao = await prisma.Relatorio_Operacao.findUnique({

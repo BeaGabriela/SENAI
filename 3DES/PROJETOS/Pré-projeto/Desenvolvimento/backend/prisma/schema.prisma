@@ -97,5 +97,7 @@ model Relatorio_Manutencao {
 model Relatorio_Operacao {
   id       Int @id @default(autoincrement())
   operacoes Int
+  
   operacao Operacoes @relation(fields: [operacoes], references: [id])
 }
+
