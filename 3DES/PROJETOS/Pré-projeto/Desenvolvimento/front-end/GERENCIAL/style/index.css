@@ -39,7 +39,7 @@ main{
     flex-direction: column;
     align-items: center;
     padding-left: 1vw;
-    gap: 50px;
+    gap: 5vw;
     padding-top: 2vh;
 }
 
@@ -93,15 +93,21 @@ main{
     visibility: hidden;
 }
 
-#headerMotoristas{
+#headerMotoristas,
+#headerFrotas{
     height: 3vh;
-    background-color: red;
+    padding-left: 10px;
+    margin-top: 1vh;
+    box-shadow: 2px 2px 2px #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
-#funcoesMotoristas{
+#funcoesMotoristas,
+#funcoesFrotas{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -116,4 +122,64 @@ main{
     width: 10vw;
     margin-top: 22vh;
     margin-left: -12.5vw;
+}
+
+.cadastrarFrotas,
+.alterarFrotas,
+.deletarFrotas{
+    height: 10vh;
+    width: 10vw;
+    margin-top: 22vh;
+    margin-left: -10.2vw;
+}
+
+.listarFrotas{
+    height: 20vh;
+    width: 12vw;
+    margin-top: 26vh;
+    margin-left: -10.2vw;
+    overflow-y: scroll;
+}
+
+input{
+    border-radius: 25px;
+    border: none;
+    width: 11vw;
+    box-shadow:2px 2px 2px #fff;
+}
+
+#buscarFrotas{
+    width: 9vw;
+    position: fixed;
+    margin-left: -5vw;
+    margin-top: -0.5vh;
+}
+
+button{
+    border-radius: 25px;
+    border-color: #fff;
+    padding: 10px;
+}
+
+#estilizando{
+    box-shadow: 2px 2px 2px #fff;
+    height: 16vh;
+    width: 12vw;
+    margin-left:-0.5vw;
+    border-radius: 25px;
+    padding-top: 10px;
+}
+
+#estilizando > input, button{
+    margin-bottom: 6px;
+}
+
+.cloneModal{
+    box-shadow: 2px 2px 2px #fff;
+    height: 19vh;
+    width: 10vw;
+    margin-left:-0.5vw;
+    border-radius: 25px;
+    padding-top: 10px;
+    margin-top: 2vh;
 }
