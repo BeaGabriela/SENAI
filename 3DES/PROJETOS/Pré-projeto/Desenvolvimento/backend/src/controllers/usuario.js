@@ -60,14 +60,14 @@ const login = async (req, res) => {
     })
     if (usuario.length > 0){
         res.status(202).json(usuario).end();
-    //     jwt.sign(data, process.env.KEY, { expiresIn: '1m' },function(err, token) {
-    //         if(err == null) {
-    //             data["token"] = token;
-    //             res.status(200).json(data).end();
-    //         }else {
-    //             res.status(404).json(err).end();
-    //         }
-    //     })
+        jwt.sign(usuario, process.env.KEY, { expiresIn: '1m' },function(err, token) {
+            if(err == null) {
+                usuario["token"] = token;
+                res.status(200).json(usuario).end();
+            }else {
+                res.status(404).json(err).end();
+            }
+        })
     }else{
         res.status(404).end();
     }

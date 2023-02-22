@@ -7,7 +7,7 @@ const validaAcesso = (req, res, next) => {
     jwt.verify(token, process.env.KEY, (err, data) => {
         if(err != null) res.status(404).json(err).end();
         else {
-            if(data.nivel === "Gerencial") {
+            if(data.nivel === 1) {
                 next();
             }else {
 
