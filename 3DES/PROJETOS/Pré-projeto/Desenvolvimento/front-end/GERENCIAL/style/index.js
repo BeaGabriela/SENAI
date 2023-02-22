@@ -7,8 +7,16 @@ var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 
 var alterarNome = document.querySelector('#alterarNome')
-
+var newManutencao = document.querySelector('#newManutencao')
+var cadastrarManutencao = document.querySelector('.cadastrarManutencao')
 function carregar() {
+
+    var data = new Date()
+    var dia = data.getDate()
+    var mes = data.getMonth() + 1
+    var ano = data.getFullYear()
+    var dataCompleta = `${ano}-${mes}-${dia}`
+
     //listar Frotas
     var listarFrotas = document.querySelector('.listarFrotas')
     listarFrotas.classList.remove('model')
@@ -44,13 +52,13 @@ function carregar() {
         cadastrarF.classList.remove('model')
         alterarF.classList.add('model')
         deletarF.classList.add('model')
-      
+
 
         //input frotas
         var inputid_Motorista = document.querySelector('#id_moto')
         var inputid_Veiculo = document.querySelector('#id_veicu')
 
-       
+
         var cadastrarDefinido = document.querySelector('#cadastrarFrota')
 
         cadastrarDefinido.addEventListener('click', () => {
@@ -104,7 +112,7 @@ function carregar() {
                         fetch(`http://localhost:3000/motorista/${f.id}`, options)
                             .then(response => response.status)
                             .then(response => {
-                                if(response == 200){
+                                if (response == 200) {
                                     window.location.reload();
                                 }
                             })
@@ -124,7 +132,7 @@ function carregar() {
         cadastrarM.classList.remove('model')
         listarMotorista.classList.add('model')
         deleterMotorista.classList.add('model')
-    
+
         btnCadastrarM.addEventListener('click', () => {
             const options = {
                 method: 'POST',
@@ -152,7 +160,7 @@ function carregar() {
             response.forEach(manutencao => {
                 var listarManutencao = document.querySelector('.listarManutencao').cloneNode(true)
                 listarManutencao.classList.remove('model')
-                
+
                 listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
                 listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
                 listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
@@ -160,14 +168,57 @@ function carregar() {
                 listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
                 listarManutencao.querySelector('#data_fim').innerHTML = manutencao.data_fim
                 let btnConcluirManutencao = document.createElement('button')
+
                 btnConcluirManutencao.innerHTML = 'Concluir'
                 btnConcluirManutencao.addEventListener('click', () => {
-                    //update
+                    const options = {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: `{"veiculo":${manutencao.veiculo},"valor":${manutencao.valor},"descricao":"${manutencao.descricao}","data_fim":"${dataCompleta}"}`
+                    };
+
+                    fetch(`http://localhost:3000/manutencao/${manutencao.id}`, options)
+                        .then(response => response.status)
+                        .then(response => {
+                            if (response == 200) {
+                                console.log('ok')
+                            }
+                        })
                 })
 
                 listarManutencao.appendChild(btnConcluirManutencao)
                 listarManutencoes.appendChild(listarManutencao)
             })
         })
+
+    newManutencao.addEventListener('click', () => {
+        listarManutencoes.classList.add('model')
+        cadastrarManutencao.classList.remove('model')
+        var btnCadastrar = document.querySelector('#cadastrarBTNManutencao')
+
+        btnCadastrar.addEventListener('click', () => {
+            var inputVeiculo = document.querySelector('#inputveiculo')
+            var inputValor = document.querySelector('#inputvalor')
+            var inputDescricao = document.querySelector('#inputDescricao')
+
+            const options = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body:` {"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":null}`
+              };
+              
+              fetch('http://localhost:3000/manutencao', options)
+                .then(response => response.status)
+                .then(response => {
+                    if(response == 201){
+                        window.location.reload()
+                    }
+                })
+        })
+
+
+
+    })
+
 }
 

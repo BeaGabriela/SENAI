@@ -6,6 +6,7 @@ const create = async (req, res) => {
     const info = req.body
 
     info.data_fim = new Date(req.body.data_fim)
+
     let Manutencao= await prisma.Manutencao.create({
         data: info
     });
@@ -41,12 +42,16 @@ const readOne = async (req, res) => {
 }
 
 const update = async (req, res) => {
+    
+    const info = req.body
+
+    info.data_fim = new Date(req.body.data_fim)
     const Manutencao = await prisma.Manutencao.update({
         where: {
             id: Number(req.params.id)
         },
 
-        data: req.body
+        data: info
     })
 
     res.status(200).json(Manutencao).end()
