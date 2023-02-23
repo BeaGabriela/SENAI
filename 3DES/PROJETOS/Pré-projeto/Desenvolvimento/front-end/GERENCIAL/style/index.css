@@ -71,22 +71,25 @@ main{
 }
 
 .nav3{
-    width:20vw;
-    background-color:  #eee9da91;
+    width:8vw;
+    background-color:  #b2933791;
     border-bottom-right-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 10px;
     padding-top: 2vh;
 }
 
 .nav3> div{
-    height: 30vh;
-    width: 12vw;
+    height: 5vh;
+    width: 8vw;
     background-color: #eee9dab1;
     border-radius: 25px;
     text-align:center;   
+    margin-left: 23vw;
+    text-align: center;
+    padding-top: 1vh;
 }
 .model{
     display: none;
@@ -95,7 +98,8 @@ main{
 
 #headerMotoristas,
 #headerFrotas,
-#headersManutencao{
+#headersManutencao,
+#headersVeiculos{
     height: 3vh;
     padding-left: 25px;
     margin-top: 1vh;
@@ -108,7 +112,8 @@ main{
 }
 
 #funcoesMotoristas,
-#funcoesFrotas{
+#funcoesFrotas,
+#funcaoVeiculos{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -158,6 +163,22 @@ main{
     overflow-y: scroll;
 }
 
+.ListarOperacoes{
+    height: 20vh;
+    width: 15vw;
+    margin-top: 2vh;
+    margin-left: -1vw;
+    overflow-y: scroll;
+}
+
+.ListarVeiculos{
+    height: 20vh;
+    width: 15vw;
+    margin-top: 2vh;
+    margin-left: -1vw;
+    overflow-y: scroll;
+}
+
 
 
 input{
@@ -172,7 +193,8 @@ label{
 }
 #buscarFrotas,
 #buscarMotoristas, 
-#buscarManutencao{
+#buscarManutencao,
+#buscarVeiculos{
     width: 9vw;
     position: fixed;
     margin-left: -5vw;
@@ -202,7 +224,8 @@ button{
 }
 
 .cloneModal,
-.cloneModalMotoristas{
+.cloneModalMotoristas,
+.listarVeiculos{
     box-shadow: 2px 2px 2px #fff;
     height: 18vh;
     width: 10vw;
@@ -222,8 +245,18 @@ button{
     margin-top: 1vh;
 }
 
+.listarOperacoes {
+    box-shadow: 2px 2px 2px #fff;
+    height: 30vh;
+    width: 10vw;
+    margin-left:2vw;
+    border-radius: 25px;
+    padding-top: 10px;
+    margin-top: 1vh;
+}
 
-#imgEditar, #newMoorista, #newFrota, #newManutencao{
+
+#imgEditar, #newMoorista, #newFrota, #newManutencao, #newOperação, #newVeiculo{
     height: 3vh;
     margin-top: 2px;
     margin-left: 12px;

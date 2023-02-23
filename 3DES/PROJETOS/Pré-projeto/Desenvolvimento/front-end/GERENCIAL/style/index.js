@@ -1,3 +1,4 @@
+
 var cadastrarF = document.querySelector('.cadastrarFrotas')
 var alterarF = document.querySelector('.alterarFrotas')
 var deletarF = document.querySelector('.deletarFrotas')
@@ -9,13 +10,18 @@ var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 var alterarNome = document.querySelector('#alterarNome')
 var newManutencao = document.querySelector('#newManutencao')
 var cadastrarManutencao = document.querySelector('.cadastrarManutencao')
+
 function carregar() {
+
+    var usuario = JSON.parse(localStorage.getItem('user'))
+    console.log(usuario.token)
+
 
     var data = new Date()
     var dia = data.getDate()
     var mes = data.getMonth() + 1
     var ano = data.getFullYear()
-    var dataCompleta = `${ano}-${mes}-${dia}`
+    var dataCompleta = `${ano}-0${mes}-${dia}`
 
     //listar Frotas
     var listarFrotas = document.querySelector('.listarFrotas')
@@ -50,8 +56,6 @@ function carregar() {
     newFrotas.addEventListener('click', () => {
         listarFrotas.classList.add('model')
         cadastrarF.classList.remove('model')
-        alterarF.classList.add('model')
-        deletarF.classList.add('model')
 
 
         //input frotas
@@ -64,7 +68,10 @@ function carregar() {
         cadastrarDefinido.addEventListener('click', () => {
             const options = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer' + usuario.token
+                },
                 body: `{"id_Motorista":${inputid_Motorista.value},"id_veiculo":${inputid_Veiculo.value}}`
             };
 
@@ -136,10 +143,13 @@ function carregar() {
         btnCadastrarM.addEventListener('click', () => {
             const options = {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + usuario.token
+                },
                 body: `{"nome":"${motoristaInput.value}"}`
             };
-
+            console.log(options);
             fetch('http://localhost:3000/motorista', options)
                 .then(response => response.status)
                 .then(response => {
@@ -173,7 +183,10 @@ function carregar() {
                 btnConcluirManutencao.addEventListener('click', () => {
                     const options = {
                         method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: 'Bearer ' + usuario.token
+                        },
                         body: `{"veiculo":${manutencao.veiculo},"valor":${manutencao.valor},"descricao":"${manutencao.descricao}","data_fim":"${dataCompleta}"}`
                     };
 
@@ -203,14 +216,17 @@ function carregar() {
 
             const options = {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body:` {"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":null}`
-              };
-              
-              fetch('http://localhost:3000/manutencao', options)
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + usuario.token
+                },
+                body: ` {"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":null}`
+            };
+
+            fetch('http://localhost:3000/manutencao', options)
                 .then(response => response.status)
                 .then(response => {
-                    if(response == 201){
+                    if (response == 201) {
                         window.location.reload()
                     }
                 })
@@ -220,5 +236,104 @@ function carregar() {
 
     })
 
+    //Operações
+    var ListarOperacoes = document.querySelector('.ListarOperacoes')
+    ListarOperacoes.classList.remove('model')
+
+
+    fetch('http://localhost:3000/operacoes')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(operacoes => {
+                var listarOperacoes = document.querySelector('.listarOperacoes').cloneNode(true)
+                listarOperacoes.classList.remove('model')
+
+                listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
+                listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
+                listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+                listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
+                listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+
+                let btnChegada = document.createElement('button')
+                btnChegada.innerHTML = 'Entregue'
+                btnChegada.addEventListener('click', () => {
+
+                    const options = {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            Authorization: 'Bearer ' + usuario.token
+                        },
+                        body: `{"veiculo":${operacoes.veiculo},"motorista":${operacoes.motorista},"descricao":"${operacoes.descricao}","data_retorno":"${dataCompleta}"}`
+                    };
+
+                    console.log(options)
+
+                    fetch(`http://localhost:3000/operacoes/${operacoes.id}`, options)
+                        .then(response => response.status)
+                        .then(response => {
+                            if (response == 200) {
+                                console.log('ok')
+                            }
+                        })
+                })
+
+                listarOperacoes.appendChild(btnChegada)
+                ListarOperacoes.appendChild(listarOperacoes)
+
+            })
+        })
+
+
+    //Veiculos
+    var veiculo = document.querySelector('.ListarVeiculos')
+    veiculo.classList.remove('model')
+    //Listar
+    fetch('http://localhost:3000/veiculos')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(v => {
+                var veiculosCLone = document.querySelector('.listarVeiculos').cloneNode(true)
+                veiculosCLone.classList.remove('model')
+
+                veiculosCLone.querySelector('#Id_Veiculos').innerHTML = v.id
+                veiculosCLone.querySelector('#placa').innerHTML = v.placa
+                veiculosCLone.querySelector('#tipoVeiculo').innerHTML = v.tipo
+
+                veiculo.appendChild(veiculosCLone)
+            })
+        })
+
+    //Cadastrar
+    var btnCadatsrarVeiculo = document.querySelector('#newVeiculo')
+    var cadastrarVeiculo = document.querySelector('.cadastrarVeiculos')
+    var btnCadatsroVeiculos = document.querySelector('#cadastrarBTNVeiculo')
+    btnCadatsrarVeiculo.addEventListener('click', () => {
+        veiculo.classList.add('model')
+        cadastrarVeiculo.classList.remove('model')
+        var inputPlaca = document.querySelector('#inputPlaca')
+        var inputTipo = document.querySelector('#inputTipo')
+        btnCadatsroVeiculos.addEventListener('click', () => {
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + usuario.token
+                },
+                body: `{"placa":"${inputPlaca.value}","tipo":${inputTipo.value}}`
+            };
+
+            fetch('http://localhost:3000/veiculos', options)
+                .then(response => response.status)
+                .then(response => {
+                    if (response == 201) {
+                        window.location.reload();
+                    }
+                })
+        })
+    })
+
 }
+
 

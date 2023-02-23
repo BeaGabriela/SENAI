@@ -50,27 +50,41 @@ const remove = async(req, res) => {
 }
 
 const login = async (req, res) => {
+    let psw = req.body.senha // CRYPTO
     const usuario = await prisma.Usuario.findMany({
         where: {
             AND: [
                 { email: req.body.email },
                 { senha: req.body.senha }
             ]
+        }, 
+        select : {
+            id: true,
+            nome: true,
+            email: true,
+            niveis: {
+                select: {
+                    nivel: true
+                }
+            }
         }
     })
+
     if (usuario.length > 0){
-        res.status(202).json(usuario).end();
-        jwt.sign(usuario, process.env.KEY, { expiresIn: '1m' },function(err, token) {
+        jwt.sign(usuario[0], process.env.KEY, { expiresIn: '5m' }, function(err, token) {
+            console.log(token);
             if(err == null) {
-                usuario["token"] = token;
-                res.status(200).json(usuario).end();
+                usuario[0]["token"] = token;
+                res.status(200).json(usuario[0]).end();
+                
             }else {
-                res.status(404).json(err).end();
+                res.status(401).json(err).end();
             }
         })
     }else{
         res.status(404).end();
     }
+    
 }
 
 

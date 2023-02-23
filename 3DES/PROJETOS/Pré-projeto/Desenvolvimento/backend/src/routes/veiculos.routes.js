@@ -4,7 +4,13 @@ const router = express.Router();
 
 const veiculos = require('../controllers/veiculos');
 
-router.post('/veiculos', veiculos.create);
+const middle = require('../middleware/middleware');
+
+router.post('*', middle.validaAcesso)
+router.put('*', middle.validaAcesso)
+router.delete('*', middle.validaAcesso)
+
+router.post('/veiculos' ,veiculos.create);
 router.get('/veiculos', veiculos.read);
 router.get('/veiculos/:id', veiculos.readOne);
 router.put('/veiculos/:id', veiculos.update);

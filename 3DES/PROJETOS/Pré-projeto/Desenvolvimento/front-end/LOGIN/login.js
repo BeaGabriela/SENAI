@@ -6,29 +6,30 @@ function validarLogin() {
 
     const options = {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: { 
+            'Content-Type': 'application/json'
+        },
         body: `{"email":"${inputEmail.value}","senha":"${inputsenha.value}"}`
-      };
-      
-      fetch('http://localhost:3000/usuario/login', options)
+    };
+
+    fetch('http://localhost:3000/usuario/login', options)
         .then(response => response.json())
-        .then(response => {
+        .then(response =>{
             if(email != undefined && senha != undefined){
-                response.forEach(n => {
-                    if(n.nivel == 1){
-                        console.log('admin')
-                        window.location.href('../GERENCIAL/home.html')
+                console.log(response.token)
+                
+                localStorage.setItem('user', JSON.stringify(response))
 
-                     }else{
-                        console.log('user')
-                        window.location.href('../OPERACIONAL/home.html')
-                     }
-                })
+                if(response.niveis.nivel == 'Gerencial'){
+                    window.location.href = '../GERENCIAL/home.html'
+                }else {
+                    window.location.href = '../OPERACIONAL/home.html'
+                }
+                
+            }
             
-           }else{
-            info.innerHTML = "Senha ou Email incorretos, ou não cadastrado"
-           }
-            })
+        })
+
+
+
     }
-
-

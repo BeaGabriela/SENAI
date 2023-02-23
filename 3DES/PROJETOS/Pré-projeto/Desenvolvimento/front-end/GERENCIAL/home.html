@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,8 +105,61 @@
                 </div>
 
             </div>
-            <div>operacao</div>
-            <div>Veiculos</div>
+            <div> 
+                <div class="funcaoManutencao">
+                <div id="headersManutencao">
+                    <p>Operação</p>
+                    <div>
+                        <img src="../../assets/adicionar.png" id="newOperação"/>
+                    </div>
+                    </div>
+                    <div class="ListarOperacoes model">
+                        <input id="buscarOperacoes" placeholder="Buscar Operação" type='search' />
+                        <div class="listarOperacoes model">
+                           <label>Id:</label> <p id="Id_operacoes"></p>
+                            <label>Veiculo:</label><p id="veiculoO"></p>
+                            <label>Motorista:</label><p id="MotoristaOper"></p>
+                            <label>Data inicio</label><p id="data_Inicio"></p>
+                            <label>Descricao</label><p id="descricaoOp"></p>
+                            <label>Data Retorno:</label><p id="data_retorno"></p>
+                        </div>
+                    </div>
+
+                    <div class="cadastrarOperacao model">
+                        <div class='cadastradnoOperacoes'>
+                            <input id="inputveiculoOp" placeholder="id Veiculo">
+                            <input id="inputMotoristaO" placeholder="motorista">
+                            <input id="inputDescricaoOp" placeholder="descricao">
+                            <button id="cadastrarBTNManutencao">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <div>
+                <div class="funcaoVeiculos">
+                    <div id="headersVeiculos">
+                        <p>Veiculos</p>
+                        <div>
+                            <img src="../../assets/adicionar.png" id="newVeiculo"/>
+                        </div>
+                        </div>
+                        <div class="ListarVeiculos model">
+                            <input id="buscarVeiculos" placeholder="Buscar Veiculos" type='search' />
+                            <div class="listarVeiculos model">
+                               <label>Id:</label> <p id="Id_Veiculos"></p>
+                                <label>Placa:</label><p id="placa"></p>
+                                <label>Tipo:</label><p id="tipoVeiculo"></p>
+                            </div>
+                        </div>
+    
+                        <div class="cadastrarVeiculos model">
+                            <div class='cadastradnoVeiculos'>
+                                <input id="inputPlaca" placeholder="Placa">
+                                <input id="inputTipo" placeholder="Tipo">
+                                <button id="cadastrarBTNVeiculo">Cadastrar</button>
+                            </div>
+                        </div>
+            </div>
         </nav>
         <nav class="nav3">
             <div>relatorios</div>

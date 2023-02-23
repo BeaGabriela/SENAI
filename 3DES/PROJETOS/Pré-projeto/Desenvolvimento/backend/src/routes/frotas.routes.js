@@ -4,7 +4,9 @@ const router = express.Router();
 
 const frotas = require('../controllers/frotas');
 
-router.post('/frotas', frotas.create);
+const middle = require('../middleware/middleware');
+
+router.post('/frotas', middle.validaAcesso ,frotas.create);
 router.get('/frotas', frotas.read);
 router.get('/frotas/:id', frotas.readOne);
 router.put('/frotas/:id', frotas.update);

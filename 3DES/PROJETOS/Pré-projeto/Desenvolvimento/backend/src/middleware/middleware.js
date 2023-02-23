@@ -1,22 +1,24 @@
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 
 const validaAcesso = (req, res, next) => {
-    const token = req.headers.authorization;
+    let token = req.headers.authorization;
 
-    jwt.verify(token, process.env.KEY, (err, data) => {
-        if(err != null) res.status(404).json(err).end();
-        else {
-            if(data.nivel === 1) {
-                next();
-            }else {
-
-                res.josn('erro').status(401).end();
+    if(token) {
+        token = token.split(' ')[1];
+        jwt.verify(token, process.env.KEY, (err, data) => {
+            if(err != null) res.status(404).json(err).end();
+            else {
+                console.log(data)
+                if(data.niveis.nivel === 'Gerencial') {
+                    next();
+                }else {
+                    res.status(401).end();
+                }
             }
-        }
-    })
-
-    res.status(200).end();
+        })
+    }else {
+        res.status(401).end();
+    }
 }
 
 module.exports = {
