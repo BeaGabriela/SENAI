@@ -1,13 +1,146 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-body{
-    background-color: #6096b4;
-}
+ body {
+     background-color: #57d131;
+ }
 
+ main {
+     position: absolute;
+     width: 90vw;
+     height: 85vh;
+     left: 10vh;
+     top: 8vh;
+
+     background: #F5F5F5;
+     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 25px;
+ }
+
+ .nav1 {
+     box-sizing: border-box;
+
+     position: absolute;
+     width: 20vw;
+     height: 38vh;
+     left: 4vw;
+     top: 7vh;
+
+     background: #F5F5F5;
+     border: 1px solid #B9E937;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 25px;
+ }
+
+ #headersVeiculos {
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     margin-top: 1vh;
+     margin-left: 5vw;
+ }
+
+ select {
+     border: #f5f5f5;
+     border-radius: 25px;
+     width: 7vw;
+     height: 5vh;
+     background-color: #B9E937;
+
+ }
+
+ button {
+     border: #f5f5f5;
+     border-radius: 25px;
+     width: 5vw;
+     height: 5vh;
+     background-color: #B9E937;
+
+ }
+
+ #busca {
+     display: flex;
+     justify-content: end;
+     margin-right: 1vw;
+     margin-top: 2vh;
+
+ }
+
+ .ListarVeiculos {
+     width: 12vw;
+     height: 22vh;
+     overflow-y: scroll;
+     border-radius: 25px;
+     text-align: center;
+      background: #F5F5F5;
+      margin-left: 3.8vw;
+      margin-top: 1vh;
+     border: 1px solid #B9E937;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+
+ .listarVeiculos{
+    height: 18vh;
+    width: 8vw;
+    border-radius: 25px;
+    text-align: center;
+     background: #F5F5F5;
+     margin-left: 1.8vw;
+     margin-top: 1vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+
+ .nav2 {
+     box-sizing: border-box;
+
+     position: absolute;
+     width: 20vw;
+     height: 74vh;
+     left: 28vw;
+     top: 7vh;
+
+     background: #F5F5F5;
+     border: 1px solid #B9E937;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 25px;
+ }
+
+ .nav3 {
+     box-sizing: border-box;
+
+     position: absolute;
+     width: 20vw;
+     height: 74vh;
+     left: 52vw;
+     top: 7vh;
+
+     background: #F5F5F5;
+     border: 1px solid #B9E937;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 25px;
+ }
+
+ .nav4 {
+     box-sizing: border-box;
+
+     position: absolute;
+     width: 10vw;
+     height: 74vh;
+     left: 76vw;
+     top: 7vh;
+
+     background: #F5F5F5;
+     border: 1px solid #B9E937;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 25px;
+ }
+
+
+ /*
 header{
     height: 8vh;
     width: 90vw;
@@ -261,4 +394,4 @@ button{
     margin-top: 2px;
     margin-left: 12px;
 
-}
+} */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,39 @@
     <title>Gerencial</title>
 </head>
 
-<body onload="carregar()">
-    <header></header>
+<body>
     <main>
         <nav class="nav1">
+            <div>
+                <div id="headersVeiculos">
+                    <p>Veiculos</p>
+                    <button id="newVeiculo">Novo+</button>
+                </div>
+                <div id="busca">
+                    <label>Filtro:</label>
+                    <select>
+                        <option>Disponiveis</option>
+                        <option>Ocupados</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ListarVeiculos model">
+                <div class="listarVeiculos model">
+                    <label>Id:</label>
+                    <p id="Id_Veiculos"></p>
+                    <label>Placa:</label>
+                    <p id="placa"></p>
+                    <label>Tipo:</label>
+                    <p id="tipoVeiculo"></p>
+                </div>
+            </div>
+
+        </nav>
+        <nav class="nav2"></nav>
+        <nav class="nav3"></nav>
+        <nav class="nav4"></nav>
+
+        <!-- <nav class="nav1">
             <div class="frotas">
                 <div id="headerFrotas">
                     <p>Frotas</p>
@@ -135,23 +165,7 @@
                     </div>
                 </div>
                 </div>
-            <div>
-                <div class="funcaoVeiculos">
-                    <div id="headersVeiculos">
-                        <p>Veiculos</p>
-                        <div>
-                            <img src="../../assets/adicionar.png" id="newVeiculo"/>
-                        </div>
-                        </div>
-                        <div class="ListarVeiculos model">
-                            <input id="buscarVeiculos" placeholder="Buscar Veiculos" type='search' />
-                            <div class="listarVeiculos model">
-                               <label>Id:</label> <p id="Id_Veiculos"></p>
-                                <label>Placa:</label><p id="placa"></p>
-                                <label>Tipo:</label><p id="tipoVeiculo"></p>
-                            </div>
-                        </div>
-    
+           
                         <div class="cadastrarVeiculos model">
                             <div class='cadastradnoVeiculos'>
                                 <input id="inputPlaca" placeholder="Placa">
@@ -164,10 +178,10 @@
         <nav class="nav3">
             <div>relatorios</div>
             <div>realatorios</div>
-        </nav>
+        </nav> -->
     </main>
 
 </body>
-<script src='./style/index.js'></script>
+<!-- <script src='./style/index.js'></script> -->
 
 </html>
