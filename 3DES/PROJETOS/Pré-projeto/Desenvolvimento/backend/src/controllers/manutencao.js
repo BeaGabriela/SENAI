@@ -3,27 +3,41 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    const info = req.body
+    let { veiculo, descricao, valor, data } = req.body
+    data = new Date(req.body.data_fim)
 
-    info.data_fim = new Date(req.body.data_fim)
+    const [manutencao] = await prisma.$transaction([
+        prisma.Manutencao.create({
+            data: {
+                veiculo: veiculo,
+                valor: valor,
+                descricao: descricao,
+                data_fim: data
+            }
 
-    let Manutencao= await prisma.Manutencao.create({
-        data: info
-    });
-
-    res.status(201).json(Manutencao).end();
+        }),
+        prisma.Veiculos.update({
+            where: {
+                id: veiculo
+            },
+            data: {
+                uso: true
+            }
+        })
+    ]);
+    res.status(201).json(manutencao).end();
 }
 
 const read = async (req, res) => {
     let Manutencao = await prisma.Manutencao.findMany({
-        select:{
-            id:true,
-            veiculo:true,    
+        select: {
+            id: true,
+            veiculo: true,
             data_inicio: true,
             valor: true,
-            descricao:true,
-            data_fim :true,
-            manutencao:true
+            descricao: true,
+            data_fim: true,
+            manutencao: true
 
         }
     });
@@ -42,37 +56,48 @@ const readOne = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    
-    const info = req.body
+    let { veiculo}  = req.body
+    data = new Date()
 
-    info.data_fim = new Date(req.body.data_fim)
-    const Manutencao = await prisma.Manutencao.update({
-        where: {
-            id: Number(req.params.id)
-        },
+    const [manutencao] = await prisma.$transaction([
+        prisma.Manutencao.update({
+            where: {
+                id: Number(req.params.id)
+            },
+            data: {
+                data_fim: data
+            }
 
-        data: info
-    })
+        }),
+        prisma.Veiculos.update({
+            where: {
+                id: veiculo
+            },
+            data: {
+                uso: false
+            }
+        })
+    ]);
 
-    res.status(200).json(Manutencao).end()
+    res.status(200).json(manutencao).end()
 }
 
-const remove = async(req, res) => {
+const remove = async (req, res) => {
     const Manutencao = await prisma.Manutencao.delete({
-        where:{
+        where: {
             id: Number(req.params.id)
         }
     })
-    res.status(200).json(Manutencao).end() 
+    res.status(200).json(Manutencao).end()
 }
 
 
 
 module.exports = {
     create,
-     read,
-     readOne,
-     update,
-     remove
+    read,
+    readOne,
+    update,
+    remove
 
 }

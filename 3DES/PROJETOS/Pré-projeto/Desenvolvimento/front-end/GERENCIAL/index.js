@@ -1,8 +1,3 @@
-
-// var cadastrarF = document.querySelector('.cadastrarFrotas')
-// var alterarF = document.querySelector('.alterarFrotas')
-// var deletarF = document.querySelector('.deletarFrotas')
-// var newFrotas = document.querySelector('#newFrota')
 var deleterMotorista = document.querySelector('.deletarMotorista')
 var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
@@ -21,70 +16,6 @@ function carregar() {
     var hora = data.getHours()
     var minutos = data.getMinutes()
     var dataCompleta = `${ano}-0${mes}-${dia}  ${hora}:${minutos}`
-    // //listar Frotas
-    // var listarFrotas = document.querySelector('.listarFrotas')
-    // listarFrotas.classList.remove('model')
-
-    // //buscar
-    // var buscarFrotas_id = document.querySelector('#buscarFrotas')
-
-    // fetch('http://localhost:3000/frotas/' + buscarFrotas_id.value)
-    //     .then(response => response.json())
-    //     .then(response => {
-    //         console.log(response)
-    //         response.forEach(f => {
-    //             var listarClone = document.querySelector('.cloneModal').cloneNode(true)
-    //             listarClone.classList.remove('model')
-
-    //             listarClone.querySelector('#id_frota').innerHTML = f.id
-    //             listarClone.querySelector('#motorista').innerHTML = f.id_Motorista
-    //             listarClone.querySelector('#veiculo').innerHTML = f.id_veiculo
-    //             let imageEdit = document.createElement("img");
-    //             imageEdit.id = 'imgEditar';
-    //             imageEdit.src = '../../../assets/cadastro.png';
-    //             imageEdit.addEventListener("click", () => {
-
-    //             })
-    //             listarClone.appendChild(imageEdit)
-    //             listarFrotas.appendChild(listarClone)
-    //         })
-    //     })
-
-    // //Nova Frota
-    // newFrotas.addEventListener('click', () => {
-    //     listarFrotas.classList.add('model')
-    //     cadastrarF.classList.remove('model')
-
-
-    //     //input frotas
-    //     var inputid_Motorista = document.querySelector('#id_moto')
-    //     var inputid_Veiculo = document.querySelector('#id_veicu')
-
-
-    //     var cadastrarDefinido = document.querySelector('#cadastrarFrota')
-
-    //     cadastrarDefinido.addEventListener('click', () => {
-    //         const options = {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //                 Authorization: 'Bearer' + usuario.token
-    //             },
-    //             body: `{"id_Motorista":${inputid_Motorista.value},"id_veiculo":${inputid_Veiculo.value}}`
-    //         };
-
-    //         fetch('http://localhost:3000/frotas', options)
-    //             .then(response => response.status)
-    //             .then(response => {
-    //                 if (response == 201) {
-    //                     window.location.reload()
-    //                 }
-    //             })
-
-    //     })
-
-    // })
-
 
     //Listar motoristas
     var listarMotorista = document.querySelector('.listarMotoristas')

@@ -58,7 +58,7 @@ model Operacoes {
   motorista    Int
   data_saida   DateTime @default(now())
   descricao    String
-  data_retorno DateTime?
+  data_retorno DateTime? 
   relatorios Relatorio_Operacao[]
 
   tipos      Veiculos  @relation(fields: [veiculo], references: [id])
