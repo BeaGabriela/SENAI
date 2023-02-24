@@ -302,6 +302,13 @@ function carregar() {
             })
         })
 
+        //definindo filtro
+        var filtroVeiculos = document.querySelector('#definindoFiltro')
+        filtroVeiculos.addEventListener('click', () => {
+           
+        })
+        
+
     //Cadastrar
     var btnCadatsrarVeiculo = document.querySelector('#newVeiculo')
     var cadastrarVeiculo = document.querySelector('.cadastrarVeiculos')

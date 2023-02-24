@@ -17,9 +17,9 @@ const read = async (req, res) => {
 }
 
 const readOne = async (req, res) => {
-    let Veiculos = await prisma.Veiculos.findUnique({
+    let Veiculos = await prisma.Veiculos.findMany({
         where: {
-            id: Number(req.params.id)
+            uso: req.body.uso
         }
     });
 

@@ -12,7 +12,7 @@ router.delete('*', middle.validaAcesso)
 
 router.post('/veiculos' ,veiculos.create);
 router.get('/veiculos', veiculos.read);
-router.get('/veiculos/:id', veiculos.readOne);
+router.get('/veiculos/uso', veiculos.readOne);
 router.put('/veiculos/:id', veiculos.update);
 router.delete('/veiculos/:id', veiculos.remove);
 
