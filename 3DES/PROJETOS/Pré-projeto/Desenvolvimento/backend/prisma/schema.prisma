@@ -19,7 +19,7 @@ model nivel {
 model Usuario {
   id     Int    @id @default(autoincrement())
   nome   String
-  email  String
+  email  String @unique
   senha  String
   funcao String
   nivel  Int
@@ -30,7 +30,7 @@ model Usuario {
 model Motorista {
   id        Int         @id @default(autoincrement())
   nome      String
-  frotas    Frotas[]
+  ocupado Boolean @default(false)
   operacoes Operacoes[]
 }
 
@@ -43,22 +43,14 @@ model Tipo_Veiculos {
 
 model Veiculos {
   id          Int           @id @default(autoincrement())
-  placa       String
+  placa       String @unique
   tipo        Int
-  frotas      Frotas[]
+  uso  Boolean @default(false)
   manutencoes Manutencao[]
   operacoes   Operacoes[]
   tipos       Tipo_Veiculos @relation(fields: [tipo], references: [id])
 }
 
-model Frotas {
-  id           Int @id @default(autoincrement())
-  id_Motorista Int
-  id_veiculo   Int
-
-  motoristas Motorista @relation(fields: [id_Motorista], references: [id])
-  veiculos   Veiculos  @relation(fields: [id_veiculo], references: [id])
-}
 
 model Operacoes {
   id           Int      @id @default(autoincrement())

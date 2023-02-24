@@ -9,7 +9,7 @@
     <title>Gerencial</title>
 </head>
 
-<body>
+<body onload="carregar()">
     <main>
         <nav class="nav1">
             <div>
@@ -18,14 +18,14 @@
                     <button id="newVeiculo">Novo+</button>
                 </div>
                 <div id="busca">
-                    <label>Filtro:</label>
+                    <label id="filtro">Filtro:</label>
                     <select>
                         <option>Disponiveis</option>
                         <option>Ocupados</option>
                     </select>
                 </div>
             </div>
-            <div class="ListarVeiculos model">
+            <div class="ListarVeiculos">
                 <div class="listarVeiculos model">
                     <label>Id:</label>
                     <p id="Id_Veiculos"></p>
@@ -35,6 +35,22 @@
                     <p id="tipoVeiculo"></p>
                 </div>
             </div>
+
+            <div class="deletarVeiculos model">
+                <div id='estilizando'>
+                    <p id="deletarVeiculo"></p>
+                    <button id="btnDeletarVeiculos">Deletar</button>
+                </div>
+            </div>
+
+            <div class="cadastrarVeiculos model">
+                <div id='estilizando'>
+                    <input placeholder="Placa" id="PlacaVeiculo">
+                    <input placeholder="Tipo" id="Tipo">
+                    <button id="cadastrarVeiculo">Cadastrar</button>
+                </div>
+            </div>
+
             <nav class="nav1_1">
                 <div>
                     <div id="headersMotoristas">
@@ -42,14 +58,14 @@
                         <button id="newMotorista">Novo+</button>
                     </div>
                     <div id="busca">
-                        <label>Filtro:</label>
+                        <label id="filtro">Filtro:</label>
                         <select>
                             <option>Disponiveis</option>
                             <option>Ocupados</option>
                         </select>
                     </div>
                 </div>
-                <div class='listarMotoristas model'>
+                <div class='listarMotoristas model '>
                     <div class="cloneModalMotoristas model">
                         <label>Id:</label>
                         <p id="id_Motorista">Motoristas</p>
@@ -57,6 +73,23 @@
                         <p id="nomeMotorista">Motoristas</p>
                     </div>
                 </div>
+
+                <!-- Deletar Motoristas -->
+                <div class="deletarMotorista model">
+                    <div id='estilizando'>
+                        <p id="deletarM"></p>
+                        <button id="btnDeletarMotorista">Deletar</button>
+                    </div>
+                </div>
+
+                <!-- Cadastrar Motoristas -->
+                <div class="cadastrarMotorista model">
+                    <div id='estilizando'>
+                        <input placeholder="nome" id="cadastrarNome">
+                        <button id="cadastrarMotorista">Cadastrar</button>
+                    </div>
+                </div>
+
             </nav>
 
         </nav>
@@ -67,14 +100,14 @@
                     <button id="newManutencao">Novo+</button>
                 </div>
                 <div id="busca">
-                    <label>Filtro:</label>
+                    <label id="filtro">Filtro:</label>
                     <select>
                         <option>Disponiveis</option>
                         <option>Ocupados</option>
                     </select>
                 </div>
             </div>
-            <div class="ListarManutencoes model">
+            <div class="ListarManutencoes">
                 <div class="listarManutencao model">
                     <label>Id:</label>
                     <p id="Id_manutencao"></p>
@@ -91,6 +124,13 @@
                 </div>
             </div>
 
+            <div class="cadastrarManutencao model">
+                <div id='estilizando'>
+                    <input placeholder="Id veiculo" id="veiculo">
+                    <input placeholder="Valor" id="valorManutencao">
+                    <input placeholder="Descricao" id="DescricaoManutencao">
+                    <button id="cadastrarManutencao">Cadastrar</button>
+                </div>
             </div>
 
         </nav>
@@ -101,14 +141,14 @@
                     <button id="newOperacao">Novo+</button>
                 </div>
                 <div id="buscaOperacao">
-                    <label>Filtro:</label>
+                    <label id="filtro">Filtro:</label>
                     <select>
                         <option>Disponiveis</option>
                         <option>Ocupados</option>
                     </select>
                 </div>
             </div>
-            <div class="ListarOperacoes model">
+            <div class="ListarOperacoes">
                 <div class="listarOperacoes model">
                     <label>Id:</label>
                     <p id="Id_operacoes"></p>
@@ -122,6 +162,15 @@
                     <p id="descricaoOp"></p>
                     <label>Data Retorno:</label>
                     <p id="data_retorno"></p>
+                </div>
+            </div>
+
+            <div class="cadastrarOperacao model">
+                <div id='estilizando'>
+                    <input placeholder="Id veiculo" id="veiculoOpera">
+                    <input placeholder="Motorista" id="motoristaId">
+                    <input placeholder="Descricao" id="DescricaoOperacao">
+                    <button id="cadastrarOperacao">Cadastrar</button>
                 </div>
             </div>
 
@@ -154,19 +203,9 @@
                         </div>
                     </div>
 
-                    <div class="cadastrarMotorista model">
-                        <div id='estilizando'>
-                            <input placeholder="nome" id="cadastrarNome">
-                            <button id="cadastrarMotorista">Cadastrar</button>
-                        </div>
-                    </div>
+                   
 
-                    <div class="deletarMotorista model">
-                        <div id='estilizando'>
-                            <p id="deletarM"></p>
-                            <button id="btnDeletarMotorista">Deletar</button>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </nav>
@@ -244,10 +283,9 @@
         <nav class="nav3">
             <div>relatorios</div>
             <div>realatorios</div>
-        </nav> --> -->
+        </nav> -->
     </main>
-
 </body>
-<!-- <script src='./style/index.js'></script> -->
+<script src='./style/index.js'></script>
 
 </html>
