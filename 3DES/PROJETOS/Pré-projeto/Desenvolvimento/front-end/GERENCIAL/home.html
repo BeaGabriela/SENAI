@@ -20,8 +20,8 @@
                 <div id="busca">
                     <label id="filtro">Filtro:</label>
                     <select id='definindoFiltro'>
-                        <option value='true'>Disponiveis</option>
-                        <option value='false'>Ocupados</option>
+                        <option  value='true'>Disponiveis</option>
+                        <option  value='false'>Ocupados</option>
                     </select>
                 </div>
             </div>
@@ -45,7 +45,7 @@
 
             <div class="cadastrarVeiculos model">
                 <div id='estilizando'>
-                    <input placeholder="Placa" id="PlacaVeiculo">
+                    <input placeholder="Placa" id="PlacaVeiculo" onblur='ValidarPlaca(placa)'>
                     <input placeholder="Tipo" id="Tipo">
                     <button id="cadastrarVeiculo">Cadastrar</button>
                 </div>

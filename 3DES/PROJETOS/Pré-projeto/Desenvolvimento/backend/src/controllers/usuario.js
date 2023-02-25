@@ -2,14 +2,30 @@ const { PrismaClient } = require('@prisma/client');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
+const bcrypt = require('bcrypt')
+
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    let usuario = await prisma.Usuario.create({
-        data: req.body
-    });
+    // bcrypt.genSalt(10, function (err, salt){
+    //     if (err == null) {
+    //         bcrypt.hash(req.body.senha, salt, async function (errCrypto, hash) {
+    //             if (errCrypto == null) {
+    //                 req.body.senha = hash
+                    let usuario = await prisma.Usuario.create({
+                        data: req.body
+                    });
+                    res.status(201).json(usuario).end();
 
-    res.status(201).json(usuario).end();
+    //             } else {
+    //                 res.status(500).json(errCrypto).end();
+    //             }
+    //         })
+
+    //     } else {
+    //         res.status(500).json(err).end();
+    //     }
+    // })
 }
 
 const read = async (req, res) => {
@@ -40,9 +56,9 @@ const update = async (req, res) => {
     res.status(200).json(usuario).end()
 }
 
-const remove = async(req, res) => {
+const remove = async (req, res) => {
     const usuario = await prisma.Usuario.delete({
-        where:{
+        where: {
             id: Number(req.params.id)
         }
     })
@@ -57,8 +73,8 @@ const login = async (req, res) => {
                 { email: req.body.email },
                 { senha: req.body.senha }
             ]
-        }, 
-        select : {
+        },
+        select: {
             id: true,
             nome: true,
             email: true,
@@ -70,30 +86,30 @@ const login = async (req, res) => {
         }
     })
 
-    if (usuario.length > 0){
-        jwt.sign(usuario[0], process.env.KEY, { expiresIn: '5m' }, function(err, token) {
+    if (usuario.length > 0) {
+        jwt.sign(usuario[0], process.env.KEY, { expiresIn: '5m' }, function (err, token) {
             console.log(token);
-            if(err == null) {
+            if (err == null) {
                 usuario[0]["token"] = token;
                 res.status(200).json(usuario[0]).end();
-                
-            }else {
+
+            } else {
                 res.status(401).json(err).end();
             }
         })
-    }else{
+    } else {
         res.status(404).end();
     }
-    
+
 }
 
 
 module.exports = {
     create,
-     read,
-     readOne,
-     update,
-     remove,
-     login
+    read,
+    readOne,
+    update,
+    remove,
+    login
 
 }

@@ -6,18 +6,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='./style/index.css' />
-    <title>Home</title>
+    <title>Operacional</title>
 </head>
 
-<body>
-<main>
-    <nav class="nav1">informacoes</nav>
-    <nav class="nav2">home</nav>
-    <nav class="nav3">* infomacoes</nav>
-    <nav class="nav4">* infomacoes</nav>
-</main>
+<body onload="carregar()">
+    <main>
+        <nav class="nav1">
+            <div>
+                <div id="headersVeiculos">
+                    <p>Veiculos</p>
+                </div>
+                <div id="busca">
+                    <label id="filtro">Filtro:</label>
+                    <select id='definindoFiltro'>
+                        <option  value='true'>Disponiveis</option>
+                        <option  value='false'>Ocupados</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ListarVeiculos">
+                <div class="listarVeiculos model">
+                    <label>Id:</label>
+                    <p id="Id_Veiculos"></p>
+                    <label>Placa:</label>
+                    <p id="placa"></p>
+                    <label>Tipo:</label>
+                    <p id="tipoVeiculo"></p>
+                </div>
+            </div>
 
+           
+            <nav class="nav1_1">
+                <div>
+                    <div id="headersMotoristas">
+                        <p>Motorista</p>
+                    </div>
+                    <div id="busca">
+                        <label id="filtro">Filtro:</label>
+                        <select>
+                            <option>Disponiveis</option>
+                            <option>Ocupados</option>
+                        </select>
+                    </div>
+                </div>
+                <div class='listarMotoristas model '>
+                    <div class="cloneModalMotoristas model">
+                        <label>Id:</label>
+                        <p id="id_Motorista">Motoristas</p>
+                        <label>Nome:</label>
+                        <p id="nomeMotorista">Motoristas</p>
+                    </div>
+                </div>
+            </nav>
+
+        </nav>
+        <nav class="nav2">
+            <div>
+                <div id="headersManutencao">
+                    <p>Manutenção</p>
+                </div>
+                <div id="busca">
+                    <label id="filtro">Filtro:</label>
+                    <select>
+                        <option>Disponiveis</option>
+                        <option>Ocupados</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ListarManutencoes">
+                <div class="listarManutencao model">
+                    <label>Id:</label>
+                    <p id="Id_manutencao"></p>
+                    <label>Veiculo:</label>
+                    <p id="veiculoM"></p>
+                    <label>Data inicio</label>
+                    <p id="dataInicio"></p>
+                    <label>Valor:</label>
+                    <p id="valor"></p>
+                    <label>Descricao</label>
+                    <p id="descricao"></p>
+                    <label>Data fim:</label>
+                    <p id="data_fim"></p>
+                </div>
+            </div>           
+
+        </nav>
+        <nav class="nav3">
+            <div>
+                <div id="headersOperacao">
+                    <p>Operação</p>
+                </div>
+                <div id="buscaOperacao">
+                    <label id="filtro">Filtro:</label>
+                    <select>
+                        <option>Disponiveis</option>
+                        <option>Ocupados</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ListarOperacoes">
+                <div class="listarOperacoes model">
+                    <label>Id:</label>
+                    <p id="Id_operacoes"></p>
+                    <label>Veiculo:</label>
+                    <p id="veiculoO"></p>
+                    <label>Motorista:</label>
+                    <p id="MotoristaOper"></p>
+                    <label>Data inicio</label>
+                    <p id="data_Inicio"></p>
+                    <label>Descricao</label>
+                    <p id="descricaoOp"></p>
+                    <label>Data Retorno:</label>
+                    <p id="data_retorno"></p>
+                </div>
+            </div>
+               
+
+        </nav>
+        <nav class="nav4">
+            <div class="relatorios">
+                <h3>Relatórios</h3>
+                <button>Manutenção</button>
+                <button>Operação</button>
+                <button>Veiculos</button>
+                <button>Novo Funcionário</button>
+            </div>
+        </nav>
+    </main>
 </body>
-<script src=''></script>
+<script src='./index.js'></script>
 
 </html>

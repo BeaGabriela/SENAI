@@ -246,7 +246,8 @@ function carregar() {
                 .then(response => response.status)
                 .then(response => {
                     if (response == 201) {
-                    window.location.reload();                    }
+                        window.location.reload();
+                    }
 
                 })
         })
@@ -302,12 +303,12 @@ function carregar() {
             })
         })
 
-        //definindo filtro
-        var filtroVeiculos = document.querySelector('#definindoFiltro')
-        filtroVeiculos.addEventListener('click', () => {
-           
-        })
-        
+    //definindo filtro
+    var filtroVeiculos = document.querySelector('#definindoFiltro')
+    filtroVeiculos.addEventListener('click', () => {
+
+    })
+
 
     //Cadastrar
     var btnCadatsrarVeiculo = document.querySelector('#newVeiculo')
@@ -319,8 +320,6 @@ function carregar() {
         cadastrarVeiculo.classList.remove('model')
         var inputPlaca = document.querySelector('#PlacaVeiculo')
         var inputTipo = document.querySelector('#Tipo')
-
-
         btnCadatsroVeiculos.addEventListener('click', () => {
             console.log(inputPlaca.value)
             const options = {
@@ -344,4 +343,24 @@ function carregar() {
 
 }
 
+function ValidarPlaca(placa){
+    var inputPlaca = document.querySelector('#PlacaVeiculo')
+    placa = inputPlaca.value
+    
+         if(placa.length == 7 ){
+            let modelAntigo = /^[a-zA-Z]{3}[0-9]{4}$/
+            let modelAtual = /^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$/
 
+            if(modelAntigo.test(placa) || modelAtual.test(placa)){
+                console.log('ok')
+            }else{
+                alert('A placa digitada é inválida')
+                
+            }
+     }else{
+        alert('A placa digitada é inválida, digite uma placa valida')
+     }
+
+    //     }
+    // })
+}
