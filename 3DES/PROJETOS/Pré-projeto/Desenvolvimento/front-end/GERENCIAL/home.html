@@ -182,12 +182,27 @@
         <nav class="nav4">
             <div class="relatorios">
                 <h3>Relatórios</h3>
-                <button>Manutenção</button>
-                <button>Operação</button>
+                <button onclick='RelatorioManutencao()'>Manutenção</button>
+                <button onclick='RelatorioOperacao()'>Operação</button>
                 <button>Veiculos</button>
                 <button>Novo Funcionário</button>
             </div>
         </nav>
+
+        <div class="RelatorioManutencao model">
+            <div>
+                <button onclick='FecharmodalManutencao()'>X</button>
+            </div>
+
+        </div>
+
+        <div class="RelatorioOperacao model">
+            <div>
+                <button onclick='FecharmodalOperacao()'>X</button>
+            </div>
+
+        </div>
+
     </main>
 </body>
 <script src='./index.js'></script>

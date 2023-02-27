@@ -447,3 +447,23 @@ function Operacoes() {
 
 }
 
+function RelatorioManutencao(){
+    var relatorioManutencao = document.querySelector('.RelatorioManutencao')
+    relatorioManutencao.classList.remove('model')
+}
+
+function FecharmodalManutencao(){
+    var relatorioManutencao = document.querySelector('.RelatorioManutencao')
+    relatorioManutencao.classList.add('model')
+}
+
+function RelatorioOperacao(){
+    var relatorioOperacao = document.querySelector('.RelatorioOperacao')
+    relatorioOperacao.classList.remove('model')
+}
+
+function FecharmodalOperacao(){
+    var relatorioOperacao = document.querySelector('.RelatorioOperacao')
+    relatorioOperacao.classList.add('model')
+}
+ 
