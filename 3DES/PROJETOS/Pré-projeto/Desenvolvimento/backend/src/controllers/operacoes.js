@@ -3,17 +3,40 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    const info = req.body
+    const {veiculo, motorista, descricao, data} = req.body
+    
 
-    info.data_retorno = new Date(req.body.data_retorno)
+    const [op] = await prisma.$transaction([
+        prisma.Operacoes.create({
+            data:{
+                veiculo: veiculo,
+                motorista: motorista,
+                descricao: descricao,
+                data_retorno: data
+            }
+        }), 
+        prisma.Veiculos.update({
+            where: {
+                id: veiculo
+            },
+            data: {
+                uso: true
+            }
+        }),
+        prisma.Motorista.update({
+            where: {
+                id: motorista
+            },
+            data: {
+                ocupado: true
+            }
+        })
+    ])
+   
 
-    let operacao = await prisma.Operacoes.create({
-        data: info
-    })
 
 
-
-    res.status(201).json(operacao).end();
+    res.status(201).json(op).end();
 }
 
 const read = async (req, res) => {
@@ -43,19 +66,35 @@ const readOne = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    const info = req.body
+    const [operacoes] = await prisma.$transaction([
+        prisma.Operacoes.update({
+            where: {
+                id: Number(req.params.id)
+            },
+            data: {
+                data_retorno:  new Date()
+            }
+        }),
 
-    info.data_retorno = new Date(req.body.data_retorno)
-console.log(info)
-    const Operacoes = await prisma.Operacoes.update({
-        where: {
-            id: Number(req.params.id)
-        },
+        prisma.Veiculos.update({
+            where: {
+                id: Number(req.params.veiculo)
+            },
+            data: {
+                uso: false
+            }
+        }), 
 
-        data: info
-    })
-
-    res.status(200).json(Operacoes).end()
+        prisma.Motorista.update({
+            where: {
+                id: Number(req.params.id)
+            },
+            data: {
+                ocupado: false
+            }
+        }), 
+    ]);
+    res.status(200).json(operacoes).end()
 }
 
 const remove = async (req, res) => {

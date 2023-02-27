@@ -12,7 +12,7 @@ router.delete('*', middle.validaAcesso)
 
 router.post('/motorista', motorista.create);
 router.get('/motorista', motorista.read);
-router.get('/motorista/:id', motorista.readOne);
+router.get('/motorista/:ocupado', motorista.readOne);
 router.put('/motorista/:id', motorista.update);
 router.delete('/motorista/:id', motorista.remove);
 

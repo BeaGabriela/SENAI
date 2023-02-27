@@ -16,10 +16,17 @@ const read = async (req, res) => {
     res.status(200).json(motorista).end();
 }
 
+const parseBoolean = (b) => {
+    if (b == 1)
+        return true
+    else
+        return false
+}
+
 const readOne = async (req, res) => {
-    let motorista = await prisma.Motorista.findUnique({
+    let motorista = await prisma.Motorista.findMany({
         where: {
-            id: Number(req.params.id)
+            ocupado: parseBoolean(req.params.ocupado)
         }
     });
 

@@ -16,10 +16,22 @@ const read = async (req, res) => {
     res.status(200).json(Veiculos).end();
 }
 
+const parseBoolean = (b) => {
+    if (b == 1)
+        return true
+    else
+        return false
+}
+
 const readOne = async (req, res) => {
     let Veiculos = await prisma.Veiculos.findMany({
         where: {
-            uso: req.body.uso
+            uso: parseBoolean(req.params.uso)
+        },
+        select:{
+            id: true,
+            placa: true,
+            tipo: true           
         }
     });
 
@@ -38,9 +50,9 @@ const update = async (req, res) => {
     res.status(200).json(Veiculos).end()
 }
 
-const remove = async(req, res) => {
+const remove = async (req, res) => {
     const Veiculos = await prisma.Veiculos.delete({
-        where:{
+        where: {
             id: Number(req.params.id)
         }
     })
@@ -50,9 +62,9 @@ const remove = async(req, res) => {
 
 module.exports = {
     create,
-     read,
-     readOne,
-     update,
-     remove
+    read,
+    readOne,
+    update,
+    remove
 
 }

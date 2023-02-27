@@ -16,14 +16,7 @@ const create = async (req, res) => {
             }
 
         }),
-        prisma.Veiculos.update({
-            where: {
-                id: veiculo
-            },
-            data: {
-                uso: true
-            }
-        })
+       
     ]);
     res.status(201).json(manutencao).end();
 }
@@ -45,6 +38,13 @@ const read = async (req, res) => {
     res.status(200).json(Manutencao).end();
 }
 
+const parseBoolean = (b) => {
+    if (b == 1)
+        return true
+    else
+        return false
+}
+
 const readOne = async (req, res) => {
     let Manutencao = await prisma.Manutencao.findUnique({
         where: {
@@ -56,22 +56,19 @@ const readOne = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    let { veiculo}  = req.body
-    data = new Date()
-
     const [manutencao] = await prisma.$transaction([
         prisma.Manutencao.update({
             where: {
                 id: Number(req.params.id)
             },
             data: {
-                data_fim: data
+                data_fim:  new Date()
             }
-
         }),
+
         prisma.Veiculos.update({
             where: {
-                id: veiculo
+                id: Number(req.params.veiculo)
             },
             data: {
                 uso: false
