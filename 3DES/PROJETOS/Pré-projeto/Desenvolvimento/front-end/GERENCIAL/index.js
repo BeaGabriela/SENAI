@@ -19,10 +19,39 @@ function carregar() {
     Manutencoes()
     Veiculos()
     Operacoes()
+    newUser()
 
 
 }
 
+function newUser() {
+    var nomeUser = document.querySelector('#nomeUser')
+    var emailUser = document.querySelector('#email')
+    var senha = document.querySelector('#senha')
+    var cadastrarNewUser = document.querySelector('#cadastrarNewUser')
+
+    cadastrarNewUser.addEventListener('click', () => {
+        const options = {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + usuario.token
+            },
+            body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"Operacional","nivel":1}`
+        };
+
+
+        fetch('http://localhost:3000/usuarioCreate', options)
+            .then(response => response.status)
+            .then(response => {
+                if(response == 201){
+                    window.location.reload()
+                }
+            })
+           
+    })
+
+}
 
 function ValidarPlaca(placa) {
     var inputPlaca = document.querySelector('#PlacaVeiculo')
@@ -99,7 +128,7 @@ function Veiculos() {
         var inputTipo = document.querySelector('#Tipo')
         btnCadatsroVeiculos.addEventListener('click', () => {
             const options = {
-                method: 'POST',
+                method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
@@ -288,7 +317,99 @@ function Manutencoes() {
     listarManutencoes.classList.remove('model')
     var newManutencao = document.querySelector('#newManutencao')
     var cadastrarManutencao = document.querySelector('.cadastrarManutencao')
-    fetch('http://localhost:3000/manutencao')
+
+    var filtroManutencao = document.querySelector('#filtroManutencao')
+    fetchManutencoes('')
+    filtroManutencao.addEventListener('change', () => {
+        if (filtroManutencao.value == 1) {
+            listarManutencoes.innerHTML = `<div class="listarManutencao model">
+            <label>Id:</label>
+            <p id="Id_manutencao"></p>
+            <label>Veiculo:</label>
+            <p id="veiculoM"></p>
+            <label>Data inicio</label>
+            <p id="dataInicio"></p>
+            <label>Valor:</label>
+            <p id="valor"></p>
+            <label>Descricao</label>
+            <p id="descricao"></p>
+            <label>Data fim:</label>
+            <p id="data_fim"></p>
+        </div> `
+            valorFiltro = 1
+            fetchManutencoes(1)
+        } else if (filtroManutencao.value == 0) {
+            listarManutencoes.innerHTML = `  <div class="listarManutencao model">
+            <label>Id:</label>
+            <p id="Id_manutencao"></p>
+            <label>Veiculo:</label>
+            <p id="veiculoM"></p>
+            <label>Data inicio</label>
+            <p id="dataInicio"></p>
+            <label>Valor:</label>
+            <p id="valor"></p>
+            <label>Descricao</label>
+            <p id="descricao"></p>
+            <label>Data fim:</label>
+            <p id="data_fim"></p>
+        </div>`
+            valorFiltro = 0
+            fetchManutencoes(0)
+        } else if (filtroManutencao.value == 3) {
+            listarManutencoes.innerHTML = `  <div class="listarManutencao model">
+            <label>Id:</label>
+            <p id="Id_manutencao"></p>
+            <label>Veiculo:</label>
+            <p id="veiculoM"></p>
+            <label>Data inicio</label>
+            <p id="dataInicio"></p>
+            <label>Valor:</label>
+            <p id="valor"></p>
+            <label>Descricao</label>
+            <p id="descricao"></p>
+            <label>Data fim:</label>
+            <p id="data_fim"></p>
+        </div>`
+            fetchManutencoes('')
+        }
+
+    })
+
+    newManutencao.addEventListener('click', () => {
+        listarManutencoes.classList.add('model')
+        cadastrarManutencao.classList.remove('model')
+        var btnCadastrar = document.querySelector('#cadastrarManutencao')
+
+        btnCadastrar.addEventListener('click', () => {
+            var inputVeiculo = document.querySelector('#veiculo')
+            var inputValor = document.querySelector('#valorManutencao')
+            var inputDescricao = document.querySelector('#DescricaoManutencao')
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + usuario.token
+                },
+                body: `{"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":${null}}`
+            };
+
+            fetch('http://localhost:3000/manutencao', options)
+                .then(response => response.status)
+                .then(response => {
+                    if (response == 201) {
+                        window.location.reload()
+                    }
+                })
+        })
+    })
+
+}
+
+function fetchManutencoes(manutencao) {
+    var listarManutencoes = document.querySelector('.ListarManutencoes');
+    listarManutencoes.classList.remove('model')
+    fetch(`http://localhost:3000/manutencao/${manutencao}`)
         .then(response => response.json())
         .then(response => {
             response.forEach(manutencao => {
@@ -326,48 +447,110 @@ function Manutencoes() {
                 listarManutencoes.appendChild(listarManutencao)
             })
         })
+}
 
-    newManutencao.addEventListener('click', () => {
-        listarManutencoes.classList.add('model')
-        cadastrarManutencao.classList.remove('model')
-        var btnCadastrar = document.querySelector('#cadastrarManutencao')
+function Operacoes() {
+    var ListarOperacoes = document.querySelector('.ListarOperacoes')
+    ListarOperacoes.classList.remove('model')
 
-        btnCadastrar.addEventListener('click', () => {
-            var inputVeiculo = document.querySelector('#veiculo')
-            var inputValor = document.querySelector('#valorManutencao')
-            var inputDescricao = document.querySelector('#DescricaoManutencao')
+    var filtroOperacao = document.querySelector('#filtroOperacao')
+    fetchOperacao('')
+    filtroOperacao.addEventListener('change', () => {
+        if (filtroOperacao.value == 1) {
+            ListarOperacoes.innerHTML = `<div class="listarOperacoes model">
+            <label>Id:</label>
+            <p id="Id_operacoes"></p>
+            <label>Veiculo:</label>
+            <p id="veiculoO"></p>
+            <label>Motorista:</label>
+            <p id="MotoristaOper"></p>
+            <label>Data inicio</label>
+            <p id="data_Inicio"></p>
+            <label>Descricao</label>
+            <p id="descricaoOp"></p>
+            <label>Data Retorno:</label>
+            <p id="data_retorno"></p>
+        </div> `
+            valorFiltro = 1
+            fetchOperacao(1)
+        } else if (filtroOperacao.value == 0) {
+            ListarOperacoes.innerHTML = `<div class="listarOperacoes model">
+            <label>Id:</label>
+            <p id="Id_operacoes"></p>
+            <label>Veiculo:</label>
+            <p id="veiculoO"></p>
+            <label>Motorista:</label>
+            <p id="MotoristaOper"></p>
+            <label>Data inicio</label>
+            <p id="data_Inicio"></p>
+            <label>Descricao</label>
+            <p id="descricaoOp"></p>
+            <label>Data Retorno:</label>
+            <p id="data_retorno"></p>
+        </div>`
+            valorFiltro = 0
+            fetchOperacao(0)
+        } else if (filtroOperacao.value == 3) {
+            ListarOperacoes.innerHTML = `<div class="listarOperacoes model">
+            <label>Id:</label>
+            <p id="Id_operacoes"></p>
+            <label>Veiculo:</label>
+            <p id="veiculoO"></p>
+            <label>Motorista:</label>
+            <p id="MotoristaOper"></p>
+            <label>Data inicio</label>
+            <p id="data_Inicio"></p>
+            <label>Descricao</label>
+            <p id="descricaoOp"></p>
+            <label>Data Retorno:</label>
+            <p id="data_retorno"></p>
+        </div>`
+            fetchOperacao('')
+        }
 
+    })
+
+
+
+    //Cadastrar Operacao
+    var newOperacao = document.querySelector('#newOperacao')
+    var cadastrarOperacao = document.querySelector('.cadastrarOperacao')
+    var btnCadatsrarOpera = document.querySelector('#cadastrarOperacao')
+    var inputVeiculosOpera = document.querySelector('#veiculoOpera')
+    var inputMotoristaOpera = document.querySelector('#motoristaId')
+    var inputDescricaoOpera = document.querySelector('#DescricaoOperacao')
+
+    newOperacao.addEventListener('click', () => {
+        ListarOperacoes.classList.add('model')
+        cadastrarOperacao.classList.remove('model')
+
+        btnCadatsrarOpera.addEventListener('click', () => {
             const options = {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
                 },
-                body: `{"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":${null}}`
+                body: `{"veiculo":${Number(inputVeiculosOpera.value)},"motorista":${Number(inputMotoristaOpera.value)},"descricao":"${inputDescricaoOpera.value}","data_retorno":${null}}`
             };
 
-            fetch('http://localhost:3000/manutencao', options)
+            fetch('http://localhost:3000/operacoes', options)
                 .then(response => response.status)
                 .then(response => {
                     if (response == 201) {
-                        window.location.reload()
+                        window.location.reload();
                     }
+
                 })
         })
-
-
-
     })
-
 }
 
-
-function Operacoes() {
+function fetchOperacao(operacao) {
     var ListarOperacoes = document.querySelector('.ListarOperacoes')
     ListarOperacoes.classList.remove('model')
 
-
-    fetch('http://localhost:3000/operacoes')
+    fetch(`http://localhost:3000/operacoes/${operacao}`)
         .then(response => response.json())
         .then(response => {
             console.log(response)
@@ -410,60 +593,37 @@ function Operacoes() {
 
             })
         })
-
-    //Cadastrar Operacao
-    var newOperacao = document.querySelector('#newOperacao')
-    var cadastrarOperacao = document.querySelector('.cadastrarOperacao')
-    var btnCadatsrarOpera = document.querySelector('#cadastrarOperacao')
-    var inputVeiculosOpera = document.querySelector('#veiculoOpera')
-    var inputMotoristaOpera = document.querySelector('#motoristaId')
-    var inputDescricaoOpera = document.querySelector('#DescricaoOperacao')
-
-    newOperacao.addEventListener('click', () => {
-        ListarOperacoes.classList.add('model')
-        cadastrarOperacao.classList.remove('model')
-
-        btnCadatsrarOpera.addEventListener('click', () => {
-            const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: 'Bearer ' + usuario.token
-                },
-                body: `{"veiculo":${Number(inputVeiculosOpera.value)},"motorista":${Number(inputMotoristaOpera.value)},"descricao":"${inputDescricaoOpera.value}","data_retorno":${null}}`
-            };
-
-            fetch('http://localhost:3000/operacoes', options)
-                .then(response => response.status)
-                .then(response => {
-                    if (response == 201) {
-                        window.location.reload();
-                    }
-
-                })
-        })
-    })
-
-
 }
 
-function RelatorioManutencao(){
+
+function RelatorioManutencao() {
     var relatorioManutencao = document.querySelector('.RelatorioManutencao')
     relatorioManutencao.classList.remove('model')
 }
 
-function FecharmodalManutencao(){
+function FecharmodalManutencao() {
     var relatorioManutencao = document.querySelector('.RelatorioManutencao')
     relatorioManutencao.classList.add('model')
 }
 
-function RelatorioOperacao(){
+function abrirNewFunc() {
+    var newFunc = document.querySelector('.NewFunc')
+    newFunc.classList.remove('model')
+}
+
+function FecharmodalFunc() {
+    var newFunc = document.querySelector('.NewFunc')
+    newFunc.classList.add('model')
+}
+
+function RelatorioOperacao() {
     var relatorioOperacao = document.querySelector('.RelatorioOperacao')
     relatorioOperacao.classList.remove('model')
 }
 
-function FecharmodalOperacao(){
+function FecharmodalOperacao() {
     var relatorioOperacao = document.querySelector('.RelatorioOperacao')
     relatorioOperacao.classList.add('model')
 }
- 
+
+

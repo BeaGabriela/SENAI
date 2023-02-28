@@ -103,10 +103,10 @@
                 </div>
                 <div id="busca">
                     <label id="filtro">Filtro:</label>
-                    <select>
-                        <option></option>
-                        <option>Concluídas</option>
-                        <option>Pendentes</option>
+                    <select  id="filtroManutencao">
+                        <option value="3"></option>
+                        <option value="1">Concluídas</option>
+                        <option value="2">Pendentes</option>
                     </select>
                 </div>
             </div>
@@ -145,10 +145,10 @@
                 </div>
                 <div id="buscaOperacao">
                     <label id="filtro">Filtro:</label>
-                    <select>
-                        <option></option>
-                        <option>Pendentes</option>
-                        <option>Concluídas</option>
+                    <select id="filtroOperacao">
+                        <option value="3"></option>
+                        <option value="1">Pendentes</option>
+                        <option value="2">Concluídas</option>
                     </select>
                 </div>
             </div>
@@ -184,8 +184,7 @@
                 <h3>Relatórios</h3>
                 <button onclick='RelatorioManutencao()'>Manutenção</button>
                 <button onclick='RelatorioOperacao()'>Operação</button>
-                <button>Veiculos</button>
-                <button>Novo Funcionário</button>
+                <button onclick="abrirNewFunc()">Novo Funcionário</button>
             </div>
         </nav>
 
@@ -201,6 +200,18 @@
                 <button onclick='FecharmodalOperacao()'>X</button>
             </div>
 
+        </div>
+
+        <div class="NewFunc model">
+            <div>
+                <button id='fecharmodalFun' onclick='FecharmodalFunc()'>X</button>
+                <div id="estilizandoUser"> 
+                    <input type="text" placeholder="Nome" id="nomeUser">
+                    <input type="email" placeholder="Email" id="email">
+                    <input type="password" placeholder="Senha" id="senha">
+                    <button id="cadastrarNewUser">Cadastrar</button>
+                </div>
+            </div>
         </div>
 
     </main>

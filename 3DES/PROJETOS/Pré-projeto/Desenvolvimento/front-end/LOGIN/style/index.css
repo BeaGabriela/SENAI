@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #6096b4;
+    background-color:  #57d131;
     height: 30vh;
     width: 100%;
     border-bottom-left-radius: 50%;
@@ -40,7 +40,7 @@ nav {
     justify-content: center;
     gap: 10px;
     margin-left: 30vw;
-    box-shadow: 0px 2px 2px 2px #6096b4;
+    box-shadow: 0px 2px 2px 2px #57d131;
     border-radius: 20px;
     margin-top: 5vh;
 }
@@ -49,19 +49,19 @@ nav {
 nav>h2 {
     margin: 0vh 30vw 1vh 0;
     font-weight: bold;
-    color: #6096b4;
+    color: #57d131;
 }
 
 label {
     margin: 2vh 22vw 0 0;
     font-weight: bold;
-    color: #6096b4;
+    color:  #57d131;
 }
 
 input {
     width: 25vw;
     height: 5vh;
-    background-color: #93bfcf;
+    background-color:#B9E937;
     border-radius: 20px;
     border: none;
     color: #f5f5f5;
@@ -71,7 +71,7 @@ input {
 button {
     width: 25vw;
     height: 5vh;
-    background-color: #6096b4;
+    background-color: #57d131;
     border-radius: 20px;
     color: #f5f5f5;
     margin: 4vh 0 0 0;

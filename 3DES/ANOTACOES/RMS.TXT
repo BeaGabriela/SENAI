@@ -19,3 +19,5 @@ TS ->
 		
 		
 
+XP -> Metodologia AGIL. ->  Programação em par. Post-it. SPRINT -> 
+Classica -> Cascata, Espiral

@@ -4,7 +4,13 @@ const router = express.Router();
 
 const usuario = require('../controllers/usuario');
 
-router.post('/usuario', usuario.create);
+const middle = require('../middleware/middleware');
+
+router.put('*', middle.validaAcesso)
+router.delete('*', middle.validaAcesso)
+
+
+router.post('/usuarioCreate', middle.validaAcesso, usuario.create);
 router.get('/usuario', usuario.read);
 router.get('/usuario/:id', usuario.readOne);
 router.post('/usuario/login', usuario.login);

@@ -59,6 +59,7 @@ model Operacoes {
   data_saida   DateTime @default(now())
   descricao    String
   data_retorno DateTime? 
+  concluidas Boolean@default(false)
   relatorios Relatorio_Operacao[]
 
   tipos      Veiculos  @relation(fields: [veiculo], references: [id])
@@ -73,6 +74,7 @@ model Manutencao {
   valor       Float
   descricao   String
   data_fim    DateTime?
+  concluidas Boolean@default(false)
   manutencao  Relatorio_Manutencao[]
 
   veiculos Veiculos @relation(fields: [veiculo], references: [id])

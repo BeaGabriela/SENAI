@@ -55,10 +55,18 @@ const read = async (req, res) => {
     res.status(200).json(Operacoes).end();
 }
 
+const parseBoolean = (b) => {
+    if (b == 1)
+        return true
+    else
+        return false
+}
+
+
 const readOne = async (req, res) => {
-    let Operacoes = await prisma.Operacoes.findUnique({
+    let Operacoes = await prisma.Operacoes.findMany({
         where: {
-            id: Number(req.params.id)
+            concluidas: parseBoolean(req.params.concluidas)
         }
     });
 
@@ -72,7 +80,8 @@ const update = async (req, res) => {
                 id: Number(req.params.id)
             },
             data: {
-                data_retorno:  new Date()
+                data_retorno:  new Date(),
+                concluidas: true
             }
         }),
 
