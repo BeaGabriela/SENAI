@@ -21,3 +21,21 @@ TS ->
 
 XP -> Metodologia AGIL. ->  Programação em par. Post-it. SPRINT -> 
 Classica -> Cascata, Espiral
+
+Projeto: Esforço temporario, produtos, serviços, resultado.
+Solução de problemas: {
+	exemplos: Reforma: 
+		 Viagens
+		 Casamento
+		 Software de Entregas
+		
+	Etapas inicias: {
+		 ideias: {
+	
+} 		
+}
+}
+
+ Matriz fofa{
+	Forças(Internamnete, qualidades), Fraquezas(Internamnete), Oportunidades(Externamente), Ameaças(Externamente)
+}
