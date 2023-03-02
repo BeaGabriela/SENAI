@@ -32,7 +32,7 @@ function newUser() {
 
     cadastrarNewUser.addEventListener('click', () => {
         const options = {
-            method: 'POST', 
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + usuario.token
@@ -44,11 +44,11 @@ function newUser() {
         fetch('http://localhost:3000/usuarioCreate', options)
             .then(response => response.status)
             .then(response => {
-                if(response == 201){
+                if (response == 201) {
                     window.location.reload()
                 }
             })
-           
+
     })
 
 }
@@ -128,7 +128,7 @@ function Veiculos() {
         var inputTipo = document.querySelector('#Tipo')
         btnCadatsroVeiculos.addEventListener('click', () => {
             const options = {
-                method: 'POST', 
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
@@ -599,6 +599,17 @@ function fetchOperacao(operacao) {
 function RelatorioManutencao() {
     var relatorioManutencao = document.querySelector('.RelatorioManutencao')
     relatorioManutencao.classList.remove('model')
+    var chart = document.querySelector('#myChartManutencao')
+    fetch(`http://localhost:3000/manutencao/`)
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(manutencao => {
+               
+
+            })
+        })
+
+
 }
 
 function FecharmodalManutencao() {
