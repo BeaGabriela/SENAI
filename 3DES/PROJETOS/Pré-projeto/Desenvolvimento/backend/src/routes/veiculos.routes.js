@@ -6,7 +6,7 @@ const veiculos = require('../controllers/veiculos');
 
 const middle = require('../middleware/middleware');
 
-router.post('*', middle.validaAcesso)
+//router.post('*', middle.validaAcesso)
 router.put('*', middle.validaAcesso)
 router.delete('*', middle.validaAcesso)
 
