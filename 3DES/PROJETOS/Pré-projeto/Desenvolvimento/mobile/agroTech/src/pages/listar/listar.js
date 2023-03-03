@@ -8,7 +8,7 @@ export default function Listar({ navigation }) {
     return (
         <View style={styles.viewHome}>
             <View style={styles.linha}>
-                <TouchableOpacity style={styles.buttonClicavel}><Text style={styles.textBtn}>Motoristas</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.buttonClicavel} onPress={() => {navigation.navigate('Motoristas')}}><Text style={styles.textBtn}>Motoristas</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.buttonClicavel}><Text style={styles.textBtn}>Funcionários</Text></TouchableOpacity>
             </View>
             <View style={styles.linha}>

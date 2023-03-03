@@ -3,34 +3,33 @@ import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 
 import styles from '../styles/styleGeral'
 
-export default function Home({ navigation }) {
-    const [operacoes, setOperacoes] = useState([])
+export default function HomeManutencao({ navigation }) {
+    const [manutencao, setManutencao] = useState([])
 
-    var usuario = localStorage.getItem('user')
+    var usuario = JSON.parse(localStorage.getItem('user'))
     
 
     useEffect(() => {
         setInterval(() => {
             console.log('Atualizando lista')
-            listarOperacoes()
+            listarManutencao()
         }, 5000)
     }, [])
 
 
-    const listarOperacoes = () => {
-        fetch('http://localhost:3000/operacoes')
+    const listarManutencao = () => {
+        fetch('http://localhost:3000/manutencao')
             .then(res => { return res.json() })
             .then(data => {
-                setOperacoes(data)
+                setManutencao(data)
             })
     }
 
-    console.log(operacoes)
+    console.log(manutencao)
     
-
-        const concluir = (id, veiculo, motorista) => {
-            listarOperacoes(),
-            console.log(id, veiculo, motorista)
+        const concluir = (id, veiculo) => {
+            listarManutencao(),
+            console.log(id, veiculo)
 
             const options = {
                 method: 'PUT',
@@ -39,7 +38,7 @@ export default function Home({ navigation }) {
                 }
               };
               
-              fetch(`http://localhost:3000/operacoes/${id}/${veiculo}/${motorista}`, options)
+              fetch(`http://localhost:3000/manutencao/${id}/${veiculo}`, options)
                 .then(response => response.status)
                 .then(response => {
                     if(response === 200){
@@ -49,29 +48,33 @@ export default function Home({ navigation }) {
         }
 
     return (
-        <View >
+        <View>
             <View style={styles.headers}>
                 <View style={styles.linha}>
-                    <TouchableOpacity style={styles.btnRelatorio}><Text>Relátorios</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.btnRelatorio}><Text>Manutenções</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
+                        navigation.navigate('RelatorioManutencao')
+                    }}><Text>Relátorios</Text></TouchableOpacity>
+                    <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
+                       navigation.navigate('Home')
+                    }}><Text>Home</Text></TouchableOpacity>
                 </View>
             </View>
 
             <View>
-                <Text style={styles.titulo}>Operações em andamento</Text>
+                <Text style={styles.titulo}>Manutenções em andamento</Text>
                 <View>
                     {
-                        operacoes.map((o, index) => {
+                        manutencao.map((o, index) => {
                             return (
                                 <ScrollView style={styles.view_Principal} key={index}>
                                     <Text>Id: {o.id}</Text>
                                     <Text>Veiculo: {o.veiculo}</Text>
-                                    <Text>Motorista: {o.motorista}</Text>
-                                    <Text>Data_saida: {o.data_saida}</Text>
+                                    <Text>Data inicio: {o.data_inicio}</Text>
+                                    <Text>Valor: {o.valor}</Text>
                                     <Text>Descrição: {o.descricao}</Text>
-                                    <Text>Data Retorno: {o.data_retorno}</Text>
+                                    <Text>Data Fim: {o.data_fim}</Text>
                                     <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                        concluir(o.id, o.veiculo, o.motorista)
+                                        concluir(o.id, o.veiculo)
                                     }}><Text>Concluir</Text></TouchableOpacity>
                                 </ScrollView>
                             )

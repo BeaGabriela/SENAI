@@ -7,8 +7,8 @@ import styles from '../.././pages/styles/styleGeral'
 import ButtonConectar from '../../components/btnConectar/index';
 
 export default function Login({ navigation }) {
-    const [value1, setValue1] = useState('')
-    const [value2, setValue2] = useState('')
+    const [value1, setValue1] = useState('mario@gmail.com');
+    const [value2, setValue2] = useState('mario123')
     const flag = false
 
     function validar(){
