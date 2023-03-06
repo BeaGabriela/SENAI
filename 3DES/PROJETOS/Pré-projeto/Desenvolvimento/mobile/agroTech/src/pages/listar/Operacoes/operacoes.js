@@ -6,66 +6,74 @@ import styles from '../../styles/styleGeral'
 
 import ButtonConectar from '../../../components/btnConectar/index';
 
-export default function Motoristas({ navigation }) {
-    const [motoristas, setMotoristas] = useState([])
+export default function OperacoesListar({ navigation }) {
+    const [operacao, setOperacao] = useState([])
     const [modalVisible, setModalVisible] = useState(false);
     const [value, setValue] = useState('')
+    const [value1, setValue1] = useState('')
+    const [value2, setValue2] = useState('')
+    
 
     var usuario = JSON.parse(localStorage.getItem('user'))
 
 
     useEffect(() => {
-        listarMotoristas()
+        listarOperacao()
         setInterval(() => {
             console.log('Atualizando lista')
-            listarMotoristas()
+            listarOperacao()
         }, 5000)
     }, [])
 
 
     //LISTAR
-    const listarMotoristas = () => {
-        fetch('http://localhost:3000/motorista')
+    const listarOperacao = () => {
+        fetch('http://localhost:3000/operacoes')
             .then(res => { return res.json() })
             .then(data => {
-                setMotoristas(data)
+                setOperacao(data)
             })
     }
 
-    const Excluir = (id) => {
-        listarMotoristas()
+    const Concluir = (id, veiculo, motorista) => {
+        listarOperacao()
         const options = {
-            method: 'DELETE',
+            method: 'PUT',
             headers: {
-                Authorization: 'Bearer ' + usuario.token
+              Authorization: 'Bearer ' + usuario.token
             }
-        };
-
-        fetch(`http://localhost:3000/motorista/${id}`, options)
+          };
+          
+          fetch(`http://localhost:3000/operacoes/${id}/${veiculo}/${motorista}`, options)
             .then(response => response.status)
             .then(response => {
-                if (response == 200) {
+                if(response == 200){
                     console.log('ok')
                 }
             })
+            
+        
     }
 
-    const cadastrarMotoristas = () => {
-        listarMotoristas()
+    const cadastrarOperacao = () => {
+        listarOperacao()
         const options = {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              Authorization: 'Bearer ' + usuario.token
+              Authorization: 'Bearer '+ usuario.token
             },
-            body: `{"nome":"${value}","ocupado":false}`
+            body: `{"veiculo":${Number(value)},"motorista":${Number(value1)},"descricao":"${value2}","data_retorno":null}`
           };
           
-          fetch('http://localhost:3000/motorista', options)
+          fetch('http://localhost:3000/operacoes', options)
             .then(response => response.status)
             .then(response => {
                 if(response == 201){
                     setModalVisible(!modalVisible)
+                    setValue('')
+                    setValue1('')
+                    setValue2('')
                 }
             })
     }
@@ -78,15 +86,17 @@ export default function Motoristas({ navigation }) {
                 transparent={false}
                 visible={modalVisible}>
                 <View style={styles.centeredView}>
-                <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
+                    <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
                     <View style={styles.modalView}>
-                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
+                        <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
                             <Text style={styles.textX}>X</Text>
                         </TouchableOpacity>
-                        <TextInput style={styles.inputCadastrar} placeholder='Informe o nome' value={value} onChangeText={(val) => { setValue(val) }} />
-                       <ButtonConectar value='Cadastrar' onPress={() => {
-                        cadastrarMotoristas()
-                       }}/>
+                        <TextInput style={styles.inputCadastrar} placeholder='Informe o id do veiculo' value={value} onChangeText={(val) => { setValue(val) }} />
+                        <TextInput style={styles.inputCadastrar} placeholder='Informe o id do Motorista' value={value1} onChangeText={(val) => { setValue1(val) }} />
+                        <TextInput style={styles.inputCadastrar} placeholder='Descrição' value={value2} onChangeText={(val) => { setValue2(val) }} />
+                        <ButtonConectar value='Cadastrar' onPress={() => {
+                            cadastrarOperacao()
+                        }} />
                     </View>
                 </View>
             </Modal>
@@ -104,21 +114,25 @@ export default function Motoristas({ navigation }) {
             </View>
 
             <View>
-                <Text style={styles.tituloMotorista}>Motoristas</Text>
+                <Text style={styles.tituloMotorista}>Operações</Text>
                 <TouchableOpacity style={styles.filtro}><Text>Filtro</Text></TouchableOpacity>
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
-                                motoristas.map((m, index) => {
+                                operacao.map((o, index) => {
                                     return (
-                                        <View style={styles.view_Motoristas} key={index}>
-                                            <Text>Id: {m.id}</Text>
-                                            <Text>Nome: {m.nome}</Text>
-                                            {/* <Text>Ocupado: {m.ocupado}</Text> */}
+                                        <View style={styles.view_Principal} key={index}>
+                                            <Text>Id: {o.id}</Text>
+                                            <Text>Veiculo: {o.veiculo}</Text>
+                                            <Text>Motorista: {o.motorista}</Text>
+                                            <Text>Data saida: {o.data_saida}</Text>
+                                            <Text>Descrição: {o.descricao}</Text>
+                                            <Text>Data Retorno: {o.data_retorno}</Text>
+
                                             <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                                Excluir(m.id)
-                                            }}><Text>Excluir</Text></TouchableOpacity>
+                                                Concluir(o.id, o.veiculo, o.motorista)
+                                            }}><Text>Concluir</Text></TouchableOpacity>
                                         </View>
                                     )
                                 })

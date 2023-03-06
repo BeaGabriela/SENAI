@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, Button, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { RadioButton, TextInput } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -39,8 +39,8 @@ export default function Login({ navigation }) {
                 <Text style={styles.textTitulo}>AgroTech</Text>
                 <Image  />
                 <View style={styles.view_main}>
-                    <TextInput style={styles.input}  placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
-                    <TextInput style={styles.input}  value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha'  />
+                    <TextInput style={styles.inputCadastrar}  placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
+                    <TextInput style={styles.inputCadastrar}  value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha'  />
                     <ButtonConectar value="Acessar" onPress={() => {validar()}}/>
                 </View>
             </View>

@@ -7,9 +7,10 @@ export default function HomeManutencao({ navigation }) {
     const [manutencao, setManutencao] = useState([])
 
     var usuario = JSON.parse(localStorage.getItem('user'))
-    
+
 
     useEffect(() => {
+        listarManutencao()
         setInterval(() => {
             console.log('Atualizando lista')
             listarManutencao()
@@ -26,26 +27,26 @@ export default function HomeManutencao({ navigation }) {
     }
 
     console.log(manutencao)
-    
-        const concluir = (id, veiculo) => {
-            listarManutencao(),
+
+    const concluir = (id, veiculo) => {
+        listarManutencao(),
             console.log(id, veiculo)
 
-            const options = {
-                method: 'PUT',
-                headers: {
-                  Authorization: 'Bearer ' + usuario.token
+        const options = {
+            method: 'PUT',
+            headers: {
+                Authorization: 'Bearer ' + usuario.token
+            }
+        };
+
+        fetch(`http://localhost:3000/manutencao/${id}/${veiculo}`, options)
+            .then(response => response.status)
+            .then(response => {
+                if (response === 200) {
+                    console.log('ok')
                 }
-              };
-              
-              fetch(`http://localhost:3000/manutencao/${id}/${veiculo}`, options)
-                .then(response => response.status)
-                .then(response => {
-                    if(response === 200){
-                        console.log('ok')
-                    }
-                })
-        }
+            })
+    }
 
     return (
         <View>
@@ -55,33 +56,35 @@ export default function HomeManutencao({ navigation }) {
                         navigation.navigate('RelatorioManutencao')
                     }}><Text>Relátorios</Text></TouchableOpacity>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                       navigation.navigate('Home')
+                        navigation.navigate('Home')
                     }}><Text>Home</Text></TouchableOpacity>
                 </View>
             </View>
 
-            <View>
-                <Text style={styles.titulo}>Manutenções em andamento</Text>
-                <View>
-                    {
-                        manutencao.map((o, index) => {
-                            return (
-                                <ScrollView style={styles.view_Principal} key={index}>
-                                    <Text>Id: {o.id}</Text>
-                                    <Text>Veiculo: {o.veiculo}</Text>
-                                    <Text>Data inicio: {o.data_inicio}</Text>
-                                    <Text>Valor: {o.valor}</Text>
-                                    <Text>Descrição: {o.descricao}</Text>
-                                    <Text>Data Fim: {o.data_fim}</Text>
-                                    <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                        concluir(o.id, o.veiculo)
-                                    }}><Text>Concluir</Text></TouchableOpacity>
-                                </ScrollView>
-                            )
-                        })
-                    }
+            <Text style={styles.titulo}>Manutencao em andamento</Text>
+            <View style={styles.scroll_operacoes}>
+                <ScrollView style={styles.scrollView}>
+                    <View style={styles.lista_operacoes}>
+                        {
+                            manutencao.map((o, index) => {
+                                return (
+                                    <View style={styles.view_Principal} key={index}>
+                                        <Text>Id: {o.id}</Text>
+                                        <Text>Veiculo: {o.veiculo}</Text>
+                                        <Text>Data inicio: {o.data_inicio}</Text>
+                                        <Text>Valor: {o.valor}</Text>
+                                        <Text>Descrição: {o.descricao}</Text>
+                                        <Text>Data Fim: {o.data_fim}</Text>
+                                        <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
+                                            concluir(o.id, o.veiculo)
+                                        }}><Text>Concluir</Text></TouchableOpacity>
+                                    </View>
+                                )
+                            })
+                        }
 
-                </View>
+                    </View>
+                </ScrollView>
             </View>
         </View>
     )

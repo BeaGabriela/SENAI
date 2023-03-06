@@ -54,24 +54,6 @@ export default function Operacoes({ navigation }) {
 
     return (
         <View >
-
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}>
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        <Text>OIOOI</Text>
-                        <TouchableOpacity onPress={() => { setModalVisible(!modalVisible) }}>
-                            <Text>FECHAR</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </Modal>
-
-
-
-
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
@@ -84,9 +66,6 @@ export default function Operacoes({ navigation }) {
             </View>
 
             <View>
-                <TouchableOpacity onPress={() => { setModalVisible(!modalVisible) }}>
-                    <Text>MODAL</Text>
-                </TouchableOpacity>
                 <Text style={styles.titulo}>Operações em andamento</Text>
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>

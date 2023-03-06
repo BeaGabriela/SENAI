@@ -64,6 +64,13 @@ export default StyleSheet.create({
 
     },
 
+    inputCadastrar: {
+        borderRadius: '25px',
+        width: '75vw',
+        marginTop: '2vh',
+        marginLeft: '6vw',
+    },
+
     //Home
     buttonClicavel: {
         height: '15vh',
@@ -117,12 +124,35 @@ export default StyleSheet.create({
         marginLeft: '43px',
         paddingTop: '10px'
     },
+    buttonAtualizar: {
+        height: '30px',
+        width: '30vw',
+        backgroundColor: '#57d131',
+        color: 'white',
+        textAlign: 'center',
+        borderRadius: '25px',
+        marginTop: '8px',
+        fontSize: '18pt',
+        paddingTop: '3px'
+    },
+
+    btnFechar: {
+        marginLeft: '70vw',
+
+    },
 
     titulo: {
         fontSize: '18pt',
         marginLeft: '14vw',
         marginTop: "2vh",
         color: "#57d131",
+        fontWeight: 'bold'
+    },
+    Alerta: {
+        fontSize: '18pt',
+        marginLeft: '11vw',
+        marginTop: "12vh",
+        color: "#f5f5f5",
         fontWeight: 'bold'
     },
 
@@ -136,25 +166,18 @@ export default StyleSheet.create({
         alignItems: 'center'
     },
 
-    buttonAtualizar: {
-        height: '30px',
-        width: '30vw',
-        backgroundColor: '#57d131',
-        color: 'white',
-        textAlign: 'center',
-        borderRadius: '25px',
-        marginTop: '8px',
+
+    textX: {
         fontSize: '18pt',
-        paddingTop: '3px'
     },
     centeredView: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 22,
+        height: "100vh",
+        backgroundColor: '#57d131',
     },
+
     modalView: {
         margin: 20,
+        marginTop: '10vh',
         backgroundColor: 'white',
         borderRadius: 20,
         padding: 35,
@@ -169,13 +192,51 @@ export default StyleSheet.create({
         elevation: 5,
     },
     scroll_operacoes: {
-        backgroundColor: 'pink',
         height: '60vh',
     },
+
     lista_operacoes: {
         flex: 1,
         gap: '25px',
         alignItems: 'center',
         padding: '25px',
+    },
+
+    view_Motoristas: {
+        boxShadow: '2px 2px 2px 2px #57d131',
+        height: '12vh',
+        width: '50vw',
+        borderRadius: '25px',
+        textAlign: 'center',
+        paddingTop: '2vh',
+        alignItems: 'center'
+    },
+
+    view_Funcionario: {
+        boxShadow: '2px 2px 2px 2px #57d131',
+        height: '20vh',
+        width: '50vw',
+        borderRadius: '25px',
+        textAlign: 'center',
+        paddingTop: '2vh',
+        alignItems: 'center'
+    },
+
+    tituloMotorista: {
+        fontSize: '18pt',
+        textAlign: "center",
+        marginTop: '2vh',
+        color: "#57d131",
+        fontWeight: 'bold'
+    },
+    filtro: {
+        textAlign: "center",
+        marginLeft: '80vw',
+        border: '1px solid',
+        width: '15vw',
+        borderRadius: '25px',
+    },
+    input: {
+        width: '45vw',
     }
 })

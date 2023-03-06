@@ -6,66 +6,76 @@ import styles from '../../styles/styleGeral'
 
 import ButtonConectar from '../../../components/btnConectar/index';
 
-export default function Motoristas({ navigation }) {
-    const [motoristas, setMotoristas] = useState([])
+export default function Veiculos({ navigation }) {
+    const [veiculos, setVeiculos] = useState([])
     const [modalVisible, setModalVisible] = useState(false);
     const [value, setValue] = useState('')
+    const [value1, setValue1] = useState('')
+
+
 
     var usuario = JSON.parse(localStorage.getItem('user'))
 
 
     useEffect(() => {
-        listarMotoristas()
+        listarVeiculos()
         setInterval(() => {
             console.log('Atualizando lista')
-            listarMotoristas()
+            listarVeiculos()
         }, 5000)
     }, [])
 
 
     //LISTAR
-    const listarMotoristas = () => {
-        fetch('http://localhost:3000/motorista')
+    const listarVeiculos = () => {
+        fetch('http://localhost:3000/veiculos')
             .then(res => { return res.json() })
             .then(data => {
-                setMotoristas(data)
+                setVeiculos(data)
             })
     }
 
+
+
     const Excluir = (id) => {
-        listarMotoristas()
+        listarVeiculos()
         const options = {
-            method: 'DELETE',
+            method: 'PUT',
             headers: {
                 Authorization: 'Bearer ' + usuario.token
             }
         };
 
-        fetch(`http://localhost:3000/motorista/${id}`, options)
+        fetch(`http://localhost:3000/veiculos/${id}`, options)
             .then(response => response.status)
             .then(response => {
-                if (response == 200) {
-                    console.log('ok')
+                if (response == 200) {  
+                    window.location.reload();
                 }
             })
+
+
     }
 
-    const cadastrarMotoristas = () => {
-        listarMotoristas()
+    const cadastrarVeiculo = () => {
+        listarVeiculos()
         const options = {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              Authorization: 'Bearer ' + usuario.token
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + usuario.token
             },
-            body: `{"nome":"${value}","ocupado":false}`
-          };
-          
-          fetch('http://localhost:3000/motorista', options)
+            body: `{"placa":"${value}","tipo":${Number(value1)}`
+        };
+
+        fetch('http://localhost:3000/veiculos', options)
             .then(response => response.status)
             .then(response => {
-                if(response == 201){
+                if (response == 201) {
                     setModalVisible(!modalVisible)
+                    setValue('')
+                    setValue1('')
+
                 }
             })
     }
@@ -78,15 +88,16 @@ export default function Motoristas({ navigation }) {
                 transparent={false}
                 visible={modalVisible}>
                 <View style={styles.centeredView}>
-                <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
+                    <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
                     <View style={styles.modalView}>
-                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
+                        <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
                             <Text style={styles.textX}>X</Text>
                         </TouchableOpacity>
-                        <TextInput style={styles.inputCadastrar} placeholder='Informe o nome' value={value} onChangeText={(val) => { setValue(val) }} />
-                       <ButtonConectar value='Cadastrar' onPress={() => {
-                        cadastrarMotoristas()
-                       }}/>
+                        <TextInput style={styles.inputCadastrar} placeholder='Informe a placa do veiculo' value={value} onChangeText={(val) => { setValue(val) }} />
+                        <TextInput style={styles.inputCadastrar} placeholder='Informe o tipo' value={value1} onChangeText={(val) => { setValue1(val) }} />
+                        <ButtonConectar value='Cadastrar' onPress={() => {
+                            cadastrarVeiculo()
+                        }} />
                     </View>
                 </View>
             </Modal>
@@ -104,20 +115,20 @@ export default function Motoristas({ navigation }) {
             </View>
 
             <View>
-                <Text style={styles.tituloMotorista}>Motoristas</Text>
+                <Text style={styles.tituloMotorista}>Veiculos</Text>
                 <TouchableOpacity style={styles.filtro}><Text>Filtro</Text></TouchableOpacity>
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
-                                motoristas.map((m, index) => {
+                                veiculos.map((v, index) => {
                                     return (
-                                        <View style={styles.view_Motoristas} key={index}>
-                                            <Text>Id: {m.id}</Text>
-                                            <Text>Nome: {m.nome}</Text>
-                                            {/* <Text>Ocupado: {m.ocupado}</Text> */}
+                                        <View style={styles.view_Principal} key={index}>
+                                            <Text>Id: {v.id}</Text>
+                                            <Text>Placa: {v.veiculo}</Text>
+                                            <Text>Tipo: {v.tipo}</Text>
                                             <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                                Excluir(m.id)
+                                                Excluir(v.id)
                                             }}><Text>Excluir</Text></TouchableOpacity>
                                         </View>
                                     )

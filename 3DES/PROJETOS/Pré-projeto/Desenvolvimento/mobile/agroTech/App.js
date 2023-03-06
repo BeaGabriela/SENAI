@@ -21,29 +21,12 @@ import RelatorioOperacao from './src/pages/home/Relatorios/operacao';
 import RelatorioManutencao from './src/pages/home/Relatorios/manutencao';
 
 import Motoristas from './src/pages/listar/Motoristas/motoristas';
+import Funcionario from './src/pages/listar/Funcionarios/funcionario';
+import OperacoesListar from './src/pages/listar/Operacoes/operacoes';
+import ManutencaoListar from './src/pages/listar/Manutencao/manutencao';
+import Veiculos from './src/pages/listar/Veiculos/veiculos';
 
 const SettingsStack = createNativeStackNavigator();
-
-
-// function SettingsStackScreen() {
-//   return (
-//     <SettingsStack.Navigator>
-
-//      
-//       <SettingsStack.Screen  name="HomeManutencao" component={HomeManutencao} />
-//       <SettingsStack.Screen  name="RelatorioOperacao" component={RelatorioOperacao} />
-//       <SettingsStack.Screen  name="RelatorioManutencao" component={RelatorioManutencao} />
-//     </SettingsStack.Navigator>
-//   );
-// }
-
-// function Listar(){
-//   return (
-//     <SettingsStack.Navigator>
-//       <SettingsStack.Screen  name="Home" component={Home} />
-//     </SettingsStack.Navigator>
-//   );
-// }
 
 const Home = () => {
   return (
@@ -60,17 +43,19 @@ const Home = () => {
 export default function App() {
   return (
     <NavigationContainer>
-
-      <SettingsStack.Navigator 
-        screenOptions={{headerShown:false}}
+      <SettingsStack.Navigator
+        screenOptions={{ headerShown: false }}
       >
-      <SettingsStack.Screen name="Home" component={Home} />
-        <SettingsStack.Screen name="Login" component={Login} />
-        {/* <SettingsStack.Screen name="Settings" component={SettingsStackScreen} />
-        <Tab.Screen  name="Listar" component={Listar} />
-        <Tab.Screen  name="Cadastrar" component={Cadastrar} />
-        <Tab.Screen  name="Alterar" component={Alterar} />
-        <Tab.Screen  name="Relatorio" component={Relatorios} /> */}
+         <SettingsStack.Screen name="Login" component={Login} />
+         <SettingsStack.Screen name="Home" component={Home} />
+        {/* <SettingsStack.Screen name="HomeManutencao" component={HomeManutencao} /> */}
+        {/* <SettingsStack.Screen name="RelatorioOperacao" component={RelatorioOperacao} />  */}
+        {/* <SettingsStack.Screen name="RelatorioManutencao" component={RelatorioManutencao} />  */}
+        {/* <SettingsStack.Screen name="Motoristas" component={Motoristas} /> */}
+        {/* <SettingsStack.Screen name="Funcionario" component={Funcionario} /> */}
+        {/* <SettingsStack.Screen name="OperacoesListar" component={OperacoesListar} /> */}
+        <SettingsStack.Screen name="ManutencaoListar" component={ManutencaoListar} />
+        <SettingsStack.Screen name="Veiculos" component={Veiculos} />
       </SettingsStack.Navigator>
     </NavigationContainer>
   )
