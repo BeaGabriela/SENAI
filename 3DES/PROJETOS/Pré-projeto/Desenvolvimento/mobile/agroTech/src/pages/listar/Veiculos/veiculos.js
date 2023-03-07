@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Modal } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { View, Text, TouchableOpacity, ScrollView, Modal, TextInput, Image } from 'react-native';
 
 import styles from '../../styles/styleGeral'
 
@@ -11,6 +10,7 @@ export default function Veiculos({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
     const [value, setValue] = useState('')
     const [value1, setValue1] = useState('')
+    const [filtro, setFiltro] = useState('')
 
 
 
@@ -49,7 +49,7 @@ export default function Veiculos({ navigation }) {
         fetch(`http://localhost:3000/veiculos/${id}`, options)
             .then(response => response.status)
             .then(response => {
-                if (response == 200) {  
+                if (response == 200) {
                     window.location.reload();
                 }
             })
@@ -90,8 +90,8 @@ export default function Veiculos({ navigation }) {
                 <View style={styles.centeredView}>
                     <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
                     <View style={styles.modalView}>
-                        <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                            <Text style={styles.textX}>X</Text>
+                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
+                            <Image style={styles.textX} source={require('../../../../assets/sair.png')}/>
                         </TouchableOpacity>
                         <TextInput style={styles.inputCadastrar} placeholder='Informe a placa do veiculo' value={value} onChangeText={(val) => { setValue(val) }} />
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o tipo' value={value1} onChangeText={(val) => { setValue1(val) }} />
@@ -106,7 +106,7 @@ export default function Veiculos({ navigation }) {
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                        navigation.navigate('Operacoes')
+                        navigation.navigate('Home')
                     }}><Text>Home</Text></TouchableOpacity>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         setModalVisible(!modalVisible)
@@ -116,22 +116,38 @@ export default function Veiculos({ navigation }) {
 
             <View>
                 <Text style={styles.tituloMotorista}>Veiculos</Text>
-                <TouchableOpacity style={styles.filtro}><Text>Filtro</Text></TouchableOpacity>
+                <TextInput placeholder='Placa' style={styles.filtro} value={filtro} onChangeText={(val) => { setFiltro(val) }} />
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
                                 veiculos.map((v, index) => {
-                                    return (
-                                        <View style={styles.view_Principal} key={index}>
-                                            <Text>Id: {v.id}</Text>
-                                            <Text>Placa: {v.veiculo}</Text>
-                                            <Text>Tipo: {v.tipo}</Text>
-                                            <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                                Excluir(v.id)
-                                            }}><Text>Excluir</Text></TouchableOpacity>
-                                        </View>
-                                    )
+                                    if (v.placa.includes(filtro)) {
+                                        if (v.uso == false) {
+                                            return (
+                                                <View style={styles.view_Funcionario} key={index}>
+                                                    <Text style={styles.textAlinhado}>Id: {v.id}</Text>
+                                                    <Text style={styles.textAlinhado}>Placa: {v.placa}</Text>
+                                                    <Text style={styles.textAlinhado}>Tipo: {v.tipo}</Text>
+                                                    <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
+                                                        Excluir(v.id)
+                                                    }}><Text>Excluir</Text></TouchableOpacity>
+                                                </View>
+                                            )
+
+                                        } else {
+                                            return (
+                                                <View style={styles.view_Ocupada} key={index}>
+                                                    <Text style={styles.textAlinhado}>Id: {v.id}</Text>
+                                                    <Text style={styles.textAlinhado}>Placa: {v.placa}</Text>
+                                                    <Text style={styles.textAlinhado}>Tipo: {v.tipo}</Text>
+                                                    <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
+                                                        console.log('Não é possivel excluir um veiculo em operação')
+                                                    }}><Text>Excluir</Text></TouchableOpacity>
+                                                </View>
+                                            )
+                                        }
+                                    }
                                 })
                             }
                         </View>

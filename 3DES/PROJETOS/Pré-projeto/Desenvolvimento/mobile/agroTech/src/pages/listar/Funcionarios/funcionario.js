@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Modal } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { View, Text, TouchableOpacity, ScrollView, Modal,TextInput, Image } from 'react-native';
+
 
 import styles from '../../styles/styleGeral'
 
@@ -14,6 +14,7 @@ export default function Funcionario({ navigation }) {
     const [value2, setValue2] = useState('')
     const [value3, setValue3] = useState('')
     const [value4, setValue4] = useState('')
+    const [filtro, setFiltro] = useState('')
 
     var usuario = JSON.parse(localStorage.getItem('user'))
 
@@ -84,9 +85,10 @@ export default function Funcionario({ navigation }) {
                 visible={modalVisible}>
                 <View style={styles.centeredView}>
                     <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
+                    <TextInput placeholder='Data' style={styles.filtro} value={filtro} onChangeText={(val) => { setFiltro(val) }} />
                     <View style={styles.modalView}>
-                        <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                            <Text style={styles.textX}>X</Text>
+                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
+                            <Image style={styles.textX} source={require('../../../../assets/sair.png')}/>
                         </TouchableOpacity>
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o Nome' value={value} onChangeText={(val) => { setValue(val) }} />
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o Email' value={value1} onChangeText={(val) => { setValue1(val) }} />
@@ -104,7 +106,7 @@ export default function Funcionario({ navigation }) {
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                        navigation.navigate('Operacoes')
+                        navigation.navigate('Home')
                     }}><Text>Home</Text></TouchableOpacity>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         setModalVisible(!modalVisible)
@@ -112,14 +114,14 @@ export default function Funcionario({ navigation }) {
                 </View>
             </View>
 
-            <View>
                 <Text style={styles.tituloMotorista}>Funcionários</Text>
-                <TouchableOpacity style={styles.filtro}><Text>Filtro</Text></TouchableOpacity>
+                <TextInput placeholder='Nome' style={styles.filtro} value={filtro} onChangeText={(val) => { setFiltro(val) }} />
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
                                 funcionario.map((f, index) => {
+                                    if(f.nome.includes(filtro)){
                                     return (
                                         <View style={styles.view_Funcionario} key={index}>
                                             <Text>Nome: {f.nome}</Text>
@@ -133,11 +135,12 @@ export default function Funcionario({ navigation }) {
                                             }}><Text>Excluir</Text></TouchableOpacity>
                                         </View>
                                     )
+                                        }
                                 })
                             }
                         </View>
                     </ScrollView>
-                </View>
+                
             </View>
         </View>
     )

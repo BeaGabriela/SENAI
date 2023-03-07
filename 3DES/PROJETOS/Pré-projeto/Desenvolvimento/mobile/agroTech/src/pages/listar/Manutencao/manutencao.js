@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Modal } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { View, Text, TouchableOpacity, ScrollView, Modal, TextInput, Image } from 'react-native';
+
 
 import styles from '../../styles/styleGeral'
 
@@ -9,10 +9,11 @@ import ButtonConectar from '../../../components/btnConectar/index';
 export default function ManutencaoListar({ navigation }) {
     const [manutencao, setManutencao] = useState([])
     const [modalVisible, setModalVisible] = useState(false);
+    const [filtro, setFiltro] = useState('')
     const [value, setValue] = useState('')
     const [value1, setValue1] = useState('')
     const [value2, setValue2] = useState('')
-    
+
 
     var usuario = JSON.parse(localStorage.getItem('user'))
 
@@ -40,19 +41,19 @@ export default function ManutencaoListar({ navigation }) {
         const options = {
             method: 'PUT',
             headers: {
-              Authorization: 'Bearer ' + usuario.token
+                Authorization: 'Bearer ' + usuario.token
             }
-          };
-          
-          fetch(`http://localhost:3000/manutencao/${id}/${veiculo}`, options)
+        };
+
+        fetch(`http://localhost:3000/manutencao/${id}/${veiculo}`, options)
             .then(response => response.status)
             .then(response => {
-                if(response == 200){
+                if (response == 200) {
                     console.log('ok')
                 }
             })
-            
-        
+
+
     }
 
     const cadastrarManutencao = () => {
@@ -60,16 +61,16 @@ export default function ManutencaoListar({ navigation }) {
         const options = {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              Authorization: 'Bearer '+ usuario.token
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + usuario.token
             },
             body: `{"veiculo":${Number(value)},"valor":${value1},"descricao":"${value2}","data_retorno":null}`
-          };
-          
-          fetch('http://localhost:3000/manutencao', options)
+        };
+
+        fetch('http://localhost:3000/manutencao', options)
             .then(response => response.status)
             .then(response => {
-                if(response == 201){
+                if (response == 201) {
                     setModalVisible(!modalVisible)
                     setValue('')
                     setValue1('')
@@ -88,8 +89,8 @@ export default function ManutencaoListar({ navigation }) {
                 <View style={styles.centeredView}>
                     <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
                     <View style={styles.modalView}>
-                        <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                            <Text style={styles.textX}>X</Text>
+                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
+                            <Image style={styles.textX} source={require('../../../../assets/sair.png')}/>
                         </TouchableOpacity>
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o id do veiculo' value={value} onChangeText={(val) => { setValue(val) }} />
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o valor' value={value1} onChangeText={(val) => { setValue1(val) }} />
@@ -115,26 +116,48 @@ export default function ManutencaoListar({ navigation }) {
 
             <View>
                 <Text style={styles.tituloMotorista}>Manutenções</Text>
-                <TouchableOpacity style={styles.filtro}><Text>Filtro</Text></TouchableOpacity>
+                <TextInput placeholder='data' style={styles.filtro} value={filtro} onChangeText={(val) => { setFiltro(val) }} />
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
                                 manutencao.map((m, index) => {
-                                    return (
-                                        <View style={styles.view_Principal} key={index}>
-                                            <Text>Id: {m.id}</Text>
-                                            <Text>Veiculo: {m.veiculo}</Text>
-                                            <Text>Data Inicio: {m.data_inicio}</Text>
-                                            <Text>Valor: {m.valor}</Text>
-                                            <Text>Descrição: {m.descricao}</Text>
-                                            <Text>Data Fim: {m.data_fim}</Text>
+                                    if (m.data_inicio.includes(filtro)) {
+                                        var valor = m.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                                        if (m.data_fim == null) {
+                                            return (
+                                                <View style={styles.View_Andamento} key={index}>
+                                                    <Text>Id: {m.id}</Text>
+                                                    <Text>Veiculo: {m.veiculo}</Text>
+                                                    <Text>Data Inicio: {m.data_inicio}</Text>
+                                                    <Text>Valor: {valor}</Text>
+                                                    <Text>Descrição: {m.descricao}</Text>
+                                                    <Text>Data Fim: {m.data_fim}</Text>
 
-                                            <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                                Concluir(m.id, m.veiculo)
-                                            }}><Text>Concluir</Text></TouchableOpacity>
-                                        </View>
-                                    )
+                                                    <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
+                                                        Concluir(m.id, m.veiculo)
+                                                    }}><Text>Concluir</Text></TouchableOpacity>
+                                                </View>
+                                            )
+
+                                        } else {
+                                            return (
+                                                <View style={styles.view_Principal} key={index}>
+                                                    <Text>Id: {m.id}</Text>
+                                                    <Text>Veiculo: {m.veiculo}</Text>
+                                                    <Text>Data Inicio: {m.data_inicio}</Text>
+                                                    <Text>Valor: {valor}</Text>
+                                                    <Text>Descrição: {m.descricao}</Text>
+                                                    <Text>Data Fim: {m.data_fim}</Text>
+
+                                                    <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
+                                                   console.log('Não é possivel concluir uma manutencao que ja foi concluida')
+                                                }}><Text>Concluir</Text></TouchableOpacity>
+                                                </View>
+                                            )
+                                        }
+                                    }
+
                                 })
                             }
                         </View>

@@ -34,6 +34,14 @@ export default StyleSheet.create({
         fontWeight: 'bold',
     },
 
+    textAlinhado: {
+        color: '#000',
+        fontSize: '18px',
+        paddingLeft: '10px',
+        paddingRight: '10px',
+        paddingBottom: '6px',
+    },
+
     textTitulo: {
         color: 'white',
         fontSize: '18px',
@@ -69,6 +77,15 @@ export default StyleSheet.create({
         width: '75vw',
         marginTop: '2vh',
         marginLeft: '6vw',
+    },
+
+    inputModal:{
+        borderRadius: '25px',
+        boxShadow: '2px 2px 2px #57d131',
+        width: '70vw',
+        marginTop: '1vh',
+        marginLeft: '2vw',
+        padding: '2vh'
     },
 
     //Home
@@ -124,10 +141,23 @@ export default StyleSheet.create({
         marginLeft: '43px',
         paddingTop: '10px'
     },
+
     buttonAtualizar: {
         height: '30px',
         width: '30vw',
         backgroundColor: '#57d131',
+        color: 'white',
+        textAlign: 'center',
+        borderRadius: '25px',
+        marginTop: '8px',
+        fontSize: '18pt',
+        paddingTop: '3px'
+    },
+
+    btnDesabilitado: {
+        height: '30px',
+        width: '30vw',
+        backgroundColor: '#a9a9a9',
         color: 'white',
         textAlign: 'center',
         borderRadius: '25px',
@@ -166,9 +196,9 @@ export default StyleSheet.create({
         alignItems: 'center'
     },
 
-
     textX: {
-        fontSize: '18pt',
+        height: "3vh",
+        width: "6vw",
     },
     centeredView: {
         height: "100vh",
@@ -212,8 +242,38 @@ export default StyleSheet.create({
         alignItems: 'center'
     },
 
+    view_OcupadaMotorista: {
+        boxShadow: '2px 2px 2px 2px #a9a9a9',
+        height: '12vh',
+        width: '50vw',
+        borderRadius: '25px',
+        textAlign: 'center',
+        paddingTop: '2vh',
+        alignItems: 'center'
+    },
+
+    View_Andamento: {
+        boxShadow: '2px 2px 2px 2px #a9a9a9',
+        height: '23vh',
+        width: '80vw',
+        borderRadius: '25px',
+        textAlign: 'center',
+        paddingTop: '2vh',
+        alignItems: 'center'
+    },
+
     view_Funcionario: {
         boxShadow: '2px 2px 2px 2px #57d131',
+        height: '20vh',
+        width: '50vw',
+        borderRadius: '25px',
+        textAlign: 'center',
+        paddingTop: '2vh',
+        alignItems: 'center'
+    },
+
+    view_Ocupada:{
+        boxShadow: '2px 2px 2px 2px #a0a0a0',
         height: '20vh',
         width: '50vw',
         borderRadius: '25px',
@@ -229,12 +289,16 @@ export default StyleSheet.create({
         color: "#57d131",
         fontWeight: 'bold'
     },
+
     filtro: {
         textAlign: "center",
-        marginLeft: '80vw',
-        border: '1px solid',
-        width: '15vw',
+        marginLeft: '12vw',
+        border: '1px solid #57d131',
+        width: '80vw',
         borderRadius: '25px',
+        marginTop: '2vh',
+        padding: '1vh',
+        marginBottom: '1vh',
     },
     input: {
         width: '45vw',

@@ -96,7 +96,7 @@ const update = async (req, res) => {
 
         prisma.Motorista.update({
             where: {
-                id: Number(req.params.id)
+                id: Number(req.params.motorista)
             },
             data: {
                 ocupado: false

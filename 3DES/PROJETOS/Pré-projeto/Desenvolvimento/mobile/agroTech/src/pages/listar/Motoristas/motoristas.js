@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, Modal } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import { View, Text, TouchableOpacity, ScrollView, Modal, TextInput, Image } from 'react-native';
+
 
 import styles from '../../styles/styleGeral'
 
@@ -10,6 +10,7 @@ export default function Motoristas({ navigation }) {
     const [motoristas, setMotoristas] = useState([])
     const [modalVisible, setModalVisible] = useState(false);
     const [value, setValue] = useState('')
+    const [filtro, setFiltro] = useState('')
 
     var usuario = JSON.parse(localStorage.getItem('user'))
 
@@ -81,7 +82,7 @@ export default function Motoristas({ navigation }) {
                 <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
                     <View style={styles.modalView}>
                     <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                            <Text style={styles.textX}>X</Text>
+                            <Image style={styles.textX} source={require('../../../../assets/sair.png')}/>
                         </TouchableOpacity>
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o nome' value={value} onChangeText={(val) => { setValue(val) }} />
                        <ButtonConectar value='Cadastrar' onPress={() => {
@@ -95,7 +96,7 @@ export default function Motoristas({ navigation }) {
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                        navigation.navigate('Operacoes')
+                        navigation.navigate('Home')
                     }}><Text>Home</Text></TouchableOpacity>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         setModalVisible(!modalVisible)
@@ -105,22 +106,36 @@ export default function Motoristas({ navigation }) {
 
             <View>
                 <Text style={styles.tituloMotorista}>Motoristas</Text>
-                <TouchableOpacity style={styles.filtro}><Text>Filtro</Text></TouchableOpacity>
+                <TextInput placeholder='Nome' style={styles.filtro} value={filtro} onChangeText={(val) => { setFiltro(val) }} />
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
                                 motoristas.map((m, index) => {
-                                    return (
-                                        <View style={styles.view_Motoristas} key={index}>
-                                            <Text>Id: {m.id}</Text>
-                                            <Text>Nome: {m.nome}</Text>
-                                            {/* <Text>Ocupado: {m.ocupado}</Text> */}
-                                            <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                                Excluir(m.id)
-                                            }}><Text>Excluir</Text></TouchableOpacity>
-                                        </View>
-                                    )
+                                    if(m.nome.includes(filtro)){
+                                    if(m.ocupado == false){
+                                        return (
+                                            <View style={styles.view_Motoristas} key={index}>
+                                                <Text>Id: {m.id}</Text>
+                                                <Text>Nome: {m.nome}</Text>
+                                                <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
+                                                    Excluir(m.id)
+                                                }}><Text>Excluir</Text></TouchableOpacity>
+                                            </View>
+                                        )
+                                    }else{
+                                        return (
+                                            <View style={styles.view_OcupadaMotorista} key={index}>
+                                                <Text>Id: {m.id}</Text>
+                                                <Text>Nome: {m.nome}</Text>
+                                                <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
+                                                    console.log('Não é possivel excluir um veiculo em operação') 
+                                                }}><Text>Excluir</Text></TouchableOpacity>
+                                            </View>
+                                        )
+                                    }
+                                }
+                                    
                                 })
                             }
                         </View>
