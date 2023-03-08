@@ -82,7 +82,7 @@ export default function Operacoes({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}
@@ -123,24 +123,10 @@ export default function Operacoes({ navigation }) {
                             {
                                 operacoes.map((o, index) => {
                                     if(o.data_saida.includes(filtro)){
-                                    if (o.data_retorno != null) {
+                                    if (o.data_retorno == null) {
                                         return (
                                             <View style={styles.view_Principal} key={index}>
-                                                <Text>Id: {o.id}</Text>
-                                                <Text>Veiculo: {o.veiculo}</Text>
-                                                <Text>Motorista: {o.motorista}</Text>
-                                                <Text>Data saida: {o.data_saida}</Text>
-                                                <Text>Descrição: {o.descricao}</Text>
-                                                <Text>Data Retorno: {o.data_retorno}</Text>
-
-                                                <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
-                                                   console.log('Não é possivel concluir uma operação que ja foi concluida')
-                                                }}><Text>Concluir</Text></TouchableOpacity>
-                                            </View>
-                                        )
-                                    }else{
-                                        return (
-                                            <View style={styles.View_Andamento} key={index}>
+                                                <Image style={styles.caminhao} source={require('../../../assets/caminhao.gif')}/>
                                                 <Text>Id: {o.id}</Text>
                                                 <Text>Veiculo: {o.veiculo}</Text>
                                                 <Text>Motorista: {o.motorista}</Text>
@@ -150,6 +136,23 @@ export default function Operacoes({ navigation }) {
 
                                                 <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
                                                     concluir(o.id, o.veiculo, o.motorista)
+                                                }}><Text>Concluir</Text></TouchableOpacity>
+                                               
+                                            </View>
+                                        )
+                                    }else{
+                                        return (
+                                            <View style={styles.View_Andamento} key={index}>
+                                                <Image style={styles.caminhao} source={require('../../../assets/ok.gif')} />
+                                                <Text>Id: {o.id}</Text>
+                                                <Text>Veiculo: {o.veiculo}</Text>
+                                                <Text>Motorista: {o.motorista}</Text>
+                                                <Text>Data saida: {o.data_saida}</Text>
+                                                <Text>Descrição: {o.descricao}</Text>
+                                                <Text>Data Retorno: {o.data_retorno}</Text>
+
+                                                <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
+                                                   console.log('Não é possivel concluir uma operação que ja foi concluida')
                                                 }}><Text>Concluir</Text></TouchableOpacity>
                                             </View>
                                         )

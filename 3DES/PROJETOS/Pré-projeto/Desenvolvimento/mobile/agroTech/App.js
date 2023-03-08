@@ -16,7 +16,7 @@ import Relatorios from './src/pages/relatorios/relatorios'
 
 import HomeManutencao from './src/pages/home/ManutencaoHome';
 
-import RelatorioOperacao from './src/pages/relatorios/Relatorios/operacao';
+// import RelatorioOperacao from './src/pages/relatorios/Relatorios/operacao';
 import RelatorioManutencao from './src/pages/relatorios/Relatorios/manutencao';
 import RelatorioVeiculos from './src/pages/relatorios/Relatorios/veiculos';
 
@@ -48,7 +48,7 @@ export default function App() {
          <SettingsStack.Screen name="Login" component={Login} />
          <SettingsStack.Screen name="Home" component={Home} />
         <SettingsStack.Screen name="HomeManutencao" component={HomeManutencao} />
-        <SettingsStack.Screen name="RelatorioOperacao" component={RelatorioOperacao} /> 
+        {/* <SettingsStack.Screen name="RelatorioOperacao" component={RelatorioOperacao} />  */}
         <SettingsStack.Screen name="RelatorioManutencao" component={RelatorioManutencao} /> 
         <SettingsStack.Screen name="Motoristas" component={Motoristas} />
         <SettingsStack.Screen name="Funcionario" component={Funcionario} />

@@ -81,7 +81,7 @@ export default function ManutencaoListar({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}
@@ -106,7 +106,7 @@ export default function ManutencaoListar({ navigation }) {
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                        navigation.navigate('Operacoes')
+                        navigation.navigate('Home')
                     }}><Text>Home</Text></TouchableOpacity>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         setModalVisible(!modalVisible)

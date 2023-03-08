@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='./style/index.css' />
     <title>Gerencial</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 
 <body onload="carregar()">
+    <header>
+        <h1>Bem-vindo<label id="bemVindo"></label></h1>
+    </header>
     <main>
         <nav class="nav1">
             <div>
@@ -107,7 +111,7 @@
                     <select  id="filtroManutencao">
                         <option value="3"></option>
                         <option value="1">Concluídas</option>
-                        <option value="2">Pendentes</option>
+                        <option value="0">Pendentes</option>
                     </select>
                 </div>
             </div>
@@ -148,8 +152,8 @@
                     <label id="filtro">Filtro:</label>
                     <select id="filtroOperacao">
                         <option value="3"></option>
-                        <option value="1">Pendentes</option>
-                        <option value="2">Concluídas</option>
+                        <option value="0">Pendentes</option>
+                        <option value="1">Concluídas</option>
                     </select>
                 </div>
             </div>

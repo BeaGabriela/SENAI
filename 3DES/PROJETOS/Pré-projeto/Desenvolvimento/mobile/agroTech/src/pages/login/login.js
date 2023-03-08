@@ -37,7 +37,7 @@ export default function Login({ navigation }) {
         <View style={styles.view}>
             <View style={styles.headers}>
                 <Text style={styles.textTitulo}>AgroTech</Text>
-                <Image  />
+                <Image style={styles.office} source={require('../../../assets/office.png')}  />
                 <View style={styles.view_main}>
                     <TextInput style={styles.inputCadastrar}  placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
                     <TextInput style={styles.inputCadastrar}  value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha'  />

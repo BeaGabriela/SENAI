@@ -78,14 +78,13 @@ export default function Funcionario({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}
                 visible={modalVisible}>
                 <View style={styles.centeredView}>
                     <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
-                    <TextInput placeholder='Data' style={styles.filtro} value={filtro} onChangeText={(val) => { setFiltro(val) }} />
                     <View style={styles.modalView}>
                     <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
                             <Image style={styles.textX} source={require('../../../../assets/sair.png')}/>

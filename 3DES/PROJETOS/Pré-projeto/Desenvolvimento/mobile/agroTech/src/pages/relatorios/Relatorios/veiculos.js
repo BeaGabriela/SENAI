@@ -31,7 +31,7 @@ export default function RelatoriosVeiculos({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}
@@ -50,7 +50,7 @@ export default function RelatoriosVeiculos({ navigation }) {
                     }}><Text>Menu</Text></TouchableOpacity>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         setModalVisible(!modalVisible)
-                    }}><Text>Relatórios</Text></TouchableOpacity>
+                    }}><Text>Gráfico</Text></TouchableOpacity>
                 </View>
             </View>
 

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #fff;
     height: 100%;
     width: 100%;
 
@@ -22,13 +22,26 @@ header {
     padding-top: 2vh;
 }
 
+
 header>img {
-    height: 20vh;
+    height: 15vh;
     margin-top: 1vh;
     border-radius: 30%;
     margin-left: 10px;
+    margin-bottom: 1vh;
+}
 
+main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+main > img {
+    width: 35vw;
+    height: 40vh;
+    margin-left: 3vw;
+    
 }
 
 nav {
@@ -39,7 +52,6 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-left: 30vw;
     box-shadow: 0px 2px 2px 2px #57d131;
     border-radius: 20px;
     margin-top: 5vh;
@@ -61,10 +73,11 @@ label {
 input {
     width: 25vw;
     height: 5vh;
-    background-color:#B9E937;
+    background-color:#f5f5f5;
     border-radius: 20px;
     border: none;
-    color: #f5f5f5;
+    box-shadow: 2px 2px 2px black;
+    color: #000000;
     outline: 0;
 }
 

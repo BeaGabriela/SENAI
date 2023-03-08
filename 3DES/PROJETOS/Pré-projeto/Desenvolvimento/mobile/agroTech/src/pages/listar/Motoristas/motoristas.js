@@ -73,7 +73,7 @@ export default function Motoristas({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}

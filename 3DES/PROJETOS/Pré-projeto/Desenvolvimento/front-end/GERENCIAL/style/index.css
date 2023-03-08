@@ -20,6 +20,12 @@
      border-radius: 25px;
  }
 
+ header > h1 {
+    text-align: center;
+    padding-top: 1.5vh;
+    color: #f5f5f5;
+ }
+
  .nav1 {
      box-sizing: border-box;
 

@@ -80,7 +80,7 @@ export default function HomeManutencao({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}
@@ -124,7 +124,8 @@ export default function HomeManutencao({ navigation }) {
                                     var valor = m.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                                     if (m.data_fim == null) {
                                         return (
-                                            <View style={styles.View_Andamento} key={index}>
+                                            <View style={styles.view_Principal}  key={index}>
+                                                <Image style={styles.caminhao} source={require('../../../assets/engrenagem.gif')} />
                                                 <Text>Id: {m.id}</Text>
                                                 <Text>Veiculo: {m.veiculo}</Text>
                                                 <Text>Data Inicio: {m.data_inicio}</Text>
@@ -138,7 +139,8 @@ export default function HomeManutencao({ navigation }) {
                                         )
                                     } else {
                                         return (
-                                            <View style={styles.view_Principal} key={index}>
+                                            <View style={styles.View_Andamento} key={index}>
+                                                <Image style={styles.caminhao} source={require('../../../assets/ok.gif')} />
                                                 <Text>Id: {m.id}</Text>
                                                 <Text>Veiculo: {m.veiculo}</Text>
                                                 <Text>Data Inicio: {m.data_inicio}</Text>

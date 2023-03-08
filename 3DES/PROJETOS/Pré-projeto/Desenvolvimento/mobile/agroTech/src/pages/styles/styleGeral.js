@@ -4,7 +4,7 @@ import { shadow } from 'react-native-paper';
 export default StyleSheet.create({
     //Login
     view: {
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#fff',
         height: '100%',
     },
     headers: {
@@ -13,6 +13,7 @@ export default StyleSheet.create({
         borderBottomRightRadius: "50%",
         borderBottomLeftRadius: "50%"
     },
+  
 
     view_main: {
         boxShadow: '2px 2px 2px 2px #57d131',
@@ -40,6 +41,14 @@ export default StyleSheet.create({
         paddingLeft: '10px',
         paddingRight: '10px',
         paddingBottom: '6px',
+    },
+
+    textSubTitulo: {
+        color: '#000',
+        fontSize: '18px',
+        paddingLeft: '28vw',
+        paddingRight: '10px',
+        paddingBottom: '1vh',
     },
 
     textTitulo: {
@@ -92,12 +101,12 @@ export default StyleSheet.create({
     buttonClicavel: {
         height: '15vh',
         width: '40vw',
-        backgroundColor: '#57d131',
+        backgroundColor: '#f5f5f5',
         color: '#fff',
         textAlign: 'center',
         borderRadius: '25px',
         border: '1px solid #f5f5f5',
-        boxShadow: '2px 2px 2px #f5f5f5 ',
+        boxShadow: '2px 2px 2px 2px #57d131 ',
         marginTop: '20px',
         fontSize: '18pt',
         marginLeft: '23px',
@@ -105,11 +114,9 @@ export default StyleSheet.create({
     },
 
     textBtn: {
-        color: "#f5f5f5",
         textAlign: 'center',
         paddingTop: '5vh',
-        fontSize: "12pt",
-        fontWeight: "bold",
+        fontSize: "12pt"
     },
 
     linha: {
@@ -122,15 +129,33 @@ export default StyleSheet.create({
     },
 
     viewHome: {
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#fff',
         height: '100%',
         paddingTop: '10vh'
+    },
+
+    office:{
+        height: "25vh",
+        width: "40vh",
+        marginLeft:"10vw",
+        marginTop: "10vh",
+        marginBottom: "-15vh"
+
+    },
+
+    person:{
+        height: "28vh",
+        width: "70vw",
+        marginLeft:"14vw",
+        marginTop: "-9vh",
+        marginBottom: "2vh"
+
     },
 
     btnRelatorio: {
         height: '5vh',
         width: '35vw',
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#fff',
         color: '#fff',
         textAlign: 'center',
         borderBottomRightRadius: "50%",
@@ -188,18 +213,28 @@ export default StyleSheet.create({
 
     view_Principal: {
         boxShadow: '2px 2px 2px 2px #57d131',
-        height: '23vh',
+        height: '26vh',
         width: '80vw',
         borderRadius: '25px',
         textAlign: 'center',
         paddingTop: '2vh',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: "#fff"
     },
 
     textX: {
         height: "3vh",
         width: "6vw",
     },
+
+    caminhao:{
+        height: "4vh",
+        width: "8vw",
+        marginLeft: "60vw"
+        
+
+    },
+
     centeredView: {
         height: "100vh",
         backgroundColor: '#57d131',
@@ -254,12 +289,13 @@ export default StyleSheet.create({
 
     View_Andamento: {
         boxShadow: '2px 2px 2px 2px #a9a9a9',
-        height: '23vh',
+        height: '25vh',
         width: '80vw',
         borderRadius: '25px',
         textAlign: 'center',
         paddingTop: '2vh',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
     },
 
     view_Funcionario: {

@@ -81,7 +81,7 @@ export default function OperacoesListar({ navigation }) {
 
 
     return (
-        <View>
+        <View style={styles.view}>
             <Modal
                 animationType="slide"
                 transparent={false}
@@ -89,8 +89,8 @@ export default function OperacoesListar({ navigation }) {
                 <View style={styles.centeredView}>
                     <Text style={styles.Alerta}>Digite as informações abaixo:</Text>
                     <View style={styles.modalView}>
-                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                            <Image style={styles.textX} source={require('../../../../assets/sair.png')}/>
+                        <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
+                            <Image style={styles.textX} source={require('../../../../assets/sair.png')} />
                         </TouchableOpacity>
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o id do veiculo' value={value} onChangeText={(val) => { setValue(val) }} />
                         <TextInput style={styles.inputCadastrar} placeholder='Informe o id do Motorista' value={value1} onChangeText={(val) => { setValue1(val) }} />
@@ -122,39 +122,42 @@ export default function OperacoesListar({ navigation }) {
                         <View style={styles.lista_operacoes}>
                             {
                                 operacao.map((o, index) => {
-                                    if(o.data_saida.includes(filtro)){
-                                    if (o.data_retorno != null) {
-                                        return (
-                                            <View style={styles.view_Principal} key={index}>
-                                                <Text>Id: {o.id}</Text>
-                                                <Text>Veiculo: {o.veiculo}</Text>
-                                                <Text>Motorista: {o.motorista}</Text>
-                                                <Text>Data saida: {o.data_saida}</Text>
-                                                <Text>Descrição: {o.descricao}</Text>
-                                                <Text>Data Retorno: {o.data_retorno}</Text>
+                                    if (o.data_saida.includes(filtro)) {
+                                        if (o.data_retorno == null) {
+                                            return (
+                                                <View style={styles.view_Principal}  key={index}>
+                                                    <Image style={styles.caminhao} source={require('../../../../assets/caminhao.gif')} />
+                                                    <Text>Id: {o.id}</Text>
+                                                    <Text>Veiculo: {o.veiculo}</Text>
+                                                    <Text>Motorista: {o.motorista}</Text>
+                                                    <Text>Data saida: {o.data_saida}</Text>
+                                                    <Text>Descrição: {o.descricao}</Text>
+                                                    <Text>Data Retorno: {o.data_retorno}</Text>
 
-                                                <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
-                                                   console.log('Não é possivel concluir uma operação que ja foi concluida')
-                                                }}><Text>Concluir</Text></TouchableOpacity>
-                                            </View>
-                                        )
-                                    }else{
-                                        return (
-                                            <View style={styles.View_Andamento} key={index}>
-                                                <Text>Id: {o.id}</Text>
-                                                <Text>Veiculo: {o.veiculo}</Text>
-                                                <Text>Motorista: {o.motorista}</Text>
-                                                <Text>Data saida: {o.data_saida}</Text>
-                                                <Text>Descrição: {o.descricao}</Text>
-                                                <Text>Data Retorno: {o.data_retorno}</Text>
+                                                    <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
+                                                        Concluir(o.id, o.veiculo, o.motorista)
+                                                    }}><Text>Concluir</Text></TouchableOpacity>
+                                                </View>
+                                            )
+                                        } else {
+                                            return (
+                                                <View style={styles.View_Andamento}  key={index}>
+                                                     <Image style={styles.caminhao} source={require('../../../../assets/ok.gif')} />
+                                                    <Text>Id: {o.id}</Text>
+                                                    <Text>Veiculo: {o.veiculo}</Text>
+                                                    <Text>Motorista: {o.motorista}</Text>
+                                                    <Text>Data saida: {o.data_saida}</Text>
+                                                    <Text>Descrição: {o.descricao}</Text>
+                                                    <Text>Data Retorno: {o.data_retorno}</Text>
 
-                                                <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
-                                                    Concluir(o.id, o.veiculo, o.motorista)
-                                                }}><Text>Concluir</Text></TouchableOpacity>
-                                            </View>
-                                        )
+                                                    <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
+                                                        console.log('Não é possivel concluir uma operação que ja foi concluida')
+                                                    }}><Text>Concluir</Text></TouchableOpacity>
+                                                </View>
+                                            )
+
+                                        }
                                     }
-                                }
 
                                 })
                             }
