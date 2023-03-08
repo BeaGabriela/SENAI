@@ -16,7 +16,7 @@ var dataCompleta = `${ano}-0${mes}-${dia}  ${hora}:${minutos}`
 var usuario = JSON.parse(localStorage.getItem('user'))
 
 
-function carregar() { 
+function carregar() {
     bemVindo.innerHTML = '  ' + usuario.nome
     bemVindo.style.color = '#fff'
     Motoristas()
@@ -159,12 +159,21 @@ function fetchVeiculos(valorFiltro) {
     var deletarVeiculos = document.querySelector('.deletarVeiculos')
     var delVeiculos = document.querySelector('#deletarVeiculo')
     var btnDeletarVeiculos = document.querySelector('#btnDeletarVeiculos')
+    
 
-    fetch(`http://localhost:3000/tipVeiculos`)
-    .then(response => response.json())
-    .then(response => {
-        
-    })
+    // fetch(`http://localhost:3000/tipVeiculos`)
+    //     .then(response => response.json())
+    //     .then(response => {
+    //         response.forEach(tv => {
+    //             var tipoVeiculoCadastrar = document.querySelector('.tipoVeiculoCadastrar').cloneNode(true)
+    //             tipoVeiculoCadastrar.classList.remove('model')
+
+    //             tipoVeiculoCadastrar.innerHTML += `<option value='${tv.id}'>${tv.tipo}</option>`
+
+    //             document.querySelector('#estilizando').appendChild(tipoVeiculoCadastrar)
+
+    //         })
+    //     })
 
     fetch(`http://localhost:3000/veiculos/${valorFiltro}`)
         .then(response => response.json())
