@@ -18,8 +18,31 @@ header {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     text-align: center;
-    color: #f5f5f5;
+    color: #050101;
     padding-top: 2vh;
+    animation:infinito 6s infinite;
+}
+
+@keyframes infinito{
+    0%{
+        background-color: #56d1318d;
+        transition: 2s;
+        
+    }
+    50%{
+        background-color: #56d131b0;
+        transition: 2s;
+    }
+    75%{
+        background-color: #56d131d2;
+        transition: 2s;
+
+    }
+    
+    100%{
+        background-color: #56d131ef;
+        transition: 4s;
+    }
 }
 
 
@@ -39,8 +62,10 @@ main{
 
 main > img {
     width: 35vw;
-    height: 40vh;
-    margin-left: 3vw;
+    height: 45vh;
+    margin-left: -2vw;
+    margin-top: 5vh;
+    border-radius: 15px;
     
 }
 
@@ -69,6 +94,12 @@ label {
     font-weight: bold;
     color:  #57d131;
 }
+#agro{
+    margin: 2vh 0vw 0 0;
+    font-weight: bold;
+    color:  #57d131;
+    text-shadow: 1px 1px 3px #000000;
+}
 
 input {
     width: 25vw;
@@ -91,6 +122,7 @@ button {
     font-weight: bold;
     border: none;
     cursor: pointer;
+    animation: infinito 6s infinite wrap;
 }
 
 p {
@@ -105,4 +137,10 @@ p>label {
 #informacoesLogin {
     margin: 10px;
     
+}
+
+@media(max-width: 1100px){
+    body{
+        width: auto;
+    }
 }

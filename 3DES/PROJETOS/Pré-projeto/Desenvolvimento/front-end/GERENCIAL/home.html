@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='./style/index.css' />
+    <link rel="shortcut icon" href="../../assets/industry.png" type="image/x-icon">
     <title>Gerencial</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -13,9 +14,14 @@
 
 <body onload="carregar()">
     <header>
-        <h1>Bem-vindo<label id="bemVindo"></label></h1>
+        <h1>Bem-vindo, <label id="bemVindo"></label>!</h1>
     </header>
     <main>
+        <div id="imgs">
+            <img id="logo" src="../../assets/industry.png">
+            <h2><label>Agro</label>Tech</h2>
+            <img id="person" src="../../assets/person.png" />
+        </div>
         <nav class="nav1">
             <div>
                 <div id="headersVeiculos">
@@ -26,8 +32,8 @@
                     <label id="filtro">Filtro:</label>
                     <select id='definindoFiltro'>
                         <option value="3"></option>
-                        <option  value='0'>Disponiveis</option>
-                        <option  value='1'>Ocupados</option>
+                        <option value='0'>Disponiveis</option>
+                        <option value='1'>Ocupados</option>
                     </select>
                 </div>
             </div>
@@ -43,6 +49,7 @@
             </div>
 
             <div class="deletarVeiculos model">
+                <img src="../../assets/sair.png" height="20px"/>
                 <div id='estilizando'>
                     <p id="deletarVeiculo"></p>
                     <button id="btnDeletarVeiculos">Deletar</button>
@@ -109,7 +116,7 @@
                 </div>
                 <div id="busca">
                     <label id="filtro">Filtro:</label>
-                    <select  id="filtroManutencao">
+                    <select id="filtroManutencao">
                         <option value="3"></option>
                         <option value="1">Concluídas</option>
                         <option value="0">Pendentes</option>
@@ -186,31 +193,21 @@
 
         </nav>
         <nav class="nav4">
-            <div class="relatorios">
-                <h3>Relatórios</h3>
-                <button onclick='RelatorioManutencao()'>Manutenção</button>
-                <button onclick='RelatorioOperacao()'>Operação</button>
-                <button onclick="abrirNewFunc()">Novo Funcionário</button>
+            <div>
+                <img src="../../assets/newuser.png" />
             </div>
+            <div>
+                <a href="../RELATORIOS/index.html"><img src="../../assets/realtorio.png" /></a>
+            </div>
+            <div>
+                <img onclick="logout()" src="../../assets/sairPagina.png" />
+
+            </div>
+
         </nav>
-        <div class="RelatorioManutencao model">
-            <div>
-                <button onclick='FecharmodalManutencao()'>X</button>
-                <div id='myChartManutencao'>
 
-                </div>
-            </div>
 
-        </div>
-
-        <div class="RelatorioOperacao model">
-            <div>
-                <button onclick='FecharmodalOperacao()'>X</button>
-            </div>
-
-        </div>
-
-        <div class="NewFunc model">
+        <!-- <div class="NewFunc model">
             <div>
                 <button id='fecharmodalFun' onclick='FecharmodalFunc()'>X</button>
                 <div id="estilizandoUser"> 
@@ -220,7 +217,7 @@
                     <button id="cadastrarNewUser">Cadastrar</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </main>
 </body>

@@ -18,14 +18,17 @@ var usuario = JSON.parse(localStorage.getItem('user'))
 
 function carregar() {
     bemVindo.innerHTML = '  ' + usuario.nome
-    bemVindo.style.color = '#fff'
+    bemVindo.style.color = '#000'
     Motoristas()
     Manutencoes()
     Veiculos()
     Operacoes()
     newUser()
+}
 
-
+function logout(){
+    window.localStorage.removeItem('usuario')
+    window.location.href = '../LOGIN/login.html'
 }
 
 function newUser() {
@@ -195,7 +198,7 @@ function fetchVeiculos(valorFiltro) {
                         deletarVeiculos.classList.remove('model')
                         veiculo.classList.add('model')
                         delVeiculos.innerHTML = `Tem certeza que deseja excluir o <label>VEICULO PLACA</label> ${v.placa} de <label>ID:</label> ${v.id}?`
-
+                        btnDeletarVeiculos.innerHTML = "Excluir"
                         btnDeletarVeiculos.addEventListener('click', () => {
 
                             const options = {

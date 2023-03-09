@@ -15,214 +15,54 @@ main {
     left: 10vh;
     top: 8vh;
 
-    background: #F5F5F5;
+    background: #ffff;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 }
 
-header > h1 {
-   text-align: center;
-   padding-top: 1.5vh;
-   color: #f5f5f5;
+header>h1 {
+    text-align: center;
+    padding-top: 1.5vh;
+    color: #f5f5f5;
 }
 
 .nav1 {
     box-sizing: border-box;
-
     position: absolute;
-    width: 20vw;
-    height: 38vh;
+    width: 10vw;
+    height: 74vh;
     left: 4vw;
     top: 7vh;
 
-    background: #F5F5F5;
+    background: #fff;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 }
 
-.nav1_1 {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 20vw;
-    height: 36vh;
-    left: 0vw;
-    top: 40vh;
-
-    background: #F5F5F5;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
-
-#headersVeiculos,
-#headersManutencao,
-#headersOperacao,
-#headersMotoristas {
+.buttons {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 5vh;
     align-items: center;
-    margin-top: 1vh;
-    margin-left: 5vw;
+    margin-top: 5vh;
 }
-
-select {
-    border: #f5f5f5;
-    border-radius: 25px;
-    width: 7vw;
-    height: 5vh;
-    background-color: #B9E937;
-}
-
-input {
-    border: 1px solid #B9E937;
-    border-radius: 25px;
-    width: 10vw;
-    height: 3vh;
-}
-
-#filtro {
-   margin-right: 0.5vw;
-   margin-top: 1.5vh;
-}
-
-label{
-   color:#289507;
-   font-weight: 700;
-}
-
-.listarOperacoes>p,
-.listarManutencao>p {
-    margin: 7px;
-}
-
-.listarVeiculos > p, .cloneModalMotoristas>p {
-   margin: 2.5px;
-}
-
 
 button {
     border: #f5f5f5;
     border-radius: 25px;
-    width: 5vw;
-    height: 5vh;
+    width: 7vw;
+    height: 6vh;
     background-color: #B9E937;
     cursor: pointer;
 }
-
-
-#busca,
-#buscaOperacao {
-    display: flex;
-    justify-content: end;
-    margin-right: 1vw;
-    margin-top: 2vh;
-
-}
-
-.ListarVeiculos {
-    width: 12vw;
-    height: 22vh;
-    overflow-y: scroll;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.listarMotoristas {
-    width: 12vw;
-    height: 20vh;
-    overflow-y: scroll;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.listarVeiculos {
-    height: 18vh;
-    width: 8vw;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 1.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.cloneModalMotoristas {
-    height: 18vh;
-    width: 8vw;
-    border-radius: 25px;
-    text-align: center;
-    padding: 30px;
-    background: #F5F5F5;
-    margin-left: 1.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.deletarMotorista,
-.cadastrarMotorista,
-.deletarVeiculos,
-.cadastrarVeiculos {
-    width: 14vw;
-    height: 18vh;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3vw;
-    margin-top: 1vh;
-    padding-top: 3vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.cadastrarOperacao {
-    width: 14vw;
-    height: 20vh;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3vw;
-    margin-top: 1vh;
-    padding-top: 3vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#btnDeletarMotorista,
-#cadastrarMotorista,
-#cadastrarVeiculo,
-#cadastrarManutencao,
-#cadastrarOperacao {
-    margin-top: 2vh;
-    cursor: pointer;
-}
-
-#imgEditar {
-    height: 3vh;
-    margin-top: 1vh;
-}
-
 
 .nav2 {
     box-sizing: border-box;
-
     position: absolute;
-    width: 20vw;
+    width: 66vw;
     height: 74vh;
-    left: 28vw;
+    left: 19vw;
     top: 7vh;
 
     background: #F5F5F5;
@@ -231,159 +71,12 @@ button {
     border-radius: 25px;
 }
 
-.ListarManutencoes {
-    width: 14vw;
-    height: 55vh;
-    overflow-y: scroll;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.buttons > img {
+    height: 16vh;
+    width: 9vw;
 }
 
-.listarManutencao {
-    height: 40vh;
-    width: 10vw;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 1.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+#myChartManutencao {
+margin-top: 10vh;
+margin-left: 6vw;
 }
-
-
-.cadastrarManutencao {
-    height: 40vh;
-    width: 15vw;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 1.8vw;
-    margin-top: 1vh;
-    padding-top: 10vh;
-    padding-left: 1vw;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.nav3 {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 20vw;
-    height: 74vh;
-    left: 52vw;
-    top: 7vh;
-
-    background: #F5F5F5;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
-
-.ListarOperacoes {
-    width: 14vw;
-    height: 55vh;
-    overflow-y: scroll;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-
-.listarOperacoes {
-    height: 40vh;
-    width: 10vw;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 1.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.nav4 {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 10vw;
-    height: 74vh;
-    left: 76vw;
-    top: 7vh;
-
-    background: #F5F5F5;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
-
-.nav4>div>button {
-    border: #f5f5f5;
-    border-radius: 25px;
-    width: 8vw;
-    height: 8vh;
-    background-color: #B9E937;
-}
-
-h3 {
-    text-align: center;
-}
-
-.relatorios {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-left: 1vw;
-}
-
-.model {
-    display: none;
-    visibility: hidden;
-}
-
-.RelatorioManutencao,
-.RelatorioOperacao{
-   position: absolute;
-   height: 100vh;
-   width: 100vw;
-   background: #56d13183;
-}
-
-.NewFunc{
-   position: absolute;
-   height: 50vh;
-   width: 50vw;
-   margin: 18vh 20vw;
-   background: #56d13183;
-   border-radius: 25px;
-}
-
-#fecharmodalFun{
-   margin-left: 43vw;
-   margin-top: 1vh;
-   border: 1px solid #f5f5f5;
-}
-#estilizandoUser{
-   display: flex;
-   flex-direction: column;
-   background-color: #F5F5F5;
-   width: 15vw;
-   height: 25vh;
-   border-radius: 25px;
-   align-items: center;
-   justify-content: center;
-   gap: 7px;
-   margin: 8vh 18vw;
-}
-
-
