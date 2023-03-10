@@ -20,6 +20,14 @@ main {
     border-radius: 25px;
 }
 
+#voltar{
+    cursor: pointer;
+    height: 4vh;
+    margin-top: 2vh;
+    margin-left: 1vw;
+
+}
+
 header>h1 {
     text-align: center;
     padding-top: 1.5vh;

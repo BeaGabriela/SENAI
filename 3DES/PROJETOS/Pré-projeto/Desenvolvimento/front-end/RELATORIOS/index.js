@@ -8,15 +8,17 @@ function relatorioManutencao() {
             let utilizacao = {
                 mes: [],
                 veiculo: [],
-                // data_inicio: [],
                 valor: []
+                
             }
             response.forEach(info => {
+               
                 let existente = false
                 for (let i = 0; i < utilizacao.mes.length; i++) {
                     if (utilizacao.mes[i] == (info.data_inicio.slice(0, 7))) {
                         // utilizacao.mes[i] += info.data_inicio.slice(0,7)
                         utilizacao.veiculo[i] += info.veiculo
+                        console.log(utilizacao.veiculo[i])
                         utilizacao.valor[i] += info.valor
                         // utilizacao.data_inicio[i] += info.data_inicio
                         existente = true
@@ -27,7 +29,6 @@ function relatorioManutencao() {
                     utilizacao.mes.push(info.data_inicio.slice(0, 7))
                     utilizacao.veiculo.push(info.veiculo)
                     utilizacao.valor.push(info.valor)
-                    // utilizacao.data_inicio.push(info.data_inicio)
                 }
 
             })
@@ -38,23 +39,23 @@ function relatorioManutencao() {
                     labels: utilizacao.mes,
                     datasets: [{
                         type: 'bar',
-                        label: "Veiculo",
-                        data: utilizacao.veiculo,
+                        label:labels,
+                        data: utilizacao.valor,
                         borderColor: 'rgba(250, 50, 0,100)',
                         borderWidth: 1,
                         backgroundColor: "rgba(250,50,0,0.5)",
                         borderRadius: 5,
                         borderSkiped: false
                     },
-                    {
-                        type: 'bar',
-                        label: 'mes',
-                        data: utilizacao.mes,
-                        borderColor: 'rgba(100, 100, 200,100)',
-                        borderWidth: 2,
-                        backgroundColor: "rgba(0,0,0,0)",
-                        borderRadius: Number.MAX_VALUE,
-                    },
+                    // {
+                    //     type: 'bar',
+                    //     label: 'mes',
+                    //     data: utilizacao.mes,
+                    //     borderColor: 'rgba(100, 100, 200,100)',
+                    //     borderWidth: 2,
+                    //     backgroundColor: "rgba(0,0,0,0)",
+                    //     borderRadius: Number.MAX_VALUE,
+                    // },
                         // {
                         //     type: 'line',
                         //     label: 'Data',
@@ -287,4 +288,8 @@ function relatorioOperacao() {
             })
 
         })
+}
+
+function voltarAnterior(){
+    window.history.back()
 }
