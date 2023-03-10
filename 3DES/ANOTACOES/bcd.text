@@ -1,0 +1,5 @@
+SELECT v.placa, SUM(m.valor) as total, MONTH(m.data_inicio) as mes FROM manutencao m
+INNER JOIN veiculos v
+ON v.id = m.veiculo
+GROUP BY m.veiculo, MONTH(m.data_inicio)
+ORDER BY v.placa

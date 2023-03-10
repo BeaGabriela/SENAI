@@ -85,7 +85,7 @@ function relatorioManutencao() {
     manutencao.classList.add('model')
 
     var ctxVeiculo = document.querySelector("#grafico-manutencao")
-    fetch(`http://localhost:3000/veiculo`)
+    fetch(`http://localhost:3000/veiculos`)
         .then(response => response.json())
         .then(response => {
             let color = [
@@ -97,50 +97,11 @@ function relatorioManutencao() {
                 "#C5DFAA",
             ];
 
-            response.forEach(data => {
-                if (placaAtual != data.placa) {
-                    placaAtual = data.placa;
-                    datasets.push(JSON.parse(`{"${placaAtual}" : [0,0,0,0,0,0,0,0,0,0,0,0]}`));
-                    datasets[datasets.length - 1][placaAtual][data.mes - 1] = data.total;
-                } else {
-                    datasets[datasets.length - 1][placaAtual][data.mes - 1] = data.total;
-                }
+            response.forEach(v => {
+
             })
 
-
-
-            datasets = datasets.map((data, i) => {
-                return {
-                    type: 'bar',
-                    label: Object.keys(data)[0],
-                    data: data[Object.keys(data)[0]],
-                    borderColor: color[i],
-                    borderWidth: 1,
-                    backgroundColor: color[i],
-                    
-                }
-            })
-
-            console.log(labels, datasets);
-
-            new Chart(ctxVeiculo, {
-                type: 'bar',
-                data: {
-                    labels,
-                    datasets,
-                },
-                options: {
-                    borderJoinStyle: "bevel",
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        },
-                        x: {
-                            stacked: true
-                        }
-                }
-                }
-            })
+    
         })
  }
 
