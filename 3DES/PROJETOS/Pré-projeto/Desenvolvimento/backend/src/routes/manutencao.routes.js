@@ -12,6 +12,7 @@ router.delete('*', middle.validaAcesso)
 
 router.post('/manutencao', manutencao.create);
 router.get('/manutencao', manutencao.read);
+router.get('/manutencao/total', manutencao.gastoTotal);
 router.get('/manutencao/:concluidas', manutencao.readOne);
 router.put('/manutencao/:id/:veiculo', manutencao.update);
 router.delete('/manutencao/:id', manutencao.remove);

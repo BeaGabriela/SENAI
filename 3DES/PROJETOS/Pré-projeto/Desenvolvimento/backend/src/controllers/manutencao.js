@@ -15,22 +15,22 @@ const create = async (req, res) => {
                 data_fim: data
             },
         }),
-                prisma.Veiculos.update({
-                where: {
-                    id: veiculo
-                },
-                data: {
-                    uso: true
-                }
+        prisma.Veiculos.update({
+            where: {
+                id: veiculo
+            },
+            data: {
+                uso: true
+            }
 
         }),
-       
+
     ]);
     res.status(201).json(manutencao).end();
 }
 
 const read = async (req, res) => {
-    let Manutencao = await prisma.Manutencao.findMany({
+    let manutencao = await prisma.Manutencao.findMany({
         select: {
             id: true,
             veiculo: true,
@@ -38,12 +38,26 @@ const read = async (req, res) => {
             valor: true,
             descricao: true,
             data_fim: true,
-            manutencao: true
+            manutencao: true,
+            veiculos: {
+                select: {
+                    placa: true,
+                }
+            }
         }
     });
 
-    res.status(200).json(Manutencao).end();
+    res.status(200).json(manutencao).end();
 }
+
+const gastoTotal = async (req, res) => {
+    let manutencao = await prisma.$queryRaw`SELECT v.placa, SUM(m.valor) as total, MONTH(m.data_inicio) as mes FROM manutencao m
+    INNER JOIN veiculos v
+    ON v.id = m.veiculo
+    GROUP BY m.veiculo, MONTH(m.data_inicio) ORDER BY v.placa`;
+
+    res.status(200).json(manutencao).end();
+};
 
 
 const parseBoolean = (b) => {
@@ -56,8 +70,8 @@ const parseBoolean = (b) => {
 const readOne = async (req, res) => {
     let Manutencao = await prisma.Manutencao.findMany({
         where: {
-               concluidas: parseBoolean(req.params.concluidas)
-           
+            concluidas: parseBoolean(req.params.concluidas)
+
         }
     });
 
@@ -71,7 +85,7 @@ const update = async (req, res) => {
                 id: Number(req.params.id)
             },
             data: {
-                data_fim:  new Date(),
+                data_fim: new Date(),
                 concluidas: true
             }
         }),
@@ -105,6 +119,6 @@ module.exports = {
     read,
     readOne,
     update,
-    remove
-
+    remove,
+    gastoTotal
 }

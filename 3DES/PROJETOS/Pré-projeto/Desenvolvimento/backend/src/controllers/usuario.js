@@ -12,10 +12,10 @@ const create = async (req, res) => {
     //         bcrypt.hash(req.body.senha, salt, async function (errCrypto, hash) {
     //             if (errCrypto == null) {
     //                 req.body.senha = hash
-                    let usuario = await prisma.Usuario.create({
-                        data: req.body
-                    });
-                    res.status(201).json(usuario).end();
+    let usuario = await prisma.Usuario.create({
+        data: req.body
+    });
+    res.status(201).json(usuario).end();
 
     //             } else {
     //                 res.status(500).json(errCrypto).end();
@@ -87,7 +87,7 @@ const login = async (req, res) => {
     })
 
     if (usuario.length > 0) {
-        jwt.sign(usuario[0], process.env.KEY, { expiresIn: '5m' }, function (err, token) {
+        jwt.sign(usuario[0], process.env.KEY, { expiresIn: '10h' }, function (err, token) {
             console.log(token);
             if (err == null) {
                 usuario[0]["token"] = token;
