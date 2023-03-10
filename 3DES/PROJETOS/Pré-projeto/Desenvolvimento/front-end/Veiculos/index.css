@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #57d131;
+}
+#voltar{
+    cursor: pointer;
+    height: 4vh;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    position: absolute;
+}
+
+main {
+    position: absolute;
+    width: 90vw;
+    height: 85vh;
+    left: 10vh;
+    top: 8vh;
+
+    background: #F5F5F5;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#imgs {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12vw;
+    height: 30vh;
+    left: 8vw;
+    top: 47vh;
+
+    background: #fff;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#officeIMG{
+    height: 20vh;
+    margin-top: 20vh;
+}
+
+#imgs>h2 {
+    margin-left: 5.2vw;
+    margin-top: 2vh;
+}
+
+#logo {
+    height: 15vh;
+    width: 8vw;
+    margin-left: 5vw;
+    margin-top: 8vh
+}
+
+#person {
+    height: 35vh;
+    width: 18vw;
+    margin-left:5.5vw;
+    margin-top: 7vh;
+}
+
+.btnCadastrar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 4vh;
+}
+
+h3{
+    text-align: center;
+    margin-top: 2vh;
+}
+
+header>h1 {
+    text-align: center;
+    padding-top: 1.5vh;
+    color: #f5f5f5;
+}
+
+.alinhar{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav1 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20vw;
+    height: 70vh;
+    left: 35vw;
+    top: 8vh;
+
+    background: #F5F5F5;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+
+
+.nav1_1 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20vw;
+    height: 70vh;
+    left: 60vw;
+    top: 8vh;
+
+    background: #F5F5F5;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+#headersVeiculos,
+#headersMotoristas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1vh;
+    margin-left: 5vw;
+}
+
+select {
+    border: #f5f5f5;
+    border-radius: 25px;
+    width: 7vw;
+    height: 5vh;
+    background-color: #B9E937;
+}
+
+input {
+    border: 1px solid #B9E937;
+    border-radius: 25px;
+    width: 10vw;
+    height: 3vh;
+}
+
+#filtro {
+    margin-right: 0.5vw;
+    margin-top: 1.5vh;
+}
+
+label {
+    color: #289507;
+    font-weight: 700;
+}
+
+
+
+.listarVeiculos>p,
+.cloneModalMotoristas>p {
+    margin: 2.5px;
+}
+
+
+button {
+    border: #f5f5f5;
+    border-radius: 25px;
+    width: 5vw;
+    height: 5vh;
+    background-color: #B9E937;
+    cursor: pointer;
+}
+
+
+#busca{
+    display: flex;
+    justify-content: end;
+    margin-right: 1vw;
+    margin-top: 2vh;
+
+}
+
+.ListarVeiculos {
+    width: 14vw;
+    height: 45vh;
+    overflow-y: scroll;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 3vw;
+    margin-top: 4vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.listarMotoristas {
+    width: 14vw;
+    height: 45vh;
+    overflow-y: scroll;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 3vw;
+    margin-top: 4vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.listarVeiculos {
+    height: 18vh;
+    width: 8vw;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 1.8vw;
+    margin-top: 1vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cloneModalMotoristas {
+    height: 18vh;
+    width: 8vw;
+    border-radius: 25px;
+    text-align: center;
+    padding: 30px;
+    background: #F5F5F5;
+    margin-left: 1.8vw;
+    margin-top: 1vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.deletarMotorista,
+.cadastrarMotorista,
+.deletarVeiculos,
+.cadastrarVeiculos {
+    width: 14vw;
+    height: 34vh;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 3vw;
+    margin-top: 6vh;
+    padding-top: 11vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#sairModal{
+    position: absolute;
+    height: 5vh;
+    margin-left: 4vw;
+    margin-top: -7vh;
+}
+
+#btnDeletarMotorista,
+#cadastrarMotorista,
+#cadastrarVeiculo,
+#cadastrar{
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+#imgEditar {
+    height: 3vh;
+    margin-top: 1vh;
+}
+
+
+.nav2 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20vw;
+    height: 74vh;
+    left: 41vw;
+    top: 7vh;
+
+    background: #F5F5F5;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.listar {
+    height: 40vh;
+    width: 10vw;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 1.8vw;
+    margin-top: 1vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.cadastrar {
+    height: 40vh;
+    width: 15vw;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 1.8vw;
+    margin-top: 1vh;
+    padding-top: 10vh;
+    padding-left: 1vw;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav3 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20vw;
+    height: 74vh;
+    left: 63.5vw;
+    top: 7vh;
+
+    background: #F5F5F5;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+
+
+.nav4 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 3vw;
+    height: 74vh;
+    left: 86vw;
+    top: 7vh;
+    border-radius: 16px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.nav4>div {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    margin-top: 5vh;
+    height: 8vh;
+    padding-top: 2vh;
+    padding-left: 2px;
+    width: 4vw;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.nav4 img {
+    height: 4vh;
+    width: 3vw;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+@media(max-width: 1115px) {
+    body {
+        width: auto;
+    }
+
+    .listar,
+    .listarVeiculos,
+    .listarOperacoes,
+    .cloneModalMotoristas{
+        height: auto;
+    }
+}
+
+@media(max-width: 1365px) {
+    body {
+        width: auto;
+    }
+
+    .listar,
+    .listarVeiculos,
+    .listarOperacoes,
+    .cloneModalMotoristas{
+        height: auto;
+        width: 10vw;
+    }
+}
