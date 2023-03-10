@@ -1,7 +1,9 @@
-var ctxManutencao = document.querySelector("#grafico-manutencao")
+var manutencao = document.querySelector(".myChartManutencao")
+var veiculo = document.querySelector(".myChartOperacao")
 
 function relatorioManutencao() {
-    ctxManutencao.innerHTML = ''
+    var ctxManutencao = document.querySelector("#grafico-manutencao")
+    manutencao.classList.remove('model')
     fetch(`http://localhost:3000/manutencao/total`)
         .then(response => response.json())
         .then(response => {
@@ -22,16 +24,12 @@ function relatorioManutencao() {
             let datasets = [];
             let placaAtual = "";
             let color = [
-                "#7e2e84",
-                "#A83783",
-                "#BD3C82",
-                "#D14081",
-                "#D94F84",
-                "#E05D86",
-                "#EF798A",
-                "#F9F5E3",
-                "#E3F5C8",
-                "#CCF5AC",
+                "#205D67",
+                "#639A67",
+                "#D8EBB5",
+                "#D9BF77",
+                "#C1F39C",
+                "#C5DFAA",
             ];
 
             response.forEach(data => {
@@ -54,8 +52,7 @@ function relatorioManutencao() {
                     borderColor: color[i],
                     borderWidth: 1,
                     backgroundColor: color[i],
-                    // borderRadius: 5,
-                    // borderSkiped: false
+                    
                 }
             })
 
@@ -69,223 +66,180 @@ function relatorioManutencao() {
                 },
                 options: {
                     borderJoinStyle: "bevel",
-                    // indexAxis: 'y',
-                    // responsive: false,
-                    // plugins: {
-                    //     title: {
-                    //         display: true,
-                    //         text: "Jaguariuna mes..."
-                    //     },
-                    // },
-                    // interaction: {
-                    //     intersect: false
-                    // },
                     scales: {
                         y: {
                             beginAtZero: true
                         },
-                        // y: {
-                        //     stacked: true
-                        // }
-                    },
+                        x: {
+                            stacked: true
+                        }
+                }
                 }
             })
         })
 }
 
-function relatorioVeiculos() {
-    ctxManutencao.innerHTML = ''
-    fetch(`http://localhost:3000/veiculos`)
+
+ function relatorioVeiculos() {
+    veiculo.classList.remove('model')
+    manutencao.classList.add('model')
+
+    var ctxVeiculo = document.querySelector("#grafico-manutencao")
+    fetch(`http://localhost:3000/veiculo`)
         .then(response => response.json())
         .then(response => {
-            let utilizacao = {
-                veiculo: [],
-                disponivel: []
-            }
-            response.forEach(info => {
-                // let existente = false
-                // for (let i = 0; i < utilizacao.veiculo.length; i++) {
-                //     if (utilizacao.veiculo[i] == (info.veiculo)) {
-                //         // utilizacao.mes[i] += info.data_inicio.slice(0,7)
-                //         utilizacao.veiculo[i] += info.id
-                //         utilizacao.disponivel[i] += info.uso
-                //         // utilizacao.data_inicio[i] += info.data_inicio
-                //         existente = true
-                //         console.log(utilizacao.veiculo)
-                //     }
-                // }
-                // if (!existente) {
-                utilizacao.veiculo.push(info.id)
-                utilizacao.disponivel.push(info.uso)
-                // utilizacao.data_inicio.push(info.data_inicio)
-                // }
-                console.log(utilizacao.veiculo)
+            let color = [
+                "#205D67",
+                "#639A67",
+                "#D8EBB5",
+                "#D9BF77",
+                "#C1F39C",
+                "#C5DFAA",
+            ];
 
+            response.forEach(data => {
+                if (placaAtual != data.placa) {
+                    placaAtual = data.placa;
+                    datasets.push(JSON.parse(`{"${placaAtual}" : [0,0,0,0,0,0,0,0,0,0,0,0]}`));
+                    datasets[datasets.length - 1][placaAtual][data.mes - 1] = data.total;
+                } else {
+                    datasets[datasets.length - 1][placaAtual][data.mes - 1] = data.total;
+                }
             })
 
-            new Chart(ctxManutencao, {
-                type: 'pie',
-                data: {
-                    labels: utilizacao.veiculo,
-                    datasets: [{
-                        // type: 'bar',
-                        label: "Disponivel",
-                        data: utilizacao.disponivel,
-                        borderColor: 'rgba(250, 50, 0,100)',
-                        borderWidth: 1,
-                        innerWidth: 10,
-                        backgroundColor: "rgba(250,50,0,0.5)",
-                        // borderRadius: 5,
-                        borderSkiped: false
-                    },
-                        // {
-                        //     type: 'bar',
-                        //     label: 'mes',
-                        //     data: utilizacao.mes,
-                        //     borderColor: 'rgba(100, 100, 200,100)',
-                        //     borderWidth: 2,
-                        //     backgroundColor: "rgba(0,0,0,0)",
-                        //     borderRadius: Number.MAX_VALUE,
-                        // },
-                        // {
-                        //     type: 'line',
-                        //     label: 'Data',
-                        //     data: utilizacao.mes,
-                        //     borderColor:'rgba(1, 100, 200,1)',
-                        //     borderWidth: 2,
-                        //     backgroundColor: "rgba(0,0,0,0)",
-                        //     borderRadius: 5,
-                        //     borderSkiped: Number.MAX_VALUE,
-                        // }
-                    ],
-                },
-                options: {
-                    // borderJoinStyle: "bevel",
-                    // indexAxis: 'x',
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: top
-                        },
-                        title: {
-                            display: true,
-                            text: 'chartJAS'
-                        },
-                    },
-                    interaction: {
-                        intersect: false
-                    },
-                    // scales: {
-                    //     x: {
-                    //         beginAtZero: true
-                    //     },
-                    //     y: {
-                    //         stacked: true
-                    //     }
-                    // },
-                }
 
+
+            datasets = datasets.map((data, i) => {
+                return {
+                    type: 'bar',
+                    label: Object.keys(data)[0],
+                    data: data[Object.keys(data)[0]],
+                    borderColor: color[i],
+                    borderWidth: 1,
+                    backgroundColor: color[i],
+                    
+                }
             })
 
-        })
-}
+            console.log(labels, datasets);
 
-
-
-function relatorioOperacao() {
-    ctxManutencao.innerHTML = ''
-    fetch(`http://localhost:3000/operacoes`)
-        .then(response => response.json())
-        .then(response => {
-            let utilizacao = {
-                mes: [],
-                veiculo: [],
-                data_inicio: [],
-
-            }
-            response.forEach(info => {
-                let existente = false
-                for (let i = 0; i < utilizacao.mes.length; i++) {
-                    if (utilizacao.mes[i] == (info.data_saida.slice(0, 7))) {
-                        // utilizacao.mes[i] += info.data_inicio.slice(0,7)
-                        utilizacao.veiculo[i] += info.veiculo
-                        utilizacao.data_inicio[i] += info.data_saida.slice(0, 7)
-                        // utilizacao.data_inicio[i] += info.data_inicio
-                        existente = true
-                        console.log(utilizacao.mes[i])
-                    }
-                }
-                if (!existente) {
-                    utilizacao.mes.push(info.data_saida.slice(0, 7))
-                    utilizacao.veiculo.push(info.veiculo)
-                    utilizacao.data_inicio.push(info.data_saida)
-                    // utilizacao.data_inicio.push(info.data_inicio)
-                }
-
-            })
-
-            new Chart(ctxManutencao, {
+            new Chart(ctxVeiculo, {
                 type: 'bar',
                 data: {
-                    labels: utilizacao.mes,
-                    datasets: [{
-                        type: 'bar',
-                        label: "Operacao",
-                        data: utilizacao.veiculo,
-                        borderColor: 'rgba(250, 50, 0,100)',
-                        borderWidth: 1,
-                        backgroundColor: "rgba(250,50,0,0.5)",
-                        borderRadius: 5,
-                        borderSkiped: false
-                    },
-                        // {
-                        //     type: 'bar',
-                        //     label: 'mes',
-                        //     data: utilizacao.mes,
-                        //     borderColor: 'rgba(100, 100, 200,100)',
-                        //     borderWidth: 2,
-                        //     backgroundColor: "rgba(0,0,0,0)",
-                        //     borderRadius: Number.MAX_VALUE,
-                        // },
-                        // {
-                        //     type: 'line',
-                        //     label: 'Data',
-                        //     data: utilizacao.mes,
-                        //     borderColor:'rgba(1, 100, 200,1)',
-                        //     borderWidth: 2,
-                        //     backgroundColor: "rgba(0,0,0,0)",
-                        //     borderRadius: 5,
-                        //     borderSkiped: Number.MAX_VALUE,
-                        // }
-                    ],
+                    labels,
+                    datasets,
                 },
                 options: {
                     borderJoinStyle: "bevel",
-                    indexAxis: 'y',
-                    responsive: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: "Jaguariuna mes..."
-                        },
-                    },
-                    interaction: {
-                        intersect: false
-                    },
                     scales: {
-                        x: {
+                        y: {
                             beginAtZero: true
                         },
-                        y: {
+                        x: {
                             stacked: true
                         }
-                    },
                 }
-
+                }
             })
-
         })
-}
+ }
+
+
+
+// function relatorioOperacao() {
+//     ctxManutencao.innerHTML = ''
+//     fetch(`http://localhost:3000/operacoes`)
+//         .then(response => response.json())
+//         .then(response => {
+//             let utilizacao = {
+//                 mes: [],
+//                 veiculo: [],
+//                 data_inicio: [],
+
+//             }
+//             response.forEach(info => {
+//                 let existente = false
+//                 for (let i = 0; i < utilizacao.mes.length; i++) {
+//                     if (utilizacao.mes[i] == (info.data_saida.slice(0, 7))) {
+//                         // utilizacao.mes[i] += info.data_inicio.slice(0,7)
+//                         utilizacao.veiculo[i] += info.veiculo
+//                         utilizacao.data_inicio[i] += info.data_saida.slice(0, 7)
+//                         // utilizacao.data_inicio[i] += info.data_inicio
+//                         existente = true
+//                         console.log(utilizacao.mes[i])
+//                     }
+//                 }
+//                 if (!existente) {
+//                     utilizacao.mes.push(info.data_saida.slice(0, 7))
+//                     utilizacao.veiculo.push(info.veiculo)
+//                     utilizacao.data_inicio.push(info.data_saida)
+//                     // utilizacao.data_inicio.push(info.data_inicio)
+//                 }
+
+//             })
+
+//             new Chart(ctxManutencao, {
+//                 type: 'bar',
+//                 data: {
+//                     labels: utilizacao.mes,
+//                     datasets: [{
+//                         type: 'bar',
+//                         label: "Operacao",
+//                         data: utilizacao.veiculo,
+//                         borderColor: 'rgba(250, 50, 0,100)',
+//                         borderWidth: 1,
+//                         backgroundColor: "rgba(250,50,0,0.5)",
+//                         borderRadius: 5,
+//                         borderSkiped: false
+//                     },
+//                         // {
+//                         //     type: 'bar',
+//                         //     label: 'mes',
+//                         //     data: utilizacao.mes,
+//                         //     borderColor: 'rgba(100, 100, 200,100)',
+//                         //     borderWidth: 2,
+//                         //     backgroundColor: "rgba(0,0,0,0)",
+//                         //     borderRadius: Number.MAX_VALUE,
+//                         // },
+//                         // {
+//                         //     type: 'line',
+//                         //     label: 'Data',
+//                         //     data: utilizacao.mes,
+//                         //     borderColor:'rgba(1, 100, 200,1)',
+//                         //     borderWidth: 2,
+//                         //     backgroundColor: "rgba(0,0,0,0)",
+//                         //     borderRadius: 5,
+//                         //     borderSkiped: Number.MAX_VALUE,
+//                         // }
+//                     ],
+//                 },
+//                 options: {
+//                     borderJoinStyle: "bevel",
+//                     indexAxis: 'y',
+//                     responsive: false,
+//                     plugins: {
+//                         title: {
+//                             display: true,
+//                             text: "Jaguariuna mes..."
+//                         },
+//                     },
+//                     interaction: {
+//                         intersect: false
+//                     },
+//                     scales: {
+//                         x: {
+//                             beginAtZero: true
+//                         },
+//                         y: {
+//                             stacked: true
+//                         }
+//                     },
+//                 }
+
+//             })
+
+//         })
+// }
 
 function voltarAnterior() {
     window.history.back()

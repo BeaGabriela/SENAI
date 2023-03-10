@@ -84,7 +84,7 @@ button {
     width: 9vw;
 }
 
-#myChartManutencao {
-margin-top: 10vh;
-margin-left: 6vw;
+.model{
+    display: none;
+    visibility: hidden;
 }
