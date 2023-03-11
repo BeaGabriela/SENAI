@@ -1,5 +1,5 @@
 var manutencao = document.querySelector(".myChartManutencao")
-var veiculo = document.querySelector(".myChartOperacao")
+var veiculo = document.querySelector(".myChartVeiculos")
 
 function relatorioManutencao() {
     var ctxManutencao = document.querySelector("#grafico-manutencao")
@@ -52,7 +52,7 @@ function relatorioManutencao() {
                     borderColor: color[i],
                     borderWidth: 1,
                     backgroundColor: color[i],
-                    
+
                 }
             })
 
@@ -73,21 +73,24 @@ function relatorioManutencao() {
                         x: {
                             stacked: true
                         }
-                }
+                    }
                 }
             })
         })
 }
 
 
- function relatorioVeiculos() {
+function relatorioVeiculos() {
     veiculo.classList.remove('model')
     manutencao.classList.add('model')
 
-    var ctxVeiculo = document.querySelector("#grafico-manutencao")
+    var ctxVeiculo = document.querySelector("#grafico-veiculo")
     fetch(`http://localhost:3000/veiculos`)
         .then(response => response.json())
         .then(response => {
+            let placas = []
+            let uso = []
+            
             let color = [
                 "#205D67",
                 "#639A67",
@@ -98,12 +101,51 @@ function relatorioManutencao() {
             ];
 
             response.forEach(v => {
+               placas.push(v.placa)
+               uso.push(v.uso)
+               console.log(uso)
+               
+               placas.push(JSON.parse(`{"${uso}" : []}`));
+               placas[placas.length - 1][uso][v.id - 1] = v.uso;
+               
+               
+
+               
+                console.log(placas)
+                 new Chart(ctxVeiculo, {
+                type: 'pie',
+                data: {
+                    labels: placas,
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                    }]
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Pie Chart'
+
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                }
+            });
 
             })
+           
 
-    
         })
- }
+}
 
 
 
