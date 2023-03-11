@@ -88,6 +88,7 @@ function relatorioVeiculos() {
     fetch(`http://localhost:3000/veiculos`)
         .then(response => response.json())
         .then(response => {
+            let placa= ''
             let placas = []
             let uso = []
             
@@ -101,12 +102,19 @@ function relatorioVeiculos() {
             ];
 
             response.forEach(v => {
-               placas.push(v.placa)
-               uso.push(v.uso)
-               console.log(uso)
+                if (placa!= v.placa) {
+                    placa = v.placa;
+                    placas.push(JSON.parse(`{"${placa}" : [0]}`));
+                    placas[placas.length - 1][placa][v.placa - 1] = v.placa;
+                } else {
+                    placas[placas.length - 1][placa][v.placa - 1] = v.placa;
+                }
+            //    placas.push(v.placa)
+            //    uso.push(v.uso)
+            //    console.log(uso)
                
-               placas.push(JSON.parse(`{"${uso}" : []}`));
-               placas[placas.length - 1][uso][v.id - 1] = v.uso;
+            //    placas.push(JSON.parse(`{"${uso}" : []}`));
+            //    placas[placas.length - 1][uso][v.id - 1] = v.uso;
                
                
 
