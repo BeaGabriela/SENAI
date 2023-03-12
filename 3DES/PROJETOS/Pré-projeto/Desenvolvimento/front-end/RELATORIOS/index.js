@@ -100,30 +100,37 @@ function relatorioVeiculos() {
                 "#C1F39C",
                 "#C5DFAA",
             ];
+            
 
             response.forEach(v => {
                 if (placa!= v.placa) {
                     placa = v.placa;
                     placas.push(JSON.parse(`{"${placa}" : [0]}`));
-                    placas[placas.length - 1][placa][v.placa - 1] = v.placa;
+                    placas[placas.length - 1][placa][v.placa] = v.uso;
                 } else {
-                    placas[placas.length - 1][placa][v.placa - 1] = v.placa;
+                    placas[placas.length - 1][placa][v.placa] = v.uso;
                 }
-            //    placas.push(v.placa)
-            //    uso.push(v.uso)
-            //    console.log(uso)
-               
-            //    placas.push(JSON.parse(`{"${uso}" : []}`));
-            //    placas[placas.length - 1][uso][v.id - 1] = v.uso;
-               
+
+                  placas = placas.map((data, i) => {
+                    console.log(data[Object.keys(data)[0]])
+                return {
+            //         type: 'pie',
+                    label: Object.keys(data)[0],
+                    data: data[Object.keys(data)[0]],
+            //         borderColor: color[i],
+            //         borderWidth: 1,
+            //         backgroundColor: color[i],
+
+                }
+            })         
                
 
                
-                console.log(placas)
+                // console.log(placas)
                  new Chart(ctxVeiculo, {
                 type: 'pie',
                 data: {
-                    labels: placas,
+                    labels: [Object.keys(placas)[0]],
                     datasets: [{
                         label: '# of Votes',
                         data: [12, 19, 3, 5, 2, 3],

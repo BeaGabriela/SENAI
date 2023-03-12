@@ -6,70 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='./style/index.css' />
+    <link rel="shortcut icon" href="../../assets/industry.png" type="image/x-icon">
     <title>Operacional</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
+
 <body onload="carregar()">
+    <header>
+        <h1>Bem-vindo, <label id="bemVindo"></label>!</h1>
+    </header>
     <main>
-        <nav class="nav1">
-            <div>
-                <div id="headersVeiculos">
-                    <p>Veiculos</p>
-                </div>
-                <div id="busca">
-                    <label id="filtro">Filtro:</label>
-                    <select id='definindoFiltro'>
-                        <option  value='true'>Disponiveis</option>
-                        <option  value='false'>Ocupados</option>
-                    </select>
-                </div>
-            </div>
-            <div class="ListarVeiculos">
-                <div class="listarVeiculos model">
-                    <label>Id:</label>
-                    <p id="Id_Veiculos"></p>
-                    <label>Placa:</label>
-                    <p id="placa"></p>
-                    <label>Tipo:</label>
-                    <p id="tipoVeiculo"></p>
-                </div>
-            </div>
-
-           
-            <nav class="nav1_1">
-                <div>
-                    <div id="headersMotoristas">
-                        <p>Motorista</p>
-                    </div>
-                    <div id="busca">
-                        <label id="filtro">Filtro:</label>
-                        <select>
-                            <option>Disponiveis</option>
-                            <option>Ocupados</option>
-                        </select>
-                    </div>
-                </div>
-                <div class='listarMotoristas model '>
-                    <div class="cloneModalMotoristas model">
-                        <label>Id:</label>
-                        <p id="id_Motorista">Motoristas</p>
-                        <label>Nome:</label>
-                        <p id="nomeMotorista">Motoristas</p>
-                    </div>
-                </div>
-            </nav>
-
-        </nav>
+        <div id="imgs">
+            <img id="logo" src="../../assets/industry.png">
+            <h2><label>Agro</label>Tech</h2>
+            <img id="person" src="../../assets/person.png" />
+        </div>
+       
         <nav class="nav2">
             <div>
                 <div id="headersManutencao">
                     <p>Manutenção</p>
+                    
                 </div>
                 <div id="busca">
                     <label id="filtro">Filtro:</label>
-                    <select>
-                        <option>Disponiveis</option>
-                        <option>Ocupados</option>
+                    <select id="filtroManutencao">
+                        <option value="3"></option>
+                        <option value="1">Concluídas</option>
+                        <option value="0">Pendentes</option>
                     </select>
                 </div>
             </div>
@@ -88,7 +53,7 @@
                     <label>Data fim:</label>
                     <p id="data_fim"></p>
                 </div>
-            </div>           
+            </div>
 
         </nav>
         <nav class="nav3">
@@ -98,9 +63,10 @@
                 </div>
                 <div id="buscaOperacao">
                     <label id="filtro">Filtro:</label>
-                    <select>
-                        <option>Disponiveis</option>
-                        <option>Ocupados</option>
+                    <select id="filtroOperacao">
+                        <option value="3"></option>
+                        <option value="0">Pendentes</option>
+                        <option value="1">Concluídas</option>
                     </select>
                 </div>
             </div>
@@ -120,18 +86,22 @@
                     <p id="data_retorno"></p>
                 </div>
             </div>
-               
 
         </nav>
         <nav class="nav4">
-            <div class="relatorios">
-                <h3>Relatórios</h3>
-                <button>Manutenção</button>
-                <button>Operação</button>
-                <button>Veiculos</button>
-                <button>Novo Funcionário</button>
+            <div>
+                <a href="../RELATORIOS/index.html"><img src="../../assets/realtorio.png" /></a>
             </div>
+            <div>
+                <a href="./motoristas/motorista.html"><img src="../../assets/caminhao-de-entrega.png" /></a>
+            </div>
+            <div>
+                <img onclick="logout()" src="../../assets/sairPagina.png" />
+
+            </div>
+
         </nav>
+
     </main>
 </body>
 <script src='./index.js'></script>
