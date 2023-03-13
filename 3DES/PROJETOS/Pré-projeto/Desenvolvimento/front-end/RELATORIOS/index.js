@@ -160,86 +160,53 @@ function relatorioOperacao() {
     fetch(`http://localhost:3000/operacoes/grafico`)
         .then(response => response.json())
         .then(response => {
-            let labels = [
-                'Janeiro',
-                'Fevereiro',
-                'Março',
-                'Abril',
-                'Maio',
-                'Junho',
-                'Julho',
-                'Agosto',
-                'Setembro',
-                'Outubro',
-                'Novembro',
-                'Dezembro'
-            ];
-            let datasets = [];
-            let placaAtual = "";
-            let color = [
-                "#C5DFAA",
-                "#D9BF77",
-                "#205D67",
-                "#639A67",
-                "#D8EBB5",
-                "#C1F39C",
-
-            ];
-
-            response.forEach(data => {
-                if (placaAtual != data.placa) {
-                    placaAtual = data.placa;
-                    datasets.push(JSON.parse(`{"${placaAtual}" : [0,0,0,0,0,0,0,0,0,0,0,0]}`));
-                    datasets[datasets.length - 1][placaAtual][data.mes - 1] = data.placa;
-                    datasets[datasets.length - 1][placaAtual][data.mes - 1] = data.nome;
-                    console.log(datasets)
-                }
-        })
-        datasets = datasets.map((data, i) => {
-            return {
-                type: 'bar',
-                label: Object.keys(data)[0],
-                data: data[Object.keys(data)[0]],
-                borderColor: color[i],
-                borderWidth: 1,
-                backgroundColor: color[i],
-
+            let operacoes = {
+                placas: [],
+                nome: [],
+                mes: []
             }
-        })
 
-        console.log( datasets);
+        
 
-        new Chart(ctxOperacao, {
-            type: 'pie',
-            data: {
-                labels: veiculos.placas,
-                datasets: [{
-                    label: 'Veiculos',
-                    data: veiculos.dispo,
-                    backgroundColor: veiculos.cor
-                }]
-            },
+            response.forEach(v => {
+                operacoes.placas.push(v.placa);
+                operacoes.nome.push(v.nome);
+                operacoes.mes.push(v.mes);
+
+                console.log(operacoes);
+            })
+
+            new Chart(ctxOperacao, {
+                type: 'pie',
+                data: {
+                    labels: operacoes.placas,
+                    datasets: [{
+                        label: 'operacoes',
+                        data: operacoes.mes,
+                        // backgroundColor: operacoes.cor
+                    }]
+                },
 
 
-            title: {
-                display: true,
-                text: 'Chart.js Pie Chart'
+                title: {
+                    display: true,
+                    text: 'Chart.js Pie Chart'
 
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
                 }
-            }
-        });
+            });
     })
 }
 

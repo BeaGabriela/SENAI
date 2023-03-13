@@ -56,12 +56,14 @@ const read = async (req, res) => {
 }
 
 const readGrafico = async (req, res) => {
-            let operacao = await prisma.$queryRaw`SELECT v.placa, m.nome, MONTH(o.data_saida) as mes FROM operacoes o
+            let operacao = await prisma.$queryRaw`SELECT v.placa,  m.nome, MONTH(o.data_saida) as mes FROM operacoes o
             INNER JOIN veiculos v
             ON v.id = o.veiculo
             INNER JOIN motorista m
             ON m.id = o.motorista
-            GROUP BY o.veiculo, MONTH(o.data_saida) ORDER BY v.placa`;
+            GROUP BY v.placa, MONTH(o.data_saida) ORDER BY v.placa`;
+
+            
         
             res.status(200).json(operacao).end();
         
