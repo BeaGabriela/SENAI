@@ -20,7 +20,7 @@ function validarLogin() {
                 
                 localStorage.setItem('user', JSON.stringify(response))
 
-                if(response.niveis.nivel == 'Gerencial'){
+                if(response.nivel === 2){
                     window.location.href = '../GERENCIAL/home.html'
                 }else {
                     window.location.href = '../OPERACIONAL/home.html'

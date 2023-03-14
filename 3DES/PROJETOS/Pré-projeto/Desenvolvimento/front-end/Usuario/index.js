@@ -85,6 +85,7 @@ function newUser() {
     var emailUser = document.querySelector('#email')
     var senha = document.querySelector('#senha')
     var cadastrarNewUser = document.querySelector('#cadastrarNewUser')
+    var nivel = "Operacional"
 
     cadastrarNewUser.addEventListener('click', () => {
         const options = {
@@ -93,7 +94,7 @@ function newUser() {
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + usuario.token
             },
-            body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"Operacional","nivel":1}`
+            body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"${nivel}","nivel":1}`
         };
 
 
