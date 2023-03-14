@@ -32,20 +32,22 @@ main {
     flex-direction: column;
     box-sizing: border-box;
     position: absolute;
-    width: 12vw;
+    width: 15vw;
     height: 30vh;
-    left: 8vw;
-    top: 47vh;
+    left: 30vw;
+    top: 7.5vh;
 
-    background: #fff;
+    background: #f5f5f5;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 }
 
 #officeIMG{
-    height: 20vh;
-    margin-top: 20vh;
+    height: 18vh;
+    width: 10vw;
+    margin-top: 15vh;
+    margin-left: 8vw;
 }
 
 #imgs>h2 {
@@ -75,9 +77,12 @@ main {
     margin-top: 4vh;
 }
 
-h3{
+.imagensLogo > h3{
     text-align: center;
-    margin-top: 2vh;
+    margin-left: -64vw;
+    font-weight: 700;
+    font-size: 18pt;
+    margin-top: 1vh;
 }
 
 header>h1 {
@@ -91,37 +96,6 @@ header>h1 {
     flex-direction: row;
 }
 
-.nav1 {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 20vw;
-    height: 70vh;
-    left: 35vw;
-    top: 8vh;
-
-    background: #F5F5F5;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
-
-
-
-.nav1_1 {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 20vw;
-    height: 70vh;
-    left: 60vw;
-    top: 8vh;
-
-    background: #F5F5F5;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
 
 #headersusuario {
     display: flex;
@@ -161,8 +135,8 @@ button {
 
 
 .listarUser {
-    width: 14vw;
-    height: 45vh;
+    width: 19vw;
+    height: 65vh;
     overflow-y: scroll;
     border-radius: 25px;
     text-align: center;
@@ -176,19 +150,24 @@ button {
 
 .usuarios {
     height: 35vh;
-    width: 10vw;
+    width: 15vw;
     border-radius: 25px;
     text-align: center;
     background: #F5F5F5;
     margin-left: 2vw;
     margin-top: 1vh;
+    padding-top: 3vh;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.usuarios p, label{
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
 
 .deletarUser {
-    width: 14vw;
+    width: 19vw;
     height: 34vh;
     border-radius: 25px;
     text-align: center;
@@ -203,7 +182,7 @@ button {
 #sairModal{
     position: absolute;
     height: 5vh;
-    margin-left: 4vw;
+    margin-left: 6vw;
     margin-top: -7vh;
 }
 
@@ -222,10 +201,10 @@ button {
     box-sizing: border-box;
 
     position: absolute;
-    width: 20vw;
+    width: 25vw;
     height: 74vh;
-    left: 41vw;
-    top: 7vh;
+    left: 22vw;
+    top: 0vh;
 
     background: #F5F5F5;
     border: 1px solid #B9E937;
@@ -234,7 +213,7 @@ button {
 }
 
 
-.cadastrar {
+/* .cadastrar {
     height: 40vh;
     width: 15vw;
     border-radius: 25px;
@@ -246,7 +225,7 @@ button {
     padding-left: 1vw;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+} */
 
 
 
@@ -257,13 +236,14 @@ button {
     position: absolute;
     width: 3vw;
     height: 74vh;
-    left: 86vw;
+    left: 56vw;
     top: 7vh;
     border-radius: 16px;
 }
 
 h3 {
     text-align: center;
+    margin-top: 1vh;
 }
 
 .nav4>div {
@@ -300,6 +280,23 @@ h3 {
 .model {
     display: none;
     visibility: hidden;
+}
+
+#estilizandoUser{
+    margin-left: 3vw;
+    margin-top: 2vh;
+
+}
+
+#cadastrarNewUser{
+    margin-top: 2vh;
+    margin-left: 2.2vw;
+}
+
+.imagensLogo{
+    display: flex;
+    flex-direction: column;
+
 }
 
 ::-webkit-scrollbar-track {

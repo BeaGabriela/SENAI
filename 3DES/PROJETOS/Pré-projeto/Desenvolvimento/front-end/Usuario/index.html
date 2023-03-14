@@ -17,72 +17,74 @@
     </header>
     <main>
         <img src="../../assets/seta-esquerda.png" id="voltar" onclick="voltarAnterior()" />
-        <img id="person" src="../../assets/person.png" />
-        <!-- <img src="../../assets/office.png" id='officeIMG'/> -->
-        <div id="imgs">
-            <h3>Novo +</h3>
-            <div class="btnCadastrar">
-                <button id="newMotorista">Usuário</button>
-            </div>
-            <!-- <img id="logo" src="../../assets/industry.png">
-            <h2><label>Agro</label>Tech</h2>
-            <img id="person" src="../../assets/person.png" /> -->
-        </div>
-        <div class="alinhar">
-            <nav class="nav1_1">
-                <div>
-                    <div id="headersusuario">
-                        <p>Usuários</p>
-                    </div>
-                </div>
-                    <div class="usuarios model ">
-                        <label>Id:</label>
-                        <p id="id">id</p>
-                        <label>Nome:</label>
-                        <p id="nome">Nome</p>
-                        <label>Email:</label>
-                        <p id="email">Email</p>
-                        <label>senha:</label>
-                        <p id="senha">senha</p>
-                        <label>Funcao:</label>
-                        <p id="funcao">Funcao</p>
-                        <label>nivel:</label>
-                        <p id="nivel">Nivel</p>
-                    </div>
-
-                <!-- Deletar User -->
-                <div class="deletarUser model">
-                    <img src="../../assets/sair.png" height="20px" id="sairModal" />
-                    <div id='estilizando'>
-                        <p id="deletarM"></p>
-                        <button id="btnDeletarUser">Deletar</button>
-                    </div>
-                </div>
-
+        <div class="imagensLogo">
+            <img src="../../assets/industry.png" id='officeIMG' />
+            <h3 id="textLogo"><label>Agro</label>Tech</h3>
+            <img id="person" src="../../assets/person.png" />
+            <!-- <img src="../../assets/office.png" id='officeIMG'/> -->
+            <div id="imgs">
+                <h3>Novo +</h3>
                 <!-- Cadastrar User -->
-                <div class="cadastrarUser model">
-                    <img src='../../assets/sair.png' id="sairModalUser" onclick="fecharModalCadastrarMotorista()" />
+                <div class="cadastrarUser ">
                     <div id="estilizandoUser">
                         <input type="text" placeholder="Nome" id="nomeUser">
                         <input type="email" placeholder="Email" id="email">
                         <input type="password" placeholder="Senha" id="senha">
                         <button id="cadastrarNewUser">Cadastrar</button>
                     </div>
-
-            </nav>
-
-            <nav class="nav4">
-
-                <div>
-                    <a href="../RELATORIOS/index.html"><img src="../../assets/realtorio.png" /></a>
+                    <!-- <img id="logo" src="../../assets/industry.png">
+            <h2><label>Agro</label>Tech</h2>
+            <img id="person" src="../../assets/person.png" /> -->
                 </div>
-                <div>
-                    <img onclick="logout()" src="../../assets/sairPagina.png" />
+                <div class="alinhar">
+                    <nav class="nav1_1">
+                        <div>
+                            <div id="headersusuario">
+                                <p>Usuários</p>
+                            </div>
+                        </div>
+                        <div class="listarUser model">
+                            <div class="usuarios model ">
+                                <label>Id:</label>
+                                <p id="id">id</p>
+                                <label>Nome:</label>
+                                <p id="nome">Nome</p>
+                                <label>Email:</label>
+                                <p id="email">Email</p>
+                                <label>Senha:</label>
+                                <p id="senha">senha</p>
+                                <label>Função:</label>
+                                <p id="funcao">Funcao</p>
+                                <label>Nível:</label>
+                                <p id="nivel">Nivel</p>
+                            </div>
+                        </div>
 
+                        <!-- Deletar User -->
+                        <div class="deletarUser model">
+                            <img src="../../assets/sair.png" height="20px" id="sairModal" />
+                            <div id='estilizando'>
+                                <p id="deletarM"></p>
+                                <button id="btnDeletarUser">Deletar</button>
+                            </div>
+                        </div>
+
+
+
+                    </nav>
+
+                    <nav class="nav4">
+
+                        <div>
+                            <a href="../RELATORIOS/index.html"><img src="../../assets/realtorio.png" /></a>
+                        </div>
+                        <div>
+                            <img onclick="logout()" src="../../assets/sairPagina.png" />
+
+                        </div>
+
+                    </nav>
                 </div>
-
-            </nav>
-        </div>
     </main>
 </body>
 <script src='./index.js'></script>
