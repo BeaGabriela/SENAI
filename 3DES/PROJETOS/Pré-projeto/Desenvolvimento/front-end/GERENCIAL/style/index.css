@@ -101,7 +101,7 @@
 
  select {
      border: #f5f5f5;
-     border-radius: 25px;
+     border-radius: 12px;
      width: 7vw;
      height: 5vh;
      background-color: #B9E937;
@@ -109,7 +109,7 @@
 
  input {
      border: 1px solid #B9E937;
-     border-radius: 25px;
+     border-radius: 8px;
      width: 10vw;
      height: 3vh;
  }
@@ -137,7 +137,7 @@
 
  button {
      border: #f5f5f5;
-     border-radius: 25px;
+     border-radius: 10px;
      width: 5vw;
      height: 5vh;
      background-color: #B9E937;

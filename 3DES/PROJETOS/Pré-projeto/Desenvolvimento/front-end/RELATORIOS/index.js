@@ -1,11 +1,11 @@
 var manutencao = document.querySelector(".myChartManutencao")
 var veiculo = document.querySelector(".myChartVeiculos")
-var operacao = document.querySelector(".myChartOperacao")
+// var operacao = document.querySelector(".myChartOperacao")
 
 function relatorioManutencao() {
     var ctxManutencao = document.querySelector("#grafico-manutencao")
     manutencao.classList.remove('model')
-    operacao.classList.add('model')
+    // operacao.classList.add('model')
     veiculo.classList.add('model')
     fetch(`http://localhost:3000/manutencao/total`)
         .then(response => response.json())
@@ -88,7 +88,7 @@ function relatorioManutencao() {
 function relatorioVeiculos() {
     veiculo.classList.remove('model')
     manutencao.classList.add('model')
-    operacao.classList.add('model')
+    // operacao.classList.add('model')
 
     var ctxVeiculo = document.querySelector("#grafico-veiculo")
     fetch(`http://localhost:3000/veiculos`)
@@ -100,8 +100,8 @@ function relatorioVeiculos() {
                 cor: []
             }
 
-            let corFalsa = '#ff4040';
-            let corVerdadeira = '#2E8B57'
+            let corFalsa = "#2E8B57";
+            let corVerdadeira = '#ff4040'
 
             response.forEach(v => {
                 veiculos.placas.push(v.placa);
@@ -151,64 +151,113 @@ function relatorioVeiculos() {
 
 
 
-function relatorioOperacao() {
-    var ctxOperacao = document.querySelector("#grafico-operacao")
-    operacao.classList.remove('model')
-    manutencao.classList.add('model')
-    veiculo.classList.add('model')
+// function relatorioOperacao() {
+//     var ctxOperacao = document.querySelector("#grafico-operacao")
+//     operacao.classList.remove('model')
+//     manutencao.classList.add('model')
+//     veiculo.classList.add('model')
+//     var veiculo = {
+//         placas: [],
+//         qtd : []
+//     }
+   
 
-    fetch(`http://localhost:3000/operacoes/grafico`)
-        .then(response => response.json())
-        .then(response => {
-            let operacoes = {
-                placas: [],
-                nome: [],
-                mes: []
-            }
+//     fetch(`http://localhost:3000/operacoes`)
+//         .then(response => response.json())
+//         .then(resp => {
+//             resp.forEach(o => {
+//                veiculo.qtd.push(o.veiculo)
+//                veiculo.placas.push(o.placa)
+               
+//             })
 
-        
+//                 fetch(`http://localhost:3000/operacoes/grafico`)
+//                     .then(response => response.json())
+//                     .then(response => {
+//                         let operacoes = {
+//                             nome: [],
+//                             mes: []
+//                         }
 
-            response.forEach(v => {
-                operacoes.placas.push(v.placa);
-                operacoes.nome.push(v.nome);
-                operacoes.mes.push(v.mes);
+//                         response.forEach(v => {
+//                             // operacoes.placas.push(v.placa);
+//                             operacoes.nome.push(v.nome);
+//                             operacoes.mes.push(v.mes);
 
-                console.log(operacoes);
-            })
+//                             console.log(operacoes);
+//                         })
 
-            new Chart(ctxOperacao, {
-                type: 'pie',
-                data: {
-                    labels: operacoes.placas,
-                    datasets: [{
-                        label: 'operacoes',
-                        data: operacoes.mes,
-                        // backgroundColor: operacoes.cor
-                    }]
-                },
+                     
 
 
-                title: {
-                    display: true,
-                    text: 'Chart.js Pie Chart'
+//                         // datasets = datasets.map((data, i) => {
+//                         //     return {
+//                         //         type: 'bar',
+//                         //         label: Object.keys(data)[0],
+//                         //         data: data[Object.keys(data)[0]],
+//                         //         borderColor: color[i],
+//                         //         borderWidth: 1,
+//                         //         backgroundColor: color[i],
 
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                }
-            });
-    })
-}
+//                         //     }
+//                         // })
+
+//                         // console.log(labels, datasets);
+
+//                         new Chart(ctxOperacao, {
+//                             type: 'bar',
+//                             data: {
+//                                 labels: veiculo.placas,
+//                                 datasets: [{
+//                                     label: 'Quantidade',
+//                                     data: veiculo.qtd,
+//                                     borderWidth: 1
+//                                 }]
+//                             },
+//                             options: {
+//                                 scales: {
+//                                     y: {
+//                                         beginAtZero: true
+//                                     }
+//                                 }
+//                             }
+//                         })
+
+//                         // 
+
+//                         // new Chart(ctxOperacao, {
+//                         //     type: 'pie',
+//                         //     data: {
+//                         //         labels: operacoes.placas,
+//                         //         datasets: [{
+//                         //             label: 'operacoes',
+//                         //             data: operacoes.mes,
+//                         //             // backgroundColor: operacoes.cor
+//                         //         }]
+//                         //     },
+
+
+//                         //     title: {
+//                         //         display: true,
+//                         //         text: 'Chart.js Pie Chart'
+
+//                         //     },
+//                         //     options: {
+//                         //         plugins: {
+//                         //             legend: {
+//                         //                 position: 'top',
+//                         //             },
+//                         //             responsive: true,
+//                         //             scales: {
+//                         //                 y: {
+//                         //                     beginAtZero: true
+//                         //                 }
+//                         //             }
+//                         //         }
+//                         //     }
+//                     })
+//             });
+// }
 
 
 function voltarAnterior() {

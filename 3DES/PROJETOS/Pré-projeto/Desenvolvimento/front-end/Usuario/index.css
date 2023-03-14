@@ -123,22 +123,13 @@ header>h1 {
     border-radius: 25px;
 }
 
-#headersVeiculos,
-#headersMotoristas {
+#headersusuario {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1vh;
-    margin-left: 5vw;
 }
 
-select {
-    border: #f5f5f5;
-    border-radius: 10px;
-    width: 7vw;
-    height: 5vh;
-    background-color: #B9E937;
-}
 
 input {
     border: 1px solid #B9E937;
@@ -148,18 +139,13 @@ input {
     height: 3vh;
 }
 
-#filtro {
-    margin-right: 0.5vw;
-    margin-top: 1.5vh;
-}
 
 label {
     color: #289507;
     font-weight: 700;
 }
 
-.listarVeiculos>p,
-.cloneModalMotoristas>p {
+.listarUser>p{
     margin: 2.5px;
 }
 
@@ -174,15 +160,7 @@ button {
 }
 
 
-#busca{
-    display: flex;
-    justify-content: end;
-    margin-right: 1vw;
-    margin-top: 2vh;
-
-}
-
-.ListarVeiculos {
+.listarUser {
     width: 14vw;
     height: 45vh;
     overflow-y: scroll;
@@ -195,48 +173,21 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.listarMotoristas {
-    width: 14vw;
-    height: 45vh;
-    overflow-y: scroll;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 3vw;
-    margin-top: 4vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.listarVeiculos {
-    height: 18vh;
-    width: 8vw;
+.usuarios {
+    height: 35vh;
+    width: 10vw;
     border-radius: 25px;
     text-align: center;
     background: #F5F5F5;
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-top: 1vh;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.cloneModalMotoristas {
-    height: 18vh;
-    width: 8vw;
-    border-radius: 25px;
-    text-align: center;
-    padding: 30px;
-    background: #F5F5F5;
-    margin-left:3vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.deletarMotorista,
-.cadastrarMotorista,
-.deletarVeiculos,
-.cadastrarVeiculos {
+.deletarUser {
     width: 14vw;
     height: 34vh;
     border-radius: 25px;
@@ -248,6 +199,7 @@ button {
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #sairModal{
     position: absolute;
     height: 5vh;
@@ -255,10 +207,7 @@ button {
     margin-top: -7vh;
 }
 
-#btnDeletarMotorista,
-#cadastrarMotorista,
-#cadastrarVeiculo,
-#cadastrar{
+#btnDeletarUser{
     margin-top: 2vh;
     cursor: pointer;
 }
@@ -269,7 +218,7 @@ button {
 }
 
 
-.nav2 {
+.nav1_1 {
     box-sizing: border-box;
 
     position: absolute;
@@ -282,18 +231,6 @@ button {
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
-}
-
-.listar {
-    height: 40vh;
-    width: 10vw;
-    border-radius: 25px;
-    text-align: center;
-    background: #F5F5F5;
-    margin-left: 1.8vw;
-    margin-top: 1vh;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -311,20 +248,6 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.nav3 {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 20vw;
-    height: 74vh;
-    left: 63.5vw;
-    top: 7vh;
-
-    background: #F5F5F5;
-    border: 1px solid #B9E937;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
 
 
 
@@ -367,7 +290,7 @@ h3 {
     height: 3vh;
     cursor: pointer;
 }
-#sairModalMotorista{
+#sairModalUser{
     height: 3vh;
     cursor: pointer;
     margin-left: 8vw;
@@ -398,10 +321,7 @@ h3 {
         width: auto;
     }
 
-    .listar,
-    .listarVeiculos,
-    .listarOperacoes,
-    .cloneModalMotoristas{
+    .listarUser{
         height: auto;
     }
 }
@@ -411,10 +331,7 @@ h3 {
         width: auto;
     }
 
-    .listar,
-    .listarVeiculos,
-    .listarOperacoes,
-    .cloneModalMotoristas{
+    .listarUser{
         height: auto;
         width: 10vw;
     }
