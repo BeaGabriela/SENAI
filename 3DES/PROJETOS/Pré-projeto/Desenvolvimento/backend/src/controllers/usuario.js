@@ -98,7 +98,7 @@ const login = async (req, res) => {
             }
         })
     } else {
-        res.status(404).end();
+        res.status(404).json('Erro no login').end();
     }
 
 }

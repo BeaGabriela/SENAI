@@ -32,25 +32,11 @@ export default function RelatoriosVeiculos({ navigation }) {
 
     return (
         <View style={styles.view}>
-            <Modal
-                animationType="slide"
-                transparent={false}
-                visible={modalVisible}>
-                <View style={styles.centeredView}>
-                    <Text style={styles.Alerta}>Gráfico</Text>
-                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                        <Text style={styles.textX}>X</Text>
-                    </TouchableOpacity>
-                </View>
-            </Modal>
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         navigation.navigate('Home')
                     }}><Text>Menu</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                        setModalVisible(!modalVisible)
-                    }}><Text>Gráfico</Text></TouchableOpacity>
                 </View>
             </View>
 

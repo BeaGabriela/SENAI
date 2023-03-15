@@ -7,41 +7,68 @@ import styles from '../.././pages/styles/styleGeral'
 import ButtonConectar from '../../components/btnConectar/index';
 
 export default function Login({ navigation }) {
-    const [value1, setValue1] = useState('mario@gmail.com');
-    const [value2, setValue2] = useState('mario123')
-    const flag = false
+    const [value1, setValue1] = useState('');
+    const [value2, setValue2] = useState('')
 
-    function validar(){
+    function validar() {
         const options = {
             method: 'POST',
-            headers: { 
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: `{"email":"${value1}","senha":"${value2}"}`
         };
-    
+
         fetch('http://localhost:3000/usuario/login', options)
-            .then(response => response.json())
-            .then(response =>{
-                if(value1 != undefined && value2 != undefined){
-                    if(response.niveis.nivel == 'Gerencial'){
-                        localStorage.setItem('user', JSON.stringify(response))
+            .then((response) => {
+                if (response.status != 200) {
+                    window.location.reload()
+                } else {
+                    return response.json()
+                }
+            })
+            .then((resp) => {
+                if (value1.length == 0 && value2 == 0) {
+                    console.log('preencher')
+                } else if (value1 != undefined && value2 != undefined) {
+                    if (resp.niveis.nivel == 'Gerencial') {
+                        AsyncStorage.setItem('user', JSON.stringify(resp))
                         navigation.navigate('Home')
                     }
                 }
             })
-            
     }
+
+
+    // fetch('http://localhost:3000/usuario/login', options)
+    //     .then(response => response.json().status)
+    //     .then(response => {
+    //         console.log(response.status)
+    //         if (value1.length == 0 && value2 == 0) {
+    //             console.log('preencher')
+    //         } else if (response.status() == 404) {
+    //             console.log('erro')
+    //         }
+    // if (value1 != undefined && value2 != undefined) {
+    //     if (response.niveis.nivel == 'Gerencial') {
+    //         flag = true
+    //         AsyncStorage.setItem('user', JSON.stringify(response))
+    //         navigation.navigate('Home')
+    //     } else {
+    //         console.log('erro')
+    //     }
+    // }
+    // })
 
     return (
         <View style={styles.view}>
             <View style={styles.headers}>
                 <Text style={styles.textTitulo}>AgroTech</Text>
-                <Image style={styles.office} source={require('../../../assets/office.png')}  />
+                <Image style={styles.office} source={require('../../../assets/office.png')} />
                 <View style={styles.view_main}>
-                    <TextInput style={styles.inputCadastrar}  placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
-                    <TextInput style={styles.inputCadastrar}  value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha'  />
-                    <ButtonConectar value="Acessar" onPress={() => {validar()}}/>
+                    <TextInput style={styles.inputCadastrar} placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
+                    <TextInput style={styles.inputCadastrar} value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha' />
+                    <ButtonConectar value="Acessar" onPress={() => { validar() }} />
                 </View>
             </View>
         </View>

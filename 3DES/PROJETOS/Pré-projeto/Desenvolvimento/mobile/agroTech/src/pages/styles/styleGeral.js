@@ -69,6 +69,19 @@ export default StyleSheet.create({
         borderRadius: '25px',
         marginTop: '20px',
         fontSize: '18pt',
+        marginLeft: '5vw',
+        paddingTop: '10px'
+    },
+
+    buttonSair: {
+        height: '45px',
+        width: '80vw',
+        backgroundColor: '#57d131',
+        color: 'white',
+        textAlign: 'center',
+        borderRadius: '25px',
+        marginTop: '20px',
+        fontSize: '18pt',
         marginLeft: '10vw',
         paddingTop: '10px'
     },
@@ -388,9 +401,9 @@ export default StyleSheet.create({
     personduvidaSaida:{
         height: "28vh",
         width: "65vw",
-        marginLeft:"18vw",
+        marginLeft:"16vw",
         marginTop: "5vh",
-        marginBottom: "-9.5vh",
+        marginBottom: "5vh",
         borderRadius: "9px",
 
     },

@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, Modal } from 'react-native';
-import { RadioButton, TextInput } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from '../.././pages/styles/styleGeral'
-import ButtonConectar from '../../components/btnConectar/index';
+import ButtonSair from '../../components/btnSair/index';
 
 export default function LogOut({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
@@ -21,8 +20,9 @@ export default function LogOut({ navigation }) {
                             source={require('../../../assets/saida.png')} />
                         <View style={styles.botoesEscolha}>
                             <TouchableOpacity style={styles.botaoEscolher} onPress={() => {
-                                localStorage.remove('user')
+                                AsyncStorage.removeItem('user')
                                 navigation.navigate('Login')
+                                location.reload()
                             }}><Text>Sim</Text></TouchableOpacity>
                             <TouchableOpacity style={styles.botaoEscolher} onPress={() => {
                                 setModalVisible(!modalVisible)
@@ -31,7 +31,9 @@ export default function LogOut({ navigation }) {
                     </View>
                 </View>
             </Modal>
-            <ButtonConectar style={styles.btnConectarSair} value='Sair' onPress={() => {
+            <Image style={styles.personduvidaSaida}
+                            source={require('../../../assets/duvida.png')} />
+            <ButtonSair style={styles.btnConectarSair} value='Sair' onPress={() => {
                 setModalVisible(!modalVisible)
             }} />
 
