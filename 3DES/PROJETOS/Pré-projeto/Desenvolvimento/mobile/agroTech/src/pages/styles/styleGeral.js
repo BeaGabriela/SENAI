@@ -69,7 +69,7 @@ export default StyleSheet.create({
         borderRadius: '25px',
         marginTop: '20px',
         fontSize: '18pt',
-        marginLeft: '23px',
+        marginLeft: '10vw',
         paddingTop: '10px'
     },
 
@@ -338,5 +338,61 @@ export default StyleSheet.create({
     },
     input: {
         width: '45vw',
-    }
+    },
+
+    modalViewSaida: {
+        margin: 20,
+        marginTop: '10vh',
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 60,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
+    },
+
+    botoesEscolha:{
+        display: 'flex',
+        flexDirection: "row",
+        gap: "15px",
+        width: "60vw",
+        height: "15vh"
+    },
+
+    botaoEscolher:{
+        height: "5vh",
+        width: "25vw",
+        textAlign: "center",
+        boxShadow: "2px 2px 2px 2px #57d131",
+        borderRadius: "8px",
+        marginTop: "12vh",
+        marginLeft: "1vw",
+        paddingTop: "1vh"
+    },
+    personSaida:{
+        height: "28vh",
+        width: "65vw",
+        marginLeft:"10vw",
+        marginTop: "-5vh",
+        marginBottom: "-9.5vh",
+        borderRadius: "8px",
+
+    },
+
+    personduvidaSaida:{
+        height: "28vh",
+        width: "65vw",
+        marginLeft:"18vw",
+        marginTop: "5vh",
+        marginBottom: "-9.5vh",
+        borderRadius: "9px",
+
+    },
+   
 })

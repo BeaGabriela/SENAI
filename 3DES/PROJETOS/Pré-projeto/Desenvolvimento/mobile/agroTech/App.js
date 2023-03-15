@@ -9,7 +9,7 @@ const Tab = createBottomTabNavigator();
 import Login from './src/pages/login/Login'
 import LogOut from './src/pages/logout/logout'
 
-//import Home from './src/pages/home/OperacaoHome'
+// import Home from './src/pages/home/OperacaoHome'
 import Operacoes from './src/pages/home/OperacaoHome'
 import Listar from './src/pages/listar/listar'
 import Relatorios from './src/pages/relatorios/relatorios'
@@ -50,7 +50,7 @@ export default function App() {
          <SettingsStack.Screen name="Login" component={Login} />
          <SettingsStack.Screen name="Home" component={Home} />
         <SettingsStack.Screen name="HomeManutencao" component={HomeManutencao} />
-        {/* <SettingsStack.Screen name="RelatorioOperacao" component={RelatorioOperacao} />  */}
+        <SettingsStack.Screen name="RelatorioOperacao" component={RelatorioOperacao} /> 
         <SettingsStack.Screen name="RelatorioManutencao" component={RelatorioManutencao} /> 
         <SettingsStack.Screen name="Motoristas" component={Motoristas} />
         <SettingsStack.Screen name="Funcionario" component={Funcionario} />
