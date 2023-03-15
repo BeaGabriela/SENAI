@@ -29,36 +29,7 @@ function logout(){
     window.location.href = '../LOGIN/login.html'
 }
 
-// function newUser() {
-//     var nomeUser = document.querySelector('#nomeUser')
-//     var emailUser = document.querySelector('#email')
-//     var senha = document.querySelector('#senha')
-//     var cadastrarNewUser = document.querySelector('#cadastrarNewUser')
-
-//     cadastrarNewUser.addEventListener('click', () => {
-//         const options = {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 Authorization: 'Bearer ' + usuario.token
-//             },
-//             body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"Operacional","nivel":1}`
-//         };
-
-
-//         fetch('http://localhost:3000/usuarioCreate', options)
-//             .then(response => response.status)
-//             .then(response => {
-//                 if (response == 201) {
-//                     window.location.reload()
-//                 }
-//             })
-
-//     })
-
-// } 
-
-//   
+  
 function Manutencoes() {
     var listarManutencoes = document.querySelector('.ListarManutencoes');
     listarManutencoes.classList.remove('model')

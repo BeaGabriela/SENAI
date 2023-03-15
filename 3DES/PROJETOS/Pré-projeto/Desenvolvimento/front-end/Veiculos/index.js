@@ -2,6 +2,7 @@ var deleterMotorista = document.querySelector('.deletarMotorista')
 var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 var alterarNome = document.querySelector('#alterarNome')
+var infosPlacas = document.querySelector('#infosPlacas')
 
 var bemVindo = document.querySelector('#bemVindo')
 
@@ -32,34 +33,6 @@ function logout() {
     window.location.href = '../LOGIN/login.html'
 }
 
-// function newUser() {
-//     var nomeUser = document.querySelector('#nomeUser')
-//     var emailUser = document.querySelector('#email')
-//     var senha = document.querySelector('#senha')
-//     var cadastrarNewUser = document.querySelector('#cadastrarNewUser')
-
-//     cadastrarNewUser.addEventListener('click', () => {
-//         const options = {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 Authorization: 'Bearer ' + usuario.token
-//             },
-//             body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"Operacional","nivel":1}`
-//         };
-
-
-//         fetch('http://localhost:3000/usuarioCreate', options)
-//             .then(response => response.status)
-//             .then(response => {
-//                 if (response == 201) {
-//                     window.location.reload()
-//                 }
-//             })
-
-//     })
-
-// }
 
 function ValidarPlaca(placa) {
     var inputPlaca = document.querySelector('#PlacaVeiculo')
@@ -70,13 +43,16 @@ function ValidarPlaca(placa) {
         let modelAtual = /^[a-zA-Z]{3}[0-9]{1}[a-zA-Z]{1}[0-9]{2}$/
 
         if (modelAntigo.test(placa) || modelAtual.test(placa)) {
-            console.log('ok')
+            infosPlacas.innerHTML = ''
         } else {
-            alert('A placa digitada é inválida')
+
+            infosPlacas.innerHTML ='A placa digitada é inválida'
+            infosPlacas.style.marginTop = '1vh'
 
         }
     } else {
-        alert('A placa digitada é inválida, digite uma placa valida')
+        infosPlacas.innerHTML ='A placa digitada é inválida'
+        infosPlacas.style.marginTop = '2vh'
     }
 
 }
@@ -164,20 +140,6 @@ function fetchVeiculos(valorFiltro) {
     var delVeiculos = document.querySelector('#deletarVeiculo')
     var btnDeletarVeiculos = document.querySelector('#btnDeletarVeiculos')
 
-
-    // fetch(`http://localhost:3000/tipVeiculos`)
-    //     .then(response => response.json())
-    //     .then(response => {
-    //         response.forEach(tv => {
-    //             var tipoVeiculoCadastrar = document.querySelector('.tipoVeiculoCadastrar').cloneNode(true)
-    //             tipoVeiculoCadastrar.classList.remove('model')
-
-    //             tipoVeiculoCadastrar.innerHTML += `<option value='${tv.id}'>${tv.tipo}</option>`
-
-    //             document.querySelector('#estilizando').appendChild(tipoVeiculoCadastrar)
-
-    //         })
-    //     })
 
     fetch(`http://localhost:3000/veiculos/${valorFiltro}`)
         .then(response => response.json())
