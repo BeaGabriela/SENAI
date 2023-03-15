@@ -1,6 +1,7 @@
 var deletarUser = document.querySelector('.deletarUser')
 var Pdelet = document.querySelector('#deletarM')
 var btnDeletar = document.querySelector('#btnDeletarUser')
+var infos = document.querySelector('#info')
 
 
 var bemVindo = document.querySelector('#bemVindo')
@@ -13,14 +14,27 @@ var hora = data.getHours()
 var minutos = data.getMinutes()
 var dataCompleta = `${ano}-0${mes}-${dia}  ${hora}:${minutos}`
 
-var usuario = JSON.parse(localStorage.getItem('user'))
-console.log(usuario)
+var user = JSON.parse(localStorage.getItem('user'))
+console.log(user)
 
 
 function carregar() {
-    bemVindo.innerHTML = '  ' + usuario.nome
+    bemVindo.innerHTML = '  ' + user.nome
     bemVindo.style.color = '#000'
     newUser()
+
+    //Text btn saida
+        var textSaida = document.querySelector('#logoutt')
+        var textoSair = document.querySelector('.textSair')
+        textSaida.addEventListener('mouseover', () => {
+            textoSair.classList.remove('model')
+            textoSair.style.margin = '2px 0vw 0vw 0.7vw'
+        })
+
+        textSaida.addEventListener('mouseout', () => {
+            textoSair.classList.add('model')
+        })
+
 
     fetch('http://localhost:3000/usuario')
         .then(response => response.json())
@@ -34,7 +48,7 @@ function carregar() {
                 usuario.querySelector('#id').innerHTML = u.id
                 usuario.querySelector('#nome').innerHTML = u.nome
                 usuario.querySelector('#email').innerHTML = u.email
-                usuario.querySelector('#senha').innerHTML = u.senha
+                usuario.querySelector('#senha').innerHTML = '*******'
                 usuario.querySelector('#funcao').innerHTML = u.funcao
                 usuario.querySelector('#nivel').innerHTML = u.nivel
                 let imageEdit = document.createElement("img");
@@ -54,9 +68,10 @@ function carregar() {
                         const options = {
                             method: 'DELETE',
                             headers: {
-                              Authorization: 'Bearer ' + usuario.token
+                              Authorization: 'Bearer ' + user.token
                             }
                           };
+                          console.log(options)
                           
                           fetch(`http://localhost:3000/usuario/${u.id}`, options)
                             .then(response => response.status)
@@ -87,14 +102,31 @@ function newUser() {
     var cadastrarNewUser = document.querySelector('#cadastrarNewUser')
     var nivel = "Operacional"
 
+    emailUser.addEventListener('blur', () => {
+        fetch('http://localhost:3000/usuario')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(u => {
+                if(emailUser.value == u.email){
+                    infos.innerHTML = "Esse email já existe nessa empresa,\n por favor tente outro!"
+                    infos.style.fontSize = '11pt'
+                    infos.style.marginRight = '1vw'
+                    infos.style.marginTop = '1vh'
+                    emailUser.value = ''
+                }else{
+                    infos.innerHTML = ''
+                }
+            })
+        })
+    })
     cadastrarNewUser.addEventListener('click', () => {
         const options = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: 'Bearer ' + usuario.token
+                Authorization: 'Bearer ' + user.token
             },
-            body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"${nivel}","nivel":1}`
+            body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"${nivel}","nivel":2}`
         };
 
 
@@ -103,6 +135,8 @@ function newUser() {
             .then(response => {
                 if (response == 201) {
                     window.location.reload()
+                }else{
+
                 }
             })
 
@@ -110,12 +144,14 @@ function newUser() {
 
 }
 
+
+
 function voltarAnterior() {
     window.history.back()
 }
 
 function logout() {
-    window.localStorage.removeItem('usuario')
+    window.localStorage.removeItem('user')
     window.location.href = '../LOGIN/login.html'
 }
 

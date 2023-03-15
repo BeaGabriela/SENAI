@@ -62,7 +62,7 @@ const remove = async (req, res) => {
             id: Number(req.params.id)
         }
     })
-    res.status(200).json(usuario).end() //SEND não é necessario exatamente um banco de dados. 
+    res.status(200).json(usuario).end() 
 }
 
 const login = async (req, res) => {

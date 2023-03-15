@@ -33,7 +33,7 @@ main {
     box-sizing: border-box;
     position: absolute;
     width: 15vw;
-    height: 30vh;
+    height: 32vh;
     left: 30vw;
     top: 7.5vh;
 
@@ -312,6 +312,7 @@ h3 {
     background: #dad7d7;
     border-radius: 8px;
 }
+
 
 @media(max-width: 1115px) {
     body {
