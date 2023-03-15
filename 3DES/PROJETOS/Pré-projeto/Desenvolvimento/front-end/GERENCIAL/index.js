@@ -2,6 +2,7 @@ var deleterMotorista = document.querySelector('.deletarMotorista')
 var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 var alterarNome = document.querySelector('#alterarNome')
+// var infos = document.querySelector('#info')
 
 var bemVindo = document.querySelector('#bemVindo')
 
@@ -21,7 +22,17 @@ function carregar() {
     bemVindo.style.color = '#000'
     Manutencoes()
     Operacoes()
-    newUser()
+
+    var textSaida = document.querySelector('#logoutt')
+    var textoSair = document.querySelector('.textSair')
+    textSaida.addEventListener('mouseover', () => {
+        textoSair.classList.remove('model')
+        textoSair.style.margin = '2px 0vw 0vw 0.7vw'
+    })
+
+    textSaida.addEventListener('mouseout', () => {
+        textoSair.classList.add('model')
+    })
 }
 
 function logout(){
@@ -98,10 +109,29 @@ function Manutencoes() {
         cadastrarManutencao.classList.remove('model')
         var btnCadastrar = document.querySelector('#cadastrarManutencao')
 
+
+        var veiculosSM = document.querySelector('.veiculosCM')
+        fetch('http://localhost:3000/veiculos')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(v => {
+                veiculosSM.cloneNode(true)
+                veiculosSM.classList.remove('model')
+                veiculosSM.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+
+                document.querySelector('#manutencaoSelect').appendChild(veiculosSM)
+
+            })
+        })
+
+        console.log(veiculosSM.value)
+
         btnCadastrar.addEventListener('click', () => {
             var inputVeiculo = document.querySelector('#veiculo')
             var inputValor = document.querySelector('#valorManutencao')
             var inputDescricao = document.querySelector('#DescricaoManutencao')
+
+            
 
             const options = {
                 method: 'POST',
@@ -278,6 +308,21 @@ function Operacoes() {
     newOperacao.addEventListener('click', () => {
         ListarOperacoes.classList.add('model')
         cadastrarOperacao.classList.remove('model')
+
+        
+        var veiculosS = document.querySelector('.veiculosC')
+        fetch('http://localhost:3000/veiculos')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(v => {
+                veiculosS.cloneNode(true)
+                veiculosS.classList.remove('model')
+                veiculosS.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+
+                document.querySelector('#operacaoSelect').appendChild(veiculosS)
+
+            })
+        })
 
         btnCadatsrarOpera.addEventListener('click', () => {
             const options = {

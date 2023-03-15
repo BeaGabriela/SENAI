@@ -1,5 +1,6 @@
 
 var bemVindo = document.querySelector('#bemVindo')
+var infos = document.querySelector('#info')
 
 var data = new Date()
 var dia = data.getDate()
@@ -17,6 +18,17 @@ function carregar() {
     bemVindo.style.color = '#000'
     Manutencoes()
     Operacoes()
+
+    var textSaida = document.querySelector('#logoutt')
+    var textoSair = document.querySelector('.textSair')
+    textSaida.addEventListener('mouseover', () => {
+        textoSair.classList.remove('model')
+        textoSair.style.margin = '2px 0vw 0vw 0.7vw'
+    })
+
+    textSaida.addEventListener('mouseout', () => {
+        textoSair.classList.add('model')
+    })
     
 }
 

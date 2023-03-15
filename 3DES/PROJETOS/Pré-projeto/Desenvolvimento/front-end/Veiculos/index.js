@@ -3,6 +3,7 @@ var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 var alterarNome = document.querySelector('#alterarNome')
 var infosPlacas = document.querySelector('#infosPlacas')
+var infos = document.querySelector('#info')
 
 var bemVindo = document.querySelector('#bemVindo')
 
@@ -25,7 +26,16 @@ function carregar() {
 
     Veiculos()
 
-    // newUser()
+    var textSaida = document.querySelector('#logoutt')
+    var textoSair = document.querySelector('.textSair')
+    textSaida.addEventListener('mouseover', () => {
+        textoSair.classList.remove('model')
+        textoSair.style.margin = '2px 0vw 0vw 0.7vw'
+    })
+
+    textSaida.addEventListener('mouseout', () => {
+        textoSair.classList.add('model')
+    })
 }
 
 function logout() {

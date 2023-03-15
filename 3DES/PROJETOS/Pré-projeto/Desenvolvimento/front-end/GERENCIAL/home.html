@@ -22,7 +22,7 @@
             <h2><label>Agro</label>Tech</h2>
             <img id="person" src="../../assets/person.png" />
         </div>
-       
+
         <nav class="nav2">
             <div>
                 <div id="headersManutencao">
@@ -57,8 +57,12 @@
 
             <div class="cadastrarManutencao model">
                 <img src='../../assets/sair.png' id="sairModal" onclick="FecharmodalManutencao()" />
-                <div id='estilizando'>
-                    <input placeholder="Id veiculo" id="veiculo">
+                <div id='estilizandoO'>
+                    <!-- <input placeholder="Id veiculo" id="veiculo"> -->
+                    <div id="manutencaoSelect">
+                        <label>Veiculo: </label>
+                        <select title="veiculos" class="veiculosCM model"></select>
+                    </div>
                     <input placeholder="Valor" id="valorManutencao">
                     <input placeholder="Descricao" id="DescricaoManutencao">
                     <button id="cadastrarManutencao">Cadastrar</button>
@@ -101,7 +105,11 @@
             <div class="cadastrarOperacao model">
                 <img src='../../assets/sair.png' id="sairModal" onclick="fecharModalOperacao()" />
                 <div id='estilizando'>
-                    <input placeholder="Id veiculo" id="veiculoOpera">
+                    <!-- <input placeholder="Id veiculo" id="veiculoOpera"> -->
+                    <div id="operacaoSelect">
+                        <label>Veiculo: </label>
+                        <select title="veiculos" class="veiculosC model"></select>
+                    </div>
                     <input placeholder="Motorista" id="motoristaId">
                     <input placeholder="Descricao" id="DescricaoOperacao">
                     <button id="cadastrarOperacao">Cadastrar</button>
@@ -119,15 +127,15 @@
             <div>
                 <a href="../Veiculos/index.html"><img src="../../assets/caminhao-de-entrega.png" /></a>
             </div>
-            <div>
+            <div id="logoutt">
                 <img onclick="logout()" src="../../assets/sairPagina.png" />
-
+                <p class="textSair model">Sair</p>
             </div>
 
         </nav>
 
 
-        
+
 
     </main>
 </body>
