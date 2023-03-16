@@ -42,20 +42,22 @@ export default function RelatoriosVeiculos({ navigation }) {
 
             <View>
                 <Text style={styles.tituloMotorista}>Veiculos</Text>
-                <TextInput placeholder='filtrar por data' style={styles.filtro} onChangeText={(val) => { setDate(val) }}/>
+                <TextInput placeholder='filtrar por data' style={styles.filtro} onChangeText={(val) => { setDate(val) }} />
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
                                 veiculos.map((v, index) => {
-                                        return (
-                                            <View style={styles.view_Motoristas} key={index}>
-                                                <Text>Id: {v.id}</Text>
-                                                <Text>Placa: {v.placa}</Text>
-                                                <Text>Tipo: {v.tipo}</Text>
-                                            </View>
-                                        )
-                                   
+                                    return (
+                                        <View style={styles.view_Motoristas} key={index}>
+                                            <Text>Id: {v.id}</Text>
+                                            <Text>Placa: {v.placa}</Text>
+                                            <Text>Tipo: {v.tipo} - {v.tipos.tipo}</Text>
+                                            <Text>Modelo: {v.modelo}</Text>
+
+                                        </View>
+                                    )
+
                                 })
                             }
                         </View>

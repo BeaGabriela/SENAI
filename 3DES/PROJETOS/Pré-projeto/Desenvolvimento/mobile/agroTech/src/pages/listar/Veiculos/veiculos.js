@@ -128,7 +128,8 @@ export default function Veiculos({ navigation }) {
                                                 <View style={styles.view_Funcionario} key={index}>
                                                     <Text style={styles.textAlinhado}>Id: {v.id}</Text>
                                                     <Text style={styles.textAlinhado}>Placa: {v.placa}</Text>
-                                                    <Text style={styles.textAlinhado}>Tipo: {v.tipo}</Text>
+                                                    <Text style={styles.textAlinhado}>Tipo: {v.tipo} - {v.tipos.tipo}</Text>
+                                                    <Text style={styles.textAlinhado}>Modelo: {v.modelo}</Text>
                                                     <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
                                                         Excluir(v.id)
                                                     }}><Text>Excluir</Text></TouchableOpacity>
@@ -140,7 +141,8 @@ export default function Veiculos({ navigation }) {
                                                 <View style={styles.view_Ocupada} key={index}>
                                                     <Text style={styles.textAlinhado}>Id: {v.id}</Text>
                                                     <Text style={styles.textAlinhado}>Placa: {v.placa}</Text>
-                                                    <Text style={styles.textAlinhado}>Tipo: {v.tipo}</Text>
+                                                    <Text style={styles.textAlinhado}>Tipo: {v.tipo} - {v.tipos.tipo}</Text>
+                                                    <Text style={styles.textAlinhado}>Modelo: {v.modelo}</Text>
                                                     <TouchableOpacity style={styles.btnDesabilitado} onPress={() => {
                                                         console.log('Não é possivel excluir um veiculo em operação')
                                                     }}><Text>Excluir</Text></TouchableOpacity>

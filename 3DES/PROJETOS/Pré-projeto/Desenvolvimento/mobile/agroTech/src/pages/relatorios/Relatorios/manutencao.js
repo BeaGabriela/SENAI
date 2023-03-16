@@ -68,7 +68,7 @@ export default function RelatorioManutencao({ navigation }) {
                                             return (
                                                 <View style={styles.view_Principal} key={index}>
                                                     <Text>Id: {m.id}</Text>
-                                                    <Text>Veiculo: {m.veiculo}</Text>
+                                                    <Text>Veiculo: {m.veiculo} - {m.veiculos.placa}</Text>
                                                     <Text>Data Inicio: {m.data_inicio}</Text>
                                                     <Text>Valor: {valor}</Text>
                                                     <Text>Descrição: {m.descricao}</Text>

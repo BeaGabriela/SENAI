@@ -40,25 +40,7 @@ export default function Login({ navigation }) {
     }
 
 
-    // fetch('http://localhost:3000/usuario/login', options)
-    //     .then(response => response.json().status)
-    //     .then(response => {
-    //         console.log(response.status)
-    //         if (value1.length == 0 && value2 == 0) {
-    //             console.log('preencher')
-    //         } else if (response.status() == 404) {
-    //             console.log('erro')
-    //         }
-    // if (value1 != undefined && value2 != undefined) {
-    //     if (response.niveis.nivel == 'Gerencial') {
-    //         flag = true
-    //         AsyncStorage.setItem('user', JSON.stringify(response))
-    //         navigation.navigate('Home')
-    //     } else {
-    //         console.log('erro')
-    //     }
-    // }
-    // })
+
 
     return (
         <View style={styles.view}>
@@ -67,7 +49,7 @@ export default function Login({ navigation }) {
                 <Image style={styles.office} source={require('../../../assets/office.png')} />
                 <View style={styles.view_main}>
                     <TextInput style={styles.inputCadastrar} placeholder='Informe o email' value={value1} onChangeText={(val) => { setValue1(val) }} />
-                    <TextInput style={styles.inputCadastrar} value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha' />
+                    <TextInput style={styles.inputCadastrar}  secureTextEntry={true} value={value2} onChangeText={(val1) => { setValue2(val1) }} placeholder='Informe sua senha' />
                     <ButtonConectar value="Acessar" onPress={() => { validar() }} />
                 </View>
             </View>

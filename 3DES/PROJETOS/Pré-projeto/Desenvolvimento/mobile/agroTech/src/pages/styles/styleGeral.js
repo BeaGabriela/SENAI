@@ -282,7 +282,7 @@ export default StyleSheet.create({
 
     view_Motoristas: {
         boxShadow: '2px 2px 2px 2px #57d131',
-        height: '12vh',
+        height: '16vh',
         width: '50vw',
         borderRadius: '25px',
         textAlign: 'center',
@@ -313,7 +313,7 @@ export default StyleSheet.create({
 
     view_Funcionario: {
         boxShadow: '2px 2px 2px 2px #57d131',
-        height: '20vh',
+        height: '24vh',
         width: '50vw',
         borderRadius: '25px',
         textAlign: 'center',
@@ -323,7 +323,7 @@ export default StyleSheet.create({
 
     view_Ocupada:{
         boxShadow: '2px 2px 2px 2px #a0a0a0',
-        height: '20vh',
+        height: '24vh',
         width: '50vw',
         borderRadius: '25px',
         textAlign: 'center',
