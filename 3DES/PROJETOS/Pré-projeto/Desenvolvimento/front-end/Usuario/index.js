@@ -113,7 +113,7 @@ function newUser() {
                     infos.style.marginRight = '1vw'
                     infos.style.marginTop = '1vh'
                     emailUser.value = ''
-                }else{
+                }else if(emailUser.value != u.email){
                     infos.innerHTML = ''
                 }
             })

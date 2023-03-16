@@ -2,10 +2,13 @@ var deleterMotorista = document.querySelector('.deletarMotorista')
 var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 var alterarNome = document.querySelector('#alterarNome')
-// var infos = document.querySelector('#info')
+var veiculoManutencao = ''
+var motoristasOperacao = ''
 
+var usuario = JSON.parse(localStorage.getItem('user'))
 var bemVindo = document.querySelector('#bemVindo')
 
+///Definindo data
 var data = new Date()
 var dia = data.getDate()
 var mes = data.getMonth() + 1
@@ -13,8 +16,6 @@ var ano = data.getFullYear()
 var hora = data.getHours()
 var minutos = data.getMinutes()
 var dataCompleta = `${ano}-0${mes}-${dia}  ${hora}:${minutos}`
-
-var usuario = JSON.parse(localStorage.getItem('user'))
 
 
 function carregar() {
@@ -35,12 +36,6 @@ function carregar() {
     })
 }
 
-function logout(){
-    window.localStorage.removeItem('usuario')
-    window.location.href = '../LOGIN/login.html'
-}
-
-  
 function Manutencoes() {
     var listarManutencoes = document.querySelector('.ListarManutencoes');
     listarManutencoes.classList.remove('model')
@@ -118,20 +113,16 @@ function Manutencoes() {
                 veiculosSM.cloneNode(true)
                 veiculosSM.classList.remove('model')
                 veiculosSM.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+                console.log(veiculosSM.value)
 
                 document.querySelector('#manutencaoSelect').appendChild(veiculosSM)
-
             })
         })
 
-        console.log(veiculosSM.value)
-
         btnCadastrar.addEventListener('click', () => {
-            var inputVeiculo = document.querySelector('#veiculo')
+            // var inputVeiculo = document.querySelector('#veiculo')
             var inputValor = document.querySelector('#valorManutencao')
             var inputDescricao = document.querySelector('#DescricaoManutencao')
-
-            
 
             const options = {
                 method: 'POST',
@@ -139,7 +130,7 @@ function Manutencoes() {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
                 },
-                body: `{"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":${null}}`
+                body: `{"veiculo":${Number(veiculosSM.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":${null}}`
             };
 
             fetch('http://localhost:3000/manutencao', options)
@@ -226,7 +217,6 @@ function fetchManutencoes(manutencao) {
                                 }
                             })
                     })
-
                     listarManutencao.appendChild(btnConcluirManutencao)
                     listarManutencoes.appendChild(listarManutencao)
                 }
@@ -295,14 +285,12 @@ function Operacoes() {
 
     })
 
-
-
     //Cadastrar Operacao
     var newOperacao = document.querySelector('#newOperacao')
     var cadastrarOperacao = document.querySelector('.cadastrarOperacao')
     var btnCadatsrarOpera = document.querySelector('#cadastrarOperacao')
-    var inputVeiculosOpera = document.querySelector('#veiculoOpera')
-    var inputMotoristaOpera = document.querySelector('#motoristaId')
+    // var inputVeiculosOpera = document.querySelector('#veiculoOpera')
+    // var inputMotoristaOpera = document.querySelector('#motoristaId')
     var inputDescricaoOpera = document.querySelector('#DescricaoOperacao')
 
     newOperacao.addEventListener('click', () => {
@@ -310,20 +298,35 @@ function Operacoes() {
         cadastrarOperacao.classList.remove('model')
 
         
-        var veiculosS = document.querySelector('.veiculosC')
-        fetch('http://localhost:3000/veiculos')
-        .then(response => response.json())
-        .then(response => {
-            response.forEach(v => {
-                veiculosS.cloneNode(true)
-                veiculosS.classList.remove('model')
-                veiculosS.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+        var veiculosSO = document.querySelector('.veiculosC')
+            fetch('http://localhost:3000/veiculos')
+            .then(response => response.json())
+            .then(response => {
+                response.forEach(v => {
+                    veiculosSO.cloneNode(true)
+                    veiculosSO.classList.remove('model')
+                    veiculosSO.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+                    veiculoManutencao = veiculosSO.value
 
-                document.querySelector('#operacaoSelect').appendChild(veiculosS)
-
+                    document.querySelector('#operacaoSelect').appendChild(veiculosSO)
             })
         })
 
+        var motoristasO = document.querySelector('.motoristas')
+            fetch('http://localhost:3000/motorista')
+            .then(response => response.json())
+            .then(response => {
+                response.forEach(v => {
+                    motoristasO.cloneNode(true)
+                    motoristasO.classList.remove('model')
+                    motoristasO.innerHTML += `<option value="${v.id}">${v.nome}</option>`
+
+                    document.querySelector('#operacaoSelectMotoristas').appendChild(motoristasO)
+                  
+    
+            })
+        })
+            
         btnCadatsrarOpera.addEventListener('click', () => {
             const options = {
                 method: 'POST',
@@ -331,9 +334,9 @@ function Operacoes() {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
                 },
-                body: `{"veiculo":${Number(inputVeiculosOpera.value)},"motorista":${Number(inputMotoristaOpera.value)},"descricao":"${inputDescricaoOpera.value}","data_retorno":${null}}`
+                body: `{"veiculo":${Number(veiculosSO.value)},"motorista":${Number(motoristasO.value)},"descricao":"${inputDescricaoOpera.value}","data_retorno":${null}}`
             };
-
+            console.log(veiculoManutencao)
             fetch('http://localhost:3000/operacoes', options)
                 .then(response => response.status)
                 .then(response => {
@@ -437,6 +440,10 @@ function fetchOperacao(operacao) {
         })
 }
 
+function logout(){
+    window.localStorage.removeItem('usuario')
+    window.location.href = '../LOGIN/login.html'
+}
 
 
 function FecharmodalManutencao() {

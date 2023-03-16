@@ -105,12 +105,15 @@
             <div class="cadastrarOperacao model">
                 <img src='../../assets/sair.png' id="sairModal" onclick="fecharModalOperacao()" />
                 <div id='estilizando'>
-                    <!-- <input placeholder="Id veiculo" id="veiculoOpera"> -->
                     <div id="operacaoSelect">
                         <label>Veiculo: </label>
                         <select title="veiculos" class="veiculosC model"></select>
                     </div>
-                    <input placeholder="Motorista" id="motoristaId">
+                    <div id="operacaoSelectMotoristas">
+                        <label>Motoristas: </label>
+                        <select title="motoristas" class="motoristas model"></select>
+                    </div>
+                    <!-- <input placeholder="Motorista" id="motoristaId"> -->
                     <input placeholder="Descricao" id="DescricaoOperacao">
                     <button id="cadastrarOperacao">Cadastrar</button>
                 </div>
