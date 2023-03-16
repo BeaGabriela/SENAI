@@ -30,7 +30,9 @@ model Usuario {
 model Motorista {
   id        Int         @id @default(autoincrement())
   nome      String
-  ocupado Boolean @default(false)
+  cpf       String      @unique
+  cnh       String      @unique
+  ocupado   Boolean     @default(false)
   operacoes Operacoes[]
 }
 
@@ -43,28 +45,27 @@ model Tipo_Veiculos {
 
 model Veiculos {
   id          Int           @id @default(autoincrement())
-  placa       String @unique
+  placa       String        @unique
+  modelo      String
   tipo        Int
-  uso  Boolean @default(false)
+  uso         Boolean       @default(false)
   manutencoes Manutencao[]
   operacoes   Operacoes[]
   tipos       Tipo_Veiculos @relation(fields: [tipo], references: [id])
 }
 
-
 model Operacoes {
-  id           Int      @id @default(autoincrement())
+  id           Int                  @id @default(autoincrement())
   veiculo      Int
   motorista    Int
-  data_saida   DateTime @default(now())
+  data_saida   DateTime             @default(now())
   descricao    String
-  data_retorno DateTime? 
-  concluidas Boolean@default(false)
-  relatorios Relatorio_Operacao[]
+  data_retorno DateTime?
+  concluidas   Boolean              @default(false)
+  relatorios   Relatorio_Operacao[]
 
   tipos      Veiculos  @relation(fields: [veiculo], references: [id])
   motoristas Motorista @relation(fields: [motorista], references: [id])
-  
 }
 
 model Manutencao {
@@ -74,7 +75,7 @@ model Manutencao {
   valor       Float
   descricao   String
   data_fim    DateTime?
-  concluidas Boolean@default(false)
+  concluidas  Boolean                @default(false)
   manutencao  Relatorio_Manutencao[]
 
   veiculos Veiculos @relation(fields: [veiculo], references: [id])
@@ -87,11 +88,9 @@ model Relatorio_Manutencao {
   manutencoes Manutencao @relation(fields: [manutencao], references: [id])
 }
 
-
 model Relatorio_Operacao {
-  id       Int @id @default(autoincrement())
+  id        Int @id @default(autoincrement())
   operacoes Int
-  
+
   operacao Operacoes @relation(fields: [operacoes], references: [id])
 }
-

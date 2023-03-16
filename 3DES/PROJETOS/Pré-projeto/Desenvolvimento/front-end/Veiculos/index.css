@@ -140,6 +140,9 @@ select {
     background-color: #B9E937;
 }
 
+#tipoVeiculos{
+    margin-top: 1vh;
+}
 input {
     border: 1px solid #B9E937;
     border-radius: 8px;
@@ -156,6 +159,11 @@ input {
 label {
     color: #289507;
     font-weight: 700;
+    padding: 5px;
+}
+
+p{
+    padding: 2px;
 }
 
 .listarVeiculos>p,
@@ -209,7 +217,7 @@ button {
 }
 
 .listarVeiculos {
-    height: 18vh;
+    height: 24vh;
     width: 8vw;
     border-radius: 25px;
     text-align: center;
@@ -220,21 +228,21 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
+
 .cloneModalMotoristas {
-    height: 18vh;
-    width: 8vw;
+    height: 31vh;
+    width: 10vw;
     border-radius: 25px;
     text-align: center;
     padding: 30px;
     background: #F5F5F5;
-    margin-left:3vw;
+    margin-left:2vw;
     margin-top: 1vh;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.deletarMotorista,
-.cadastrarMotorista,
 .deletarVeiculos,
 .cadastrarVeiculos {
     width: 14vw;
@@ -244,10 +252,25 @@ button {
     background: #F5F5F5;
     margin-left: 3vw;
     margin-top: 6vh;
-    padding-top: 11vh;
+    padding-top: 12vh;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.deletarMotorista,
+.cadastrarMotorista{
+    width: 14vw;
+    height: 34vh;
+    border-radius: 25px;
+    text-align: center;
+    background: #F5F5F5;
+    margin-left: 3vw;
+    margin-top: 6vh;
+    padding-top: 8vh;
+    border: 1px solid #B9E937;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 #sairModal{
     position: absolute;
     height: 5vh;
@@ -259,7 +282,7 @@ button {
 #cadastrarMotorista,
 #cadastrarVeiculo,
 #cadastrar{
-    margin-top: 2vh;
+    margin-top: 4vh;
     cursor: pointer;
 }
 

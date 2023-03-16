@@ -31,6 +31,7 @@ const readOne = async (req, res) => {
         select:{
             id: true,
             placa: true,
+            modelo: true,
             tipo: true           
         }
     });
