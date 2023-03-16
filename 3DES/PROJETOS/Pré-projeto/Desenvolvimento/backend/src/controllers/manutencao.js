@@ -34,6 +34,11 @@ const read = async (req, res) => {
         select: {
             id: true,
             veiculo: true,
+            veiculos: {
+                select:{
+                    placa: true
+                }
+            },
             data_inicio: true,
             valor: true,
             descricao: true,
@@ -71,7 +76,25 @@ const readOne = async (req, res) => {
     let Manutencao = await prisma.Manutencao.findMany({
         where: {
             concluidas: parseBoolean(req.params.concluidas)
-
+        },
+        select: {
+            id: true,
+            veiculo: true,
+            veiculos: {
+                select:{
+                    placa: true
+                }
+            },
+            data_inicio: true,
+            valor: true,
+            descricao: true,
+            data_fim: true,
+            manutencao: true,
+            veiculos: {
+                select: {
+                    placa: true,
+                }
+            }
         }
     });
 

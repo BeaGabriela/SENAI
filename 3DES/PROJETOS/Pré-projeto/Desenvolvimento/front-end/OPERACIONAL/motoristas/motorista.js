@@ -31,33 +31,39 @@ function Veiculos() {
     fetchVeiculos('')
     filtroVeiculos.addEventListener('change', () => {
         if (filtroVeiculos.value == 1) {
-            veiculo.innerHTML = ` <div class="listarVeiculos model">
+            veiculo.innerHTML = `<div class="listarVeiculos model">
             <label>Id:</label>
             <p id="Id_Veiculos"></p>
             <label>Placa:</label>
             <p id="placa"></p>
+            <label>Modelo:</label>
+            <p id="modelop"></p>
             <label>Tipo:</label>
             <p id="tipoVeiculo"></p>
         </div>`
             valorFiltro = 1
             fetchVeiculos(1)
         } else if (filtroVeiculos.value == 0) {
-            veiculo.innerHTML = ` <div class="listarVeiculos model">
+            veiculo.innerHTML = `<div class="listarVeiculos model">
             <label>Id:</label>
             <p id="Id_Veiculos"></p>
             <label>Placa:</label>
             <p id="placa"></p>
+            <label>Modelo:</label>
+            <p id="modelop"></p>
             <label>Tipo:</label>
             <p id="tipoVeiculo"></p>
         </div>`
             valorFiltro = 0
             fetchVeiculos(0)
         } else if (filtroVeiculos.value == 3) {
-            veiculo.innerHTML = ` <div class="listarVeiculos model">
+            veiculo.innerHTML = `<div class="listarVeiculos model">
             <label>Id:</label>
             <p id="Id_Veiculos"></p>
             <label>Placa:</label>
             <p id="placa"></p>
+            <label>Modelo:</label>
+            <p id="modelop"></p>
             <label>Tipo:</label>
             <p id="tipoVeiculo"></p>
         </div>`
@@ -81,7 +87,8 @@ function fetchVeiculos(valorFiltro) {
                     veiculosCLone.classList.remove('model')
                     veiculosCLone.querySelector('#Id_Veiculos').innerHTML = v.id
                     veiculosCLone.querySelector('#placa').innerHTML = v.placa
-                    veiculosCLone.querySelector('#tipoVeiculo').innerHTML = v.tipo
+                    veiculosCLone.querySelector('#modelop').innerHTML = v.modelo
+                    veiculosCLone.querySelector('#tipoVeiculo').innerHTML = v.tipo + '-'+ v.tipos.tipo 
 
                     
                     veiculo.appendChild(veiculosCLone)
@@ -91,7 +98,8 @@ function fetchVeiculos(valorFiltro) {
                     veiculosCLone.style.border = ' 1px solid #a9a9a9'
                     veiculosCLone.querySelector('#Id_Veiculos').innerHTML = v.id
                     veiculosCLone.querySelector('#placa').innerHTML = v.placa
-                    veiculosCLone.querySelector('#tipoVeiculo').innerHTML = v.tipo
+                    veiculosCLone.querySelector('#modelop').innerHTML = v.modelo
+                    veiculosCLone.querySelector('#tipoVeiculo').innerHTML = v.tipo + '-'+ v.tipos.tipo 
 
                   
                     veiculo.appendChild(veiculosCLone)
@@ -108,30 +116,42 @@ function Motoristas() {
     fetchMotoristas('')
     filtroMotoristas.addEventListener('change', () => {
         if (filtroMotoristas.value == 1) {
-            listarMotorista.innerHTML = `<div class="cloneModalMotoristas model">
-                        <label>Id:</label>
-                        <p id="id_Motorista">Motoristas</p>
-                        <label>Nome:</label>
-                        <p id="nomeMotorista">Motoristas</p>
-                    </div> `
+            listarMotorista.innerHTML = ` <div class="cloneModalMotoristas model">
+            <label>Id:</label>
+            <p id="id_Motorista">Motoristas</p>
+            <label>Nome:</label>
+            <p id="nomeMotorista">Motoristas</p>
+            <label>CPF:</label>
+            <p id="CPFmotorista">Motoristas</p>
+            <label>CNH:</label>
+            <p id="CNHMotorista">Motoristas</p>
+        </div> `
             valorFiltro = 1
             fetchMotoristas(1)
         } else if (filtroMotoristas.value == 0) {
-            listarMotorista.innerHTML = `<div class="cloneModalMotoristas model">
-                        <label>Id:</label>
-                        <p id="id_Motorista">Motoristas</p>
-                        <label>Nome:</label>
-                        <p id="nomeMotorista">Motoristas</p>
-                    </div>`
+            listarMotorista.innerHTML = ` <div class="cloneModalMotoristas model">
+            <label>Id:</label>
+            <p id="id_Motorista">Motoristas</p>
+            <label>Nome:</label>
+            <p id="nomeMotorista">Motoristas</p>
+            <label>CPF:</label>
+            <p id="CPFmotorista">Motoristas</p>
+            <label>CNH:</label>
+            <p id="CNHMotorista">Motoristas</p>
+        </div>`
             valorFiltro = 0
             fetchMotoristas(0)
         } else if (filtroMotoristas.value == 3) {
-            listarMotorista.innerHTML = `<div class="cloneModalMotoristas model">
-                        <label>Id:</label>
-                        <p id="id_Motorista">Motoristas</p>
-                        <label>Nome:</label>
-                        <p id="nomeMotorista">Motoristas</p>
-                    </div>`
+            listarMotorista.innerHTML = ` <div class="cloneModalMotoristas model">
+            <label>Id:</label>
+            <p id="id_Motorista">Motoristas</p>
+            <label>Nome:</label>
+            <p id="nomeMotorista">Motoristas</p>
+            <label>CPF:</label>
+            <p id="CPFmotorista">Motoristas</p>
+            <label>CNH:</label>
+            <p id="CNHMotorista">Motoristas</p>
+        </div>`
             fetchMotoristas('')
         }
 
@@ -155,6 +175,8 @@ function fetchMotoristas(motoristas) {
 
                     listarClone.querySelector('#id_Motorista').innerHTML = f.id
                     listarClone.querySelector('#nomeMotorista').innerHTML = f.nome
+                    listarClone.querySelector('#CPFmotorista').innerHTML = f.cpf
+                    listarClone.querySelector('#CNHMotorista').innerHTML = f.cnh
                     
                     listarMotorista.appendChild(listarClone)
                 } else {

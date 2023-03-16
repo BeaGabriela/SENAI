@@ -178,6 +178,7 @@ function fetchVeiculos(valorFiltro) {
                 if (v.uso == false) {
                     var veiculosCLone = document.querySelector('.listarVeiculos').cloneNode(true)
                     veiculosCLone.classList.remove('model')
+                    veiculosCLone.style.border = '1px solid #B9E937'
                     veiculosCLone.querySelector('#Id_Veiculos').innerHTML = v.id
                     veiculosCLone.querySelector('#placa').innerHTML = v.placa
                     veiculosCLone.querySelector('#modelop').innerHTML = v.modelo

@@ -29,6 +29,7 @@ function validarLogin() {
                 localStorage.setItem('user', JSON.stringify(resp))
                 window.location.href = '../GERENCIAL/home.html'
             }else{
+                localStorage.setItem('user', JSON.stringify(resp))
                 window.location.href = '../OPERACIONAL/home.html'
             }
         }

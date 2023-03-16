@@ -112,7 +112,7 @@ function Manutencoes() {
             response.forEach(v => {
                 veiculosSM.cloneNode(true)
                 veiculosSM.classList.remove('model')
-                veiculosSM.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+                veiculosSM.innerHTML += `<option value="${v.id}">${v.placa} (${v.tipos.tipo})</option>`
                 console.log(veiculosSM.value)
 
                 document.querySelector('#manutencaoSelect').appendChild(veiculosSM)
@@ -156,11 +156,11 @@ function fetchManutencoes(manutencao) {
                     var listarManutencao = document.querySelector('.listarManutencao').cloneNode(true)
                     listarManutencao.classList.remove('model')
                     listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
-                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
+                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo + ' - ' + manutencao.veiculos.placa
                     listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarManutencao.querySelector('#valor').innerHTML = manutencao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
-                    listarManutencao.querySelector('#data_fim').innerHTML = manutencao.data_fim
+                    listarManutencao.querySelector('#data_fim').innerHTML = ''
 
                     let btnConcluirManutencao = document.createElement('button')
                     btnConcluirManutencao.innerHTML = 'Concluir'
@@ -190,7 +190,7 @@ function fetchManutencoes(manutencao) {
                     listarManutencao.classList.remove('model')
                     listarManutencao.style.border = '1px solid #a9a9a9'
                     listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
-                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
+                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo + ' - ' + manutencao.veiculos.placa
                     listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarManutencao.querySelector('#valor').innerHTML = manutencao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
@@ -305,7 +305,7 @@ function Operacoes() {
                 response.forEach(v => {
                     veiculosSO.cloneNode(true)
                     veiculosSO.classList.remove('model')
-                    veiculosSO.innerHTML += `<option value="${v.id}">${v.placa}</option>`
+                    veiculosSO.innerHTML += `<option value="${v.id}">${v.placa} (${v.tipos.tipo})</option>`
                     veiculoManutencao = veiculosSO.value
 
                     document.querySelector('#operacaoSelect').appendChild(veiculosSO)
@@ -364,7 +364,7 @@ function fetchOperacao(operacao) {
 
                     listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
                     listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
-                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista + "-" + operacoes.motoristas.nome
                     listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
                     listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno
@@ -401,7 +401,7 @@ function fetchOperacao(operacao) {
 
                     listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
                     listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
-                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista + "-" + operacoes.motoristas.nome
                     listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
                     listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno
