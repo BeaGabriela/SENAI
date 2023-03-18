@@ -118,6 +118,8 @@ export default function Motoristas({ navigation }) {
                                             <View style={styles.view_Motoristas} key={index}>
                                                 <Text>Id: {m.id}</Text>
                                                 <Text>Nome: {m.nome}</Text>
+                                                <Text>CPF: {m.cpf}</Text>
+                                                <Text>CNH: {m.cnh}</Text>
                                                 <TouchableOpacity style={styles.buttonAtualizar} onPress={() => {
                                                     Excluir(m.id)
                                                 }}><Text>Excluir</Text></TouchableOpacity>

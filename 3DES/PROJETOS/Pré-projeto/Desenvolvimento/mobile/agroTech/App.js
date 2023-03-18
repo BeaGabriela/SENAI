@@ -7,8 +7,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Tab = createBottomTabNavigator();
 
 import Login from './src/pages/login/Login'
+import LogOut from './src/pages/logout/logout'
 
-//import Home from './src/pages/home/OperacaoHome'
+// import Home from './src/pages/home/OperacaoHome'
 import Operacoes from './src/pages/home/OperacaoHome'
 import Listar from './src/pages/listar/listar'
 import Relatorios from './src/pages/relatorios/relatorios'
@@ -35,6 +36,7 @@ const Home = () => {
       <Tab.Screen name="Operacoes" component={Operacoes} />
       <Tab.Screen name="Menu" component={Listar} />
       <Tab.Screen name="Relatorio" component={Relatorios} /> 
+      <Tab.Screen name="LogOut" component={LogOut} /> 
     </Tab.Navigator>
   )
 }

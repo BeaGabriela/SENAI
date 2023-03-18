@@ -17,25 +17,20 @@
         <h1>Bem-vindo, <label id="bemVindo"></label>!</h1>
     </header>
     <main>
-        <img src="../../assets/seta-esquerda.png"  id="voltar" onclick="voltarAnterior()"/>
-        <img id="person" src="../../assets/person.png" /> 
-        <!-- <img src="../../assets/office.png" id='officeIMG'/> -->
+        <img src="../../assets/seta-esquerda.png" id="voltar" onclick="voltarAnterior()" />
+        <img id="person" src="../../assets/person.png" />
         <div id="imgs">
             <h3>Novo +</h3>
             <div class="btnCadastrar">
                 <button id="newVeiculo">Veiculo</button>
-                <button  id="newMotorista">Motorista</button>
+                <button id="newMotorista">Motorista</button>
             </div>
-            <!-- <img id="logo" src="../../assets/industry.png">
-            <h2><label>Agro</label>Tech</h2>
-            <img id="person" src="../../assets/person.png" /> -->
         </div>
         <div class="alinhar">
             <nav class="nav1">
                 <div>
                     <div id="headersVeiculos">
                         <p>Veiculos</p>
-                        <!-- <button >Novo+</button> -->
                     </div>
                     <div id="busca">
                         <label id="filtro">Filtro:</label>
@@ -52,13 +47,15 @@
                         <p id="Id_Veiculos"></p>
                         <label>Placa:</label>
                         <p id="placa"></p>
+                        <label>Modelo:</label>
+                        <p id="modelop"></p>
                         <label>Tipo:</label>
                         <p id="tipoVeiculo"></p>
                     </div>
                 </div>
 
                 <div class="deletarVeiculos model">
-                    <img src="../../assets/sair.png" height="20px" />
+                    <img src="../../assets/sair.png" height="20px" id="sairModal" />
                     <div id='estilizando'>
                         <p id="deletarVeiculo"></p>
                         <button id="btnDeletarVeiculos">Deletar</button>
@@ -68,67 +65,79 @@
                 <div class="cadastrarVeiculos model">
                     <img src='../../assets/sair.png' id="sairModal" onclick="fecharModalCadastrar()" />
                     <div id='estilizando'>
+                        <div id="tipoVeiculos">
+                            <label>Tipo: </label>
+                            <select title="tipos" class="selecionandoTipo"></select>
+                        </div>
                         <input placeholder="Placa" id="PlacaVeiculo" onblur='ValidarPlaca(placa)'>
-                        <input placeholder="Tipo" id="Tipo">
-                        <!-- <select title='tipo' class="tipoVeiculoCadastrar model"></select> -->
+                        <input placeholder="Modelo" id="ModeloVeiculo">
                         <button id="cadastrarVeiculo">Cadastrar</button>
+                        <p id="infosPlacas"></p>
                     </div>
                 </div>
             </nav>
 
-                <nav class="nav1_1">
-                    <div>
-                        <div id="headersMotoristas">
-                            <p>Motorista</p>
-                            <!-- <button >Novo+</button> -->
-                        </div>
-                        <div id="busca">
-                            <label id="filtro">Filtro:</label>
-                            <select id="filtroMotorista">
-                                <option value="3"></option>
-                                <option value="0">Disponiveis</option>
-                                <option value="1">Ocupados</option>
-                            </select>
-                        </div>
+            <nav class="nav1_1">
+                <div>
+                    <div id="headersMotoristas">
+                        <p>Motorista</p>
                     </div>
-                    <div class='listarMotoristas model '>
-                        <div class="cloneModalMotoristas model">
-                            <label>Id:</label>
-                            <p id="id_Motorista">Motoristas</p>
-                            <label>Nome:</label>
-                            <p id="nomeMotorista">Motoristas</p>
-                        </div>
+                    <div id="busca">
+                        <label id="filtro">Filtro:</label>
+                        <select id="filtroMotorista">
+                            <option value="3"></option>
+                            <option value="0">Disponiveis</option>
+                            <option value="1">Ocupados</option>
+                        </select>
                     </div>
-
-                    <!-- Deletar Motoristas -->
-                    <div class="deletarMotorista model">
-                        <div id='estilizando'>
-                            <p id="deletarM"></p>
-                            <button id="btnDeletarMotorista">Deletar</button>
-                        </div>
+                </div>
+                <div class='listarMotoristas model '>
+                    <div class="cloneModalMotoristas model">
+                        <label>Id:</label>
+                        <p id="id_Motorista">Motoristas</p>
+                        <label>Nome:</label>
+                        <p id="nomeMotorista">Motoristas</p>
+                        <label>CPF:</label>
+                        <p id="CPFmotorista">Motoristas</p>
+                        <label>CNH:</label>
+                        <p id="CNHMotorista">Motoristas</p>
                     </div>
+                </div>
 
-                    <!-- Cadastrar Motoristas -->
-                    <div class="cadastrarMotorista model">
-                        <img src='../../assets/sair.png' id="sairModal" onclick="fecharModalCadastrarMotorista()" />
-                        <div id='estilizando'>
-                            <input placeholder="nome" id="cadastrarNome">
-                            <button id="cadastrarMotorista">Cadastrar</button>
-                        </div>
+                <!-- Deletar Motoristas -->
+                <div class="deletarMotorista model">
+                    <img src="../../assets/sair.png" height="20px" id="sairModalMotorista" />
+                    <div id='estilizando'>
+                        <p id="deletarM"></p>
+                        <button id="btnDeletarMotorista">Deletar</button>
                     </div>
-                </nav>
+                </div>
 
-                 <nav class="nav4">
+                <!-- Cadastrar Motoristas -->
+                <div class="cadastrarMotorista model">
+                    <img src='../../assets/sair.png' id="sairModal" onclick="fecharModalCadastrarMotorista()" />
+                    <div id='estilizando'>
+                        <input placeholder="Nome" id="cadastrarNome">
+                        <input placeholder="CPF" onblur="validarCpfMotorista()" id="cpf">
+                        <input placeholder="CNH" id="cnh">
+                        <button id="cadastrarMotorista">Cadastrar</button>
+                        <p id="infoCpf"></p>
+                    </div>
+                </div>
+            </nav>
 
-            <div>
-                <a href="../RELATORIOS/index.html"><img src="../../assets/realtorio.png" /></a>
-            </div>
-            <div>
-                <img onclick="logout()" src="../../assets/sairPagina.png" />
+            <nav class="nav4">
 
-            </div>
+                <div>
+                    <a href="../RELATORIOS/index.html"><img src="../../assets/realtorio.png" /></a>
+                </div>
+                <div id="logoutt">
+                    <img onclick="logout()" src="../../assets/sairPagina.png" />
+                    <p class="textSair model">Sair</p>
 
-        </nav>
+                </div>
+
+            </nav>
         </div>
     </main>
 </body>

@@ -12,24 +12,28 @@ function validarLogin() {
         body: `{"email":"${inputEmail.value}","senha":"${inputsenha.value}"}`
     };
 
+
     fetch('http://localhost:3000/usuario/login', options)
-        .then(response => response.json())
-        .then(response =>{
-            if(email != undefined && senha != undefined){
-                console.log(response.token)
-                
-                localStorage.setItem('user', JSON.stringify(response))
-
-                if(response.niveis.nivel == 'Gerencial'){
-                    window.location.href = '../GERENCIAL/home.html'
-                }else {
-                    window.location.href = '../OPERACIONAL/home.html'
-                }
-                
+    .then((response) => {
+        if (response.status != 200) {
+            info.innerHTML = 'ERRO no usuário ou na senha. Tente novamente.'
+        } else {
+            return response.json()
+        }
+    })
+    .then((resp) => {
+        if (inputEmail.value == 0 && inputsenha.value == 0) {
+            info.innerHTML = 'Preencha os campos acima!'
+        } else if (inputEmail.value != undefined && inputsenha.value != undefined) {
+            if (resp.niveis.nivel == 'Gerencial') {
+                localStorage.setItem('user', JSON.stringify(resp))
+                window.location.href = '../GERENCIAL/home.html'
+            }else{
+                localStorage.setItem('user', JSON.stringify(resp))
+                window.location.href = '../OPERACIONAL/home.html'
             }
-            
-        })
-
+        }
+    })
 
 
     }

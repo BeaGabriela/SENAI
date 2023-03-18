@@ -45,6 +45,11 @@ const read = async (req, res) => {
             id:true,
             veiculo:true,    
             motorista:true,
+            motoristas:{
+                select:{
+                    nome: true
+                }
+            },
             data_saida: true,
             descricao:true,
             data_retorno :true,
@@ -53,6 +58,42 @@ const read = async (req, res) => {
     });
 
     res.status(200).json(Operacoes).end();
+}
+
+const readGrafico = async (req, res) => {
+            let operacao = await prisma.$queryRaw`SELECT v.placa,  m.nome, MONTH(o.data_saida) as mes FROM operacoes o
+            INNER JOIN veiculos v
+            ON v.id = o.veiculo
+            INNER JOIN motorista m
+            ON m.id = o.motorista
+            GROUP BY v.placa, MONTH(o.data_saida) ORDER BY v.placa`;
+
+            
+        
+            res.status(200).json(operacao).end();
+        
+        // let operacao = await prisma.$queryRaw`SELECT v.placa, SUM(m.valor) as total, MONTH(m.data_inicio) as mes FROM manutencao m
+        // INNER JOIN veiculos v
+        // ON v.id = m.veiculo
+        // GROUP BY m.veiculo, MONTH(m.data_inicio) ORDER BY v.placa`;
+        // let operacao = await prisma.Operacoes.findMany({
+            
+        //     select:{
+        //         tipos:{
+        //             select:{
+        //                 placa: true
+        //             }
+        //         },    
+        //         data_saida: true,
+        //         data_retorno :true,
+        //         motoristas:{
+        //             select:{
+        //                 nome: true
+        //             },
+        //         }
+        //     }
+        // })    
+    // res.status(200).json(operacao).end();
 }
 
 const parseBoolean = (b) => {
@@ -67,7 +108,21 @@ const readOne = async (req, res) => {
     let Operacoes = await prisma.Operacoes.findMany({
         where: {
             concluidas: parseBoolean(req.params.concluidas)
-        }
+        },
+            select:{
+                id:true,
+                veiculo:true,    
+                motorista:true,
+                motoristas:{
+                    select:{
+                        nome: true
+                    }
+                },
+                data_saida: true,
+                descricao:true,
+                data_retorno :true,
+                relatorios:true
+            }
     });
 
     res.status(200).json(Operacoes).end();
@@ -122,6 +177,7 @@ module.exports = {
     read,
     readOne,
     update,
-    remove
+    remove,
+    readGrafico
 
 }

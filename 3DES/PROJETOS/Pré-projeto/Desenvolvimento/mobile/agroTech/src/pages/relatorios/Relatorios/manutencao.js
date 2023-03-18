@@ -32,7 +32,7 @@ export default function RelatorioManutencao({ navigation }) {
 
     return (
         <View style={styles.view}>
-            <Modal
+            {/* <Modal
                 animationType="slide"
                 transparent={false}
                 visible={modalVisible}>
@@ -42,15 +42,15 @@ export default function RelatorioManutencao({ navigation }) {
                         <Text style={styles.textX}>X</Text>
                     </TouchableOpacity>
                 </View>
-            </Modal>
+            </Modal> */}
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         navigation.navigate('Home')
                     }}><Text>Menu</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
+                    {/* <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         setModalVisible(!modalVisible)
-                    }}><Text>Gráfico</Text></TouchableOpacity>
+                    }}><Text>Gráfico</Text></TouchableOpacity> */}
                 </View>
             </View>
 
@@ -68,7 +68,7 @@ export default function RelatorioManutencao({ navigation }) {
                                             return (
                                                 <View style={styles.view_Principal} key={index}>
                                                     <Text>Id: {m.id}</Text>
-                                                    <Text>Veiculo: {m.veiculo}</Text>
+                                                    <Text>Veiculo: {m.veiculo} - {m.veiculos.placa}</Text>
                                                     <Text>Data Inicio: {m.data_inicio}</Text>
                                                     <Text>Valor: {valor}</Text>
                                                     <Text>Descrição: {m.descricao}</Text>

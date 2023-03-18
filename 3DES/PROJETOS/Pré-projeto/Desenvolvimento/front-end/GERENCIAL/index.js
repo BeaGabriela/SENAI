@@ -2,9 +2,13 @@ var deleterMotorista = document.querySelector('.deletarMotorista')
 var Pdelet = document.querySelector('#deletarM')
 var btnDeletarMotorista = document.querySelector('#btnDeletarMotorista')
 var alterarNome = document.querySelector('#alterarNome')
+var veiculoManutencao = ''
+var motoristasOperacao = ''
 
+var usuario = JSON.parse(localStorage.getItem('user'))
 var bemVindo = document.querySelector('#bemVindo')
 
+///Definindo data
 var data = new Date()
 var dia = data.getDate()
 var mes = data.getMonth() + 1
@@ -13,52 +17,25 @@ var hora = data.getHours()
 var minutos = data.getMinutes()
 var dataCompleta = `${ano}-0${mes}-${dia}  ${hora}:${minutos}`
 
-var usuario = JSON.parse(localStorage.getItem('user'))
-
 
 function carregar() {
     bemVindo.innerHTML = '  ' + usuario.nome
     bemVindo.style.color = '#000'
     Manutencoes()
     Operacoes()
-    newUser()
+
+    var textSaida = document.querySelector('#logoutt')
+    var textoSair = document.querySelector('.textSair')
+    textSaida.addEventListener('mouseover', () => {
+        textoSair.classList.remove('model')
+        textoSair.style.margin = '2px 0vw 0vw 0.7vw'
+    })
+
+    textSaida.addEventListener('mouseout', () => {
+        textoSair.classList.add('model')
+    })
 }
 
-function logout(){
-    window.localStorage.removeItem('usuario')
-    window.location.href = '../LOGIN/login.html'
-}
-
-// function newUser() {
-//     var nomeUser = document.querySelector('#nomeUser')
-//     var emailUser = document.querySelector('#email')
-//     var senha = document.querySelector('#senha')
-//     var cadastrarNewUser = document.querySelector('#cadastrarNewUser')
-
-//     cadastrarNewUser.addEventListener('click', () => {
-//         const options = {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//                 Authorization: 'Bearer ' + usuario.token
-//             },
-//             body: `{"nome":"${nomeUser.value}","email":"${emailUser.value}","senha":"${senha.value}","funcao":"Operacional","nivel":1}`
-//         };
-
-
-//         fetch('http://localhost:3000/usuarioCreate', options)
-//             .then(response => response.status)
-//             .then(response => {
-//                 if (response == 201) {
-//                     window.location.reload()
-//                 }
-//             })
-
-//     })
-
-// } 
-
-//   
 function Manutencoes() {
     var listarManutencoes = document.querySelector('.ListarManutencoes');
     listarManutencoes.classList.remove('model')
@@ -127,8 +104,23 @@ function Manutencoes() {
         cadastrarManutencao.classList.remove('model')
         var btnCadastrar = document.querySelector('#cadastrarManutencao')
 
+
+        var veiculosSM = document.querySelector('.veiculosCM')
+        fetch('http://localhost:3000/veiculos')
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(v => {
+                veiculosSM.cloneNode(true)
+                veiculosSM.classList.remove('model')
+                veiculosSM.innerHTML += `<option value="${v.id}">${v.placa} (${v.tipos.tipo})</option>`
+                console.log(veiculosSM.value)
+
+                document.querySelector('#manutencaoSelect').appendChild(veiculosSM)
+            })
+        })
+
         btnCadastrar.addEventListener('click', () => {
-            var inputVeiculo = document.querySelector('#veiculo')
+            // var inputVeiculo = document.querySelector('#veiculo')
             var inputValor = document.querySelector('#valorManutencao')
             var inputDescricao = document.querySelector('#DescricaoManutencao')
 
@@ -138,7 +130,7 @@ function Manutencoes() {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
                 },
-                body: `{"veiculo":${Number(inputVeiculo.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":${null}}`
+                body: `{"veiculo":${Number(veiculosSM.value)},"valor":${Number(inputValor.value)},"descricao":"${inputDescricao.value}","data_fim":${null}}`
             };
 
             fetch('http://localhost:3000/manutencao', options)
@@ -164,11 +156,11 @@ function fetchManutencoes(manutencao) {
                     var listarManutencao = document.querySelector('.listarManutencao').cloneNode(true)
                     listarManutencao.classList.remove('model')
                     listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
-                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
+                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo + ' - ' + manutencao.veiculos.placa
                     listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarManutencao.querySelector('#valor').innerHTML = manutencao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
-                    listarManutencao.querySelector('#data_fim').innerHTML = manutencao.data_fim
+                    listarManutencao.querySelector('#data_fim').innerHTML = ''
 
                     let btnConcluirManutencao = document.createElement('button')
                     btnConcluirManutencao.innerHTML = 'Concluir'
@@ -198,7 +190,7 @@ function fetchManutencoes(manutencao) {
                     listarManutencao.classList.remove('model')
                     listarManutencao.style.border = '1px solid #a9a9a9'
                     listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
-                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
+                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo + ' - ' + manutencao.veiculos.placa
                     listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarManutencao.querySelector('#valor').innerHTML = manutencao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
@@ -225,7 +217,6 @@ function fetchManutencoes(manutencao) {
                                 }
                             })
                     })
-
                     listarManutencao.appendChild(btnConcluirManutencao)
                     listarManutencoes.appendChild(listarManutencao)
                 }
@@ -294,20 +285,48 @@ function Operacoes() {
 
     })
 
-
-
     //Cadastrar Operacao
     var newOperacao = document.querySelector('#newOperacao')
     var cadastrarOperacao = document.querySelector('.cadastrarOperacao')
     var btnCadatsrarOpera = document.querySelector('#cadastrarOperacao')
-    var inputVeiculosOpera = document.querySelector('#veiculoOpera')
-    var inputMotoristaOpera = document.querySelector('#motoristaId')
+    // var inputVeiculosOpera = document.querySelector('#veiculoOpera')
+    // var inputMotoristaOpera = document.querySelector('#motoristaId')
     var inputDescricaoOpera = document.querySelector('#DescricaoOperacao')
 
     newOperacao.addEventListener('click', () => {
         ListarOperacoes.classList.add('model')
         cadastrarOperacao.classList.remove('model')
 
+        
+        var veiculosSO = document.querySelector('.veiculosC')
+            fetch('http://localhost:3000/veiculos')
+            .then(response => response.json())
+            .then(response => {
+                response.forEach(v => {
+                    veiculosSO.cloneNode(true)
+                    veiculosSO.classList.remove('model')
+                    veiculosSO.innerHTML += `<option value="${v.id}">${v.placa} (${v.tipos.tipo})</option>`
+                    veiculoManutencao = veiculosSO.value
+
+                    document.querySelector('#operacaoSelect').appendChild(veiculosSO)
+            })
+        })
+
+        var motoristasO = document.querySelector('.motoristas')
+            fetch('http://localhost:3000/motorista')
+            .then(response => response.json())
+            .then(response => {
+                response.forEach(v => {
+                    motoristasO.cloneNode(true)
+                    motoristasO.classList.remove('model')
+                    motoristasO.innerHTML += `<option value="${v.id}">${v.nome}</option>`
+
+                    document.querySelector('#operacaoSelectMotoristas').appendChild(motoristasO)
+                  
+    
+            })
+        })
+            
         btnCadatsrarOpera.addEventListener('click', () => {
             const options = {
                 method: 'POST',
@@ -315,9 +334,9 @@ function Operacoes() {
                     'Content-Type': 'application/json',
                     Authorization: 'Bearer ' + usuario.token
                 },
-                body: `{"veiculo":${Number(inputVeiculosOpera.value)},"motorista":${Number(inputMotoristaOpera.value)},"descricao":"${inputDescricaoOpera.value}","data_retorno":${null}}`
+                body: `{"veiculo":${Number(veiculosSO.value)},"motorista":${Number(motoristasO.value)},"descricao":"${inputDescricaoOpera.value}","data_retorno":${null}}`
             };
-
+            console.log(veiculoManutencao)
             fetch('http://localhost:3000/operacoes', options)
                 .then(response => response.status)
                 .then(response => {
@@ -345,7 +364,7 @@ function fetchOperacao(operacao) {
 
                     listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
                     listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
-                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista + "-" + operacoes.motoristas.nome
                     listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
                     listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno
@@ -382,7 +401,7 @@ function fetchOperacao(operacao) {
 
                     listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
                     listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
-                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista + "-" + operacoes.motoristas.nome
                     listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
                     listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno
@@ -421,6 +440,10 @@ function fetchOperacao(operacao) {
         })
 }
 
+function logout(){
+    window.localStorage.removeItem('usuario')
+    window.location.href = '../LOGIN/login.html'
+}
 
 
 function FecharmodalManutencao() {

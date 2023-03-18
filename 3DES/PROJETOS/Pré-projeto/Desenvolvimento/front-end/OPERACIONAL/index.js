@@ -1,5 +1,6 @@
 
 var bemVindo = document.querySelector('#bemVindo')
+var infos = document.querySelector('#info')
 
 var data = new Date()
 var dia = data.getDate()
@@ -17,6 +18,17 @@ function carregar() {
     bemVindo.style.color = '#000'
     Manutencoes()
     Operacoes()
+
+    var textSaida = document.querySelector('#logoutt')
+    var textoSair = document.querySelector('.textSair')
+    textSaida.addEventListener('mouseover', () => {
+        textoSair.classList.remove('model')
+        textoSair.style.margin = '2px 0vw 0vw 0.7vw'
+    })
+
+    textSaida.addEventListener('mouseout', () => {
+        textoSair.classList.add('model')
+    })
     
 }
 
@@ -91,11 +103,12 @@ function fetchManutencoes(manutencao) {
         .then(response => response.json())
         .then(response => {
             response.forEach(manutencao => {
+                console.log(manutencao.veiculos.placa);
                 if (manutencao.data_fim == null || manutencao.data_fim == '1970-01-01T00:00:00.000Z') {
                     var listarManutencao = document.querySelector('.listarManutencao').cloneNode(true)
                     listarManutencao.classList.remove('model')
                     listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
-                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
+                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo + '-' + manutencao.veiculos.placa
                     listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarManutencao.querySelector('#valor').innerHTML = manutencao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
@@ -109,7 +122,7 @@ function fetchManutencoes(manutencao) {
                     listarManutencao.classList.remove('model')
                     listarManutencao.style.border = '1px solid #a9a9a9'
                     listarManutencao.querySelector('#Id_manutencao').innerHTML = manutencao.id
-                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo
+                    listarManutencao.querySelector('#veiculoM').innerHTML = manutencao.veiculo + ' - ' + manutencao.veiculos.placa
                     listarManutencao.querySelector('#dataInicio').innerHTML = manutencao.data_inicio.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarManutencao.querySelector('#valor').innerHTML = manutencao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     listarManutencao.querySelector('#descricao').innerHTML = manutencao.descricao
@@ -199,7 +212,7 @@ function fetchOperacao(operacao) {
 
                     listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
                     listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
-                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista + "-" + operacoes.motoristas.nome
                     listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
                     listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno
@@ -213,7 +226,7 @@ function fetchOperacao(operacao) {
 
                     listarOperacoes.querySelector('#Id_operacoes').innerHTML = operacoes.id
                     listarOperacoes.querySelector('#veiculoO').innerHTML = operacoes.veiculo
-                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista
+                    listarOperacoes.querySelector('#MotoristaOper').innerHTML = operacoes.motorista + " - " + operacoes.motoristas.nome
                     listarOperacoes.querySelector('#data_Inicio').innerHTML = operacoes.data_saida.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                     listarOperacoes.querySelector('#descricaoOp').innerHTML = operacoes.descricao
                     listarOperacoes.querySelector('#data_retorno').innerHTML = operacoes.data_retorno.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]

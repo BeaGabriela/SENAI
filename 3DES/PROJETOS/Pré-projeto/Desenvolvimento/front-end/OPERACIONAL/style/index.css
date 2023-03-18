@@ -86,7 +86,8 @@ header>h1 {
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1vh;
-    margin-left: 5vw;
+    font-size: 17pt;
+    font-weight: 500;
 }
 
 select {
@@ -157,29 +158,39 @@ button {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.listarMotoristas {
+/* .listarMotoristas {
     width: 12vw;
     height: 20vh;
     overflow-y: scroll;
     border-radius: 25px;
     text-align: center;
     background: #F5F5F5;
-    margin-left: 3.8vw;
+    margin-left: 5vw;
     margin-top: 1vh;
+    padding-top: 3vh ;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+} */
 
-.listarVeiculos {
+/* .listarVeiculos {
     height: 18vh;
     width: 8vw;
     border-radius: 25px;
     text-align: center;
     background: #F5F5F5;
-    margin-left: 1.8vw;
+    margin-left: 5vw;
     margin-top: 1vh;
+    padding-top: 3vh ;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+.listarManutencao,
+.listarMotoristas,
+.listarOperacoes,
+.listarVeiculos p, label {
+    margin-bottom: 1vh;
+    text-align: center;
 }
 
 
@@ -220,6 +231,7 @@ button {
     background: #F5F5F5;
     margin-left: 1.8vw;
     margin-top: 1vh;
+    padding-top: 3vh ;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -262,6 +274,7 @@ button {
     background: #F5F5F5;
     margin-left: 1.8vw;
     margin-top: 1vh;
+    padding-top: 3vh ;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -389,14 +402,6 @@ header>h1 {
     border-radius: 25px;
 }
 
-#headersVeiculos,
-#headersMotoristas {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1vh;
-    margin-left: 5vw;
-}
 
 select {
     border: #f5f5f5;
@@ -471,30 +476,34 @@ button {
     background: #F5F5F5;
     margin-left: 3vw;
     margin-top: 4vh;
+    padding-top: 2vh ;
+    padding-left: 1vw;
+    text-align: center;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .listarVeiculos {
-    height: 18vh;
+    height: 22vh;
     width: 8vw;
     border-radius: 25px;
     text-align: center;
     background: #F5F5F5;
-    margin-left: 1.8vw;
+    margin-left: 3vw;
     margin-top: 1vh;
     border: 1px solid #B9E937;
+    padding-top: 2vh ;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .cloneModalMotoristas {
-    height: 18vh;
-    width: 8vw;
+    height: 26vh;
+    width: 9vw;
     border-radius: 25px;
     text-align: center;
     padding: 30px;
     background: #F5F5F5;
-    margin-left: 1.8vw;
+    margin-left: 1.5vw;
     margin-top: 1vh;
     border: 1px solid #B9E937;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -553,6 +562,21 @@ h3 {
 .model {
     display: none;
     visibility: hidden;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+    
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+    border-radius: 8px;
 }
 
 

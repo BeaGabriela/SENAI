@@ -11,7 +11,19 @@ const create = async (req, res) => {
 }
 
 const read = async (req, res) => {
-    let Veiculos = await prisma.Veiculos.findMany();
+    let Veiculos = await prisma.Veiculos.findMany({
+        select:{
+            id: true,
+            placa: true,
+            modelo: true,
+            tipo: true,
+            tipos:{
+                select:{
+                    tipo: true
+                }
+            }
+        }
+    });
 
     res.status(200).json(Veiculos).end();
 }
@@ -31,7 +43,8 @@ const readOne = async (req, res) => {
         select:{
             id: true,
             placa: true,
-            tipo: true           
+            modelo: true,
+            tipo: true            
         }
     });
 

@@ -129,7 +129,7 @@ export default function Operacoes({ navigation }) {
                                                 <Image style={styles.caminhao} source={require('../../../assets/caminhao.gif')}/>
                                                 <Text>Id: {o.id}</Text>
                                                 <Text>Veiculo: {o.veiculo}</Text>
-                                                <Text>Motorista: {o.motorista}</Text>
+                                                <Text>Motorista: {o.motorista} - {o.motoristas.nome}</Text>
                                                 <Text>Data saida: {o.data_saida}</Text>
                                                 <Text>Descrição: {o.descricao}</Text>
                                                 <Text>Data Retorno: {o.data_retorno}</Text>
@@ -146,7 +146,7 @@ export default function Operacoes({ navigation }) {
                                                 <Image style={styles.caminhao} source={require('../../../assets/ok.gif')} />
                                                 <Text>Id: {o.id}</Text>
                                                 <Text>Veiculo: {o.veiculo}</Text>
-                                                <Text>Motorista: {o.motorista}</Text>
+                                                <Text>Motorista: {o.motorista} - {o.motoristas.nome}</Text>
                                                 <Text>Data saida: {o.data_saida}</Text>
                                                 <Text>Descrição: {o.descricao}</Text>
                                                 <Text>Data Retorno: {o.data_retorno}</Text>

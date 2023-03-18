@@ -32,44 +32,32 @@ export default function RelatoriosVeiculos({ navigation }) {
 
     return (
         <View style={styles.view}>
-            <Modal
-                animationType="slide"
-                transparent={false}
-                visible={modalVisible}>
-                <View style={styles.centeredView}>
-                    <Text style={styles.Alerta}>Gráfico</Text>
-                    <TouchableOpacity style={styles.btnFechar} onPress={() => { setModalVisible(!modalVisible) }}>
-                        <Text style={styles.textX}>X</Text>
-                    </TouchableOpacity>
-                </View>
-            </Modal>
             <View style={styles.headers}>
                 <View style={styles.linha}>
                     <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
                         navigation.navigate('Home')
                     }}><Text>Menu</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.btnRelatorio} onPress={() => {
-                        setModalVisible(!modalVisible)
-                    }}><Text>Gráfico</Text></TouchableOpacity>
                 </View>
             </View>
 
             <View>
                 <Text style={styles.tituloMotorista}>Veiculos</Text>
-                <TextInput placeholder='filtrar por data' style={styles.filtro} onChangeText={(val) => { setDate(val) }}/>
+                <TextInput placeholder='filtrar por data' style={styles.filtro} onChangeText={(val) => { setDate(val) }} />
                 <View style={styles.scroll_operacoes}>
                     <ScrollView style={styles.scrollView}>
                         <View style={styles.lista_operacoes}>
                             {
                                 veiculos.map((v, index) => {
-                                        return (
-                                            <View style={styles.view_Motoristas} key={index}>
-                                                <Text>Id: {v.id}</Text>
-                                                <Text>Placa: {v.placa}</Text>
-                                                <Text>Tipo: {v.tipo}</Text>
-                                            </View>
-                                        )
-                                   
+                                    return (
+                                        <View style={styles.view_Motoristas} key={index}>
+                                            <Text>Id: {v.id}</Text>
+                                            <Text>Placa: {v.placa}</Text>
+                                            <Text>Tipo: {v.tipo} - {v.tipos.tipo}</Text>
+                                            <Text>Modelo: {v.modelo}</Text>
+
+                                        </View>
+                                    )
+
                                 })
                             }
                         </View>
