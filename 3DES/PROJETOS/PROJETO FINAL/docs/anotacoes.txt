@@ -1,0 +1,44 @@
+Projeto Final ->
+	"Corre aqui, Mirela!"
+	
+	*Parceiros chaves:*
+		- Empresas que se preocupam com a alta taxa de mortalidade envolvendo o grupo LGBTQ+
+		- Google(Waze) 
+		- Policia militar
+		- Ambulância
+		
+	*Atividade Chave:*
+		- Prezar pela sub proteção de pessoas LGBTQ+.
+		- Envia um sinal de aviso quando algum usuário se sentir em perigo.
+		- Desenvolver um projeto FullStack(FrontEnd responsivo) + Mobile 
+		
+	
+	*Fonte de renda:*
+		- A primeiro momento, ser um aplicativo sem fim lucrativo, apenas para atender o publico alvo com ajuda de grupos que se solidarize com a causa.
+	
+		
+	*Proposta de Valor:*
+		- Estabelecer uma rede de apoio para posiveis situações de riscos.
+		- Criações de rotas seguras para usuários trafegar, além de rotas rapidas até o local do alerta para receptores.
+		
+	*Relação Cliente:*
+		- Interface limpa, e rapido acesso para o usuário.
+		- Eficácia e eficiência do projeto.
+		
+	*Segmentos de mercado:*
+		- Segurança de LGBTQ+
+		- Mobilidade
+		
+	*Recurso Chave:*
+		- Equipe DEV.
+		- Grupos apoiadores.
+		
+	*Canais:*
+		- Aplicação Web
+		- Aplicação Mobile
+		
+	*Estrutura de custos:*
+		- Mão de obra programador R$ 75,00 por hora/dev	 
+		
+	*Fonte de rendas:*
+		- A primeiro momento, ser um aplicativo sem fim lucrativo, apenas para atender o publico alvo com ajuda de grupos que se solidarizem com a causa.
