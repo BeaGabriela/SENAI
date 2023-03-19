@@ -77,7 +77,8 @@ section{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url(../../portifolo/img/avatar.png);
+    /* background-image: url(../img/me.jpg); */
+	/* opacity: 0.2; */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -164,10 +165,12 @@ header.sticky{
 
 .sobre-img img{
     max-width: 530px;
+	/* background-image: url(../img/me.jpg); */
     height: auto;
     width: 100%;
     border-radius: 8px;
 }
+
 
 .sobre-text h2{
     font-size: var(--h2-font);
@@ -187,6 +190,13 @@ header.sticky{
     font-size: var(--p-font);
     line-height:1.8;
     margin-bottom: 4rem;
+}
+
+.sobre-text .topicos p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+    line-height:1.8;
+    margin-bottom: 1.5rem;
 }
 
 .estudos{
@@ -262,7 +272,9 @@ header.sticky{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 	align-items: center;
-	gap: 2.5rem;
+	gap: 4.2rem;
+	margin-left: 6vw;
+	text-align: center;
 	margin-top: 5rem;
 }
 .row{
@@ -272,7 +284,7 @@ header.sticky{
 	cursor: pointer;
 }
 .row img{
-	width: 100%;
+	width: 50%;
 	border-radius: 8px;
 	display: block;
 	transition: transform 0.5s;
