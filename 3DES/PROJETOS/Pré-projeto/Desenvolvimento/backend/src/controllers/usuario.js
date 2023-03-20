@@ -7,25 +7,25 @@ const bcrypt = require('bcrypt')
 const prisma = new PrismaClient();
 
 const create = async (req, res) => {
-    // bcrypt.genSalt(10, function (err, salt){
-    //     if (err == null) {
-    //         bcrypt.hash(req.body.senha, salt, async function (errCrypto, hash) {
-    //             if (errCrypto == null) {
-    //                 req.body.senha = hash
+    bcrypt.genSalt(10, function (err, salt){
+        if (err == null) {
+            bcrypt.hash(req.body.senha, salt, async function (errCrypto, hash) {
+                if (errCrypto == null) {
+                    req.body.senha = hash
     let usuario = await prisma.Usuario.create({
         data: req.body
     });
     res.status(201).json(usuario).end();
 
-    //             } else {
-    //                 res.status(500).json(errCrypto).end();
-    //             }
-    //         })
+                } else {
+                    res.status(500).json(errCrypto).end();
+                }
+            })
 
-    //     } else {
-    //         res.status(500).json(err).end();
-    //     }
-    // })
+        } else {
+            res.status(500).json(err).end();
+        }
+    })
 }
 
 const read = async (req, res) => {
