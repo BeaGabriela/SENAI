@@ -272,7 +272,7 @@ header.sticky{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 	align-items: center;
-	gap: 4.2rem;
+	gap: 2rem;
 	margin-left: 6vw;
 	text-align: center;
 	margin-top: 5rem;
@@ -284,15 +284,16 @@ header.sticky{
 	cursor: pointer;
 }
 .row img{
-	width: 50%;
+	width: 60%;
 	border-radius: 8px;
 	display: block;
+	/* padding-left: 3vw;; */
 	transition: transform 0.5s;
 }
 .layer{
-	width: 100%;
+	width: 110%;
 	height: 0;
-	background: linear-gradient(rgba(0,0,0,0.1), #ff004f);
+	background: linear-gradient(rgba(0,0,0,0.1), #00ff1e);
 	position: absolute;
 	border-radius: 8px;
 	left: 0;
@@ -303,8 +304,10 @@ header.sticky{
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding: 0 40px;
+	padding: 0 30px;
 	transition: height 0.5s;
+	color: #fff;
+	
 }
 .layer h5{
 	font-size: 20px;
@@ -312,7 +315,7 @@ header.sticky{
 	margin-bottom: 15px;
 }
 .layer p{
-	color: var(--second-color);
+	color: var(--text-color);
 	font-size: 1rem;
 	line-height: 1.8;
 }
@@ -328,11 +331,15 @@ header.sticky{
 	justify-content: center;
 	border-radius: 50%;
 }
+
 .row:hover img{
-	transform: scale(1.1);
+	transform: scale(0.5);
+	margin-left: 3vw;
+	
 }
 .row:hover .layer{
 	height: 100%;
+	margin-right: 3vw;
 }
 
 .contact{
