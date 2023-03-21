@@ -1,0 +1,22 @@
+
+	O que são dados:
+		Não estruturado - Nada que não se aparenta com uma tabela.
+		Semi estruturado - EXCEL
+		Estruturado - Banco de dados.
+	
+	Como os bancos de dados são armazenados:
+		Em arquivos, em data.
+		
+	Transacional vs Analítico:
+		Qualquer dado transacional, tem um inicio e é concluido.
+		Dado analítico é um rela´torio que você gerou do dado.
+		
+	Por que o excel é software e visual studio code é plataforma como serviço?
+			Estou desenvolvendo uma plataforma? sim. Então é uma plataforma de serviço.
+			O Excel e o Visual Studio Code são diferentes em vários aspectos, incluindo sua finalidade e arquitetura.
+			O Excel é um software de planilha eletrônica, desenvolvido pela Microsoft. Ele é projetado para fornecer aos usuários uma plataforma para criar, editar e analisar dados em planilhas. O Excel é instalado no computador do usuário e é usado como um aplicativo local.
+			Já o Visual Studio Code é uma plataforma de desenvolvimento de software (IDE) desenvolvida pela Microsoft. Ele é usado principalmente para codificação, depuração e compilação de software. O Visual Studio Code é executado na nuvem e é acessado através do navegador da web, o que significa que não precisa ser instalado no computador do usuário. Como tal, o Visual Studio Code é considerado uma plataforma como serviço (PaaS).
+			Portanto, a principal diferença entre o Excel e o Visual Studio Code é que o primeiro é um software de aplicativo local, enquanto o último é uma plataforma como serviço que é acessada através do navegador.		
+	
+		
+	

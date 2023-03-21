@@ -98,3 +98,124 @@
     margin-left: 10vw;
  }
 
+ .model{
+    display: none;
+    visibility: hidden;
+ }
+
+ .hover{
+    position: absolute;
+    top: 2vh;
+    left: 32vw;
+    
+ }
+
+ .direito{
+    position: absolute;
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60vw;
+    border-bottom: 1px solid #ffffff5a;
+ }
+
+ .cabecalho{
+    display: flex;
+    justify-content: space-evenly;
+    width:30vw;
+    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffffb7;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 16px;
+    text-decoration: none;
+    text-transform: none;
+ }
+
+ footer{
+    position: absolute;
+    height: 7vh;
+    width: 100vw;
+    background-color:rgb(33, 33, 33);
+    margin-top: 93vh;
+    border-top: 1px solid #ffffffa1;
+ }
+
+ footer nav{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5vh;
+    margin-left: 1vw;
+ }
+
+ footer > nav > i{
+    font-size: 4vh;
+ }
+
+ .bx-play{
+    font-size: 5vh;
+ }
+
+ .tempo{
+    position: absolute;
+    top: 2.5vh;
+    left: 9.5vw;
+    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffffb7;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: none;
+ }
+ .imagens{
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    top: 1.3vh;
+    left: 35vw;
+ }
+
+ .imagens > img {
+    height: 4vh;
+ }
+
+ .nomeMusic{
+    display: flex;
+    flex-direction: column;
+ }
+
+
+ .nomeMusic > #musicaC{
+    margin-left: 0.6vw ;
+    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: none;
+ }
+
+ .nomeMusic > #bandaM{
+    margin-left: 0.5vw;
+    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffffb7;
+    /* display: inline-flex; */
+    align-items: center;
+    text-decoration: none;
+    text-transform: none;
+ }
