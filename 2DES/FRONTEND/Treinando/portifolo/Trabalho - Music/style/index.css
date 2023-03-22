@@ -123,7 +123,7 @@
  .cabecalho{
     display: flex;
     justify-content: space-evenly;
-    width:30vw;
+    width:31.5vw;
     font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
     font-size: 13px;
     font-weight: 500;
@@ -180,7 +180,7 @@
     position: absolute;
     display: flex;
     justify-content: space-evenly;
-    top: 1.3vh;
+    top: 1.5vh;
     left: 35vw;
  }
 
@@ -214,8 +214,47 @@
     font-weight: 500;
     text-transform: uppercase;
     color: #ffffffb7;
-    /* display: inline-flex; */
     align-items: center;
     text-decoration: none;
     text-transform: none;
  }
+
+ .iconsLike{
+   margin-left: 2vw;
+   margin-top: 1.3vh;
+ }
+
+ .icons2{
+   margin-top: 1.3vh;
+   margin-left: 28vw;
+ }
+
+ .icons2>i{
+   margin-left: 4px;
+ }
+
+ .musicasSemelhantes{
+   overflow-y:scroll;
+   height: 65vh;
+   position: absolute;
+   margin-top: 20.3vh;
+   margin-left:60vw;
+ }
+
+ .nav::-webkit-scrollbar-track {
+   background-color: #000000;
+   border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+   width: 4px;
+   background: #F4F4F4;
+   
+}
+.nav::-webkit-scrollbar-thumb {
+   background: #dad7d7;
+   border-radius: 8px;
+}
+
+
+ 
