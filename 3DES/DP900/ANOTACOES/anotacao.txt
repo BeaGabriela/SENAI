@@ -20,8 +20,24 @@
 
 
 	Não pode pausar um banco de dados. Para não gerra custo, é só não adicionar informações.
+	Não é necessário o piperline na transformação.
 	
 	
-	
-		
+**Dica**
+	Favoreceu a Microsoft, é verdadeiro.	
+
+
+Carregamento de dados em lote:	Numero de dados muito grande para ser armazenado.
+		Em transmissão: Tempo real.
+
+	Máquina virtual estamos falando de infraestutura.
+
+Data WAREHOUSE -> Armazena relatórios. Agrupa informações da menira como eu quero.
+latência é o tempo de respostas.
+processamento é lote.
+Os dados não são inseridos linhas por vez.
+Schema(Esquema): Estrutura do banco de dados.
+Impedir o acesso a um banco de dados SQL azure de outra rede: FIREWALL
+
+
 	
