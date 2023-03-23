@@ -1,13 +1,13 @@
  * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
  }
 
  body {
-     background-color: black;
-     font: normal 14pt arial;
-     color: #fff;
+    background-color: black;
+    font: normal 14pt arial;
+    color: #fff;
  }
 
  i {
@@ -15,53 +15,53 @@
     margin-right: 0.5vw;
     margin-top: 3px;
     cursor: pointer;
-}
+ }
 
  header {
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: space-between;
-     background-color: #000;
-     height: 7vh;
-     position: fixed;
-     width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    height: 7vh;
+    position: fixed;
+    width: 100vw;
     transition: opacity 0.2s;
     will-change: opacity;
 
  }
 
  header>img {
-     margin-left: 2vw;
+    margin-left: 2vw;
  }
 
  .funcoes {
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     width: 40vw;
-     margin-left: 20vw;
-     color: #cfcfcf;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40vw;
+    margin-left: 20vw;
+    color: #cfcfcf;
  }
 
- .funcoes > div {
-     display: flex;
-     width: 20vw;
+ .funcoes>div {
+    display: flex;
+    width: 20vw;
  }
 
- .funcoes > div > h4 {
-     margin-top: 5px;
+ .funcoes>div>h4 {
+    margin-top: 5px;
  }
 
-.nav1{
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-     width: 20vw;
+ .nav1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20vw;
  }
 
- button{
-    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+ button {
+    font-family: Roboto, Noto Naskh Arabic UI, Arial, sans-serif;
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -77,7 +77,7 @@
     text-transform: none;
  }
 
- .informacoesAdicionais{
+ .informacoesAdicionais {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -85,7 +85,7 @@
  }
 
  /* body */
- #musica{
+ #musica {
     position: absolute;
     display: flex;
     align-items: center;
@@ -93,20 +93,20 @@
     margin-left: 10vw;
  }
 
- .model{
+ .model {
     display: none;
     visibility: hidden;
  }
 
- .hover{
+ .hover {
     position: absolute;
     top: 2vh;
     left: 32vw;
  }
 
- 
 
- .direito{
+
+ .direito {
     position: absolute;
     margin-top: 17vh;
     display: flex;
@@ -116,11 +116,11 @@
     border-bottom: 1px solid #ffffff5a;
  }
 
- .cabecalho{
+ .cabecalho {
     display: flex;
     justify-content: space-evenly;
-    width:31.5vw;
-    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    width: 31.5vw;
+    font-family: Roboto, Noto Naskh Arabic UI, Arial, sans-serif;
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -134,35 +134,35 @@
     text-transform: none;
  }
 
- footer{
+ footer {
     position: absolute;
     height: 7vh;
     width: 100vw;
-    background-color:rgb(33, 33, 33);
+    background-color: rgb(33, 33, 33);
     margin-top: 93vh;
     border-top: 1px solid #ffffffa1;
  }
 
- footer nav{
+ footer nav {
     display: flex;
     align-items: center;
     margin-top: 0.5vh;
     margin-left: 1vw;
  }
 
- footer > nav > i{
+ footer>nav>i {
     font-size: 4vh;
  }
 
- .bx-play{
+ .bx-play {
     font-size: 5vh;
  }
 
- .tempo{
+ .tempo {
     position: absolute;
     top: 2.5vh;
     left: 9.5vw;
-    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    font-family: Roboto, Noto Naskh Arabic UI, Arial, sans-serif;
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -172,7 +172,8 @@
     text-decoration: none;
     text-transform: none;
  }
- .imagens{
+
+ .imagens {
     position: absolute;
     display: flex;
     justify-content: space-evenly;
@@ -180,19 +181,19 @@
     left: 35vw;
  }
 
- .imagens > img {
+ .imagens>img {
     height: 4vh;
  }
 
- .nomeMusic{
+ .nomeMusic {
     display: flex;
     flex-direction: column;
  }
 
 
- .nomeMusic > #musicaC{
-    margin-left: 0.6vw ;
-    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+ .nomeMusic>#musicaC {
+    margin-left: 0.6vw;
+    font-family: Roboto, Noto Naskh Arabic UI, Arial, sans-serif;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -203,9 +204,9 @@
     text-transform: none;
  }
 
- .nomeMusic > #bandaM{
+ .nomeMusic>#bandaM {
     margin-left: 0.5vw;
-    font-family: Roboto,Noto Naskh Arabic UI,Arial,sans-serif;
+    font-family: Roboto, Noto Naskh Arabic UI, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
@@ -215,93 +216,297 @@
     text-transform: none;
  }
 
- .iconsLike{
-   margin-left: 2vw;
-   margin-top: 1.3vh;
+ .iconsLike {
+    margin-left: 2vw;
+    margin-top: 1.3vh;
  }
 
- .icons2{
-   margin-top: 1.3vh;
-   margin-left: 28vw;
+ .icons2 {
+    margin-top: 1.3vh;
+    margin-left: 28vw;
  }
 
- .icons2>i{
-   margin-left: 4px;
+ .icons2>i {
+    margin-left: 4px;
  }
 
- .musicasSemelhantes{
-   overflow-y:scroll;
-   height: 65vh;
-   position: absolute;
-   margin-top: 20.3vh;
-   margin-left:60vw;
+ .musicasSemelhantes {
+    overflow-y: scroll;
+    height: 65vh;
+    position: absolute;
+    margin-top: 20.3vh;
+    margin-left: 60vw;
  }
 
  .nav::-webkit-scrollbar-track {
-   background-color: #000000;
-   border-radius: 8px;
-}
+    background-color: #000000;
+    border-radius: 8px;
+ }
 
-::-webkit-scrollbar {
-   width: 4px;
-   background: #F4F4F4;
-   
-}
-.nav::-webkit-scrollbar-thumb {
-   background: #dad7d7;
-   border-radius: 8px;
-}
+ ::-webkit-scrollbar {
+    width: 4px;
+    background: #F4F4F4;
+
+ }
+
+ .nav::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+    border-radius: 8px;
+ }
 
 
  @media(max-width: 1430px) {
-   #musica>img{
-      height: 60vh;
-   }
+    #musica>img {
+       height: 60vh;
+    }
 
-   .direito{
-      width: auto;
-   }
-   .musicasSemelhantes > img{
-      height: 5vh;
-      width: 35vw;
-   }
-  .icons2{
-   margin-left: 14vw;
-  }
+    .direito {
+       width: auto;
+    }
 
-  .imagens{
-   margin-left: -2vw;
-  }
+    .musicasSemelhantes>img {
+       height: 5vh;
+       width: 35vw;
+    }
 
-  .tempo{
-   margin-left: 2vw;
-  }
+    .icons2 {
+       margin-left: 14vw;
+    }
+
+    .imagens {
+       margin-left: -2vw;
+    }
+
+    .tempo {
+       margin-left: 2vw;
+    }
 
  }
 
  @media(max-width: 1230px) {
-   #musica>img{
-      height: 50vh;
-   }
+    #musica>img {
+       height: 50vh;
+       margin-top: 11vh;
+    }
 
-   .direito{
-      width: auto;
-   }
-   .musicasSemelhantes > img{
-      height: 8vh;
-      margin-left: -1vw;
-      width: 35vw;
-   }
-  .icons2{
-   margin-left: 14vw;
-  }
+    .direito {
+       width: auto;
+    }
 
-  .imagens{
-   margin-left: -2vw;
-  }
+    .musicasSemelhantes>img {
+       height: 6vh;
+       margin-left: 0vw;
+       width: 36vw;
+    }
 
-  .tempo{
-   margin-left: 2vw;
-  }
+    .musicasSemelhantes {
+       margin-right: 4vw;
+    }
 
+    .icons2 {
+       margin-left: 14vw;
+    }
+
+    .imagens {
+       margin-left: -2vw;
+    }
+
+    .tempo {
+       margin-left: 2vw;
+    }
+
+ }
+
+ @media(max-width: 1080px) {
+    #musica>img {
+       height: 40vh;
+    }
+
+    .musicasSemelhantes>img {
+       height: 5vh;
+       margin-left: 0vw;
+       width: 35vw;
+    }
+
+    .icons2 {
+       margin-left: 8vw;
+    }
+
+    .nav1>h4 {
+       margin-left: 2vw;
+    }
+
+    .funcoes {
+       margin-right: 14vw;
+    }
+
+    .funcoes>div {
+       margin-left: 5vw;
+    }
+
+    .tempo {
+       margin-left: 5vw;
+    }
+
+    .imagens {
+       margin-left: -8vw;
+    }
+ }
+
+ @media(max-width: 860px) {
+    #musica>img {
+       height: 30vh;
+    }
+
+    .musicasSemelhantes>img {
+       height: 4.5vh;
+       margin-left: 0vw;
+       width: 35vw;
+    }
+
+    .icons2 {
+       margin-left: 9vw;
+    }
+
+    i {
+       font-size: auto;
+    }
+
+    .nav1>h4 {
+       margin-left: 5vw;
+    }
+
+    .funcoes {
+       margin-right: 14vw;
+    }
+
+    .funcoes>div {
+       margin-left: 5vw;
+    }
+
+    .tempo {
+       margin-left: 7vw;
+    }
+
+    .imagens {
+       margin-left: -8vw;
+    }
+ }
+
+ @media(max-width: 414px) {
+    body {
+       display: flex;
+       flex-direction: column;
+    }
+
+    header{
+      font-size: 11pt;
+    }
+
+    #musica>img {
+      margin-top: 5vh;
+      margin-left: 5vw;
+       height: 30vh;
+    }
+
+    .funcoes {
+       margin-top: 15vh;
+       margin-left: 0vw;
+    }
+
+    .pesquisa>h4 {
+       margin-left: 4vw;
+    }
+    .bx-search{
+      margin-left: 22vw;
+      margin-top: 6px;
+    }
+
+    i {
+       font-size: 10pt;
+    }
+
+    .play i {
+       font-size: 18pt;
+    }
+
+    .play {
+       margin-left: 20vw;
+       margin-top: 2vh;
+    }
+
+    .musicasSemelhantes {
+       height: 35vh;
+       margin-top: 55vh;
+       width: 70vw;
+       margin-left: 14vw;
+    }
+
+    .musicasSemelhantes>img {
+       width: 100vw;
+       height: 4.5vh;
+    }
+
+    .direito,
+    .nomeMusic {
+       visibility: hidden;
+    }
+
+    .imagens>img {
+       margin-left: -21vw;
+    }
+
+    .tempo{
+      margin-left: 30vw;
+    }
+
+    .iconsLike{
+      margin-left: 28vw;
+      display:flex ;
+    }
+
+    .iconsLike > i{
+      margin: 1vw;
+    }
+
+     .bx-caret-down{
+      visibility: hidden;
+    }
+
+    .icons2{
+      margin-left: 5vw;
+      display: flex;
+     }
+
+     footer{
+      margin-top: 93vh;
+     }
+   
+
+
+    /*  
+
+     i{
+      font-size: auto;
+     }
+
+    .nav1 > h4{
+      margin-left: 5vw;
+    }
+
+    .funcoes{
+      margin-right: 14vw;
+    }
+
+    .funcoes > div{
+      margin-left: 5vw;
+    }
+
+    .tempo{
+      margin-left: 7vw;
+    }
+
+    .imagens{
+      margin-left: -8vw;
+     }  */
  }

@@ -40,4 +40,20 @@ Schema(Esquema): Estrutura do banco de dados.
 Impedir o acesso a um banco de dados SQL azure de outra rede: FIREWALL
 
 
+	23/03->{
+
+	Maquina virtual é infraestrutura como serviço.
+	Linguagem de programação é uma plataforma como serviço(PAAS).
+	
+Servidor -> servidortesteb
+usuario -> MarioAgrotech
+senha -> teste123@
+
+mysql -h servidortesteb.mysql.database.azure.com -u MarioAgrotech -p
+	
+	
+	
+	
+}
+
 	
