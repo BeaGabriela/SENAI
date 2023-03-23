@@ -50,9 +50,23 @@ usuario -> MarioAgrotech
 senha -> teste123@
 
 mysql -h servidortesteb.mysql.database.azure.com -u MarioAgrotech -p
-	
-	
-	
+
+Bancos de dados gráficos: analise as relações entre entidades
+	DDL ->  (Data Definition Language) ->  Use essas instruções para criar, alterar ou descartar estruturas de dados em um banco de dados. Essas declarações incluem:
+ALTER
+Collations
+CREATE
+DROP
+DISABLE TRIGGER
+ENABLE TRIGGER
+RENAME
+UPDATE STATISTICS
+TRUNCATE TABLE
+
+
+	Uma view é uma tabela virtual cujo conteúdo é definido por uma consulta
+
+	DML -> Mnaipulação de dados: INSERT, UPDATE, SELECT, DELETE
 	
 }
 
