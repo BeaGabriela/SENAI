@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model nivel {
+  id       Int       @id @default(autoincrement())
+  nivel    String
+  usuarios Usuario[]
+}
+
+model Usuario {
+  id    Int    @id @default(autoincrement())
+  nome  String
+  email String @unique
+  senha String
+  nivel Int
+
+  niveis nivel @relation(fields: [nivel], references: [id])
+}
+
+model Topico {
+  id     Int    @id @default(autoincrement())
+  topico String
+
+  comidas Comida[]
+}
+
+model Comida {
+  id        Int    @id @default(autoincrement())
+  id_topico Int
+  img       String
+  nome      String
+  descricao String
+  valor     Int
+
+  pedidos Pedidos[]
+  popular Popular[]
+
+  topicos Topico @relation(fields: [id_topico], references: [id])
+}
+
+model Popular {
+  id        Int @id @default(autoincrement())
+  id_comida Int
+
+  comidas Comida @relation(fields: [id_comida], references: [id])
+}
+
+model Pedidos {
+  id          Int    @id @default(autoincrement())
+  id_comida   Int
+  tamanho     String
+  temperatura String
+  leite       String
+  acucar      String
+
+  comidas Comida @relation(fields: [id_comida], references: [id])
+}

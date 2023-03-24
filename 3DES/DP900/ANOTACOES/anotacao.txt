@@ -65,9 +65,46 @@ TRUNCATE TABLE
 
 
 	Uma view é uma tabela virtual cujo conteúdo é definido por uma consulta
-
-	DML -> Mnaipulação de dados: INSERT, UPDATE, SELECT, DELETE
+.
 	
+	DML -> Mnaipulação de dados: INSERT, UPDATE, SELECT, DELETE
+	heap? 	
 }
+
+	24-03
+	Armazenamneto: Indice clausterizado -> guarda na memoria, para se relacionar com uma tabela.
+	Banco de dados -> Plataforma como serviço(PaaS).
+	Azzure SQL Server Managament Studio semelhante ao PHP myadmin.
+
+	Azure Data Studio é semelhante ao Visual Studio Code.
+	Quando se usa calculos em uma consulta deve-se criar uma view.
+	Redundância de dados: A normalização reduz.
+	Conta sa npo mysql  é o mesmo nivel de acesso do root.
+	Pode usar o mysql workBench pode consultar qualquer banco de dado, desde que saiba a url, a senha e o usuario.
+	O azure está hospedado a outra rede, e perdi meu acesso ao banco de dados, a causa do problema é um firewall em nivel de banco de dados.
+	
+	Projetar e modelar projetos que suporte o desenvolvimento de banco de dados offline: Server Data Tools(SSDT)
+	Bloco de codigo que éxectado em um banco de dados: Procedimento armazenado.
+	INSTÂNCIA GERENCIADA vantagem: Suporte nativo para consultas e transações entre bancos.
+	Banco de dados relacional -> Alto volume de gravações transacionais. 
+	Modificar tabelas 'ALTER'
+	Anormalização melhora a qualidade dos dados? Talevz.
+	DDL -> DROP, CREATE, ALTERs
+	O banco de dados relacional deve ser usado quando for necessaria fortes garantias de consistência.
+	Suportam nativamente a analise de relacionamentos entre entidades: Armazenamnto de valor-chave. Ou banco de dados de gráfico.
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 
 	

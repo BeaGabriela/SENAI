@@ -13,7 +13,8 @@ function carregar() {
                     DivQuadrado.querySelector('#cappucino').src = '../assets/' + comida.img
                     DivQuadrado.querySelector('#nomeComida').innerHTML = comida.nome_comida
                     DivQuadrado.querySelector('#valorComida').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                    DivQuadrado.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id_comida})'>Visualiozar</div>`
+
+                    DivQuadrado.innerHTML += `<img src="../assets/+.png" height="20vh" onclick='VisualizarItem(${comida.id_comida})' />`
                     alinhandoQuadrado.appendChild(DivQuadrado)
                 }
             })
