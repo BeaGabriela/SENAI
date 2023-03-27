@@ -94,7 +94,13 @@ TRUNCATE TABLE
 	Suportam nativamente a analise de relacionamentos entre entidades: Armazenamnto de valor-chave. Ou banco de dados de gráfico.
 	
 	
-	
+	27-03
+		Variaveis de ambiente priorizam a segurança, ou seja, localmente ela tem um valor, mas quando implantado, o receptor não saberá quais as informações essasvariaveis contêm.
+		ejs -> HTML com parâmetros.
+		
+		Relacional -> Transacional, possui normalização, estruturado e SGBD.
+		Não relacional -> Arquivo(imagem, não estruturado{word, excel}, semi estruturado{json, xml}), tabela(estruturada{csv}, semi-estruturada{json}), SGBD(mongo, cosmo), blob.
+		
 
 	
 	
