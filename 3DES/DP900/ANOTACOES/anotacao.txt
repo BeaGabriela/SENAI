@@ -103,7 +103,22 @@ TRUNCATE TABLE
 		
 
 	
+	28-03
+		Gremlin -> Tela de grafo(relacionamento)
+		 nível do contêiner -> Taxa de transfêrencia e chave de partição.
+		redundância em uma região do Azure -> Zona de dispobilidade. Diferença entre redudância e backup(nquanto o backup tem como objetivo garantir a preservação dos dados em caso de falha em um sistema, a redundância busca evitar a falha em si, criando sistemas mais robustos e resilientes).
+		RBAC -> Hierárquia.
+		Recuperar dados fora da regiaão -> RA-GRS e GRS
+		Escolha a opção correta para completar a frase: Um armazenamento de dados de chave/valor é otimizado para pesquisas simples.
+		Para configurar uma conta de armazenamento do Azure para dar suporte à segurança no nível da pasta e à manipulação de diretório atômico habilite o namespace hierárquico.
+		
+		
+		Carga de trabalhos de análise no Azure
+		pipeline -> varios caminhos diferentes.
+		Site de uma lista de produtos csv -> https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv
 	
+		
+		
 	
 	
 	
