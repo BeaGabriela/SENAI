@@ -4,18 +4,14 @@
     box-sizing: border-box;
 }
 
-header{
-    background-color: #515151;
-    height: 5vh;
-    width: 100vw;
-}
+
 
 main{
     box-shadow: 2px 2px 2px 2px #515151;
-    margin-top: 25vh;
-    margin-left: 3vw;
-    width: 90vw;
-    height: 30vh;
+    margin-top: 3vh;
+    margin-left: 28vw;
+    width: 40vw;
+    height: 40vh;
 
     border-radius: 25px;
     
@@ -27,6 +23,11 @@ nav{
     align-items: center;
     margin-top: 10vh;
     gap: 20px;
+}
+
+#img{
+    margin-left: 37vw;
+    margin-top: -15vh;
 }
 
 input{
