@@ -127,6 +127,13 @@ TRUNCATE TABLE
 		Diagnostic, para responder à pergunta: Por que está acontecendo?
 		Preditivo, para responder à pergunta: O que vai acontecer?
 		Prescritivo, para responder à pergunta: Que ações devemos tomar?
+		cognitivo -> uma análise que tenha algun tipo de calculo.
+		audio é um tipo de calculo cognitivo.
+		grafico de dispersao -> cheio de pontinhos.
+		
+		
+		
+		
 		
 	
 	
