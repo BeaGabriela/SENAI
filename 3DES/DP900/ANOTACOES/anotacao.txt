@@ -116,14 +116,18 @@ TRUNCATE TABLE
 		Carga de trabalhos de análise no Azure
 		pipeline -> varios caminhos diferentes.
 		Site de uma lista de produtos csv -> https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv
-	
 		
 		
 	
 	
 	
-	
-	
+	29-03
+		Não é possivel criar uma hierarquia com id. Pois a hirearquia é criada baseada na repetição.
+		Descritiva, para responder à pergunta: O que está acontecendo?
+		Diagnostic, para responder à pergunta: Por que está acontecendo?
+		Preditivo, para responder à pergunta: O que vai acontecer?
+		Prescritivo, para responder à pergunta: Que ações devemos tomar?
+		
 	
 	
 
