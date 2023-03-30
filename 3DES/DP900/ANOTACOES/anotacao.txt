@@ -9,7 +9,7 @@
 		
 	Transacional vs Analítico:
 		Qualquer dado transacional, tem um inicio e é concluido.
-		Dado analítico é um rela´torio que você gerou do dado.
+		Dado analítico é um relatorio que você gerou do dado.
 		
 	Por que o excel é software e visual studio code é plataforma como serviço?
 			Estou desenvolvendo uma plataforma? sim. Então é uma plataforma de serviço.
