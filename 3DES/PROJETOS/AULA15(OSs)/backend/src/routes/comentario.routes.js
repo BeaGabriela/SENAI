@@ -5,6 +5,6 @@ const router = express.Router();
 
 const comentario = require('../controllers/comentario');
 
-router.post('/create', comentario.criar)
+router.post('/comentario/create', comentario.criar)
 
 module.exports = router;
