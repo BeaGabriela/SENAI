@@ -1,0 +1,14 @@
+head 
+    meta(charset='utf-8')
+    title Ordens de Serviço
+    link(rel='stylesheet' href='styles.css')
+    link(rel='shortcut' href='ico.png')
+    script(src='script.js')
+body
+    main 
+        h1=title 
+        table
+             each linha in dados 
+                tr 
+                    td=linha.id 
+                    td=linha.descricao 
