@@ -1,0 +1,36 @@
+.gitignore: 
+	prisma/migrations -> Uso local.
+	node_modules 
+	package-lock.json
+
+
+package.json - Arquivps de dependências.
+
+
+Prisma arquivo .env: 
+DATABASE_URL="mysql://root@localhost:3306/os?shcema=public&timezone=UTC"
+	mysql - Tipo de banco de dados.
+	root - Usuário
+	localhost:porta
+	os- nome do banco de dados
+	timze zone -> Utilizando a data no banco de dados.
+
+
+Comdando básico para a instalação de dependências no backend:
+	npm i express @prisma/client dotenv method-override pug
+
+
+
+ORM -> Prisma(Gerenciador de objetos relacionais).
+
+Para implantar dados de csv no prisma, deve-se criar um arquivo de nome pde preferência.sql e aderir o seguinte comando:
+
+	**LOAD DATA INFILE "C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/PROJETOS/AULA15(OSs)/docs/comentarios.csv"
+	INTO TABLE comentario
+	FIELDS TERMINATED BY ';'
+	ENCLOSED BY '"'
+	LINES TERMINATED BY '\r\n'
+	IGNORE 1 ROWS;**
+
+Após, abra o terminal do php admin, encontre o banco de dados que você está usando, abra o terminal sql e adicione os dados.
+	Caso dê erro, provavelmente é erro de local.
