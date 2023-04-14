@@ -1,7 +1,7 @@
 head
   meta(charset='utf-8')
   title Ordens de Serviço
-  link(rel='stylesheet' href='style.css')
+  link(rel='stylesheet', href='style.css')
   link(rel="shortcut icon" href="ico.png")
   script(src="script.js")
 body(onload=`armazenaAutenticacao('${colaborador.matricula}','${colaborador.pin}')`)
@@ -13,15 +13,15 @@ body(onload=`armazenaAutenticacao('${colaborador.matricula}','${colaborador.pin}
       div(class="novo")
         p Nova Ordem de Serviço
           button(onclick="novo.classList.add('oculto')") X
-        form(action="/os/create" method="POST")
-          input(type="hidden" name="colaborador", value=colaborador.matricula)
+        form(action="/os/create", method="POST")
+          input(type="hidden", name="colaborador", value=colaborador.matricula)
           p Descrição:
-            textarea(name="descricao" placeholder="Digite a descrição da Ordem de Serviço", required)
+            textarea(name="descricao", placeholder="Digite a descrição da Ordem de Serviço", required)
           p Atribuído para executor:
             select(name="executor")
               each executor in executores
                 option(value=executor.matricula) #{executor.matricula} - #{executor.nome}
-          input(type="submit" value="Cadastrar")  
+          input(type="submit", value="Cadastrar")  
   main
     if colaborador.setor == "Manutenção"
       h2 Para Trabalhar
@@ -40,25 +40,25 @@ body(onload=`armazenaAutenticacao('${colaborador.matricula}','${colaborador.pin}
                   button(onclick=`coment${os.id}.classList.add('oculto')`) X
                 p Descrição: #{os.descricao}
                 form(action=`/comentario/create`, method='POST')
-                  input(type="hidden" name="id", value=os.id)
-                  input(type="hidden" name="matricula", value=colaborador.matricula)
-                  input(type="text" name="comentario", required)
-                  input(type="submit" value="Adicionar")
+                  input(type="hidden", name="id", value=os.id)
+                  input(type="hidden", name="matricula", value=colaborador.matricula)
+                  input(type="text", name="comentario", required)
+                  input(type="submit", value="Adicionar")
                 each comentario in os.comentarios
                   div
                     p Comentario: #{comentario.comentario}  
                     p Id do Colaborador: #{comentario.colaborador}  
                     p Data do comentario: #{comentario.data.toISOString().split('T')[0]}, #{comentario.data.toISOString().split('T')[1].slice(0,5)}                  
                 form(action=`/os/update/${os.id}?_method=PUT`, method='POST')
-                  input(type="hidden" name="id", value=os.id)
-                  input(type="submit" value="Concluir")
+                  input(type="hidden", name="id", value=os.id)
+                  input(type="submit", value="Concluir")
     h2 Abertas por mim
     each os in colaborador.abertas
       if os.encerramento == undefined
         div(class="aberta")
           h2 OS #{os.id}
           form(action=`/os/update?_method=PUT`, method='POST')
-            input(type="hidden" name="id", value=os.id)
+            input(type="hidden", name="id", value=os.id)
             p Descrição:
               textarea(name="descricao")=os.descricao
             p Aberto por matrícula #{os.colaborador}
@@ -67,11 +67,11 @@ body(onload=`armazenaAutenticacao('${colaborador.matricula}','${colaborador.pin}
                 each executor in executores
                   option(value=executor.matricula, selected=os.executor==executor.matricula?true:false) #{executor.matricula} - #{executor.nome}
             p Aberto em: #{os.abertura.toISOString().split('T')[0]}, #{os.abertura.toISOString().split('T')[1].slice(0,5)}
-            input(type="submit" value="Alterar")
+            input(type="submit", value="Alterar")
           div(class="botoes")
             form(action=`/os/del/${os.id}?_method=DELETE`, method='POST')
-              input(type="hidden" name="id", value=os.id)
-              input(type="submit" value="Excluir")
+              input(type="hidden", name="id", value=os.id)
+              input(type="submit", value="Excluir")
             button(onclick=`coments${os.id}.classList.remove('oculto')`) Detalhes
           div(class="sombra oculto", id=`coments${os.id}`)
             div(class="comentarios")
@@ -79,10 +79,10 @@ body(onload=`armazenaAutenticacao('${colaborador.matricula}','${colaborador.pin}
                 button(onclick=`coments${os.id}.classList.add('oculto')`) X
               p Descrição: #{os.descricao}
               form(action=`/comentario/create`, method='POST')
-                input(type="hidden" name="id", value=os.id)
-                input(type="hidden" name="matricula", value=colaborador.matricula)
-                input(type="text" name="comentario", required)
-                input(type="submit" value="Adicionar")
+                input(type="hidden", name="id", value=os.id)
+                input(type="hidden", name="matricula", value=colaborador.matricula)
+                input(type="text", name="comentario", required)
+                input(type="submit", value="Adicionar")
               each comentario in os.comentarios
                 div
                   p Comentario: #{comentario.comentario}  
