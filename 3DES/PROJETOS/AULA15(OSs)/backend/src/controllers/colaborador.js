@@ -7,51 +7,66 @@ const iniciar = async (req, res) => {
 }
 
 const login = async (req, res) => {
-    let colaborador = await prisma.colaborador.findMany({
-        where: {
-            AND: [{ matricula: Number(req.body.matricula) }, { pin: Number(req.body.pin) }]
-        },
-        select: {
-            matricula: true,
-            nome: true,
-            cargo: true,
-            setor: true,
-            pin: true,
-            abertas: {
-                select: {
-                    id: true,
-                    descricao: true,
-                    colaborador: true,
-                    executor: true,
-                    abertura: true,
-                    encerramento: true,
-                    comentarios: true
-                }
+    if (!isNaN(req.body.pin) && !isNaN(req.body.matricula)) {
+        let colaborador = await prisma.colaborador.findMany({
+            where: {
+                AND: [{ matricula: Number(req.body.matricula) }, { pin: Number(req.body.pin) }]
             },
-            executadas: {
-                where: {
-                    encerramento: null
+            select: {
+                matricula: true,
+                nome: true,
+                cargo: true,
+                setor: true,
+                pin: true,
+                abertas: {
+                    select: {
+                        id: true,
+                        descricao: true,
+                        colaborador: true,
+                        executor: true,
+                        abertura: true,
+                        encerramento: true,
+                        comentarios: true
+                    }
                 },
-                select: {
-                    id: true,
-                    descricao: true,
-                    colaborador: true,
-                    executor: true,
-                    abertura: true,
-                    encerramento: true,
-                    comentarios: true
+                executadas: {
+                    where: {
+                        encerramento: null
+                    },
+                    select: {
+                        id: true,
+                        descricao: true,
+                        colaborador: true,
+                        executor: true,
+                        abertura: true,
+                        encerramento: true,
+                        comentarios: true
+                    }
                 }
             }
+        })
+
+        let executores = await prisma.colaborador.findMany({
+            where: {
+                setor: "Manutenção"
+            },
+            select: {
+                matricula: true,
+                nome: true
+            }
+        })
+
+        if (colaborador.length > 0)
+            res.render('oss', { colaborador: colaborador[0], executores: executores });
+        else {
+            res.redirect('/?erro=Matrícula ou PIN incorretos!')
         }
-    })
-    if (colaborador.length > 0)
-        res.render('oss', { colaborador: colaborador[0] });
-    else {
-        res.redirect('/?erro=Matricula ou  PIN incorretos')
+    } else {
+        res.redirect('/?erro=Matrícula ou PIN incorretos!')
     }
 }
 
 module.exports = {
-    iniciar, 
+    iniciar,
     login
 }
