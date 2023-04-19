@@ -1,0 +1,35 @@
+head
+    meta(charset='utf-8')
+    title Ordens de Serviço
+    link(rel='stylesheet' href='style.css')
+    //- script(src="script.js")
+body
+    header
+        h1 Avaliação Física 
+        button(onclick="novo.classList.add('oculto')") X
+        form(action="../controllers/paciente.controller" method="POST")
+        input 
+        p Novo Pedido
+    table 
+        thead
+            th Id
+            th Nome
+            th Nascimento
+            th Peso
+            th Altura
+            th Idade
+            th IMC
+            th Diagnóstico 
+            th Atualizar 
+            th Excluir
+            tbody 
+            each paciente in pacientes
+                td #{paciente.id} 
+                td #{paciente.nome} 
+                td #{paciente.nascimento} 
+                td #{paciente.peso} 
+                td #{paciente.altura} 
+//- if paciente.peso / (paciente.altura * paciente.altura) = 20
+//-     p boa
+
+

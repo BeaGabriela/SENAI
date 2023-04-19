@@ -1,0 +1,32 @@
+@import url(./paleta.css);
+
+header {
+    background-color: var(--agudo);
+    color: var(--grave);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button{
+    width: 15vw;
+}
+
+table{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+tbody > td{
+    display: flex;
+    flex-direction: column;
+}
+
+.oculto {
+    display: none;
+}
+
+
