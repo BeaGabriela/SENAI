@@ -2,16 +2,16 @@ head
     meta(charset='utf-8')
     title Avaliação Fisica
     link(rel='stylesheet' href='style.css')
-    script(src="script.js")
+
 body
     h1 Avaliação Fisica
-        button(onclick="modal1.classList.remove('oculto')") Novo
+        button(onclick="modal1.classList.remove('oculto')") Novo Paciente
     div(id="modal1" class="modal1 oculto")
-        form(action="../paciente/criar" id="novo" method="post")
+        form(action="/create" id="novo" method="post")
             header(style="grid-column-end: span 2;")
                 h1 Cadastro
             label Nome completo:
-            input(type="text" name="nomeCompleto" placeholder="Nome completo do funcionário" required)
+            input(type="text" name="nomeCompleto" placeholder="Nome completo do paciente" required)
             label Data Nascimento:
             input(type="text" name="dataNascimento" placeholder="Data de nascimento do paciente" required)
             label Peso:
@@ -35,20 +35,69 @@ body
                     th Atualizar 
                     th Excluir
             tbody(id='corpo')
+                -let idade = 0, imc = 0, diagnostico = ''
+                -let data = new Date()
+                -let mes = data.getFullYear()
             each paciente in pacientes
+                - let nascimentoDefinitivo = new Date(paciente.nascimento).getFullYear()
+                console.log(nascimentoDefinitivo)
                 tr
                     td
                         p #{paciente.id}
                     td
-                        p #{paciente.nome_completo}
+                       p #{paciente.nome_completo}
                     td
-                        p #{paciente.nascimento.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]}
+                        input(type="date" name="data" value=paciente.nascimento.toISOString().split('T')[0])
                     td
-                        p #{paciente.peso}
+                        p #{paciente.peso}kg
                     td
-                        p #{paciente.altura}
+                        p #{paciente.altura}m
+
+                    td(data-label="Idade") 
+                        -var idade = Number(mes - nascimentoDefinitivo)
+                        p #{idade}
                     td
-                        p #{paciente.idade}
-                    
+                        -var imc =paciente.peso/(paciente.altura*paciente.altura)
+                        p #{imc}
+                    td
+                        if (imc < 17)
+                            p  Muito abaixo do peso
+                        else if (imc > 17 && imc  < 18.49)
+                            p  Abaixo do peso
+                        else if (imc > 18.49 &&imc  <= 24.99)
+                            p  Peso Normal
+                        else if (imc >= 25 && imc <= 29.99)
+                            p  Acima do peso
+                        else if (imc >= 30 && imc <= 34.99)
+                            p  Obesidade I
+                        else if (imc >= 35 && imc <= 39.99)
+                            p Obesidade II (severa)
+                        else if (imc >= 40)
+                            p Obesidade III (mórbida)
+
+                    td
+                        button(onclick="modal2.classList.remove('oculto')" ) *
+                        div(id="modal2" class="modal2 oculto")
+                            form(action=`/paciente/alterar/${paciente.id}}` id="alterar" method="put")
+                                header(style="grid-column-end: span 2;")
+                                    h1 Alterar
+                                    label Nome completo:
+                                    input(type="text" name="nome" value=paciente.nome_completo required)
+                                    label Data Nascimento:
+                                    input(type="text" name="dataNascimento" value = paciente.nascimento required)
+                                    label Peso:
+                                    input(type="text" name="peso" value = paciente.peso required)
+                                    label Altura:
+                                    input(type="text" name="altura" value = paciente.altura required)
+                                    input(type="reset" value="Cancelar" onclick="modal2.classList.add('oculto')")
+                                    input(type="submit" value="Alterar")
+                        
+                    td
+                        button  -
+    footer  
+        h2 Estatísticas
+        div
 
 
+
+script(src="script.js")

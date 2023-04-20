@@ -6,15 +6,8 @@ const iniciar = async (req, res) => {
     res.render('index')
 }
 
-// const modelarLista = (lista) => {
-//     for (i = 0; i < lista.length; i++)
-//         lista[i] = new pessoa(lista[i], "ler")
-//     return lista
-// }
-
 const criar = async (req, res) => {
-    let dataAtual = new Date()
-    let mes = dataAtual.getFullYear()
+
 
     let parse = {
         nome_completo: req.body.nome_completo,
@@ -23,30 +16,38 @@ const criar = async (req, res) => {
         altura: Number(req.body.altura)
     }
 
+    //  Object.assign(parse, {
+    //     idade: Number(mes - req.body.nascimento.slice(0, 4)),
+    //     imc: Number(req.body.peso / (req.body.altura * req.body.altura)),
+    //     diagnostico: ''
+    //   });
 
 
     let fisico = await prisma.Paciente.create({
         data: parse
     })
 
-
-    Object.assign(parse, {
-        idade: Number(mes - req.body.nascimento.slice(0, 4)),
-        imc: Number(req.body.peso / (req.body.altura * req.body.altura)),
-        diagnostico: ''
-      });
-
-
-
     res.json(parse)
 }
 
 
 const listar = async (req, res) => {
-    let paciente = await prisma.Paciente.findMany()
-    console.log(paciente)
+    let dataAtual = new Date()
+    let mes = dataAtual.getFullYear()
+
+    let paciente = await prisma.Paciente.findMany({
+        select: {
+            id: true,
+            nome_completo: true,
+            nascimento: true,
+            peso: true,
+            altura: true
+        },
+        
+    })
+
     // res.json(paciente).status(200)
-    res.render('index', { pacientes:paciente })
+    res.render('index', { pacientes: paciente })
 }
 
 
