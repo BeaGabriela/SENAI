@@ -1,32 +1,135 @@
-@import url(./paleta.css);
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    color: var(--p1);
+}
+
+:root {
+    --p1: #253807;
+    --p2: #405f0f;
+    --p3: #669e0c;
+    --p4: #bbd88d;
+    --p5: #f5fde8;
+}
+
+body {
+    width: 100%;
+    background-color: var(--p5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 header {
-    background-color: var(--agudo);
-    color: var(--grave);
+    width: 100%;
+    height: 8vh;
+    background-color: var(--p1);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: var(--p5);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+table {
+    background: var(--p4);
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    height: 40vh;
+}
+
+/* tr:nth-child(even) {
+    background: var(--p5);
+} */
+
+td {
+    padding: 5px;
+    border: 0px;
+}
+
+td[contenteditable="true"] {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+th {
+    background: var(--p2);
+    color: var(--p5);
+    padding: 10px;
+}
+
+label,
+input {
+    padding: 5px;
+    margin: 5px;
+}
+
+input {
+    background-color: var(--p5);
 }
 
 button{
-    width: 15vw;
+    background-color: var(--p3);
+    border: none;
+    box-shadow: 1px 1px 3px var(--p1);
+    color: var(--p5);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-table{
+input[type="number"]{
+    max-width: 120px;
+    text-align: center;
+}
+
+#novo {
+    position: relative;
+    width: 50vw;
+    background-color: var(--p4);
+    box-shadow: 1px 1px 3px var(--p2);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.modal1 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-tbody > td{
-    display: flex;
-    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 100px;
 }
 
 .oculto {
     display: none;
+    visibility: hidden ;
 }
+
 
 
