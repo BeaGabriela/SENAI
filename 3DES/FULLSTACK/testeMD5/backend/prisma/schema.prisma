@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model usuarios {
+  id                      Int                       @id @default(autoincrement())
+  cpf                     String                    @unique
+  data_nascimento         String
+  nome                    String
+  nome_social             String?
+  email                   String                    @unique
+  senha                   String
+  telefone                String
+  contato                 contatos[]
+  publicacao              publicacoes[]
+  marcadores_mapa         marcadores_mapa[]
+  publicacoes_favoritadas publicacoes_favoritadas[]
+}
+
+model contatos {
+  id             Int      @id @default(autoincrement())
+  nome           String
+  telefone       String
+  relacionamento String
+  id_usuario     Int
+  usuario        usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
+}
+
+model publicacoes {
+  id              Int      @id @default(autoincrement())
+  data_publicacao DateTime @default(now())
+  id_usuario      Int
+  texto           String   @db.MediumText
+  usuario         usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
+}
+
+model marcadores_mapa {
+  id         Int      @id @default(autoincrement())
+  id_usuario Int
+  alerta     String
+  latitude   Float
+  longitude  Float
+  usuario    usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
+}
+
+model publicacoes_favoritadas {
+  id            Int      @id @default(autoincrement())
+  id_usuario    Int
+  id_publicacao Int
+  usuario       usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
+}
