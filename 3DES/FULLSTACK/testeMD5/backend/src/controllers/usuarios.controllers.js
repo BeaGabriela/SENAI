@@ -24,7 +24,7 @@ const login = async (req, res) => {
                         'nome_social': usuario.nome_social,
                         'token': usuario.token
                     }
-                    console.log(usuario.senha);
+                    // console.log(usuario.senha);
                     res.status(200).json(usuarioFormatado).end();
                 } else {
                     res.status(401).json(err).end();
@@ -57,20 +57,54 @@ const login = async (req, res) => {
     }
 }
 
+// const cadastrar = async (req, res) => {
+//     // obter os dados do usuário a partir do corpo da requisição (req.body)
+//     // const { nome, email, senha } = req.body;
+
+//     // criar um hash da senha usando a criptografia MD5
+//     // const hashMd5 = crypto.createHash('md5').update(senha).digest('hex');
+
+//     // criar um hash da senha criptografada com bcrypt
+//     bcrypt.hash(hashMd5, saltRounds, async (err, hash) => {
+//         if (err) {
+//             console.log(err);
+//             res.status(500).send('Erro ao criar usuário');
+//             req.body.senha = hash
+//         } else {
+//             try {
+//                 // criar um novo usuário no banco de dados usando o Prisma ORM
+//                 const novoUsuario = await prisma.usuarios.create({
+//                     data: req.body
+//                 });
+
+//                 // retornar o usuário criado com sucesso
+//                 res.status(201).json(novoUsuario);
+//             } catch (erro) {
+//                 console.log(erro);
+//                 res.status(500).send('Erro ao criar usuário');
+//             }
+//         }
+//     });
+// }
+
 
 const cadastrar = async (req, res) => {
     // let a = "beatriz"
     
     let crypto1 = crypto.MD5(req.body.senha).toString()
+    
+    req.body.senha = crypto1
+    
     bcrypt.hash(req.body.senha, saltRounds, async function (errCrypto, hash) {
         if (errCrypto == null) {
-             req.body.senha = crypto1 
-            crypto1 = hash
-            console.log()
+             req.body.senha = hash 
+             console.log(req.body.senha)
+            // crypto1 = hash
+            
             let user = await prisma.usuarios.create({
                 data: req.body
             });
-            console.log(user)
+            // console.log(user)
             res.status(201).json(user).end();
         }
     });
