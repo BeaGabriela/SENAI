@@ -1,4 +1,5 @@
 var inputValor = document.querySelector('#vizualizaçãoSenha')
+var erroSenha = document.querySelector('#senhaErrada')
 
 function carregar() {
     botoes()
@@ -36,14 +37,18 @@ function ValidarSenha() {
     fetch('http://localhost:3000/login', options)
         .then((response) => {
             if (response != 200) {
-                console.log('erro')
+                erroSenha.innerHTML = 'Senha Incorreta'
             } else {
                 return response.json()
             }
         })
         .then((resp) => {
-           localStorage.setItem('usuario', resp)
-           window.location.href = "./home.html"
+            if (inputValor.value == 0) {
+                erroSenha.innerHTML = 'Preencha os campos acima!'
+            } else if (inputValor.value != undefined && resp != 401) {
+                localStorage.setItem('usuario', resp)
+                window.location.href = "./home.html"
+            }
         })
 }
 
