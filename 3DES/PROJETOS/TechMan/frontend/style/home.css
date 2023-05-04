@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    height: 8vh;
+    background-color: #44babc8a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>div {
+    display: flex;
+    margin-right: 3vw;
+    align-items: center;
+}
+
+h2 {
+    color: #35797d;
+}
+
+#imgSair {
+    margin-left: 3vw;
+    height: 3vh;
+}
+
+body {
+    background-color: #cce2e2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#p {
+    font-size: 30pt;
+    color: #35797d;
+    font-weight: 0;
+    text-align: center;
+
+}
+
+label {
+    color: #fff;
+    height: 10vh;
+    width: 10vh;
+    padding: 1vh 0 1vh 1vw;
+    background-color: #44babc;
+}
+
+
+.equipamentos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 65vw;
+    margin-top: 3vh;
+
+}
+
+.equipamentos>div {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 1vw;
+
+}
+
+.equipamentos>div>p {
+    word-wrap: break-word;
+    margin: 1vh;
+}
+
+#img {
+    height: 18vh;
+    border: 1px solid #44babc;
+}
+
+img {
+    height: 3vh;
+    cursor: pointer;
+}
+
+.modalExclusão {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #cce2e2c6;
+}
+
+.modalExclusão>div, .modalCadastrarComentario>div  {
+    position: absolute;
+    height: 25vh;
+    width: 38vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    top: 30vh;
+    left: 15vw;
+}
+
+#fechar,
+#fecharComentario {
+    position: absolute;
+    left: 35vw;
+    top: 5vh;
+    cursor: pointer;
+}
+
+.comentarios{
+    width: 35vw;
+    height: 10vh;
+    margin-left: 10.5vw;
+    margin-bottom: -1vh;
+}
+
+#comentarioTexto{
+    text-align: center;
+    font-size: 16pt;
+    margin-top: -15vh;
+    margin-right: 17vw;
+    margin-bottom: 1vh;
+}
+
+#perfil{
+    margin-right: 17vw;
+    margin-bottom: 2vh;
+    color: #bacccc;
+}
+
+#excluir {
+    padding: 10px;
+    width: 5vw;
+    background-color: red;
+    border: none;
+    color: #fff;
+    margin-right: 25vw;
+    border-radius: 15px;
+    margin-top: 2vh;
+    cursor: pointer;
+}
+
+
+.modalComentario,.modalCadastrarComentario {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: #cce2e2c6;
+}
+
+.modalComentarioVizualização{
+    padding-right: 12vw ;
+}
+
+.modalComentario>div{
+    position: absolute;
+    height: 50vh;
+    width: 38vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    top: 20vh;
+    left: 15vw;
+}
+
+
+#Adicionar {
+    position: absolute;
+    padding: 10px;
+    width: 12vw;
+    background-color: #44babc;
+    border: none;
+    color: #fff;
+    left: 17vw;
+    border-radius: 15px;
+    top: 64vh;
+    cursor: pointer;
+}
+
+#cadastrar {
+    position: absolute;
+    padding: 10px;
+    width: 12vw;
+    background-color: #44babc;
+    border: none;
+    color: #fff;
+    right: 23vw;
+    border-radius: 15px;
+    top: 20vh;
+    cursor: pointer;
+}
+
+input{
+    width: 30vw;
+    height: 5vh;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+
+.model {
+    display: none;
+    visibility: hidden;
+}
