@@ -36,20 +36,23 @@ function ValidarSenha() {
 
     fetch('http://localhost:3000/login', options)
         .then((response) => {
-            if (response != 200) {
-                erroSenha.innerHTML = 'Senha Incorreta'
+            if (response.status === 404) {
+                erroSenha.innerHTML = 'Senha Incorreta!'
             } else {
                 return response.json()
+
             }
         })
+
         .then((resp) => {
             if (inputValor.value == 0) {
                 erroSenha.innerHTML = 'Preencha os campos acima!'
-            } else if (inputValor.value != undefined && resp != 401) {
-                localStorage.setItem('usuario', resp)
-                window.location.href = "./home.html"
+            } else if (inputValor.value != undefined) {
+                localStorage.setItem('usuario', JSON.stringify(resp))
+                window.location.href = '../pages/home.html'
             }
         })
+
 }
 
 
