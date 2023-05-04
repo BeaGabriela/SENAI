@@ -13,15 +13,40 @@ const create = async (req, res) => {
 
 
 const read = async (req, res) => {
-    let comentarios = await prisma.Comentarios.findMany();
-
+    let comentarios = await prisma.Comentarios.findMany({
+        select: {
+            id: true,
+            comentario: true,
+            equipamento: true,
+            perfil: true,
+            perfils:{
+                select:{
+                    perfil:true
+                }
+            },
+            data: true
+        }
+    })
     res.status(200).json(comentarios).end();
 }
 
+
 const readOne = async (req, res) => {
-    let comentarios = await prisma.Comentarios.findUnique({
+    let comentarios = await prisma.Comentarios.findMany({
         where: {
-            id: Number(req.params.id)
+            equipamento: Number(req.params.equipamento)
+        },
+        select: {
+            id: true,
+            comentario: true,
+            equipamento: true,
+            perfil: true,
+            perfils:{
+                select:{
+                    perfil:true
+                }
+            },
+            data: true
         }
     });
 
