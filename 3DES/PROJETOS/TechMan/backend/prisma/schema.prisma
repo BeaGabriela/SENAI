@@ -21,7 +21,7 @@ model Perfil {
 
 model Usuario {
   id    Int     @id @default(autoincrement())
-  senha String 
+  senha String @unique
   perfil  Int
 
   perfils    Perfil    @relation(fields: [perfil], references: [id])
@@ -31,7 +31,7 @@ model Usuario {
 model Comentarios {
   id    Int     @id @default(autoincrement())
   comentario String 
-  equipamento  String
+  equipamento  Int
   perfil  Int
   data  DateTime
 
