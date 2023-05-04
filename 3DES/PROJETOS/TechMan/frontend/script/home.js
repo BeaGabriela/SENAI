@@ -11,14 +11,11 @@ function fetchEquipamentos() {
             response.forEach(eq => {
                 var equipamentos = document.querySelector(".equipamentos").cloneNode(true);
                 equipamentos.classList.remove('model')
-
-                
-
                 equipamentos.querySelector("#img").src = "../assets/" + eq.imagem
                 equipamentos.querySelector("#titulo").innerHTML = eq.equipamento
                 equipamentos.querySelector("#descricao").innerHTML = eq.descricao
                 equipamentos.querySelector('#imgComentario').addEventListener('click', () => {
-                    CadastrarComentaio(eq.id)
+                    CadastrarComentario(eq.id)
                 })
                 equipamentos.querySelector('#imgDeletar').addEventListener("click", () => {
                     var modelExcluir = document.querySelector('.modalExclusão')
@@ -63,37 +60,37 @@ function fecharModalCadastro() {
     modalCadastrarComentario.classList.add('model')
 }
 
-
-
-
-function CadastrarComentaio(id){
+function CadastrarComentario(id) {
     console.log(id);
-            
-        var modalComentario = document.querySelector('.modalComentario')
-        modalComentario.classList.remove('model')
 
-        fetch(`http://localhost:3000/comentarios/${id}`)
-            .then(response => response.json())
-            .then(response => {
-                response.forEach(c => {
-                    var comentario = document.querySelector(".comentarios").cloneNode(true);
-                    comentario.classList.remove('model')
+    var modalComentario = document.querySelector('.modalComentario')
+    modalComentario.classList.remove('model')
 
-                    if (id == c.equipamento) {
-                        comentario.querySelector('#perfil').innerHTML = c.perfils.perfil + "  " + c.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
-                        comentario.querySelector('#comentario').innerHTML = c.comentario
+    fetch(`http://localhost:3000/comentarios/${id}`)
+        .then(response => response.json())
+        .then(response => {
+            response.forEach(c => {
+                var comentario = document.querySelector(".comentarios").cloneNode(true);
+                comentario.classList.remove('model')
+
+                if (id === c.equipamento) {
+                    comentario.querySelector('#perfil').innerHTML = c.perfils.perfil + "  " + c.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+                    comentario.querySelector('#comentario').innerHTML = c.comentario
 
 
-                        document.querySelector('.modalComentarioVizualização').appendChild(comentario)
-                    }
+                    document.querySelector('.modalComentarioVizualização').appendChild(comentario)
+                }
 
-                })
             })
-    }
+        })
+}
 
-    function cadastrarComentario(){
-        var modalCadastrarComentario = document.querySelector('.modalCadastrarComentario')
-        modalCadastrarComentario.classList.remove('model')
+function abrirModalCadastroEquipamento() {
+    var modalCadastro = document.querySelector('.cadastrarEquipamento')
+    modalCadastro.classList.remove('model')
+}
 
-
-    }
+function fecharModalCadastro() {
+    var modalCadastro = document.querySelector('.cadastrarEquipamento')
+    modalCadastro.classList.add('model')
+}
