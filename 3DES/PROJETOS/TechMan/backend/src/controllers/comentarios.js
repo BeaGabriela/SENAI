@@ -6,8 +6,14 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     let comentarios = await prisma.Comentarios.create({
-        data: req.body
-    });
+        data: {
+            comentario: req.body.comentario,
+            equipamento: req.body.equipamento,
+            perfil: req.body.perfil,
+            data: new Date()
+        }
+    })
+
     res.status(201).json(comentarios).end();
 }
 
@@ -19,9 +25,9 @@ const read = async (req, res) => {
             comentario: true,
             equipamento: true,
             perfil: true,
-            perfils:{
-                select:{
-                    perfil:true
+            perfils: {
+                select: {
+                    perfil: true
                 }
             },
             data: true
@@ -41,9 +47,9 @@ const readOne = async (req, res) => {
             comentario: true,
             equipamento: true,
             perfil: true,
-            perfils:{
-                select:{
-                    perfil:true
+            perfils: {
+                select: {
+                    perfil: true
                 }
             },
             data: true

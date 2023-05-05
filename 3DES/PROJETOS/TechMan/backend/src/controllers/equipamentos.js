@@ -6,7 +6,14 @@ const prisma = new PrismaClient();
 
 const create = async (req, res) => {
     let equipamentos = await prisma.Equipamentos.create({
-        data: req.body
+        data: {
+        equipamento: req.body.equipamento,
+        imagem: req.body.imagem,
+        descricao: req.body.descricao,
+        ativo: req.body.ativo,
+        data:new Date()
+    }
+       
     });
     res.status(201).json(equipamentos).end();
 }
