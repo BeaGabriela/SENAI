@@ -1,5 +1,6 @@
 var inputValor = document.querySelector('#vizualizaçãoSenha')
 var erroSenha = document.querySelector('#senhaErrada')
+var entrar = document.querySelector('#entrar')
 
 function carregar() {
     botoes()
@@ -17,7 +18,15 @@ function botoes() {
             if (value === 'C') {
                 numbers.length = 0
             } else if (value === '⤶') {
-                ValidarSenha()
+                if (inputValor.value.length >= 6) {
+                    entrar.disabled = false
+                    ValidarSenha()
+                } else {
+                    entrar.disabled = true
+                    erroSenha.innerHTML = 'Erro'
+
+                }
+
             } else {
                 numbers.push(value)
             }
