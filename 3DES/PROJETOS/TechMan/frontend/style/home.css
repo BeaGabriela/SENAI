@@ -85,14 +85,14 @@ img {
     cursor: pointer;
 }
 
-.modalExclusão {
+.modalExclusão, .cadastrarEquipamento {
     height: 100vh;
     width: 100vw;
     position: absolute;
     background-color: #cce2e2c6;
 }
 
-.modalExclusão>div, .modalCadastrarComentario>div  {
+.modalExclusão>div, .modalCadastrarComentario>div {
     position: absolute;
     height: 25vh;
     width: 38vw;
@@ -159,7 +159,7 @@ img {
     padding-right: 12vw ;
 }
 
-.modalComentario>div{
+.modalComentario>div, .cadastrarEquipamento>div {
     position: absolute;
     height: 50vh;
     width: 38vw;
@@ -181,9 +181,9 @@ img {
     background-color: #44babc;
     border: none;
     color: #fff;
-    left: 17vw;
+    right: 24vw;
     border-radius: 15px;
-    top: 64vh;
+    top: 43vh;
     cursor: pointer;
 }
 
@@ -206,6 +206,38 @@ input{
     border: none;
     border-bottom: 1px solid black;
 }
+
+#cadastrarEquipamento {
+    position: absolute;
+    padding: 10px;
+    width: 12vw;
+    background-color: #44babc;
+    border: none;
+    color: #fff;
+    right: 22vw;
+    border-radius: 15px;
+    top: 43vh;
+    cursor: pointer;
+}
+
+.cadastrarEquipamento > div> div {
+    display: flex;
+    margin-right: 40vw;
+    margin-top: 1vh;
+}
+
+.cadastrarEquipamento > div> div> input {
+    margin-right: -14vw;
+    margin-top: -2px;
+}
+
+#Ativo{
+    height: 2vh;
+}
+
+
+
+
 
 
 .model {
