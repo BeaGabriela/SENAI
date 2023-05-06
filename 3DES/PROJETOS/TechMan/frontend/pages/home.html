@@ -13,7 +13,7 @@
     <header>
         <p id="p"><label>TECH</label>MAN</p>
         <div>
-            <h2 onclick="abrirModalCadastroEquipamento()"> Novo Equipamento</h2>
+            <h2 id='novoEquipamento' onclick="abrirModalCadastroEquipamento()"> Novo Equipamento</h2>
             <img id='imgSair' src="../assets/logout_sair.png" onclick="logout()" />
         </div>
     </header>
@@ -62,13 +62,16 @@
             <div class="modalComentarioVizualização">
                 <p id="fecharComentario" onclick="fecharModalComentario()">X</p>
                 <h3 id="comentarioTexto">Comentários</h3>
+
                 <div class="comentariosV model ">
                     <h3 id="perfil"></h3>
                     <p id="comentario"></p>
                 </div>
-                <button id="adicio model" onclick="cadastrarNovoComentario()">Adicionar Comentário</button>
+
+
             </div>
-          
+            <button id="Adicionar model" onclick="cadastrarNovoComentario()">Adicionar Comentário</button>
+
         </nav>
 
         <nav class="modalCadastrarComentario model">
@@ -78,7 +81,7 @@
                 <input type="text" id="newComentario" placeholder="Comentário">
                 <button id="cadastrar">Cadastrar</button>
             </div>
-            
+
 
         </nav>
 

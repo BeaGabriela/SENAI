@@ -6,11 +6,9 @@ function carregar() {
     botoes()
 }
 
-
 function botoes() {
     const buttons = document.querySelectorAll('button')
     const numbers = []
-
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', () => {
             const value = buttons[i].textContent
@@ -18,19 +16,15 @@ function botoes() {
             if (value === 'C') {
                 numbers.length = 0
             } else if (value === '⤶') {
-                if (inputValor.value.length >= 6) {
-                    entrar.disabled = false
-                    ValidarSenha()
-                } else {
-                    entrar.disabled = true
-                    erroSenha.innerHTML = 'Erro'
-
-                }
-
+                ValidarSenha()
             } else {
                 numbers.push(value)
             }
-
+            if(numbers.length >= 6){
+                entrar.disabled = false
+            }else{
+                entrar.disabled = true
+            }
             inputValor.value = numbers.join('')
         })
     }
@@ -47,14 +41,18 @@ function ValidarSenha() {
         .then((response) => {
             if (response.status === 404) {
                 erroSenha.innerHTML = 'Senha Incorreta!'
+                inputValor.value = ''
             } else {
+                erroSenha.innerHTML = ''
                 return response.json()
 
             }
         })
 
         .then((resp) => {
-            if (inputValor.value == 0) {
+            if(resp.senha = undefined){
+                erroSenha.innerHTML = 'Erro interno'
+            } else if  (inputValor.value == 0) {
                 erroSenha.innerHTML = 'Preencha os campos acima!'
             } else if (inputValor.value != undefined) {
                 localStorage.setItem('usuario', JSON.stringify(resp))

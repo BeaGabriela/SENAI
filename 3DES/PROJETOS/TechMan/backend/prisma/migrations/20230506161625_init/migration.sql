@@ -46,31 +46,30 @@ ALTER TABLE `Usuario` ADD CONSTRAINT `Usuario_perfil_fkey` FOREIGN KEY (`perfil`
 ALTER TABLE `Comentarios` ADD CONSTRAINT `Comentarios_perfil_fkey` FOREIGN KEY (`perfil`) REFERENCES `Perfil`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/perfis.csv'
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/perfis.csv'
 INTO TABLE Perfil
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/usuarios.csv'
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/usuarios.csv'
 INTO TABLE Usuario
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/equipamentos.csv'
-INTO TABLE Equipamentos
-FIELDS TERMINATED BY ';'
-ENCLOSED BY '"'
-LINES TERMINATED BY '\r\n'
-IGNORE 1 ROWS;
-
-LOAD DATA INFILE 'C:/Users/Desenvolvimento.DESKTOP-CJ165MI/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/comentarios.csv'
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/comentarios.csv'
 INTO TABLE Comentarios
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
+LOAD DATA INFILE 'C:/Users/Beatriz/Desktop/SENAI/3DES/PROJETOS/TechMan/backend/dados/equipamentos.csv'
+INTO TABLE Equipamentos
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;

@@ -4,6 +4,9 @@ const router = express.Router();
 
 const equipamentos = require('../controllers/equipamentos');
 
+const middle = require('../middleware/middleware');
+
+router.post('*', middle.validaAcesso)
 
 router.post('/equipamentosCreate', equipamentos.create);
 router.get('/equipamentos', equipamentos.read);

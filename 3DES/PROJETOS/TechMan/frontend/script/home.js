@@ -1,10 +1,18 @@
+var novoEquipamento = document.querySelector('#novoEquipamento')
+var usuario= JSON.parse(localStorage.getItem('usuario'))
+console.log(usuario);
+
 function carregar() {
     fetchEquipamentos()
     configuraçãoUsuario()
 }
 
 function configuraçãoUsuario(){
-    
+    if(usuario.perfil != 2){
+        novoEquipamento.innerHTML = ''
+    }else{
+        novoEquipamento.innerHTML = 'Novo Equipamento'
+    }
 }
 
 

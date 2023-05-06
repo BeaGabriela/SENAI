@@ -114,19 +114,26 @@ img {
     cursor: pointer;
 }
 
-.comentarios{
+.comentariosV{
     width: 35vw;
-    height: 10vh;
+    padding:3vh;
     margin-left: 10.5vw;
-    margin-bottom: -1vh;
+    border: 1px solid black
+    /* margin-bottom: -1vh; */
+    
 }
 
 #comentarioTexto{
+    margin-right: 32vh;
     text-align: center;
     font-size: 16pt;
-    margin-top: -15vh;
-    margin-right: 17vw;
-    margin-bottom: 1vh;
+    position: initial;
+    top: 3vh;
+    margin-top: 45vh;
+    margin-left: 0vw;
+    bottom: 16vh;
+    
+
 }
 
 #perfil{
@@ -153,26 +160,29 @@ img {
     width: 100vw;
     position: absolute;
     background-color: #cce2e2c6;
+    
 }
 
 .modalComentarioVizualização{
     padding-right: 12vw ;
+    height: 20vh;
+    overflow-y:scroll;
+    
 }
 
 .modalComentario>div, .cadastrarEquipamento>div {
     position: absolute;
-    height: 50vh;
-    width: 38vw;
+    height: 60vh;
+    width: 40vw;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vh;
-    top: 20vh;
+    gap: 5vh;
+    top: 15vh;
     left: 15vw;
 }
-
 
 #Adicionar {
     position: absolute;
@@ -183,7 +193,7 @@ img {
     color: #fff;
     right: 24vw;
     border-radius: 15px;
-    top: 43vh;
+    top: 50vh;
     cursor: pointer;
 }
 
@@ -234,11 +244,6 @@ input{
 #Ativo{
     height: 2vh;
 }
-
-
-
-
-
 
 .model {
     display: none;
