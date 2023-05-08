@@ -6,9 +6,8 @@ const equipamentos = require('../controllers/equipamentos');
 
 const middle = require('../middleware/middleware');
 
-router.post('*', middle.validaAcesso)
 
-router.post('/equipamentosCreate', equipamentos.create);
+router.post('/equipamentosCreate',  middle.validaAcesso, equipamentos.create);
 router.get('/equipamentos', equipamentos.read);
 router.get('/equipamentos/:id', equipamentos.readOne);
 router.put('/equipamentos/:id', equipamentos.update);

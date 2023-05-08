@@ -1,5 +1,5 @@
 var novoEquipamento = document.querySelector('#novoEquipamento')
-var usuario= JSON.parse(localStorage.getItem('usuario'))
+var usuario = JSON.parse(localStorage.getItem('usuario'))
 console.log(usuario);
 
 function carregar() {
@@ -7,10 +7,10 @@ function carregar() {
     configuraçãoUsuario()
 }
 
-function configuraçãoUsuario(){
-    if(usuario.perfil != 2){
+function configuraçãoUsuario() {
+    if (usuario.perfil != 2) {
         novoEquipamento.innerHTML = ''
-    }else{
+    } else {
         novoEquipamento.innerHTML = 'Novo Equipamento'
     }
 }
@@ -62,6 +62,7 @@ function fetchEquipamentos() {
         })
 }
 
+
 function VizualizarComentarios(id) {
     console.log(id)
 
@@ -83,15 +84,16 @@ function VizualizarComentarios(id) {
             response.forEach(c => {
                 var comentarios = document.querySelector('.comentariosV').cloneNode(true)
                 comentarios.classList.remove('model')
-  
-                    console.log(c);
-                    comentarios.querySelector('#perfil').innerHTML = c.perfils.perfil + "  " + c.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
-                    comentarios.querySelector('#comentario').innerHTML = c.comentario
-                    comentarios.innerHTML += `<button id="Adicionar" onclick="cadastrarNovoComentario(${id})">Adicionar Comentário</button>`
+
+                console.log(c);
+                comentarios.querySelector('#perfil').innerHTML = c.perfils.perfil + "  " + c.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
+                comentarios.querySelector('#comentario').innerHTML = c.comentario
+                // comentarios.innerHTML += `<button id="Adicionar" onclick="cadastrarNovoComentario(${id})">Adicionar Comentário</button>`
 
 
-                    document.querySelector('.modalComentarioVizualização').appendChild(comentarios)
-               
+
+                document.querySelector('.modalComentarioVizualização').appendChild(comentarios)
+
             })
             var comentarios = document.querySelector('.comentariosV').cloneNode(true)
             comentarios.classList.remove('model')
@@ -101,18 +103,10 @@ function VizualizarComentarios(id) {
 
         })
 
-
-
-
-
-
-
-
-
-
 }
 
 function cadastrarNovoComentario(id) {
+
     console.log(id)
     var idE = Number(id)
     var modalCadastrarComentario = document.querySelector('.modalCadastrarComentario')
@@ -165,7 +159,10 @@ function abrirModalCadastroEquipamento() {
 
         const options = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: 'Bearer ' + usuario.token
+            },
             body: `{"equipamento":"${inputNome.value}","imagem":"${inputImagem.value}","descricao":"${inputdescricao.value}","ativo":${valueCheckbox}}`
         };
 

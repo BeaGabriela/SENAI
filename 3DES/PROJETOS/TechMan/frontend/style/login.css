@@ -65,3 +65,18 @@ button:hover{
     color: #fff;
     cursor: pointer;
 }
+
+#entrar:hover{
+    background-color: #44babc;
+    border: 1px solid #44babc ;
+    color: #fff;
+    cursor: pointer;
+}
+
+#entrar{
+    background-color: #e5e4e4;
+    color: #000;
+}
+
+
+

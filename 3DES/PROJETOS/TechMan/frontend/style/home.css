@@ -109,38 +109,34 @@ img {
 #fechar,
 #fecharComentario {
     position: absolute;
-    left: 35vw;
-    top: 5vh;
+    left: 37vw;
+    top: 6vh;
     cursor: pointer;
 }
 
 .comentariosV{
-    width: 35vw;
-    padding:3vh;
-    margin-left: 10.5vw;
-    border: 1px solid black
-    /* margin-bottom: -1vh; */
-    
+    width: 30vw;
+    padding: 1vh;
+    margin-left: 11vw;
+    border-bottom: 1px solid #000;
+    margin-top: -2vh;    
+}
+
+#comentario{
+    margin-left: 2vw;
+    margin-top: 0.5vh;
 }
 
 #comentarioTexto{
-    margin-right: 32vh;
     text-align: center;
     font-size: 16pt;
-    position: initial;
-    top: 3vh;
-    margin-top: 45vh;
-    margin-left: 0vw;
-    bottom: 16vh;
-    
-
+    margin-top:32vh;
+    margin-right:12vw;
+    position: static;
+    bottom:10vh;
 }
 
-#perfil{
-    margin-right: 17vw;
-    margin-bottom: 2vh;
-    color: #bacccc;
-}
+
 
 #excluir {
     padding: 10px;
@@ -161,13 +157,15 @@ img {
     position: absolute;
     background-color: #cce2e2c6;
     
+    
+    
 }
 
 .modalComentarioVizualização{
     padding-right: 12vw ;
     height: 20vh;
-    overflow-y:scroll;
-    
+    overflow-y: scroll;
+
 }
 
 .modalComentario>div, .cadastrarEquipamento>div {
@@ -185,7 +183,7 @@ img {
 }
 
 #Adicionar {
-    position: absolute;
+    /* position: absolute; */
     padding: 10px;
     width: 12vw;
     background-color: #44babc;
@@ -193,7 +191,7 @@ img {
     color: #fff;
     right: 24vw;
     border-radius: 15px;
-    top: 50vh;
+    /* top: 50vh; */
     cursor: pointer;
 }
 

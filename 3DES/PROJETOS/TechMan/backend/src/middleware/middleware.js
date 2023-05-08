@@ -9,7 +9,7 @@ const validaAcesso = (req, res, next) => {
             if(err != null) res.status(404).json(err).end();
             else {
                 console.log(data)
-                if(data.Usuario.perfil === 1) {
+                if(data.perfil === 2) {
                     console.log(data)
                     next();
                 }else {

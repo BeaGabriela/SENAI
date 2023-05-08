@@ -22,9 +22,12 @@ function botoes() {
             }
             if(numbers.length >= 6){
                 entrar.disabled = false
+                entrar.style.backgroundColor ="#fff"    
+                entrar.style.color = "#35797d"
             }else{
-                entrar.disabled = true
+                entrar.disabled = true     
             }
+
             inputValor.value = numbers.join('')
         })
     }
