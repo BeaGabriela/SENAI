@@ -21,43 +21,45 @@ function fetchEquipamentos() {
         .then(response => response.json())
         .then(response => {
             response.forEach(eq => {
-
-                var idEqui = 0
-                var equipamentos = document.querySelector(".equipamentos").cloneNode(true);
-                equipamentos.classList.remove('model')
-                equipamentos.querySelector("#img").src = "../assets/" + eq.imagem
-                equipamentos.querySelector("#titulo").innerHTML = eq.equipamento
-                equipamentos.querySelector("#descricao").innerHTML = eq.descricao
-                equipamentos.querySelector('#imgComentario').addEventListener('click', () => {
-                    idEqui = 0
-                    idEqui = eq.id
-                    VizualizarComentarios(idEqui)
-
-                })
-
-
-                equipamentos.querySelector('#imgDeletar').addEventListener("click", () => {
-                    var modelExcluir = document.querySelector('.modalExclusão')
-                    modelExcluir.classList.remove('model')
-
-                    document.querySelector('#excluir').addEventListener('click', () => {
-                        const options = { method: 'DELETE' };
-
-                        fetch(`http://localhost:3000/equipamentos/${eq.id}`, options)
-                            .then(response => response.status)
-                            .then(response => {
-                                if (response == 200) {
-                                    window.location.reload()
-                                } else {
-                                    console.log('erro')
-                                }
-                            })
+                if(eq.ativo == 1){
+                    var idEqui = 0
+                    var equipamentos = document.querySelector(".equipamentos").cloneNode(true);
+                    equipamentos.classList.remove('model')
+                    equipamentos.querySelector("#img").src = "../assets/" + eq.imagem
+                    equipamentos.querySelector("#titulo").innerHTML = eq.equipamento
+                    equipamentos.querySelector("#descricao").innerHTML = eq.descricao
+                    equipamentos.querySelector('#imgComentario').addEventListener('click', () => {
+                        idEqui = 0
+                        idEqui = eq.id
+                        VizualizarComentarios(idEqui)
+    
                     })
-
-
-                })
-
-                document.querySelector("main").appendChild(equipamentos)
+    
+    
+                    equipamentos.querySelector('#imgDeletar').addEventListener("click", () => {
+                        var modelExcluir = document.querySelector('.modalExclusão')
+                        modelExcluir.classList.remove('model')
+    
+                        document.querySelector('#excluir').addEventListener('click', () => {
+                            const options = { method: 'DELETE' };
+    
+                            fetch(`http://localhost:3000/equipamentos/${eq.id}`, options)
+                                .then(response => response.status)
+                                .then(response => {
+                                    if (response == 200) {
+                                        window.location.reload()
+                                    } else {
+                                        console.log('erro')
+                                    }
+                                })
+                        })
+    
+    
+                    })
+    
+                    document.querySelector("main").appendChild(equipamentos)
+                }
+               
             })
         })
 }
