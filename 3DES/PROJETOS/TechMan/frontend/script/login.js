@@ -1,6 +1,7 @@
 var inputValor = document.querySelector('#vizualizaçãoSenha')
 var erroSenha = document.querySelector('#senhaErrada')
 var entrar = document.querySelector('#entrar')
+const numbers = []
 
 function carregar() {
     botoes()
@@ -8,7 +9,7 @@ function carregar() {
 
 function botoes() {
     const buttons = document.querySelectorAll('button')
-    const numbers = []
+    
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', () => {
             const value = buttons[i].textContent
@@ -45,6 +46,7 @@ function ValidarSenha() {
             if (response.status === 404) {
                 erroSenha.innerHTML = 'Senha Incorreta!'
                 inputValor.value = ''
+                numbers.length = 0
             } else {
                 erroSenha.innerHTML = ''
                 return response.json()
