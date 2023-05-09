@@ -114,7 +114,7 @@ img {
 #fechar,
 #fecharComentario {
     position: absolute;
-    left: 37vw;
+    left: 30vw;
     top: 6vh;
     cursor: pointer;
 }
@@ -140,8 +140,6 @@ img {
     bottom:10vh;
 }
 
-
-
 #excluir {
     padding: 10px;
     width: 5vw;
@@ -165,13 +163,12 @@ img {
 }
 
 .modalComentarioVizualização{
-    padding-right: 12vw ;
-    height: 20vh;
-    overflow-y: scroll;
+    border: 1px solid;
+    padding-right: 12vw ; 
 
 }
 
-.modalComentario>div, .cadastrarEquipamento>div {
+.cadastrarEquipamento>div {
     position: absolute;
     height: 60vh;
     width: 40vw;
@@ -184,6 +181,22 @@ img {
     top: 15vh;
     left: 15vw;
 }
+
+.modalComentario>div{
+    position: absolute;
+    height: 50vh;
+    width: 36vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    top: 15vh;
+    left: 15vw;
+    overflow-y: scroll;
+}
+
 
 .sucesso > div{
     position: absolute;
@@ -258,12 +271,12 @@ input{
     position: absolute;
     padding: 10px;
     width: 12vw;
-    background-color: #44babc;
+    background-color: #808080;
     border: none;
     color: #fff;
-    right: 22vw;
+    right: 23vw;
     border-radius: 15px;
-    top: 43vh;
+    top: 44vh;
     cursor: pointer;
 }
 
