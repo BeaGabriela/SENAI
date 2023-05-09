@@ -14,6 +14,11 @@ header {
     align-items: center;
 }
 
+main{
+    overflow-y: scroll;
+    margin-top: 8vh;
+}
+
 header>div {
     display: flex;
     margin-right: 3vw;
@@ -102,7 +107,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 2vh;
-    top: 30vh;
+    top: 25vh;
     left: 15vw;
 }
 
@@ -150,14 +155,13 @@ img {
 }
 
 
-.modalComentario,.modalCadastrarComentario {
+.modalComentario,.modalCadastrarComentario, .sucesso {
     height: 100vh;
     width: 100vw;
     position: absolute;
     background-color: #cce2e2c6;
     
-    
-    
+
 }
 
 .modalComentarioVizualização{
@@ -181,6 +185,20 @@ img {
     left: 15vw;
 }
 
+.sucesso > div{
+    position: absolute;
+    height: 23vh;
+    width: 22vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    top: 26vh;
+    left: 25vw;
+}
+
 #Adicionar {
     /* position: absolute; */
     padding: 10px;
@@ -194,11 +212,33 @@ img {
     cursor: pointer;
 }
 
+#premio{
+    height: 4vh;
+    width: 3vw;
+    margin-top: 6vh;
+    margin-bottom: -2vh;
+}
+
+#cliqueOK {
+    /* position: absolute; */
+    padding: 10px;
+    width: 8vw;
+    background-color: #44babc;
+    border: none;
+    color: #fff;
+    margin-right: 1vw;
+    border-radius: 15px;
+    margin-top: -2vh;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+
 #cadastrar {
     position: absolute;
     padding: 10px;
     width: 12vw;
-    background-color: #44babc;
+    background-color: #808080;
     border: none;
     color: #fff;
     right: 23vw;

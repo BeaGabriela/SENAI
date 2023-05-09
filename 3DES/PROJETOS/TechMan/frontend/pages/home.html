@@ -25,7 +25,7 @@
                 <p id="descricao"></p>
                 <div>
                     <img id="imgComentario" src="../assets/comentario.png" alt="comentario">
-                    <img id="imgDeletar" src="../assets/deletar.png" alt="lixo">
+                    <img id="imgDeletar" src="../assets/deletar.png">
                 </div>
             </div>
         </div>
@@ -59,9 +59,9 @@
 
 
         <nav class="modalComentario model">
+            <p id="fecharComentario" onclick="fecharModalComentario()">X</p>
+            <h3 id="comentarioTexto">Comentários</h3>
             <div class="modalComentarioVizualização">
-                <p id="fecharComentario" onclick="fecharModalComentario()">X</p>
-                <h3 id="comentarioTexto">Comentários</h3>
 
                 <div class="comentariosV model ">
                     <h3 id="perfil"></h3>
@@ -71,18 +71,24 @@
 
             </div>
             <!-- <button id="Adicionar" onclick="cadastrarNovoComentario()">Adicionar Comentário</button> -->
-
         </nav>
+
 
         <nav class="modalCadastrarComentario model">
             <div>
                 <p id="fechar" onclick="fecharModalNovoCadastro()">X</p>
                 <h2>Cadastro de comentários</h2>
                 <input type="text" id="newComentario" placeholder="Comentário">
-                <button id="cadastrar">Cadastrar</button>
+                <button id="cadastrar" disabled>Cadastrar</button>
             </div>
+        </nav>
 
-
+        <nav class="sucesso model" >
+            <div>
+                <img src="../assets/premio.gif" id="premio">
+                <p>Sucesso! Comentário cadastrado para o equipamento.</p>
+                <button id="cliqueOK">OK!</button>
+            </div>
         </nav>
 
     </main>

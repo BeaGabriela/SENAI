@@ -20,8 +20,9 @@ function fetchEquipamentos() {
     fetch('http://localhost:3000/equipamentos')
         .then(response => response.json())
         .then(response => {
+            response.sort((a, b) => new Date(b.data) - new Date(a.data))
             response.forEach(eq => {
-                if(eq.ativo == 1){
+                if (eq.ativo == 1) {
                     var idEqui = 0
                     var equipamentos = document.querySelector(".equipamentos").cloneNode(true);
                     equipamentos.classList.remove('model')
@@ -32,34 +33,36 @@ function fetchEquipamentos() {
                         idEqui = 0
                         idEqui = eq.id
                         VizualizarComentarios(idEqui)
-    
+
                     })
-    
-    
-                    equipamentos.querySelector('#imgDeletar').addEventListener("click", () => {
-                        var modelExcluir = document.querySelector('.modalExclusão')
-                        modelExcluir.classList.remove('model')
-    
-                        document.querySelector('#excluir').addEventListener('click', () => {
-                            const options = { method: 'DELETE' };
-    
-                            fetch(`http://localhost:3000/equipamentos/${eq.id}`, options)
-                                .then(response => response.status)
-                                .then(response => {
-                                    if (response == 200) {
-                                        window.location.reload()
-                                    } else {
-                                        console.log('erro')
-                                    }
-                                })
+
+                    if (usuario.perfil == 2) {
+                        equipamentos.querySelector('#imgDeletar').addEventListener("click", () => {
+                            var modelExcluir = document.querySelector('.modalExclusão')
+                            modelExcluir.classList.remove('model')
+
+                            document.querySelector('#excluir').addEventListener('click', () => {
+                                const options = { method: 'DELETE' };
+
+                                fetch(`http://localhost:3000/equipamentos/${eq.id}`, options)
+                                    .then(response => response.status)
+                                    .then(response => {
+                                        if (response == 200) {
+                                            window.location.reload()
+                                        } else {
+                                            console.log('erro')
+                                        }
+                                    })
+                            })
                         })
-    
-    
-                    })
-    
+                    } else {
+                        equipamentos.querySelector('#imgDeletar').src = ''
+
+                    }
+
                     document.querySelector("main").appendChild(equipamentos)
                 }
-               
+
             })
         })
 }
@@ -110,28 +113,49 @@ function VizualizarComentarios(id) {
 function cadastrarNovoComentario(id) {
 
     console.log(id)
-    var idE = Number(id)
+    // var idE = Number(id)
     var modalCadastrarComentario = document.querySelector('.modalCadastrarComentario')
     modalCadastrarComentario.classList.remove('model')
 
     var inputComentario = document.querySelector('#newComentario')
     var btnCadastrar = document.querySelector("#cadastrar")
 
-    btnCadastrar.addEventListener('click', () => {
-        const options = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: `{"comentario":"${inputComentario.value}","equipamento":${idE},"perfil":1}`
-        };
+    inputComentario.addEventListener('input', () => {
 
-        fetch('http://localhost:3000/comentariosCreate', options)
-            .then(response => response.status)
-            .then(response => {
-                if (response == 201) {
-                    window.location.reload();
-                }
+        if (inputComentario.value == '' || inputComentario.length == 0) {
+            btnCadastrar.disabled = true
+        } else {
+            btnCadastrar.disabled = false
+            btnCadastrar.style.backgroundColor = "#44babc"
+
+            btnCadastrar.addEventListener('click', () => {
+                const options = {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: `{"comentario":"${inputComentario.value}","equipamento":${id},"perfil":${usuario.perfil}}`
+                };
+
+                console.log(options);
+
+                fetch('http://localhost:3000/comentariosCreate', options)
+                    .then(response => response.status)
+                    .then(response => {
+                        if (response == 201) {
+                            var sucesso = document.querySelector('.sucesso');
+                            sucesso.classList.remove('model')
+
+                            sucesso.querySelector('#cliqueOK').addEventListener('click', () => {
+                                window.location.reload();
+                            })
+                            
+                        }
+                    })
             })
+        }
     })
+
+
+
 }
 
 function abrirModalCadastroEquipamento() {
