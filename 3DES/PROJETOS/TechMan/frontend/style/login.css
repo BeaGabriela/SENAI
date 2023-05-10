@@ -9,7 +9,13 @@ body{
      display: flex;
      flex-direction: column;
     align-items: center;
+    margin-top: 7vh;
 }
+
+img{
+    margin-top: 2vh;
+}
+
 
 p{
     font-size: 40pt;
@@ -19,13 +25,7 @@ p{
     margin-top: 10vh;
 }
 
-label{
-    color: #fff;
-    height: 10vh;
-    width: 10vh;
-    padding: 4vh 0 0 3vw;
-    background-color: #44babc;
-}
+
 
 main{
     height: 35vh;

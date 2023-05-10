@@ -47,6 +47,9 @@ function ValidarSenha() {
                 erroSenha.innerHTML = 'Senha Incorreta!'
                 inputValor.value = ''
                 numbers.length = 0
+                entrar.disabled = true  
+                entrar.style.backgroundColor ="#808080"    
+                entrar.style.color ="#000"   
             } else {
                 erroSenha.innerHTML = ''
                 return response.json()
