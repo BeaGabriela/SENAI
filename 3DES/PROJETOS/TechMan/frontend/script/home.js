@@ -2,6 +2,7 @@ var novoEquipamento = document.querySelector('#novoEquipamento')
 var usuario = JSON.parse(localStorage.getItem('usuario'))
 console.log(usuario);
 
+
 function carregar() {
     fetchEquipamentos()
     configuraçãoUsuario()
@@ -93,9 +94,6 @@ function VizualizarComentarios(id) {
                 console.log(c);
                 comentarios.querySelector('#perfil').innerHTML = c.perfils.perfil + "  " + c.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0]
                 comentarios.querySelector('#comentario').innerHTML = c.comentario
-                // comentarios.innerHTML += `<button id="Adicionar" onclick="cadastrarNovoComentario(${id})">Adicionar Comentário</button>`
-
-
 
                 document.querySelector('.modalComentarioVizualização').appendChild(comentarios)
 
@@ -113,20 +111,23 @@ function VizualizarComentarios(id) {
 function cadastrarNovoComentario(id) {
 
     console.log(id)
-    // var idE = Number(id)
     var modalCadastrarComentario = document.querySelector('.modalCadastrarComentario')
     modalCadastrarComentario.classList.remove('model')
 
     var inputComentario = document.querySelector('#newComentario')
     var btnCadastrar = document.querySelector("#cadastrar")
 
-    inputComentario.addEventListener('input', () => {
-
-        if (inputComentario.value == '' || inputComentario.length == 0) {
+    const validarInput = () => {
+        if (inputComentario.value === '') {
             btnCadastrar.disabled = true
+            btnCadastrar.style.backgroundColor = "#808080"
         } else {
             btnCadastrar.disabled = false
             btnCadastrar.style.backgroundColor = "#44babc"
+    }
+}
+
+    inputComentario.addEventListener('input', validarInput);
 
             btnCadastrar.addEventListener('click', () => {
                 const options = {
@@ -147,20 +148,20 @@ function cadastrarNovoComentario(id) {
                             sucesso.querySelector('#cliqueOK').addEventListener('click', () => {
                                 window.location.reload();
                             })
-                            
+
                         }
                     })
             })
-        }
-    })
+  
+    }
 
 
-
-}
 
 function abrirModalCadastroEquipamento() {
+    var erroEquipamento = document.querySelector('#erroEquipamento')
     var modalCadastro = document.querySelector('.cadastrarEquipamento')
     modalCadastro.classList.remove('model')
+
 
     var inputNome = document.querySelector('#nome')
     var inputImagem = document.querySelector('#imagem')
@@ -168,20 +169,48 @@ function abrirModalCadastroEquipamento() {
     var inputAtivo = document.querySelector('#Ativo')
 
     var valueCheckbox = 0
+   
 
     var btncadastrarEquipamento = document.querySelector("#cadastrarEquipamento")
 
     inputAtivo.addEventListener('change', () => {
+        console.log(valueCheckbox);
         if (inputAtivo.checked) {
             console.log('O checkbox foi selecionado.')
             valueCheckbox = 1
+            
         } else {
             console.log('O checkbox não foi selecionado.')
             valueCheckbox = 0
+            
         }
     })
 
+    const validarCampos = () => {
+        if (inputNome.value === '' || inputImagem.value === '' || inputdescricao.value === '') {
+            erroEquipamento.innerHTML = 'Preencha todos os campos acima!';
+            btncadastrarEquipamento.disabled = true;
+            btncadastrarEquipamento.style.backgroundColor = "#808080";
+        } else {
+            erroEquipamento.innerHTML = '';
+            btncadastrarEquipamento.disabled = false;
+            btncadastrarEquipamento.style.backgroundColor = "#44babc";
+        }
+    }
+
+    inputNome.addEventListener('input', validarCampos);
+    inputImagem.addEventListener('input', validarCampos);
+    inputdescricao.addEventListener('input', validarCampos);
+
+
     btncadastrarEquipamento.addEventListener('click', () => {
+
+        const data = {
+            equipamento: inputNome.value,
+            imagem: inputImagem.value,
+            descricao: inputdescricao.value,
+            ativo: valueCheckbox
+          };
 
         const options = {
             method: 'POST',
@@ -189,10 +218,12 @@ function abrirModalCadastroEquipamento() {
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + usuario.token
             },
-            body: `{"equipamento":"${inputNome.value}","imagem":"${inputImagem.value}","descricao":"${inputdescricao.value}","ativo":${valueCheckbox}}`
+            body: JSON.stringify(data)
         };
 
-        console.log(options)
+        console.log(data);
+        console.log(valueCheckbox)
+
 
         fetch('http://localhost:3000/equipamentosCreate', options)
             .then(response => response.status)
@@ -202,15 +233,9 @@ function abrirModalCadastroEquipamento() {
                 }
             })
     })
-
-
-
-
-
-
-
-
 }
+
+
 
 function fecharModal() {
     var modelExcluir = document.querySelector('.modalExclusão')
