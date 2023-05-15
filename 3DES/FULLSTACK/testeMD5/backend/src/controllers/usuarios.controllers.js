@@ -1,9 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const crypto = require('crypto-js')
-
-
+const crypto = require('crypto-js');
 
 require('dotenv').config();
 
@@ -16,6 +14,7 @@ const login = async (req, res) => {
     const hasAccess = (result, usuario, res) => {
         if (result) {
             jwt.sign(usuario, process.env.KEY, { expiresIn: '15m' }, function (err, token) {
+                // console.log(token);
                 if (err == null) {
                     usuario["token"] = token;
                     let usuarioFormatado = {
@@ -24,10 +23,9 @@ const login = async (req, res) => {
                         'nome_social': usuario.nome_social,
                         'token': usuario.token
                     }
-                    // console.log(usuario.senha);
                     res.status(200).json(usuarioFormatado).end();
                 } else {
-                    res.status(401).json(err).end();
+                    res.status(401).json('RUIM').end();
                 }
             });
         } else {
@@ -43,13 +41,8 @@ const login = async (req, res) => {
 
     if (usuario != null) {
         let hash = usuario.senha;
-        let pws = crypto.MD5(pw).toString()
-
-
-        bcrypt.compare(pws, hash, function (err, result) {
-            console.log(pws)
-            console.log(hash)
-
+        let crypto1 = crypto.MD5(pw).toString();
+        bcrypt.compare(crypto1, hash, function (err, result) {
             hasAccess(result, usuario, res);
         });
     } else {
@@ -57,54 +50,19 @@ const login = async (req, res) => {
     }
 }
 
-// const cadastrar = async (req, res) => {
-//     // obter os dados do usuário a partir do corpo da requisição (req.body)
-//     // const { nome, email, senha } = req.body;
-
-//     // criar um hash da senha usando a criptografia MD5
-//     // const hashMd5 = crypto.createHash('md5').update(senha).digest('hex');
-
-//     // criar um hash da senha criptografada com bcrypt
-//     bcrypt.hash(hashMd5, saltRounds, async (err, hash) => {
-//         if (err) {
-//             console.log(err);
-//             res.status(500).send('Erro ao criar usuário');
-//             req.body.senha = hash
-//         } else {
-//             try {
-//                 // criar um novo usuário no banco de dados usando o Prisma ORM
-//                 const novoUsuario = await prisma.usuarios.create({
-//                     data: req.body
-//                 });
-
-//                 // retornar o usuário criado com sucesso
-//                 res.status(201).json(novoUsuario);
-//             } catch (erro) {
-//                 console.log(erro);
-//                 res.status(500).send('Erro ao criar usuário');
-//             }
-//         }
-//     });
-// }
-
 
 const cadastrar = async (req, res) => {
-    // let a = "beatriz"
-    
-    let crypto1 = crypto.MD5(req.body.senha).toString()
-    
+
+    let crypto1 = crypto.MD5(req.body.senha).toString();
+
     req.body.senha = crypto1
-    
+
     bcrypt.hash(req.body.senha, saltRounds, async function (errCrypto, hash) {
         if (errCrypto == null) {
-             req.body.senha = hash 
-             console.log(req.body.senha)
-            // crypto1 = hash
-            
+            req.body.senha = hash;
             let user = await prisma.usuarios.create({
                 data: req.body
             });
-            // console.log(user)
             res.status(201).json(user).end();
         }
     });
@@ -128,8 +86,37 @@ const verPerfil = async (req, res) => {
 }
 
 
+const verPerfilAlheio = async (req, res) => {
+    let users = await prisma.usuarios.findUnique({
+        where: {
+            id: Number(req.params.id)
+        },
+        select: {
+            id: true,
+            nome_social: true,
+            data_nascimento: true,
+            // contatantes: {
+            //     select: {
+            //         id: true,
+            //         contatante: true,
+            //         contatado: true
+            //     }
+            // },
+            contatados: {
+                select: {
+                    id: true,
+                    contatante: true,
+                    contatado: true
+                }
+            }
+        }
+    });
+    res.status(200).json(users).end();
+}
+
+
 const atualizarPerfil = async (req, res) => {
-    let { nome, nome_social, telefone } = req.body;
+    let { nome, nome_social, ident_genero, orientacao, telefone } = req.body;
     let users = await prisma.usuarios.update({
         where: {
             id: Number(req.params.id)
@@ -137,6 +124,8 @@ const atualizarPerfil = async (req, res) => {
         data: {
             nome,
             nome_social,
+            ident_genero,
+            orientacao,
             telefone
         }
     });
@@ -181,5 +170,6 @@ module.exports = {
     verPerfil,
     atualizarPerfil,
     atualizarDados,
-    excluirPerfil
+    excluirPerfil,
+    verPerfilAlheio
 }

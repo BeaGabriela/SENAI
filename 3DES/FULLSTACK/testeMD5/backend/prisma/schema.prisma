@@ -11,49 +11,64 @@ datasource db {
 }
 
 model usuarios {
-  id                      Int                       @id @default(autoincrement())
-  cpf                     String                    @unique
-  data_nascimento         String
-  nome                    String
-  nome_social             String?
-  email                   String                    @unique
-  senha                   String
-  telefone                String
-  contato                 contatos[]
-  publicacao              publicacoes[]
-  marcadores_mapa         marcadores_mapa[]
-  publicacoes_favoritadas publicacoes_favoritadas[]
+  id              Int        @id @default(autoincrement())
+  cpf             String     @unique
+  data_nascimento String
+  nome            String
+  nome_social     String?
+  ident_genero    String
+  orientacao      String
+  email           String     @unique
+  senha           String
+  telefone        String
+  atualizado_em   DateTime   @updatedAt
+  contatantes     contatos[] @relation("contatantes")
+  contatados      contatos[] @relation("contatados")
+  alerta          alertas[]  @relation("publicado")
 }
 
 model contatos {
-  id             Int      @id @default(autoincrement())
-  nome           String
-  telefone       String
-  relacionamento String
-  id_usuario     Int
-  usuario        usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
+  id          Int      @id @default(autoincrement())
+  contatante  Int
+  contatado   Int
+  status      Int
+  contatantes usuarios @relation("contatantes", fields: [contatante], references: [id])
+  contatados  usuarios @relation("contatados", fields: [contatado], references: [id])
 }
 
-model publicacoes {
-  id              Int      @id @default(autoincrement())
-  data_publicacao DateTime @default(now())
-  id_usuario      Int
-  texto           String   @db.MediumText
-  usuario         usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
-}
-
-model marcadores_mapa {
-  id         Int      @id @default(autoincrement())
-  id_usuario Int
-  alerta     String
-  latitude   Float
-  longitude  Float
-  usuario    usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
-}
-
-model publicacoes_favoritadas {
+model alertas {
   id            Int      @id @default(autoincrement())
+  titulo        String
+  categoria     String
+  data_alerta   DateTime @default(now())
+  relato        String   @db.MediumText
+  emergencia    Boolean  @default(false)
+  atualizado_em DateTime @updatedAt
+  latitude      Float
+  longitude     Float
+  usuario       usuarios @relation("publicado", fields: [id_usuario], references: [id], onDelete: Cascade)
   id_usuario    Int
-  id_publicacao Int
-  usuario       usuarios @relation(fields: [id_usuario], references: [id], onDelete: Cascade)
 }
+
+// enum ORIENTACAO {
+//   ALOSSEXUAL
+//   ANDROSEXUAL
+//   ASSEXUAL
+//   AUTOSSEXUAL
+//   BISSEXUAL
+//   DEMISSEXUAL
+//   ESCOLIOSSEXUAL
+//   EXPECTRASSEXUAL
+//   GINESSEXUAL
+//   HETEROSSEXUAL
+//   HOMOSSEXUAL
+//   PANSEXUAL
+//   QUEER
+// }
+
+// enum GENERO {
+//   CISGENERO
+//   NAOBINARIO
+//   TRANSGENERO
+// }
+// https://sabinadams.hashnode.dev/building-a-prisma-schema
