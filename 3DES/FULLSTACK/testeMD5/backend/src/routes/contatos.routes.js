@@ -12,7 +12,7 @@ const Middle = require('../middleware/middleware');
 // router.delete('*', Middle.acessValidator);
 
 router.post('/cadastrarcontato', Contato.criar);
-router.post('/cadastrarcontatofUNC', Contato.solicitarAmizade);
+router.post('/cadastrarcontatofUNC', Contato.criarC);
 router.get('/listarcontatos', Contato.listarTodosContatos);
 router.get('/listarmeuscontatos/:contatante', Contato.listarMeusContatos);
 router.get('/vercontato/:id', Contato.verContato);

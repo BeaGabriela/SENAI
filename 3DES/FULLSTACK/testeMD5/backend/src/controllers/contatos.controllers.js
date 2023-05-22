@@ -37,7 +37,7 @@ const parseBoolean = (b) => {
 
 
 
-  
+  const criarC = (req, res)=> {
     function solicitarAmizade(usuario, callback) {
         let parse = {
             contatante: Number(req.body.contatante),
@@ -66,6 +66,7 @@ const parseBoolean = (b) => {
       // Chama a função de callback, passando o status do pedido como parâmetro
       callback(pedidoAceito);
     }
+}
 
 //     // var pessoaEnviar =  Number(req.params.pessoa)
 //     async function enviarAlerta(pessoaEnviar) {
@@ -232,5 +233,5 @@ module.exports = {
     listarMeusContatos,
     verContato,
     excluirContato,
-    solicitarAmizade
+    criarC
 }
