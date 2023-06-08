@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Site com Animação de Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6f91;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* main {
+      height: 1000px;
+      overflow: hidden;
+    } */
+
+        /* .box {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .white {
+      background-color: #fff;
+    }
+    
+    .pink {
+      background-color: #ff6f91;
+    }
+    
+    /* Animação de aparecer o conteúdo */
+        * .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        header {
+            background-color: #ff6f91;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        h2 {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+            position: relative;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: white;
+            color: #f71747;
+            width: 7vw;
+            height: 4vh;
+            text-align: center;
+            padding-top: 4px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .nav-link::before {
+            /* content: ''; */
+            position: absolute;
+            /* top: 50%; */
+            /* left: 0; */
+            /* width: 0; */
+            /* height: 2px; */
+            background-color: #f71747;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .um {
+            display: inline-block;
+            /* margin-right: 15px; */
+            height: 10vh;
+            padding: 2vh 25px;
+            align-items: center;
+            border-radius: 16px;
+            /* line-height: 32px; */
+            margin-left: 4vw;
+            font-size: 42pt;
+            font-weight: 500;
+            background-color: #f71747;
+            color: #fbfbfb;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .um:hover {
+            transform: scale(1.1);
+            border-bottom-left-radius: 60px;
+            border-top-right-radius: 50px;
+        }
+
+        #nav2 {
+            display: flex;
+            height:70vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f71747;
+            padding: 10px;
+        }
+
+        #nav2 img {
+            border-radius: 50px;
+            height:50vh;
+            animation: spin 3s linear infinite;
+        }
+
+        #nav2 div {
+            margin-left: 10px;
+        }
+
+        /* Animação para a imagem */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #nav2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f71747;
+            padding: 10px;
+        }
+
+        #nav2 img {
+            border-radius: 50px;
+            animation: pulse 2s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        #nav2 div {
+            margin-left: 10px;
+        }
+
+        .um1 {
+            background-color: #ffffff;
+            color: #f71747;
+            padding: 5px 10px;
+            width: 10vw;
+            font-size: 25pt;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        #btn {
+            background-color: ffffff;
+            color: #f71747;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 8vh;
+            margin-left: 1vw;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #btn:hover {
+            background-color: #f71747;
+            color: #ffffff;
+        }
+
+        .button {
+            background-color: #f71747;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left:15vw;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff6f91;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header
+        style="background-color: #f71747; padding: 20px; display: flex; align-items: center; justify-content: space-between;">
+        <h2 style="color: white; font-size: 24px; margin: 0;">Mirella, corre aqui!</h2>
+        <nav>
+            <a href="#contatos" class="nav-link">Contatos</a>
+            <a href="#sobre" class="nav-link">Quem somos?</a>
+            <a href="#app" class="nav-link">App</a>
+        </nav>
+    </header>
+
+    <main style="text-align: center; padding: 50px; display: flex; justify-content: center;">
+        <div id="svg" style="width: 50vw; margin-top: -13vh;">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#F71747"
+                    d="M41.9,-63.1C53.9,-57.5,63,-45.2,71.8,-31.2C80.7,-17.2,89.4,-1.6,86,11.4C82.7,24.4,67.3,34.7,54.5,44.4C41.7,54.2,31.5,63.4,19.5,67.3C7.5,71.2,-6.3,69.8,-16.2,63.2C-26,56.6,-32,44.7,-42.6,35.3C-53.2,25.9,-68.5,19,-75.2,7.6C-82,-3.9,-80.1,-19.8,-71.4,-30C-62.7,-40.3,-47.2,-44.8,-34.2,-50C-21.1,-55.2,-10.6,-61,2.2,-64.4C14.9,-67.9,29.9,-68.8,41.9,-63.1Z"
+                    transform="translate(100 100)">
+                    <animate attributeName="d" dur="3s" repeatCount="indefinite"
+                        values="M41.9,-63.1C53.9,-57.5,63,-45.2,71.8,-31.2C80.7,-17.2,89.4,-1.6,86,11.4C82.7,24.4,67.3,34.7,54.5,44.4C41.7,54.2,31.5,63.4,19.5,67.3C7.5,71.2,-6.3,69.8,-16.2,63.2C-26,56.6,-32,44.7,-42.6,35.3C-53.2,25.9,-68.5,19,-75.2,7.6C-82,-3.9,-80.1,-19.8,-71.4,-30C-62.7,-40.3,-47.2,-44.8,-34.2,-50C-21.1,-55.2,-10.6,-61,2.2,-64.4C14.9,-67.9,29.9,-68.8,41.9,-63.1Z;
+                                  M45.7,-62.2C57.4,-56.1,65.4,-45.4,72.8,-31.7C80.1,-18,86.9,-1.2,83.4,13.2C80,27.6,66.4,41.2,52.7,51C39,60.7,25.2,66.6,12.6,63.8C0,61,-10.5,49.4,-18.3,38.1C-26.2,26.8,-31.4,15.8,-39.5,7.7C-47.7,-0.5,-58.9,-5.7,-63.7,-13.6C-68.5,-21.5,-67,-32.1,-61.8,-39.7C-56.7,-47.3,-47.9,-52,-39.4,-56.8C-30.8,-61.6,-22.4,-66.4,-14.6,-66.9C-6.8,-67.4,-3.4,-63.7,3.1,-60.3C9.6,-56.8,19.3,-53.6,28.5,-48.7C37.7,-43.9,46.3,-37.3,51.7,-28.6C57.1,-20,59.2,-9.1,58.8,1.6C58.4,12.3,55.5,24.6,48.4,34.9C41.2,45.3,29.8,53.7,17.6,60C5.4,66.4,-7.5,70.7,-18.7,69.5C-29.9,68.3,-39.3,61.6,-49.5,52.2C-59.7,42.8,-70.8,30.8,-77.4,16.3C-84,-0.1,-86,-17,-78.7,-31.1C-71.4,-45.2,-54.7,-56.6,-39.2,-62.5C-23.6,-68.5,-9.3,-68.8,2.3,-66.2C13.9,-63.5,27.8,-58,45.7,-62.2Z;
+                                  M41.9,-63.1C53.9,-57.5,63,-45.2,71.8,-31.2C80.7,-17.2,89.4,-1.6,86,11.4C82.7,24.4,67.3,34.7,54.5,44.4C41.7,54.2,31.5,63.4,19.5,67.3C7.5,71.2,-6.3,69.8,-16.2,63.2C-26,56.6,-32,44.7,-42.6,35.3C-53.2,25.9,-68.5,19,-75.2,7.6C-82,-3.9,-80.1,-19.8,-71.4,-30C-62.7,-40.3,-47.2,-44.8,-34.2,-50C-21.1,-55.2,-10.6,-61,2.2,-64.4C14.9,-67.9,29.9,-68.8,41.9,-63.1Z" />
+                </path>
+            </svg>
+            <div id="divImage" style="position: absolute; top: 34vh; left: 24vw; height: 50vh; width: 35vw;">
+                <img id="img" src="./img/POWER.png" style="height: 35vh;" />
+            </div>
+        </div>
+        <div class="nome"
+            style="display: flex; flex-direction: column; align-items: center; margin-top: 20vh; gap: 2vh;">
+            <span class="um">
+                Mirella,
+            </span>
+            <span class="dois" style="display: inline-block; color: #f71747; font-size: 30pt; font-weight: 500;">
+                corre aqui!
+            </span>
+        </div>
+
+
+    </main>
+
+    <nav id="nav2">
+        <img id="mapa" src="./img/mapa.jpg" alt="Mapa">
+        <div>
+            <h2 class="um1">Mapa</h2>
+            <h2 class="tres">com visualização de alertas.</h2>
+            <button id="btn">Visualizar mapa</button>
+        </div>
+    </nav>
+
+    <nav class="nav3"
+        style="height:70vh;background-color: white; display: flex; align-items: center; justify-content: center; padding-top:3vh;padding-bottom:5vh">
+        <div style="margin-left:3vw">
+            <h2 class="um">Aplicativo</h2>
+            <h2 class="dois2">Para acesso total, baixe nosso aplicativo</h2>
+            <button id="btn2" class="button">Download</button>
+        </div>
+        <img id="celular" src="./img/celular.png" style="border-radius: 50px;">
+    </nav>
+
+    <footer style="padding: 40px; background-color: #f71747;">
+        <nav class="nav2" style="text-align: center;">
+            <h2 style="color: white; font-size: 24px; margin-bottom: 20px;">Dúvidas?</h2>
+            <div style="margin-bottom: 20px;margin-left:20vw">
+                <h3 style="color: white; font-size: 18px; margin-bottom: 10px;">Nos envie um email:</h3>
+                <p style="color: white; font-size: 16px; margin: 0;">mirelaCorreAqui@gmail.com</p>
+            </div>
+            <div style="margin-top:30vh;">
+                <a href="#" style="color: white; text-decoration: none; font-size: 14px;">Política de Privacidade</a> |
+                <a href="#" style="color: white; text-decoration: none; font-size: 14px;">Termos de Uso</a>
+            </div>
+            <!-- <div style="margin-top:30vh">
+                <a href="#" style="color: white; text-decoration: none; font-size: 14px; display: inline-block;">Link 1</a> |
+                <a href="#" style="color: white; text-decoration: none; font-size: 14px; display: inline-block;">Link 2</a>
+            </div> -->
+        </nav>
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
