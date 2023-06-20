@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #8b4513;
+    height: 35vh;
+    width: 100vw;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mostrarImagem {
+    width: 32vw;
+    height: 15vh;
+    border-radius: 50%;
+    background-color: #d2691e;
+    margin-top: 5vh;
+
+}
+
+#imagemP {
+    margin: 5vh 20.1vw;
+    position: absolute;
+    left: 25vw;
+    height: 20vh
+}
+
+.escrito {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 16vh;
+    left: 30vw;
+
+}
+
+.escrito>h2 {
+    width: 10vw;
+    height: 5vh;
+    background-color: #d2691e;
+    border-radius: 20px;
+    color: white;
+    margin: 16vh 4vw 1vh 4vw;
+    padding: 1vh;
+    text-align: center;
+}
+
+#detalhes {
+    margin-top: 15vh;
+    margin-left: 3vw;
+    text-align: center;
+    color: #d2691e;
+}
+
+main {
+    height: 90vh;
+    width: 100vw;
+    background-color: #6a2f05;
+    padding: 12vh 35vw;
+}
+
+input {
+    width: 5vw;
+    height: 4vh;
+    border-radius: 20px;
+    border: none;
+    background-color: #d2691e;
+    box-shadow: 2px 2px 2px #6a2f05;
+}
+
+button {
+    width: 100vw;
+    height: 4vh;
+    border-radius: 20px;
+    border: 1px solid #8b4513;
+    background-color: #d2691e;
+    box-shadow: 2px 2px 2px #6a2f05;
+    color: #fffffe;
+}
+
+.definindoSize {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin: 3vh 0;
+
+}
+
+#medidor,
+#medidorAcucar {
+    width: 20vw;
+    color: #fff;
+}
+
+main>h3 {
+    color: #fff;
+    margin: 2vh 0 1vh 0;
+}
+
+.temperatura {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 3vh 0;
+    margin-left: -12vw;
+}
+
+.acucar {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 3vh 6vw;
+    margin-left: -11vw;
+}
+
+.leite {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    margin: 3vh 1vw;
+    text-align: center;
+    margin-left: -11vw;
+}
+
+.leite>button {
+    padding: 1vh 8vw 3vh 1vw;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.infos {
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+    margin: 14vh 1vw;
+    width: 45vw;
+    text-align: center;
+}
+
+.infos>input {
+    padding: 3vh 26%;
+    text-align: center;
+}
+
+.infos>input::placeholder {
+    color: #fff;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+select {
+    border-radius: 20px;
+    background-color: #d2691e;
+    color: #fff;
+    font-size: 14pt;
+    font-family: 'Times New Roman', Times, serif;
+    width: 35vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+select>option {
+    background-color: #ed863c;
+    border-radius: 20px;
+
+}
+
+#menu {
+    height: 5vh;
+    margin-top: 2vh;
+    margin-left: 1vw;
+
+}
+
+h3{
+    color: #fff;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+/* #valor{
+    width: 1 0vw;
+} */

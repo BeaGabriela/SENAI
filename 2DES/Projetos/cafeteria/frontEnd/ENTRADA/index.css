@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header > button{
+ margin: 10px 80px 0px 50px;  
+}
+
+body{
+    background-color: #deb982;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#fumaca{
+    height: 41vh;
+    width: 23vw;
+    margin: 0px 21vw 0 20vw;
+}
+
+#xicara{
+    height: 48vh;
+    border-radius: 20px;
+    width: 27vw;
+    margin: 5vh 20vw 0px 20vw
+}
+
+#site {
+    height: 10vh;
+    margin: 10vh 0 8vh 0px;
+    }
+
+#entrar{
+    height: 12vh;
+    margin: 10vh 0 8vh 5vw;
+}

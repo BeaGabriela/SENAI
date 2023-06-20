@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8b4513;
+    overflow-y:scroll;
+}
+
+header{
+    height: 30vh;
+    background-image: url('../assets/fundoHeader.jpg');
+    border-radius: 20px;
+    color: #ffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+   
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+}
+
+.procurar > img{
+    position: absolute;
+    left: 64.5vw;
+    height: 2vh;
+    top: 13.5vh;
+}
+
+.procurar> input{
+    width: 50vw;
+    height: 6vh;
+    border-radius: 20px;
+    outline: 0;
+    border: none;
+    background-color:#512303;
+    box-shadow: 2px 2px 2px 2px #522f16;
+    color: #fff;
+    margin: 4vh 22vw;    
+    padding: 1vw;
+}
+
+.procurar>input::placeholder{
+    color: #ffff;
+}
+
+main{
+    width: 100vw;
+    height: 100%;
+    background-color: #3f1b01;
+    border-radius: 20px;
+    margin-top: -4vh;
+}
+
+#rotulo{
+    color: white;
+    font-weight: 700;
+    font-size: 14pt;
+    padding: 3vh 1vw 0vh 5vw;
+}
+
+.alinhandoOsQuadrados,
+.Alinhandochas,
+.alinhandoChoco,
+.alinhandoComida{
+    margin: 2vh 0vw 6vh 7vw;
+    display: flex;
+    gap: 15px;
+    width: 85vw;
+    overflow-x: scroll;
+}
+.alinharP{
+    margin: 2vh 0vw 6vh 0vw;
+    display: flex;
+    gap: 15px;
+}
+
+.quadradoEscolha,
+.quadradoCha,
+.quadradoChocolate,
+.quadradoomidaGeral{
+    height: 24vh;
+    width: 47vw;
+    background-color: rgb(136, 49, 6);
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 28px;
+    padding-left: 12vw;
+    padding-right: 10vw;
+
+}
+
+#valor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2vh;
+    gap: 10px;
+}
+
+.quadradoEscolha,
+.quadradoCha,
+.quadradoChocolate,
+.quadradoomidaGeral >img{
+    margin: 10px;
+}
+
+.alinhandoDivPopular{
+    display: flex;
+    flex-direction: row;
+    margin-left: 8vw;
+    background-color: rgb(136, 49, 6);
+    border-radius: 20px;
+    width: 60vw;
+    height: 17vh;
+    margin-bottom: 5vh;
+}
+
+.AmostraPopular{
+    display:flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-top: 2.8vh;
+  
+}
+
+#mais{
+    position: relative;
+    top: 1.5vh;
+    right: 1vw;
+    height: 3vh;
+    width: 5vw
+}
+
+h2{
+    color: #ffff;
+    margin-left: 10px;
+    font-weight: 700;
+    padding: 3vh 1vw 0vh 5vw;
+}
+
+.model{
+    display: none;
+    visibility: hidden;
+}
+
+#imgPopular{
+    height: 9vh;
+    width:15vw;
+    padding: 10px;
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+#nomePopular{
+    padding: 5px;
+}
+
+#valorPopular{
+    padding-top: 10px;
+}
+
+#descricaoPopular{
+    padding: 4px;
+}

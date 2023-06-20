@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    border: 1px solid black;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    color: #fff;
+}
+.model{
+    display: none;
+}
+
+div{
+    height: 10vh;
+    width: 10vw;
+    border: 1px solid black;
+}
+
+
+.clonar{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-content{
+    position: absolute;
+    top: 60vh;
+    left: 20vw;
+    width: 40vw;
+    height: 10vh;
+    border: 1px solid black;
+}
+

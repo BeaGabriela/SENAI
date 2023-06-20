@@ -25,5 +25,5 @@ if (alturaheader == 969) {
 
 
 function Entrar() {
-
+    window.location.href= '../HOME/index.html'
 }
