@@ -82,13 +82,15 @@ main{
     margin: 2vh 0vw 6vh 0vw;
     display: flex;
     gap: 15px;
+    width: 100vw;
+    overflow-x: scroll;
 }
 
 .quadradoEscolha,
 .quadradoCha,
 .quadradoChocolate,
 .quadradoomidaGeral{
-    height: 24vh;
+    height: 31vh;
     width: 47vw;
     background-color: rgb(136, 49, 6);
     border-radius: 20px;
@@ -122,7 +124,7 @@ main{
     background-color: rgb(136, 49, 6);
     border-radius: 20px;
     width: 60vw;
-    height: 17vh;
+    height:22vh;
     margin-bottom: 5vh;
 }
 

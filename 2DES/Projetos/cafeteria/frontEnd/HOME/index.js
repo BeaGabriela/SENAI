@@ -6,6 +6,7 @@ function carregar() {
         .then(res => { return res.json() })
         .then(u => {
             u.forEach(comida => {
+                console.log(comida)
                 if (comida.id_topico == 1) {
                     var DivQuadrado = document.querySelector('.quadradoEscolha').cloneNode(true)
                     DivQuadrado.classList.remove('model')
@@ -14,7 +15,7 @@ function carregar() {
                     DivQuadrado.querySelector('#nomeComida').innerHTML = comida.nome
                     DivQuadrado.querySelector('#valorComida').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-                    DivQuadrado.innerHTML += `<img src="../imgs/+.png" height="20vh" onclick='VisualizarItem(${comida.id_comida})' />`
+                    DivQuadrado.innerHTML += `<img src="../imgs/+.png" height="20vh" onclick='VisualizarItem(${comida.id})' />`
                     alinhandoQuadrado.appendChild(DivQuadrado)
                 }
             })
@@ -51,7 +52,7 @@ function carregar() {
                     cha.querySelector('#chaI').src = '../imgs/' + comida.img
                     cha.querySelector('#nomecha').innerHTML = comida.nome
                     cha.querySelector('#valorCham').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                    cha.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id_comida})'>Visualizar</div>`
+                    cha.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id})'>Visualizar</div>`
 
                     document.querySelector('.Alinhandochas').appendChild(cha)
                 }
@@ -69,7 +70,7 @@ function carregar() {
                     choco.querySelector('#chocolate').src = '../imgs/' + comida.img
                     choco.querySelector('#nomechocolate').innerHTML = comida.nome
                     choco.querySelector('#valorChoco').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                    choco.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id_comida})'>Visualizar</div>`
+                    choco.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id})'>Visualizar</div>`
 
                     document.querySelector('.alinhandoChoco').appendChild(choco)
                 }
@@ -88,7 +89,7 @@ function carregar() {
                     comidas.querySelector('#comidas').src = '../imgs/' + comida.img
                     comidas.querySelector('#comidasGeral').innerHTML = comida.nome
                     comidas.querySelector('#valorC').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                    comidas.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id_comida})'>Visualizar</div>`
+                    comidas.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id})'>Visualizar</div>`
 
                     document.querySelector('.alinhandoComida').appendChild(comidas)
                 }
@@ -98,6 +99,7 @@ function carregar() {
 
     function VisualizarItem(id){
         console.log(id)
+
         localStorage.setItem('informacoes', id)
         window.location.href = '../PEDIDO/index.html'
     }

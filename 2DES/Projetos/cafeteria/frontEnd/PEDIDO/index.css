@@ -26,34 +26,35 @@ header {
 }
 
 #imagemP {
-    margin: 5vh 20.1vw;
+    margin: 3vh 20.1vw;
     position: absolute;
-    left: 25vw;
-    height: 20vh
+    left: 20vw;
+    height: 9vh;
 }
 
 .escrito {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 16vh;
-    left: 30vw;
+    top: 15vh;
+    left: 11vw;
 
 }
 
 .escrito>h2 {
-    width: 10vw;
+    width: 59vw;
+    font-size: 13pt;
     height: 5vh;
     background-color: #d2691e;
     border-radius: 20px;
     color: white;
-    margin: 16vh 4vw 1vh 4vw;
+    margin: 16vh 0vw 1vh 0vw;
     padding: 1vh;
     text-align: center;
 }
 
 #detalhes {
-    margin-top: 15vh;
+    margin-top: 16vh;
     margin-left: 3vw;
     text-align: center;
     color: #d2691e;
@@ -76,9 +77,10 @@ input {
 }
 
 button {
-    width: 100vw;
-    height: 4vh;
+    width: 81vw;
+    height: 7vh;
     border-radius: 20px;
+    padding: 13px;
     border: 1px solid #8b4513;
     background-color: #d2691e;
     box-shadow: 2px 2px 2px #6a2f05;
@@ -100,6 +102,8 @@ button {
     color: #fff;
 }
 
+
+
 main>h3 {
     color: #fff;
     margin: 2vh 0 1vh 0;
@@ -110,7 +114,7 @@ main>h3 {
     gap: 40px;
     align-items: center;
     margin: 3vh 0;
-    margin-left: -12vw;
+    margin-left: -18vw;
 }
 
 .acucar {
@@ -118,7 +122,7 @@ main>h3 {
     gap: 40px;
     align-items: center;
     margin: 3vh 6vw;
-    margin-left: -11vw;
+    margin-left: -17vw;
 }
 
 .leite {
@@ -127,7 +131,7 @@ main>h3 {
     align-items: center;
     margin: 3vh 1vw;
     text-align: center;
-    margin-left: -11vw;
+    margin-left: -17vw;
 }
 
 .leite>button {
@@ -140,8 +144,8 @@ main>h3 {
     display: flex;
     gap: 10vw;
     align-items: center;
-    margin: 14vh 1vw;
-    width: 45vw;
+    margin: 10vh -7vw;
+    width: 53vw;
     text-align: center;
 }
 
@@ -165,8 +169,8 @@ select {
     color: #fff;
     font-size: 14pt;
     font-family: 'Times New Roman', Times, serif;
-    width: 35vw;
-    height: 5vh;
+    width: 45vw;
+    height: 6vh;
     cursor: pointer;
 }
 
