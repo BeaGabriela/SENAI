@@ -68,11 +68,14 @@ main {
 }
 
 input {
-    width: 5vw;
-    height: 4vh;
+    width: 25vw;
+    height: 6vh;
+    text-align: center;
     border-radius: 20px;
     border: none;
     background-color: #d2691e;
+    font-size: 12pt;
+    color:#fff;
     box-shadow: 2px 2px 2px #6a2f05;
 }
 
@@ -149,13 +152,10 @@ main>h3 {
     text-align: center;
 }
 
-.infos>input {
-    padding: 3vh 26%;
-    text-align: center;
-}
 
 .infos>input::placeholder {
     color: #fff;
+    
 }
 
 .model {

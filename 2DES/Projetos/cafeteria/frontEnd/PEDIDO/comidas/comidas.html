@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="../index.css">
+    <title>Escolha</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <div class="cabecalho">
+            <img alt="hamburguer" id="menu" src="../../imgs/menu.png" />
+            <div class="mostrarImagem">
+                <img id="imagemP" alt="suco" />
+            </div>
+            <img src='../../imgs/avatar2.png' height="50" alt="avatar" />
+        </div>
+        <div class='escrito'>
+            <p>Coffee</p>
+            <h2 id='nomeComida'></h2>
+            <p>É hora do café!</p>
+        </div>
+        <p id="detalhes">cappucino is a tradicional drink...</p>
+    </header>
+    <main>
+
+        <div class='definindoSize'>
+            <h3>Tamanho</h3>
+            <select class="tamanhos">
+                <option value="vazio"></option>
+                <option value="grande">Grande (500ml)</option>
+                <option value="medio">Médio (300ml)</option>
+                <option value='pequeno'>Pequeno(200ml)</option>
+            </select>
+            <!-- <img alt="imagem"/> -->
+        </div>
+
+
+        <!-- <div class="temperatura">
+            <h3>Temperatura</h3>
+            <select class="temperaturas">
+                <option></option>
+                <option>Quente</option>
+                <option>Morno</option>
+                <option>Frio</option>
+            </select>
+        </div> -->
+
+        <!-- <div class='acucar'>
+            <h3>Acuçar</h3>
+            <select class="acucars">
+                <option></option>
+                <option>Açucar</option>
+                <option>Mel</option>
+                <option>Adoçante</option>
+            </select>
+        </div> -->
+
+        <!-- <div class='leite'>
+            <h3>Leite</h3>
+            <select class="leites">
+                <option></option>
+                <option>Leite comum</option>
+                <option>Leite de amendôa</option>
+                <option>Leite de coco</option>
+            </select>
+        </div> -->
+        <div class="infos">
+            <input type="text" id='valor' value="R$ 00,00"  />
+            <button id="btnCompra">Compre Agora</button>
+        </div>
+    </main>
+
+</body>
+<script src="./comidas.js"></script>
+
+</html>

@@ -1,10 +1,10 @@
 function carregar() {
-    var tamanho = document.querySelector('.tamanhos')
-    var tempe = document.querySelector('.temperaturas')
-    var acucar = document.querySelector('.acucars')
-    var leite = document.querySelector('.leites')
+    // var tamanho = document.querySelector('.tamanhos')
+    // var tempe = document.querySelector('.temperaturas')
+    // var acucar = document.querySelector('.acucars')
+    // var leite = document.querySelector('.leites')
     var id_comida = localStorage.getItem('informacoes')
-    console.log(id_comida)
+
     var imagemPrincipal = document.querySelector('#imagemP')
     var nomeComida = document.querySelector('#nomeComida')
     var descricao = document.querySelector('#detalhes')
@@ -21,7 +21,7 @@ function carregar() {
                
                     nomeComida.innerHTML = comida.nome
                     descricao.innerHTML = comida.descricao
-                    // valor.value = comida.valor
+                    valor.value = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                 }
 
 

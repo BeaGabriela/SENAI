@@ -89,7 +89,7 @@ function carregar() {
                     comidas.querySelector('#comidas').src = '../imgs/' + comida.img
                     comidas.querySelector('#comidasGeral').innerHTML = comida.nome
                     comidas.querySelector('#valorC').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                    comidas.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItem(${comida.id})'>Visualizar</div>`
+                    comidas.innerHTML += `<div id='pegandoInfos' onclick='VisualizarItemComidas(${comida.id})'>Visualizar</div>`
 
                     document.querySelector('.alinhandoComida').appendChild(comidas)
                 }
@@ -102,6 +102,13 @@ function carregar() {
 
         localStorage.setItem('informacoes', id)
         window.location.href = '../PEDIDO/index.html'
+    }
+    
+    function VisualizarItemComidas(id){
+        console.log(id)
+
+        localStorage.setItem('informacoes', id)
+        window.location.href = '../PEDIDO/comidas/comidas.html'
     }
 
 
