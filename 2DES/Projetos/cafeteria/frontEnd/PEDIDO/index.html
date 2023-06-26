@@ -31,46 +31,45 @@
         <div class='definindoSize'>
             <h3>Tamanho</h3>
             <select class="tamanhos">
-                <option></option>
-                <option>Grande (500ml)</option>
-                <option>Médio (300ml)</option>
-                <option>Pequeno(200ml)</option>
+                <option value="vazio"></option>
+                <option value="grande">Grande (500ml)</option>
+                <option value="medio">Médio (300ml)</option>
+                <option value='pequeno'>Pequeno(200ml)</option>
             </select>
-            <!-- <img alt="imagem"/> -->
         </div>
 
 
         <div class="temperatura">
             <h3>Temperatura</h3>
             <select class="temperaturas">
-                <option></option>
-                <option>Quente</option>
-                <option>Morno</option>
-                <option>Frio</option>
+                <optionv value='vazio'></option>
+                <option value='quente'>Quente</option>
+                <option value='morno'>Morno</option>
+                <option value='frio'>Gelado</option>
             </select>
         </div>
 
         <div class='acucar'>
             <h3>Acuçar</h3>
             <select class="acucars">
-                <option></option>
-                <option>Açucar</option>
-                <option>Mel</option>
-                <option>Adoçante</option>
+                <option value="nada"></option>
+                <option value="acucar">Açucar</option>
+                <option value="mel">Mel</option>
+                <option value='adocante'>Adoçante</option>
             </select>
         </div>
 
         <div class='leite'>
             <h3>Leite</h3>
             <select class="leites">
-                <option></option>
-                <option>Leite comum</option>
-                <option>Leite de amendôa</option>
-                <option>Leite de coco</option>
+                <option value="nada"></option>
+                <option value='comum'>Leite comum</option>
+                <option value='amendoa'>Leite de amendôa</option>
+                <option value="coco">Leite de coco</option>
             </select>
         </div>
         <div class="infos">
-            <input type="text" id='valor' disabled />
+            <input type="text" id='valor' disabled/>
             <button id="btnCompra">Compre Agora</button>
         </div>
     </main>
