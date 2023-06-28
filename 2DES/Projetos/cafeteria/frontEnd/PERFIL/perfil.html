@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="perfil.css">
+    <title>Perfil</title>
+</head>
+<script>
+    const changeThemeToDark = () => {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("data-theme", "dark");
+    }
+
+    const changeThemeToLight = () => {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("data-theme", 'light');
+    }
+    let theme = localStorage.getItem('data-theme');
+    if (theme == 'dark') changeThemeToDark();
+  </script>
+<body>
+    <header>
+        <p>X</p>
+        <div>
+            <img alt="user">
+        </div>
+        <p>nome</p>
+        <button>Upgrate new pro</button>
+    </header>
+    <main>
+        <h2>Configurações</h2>
+        <div>
+            <img src="" alt="lua">
+            <input type="checkbox" name="toggle-dark" id="toggle-dark">
+        </div>
+        <div>
+            <img src="" alt="notificacao">
+            <input type="range" name="a" id="">
+        </div>
+        <div>
+            <img src="" alt="privacy">
+            <input type="range" name="a" id="">
+        </div>
+    </main>
+</body>
+<script src="perfil.js"></script>
+</html>

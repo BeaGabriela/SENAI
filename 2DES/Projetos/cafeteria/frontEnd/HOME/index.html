@@ -11,16 +11,24 @@
 </head>
 
 <body onload="carregar()">
+    <div class='menuLateral model'>
+        <p id="sair">X</p>
+        <div id='fundoImagem'>
+            <img src="../imgs/cute-love.gif" alt="user" height="50vh" >
+        </div>
+        <a href='../PERFIL/perfil.html'>Perfil</a>
+        <a>Carrinho</a>
+    </div>
     <header>
         <nav>
             <div class="slogan">
                 <h1>Um café para contar história,</h1>
                 <p>As vezes é tudo o que você <label>Precisa</label></p>
             </div>
-            <img src="../imgs/cute-love.gif" alt="user" height="50vh">
+            <img src="../imgs/cute-love.gif" alt="user" height="50vh" id="abrirMenu">
         </nav>
         <div class="procurar">
-            <input type="search" placeholder="Procure seu café favorito" />
+            <input type="search" placeholder="Procure seu café favorito" id="procure"/>
             <img src="../imgs/lupa.png" alt="procure">
         </div>
     </header>
