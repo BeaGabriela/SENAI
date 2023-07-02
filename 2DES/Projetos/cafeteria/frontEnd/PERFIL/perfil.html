@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,31 +20,77 @@
     }
     let theme = localStorage.getItem('data-theme');
     if (theme == 'dark') changeThemeToDark();
-  </script>
+</script>
+
 <body>
     <header>
-        <p>X</p>
-        <div>
-            <img alt="user">
-        </div>
-        <p>nome</p>
-        <button>Upgrate new pro</button>
+        <a id="voltar" href="../HOME/index.html"><</a>
+                <div>
+                    <img id='avatar' src="../imgs/avatar2.png" alt="user">
+                </div>
+                <p>nome</p>
     </header>
     <main>
         <h2>Configurações</h2>
-        <div>
-            <img src="" alt="lua">
+        <div id='divFlex'>
+            <div>
+                <img src="../imgs/moon.png"  alt="lua">
+                <a>Modo noturno</a>
+            </div>
             <input type="checkbox" name="toggle-dark" id="toggle-dark">
         </div>
-        <div>
-            <img src="" alt="notificacao">
-            <input type="range" name="a" id="">
+
+        <div id='divFlex'>
+            <div>
+                <img src="../imgs/notification.png" alt="notificacao">
+                <a>Notificação</a>
+            </div>
+            <button>></button>
         </div>
-        <div>
-            <img src="" alt="privacy">
-            <input type="range" name="a" id="">
+
+        <div id='divFlex'>
+            <div>
+                <img src="../imgs/lock.png" alt="privacy">
+                <a>Privacidade</a>
+            </div>
+            <button>></button>
         </div>
+
+        <div id='divFlex' style="margin-bottom:15vh">
+            <div>
+                <img src="../imgs/lock.png" alt="segurity">
+                <a>Segurança</a>
+            </div>
+            <button>></button>
+        </div>
+
+        <nav>
+            <div id='divFlex'>
+                <div>
+                    <img src="../imgs/user.png" alt="segurity">
+                    <a>Conta</a>
+                </div>
+                <button>></button>
+            </div>
+
+            <div id='divFlex'>
+                <div>
+                    <img src="../imgs/help-web-button.png" alt="segurity">
+                    <a>Ajuda</a>
+                </div>
+                <button>></button>
+            </div>
+
+            <div id='divFlex'>
+                <div>
+                    <img src="../imgs/information-button.png" alt="segurity">
+                    <a>Sobre</a>
+                </div>
+                <button>></button>
+            </div>
+        </nav>
     </main>
 </body>
 <script src="perfil.js"></script>
+
 </html>
