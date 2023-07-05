@@ -25,22 +25,44 @@
 <body>
     <header>
         <a id="voltar" href="../HOME/index.html"><</a>
-                <div>
-                    <img id='avatar' src="../imgs/avatar2.png" alt="user">
+                <div id='divFlex'>
+                    <img src="../imgs/moon.png" alt="lua">
+                    <input type="checkbox" name="toggle-dark" id="toggle-dark">
                 </div>
-                <p>nome</p>
+
     </header>
     <main>
-        <h2>Carrinho</h2>
-        <div id='divFlex'>
+        <div>
+            <img src="../imgs/cafe.png" alt="img"/>
             <div>
-                <img src="../imgs/moon.png"  alt="lua">
-                <a>Modo noturno</a>
+                <p id='nome'>Nome</p>
+                <div id="qtd">
+                    <button>-</button>
+                    <input type="number"/>
+                    <button>+</button>
+                </div>
             </div>
-            <input type="checkbox" name="toggle-dark" id="toggle-dark">
+            <p id='valor'>valor</p>
         </div>
-
     </main>
+
+    <footer>
+        <div>
+            <div id="cupom">
+                <p>cupom</p>
+                <a>Encontrar</a>
+            </div>
+            <div>
+                <p>frete</p>
+                <p>$00,00</p>
+            </div>
+            <div>
+                <p>total</p>
+                <p>$00,00 </p>
+            </div>
+        </div>
+         <button id='comprar'>Comprar agora!</button>
+    </footer>
 </body>
 <script src="carrinho.js"></script>
 

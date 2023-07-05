@@ -1,17 +1,18 @@
 html {
   --background-header: #d2691e;
   --color-header: white;
-  --background-main:#ed8439 ;
-  --background-nav:#ee8b45 ;
+  --background-main: #ed8439;
+  --background-nav: #ee8b45;
   --color-main: black;
-  --color-divImg: #9c4a0f;
+  --color-divImg: #25160b;
+  --color-btn: #3f1b01;
 }
 
 html[data-theme="dark"] {
   --background-header: #8b4413;
   --color-header: lightgrey;
   --background-main: #a65017;
-  --background-nav:#b25518 ;
+  --background-nav: #b25518;
   --color-main: lightgrey;
   --color-divImg: #3f1b01;
 }
@@ -23,94 +24,169 @@ html[data-theme="dark"] {
   transition: all 0.3s;
 }
 
+
 header {
-  height: 50vh;
   background-color: var(--background-header);
   color: var(--color-header);
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
+  padding-top: 2vh;
+  box-shadow: 2px 2px 2px 2px #000;
+
+
 }
 
-header div {
-  height: 20vh;
-  width: 35vw;
-  margin-top:-5vh;
-  border-radius: 50%;
-  background-color: var(--color-divImg)
-}
-
-#avatar {
-  height: 15vh;
-  margin-top:2.3vh;
-  margin-left:4.2vw;
-}
-
-#voltar{
-  font-size:2rem;
-  margin-right:75vw;
-  text-decoration:none;
-  color:#fff;
-}
-
-p {
+#voltar {
   font-size: 2rem;
-  margin-bottom:2vh;
-  margin-top:-2vh;
+  margin-left: 2vw;
+  text-decoration: none;
+  color: #000;
 }
+
 
 main {
-  position: absolute;
-  top: 45vh;
-  width: 100vw;
-  border-radius: 25px;
-  height: 55vh;
-  text-align:center;
-
   background-color: var(--background-main);
+  color: var(--color-main);
+  width: 100vw;
+  height: 70vh;
+  padding-top: 2vh;
+}
+
+main>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px #000;
+  width: 90vw;
+  height: 20vh;
+  margin-left: 4.5vw;
+}
+
+main>div>img {
+  height: 15vh;
+  margin-left: 8vw;
+}
+
+main>div>div {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+#nome {
+  text-align: center;
+  margin-top: 1vh;
+  margin-left: 20vw;
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+
+#qtd {
+  display: flex;
+  margin-top:4vh;
+  margin-left:2vw;
+}
+
+#qtd>input {
+  width: 11vw;
+  height: 5vh;
+  background-color: var(--color-header);
+  color: var(--color-header);
+  border-radius: 10px;
+  /* box-shadow: 2px 2px 2px 2px #000; */
+ 
+}
+
+#qtd>button {
+  width: 5vw;
+  height: 4vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  background-color: var(--color-btn);
+  color: var(--color-header);
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 2px #000;
+  border: none;
+  margin-top:0.2vh;
+}
+
+#valor {
+  text-align: right;
+  margin-left: 8vw;
+  margin-top: 12vh;
+  font-weight: 600;
+  font-size:16pt;
+}
+
+footer {
+  position: absolute;
+  top: 76vh;
+  width: 100vw;
+  height: 25vh;
+  text-align: center;
+  box-shadow: 2px 2px 2px 2px #000;
+
+  background-color: var(--background-header);
   color: var(--color-main);
 }
 
-#divFlex{
-  display:flex;
-  justify-content:space-around;
-  margin-top:1vh;
-margin-bottom:2vh;
+#cupom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
-#divFlex > div{
-  display:flex;
-  flex-direction:row;
-  gap:20px;
+
+footer>div>div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
 }
 
-#divFlex>div>img{
-  height:3vh;
-  margin-top:-2px;
+#comprar {
+  border: none;
+  width: 50vw;
+  height: 5vh;
+  background-color: var(--color-btn);
+  color: var(--color-header);
+  border-radius: 25px;
+  margin-top: 3vh;
+  box-shadow: 2px 2px 2px 2px #000;
+
 }
 
-nav{
-  height:20vh;
-  background-color:var(--background-nav);
-  border-radius:20px;
-  margin-top:-10vh;
-  padding-top:2vh;
+#divFlex {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  margin-right: 2vw;
 }
 
-button{
-  padding:4px;
-  border:none;
-  color:#FFf;
+
+#divFlex>img {
+  height: 3vh;
+  margin-right: 1vw;
+  margin-top: 1vh;
+}
+
+
+
+/* button {
+  padding: 4px;
+  border: none;
+  color: #FFf;
   font-weight: 600;
   background-color: var(--background-main);
 
+} */
+
+h2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
-
-h2{
-  margin-top:3vh;
-  margin-bottom:3vh;
-}
-
-
