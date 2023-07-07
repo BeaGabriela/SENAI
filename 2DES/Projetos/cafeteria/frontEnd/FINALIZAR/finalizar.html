@@ -11,34 +11,55 @@
 
 <body onload="carregar()">
     <header>
-        <img id="imgCafe" src="../assets/header.gif"/>
+        <img id="imgCafe" src="../imgs/coffee.gif" />
         <div class="cabecalho">
-            <img src='' alt="avatar" />
-            <h2>Vamos finalizar seu pedido</h2>
+            <h2>Vamos finalizar seu pedido!</h2>
         </div>
     </header>
     <main>
-        <h2>Resumo de pedido</h2>
         <div>
-            <p>Produto: </p>
+            <div id="entrega">
+                <label>Entrega</label>
+                <input type="radio" />
+            </div>
             <div>
-                <p>temperatura: </p>
-                <p>acucar: </p>
-                <p>leite: </p>
-                <p>medida: </p>
+                <label>Consumir no local</label>
+                <input type="radio" />
+            </div>
+            <div>
+                <label>Retirada</label>
+                <input type="radio" />
             </div>
 
-            <div>
-                <p>Valor temperatura: </p>
-                <p>Valor acucar: </p>
-                <p>Valor leite: </p>
-                <p>Valor medida: </p>
-            </div>
+        </div>
+        <div>
+            <h2>Forma de pagamento</h2>
+            <select>
+                <option value='boleto'>Pix</option>
+                <option value='credito'>Cartão de crédito</option>
+                <option value='debito'>Cartão de débito</option>
+            </select>
         </div>
 
-        <input placeholder="valor Total"/>
+        <div>
+            <h2>Revise seu pedido:</h2>
+            <div>
+                <div>
+                    <img alt="pedido"/>
+                    <div>
+                        <p>nome</p>
+                        <p>opcioes</p>
+                        <p>valor</p>
+                </div>
+            </div>
+        </div>
+            <p>Valor total</p>
+        </div>
 
-
+        <div>
+            <h2>Tudo verto?</h2>
+            <button>Fechar pedido</button>
+        </div>
     </main>
 
 </body>

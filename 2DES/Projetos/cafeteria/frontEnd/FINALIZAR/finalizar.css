@@ -7,7 +7,7 @@
 header {
     background-color: #8b4513;
     height: 20vh;
-    width: 100;
+    width: 100vw;
 }
 
 main {
@@ -18,7 +18,16 @@ main {
 }
 
 #imgCafe{
-    margin-left: 35vw;
-    height: 20vh;
-    width: 30vw;
+    height: 24vh;
+    width: 100vw;
+}
+
+h2{
+    text-align:center;
+}
+
+main>div>div{
+    border: 1px solid #000;
+    height:10vh;
+    width:10vw;
 }
