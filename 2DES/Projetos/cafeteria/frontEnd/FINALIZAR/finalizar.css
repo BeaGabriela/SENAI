@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 header {
@@ -13,8 +14,10 @@ header {
 main {
     height: 90vh;
     width: 100vw;
+    overflow-y: scroll;
     background-color: #6a2f05;
     padding: 12vh 35vw;
+    
 }
 
 #imgCafe{
@@ -26,8 +29,66 @@ h2{
     text-align:center;
 }
 
-main>div>div{
+#entrega{
     border: 1px solid #000;
     height:10vh;
-    width:10vw;
+    width:40vw;
+    border-radius:10px;
+    text-align: center;
+    padding-top:3vh;
+    margin-top: 2vh;
+    margin-left:-6vw;
+}
+
+#pagamento{
+    border: 1px solid #000;
+    height:20vh;
+    width:70vw;
+    border-radius:10px;
+    text-align: center;
+    padding-top:3vh;
+    margin-top: 2vh;
+    margin-left:-21vw;
+}
+
+#pagamento> h2{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+#pagamento>select{
+    height: 5vh;
+    border-radius:10px;
+    background-color: #8b4513;
+    color:#fff;
+    border: 1px solid #6a2f05;
+    font-weight: 600;
+}
+
+#revisao{
+    border: 1px solid #000;
+    height:40vh;
+    width:70vw;
+    border-radius:10px;
+    text-align: center;
+    padding-top:3vh;
+    margin-top: 2vh;
+    margin-left:-21vw;
+}
+
+#pedidoIMG{
+    height:10vh;
+}
+
+#pedidoAnalise{
+    display:flex;
+    border: 1px solid #000;
+    width:50vw;
+    height:20vh;
+    margin-left:4vw;
+}
+
+#pedidoAnalise>div{
+    height:10vh;
+    border:1px solid #fff;
 }
