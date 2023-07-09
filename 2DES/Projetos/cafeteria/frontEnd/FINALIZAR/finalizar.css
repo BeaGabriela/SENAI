@@ -5,6 +5,13 @@
     
 }
 
+#voltar{
+    height:40vh;
+    font-weight: 600;
+
+
+}
+
 header {
     background-color: #8b4513;
     height: 20vh;
@@ -47,7 +54,8 @@ h2{
     border-radius:10px;
     text-align: center;
     padding-top:3vh;
-    margin-top: 2vh;
+    margin-top: 5vh;
+    margin-bottom:-4vw;
     margin-left:-21vw;
 }
 
@@ -67,28 +75,93 @@ h2{
 
 #revisao{
     border: 1px solid #000;
-    height:40vh;
+    height:50vh;
     width:70vw;
     border-radius:10px;
     text-align: center;
     padding-top:3vh;
-    margin-top: 2vh;
+    margin-top: 8vh;
     margin-left:-21vw;
 }
 
 #pedidoIMG{
     height:10vh;
+    margin-right: 4vw;
 }
 
 #pedidoAnalise{
     display:flex;
     border: 1px solid #000;
-    width:50vw;
+    border-radius:10px;
+    width:60vw;
     height:20vh;
     margin-left:4vw;
+    align-items:center;
+    justify-content:center;
+    gap:2vw;
 }
 
 #pedidoAnalise>div{
-    height:10vh;
-    border:1px solid #fff;
+    height:15vh;
+    
+}
+
+#pedidoNome{
+    text-align:center;  
+    font-weight: 500;
+    color:#fff;
+    font-size:16pt;
+    margin-top:-2vh;
+    margin-bottom:1vh;
+}
+
+#opcoesPedido{
+    font-size:11pt;
+    color:rgba(250, 235, 215, 0.704);
+}
+
+#valorCadaPedido{
+    margin-top: 3vh;
+    margin-left: 15vw;
+    font-weight: 600;
+
+}
+
+#valorFinalTotal{
+    width:68vw;
+    border-radius:4px;
+    display:flex;
+    margin-left:-20vw;
+    justify-content: space-between;
+    margin-top:5vh;
+}
+
+#valorFinalTotal >p{
+    font-size:13pt;
+    font-weight: 600;
+}
+
+#valorFinal{
+    font-size:19pt;
+    color:#fff;
+}
+
+#confirmar{
+    width: 50vw;
+    border: 1px solid;
+}
+
+
+#fecharPedido{
+    width:65vw;
+    height:6vh;
+    border-radius:8px;
+    background-color: #743a11;
+    border:none;
+    box-shadow:2px 2px 2px 2px #d27431;
+    color:#fff;
+    font-weight: 600;
+    font-size:13pt;
+    margin-top: 5vh;
+    margin-left: -18vw;
 }

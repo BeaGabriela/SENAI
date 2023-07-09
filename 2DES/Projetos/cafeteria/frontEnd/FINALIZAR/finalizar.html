@@ -11,6 +11,7 @@
 
 <body onload="carregar()">
     <header>
+        <a id="voltar" href="../CARRINHO/carrinho.html"><</a>
         <img id="imgCafe" src="../imgs/coffee.gif" />
         <div class="cabecalho">
             <h2>Vamos finalizar seu pedido!</h2>
@@ -45,21 +46,24 @@
             <h2>Revise seu pedido:</h2>
             <div>
                 <div id="pedidoAnalise">
-                    <img id="pedidoIMG" alt="pedido" src="../imgs/cafe.png"/>
+                    <img id="pedidoIMG" alt="pedido" src="../imgs/cafe.png" />
                     <div>
-                        <p>Cafe</p>
-                        <p>opcioes</p>
-                        <p>valor</p>
+                        <p id="pedidoNome">Cafe</p>
+                        <p id="opcoesPedido">*Gelado</p>
+                        <p id="opcoesPedido">*com mel</p>
+                        <p id="opcoesPedido">*leite de amendoa</p>
+                        <p id="valorCadaPedido">R$ 12,00</p>
+                    </div>
                 </div>
             </div>
         </div>
-            <p>Valor total</p>
+        <div id="valorFinalTotal">
+            <p>Total</p>
+            <p id="valorFinal">R$ 12,00</p>
         </div>
 
-        <div>
-            <h2>Tudo verto?</h2>
-            <button>Fechar pedido</button>
-        </div>
+        <button id="fecharPedido">Fechar pedido</button>
+
     </main>
 
 </body>

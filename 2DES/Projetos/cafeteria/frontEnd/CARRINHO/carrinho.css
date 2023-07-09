@@ -162,6 +162,11 @@ footer>div>div {
 
 }
 
+#comprar>a{
+  text-decoration: none;
+  color:#fff;
+}
+
 #divFlex {
   margin-top: 2vh;
   margin-bottom: 2vh;
