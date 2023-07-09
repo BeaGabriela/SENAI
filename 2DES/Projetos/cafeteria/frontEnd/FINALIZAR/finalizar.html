@@ -11,25 +11,24 @@
 
 <body onload="carregar()">
     <header>
-        <a id="voltar" href="../CARRINHO/carrinho.html"><</a>
-        <img id="imgCafe" src="../imgs/coffee.gif" />
-        <div class="cabecalho">
-            <h2>Vamos finalizar seu pedido!</h2>
-        </div>
+                <img id="imgCafe" src="../imgs/coffee.gif" />
+                <div class="cabecalho">
+                    <h2>Vamos finalizar seu pedido!</h2>
+                </div>
     </header>
     <main>
         <div id="entregas">
             <div id="entrega">
                 <label>Entrega</label>
-                <input type="radio" />
+                <input type="radio" id="entregar" />
             </div>
             <div id="entrega">
                 <label>Consumir no local</label>
-                <input type="radio" />
+                <input type="radio" id="local"/>
             </div>
             <div id="entrega">
                 <label>Retirada</label>
-                <input type="radio" />
+                <input type="radio" id="retirada"/>
             </div>
 
         </div>
@@ -62,8 +61,10 @@
             <p id="valorFinal">R$ 12,00</p>
         </div>
 
-        <button id="fecharPedido">Fechar pedido</button>
-
+        <div id="btn">
+            <button id="fecharPedido">Fechar pedido</button>
+            <button id="cancelar"><a href="../CARRINHO/carrinho.html" id="voltar">Cacelar</a></button>
+        </div>
     </main>
 
 </body>
