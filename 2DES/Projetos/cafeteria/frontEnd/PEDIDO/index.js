@@ -128,30 +128,32 @@ function carregar() {
     btnCompras.addEventListener('click', () => {
 
         var json = {
-            "id_comida": id_comida,
+            "id_comida": Number(id_comida),
             "temperatura": tipoTempertura,
             "tamanho": tamanhoDefinitivo,
             "leite": tipoLeite,
-            "adocar": tipoAcucar
+            "acucar": tipoAcucar
         }
 
         console.log(json)
     
+        const options = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(json)
+        };
+        
+        fetch('http://localhost:3000/pedidosCreate', options)
+        .then(response => response.status)
+        .then(response => {
+            if (response == 201) {
+                window.location.href = '../FINALIZAR/finalizar.html'
+                localStorage.setItem('fim', JSON.stringify(json))
+            }else{
+                conosle.log('erro')
+            }
+        })
+        // })
     })
 }
-//         const options = {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify(json)
-//         };
-
-//         fetch('http://localhost:3000/cadastrarProporcoes', options)
-//             .then(response => response.status)
-//             .then(response => {
-//                 if (response == 200) {
-//                     window.location.href = '../FINALIZAR/finalizar.html'
-//                     localStorage.setItem('fim', JSON.stringify(json))
-//                 }
-//             })
-//     })
 // }
