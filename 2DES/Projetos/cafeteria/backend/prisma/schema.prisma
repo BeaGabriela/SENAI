@@ -61,6 +61,15 @@ model Pedidos {
   temperatura String
   leite       String
   acucar      String
+  finaliza Finalizar[]
 
   comidas Comida @relation(fields: [id_comida], references: [id])
+}
+
+model Finalizar {
+  id          Int    @id @default(autoincrement())
+  id_pedido   Int
+  entrega     String
+  pagamento String
+  comidas Pedidos @relation(fields: [id_pedido], references: [id])
 }
