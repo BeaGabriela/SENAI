@@ -61,6 +61,7 @@ model Pedidos {
   temperatura String
   leite       String
   acucar      String
+  valorTotal       Int
   finaliza Finalizar[]
 
   comidas Comida @relation(fields: [id_comida], references: [id])
