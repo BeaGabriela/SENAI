@@ -22,7 +22,7 @@
     if (theme == 'dark') changeThemeToDark();
 </script>
 
-<body>
+<body onload='carregar()'>
     <header>
         <a id="voltar" href="../HOME/index.html"><</a>
                 <div id='divFlex'>
@@ -32,8 +32,8 @@
 
     </header>
     <main>
-        <div>
-            <img src="../imgs/cafe.png" alt="img"/>
+        <div class='divPedidos model'>
+            <img id="img" src="../imgs/cafe.png" alt="img"/>
             <div>
                 <p id='nome'>Nome</p>
                 <div id="qtd">

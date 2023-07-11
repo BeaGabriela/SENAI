@@ -123,6 +123,7 @@ function carregar() {
         }
     })
 
+    console.log(valorAcucar)
 
     var btnCompras = document.querySelector('#btnCompra')
     btnCompras.addEventListener('click', () => {
@@ -150,7 +151,7 @@ function carregar() {
                 window.location.href = '../FINALIZAR/finalizar.html'
                 localStorage.setItem('fim', JSON.stringify(json))
             }else{
-                conosle.log('erro')
+                console.log('erro')
             }
         })
         // })

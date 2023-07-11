@@ -3,15 +3,40 @@ const botaoDark = document.getElementById('toggle-dark');
 
 // Verifica se tem no localStorage seleção do dark theme
 if (localStorage.getItem('data-theme') == 'dark') {
-  botaoDark.checked = true;
+    botaoDark.checked = true;
 }
 
 // Liga a função ao checkbox
 botaoDark.addEventListener('change', () => {
     let theme = localStorage.getItem('data-theme'); // Retrieve saved them from local storage
-    if (!botaoDark.checked){
+    if (!botaoDark.checked) {
         changeThemeToLight()
-    }else{
+    } else {
         changeThemeToDark()
     }
 });
+
+function carregar() {
+    
+    const informacoes = JSON.parse(localStorage.getItem('fim')) || [];
+    console.log(informacoes.id_comida)
+     
+
+    fetch('http://localhost:3000/comida')
+        .then(res => res.json())
+        .then(u => {
+            u.forEach(comida => {
+                var divPedidos = document.querySelector('.divPedidos').cloneNode(true)
+                if(comida.id == informacoes.id_comida){
+                    console.log(comida.nome)
+                    divPedidos.querySelector('#img').src = '../imgs/' + comida.img
+                    divPedidos.querySelector('#nome').innerHTML = comida.nome
+                    divPedidos.querySelector('#valor').innerHTML = comida.nome
+                    
+
+                    document.querySelector('main').appendChild(divPedidos)
+                }
+
+            })
+        })
+}
