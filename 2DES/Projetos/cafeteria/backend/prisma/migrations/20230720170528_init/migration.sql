@@ -54,6 +54,17 @@ CREATE TABLE `Pedidos` (
     `temperatura` VARCHAR(191) NOT NULL,
     `leite` VARCHAR(191) NOT NULL,
     `acucar` VARCHAR(191) NOT NULL,
+    `valorTotal` INTEGER NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `Finalizar` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `id_pedido` INTEGER NOT NULL,
+    `entrega` VARCHAR(191) NOT NULL,
+    `pagamento` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -69,3 +80,6 @@ ALTER TABLE `Popular` ADD CONSTRAINT `Popular_id_comida_fkey` FOREIGN KEY (`id_c
 
 -- AddForeignKey
 ALTER TABLE `Pedidos` ADD CONSTRAINT `Pedidos_id_comida_fkey` FOREIGN KEY (`id_comida`) REFERENCES `Comida`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `Finalizar` ADD CONSTRAINT `Finalizar_id_pedido_fkey` FOREIGN KEY (`id_pedido`) REFERENCES `Pedidos`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
