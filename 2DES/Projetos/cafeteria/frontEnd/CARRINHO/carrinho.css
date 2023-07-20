@@ -79,7 +79,7 @@ main>div>div {
 #nome {
   text-align: center;
   margin-top: 1vh;
-  margin-left: 20vw;
+  margin-left: 8vw;
   font-size: 16pt;
   font-weight: 600;
 }
@@ -87,8 +87,8 @@ main>div>div {
 
 #qtd {
   display: flex;
-  margin-top:4vh;
-  margin-left:2vw;
+  margin-top: 1vh;
+  margin-left: 2vw;
 }
 
 #qtd>input {
@@ -98,7 +98,7 @@ main>div>div {
   color: var(--color-header);
   border-radius: 10px;
   /* box-shadow: 2px 2px 2px 2px #000; */
- 
+
 }
 
 #qtd>button {
@@ -111,15 +111,21 @@ main>div>div {
   border-radius: 25px;
   box-shadow: 2px 2px 2px 2px #000;
   border: none;
-  margin-top:0.2vh;
+  margin-top: 0.2vh;
 }
 
 #valor {
   text-align: right;
-  margin-left: 8vw;
-  margin-top: 12vh;
+  position: absolute;
+  left: 76vw;
+  margin-top: 9vh;
   font-weight: 600;
-  font-size:16pt;
+  font-size: 13pt;
+}
+
+.model{
+  display:none;
+  visibility:hidden;
 }
 
 footer {
@@ -162,9 +168,9 @@ footer>div>div {
 
 }
 
-#comprar>a{
+#comprar>a {
   text-decoration: none;
-  color:#fff;
+  color: #fff;
 }
 
 #divFlex {

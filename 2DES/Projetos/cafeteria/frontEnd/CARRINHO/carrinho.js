@@ -27,11 +27,12 @@ function carregar() {
         .then(u => {
             u.forEach(comida => {
                 var divPedidos = document.querySelector('.divPedidos').cloneNode(true)
+                divPedidos.classList.remove('model')
                 if(comida.id == informacoes.id_comida){
                     console.log(comida.nome)
                     divPedidos.querySelector('#img').src = '../imgs/' + comida.img
                     divPedidos.querySelector('#nome').innerHTML = comida.nome
-                    divPedidos.querySelector('#valor').innerHTML = comida.nome
+                    divPedidos.querySelector('#valor').innerHTML = comida.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                     
 
                     document.querySelector('main').appendChild(divPedidos)

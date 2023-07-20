@@ -133,7 +133,8 @@ function carregar() {
             "temperatura": tipoTempertura,
             "tamanho": tamanhoDefinitivo,
             "leite": tipoLeite,
-            "acucar": tipoAcucar
+            "acucar": tipoAcucar,
+            "valorTotal": valorAcucar
         }
 
         console.log(json)
