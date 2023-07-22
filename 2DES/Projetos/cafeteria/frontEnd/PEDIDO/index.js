@@ -1,5 +1,9 @@
 function carregar() {
     var id_comida = localStorage.getItem('informacoes')
+    var id_user = localStorage.getItem('id_user')
+    var user = Number(id_user)
+
+    console.log(user);
 
     var imagemPrincipal = document.querySelector('#imagemP')
     var nomeComida = document.querySelector('#nomeComida')
@@ -123,12 +127,13 @@ function carregar() {
         }
     })
 
-    console.log(valorAcucar)
+    
 
     var btnCompras = document.querySelector('#btnCompra')
     btnCompras.addEventListener('click', () => {
 
         var json = {
+            "id_cliente":user,
             "id_comida": Number(id_comida),
             "temperatura": tipoTempertura,
             "tamanho": tamanhoDefinitivo,
@@ -137,7 +142,7 @@ function carregar() {
             "valorTotal": valorAcucar
         }
 
-        console.log(json)
+        console.log(valorAcucar)
     
         const options = {
             method: 'POST',
@@ -155,7 +160,7 @@ function carregar() {
                 console.log('erro')
             }
         })
-        // })
-    })
+        })
+    // })
 }
 // }
