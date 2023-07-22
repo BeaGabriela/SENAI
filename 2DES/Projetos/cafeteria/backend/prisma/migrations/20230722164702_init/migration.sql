@@ -49,6 +49,7 @@ CREATE TABLE `Popular` (
 -- CreateTable
 CREATE TABLE `Pedidos` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `id_cliente` INTEGER NOT NULL,
     `id_comida` INTEGER NOT NULL,
     `tamanho` VARCHAR(191) NOT NULL,
     `temperatura` VARCHAR(191) NOT NULL,
@@ -80,6 +81,9 @@ ALTER TABLE `Popular` ADD CONSTRAINT `Popular_id_comida_fkey` FOREIGN KEY (`id_c
 
 -- AddForeignKey
 ALTER TABLE `Pedidos` ADD CONSTRAINT `Pedidos_id_comida_fkey` FOREIGN KEY (`id_comida`) REFERENCES `Comida`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `Pedidos` ADD CONSTRAINT `Pedidos_id_cliente_fkey` FOREIGN KEY (`id_cliente`) REFERENCES `Usuario`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE `Finalizar` ADD CONSTRAINT `Finalizar_id_pedido_fkey` FOREIGN KEY (`id_pedido`) REFERENCES `Pedidos`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -22,7 +22,7 @@ model Usuario {
   email String @unique
   senha String
   nivel Int
-
+  pedido Pedidos[]
   niveis nivel @relation(fields: [nivel], references: [id])
 }
 
@@ -56,15 +56,18 @@ model Popular {
 
 model Pedidos {
   id          Int    @id @default(autoincrement())
+  id_cliente  Int 
   id_comida   Int
   tamanho     String
   temperatura String
   leite       String
   acucar      String
   valorTotal       Int
+
   finaliza Finalizar[]
 
   comidas Comida @relation(fields: [id_comida], references: [id])
+  usuarios Usuario @relation(fields: [id_cliente], references: [id])
 }
 
 model Finalizar {
