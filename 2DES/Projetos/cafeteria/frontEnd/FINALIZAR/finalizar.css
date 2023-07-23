@@ -89,7 +89,7 @@ h2{
     margin-right: 4vw;
 }
 
-#pedidoAnalise{
+.pedidoAnalise{
     display:flex;
     border: 1px solid #000;
     border-radius:10px;
@@ -184,4 +184,9 @@ h2{
     font-size:13pt;
     margin-top: 5vh;
     /* margin-left: -18vw; */
+}
+
+.model{
+    display:none;
+    visibility:hidden;
 }
