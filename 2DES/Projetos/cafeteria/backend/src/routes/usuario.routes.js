@@ -4,7 +4,7 @@ const router = express.Router();
 
 const usuario = require('../controllers/usuarios/usuario');
 
-const middle = require('../middleware/middleware');
+// const middle = require('../middleware/middleware');
 // 
 // router.put('*', middle.validaAcesso)
 // router.delete('*', middle.validaAcesso)

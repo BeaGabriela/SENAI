@@ -9,10 +9,11 @@ const validaAcesso = (req, res, next) => {
             if(err != null) res.status(404).json(err).end();
             else {
                 console.log(data)
-                if(data.id === 1) {
+                if(data.nivel == 1) {
                     next();
                 }else {
                     res.status(401).end();
+                    console.log(data);
                 }
             }
         })

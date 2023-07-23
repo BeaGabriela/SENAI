@@ -63,7 +63,7 @@ const login = async (req, res) => {
 
     const hasAccess = (result, user, res) => {
         if (result) {
-            // console.log("Access Granted!");
+            // console.log(user);
             jwt.sign(user, process.env.KEY, { expiresIn: '30m' }, function (err, token) {
                 if (err == null) {
                     user["token"] = token;
@@ -77,11 +77,13 @@ const login = async (req, res) => {
                     res.status(200).json(loginUsuario).end();
                 } else {
                     res.status(401).json(err).end();
+                    // console.log(result);
                 }
             });
         }
         else {
-            // console.log("Access Denied!");
+            console.log(user.senha);
+            console.log(bcrypt.hash);
             res.status(401).end();
         }
     }
@@ -94,8 +96,10 @@ const login = async (req, res) => {
 
     if (user != null) {
         let hash = user.senha;
+        // console.log(hash);
         bcrypt.compare(pw, hash, function (err, result) {
             hasAccess(result, user, res);
+            // console.log(hash)
         })
     } else {
         res.status(404).end();
