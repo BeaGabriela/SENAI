@@ -35,6 +35,10 @@ function carregar() {
                     divPedidos.querySelector('#img').src = '../imgs/' + comida.comidas.img
                     divPedidos.querySelector('#nome').innerHTML = comida.comidas.nome
                     divPedidos.querySelector('#valor').innerHTML = comida.valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                    divPedidos.querySelector('#excluir').addEventListener('click', () => {
+                    
+                            excluirPedido(comida.id)
+                    })
                     
                     valorTotalTodosPedidos += comida.valorTotal;
                     console.log(valorTotalTodosPedidos)
@@ -45,4 +49,25 @@ function carregar() {
 
             })
         })
+}
+
+
+function excluirPedido(id){
+    console.log('excluir ' + id)
+
+    const options = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+    };
+    
+    fetch(`http://localhost:3000/pedidos/${id} `, options)
+    .then(response => response.status)
+    .then(response => {
+        if (response == 200) {
+            console.log('excluido');
+            window.location.reload()
+        }else{
+            console.log('erro')
+        }
+    })
 }
