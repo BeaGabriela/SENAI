@@ -174,7 +174,7 @@ label {
     font-weight: 700;
 }
 
-.esqueceSenha{
+.esqueceSenha, .cadastrarNovo{
     position:absolute;
     height:100vh;
     top:0;
@@ -184,7 +184,8 @@ label {
     border: 1px solid #8b4513;
 }
 
-.esqueceSenha>div>p{
+.esqueceSenha>div>p,
+ .cadastrarNovo>div>p{
     margin-top:1vh;
     text-align: center;
     color:#8b4513;
@@ -201,7 +202,8 @@ label {
     
 }
 
-.esqueceSenha>div>img{
+.esqueceSenha>div>img,
+.cadastrarNovo>div>img{
     height:20vh;
     width:40vw;
     margin-left:30vw;
@@ -210,7 +212,8 @@ label {
     border-radius:10px;
 }
 
-.esqueceSenha>div>input{
+.esqueceSenha>div>input,
+.cadastrarNovo>div>input{
     margin-left:22vw;
 }
 
