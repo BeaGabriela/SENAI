@@ -80,6 +80,11 @@ function VoltarTelaLogin(){
     modalSenha.classList.add('model')
 }
 
+function VoltarTelaLoginNovo(){
+    var modalCadastro = document.querySelector('.cadastrarNovo')
+    modalCadastro.classList.add('model')
+}
+
 function cadastrarNovoUsuario(){
     var cadastrarNovo = document.querySelector('.cadastrarNovo')
     cadastrarNovo.classList.remove('model') 

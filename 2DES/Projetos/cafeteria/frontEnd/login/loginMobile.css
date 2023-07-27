@@ -176,9 +176,9 @@ label {
 
 .esqueceSenha, .cadastrarNovo{
     position:absolute;
-    height:100vh;
+    height:100%;
     top:0;
-    padding-top:10vh;
+    /* padding-top:10vh; */
     width:100vw;
     background-color: #ffffff;
     border: 1px solid #8b4513;
@@ -215,6 +215,8 @@ label {
 .esqueceSenha>div>input,
 .cadastrarNovo>div>input{
     margin-left:22vw;
+    margin-top:2vh;
+    margin-bottom:2vh;
 }
 
 #enviarSenha{
