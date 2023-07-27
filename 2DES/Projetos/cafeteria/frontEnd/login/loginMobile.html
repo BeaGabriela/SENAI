@@ -36,11 +36,31 @@
                 <input id="password" placeholder="Senha" />
             </div>
             <button onclick="Entrar()">Entrar</button>
-            <p>Esqueceu sua senha?<label> Clique aqui!</label></p>
+            <p id="info"></p>
+            <p>Esqueceu sua senha?<label onclick="esqueceuSenha()"> Clique aqui!</label></p>
             <!-- <img id="grao_cafe2" src="../imgs/grao-de-cafe.png" /> -->
         </nav>
-        <h3 id="newCadastro">Não tem cadastro? <label>Vamos se cadastrar agora mesmo!</label></h3>
+        <h3 id="newCadastro">Não tem cadastro? <label onclick="cadastrarNovoUsuario()">Cadastre-se!</label></h3>
     </main>
+
+    <!-- Modal senha -->
+    <div class="esqueceSenha model">
+        <p id="voltar" onclick="VoltarTelaLogin()">Voltar</p>
+        <div>
+            <img alt="cafe" src="../imgs/cute-love.gif">
+            <p>Vamos recuperar sua senha! </p>
+            <p id="comando">Preencha o campo abaixo com seu email:</p>
+            <input>
+            <button id="enviarSenha">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Modal cadastro -->
+    <div class="cadastrarNovo model">
+
+    </div>
+
+
 </body>
 <script src="login.js"></script>
 
