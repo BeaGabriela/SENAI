@@ -9,7 +9,7 @@
     <title>Login</title>
 </head>
 
-<body>
+<body onload="carregar()">
     <header>
         <!-- <h1>Cafeteria</h1> -->
         <div class="oi">
@@ -66,7 +66,8 @@
             <input placeholder="Email" id='Novoemail'>
             <input placeholder="Senha" id='senhaNovo'>
             <input placeholder="Confirmar senha" id='confirmarSenha'>
-            <button id="enviarSenha">Enviar</button>
+            <p id='erro'></p>
+            <button id="enviarNovo">Enviar</button>
         </div>
     </div>
 
